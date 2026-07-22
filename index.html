@@ -26,19 +26,18 @@
     </script>
     <script>
       // Decode the deep-link path encoded by public/404.html on GitHub Pages
-      // and restore it via history.replaceState before React Router mounts.
+      // (as ?p=/path&q=querystring) and restore it via history.replaceState
+      // before React Router mounts.
       ;(function (l) {
-        if (l.search[1] === '/') {
-          var decoded = l.search
-            .slice(1)
-            .split('&')
-            .map(function (s) {
-              return s.replace(/~and~/g, '&')
-            })
+        var params = new URLSearchParams(l.search)
+        var p = params.get('p')
+        if (p) {
+          var q = params.get('q')
+          var restoredSearch = q ? '?' + q.replace(/~and~/g, '&') : ''
           window.history.replaceState(
             null,
             '',
-            l.pathname.slice(0, -1) + decoded[0].slice(1) + (decoded[1] ? '?' + decoded[1] : '') + l.hash,
+            l.pathname.replace(/\/$/, '') + p + restoredSearch + l.hash,
           )
         }
       })(window.location)
