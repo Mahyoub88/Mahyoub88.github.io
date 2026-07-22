@@ -10,9 +10,20 @@ export function Hero() {
 
   return (
     <section id="home" className="relative overflow-hidden pb-20 pt-16 lg:pt-24">
+      {hero.backgroundUrl && (
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 -z-20 bg-cover bg-center"
+          style={{ backgroundImage: `url(${hero.backgroundUrl})` }}
+        />
+      )}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_20%_0%,rgba(59,130,246,0.16),transparent),radial-gradient(50%_40%_at_90%_10%,rgba(168,85,247,0.14),transparent)]"
+        className={`pointer-events-none absolute inset-0 -z-10 ${
+          hero.backgroundUrl
+            ? 'bg-[linear-gradient(90deg,var(--surface-0)_15%,rgba(5,7,13,0.55)_55%,rgba(5,7,13,0.3)_100%)]'
+            : 'bg-[radial-gradient(60%_50%_at_20%_0%,rgba(59,130,246,0.16),transparent),radial-gradient(50%_40%_at_90%_10%,rgba(168,85,247,0.14),transparent)]'
+        }`}
       />
 
       <Container className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:items-center">
@@ -59,7 +70,7 @@ export function Hero() {
         </div>
 
         <div className="relative lg:col-span-6">
-          <div className="relative mx-auto flex aspect-square max-w-md items-center justify-center lg:mx-0 lg:ml-auto">
+          <div className="relative mx-auto flex aspect-square max-w-md items-center justify-center xl:mx-0 xl:ml-auto">
             <div
               aria-hidden
               className="animate-glow-pulse absolute inset-6 rounded-full bg-gradient-to-br from-brand-blue-500/40 via-brand-purple-500/30 to-transparent blur-2xl"
@@ -84,7 +95,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative mx-auto mt-8 w-full max-w-sm rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] p-6 shadow-[var(--shadow-card)] lg:absolute lg:right-0 lg:top-0 lg:mt-0">
+          <div className="relative mx-auto mt-8 w-full max-w-sm rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] p-6 shadow-[var(--shadow-card)] xl:absolute xl:right-0 xl:top-0 xl:mt-0">
             <p className="mb-3 text-xs font-semibold tracking-wider text-[var(--text-3)]">
               SPECIALIZATIONS
             </p>
