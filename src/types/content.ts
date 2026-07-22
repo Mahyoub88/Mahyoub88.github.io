@@ -56,6 +56,7 @@ export interface HeroContent {
   secondaryCta: CtaLink
   tertiaryCta: CtaLink
   photoUrl: string
+  backgroundUrl: string
 }
 
 export interface BrandContent {
