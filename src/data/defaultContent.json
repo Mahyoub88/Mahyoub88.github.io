@@ -1,0 +1,143 @@
+{
+  "brand": {
+    "name": "Mohammed",
+    "title": "Senior Engineer",
+    "logoInitial": "M"
+  },
+  "nav": [
+    { "id": "home", "label": "Home", "href": "#home" },
+    { "id": "about", "label": "About", "href": "#about" },
+    { "id": "experience", "label": "Experience", "href": "#experience" },
+    { "id": "work", "label": "Work", "href": "#work" },
+    { "id": "articles", "label": "Articles", "href": "#articles" },
+    { "id": "skills", "label": "Skills", "href": "#skills" },
+    { "id": "contact", "label": "Contact", "href": "#contact" }
+  ],
+  "hero": {
+    "badge": "SENIOR ENGINEER",
+    "greetingName": "Mohammed",
+    "tagline": "Engineering Intelligent Solutions",
+    "description": "Senior Engineer with 6+ years of experience in intelligent transportation systems, infrastructure, and system integration. Passionate about leveraging AI, automation, and data-driven approaches to solve real-world problems and build reliable systems.",
+    "primaryCta": { "label": "Download CV", "href": "#contact" },
+    "secondaryCta": { "label": "View My Work", "href": "#work" },
+    "tertiaryCta": { "label": "Contact Me", "href": "#contact" },
+    "photoUrl": ""
+  },
+  "specializations": [
+    { "id": "spec-1", "icon": "network", "label": "Intelligent Infrastructure" },
+    { "id": "spec-2", "icon": "workflow", "label": "System Integration" },
+    { "id": "spec-3", "icon": "brain", "label": "AI & Machine Learning" },
+    { "id": "spec-4", "icon": "cog", "label": "Software & Automation" }
+  ],
+  "tools": [
+    { "id": "tool-1", "label": "Python", "abbr": "Py", "color": "#3776ab" },
+    { "id": "tool-2", "label": "JavaScript", "abbr": "JS", "color": "#f0db4f" },
+    { "id": "tool-3", "label": "TypeScript", "abbr": "TS", "color": "#3178c6" },
+    { "id": "tool-4", "label": "React", "abbr": "⚛", "color": "#61dafb" },
+    { "id": "tool-5", "label": "Node.js", "abbr": "JS", "color": "#83cd29" },
+    { "id": "tool-6", "label": "PostgreSQL", "abbr": "🐘", "color": "#336791" },
+    { "id": "tool-7", "label": "Docker", "abbr": "🐳", "color": "#2496ed" },
+    { "id": "tool-8", "label": "Git", "abbr": "◆", "color": "#f05032" }
+  ],
+  "stats": [
+    { "id": "stat-1", "icon": "briefcase", "value": "6+", "label": "Years of Experience" },
+    { "id": "stat-2", "icon": "monitor", "value": "500+", "label": "Systems Supported" },
+    { "id": "stat-3", "icon": "globe", "value": "3", "label": "Countries Worked" },
+    { "id": "stat-4", "icon": "trophy", "value": "10+", "label": "Projects Completed" }
+  ],
+  "about": {
+    "heading": "About Me",
+    "subheading": "A bit about my background and how I work.",
+    "paragraphs": [
+      "I'm a Senior Engineer with a background spanning intelligent transportation systems, infrastructure engineering, and software development. Over the past 6+ years I've worked across the full stack of ITS delivery — from field installation and calibration to building the software that monitors and controls those systems.",
+      "My MSc in Artificial Intelligence sharpened my focus on applying machine learning to real engineering problems: classifying vehicle types from trajectory data, predicting system faults before they happen, and automating workflows that used to take hours of manual work.",
+      "I care about building things that are reliable in production, not just accurate in a notebook — clear interfaces, sensible defaults, and systems that fail safely."
+    ]
+  },
+  "experience": [
+    {
+      "id": "exp-1",
+      "role": "Senior Engineer",
+      "company": "Intelligent Transportation Systems",
+      "period": "2022 — Present",
+      "description": "Leading system integration and software delivery for ITS deployments, including monitoring dashboards, remote control interfaces, and field calibration support.",
+      "tags": ["System Integration", "ITS", "Leadership"]
+    },
+    {
+      "id": "exp-2",
+      "role": "Software & Automation Engineer",
+      "company": "Infrastructure Projects",
+      "period": "2020 — 2022",
+      "description": "Built automation tooling and web interfaces for infrastructure monitoring systems, reducing manual configuration time significantly across multiple sites.",
+      "tags": ["Automation", "Web Development", "Node.js"]
+    },
+    {
+      "id": "exp-3",
+      "role": "Field Engineer",
+      "company": "Traffic Enforcement Support",
+      "period": "2019 — 2020",
+      "description": "Installed, calibrated, and troubleshot traffic enforcement hardware and supporting systems across multiple sites and countries.",
+      "tags": ["Calibration", "Troubleshooting", "Support"]
+    }
+  ],
+  "projectsTitle": "Featured Projects",
+  "projectsSubtitle": "A showcase of projects and solutions I've built.",
+  "projectsCtaLabel": "View all projects",
+  "projectsCtaHref": "#work",
+  "projects": [
+    {
+      "id": "proj-1",
+      "category": "Machine Learning",
+      "title": "Vehicle Type Classification",
+      "description": "ML model to classify vehicle types using NGSIM trajectory data with 99%+ accuracy.",
+      "tags": ["Python", "Scikit-learn", "Pandas", "Matplotlib"],
+      "link": "https://github.com/mahyoub88/predicting-vehicle-type-using-ngsim-us101",
+      "accent": "blue"
+    },
+    {
+      "id": "proj-2",
+      "category": "Web Application",
+      "title": "MU Control Web Interface",
+      "description": "Web application for monitoring and controlling MU systems with real-time status and remote commands.",
+      "tags": ["React", "TypeScript", "Tailwind CSS", "Node.js"],
+      "link": "",
+      "accent": "purple"
+    },
+    {
+      "id": "proj-3",
+      "category": "Infrastructure",
+      "title": "Traffic Enforcement Support",
+      "description": "Field engineering support for traffic enforcement systems including installation, calibration and troubleshooting.",
+      "tags": ["ITS", "Calibration", "Troubleshooting", "Support"],
+      "link": "",
+      "accent": "amber"
+    }
+  ],
+  "articles": [
+    {
+      "id": "article-1",
+      "title": "Classifying Vehicle Types from Trajectory Data",
+      "excerpt": "How aggregating NGSIM trajectories to the vehicle level avoids data leakage and improves model reliability.",
+      "date": "2026-03-10",
+      "url": "https://github.com/mahyoub88/predicting-vehicle-type-using-ngsim-us101"
+    },
+    {
+      "id": "article-2",
+      "title": "Notes on Building Reliable ITS Software",
+      "excerpt": "Lessons from years of field deployments — why simple, observable systems beat clever ones.",
+      "date": "2026-01-22",
+      "url": ""
+    }
+  ],
+  "contact": {
+    "heading": "Let's Work Together",
+    "subheading": "Have a project in mind or just want to connect? I'm always open to discussing new opportunities.",
+    "email": "contact@example.com",
+    "location": "Available for remote & on-site work"
+  },
+  "social": [
+    { "id": "social-1", "type": "github", "url": "https://github.com/mahyoub88" },
+    { "id": "social-2", "type": "linkedin", "url": "https://linkedin.com" },
+    { "id": "social-3", "type": "email", "url": "mailto:contact@example.com" }
+  ]
+}
