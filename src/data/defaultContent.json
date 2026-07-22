@@ -21,7 +21,8 @@
     "primaryCta": { "label": "Download CV", "href": "#contact" },
     "secondaryCta": { "label": "View My Work", "href": "#work" },
     "tertiaryCta": { "label": "Contact Me", "href": "#contact" },
-    "photoUrl": ""
+    "photoUrl": "",
+    "backgroundUrl": "/hero-bg.jpg"
   },
   "specializations": [
     { "id": "spec-1", "icon": "network", "label": "Intelligent Infrastructure" },
