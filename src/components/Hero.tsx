@@ -59,7 +59,7 @@ export function Hero() {
         </div>
 
         <div className="relative lg:col-span-6">
-          <div className="relative mx-auto flex aspect-square max-w-md items-center justify-center">
+          <div className="relative mx-auto flex aspect-square max-w-md items-center justify-center lg:mx-0 lg:ml-auto">
             <div
               aria-hidden
               className="animate-glow-pulse absolute inset-6 rounded-full bg-gradient-to-br from-brand-blue-500/40 via-brand-purple-500/30 to-transparent blur-2xl"
