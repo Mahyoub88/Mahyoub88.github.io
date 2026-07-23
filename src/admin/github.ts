@@ -6,6 +6,33 @@ export interface GitHubPublishConfig {
   token: string
 }
 
+const GITHUB_CONFIG_KEY = 'portfolio-github-config'
+
+const defaultGitHubConfig: GitHubPublishConfig = {
+  owner: '',
+  repo: '',
+  branch: 'main',
+  path: 'src/data/defaultContent.json',
+  token: '',
+}
+
+export function loadGitHubConfig(): GitHubPublishConfig {
+  try {
+    const raw = localStorage.getItem(GITHUB_CONFIG_KEY)
+    return raw ? { ...defaultGitHubConfig, ...JSON.parse(raw) } : defaultGitHubConfig
+  } catch {
+    return defaultGitHubConfig
+  }
+}
+
+export function saveGitHubConfig(config: GitHubPublishConfig) {
+  localStorage.setItem(GITHUB_CONFIG_KEY, JSON.stringify(config))
+}
+
+export function isGitHubConfigReady(config: GitHubPublishConfig): boolean {
+  return Boolean(config.owner && config.repo && config.token)
+}
+
 function utf8ToBase64(str: string): string {
   const bytes = new TextEncoder().encode(str)
   let binary = ''
