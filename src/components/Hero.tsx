@@ -69,8 +69,8 @@ export function Hero() {
           <SocialIcons links={content.social} className="mt-8" />
         </div>
 
-        <div className="flex flex-col items-center gap-8 lg:col-span-6 lg:items-end">
-          <div className="relative flex aspect-square w-full max-w-md items-center justify-center">
+        <div className="relative lg:col-span-6">
+          <div className="relative mx-auto flex aspect-square max-w-md items-center justify-center xl:mx-0 xl:ml-auto">
             <div
               aria-hidden
               className="animate-glow-pulse absolute inset-6 rounded-full bg-gradient-to-br from-brand-blue-500/40 via-brand-purple-500/30 to-transparent blur-2xl"
@@ -95,7 +95,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="w-full max-w-md rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] p-6 shadow-[var(--shadow-card)]">
+          <div className="relative mx-auto mt-8 w-full max-w-sm rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] p-6 shadow-[var(--shadow-card)] xl:absolute xl:right-0 xl:top-0 xl:mt-0">
             <p className="mb-3 text-xs font-semibold tracking-wider text-[var(--text-3)]">
               SPECIALIZATIONS
             </p>
