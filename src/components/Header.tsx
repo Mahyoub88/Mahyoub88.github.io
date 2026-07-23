@@ -37,21 +37,20 @@ export function Header() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-1 rounded-full border border-[var(--border-1)] bg-[var(--surface-1)] p-1 lg:flex">
           {content.nav.map((link) => {
             const isActive = link.href === `#${activeSection}`
             return (
               <a
                 key={link.id}
                 href={link.href}
-                className={`relative text-sm font-medium transition-colors hover:text-brand-blue-400 ${
-                  isActive ? 'text-brand-blue-400' : 'text-[var(--text-2)]'
+                className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                  isActive
+                    ? 'bg-[var(--surface-2)] text-brand-blue-400'
+                    : 'text-[var(--text-2)] hover:text-[var(--text-1)]'
                 }`}
               >
                 {link.label}
-                {isActive && (
-                  <span className="absolute -bottom-2 left-0 h-0.5 w-full rounded-full bg-gradient-to-r from-brand-blue-500 to-brand-purple-500" />
-                )}
               </a>
             )
           })}
@@ -103,8 +102,10 @@ export function Header() {
                   key={link.id}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className={`rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-[var(--surface-2)] ${
-                    isActive ? 'text-brand-blue-400' : 'text-[var(--text-2)]'
+                  className={`rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+                    isActive
+                      ? 'bg-[var(--surface-2)] text-brand-blue-400'
+                      : 'text-[var(--text-2)] hover:bg-[var(--surface-2)]'
                   }`}
                 >
                   {link.label}
