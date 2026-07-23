@@ -1,7 +1,7 @@
 {
   "brand": {
-    "name": "Mohammed",
-    "title": "Senior Engineer",
+    "name": "M.Mahyoub",
+    "title": "Senior Intelligent Solutions Engineer",
     "logoInitial": "M"
   },
   "nav": [
@@ -59,7 +59,7 @@
       "href": "#contact"
     },
     "photoUrl": "https://mahyoub88.github.io/mahyoub.jpg",
-    "backgroundUrl": ""
+    "backgroundUrl": "/hero-bg.jpg"
   },
   "specializations": [
     {
