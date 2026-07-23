@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Sun, Moon, Menu, X, Download, LayoutDashboard } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useContent } from '../context/ContentContext'
 import { useTheme } from '../context/ThemeContext'
 import { useAuth } from '../context/AuthContext'
+import { useActiveSection } from '../hooks/useActiveSection'
 import { Container } from './Container'
 
 export function Header() {
@@ -11,6 +12,15 @@ export function Header() {
   const { theme, toggleTheme } = useTheme()
   const { isAuthenticated } = useAuth()
   const [open, setOpen] = useState(false)
+
+  const sectionIds = useMemo(
+    () =>
+      content.nav
+        .filter((link) => link.href.startsWith('#'))
+        .map((link) => link.href.slice(1)),
+    [content.nav],
+  )
+  const activeSection = useActiveSection(sectionIds)
 
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--border-1)] bg-[var(--surface-0)]/80 backdrop-blur-md">
@@ -28,20 +38,23 @@ export function Header() {
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">
-          {content.nav.map((link, i) => (
-            <a
-              key={link.id}
-              href={link.href}
-              className={`relative text-sm font-medium transition-colors hover:text-brand-blue-400 ${
-                i === 0 ? 'text-brand-blue-400' : 'text-[var(--text-2)]'
-              }`}
-            >
-              {link.label}
-              {i === 0 && (
-                <span className="absolute -bottom-2 left-0 h-0.5 w-full rounded-full bg-gradient-to-r from-brand-blue-500 to-brand-purple-500" />
-              )}
-            </a>
-          ))}
+          {content.nav.map((link) => {
+            const isActive = link.href === `#${activeSection}`
+            return (
+              <a
+                key={link.id}
+                href={link.href}
+                className={`relative text-sm font-medium transition-colors hover:text-brand-blue-400 ${
+                  isActive ? 'text-brand-blue-400' : 'text-[var(--text-2)]'
+                }`}
+              >
+                {link.label}
+                {isActive && (
+                  <span className="absolute -bottom-2 left-0 h-0.5 w-full rounded-full bg-gradient-to-r from-brand-blue-500 to-brand-purple-500" />
+                )}
+              </a>
+            )
+          })}
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
@@ -83,16 +96,21 @@ export function Header() {
       {open && (
         <div className="border-t border-[var(--border-1)] bg-[var(--surface-0)] lg:hidden">
           <Container className="flex flex-col gap-1 py-4">
-            {content.nav.map((link) => (
-              <a
-                key={link.id}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--text-2)] hover:bg-[var(--surface-2)]"
-              >
-                {link.label}
-              </a>
-            ))}
+            {content.nav.map((link) => {
+              const isActive = link.href === `#${activeSection}`
+              return (
+                <a
+                  key={link.id}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className={`rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-[var(--surface-2)] ${
+                    isActive ? 'text-brand-blue-400' : 'text-[var(--text-2)]'
+                  }`}
+                >
+                  {link.label}
+                </a>
+              )
+            })}
             <div className="mt-2 flex items-center gap-3 px-3">
               <button
                 onClick={toggleTheme}
