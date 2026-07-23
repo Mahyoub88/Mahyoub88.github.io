@@ -26,7 +26,7 @@ export function Hero() {
         }`}
       />
 
-      <Container className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:items-center">
+      <Container className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:items-start">
         <div className="lg:col-span-6">
           <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--border-2)] bg-[var(--surface-2)] px-4 py-1.5 text-xs font-semibold tracking-wider text-[var(--text-2)]">
             <UserRound size={14} className="text-brand-blue-400" />
