@@ -113,7 +113,7 @@ export function Hero() {
               <p className="mb-3 border-t border-[var(--border-1)] pt-4 text-xs font-semibold tracking-wider text-[var(--text-3)]">
                 TOOLS &amp; TECHNOLOGIES
               </p>
-              <div className="grid flex-1 grid-cols-2 content-between gap-x-4 gap-y-3">
+              <div className="grid flex-1 grid-cols-4 content-between gap-x-2 gap-y-3">
                 {tools.map((tool) => (
                   <div
                     key={tool.id}
@@ -121,7 +121,7 @@ export function Hero() {
                     title={tool.label}
                   >
                     <span
-                      className="flex h-10 w-10 items-center justify-center rounded-lg text-sm font-bold"
+                      className="flex h-9 w-9 items-center justify-center rounded-lg text-xs font-bold"
                       style={{ backgroundColor: `${tool.color}26`, color: tool.color }}
                     >
                       {tool.abbr}
