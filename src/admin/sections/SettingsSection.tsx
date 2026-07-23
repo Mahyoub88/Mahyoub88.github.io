@@ -4,34 +4,12 @@ import { GitHubIcon } from '../../components/BrandIcons'
 import type { SiteContent } from '../../types/content'
 import { Field, TextInput } from '../ui/Field'
 import { useAuth } from '../../context/AuthContext'
-import { publishContentToGitHub } from '../github'
-
-const GITHUB_CONFIG_KEY = 'portfolio-github-config'
-
-interface GitHubConfig {
-  owner: string
-  repo: string
-  branch: string
-  path: string
-  token: string
-}
-
-const defaultGitHubConfig: GitHubConfig = {
-  owner: '',
-  repo: '',
-  branch: 'main',
-  path: 'src/data/defaultContent.json',
-  token: '',
-}
-
-function loadGitHubConfig(): GitHubConfig {
-  try {
-    const raw = localStorage.getItem(GITHUB_CONFIG_KEY)
-    return raw ? { ...defaultGitHubConfig, ...JSON.parse(raw) } : defaultGitHubConfig
-  } catch {
-    return defaultGitHubConfig
-  }
-}
+import {
+  publishContentToGitHub,
+  loadGitHubConfig,
+  saveGitHubConfig,
+  type GitHubPublishConfig,
+} from '../github'
 
 export function SettingsSection({
   content,
@@ -49,16 +27,16 @@ export function SettingsSection({
   const [newPw, setNewPw] = useState('')
   const [pwMessage, setPwMessage] = useState<{ type: 'ok' | 'error'; text: string } | null>(null)
 
-  const [gh, setGh] = useState<GitHubConfig>(() => loadGitHubConfig())
+  const [gh, setGh] = useState<GitHubPublishConfig>(() => loadGitHubConfig())
   const [publishStatus, setPublishStatus] = useState<{
     type: 'ok' | 'error' | 'loading'
     text: string
   } | null>(null)
 
-  const updateGh = (patch: Partial<GitHubConfig>) => {
+  const updateGh = (patch: Partial<GitHubPublishConfig>) => {
     const next = { ...gh, ...patch }
     setGh(next)
-    localStorage.setItem(GITHUB_CONFIG_KEY, JSON.stringify(next))
+    saveGitHubConfig(next)
   }
 
   const handleExport = () => {
@@ -165,8 +143,9 @@ export function SettingsSection({
           </button>
         </div>
         <p className="mt-2 text-xs text-[var(--text-3)]">
-          Changes save to this browser instantly. Export a backup or publish to GitHub to make
-          them permanent and visible to everyone.
+          Changes save to this browser instantly. Once a GitHub token is configured below, every
+          Save Changes also publishes automatically — see Brand &amp; Nav for the main save
+          button.
         </p>
       </div>
 
@@ -178,7 +157,9 @@ export function SettingsSection({
         <p className="mb-4 text-sm text-[var(--text-2)]">
           Commits the current content directly to your repository so it becomes the new default
           for every visitor after your host redeploys (GitHub Pages / Vercel / Netlify all
-          redeploy automatically on push).
+          redeploy automatically on push). Once these fields are filled in, every{' '}
+          <strong>Save Changes</strong> click across the dashboard publishes automatically too —
+          no need to come back here each time.
         </p>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Field label="Owner">
@@ -190,7 +171,7 @@ export function SettingsSection({
           </Field>
           <Field label="Repository">
             <TextInput
-              placeholder="predicting-vehicle-type-using-ngsim-us101"
+              placeholder="mahyoub88.github.io"
               value={gh.repo}
               onChange={(e) => updateGh({ repo: e.target.value })}
             />
@@ -228,7 +209,7 @@ export function SettingsSection({
           className="mt-4 flex items-center gap-2 rounded-lg bg-gradient-to-r from-brand-blue-500 to-brand-purple-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:brightness-110 disabled:opacity-60"
         >
           <Save size={16} />
-          {publishStatus?.type === 'loading' ? 'Publishing…' : 'Publish to GitHub'}
+          {publishStatus?.type === 'loading' ? 'Publishing…' : 'Publish Now'}
         </button>
         {publishStatus && publishStatus.type !== 'loading' && (
           <p
