@@ -69,65 +69,69 @@ export function Hero() {
           <SocialIcons links={content.social} className="mt-8" />
         </div>
 
-        <div className="relative lg:col-span-6">
-          <div className="relative mr-auto flex aspect-square max-w-md items-center justify-center">
-            <div
-              aria-hidden
-              className="animate-glow-pulse absolute inset-6 rounded-full bg-gradient-to-br from-brand-blue-500/40 via-brand-purple-500/30 to-transparent blur-2xl"
-            />
-            <div className="animate-float relative flex h-full w-full items-center justify-center rounded-full border border-[var(--border-2)] bg-[var(--surface-1)] shadow-2xl">
-              <div className="absolute inset-3 rounded-full bg-gradient-to-tr from-brand-blue-500 via-brand-purple-500 to-brand-blue-400 opacity-25 blur-md" />
-              <div className="relative flex h-[88%] w-[88%] items-center justify-center overflow-hidden rounded-full border border-[var(--border-2)] bg-[var(--surface-2)]">
-                {hero.photoUrl ? (
-                  <img
-                    src={hero.photoUrl}
-                    alt={hero.greetingName}
-                    className="h-full w-full object-cover"
-                  />
-                ) : (
-                  <UserRound
-                    size={140}
-                    strokeWidth={1}
-                    className="text-[var(--text-3)]"
-                  />
-                )}
-              </div>
-            </div>
-          </div>
-
-          <div className="relative mx-auto mt-8 w-full max-w-sm rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] p-6 shadow-[var(--shadow-card)] xl:absolute xl:right-0 xl:top-0 xl:mt-0">
-            <p className="mb-3 text-xs font-semibold tracking-wider text-[var(--text-3)]">
-              SPECIALIZATIONS
-            </p>
-            <ul className="mb-5 space-y-3">
-              {specializations.map((item) => {
-                const Icon = getIcon(item.icon)
-                return (
-                  <li key={item.id} className="flex items-center gap-3 text-sm text-[var(--text-1)]">
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--surface-2)] text-brand-blue-400">
-                      <Icon size={16} />
-                    </span>
-                    {item.label}
-                  </li>
-                )
-              })}
-            </ul>
-
-            <p className="mb-3 border-t border-[var(--border-1)] pt-4 text-xs font-semibold tracking-wider text-[var(--text-3)]">
-              TOOLS &amp; TECHNOLOGIES
-            </p>
-            <div className="grid grid-cols-4 gap-3">
-              {tools.map((tool) => (
-                <div key={tool.id} className="flex flex-col items-center gap-1.5" title={tool.label}>
-                  <span
-                    className="flex h-10 w-10 items-center justify-center rounded-lg text-sm font-bold text-white"
-                    style={{ backgroundColor: `${tool.color}26`, color: tool.color }}
-                  >
-                    {tool.abbr}
-                  </span>
-                  <span className="truncate text-[10px] text-[var(--text-3)]">{tool.label}</span>
+        <div className="lg:col-span-6">
+          <div className="grid min-w-0 grid-cols-1 items-stretch gap-6 sm:grid-cols-2">
+            <div className="relative min-h-[360px] w-full min-w-0 overflow-hidden rounded-2xl border border-[var(--border-2)] bg-[var(--surface-1)] shadow-2xl">
+              <div
+                aria-hidden
+                className="animate-glow-pulse pointer-events-none absolute inset-0 bg-gradient-to-br from-brand-blue-500/25 via-brand-purple-500/20 to-transparent blur-2xl"
+              />
+              {hero.photoUrl ? (
+                <img
+                  src={hero.photoUrl}
+                  alt={hero.greetingName}
+                  className="absolute inset-0 h-full w-full object-cover object-top"
+                />
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <UserRound size={96} strokeWidth={1} className="text-[var(--text-3)]" />
                 </div>
-              ))}
+              )}
+            </div>
+
+            <div className="w-full min-w-0 rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] p-6 shadow-[var(--shadow-card)]">
+              <p className="mb-3 text-xs font-semibold tracking-wider text-[var(--text-3)]">
+                SPECIALIZATIONS
+              </p>
+              <ul className="mb-5 space-y-3">
+                {specializations.map((item) => {
+                  const Icon = getIcon(item.icon)
+                  return (
+                    <li
+                      key={item.id}
+                      className="flex items-center gap-3 text-sm text-[var(--text-1)]"
+                    >
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--surface-2)] text-brand-blue-400">
+                        <Icon size={16} />
+                      </span>
+                      {item.label}
+                    </li>
+                  )
+                })}
+              </ul>
+
+              <p className="mb-3 border-t border-[var(--border-1)] pt-4 text-xs font-semibold tracking-wider text-[var(--text-3)]">
+                TOOLS &amp; TECHNOLOGIES
+              </p>
+              <div className="grid grid-cols-2 gap-3">
+                {tools.map((tool) => (
+                  <div
+                    key={tool.id}
+                    className="flex flex-col items-center gap-1.5"
+                    title={tool.label}
+                  >
+                    <span
+                      className="flex h-10 w-10 items-center justify-center rounded-lg text-sm font-bold text-white"
+                      style={{ backgroundColor: `${tool.color}26`, color: tool.color }}
+                    >
+                      {tool.abbr}
+                    </span>
+                    <span className="truncate text-[10px] text-[var(--text-3)]">
+                      {tool.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
