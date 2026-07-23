@@ -16,6 +16,7 @@ import {
   LogOut,
   ExternalLink,
   Check,
+  CloudUpload,
 } from 'lucide-react'
 import { useContent } from '../context/ContentContext'
 import { useAuth } from '../context/AuthContext'
@@ -33,6 +34,7 @@ import { ContactSocialSection } from '../admin/sections/ContactSocialSection'
 import { SettingsSection } from '../admin/sections/SettingsSection'
 import type { SiteContent } from '../types/content'
 import { defaultContent } from '../data/defaultContent'
+import { loadGitHubConfig, isGitHubConfigReady, publishContentToGitHub } from '../admin/github'
 
 const tabs = [
   { id: 'brand', label: 'Brand & Nav', icon: LayoutDashboard },
@@ -55,16 +57,31 @@ function AdminDashboard() {
   const { logout } = useAuth()
   const [draft, setDraft] = useState<SiteContent>(content)
   const [activeTab, setActiveTab] = useState<TabId>('brand')
-  const [justSaved, setJustSaved] = useState(false)
+  const [saveState, setSaveState] = useState<'idle' | 'saving' | 'saved' | 'published' | 'publish-failed'>(
+    'idle',
+  )
 
   const isDirty = JSON.stringify(draft) !== JSON.stringify(content)
 
   const patch = (p: Partial<SiteContent>) => setDraft((prev) => ({ ...prev, ...p }))
 
-  const handleSave = () => {
+  const handleSave = async () => {
     setContent(draft)
-    setJustSaved(true)
-    setTimeout(() => setJustSaved(false), 2000)
+    setSaveState('saving')
+
+    const gh = loadGitHubConfig()
+    if (isGitHubConfigReady(gh)) {
+      try {
+        await publishContentToGitHub(gh, JSON.stringify(draft, null, 2))
+        setSaveState('published')
+      } catch {
+        setSaveState('publish-failed')
+      }
+    } else {
+      setSaveState('saved')
+    }
+
+    setTimeout(() => setSaveState('idle'), 2500)
   }
 
   const handleReset = () => {
@@ -78,6 +95,14 @@ function AdminDashboard() {
   }
 
   const sectionProps = { content: draft, onChange: patch }
+
+  const saveButtonLabel = {
+    idle: 'Save Changes',
+    saving: 'Saving…',
+    saved: 'Saved',
+    published: 'Saved & Published',
+    'publish-failed': 'Saved (publish failed)',
+  }[saveState]
 
   return (
     <div className="flex min-h-screen bg-[var(--surface-0)]">
@@ -130,6 +155,9 @@ function AdminDashboard() {
               {tabs.find((t) => t.id === activeTab)?.label}
             </h1>
             {isDirty && <p className="text-xs text-brand-amber-400">Unsaved changes</p>}
+            {saveState === 'publish-failed' && (
+              <p className="text-xs text-red-400">Saved locally, but publish to GitHub failed.</p>
+            )}
           </div>
           <div className="flex items-center gap-2">
             <Link
@@ -142,11 +170,17 @@ function AdminDashboard() {
             </Link>
             <button
               onClick={handleSave}
-              disabled={!isDirty}
+              disabled={!isDirty || saveState === 'saving'}
               className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-brand-blue-500 to-brand-purple-500 px-4 py-2 text-sm font-semibold text-white transition hover:brightness-110 disabled:opacity-40"
             >
-              {justSaved ? <Check size={16} /> : <Save size={16} />}
-              {justSaved ? 'Saved' : 'Save Changes'}
+              {saveState === 'idle' || saveState === 'saving' ? (
+                <Save size={16} />
+              ) : saveState === 'published' ? (
+                <CloudUpload size={16} />
+              ) : (
+                <Check size={16} />
+              )}
+              {saveButtonLabel}
             </button>
             <button
               onClick={logout}
