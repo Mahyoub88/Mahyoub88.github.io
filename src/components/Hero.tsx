@@ -9,7 +9,7 @@ export function Hero() {
   const { hero, specializations, tools } = content
 
   return (
-    <section id="home" className="relative overflow-hidden pb-20 pt-16 lg:pt-24">
+    <section id="home" className="relative overflow-hidden py-14 lg:py-16">
       {hero.backgroundUrl && (
         <div
           aria-hidden
@@ -26,7 +26,7 @@ export function Hero() {
         }`}
       />
 
-      <Container className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:items-start">
+      <Container className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
         <div className="lg:col-span-6">
           <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--border-2)] bg-[var(--surface-2)] px-4 py-1.5 text-xs font-semibold tracking-wider text-[var(--text-2)]">
             <UserRound size={14} className="text-brand-blue-400" />
@@ -70,17 +70,17 @@ export function Hero() {
         </div>
 
         <div className="lg:col-span-6">
-          <div className="grid min-w-0 grid-cols-1 items-stretch gap-6 sm:grid-cols-2">
-            <div className="relative min-h-[360px] w-full min-w-0 overflow-hidden rounded-2xl border border-[var(--border-2)] bg-[var(--surface-1)] shadow-2xl">
+          <div className="grid min-w-0 grid-cols-1 items-stretch gap-5 sm:grid-cols-2">
+            <div className="relative h-[460px] w-full min-w-0 overflow-hidden rounded-2xl border border-[var(--border-2)] bg-gradient-to-br from-blue-50 via-purple-50 to-white shadow-2xl dark:from-slate-950 dark:via-purple-950/30 dark:to-slate-950">
               <div
                 aria-hidden
-                className="animate-glow-pulse pointer-events-none absolute inset-0 bg-gradient-to-br from-brand-blue-500/25 via-brand-purple-500/20 to-transparent blur-2xl"
+                className="animate-glow-pulse pointer-events-none absolute inset-0 bg-gradient-to-br from-brand-blue-500/15 via-brand-purple-500/15 to-transparent blur-2xl"
               />
               {hero.photoUrl ? (
                 <img
                   src={hero.photoUrl}
                   alt={hero.greetingName}
-                  className="absolute inset-0 h-full w-full object-cover object-top"
+                  className="absolute inset-0 h-full w-full object-contain object-bottom"
                 />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -89,11 +89,11 @@ export function Hero() {
               )}
             </div>
 
-            <div className="w-full min-w-0 rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] p-6 shadow-[var(--shadow-card)]">
+            <div className="flex h-[460px] w-full min-w-0 flex-col rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] p-5 shadow-[var(--shadow-card)]">
               <p className="mb-3 text-xs font-semibold tracking-wider text-[var(--text-3)]">
                 SPECIALIZATIONS
               </p>
-              <ul className="mb-5 space-y-3">
+              <ul className="mb-4 space-y-2.5">
                 {specializations.map((item) => {
                   const Icon = getIcon(item.icon)
                   return (
@@ -104,7 +104,7 @@ export function Hero() {
                       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--surface-2)] text-brand-blue-400">
                         <Icon size={16} />
                       </span>
-                      {item.label}
+                      <span className="min-w-0 truncate">{item.label}</span>
                     </li>
                   )
                 })}
@@ -113,20 +113,20 @@ export function Hero() {
               <p className="mb-3 border-t border-[var(--border-1)] pt-4 text-xs font-semibold tracking-wider text-[var(--text-3)]">
                 TOOLS &amp; TECHNOLOGIES
               </p>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid flex-1 grid-cols-2 content-between gap-x-4 gap-y-3">
                 {tools.map((tool) => (
                   <div
                     key={tool.id}
-                    className="flex flex-col items-center gap-1.5"
+                    className="flex min-w-0 flex-col items-center gap-1.5"
                     title={tool.label}
                   >
                     <span
-                      className="flex h-10 w-10 items-center justify-center rounded-lg text-sm font-bold text-white"
+                      className="flex h-10 w-10 items-center justify-center rounded-lg text-sm font-bold"
                       style={{ backgroundColor: `${tool.color}26`, color: tool.color }}
                     >
                       {tool.abbr}
                     </span>
-                    <span className="truncate text-[10px] text-[var(--text-3)]">
+                    <span className="max-w-full truncate text-[10px] text-[var(--text-3)]">
                       {tool.label}
                     </span>
                   </div>
