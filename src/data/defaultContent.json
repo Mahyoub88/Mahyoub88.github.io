@@ -70,22 +70,32 @@
     {
       "id": "spec-1",
       "icon": "network",
-      "label": "Intelligent Infrastructure"
+      "label": "✔ Intelligent Transportation Systems"
     },
     {
       "id": "spec-2",
       "icon": "workflow",
-      "label": "System Integration"
+      "label": "✔ Machine Vision"
     },
     {
       "id": "spec-3",
       "icon": "brain",
-      "label": "AI & Machine Learning"
+      "label": "✔ Traffic Enforcement"
     },
     {
       "id": "spec-4",
       "icon": "cog",
-      "label": "Software & Automation"
+      "label": "✔ AI & Machine Learning"
+    },
+    {
+      "id": "spec-1784868630176",
+      "icon": "cog",
+      "label": "✔ System Integration"
+    },
+    {
+      "id": "spec-1784868632888",
+      "icon": "cog",
+      "label": "✔ Automation"
     }
   ],
   "tools": [
