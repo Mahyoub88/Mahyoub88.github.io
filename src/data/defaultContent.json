@@ -45,7 +45,7 @@
     "badge": "SENIOR INTELLIGENT SOLUTIONS ENGINEER",
     "greetingName": "Mohammed Mahyoub",
     "tagline": "Building Intelligent Systems with AI & Automation",
-    "description": "Senior Intelligent Solutions Engineer with over 10+ years of experience designing, integrating, and supporting intelligent transportation systems across the UAE and international projects. Passionate about Artificial Intelligence, Machine Vision, automation, and building reliable solutions for smart cities.",
+    "description": "Senior Intelligent Solutions Engineer with over 10+ years of experience designing, integrating, and supporting intelligent transportation systems across the UAE and international projects. \n\nPassionate about Artificial Intelligence, Machine Vision, automation, and building reliable solutions for smart cities.",
     "primaryCta": {
       "label": "Download CV",
       "href": "#contact"
@@ -307,5 +307,12 @@
       "type": "email",
       "url": "mailto:contact@example.com"
     }
-  ]
+  ],
+  "technicalExpertise": [],
+  "education": [],
+  "certifications": [],
+  "footerLinks": {
+    "resumeUrl": "",
+    "orcidUrl": ""
+  }
 }
