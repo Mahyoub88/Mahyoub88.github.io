@@ -5,6 +5,8 @@ import { FeaturedProjects } from '../components/FeaturedProjects'
 import { About } from '../components/About'
 import { Experience } from '../components/Experience'
 import { Skills } from '../components/Skills'
+import { Education } from '../components/Education'
+import { Certifications } from '../components/Certifications'
 import { Articles } from '../components/Articles'
 import { Contact } from '../components/Contact'
 import { Footer } from '../components/Footer'
@@ -16,10 +18,12 @@ export function Home() {
       <main>
         <Hero />
         <StatsBar />
-        <FeaturedProjects />
         <About />
+        <FeaturedProjects />
         <Experience />
         <Skills />
+        <Education />
+        <Certifications />
         <Articles />
         <Contact />
       </main>
