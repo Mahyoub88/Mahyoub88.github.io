@@ -216,21 +216,21 @@
       ]
     }
   ],
-  "projectsTitle": "Featured Projects",
-  "projectsSubtitle": "A showcase of projects and solutions I've built.",
+  "projectsTitle": "Professional & Research Projects",
+  "projectsSubtitle": "Professional engineering, AI, and research projects.",
   "projectsCtaLabel": "View all projects",
   "projectsCtaHref": "#work",
   "projects": [
     {
       "id": "proj-1",
-      "category": "Machine Learning",
-      "title": "Vehicle Type Classification",
-      "description": "ML model to classify vehicle types using NGSIM trajectory data with 99%+ accuracy.",
+      "category": "Research Project",
+      "title": "AI-Based Vehicle Type Classification",
+      "description": "Developed a machine learning model to classify vehicle types using the NGSIM US-101 dataset, achieving over 99% classification accuracy through vehicle-level feature engineering and model optimization.",
       "tags": [
-        "Python",
-        "Scikit-learn",
-        "Pandas",
-        "Matplotlib"
+        "Machine Learning",
+        "Classification",
+        "NGSIM",
+        "Python"
       ],
       "link": "https://github.com/mahyoub88/predicting-vehicle-type-using-ngsim-us101",
       "accent": "blue"
