@@ -59,7 +59,12 @@
       "href": "#contact"
     },
     "photoUrl": "https://mahyoub88.github.io/mahyoub.jpg",
-    "backgroundUrl": "/hero-bg.jpg"
+    "backgroundUrl": "/hero-bg.jpg",
+    "currentFocus": [
+      "Scaling AI-driven ITS platforms across the UAE",
+      "Predictive maintenance automation",
+      "Machine vision R&D for smart traffic enforcement"
+    ]
   },
   "specializations": [
     {
