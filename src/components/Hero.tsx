@@ -6,7 +6,7 @@ import { SocialIcons } from './SocialIcons'
 
 export function Hero() {
   const { content } = useContent()
-  const { hero, specializations, tools } = content
+  const { hero, specializations } = content
 
   return (
     <section id="home" className="relative overflow-hidden py-14 lg:py-16">
@@ -111,24 +111,13 @@ export function Hero() {
               </ul>
 
               <p className="mb-3 border-t border-[var(--border-1)] pt-4 text-xs font-semibold tracking-wider text-[var(--text-3)]">
-                TOOLS &amp; TECHNOLOGIES
+                CURRENT FOCUS
               </p>
-              <div className="grid flex-1 grid-cols-4 content-between gap-x-2 gap-y-3">
-                {tools.map((tool) => (
-                  <div
-                    key={tool.id}
-                    className="flex min-w-0 flex-col items-center gap-1.5"
-                    title={tool.label}
-                  >
-                    <span
-                      className="flex h-9 w-9 items-center justify-center rounded-lg text-xs font-bold"
-                      style={{ backgroundColor: `${tool.color}26`, color: tool.color }}
-                    >
-                      {tool.abbr}
-                    </span>
-                    <span className="max-w-full truncate text-[10px] text-[var(--text-3)]">
-                      {tool.label}
-                    </span>
+              <div className="flex flex-1 flex-col justify-center gap-3">
+                {(hero.currentFocus ?? []).map((item, i) => (
+                  <div key={i} className="flex items-start gap-2.5 text-sm leading-snug text-[var(--text-1)]">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-br from-brand-blue-500 to-brand-purple-500" />
+                    <span className="min-w-0">{item}</span>
                   </div>
                 ))}
               </div>
