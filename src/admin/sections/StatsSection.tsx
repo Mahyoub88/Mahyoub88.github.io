@@ -12,12 +12,12 @@ export function StatsSection({
 }) {
   return (
     <div>
-      <h2 className="mb-4 text-lg font-bold text-[var(--text-1)]">Stats Bar</h2>
+      <h2 className="mb-4 text-lg font-bold text-[var(--text-1)]">Career Highlights</h2>
       <ArrayEditor
         items={content.stats}
-        itemLabel="Stat"
+        itemLabel="Highlight"
         onChange={(stats) => onChange({ stats })}
-        makeItem={() => ({ id: `stat-${Date.now()}`, icon: 'trophy', value: '0', label: 'New Stat' })}
+        makeItem={() => ({ id: `stat-${Date.now()}`, icon: 'trophy', value: '', label: 'New Highlight' })}
         renderItem={(item, update) => (
           <div className="grid grid-cols-4 gap-3">
             <Field label="Icon">
@@ -29,7 +29,7 @@ export function StatsSection({
                 ))}
               </SelectInput>
             </Field>
-            <Field label="Value">
+            <Field label="Value" hint="Optional">
               <TextInput value={item.value} onChange={(e) => update({ value: e.target.value })} />
             </Field>
             <div className="col-span-2">
