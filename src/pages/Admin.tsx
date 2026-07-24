@@ -17,6 +17,9 @@ import {
   ExternalLink,
   Check,
   CloudUpload,
+  GraduationCap,
+  ShieldCheck,
+  Cpu,
 } from 'lucide-react'
 import { useContent } from '../context/ContentContext'
 import { useAuth } from '../context/AuthContext'
@@ -28,6 +31,9 @@ import { ToolsSection } from '../admin/sections/ToolsSection'
 import { StatsSection } from '../admin/sections/StatsSection'
 import { AboutSection } from '../admin/sections/AboutSection'
 import { ExperienceSection } from '../admin/sections/ExperienceSection'
+import { TechnicalExpertiseSection } from '../admin/sections/TechnicalExpertiseSection'
+import { EducationSection } from '../admin/sections/EducationSection'
+import { CertificationsSection } from '../admin/sections/CertificationsSection'
 import { ProjectsSection } from '../admin/sections/ProjectsSection'
 import { ArticlesSection } from '../admin/sections/ArticlesSection'
 import { ContactSocialSection } from '../admin/sections/ContactSocialSection'
@@ -40,12 +46,15 @@ const tabs = [
   { id: 'brand', label: 'Brand & Nav', icon: LayoutDashboard },
   { id: 'hero', label: 'Hero', icon: User },
   { id: 'specializations', label: 'Core Expertise', icon: Sparkles },
-  { id: 'tools', label: 'Tools', icon: Wrench },
-  { id: 'stats', label: 'Stats', icon: BarChart3 },
+  { id: 'stats', label: 'Career Highlights', icon: BarChart3 },
   { id: 'about', label: 'About', icon: FileText },
   { id: 'experience', label: 'Experience', icon: Briefcase },
+  { id: 'technicalExpertise', label: 'Technical Expertise', icon: Cpu },
+  { id: 'tools', label: 'Tools', icon: Wrench },
+  { id: 'education', label: 'Education', icon: GraduationCap },
+  { id: 'certifications', label: 'Certifications', icon: ShieldCheck },
   { id: 'projects', label: 'Projects', icon: FolderKanban },
-  { id: 'articles', label: 'Articles', icon: Newspaper },
+  { id: 'articles', label: 'Research & Publications', icon: Newspaper },
   { id: 'contact', label: 'Contact & Social', icon: MessageSquare },
   { id: 'settings', label: 'Settings', icon: Settings },
 ] as const
@@ -197,10 +206,13 @@ function AdminDashboard() {
             {activeTab === 'brand' && <BrandNavSection {...sectionProps} />}
             {activeTab === 'hero' && <HeroSection {...sectionProps} />}
             {activeTab === 'specializations' && <SpecializationsSection {...sectionProps} />}
-            {activeTab === 'tools' && <ToolsSection {...sectionProps} />}
             {activeTab === 'stats' && <StatsSection {...sectionProps} />}
             {activeTab === 'about' && <AboutSection {...sectionProps} />}
             {activeTab === 'experience' && <ExperienceSection {...sectionProps} />}
+            {activeTab === 'technicalExpertise' && <TechnicalExpertiseSection {...sectionProps} />}
+            {activeTab === 'tools' && <ToolsSection {...sectionProps} />}
+            {activeTab === 'education' && <EducationSection {...sectionProps} />}
+            {activeTab === 'certifications' && <CertificationsSection {...sectionProps} />}
             {activeTab === 'projects' && <ProjectsSection {...sectionProps} />}
             {activeTab === 'articles' && <ArticlesSection {...sectionProps} />}
             {activeTab === 'contact' && <ContactSocialSection {...sectionProps} />}
