@@ -96,6 +96,33 @@ export interface ContactContent {
   location: string
 }
 
+export interface ExpertiseCategory {
+  id: string
+  category: string
+  items: string[]
+}
+
+export interface EducationItem {
+  id: string
+  degree: string
+  institution: string
+  period: string
+  status: string
+}
+
+export interface CertificationItem {
+  id: string
+  name: string
+  issuer: string
+  date: string
+  type: string
+}
+
+export interface FooterLinks {
+  resumeUrl: string
+  orcidUrl: string
+}
+
 export interface SiteContent {
   brand: BrandContent
   nav: NavLink[]
@@ -105,6 +132,9 @@ export interface SiteContent {
   stats: Stat[]
   about: AboutContent
   experience: ExperienceItem[]
+  technicalExpertise: ExpertiseCategory[]
+  education: EducationItem[]
+  certifications: CertificationItem[]
   projectsTitle: string
   projectsSubtitle: string
   projectsCtaLabel: string
@@ -113,4 +143,5 @@ export interface SiteContent {
   articles: ArticleItem[]
   contact: ContactContent
   social: SocialLink[]
+  footerLinks: FooterLinks
 }
