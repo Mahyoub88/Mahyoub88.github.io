@@ -39,11 +39,6 @@
       "id": "contact",
       "label": "Contact",
       "href": "#contact"
-    },
-    {
-      "id": "nav-1784866971369",
-      "label": "New Link",
-      "href": "#"
     }
   ],
   "hero": {
@@ -56,7 +51,7 @@
       "href": "#contact"
     },
     "secondaryCta": {
-      "label": "View My Work",
+      "label": "View Portfolio",
       "href": "#work"
     },
     "tertiaryCta": {
