@@ -101,49 +101,49 @@
   "tools": [
     {
       "id": "tool-1",
-      "label": "Python",
+      "label": "🚦 Intelligent Transportation Systems",
       "abbr": "Py",
       "color": "#3776ab"
     },
     {
       "id": "tool-2",
-      "label": "JavaScript",
+      "label": "👁 Machine Vision",
       "abbr": "JS",
       "color": "#f0db4f"
     },
     {
       "id": "tool-3",
-      "label": "TypeScript",
+      "label": "🛰 Traffic Enforcement",
       "abbr": "TS",
       "color": "#3178c6"
     },
     {
       "id": "tool-4",
-      "label": "React",
+      "label": "🤖 Artificial Intelligence",
       "abbr": "⚛",
       "color": "#61dafb"
     },
     {
       "id": "tool-5",
-      "label": "Node.js",
+      "label": "⚙ System Integration",
       "abbr": "JS",
       "color": "#83cd29"
     },
     {
       "id": "tool-6",
-      "label": "PostgreSQL",
+      "label": "📊 Data Analytics",
       "abbr": "🐘",
       "color": "#336791"
     },
     {
       "id": "tool-7",
-      "label": "Docker",
+      "label": "🔧 Technical Support",
       "abbr": "🐳",
       "color": "#2496ed"
     },
     {
       "id": "tool-8",
-      "label": "Git",
+      "label": "☁ Cloud & Automation",
       "abbr": "◆",
       "color": "#f05032"
     }
