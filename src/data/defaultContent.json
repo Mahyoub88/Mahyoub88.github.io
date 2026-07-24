@@ -103,49 +103,49 @@
       "id": "tool-1",
       "label": "ITS",
       "abbr": "🚦",
-      "color": "#3776ab"
+      "color": "#3B82F6"
     },
     {
       "id": "tool-2",
       "label": "AI",
-      "abbr": "JS",
-      "color": "#f0db4f"
+      "abbr": "🤖",
+      "color": "#A855F7"
     },
     {
       "id": "tool-3",
       "label": "ANPR",
-      "abbr": "TS",
-      "color": "#3178c6"
+      "abbr": "📷",
+      "color": "#22C55E"
     },
     {
       "id": "tool-4",
       "label": "LiDAR",
-      "abbr": "⚛",
-      "color": "#61dafb"
+      "abbr": "📡",
+      "color": "#06B6D4"
     },
     {
       "id": "tool-5",
       "label": "Integration",
-      "abbr": "JS",
-      "color": "#83cd29"
+      "abbr": "🔗",
+      "color": "#F59E0B"
     },
     {
       "id": "tool-6",
       "label": "Data Analytics",
-      "abbr": "🐘",
-      "color": "#336791"
+      "abbr": "📊",
+      "color": "#6366F1"
     },
     {
       "id": "tool-7",
       "label": "Automation",
-      "abbr": "🐳",
-      "color": "#2496ed"
+      "abbr": "⚙️",
+      "color": "#10B981"
     },
     {
       "id": "tool-8",
       "label": "Cloud ",
-      "abbr": "◆",
-      "color": "#f05032"
+      "abbr": "☁️",
+      "color": "#0EA5E9"
     }
   ],
   "stats": [
