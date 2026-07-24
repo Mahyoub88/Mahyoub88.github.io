@@ -7,10 +7,10 @@ export function Articles() {
   if (content.articles.length === 0) return null
 
   return (
-    <section id="articles" className="bg-[var(--surface-1)] py-20">
+    <section id="articles" className="border-y border-[var(--border-1)] bg-[var(--surface-1)] py-20">
       <Container>
-        <p className="text-xs font-semibold tracking-wider text-brand-blue-400">WRITING</p>
-        <h2 className="mt-2 text-3xl font-extrabold text-[var(--text-1)]">Articles</h2>
+        <p className="text-xs font-semibold tracking-wider text-brand-blue-400">RESEARCH</p>
+        <h2 className="mt-2 text-3xl font-extrabold text-[var(--text-1)]">Research &amp; Publications</h2>
 
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
           {content.articles.map((article) => {
