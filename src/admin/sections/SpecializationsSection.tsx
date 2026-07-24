@@ -12,7 +12,7 @@ export function SpecializationsSection({
 }) {
   return (
     <div>
-      <h2 className="mb-4 text-lg font-bold text-[var(--text-1)]">Specializations</h2>
+      <h2 className="mb-4 text-lg font-bold text-[var(--text-1)]">Core Expertise</h2>
       <ArrayEditor
         items={content.specializations}
         itemLabel="Specialization"
