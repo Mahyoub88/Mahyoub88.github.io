@@ -39,6 +39,11 @@
       "id": "contact",
       "label": "Contact",
       "href": "#contact"
+    },
+    {
+      "id": "nav-1784866971369",
+      "label": "New Link",
+      "href": "#"
     }
   ],
   "hero": {
