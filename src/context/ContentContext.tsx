@@ -5,14 +5,37 @@ import { defaultContent } from '../data/defaultContent'
 
 const STORAGE_KEY = 'portfolio-content-v1'
 
+// Safe fallbacks for fields that may be missing from content published before
+// this field existed, so the site never crashes on stale published JSON.
+const FIELD_FALLBACKS: Pick<
+  SiteContent,
+  'technicalExpertise' | 'education' | 'certifications' | 'footerLinks'
+> = {
+  technicalExpertise: [],
+  education: [],
+  certifications: [],
+  footerLinks: { resumeUrl: '', orcidUrl: '' },
+}
+
+function withFallbacks(content: SiteContent): SiteContent {
+  return {
+    ...content,
+    technicalExpertise: content.technicalExpertise ?? FIELD_FALLBACKS.technicalExpertise,
+    education: content.education ?? FIELD_FALLBACKS.education,
+    certifications: content.certifications ?? FIELD_FALLBACKS.certifications,
+    footerLinks: content.footerLinks ?? FIELD_FALLBACKS.footerLinks,
+    hero: { ...content.hero, currentFocus: content.hero?.currentFocus ?? [] },
+  }
+}
+
 function loadContent(): SiteContent {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
-    if (!raw) return defaultContent
+    if (!raw) return withFallbacks(defaultContent)
     const parsed = JSON.parse(raw)
-    return { ...defaultContent, ...parsed }
+    return withFallbacks({ ...defaultContent, ...parsed })
   } catch {
-    return defaultContent
+    return withFallbacks(defaultContent)
   }
 }
 
@@ -45,7 +68,7 @@ export function ContentProvider({ children }: { children: ReactNode }) {
     const onStorage = (e: StorageEvent) => {
       if (e.key === STORAGE_KEY && e.newValue) {
         try {
-          setContentState({ ...defaultContent, ...JSON.parse(e.newValue) })
+          setContentState(withFallbacks({ ...defaultContent, ...JSON.parse(e.newValue) }))
         } catch {
           /* ignore malformed external update */
         }
