@@ -101,49 +101,49 @@
   "tools": [
     {
       "id": "tool-1",
-      "label": "🚦 ITS",
+      "label": "ITS",
       "abbr": "Py",
       "color": "#3776ab"
     },
     {
       "id": "tool-2",
-      "label": "🤖 AI",
+      "label": "AI",
       "abbr": "JS",
       "color": "#f0db4f"
     },
     {
       "id": "tool-3",
-      "label": "📷 ANPR",
+      "label": "ANPR",
       "abbr": "TS",
       "color": "#3178c6"
     },
     {
       "id": "tool-4",
-      "label": "📡 LiDAR",
+      "label": "LiDAR",
       "abbr": "⚛",
       "color": "#61dafb"
     },
     {
       "id": "tool-5",
-      "label": "🔗 Integration",
+      "label": "Integration",
       "abbr": "JS",
       "color": "#83cd29"
     },
     {
       "id": "tool-6",
-      "label": "📊 Data Analytics",
+      "label": "Data Analytics",
       "abbr": "🐘",
       "color": "#336791"
     },
     {
       "id": "tool-7",
-      "label": "⚙️ Automation",
+      "label": "Automation",
       "abbr": "🐳",
       "color": "#2496ed"
     },
     {
       "id": "tool-8",
-      "label": "☁ Cloud ",
+      "label": "Cloud ",
       "abbr": "◆",
       "color": "#f05032"
     }
