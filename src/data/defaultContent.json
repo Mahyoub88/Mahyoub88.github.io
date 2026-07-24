@@ -101,31 +101,31 @@
   "tools": [
     {
       "id": "tool-1",
-      "label": "🚦 Intelligent Transportation Systems",
+      "label": "🚦 ITS",
       "abbr": "Py",
       "color": "#3776ab"
     },
     {
       "id": "tool-2",
-      "label": "👁 Machine Vision",
+      "label": "🤖 AI",
       "abbr": "JS",
       "color": "#f0db4f"
     },
     {
       "id": "tool-3",
-      "label": "🛰 Traffic Enforcement",
+      "label": "📷 ANPR",
       "abbr": "TS",
       "color": "#3178c6"
     },
     {
       "id": "tool-4",
-      "label": "🤖 Artificial Intelligence",
+      "label": "📡 LiDAR",
       "abbr": "⚛",
       "color": "#61dafb"
     },
     {
       "id": "tool-5",
-      "label": "⚙ System Integration",
+      "label": "🔗 Integration",
       "abbr": "JS",
       "color": "#83cd29"
     },
@@ -137,13 +137,13 @@
     },
     {
       "id": "tool-7",
-      "label": "🔧 Technical Support",
+      "label": "⚙️ Automation",
       "abbr": "🐳",
       "color": "#2496ed"
     },
     {
       "id": "tool-8",
-      "label": "☁ Cloud & Automation",
+      "label": "☁ Cloud ",
       "abbr": "◆",
       "color": "#f05032"
     }
