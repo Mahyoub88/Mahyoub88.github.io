@@ -154,19 +154,19 @@
       "id": "stat-2",
       "icon": "monitor",
       "value": "800+",
-      "label": "Systems Supported"
+      "label": "ITS Systems"
     },
     {
       "id": "stat-3",
       "icon": "globe",
       "value": "6",
-      "label": "Countries Worked"
+      "label": "Countries Served"
     },
     {
       "id": "stat-4",
       "icon": "trophy",
       "value": "10+",
-      "label": "Projects Completed"
+      "label": "Technical Projects"
     }
   ],
   "about": {
