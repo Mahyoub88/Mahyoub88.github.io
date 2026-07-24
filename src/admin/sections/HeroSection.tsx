@@ -47,6 +47,16 @@ export function HeroSection({
         />
       </Field>
 
+      <Field label="Current Focus" hint="Short phrases shown in the Hero card, one per line">
+        <TextArea
+          rows={4}
+          value={(hero.currentFocus ?? []).join('\n')}
+          onChange={(e) =>
+            update({ currentFocus: e.target.value.split('\n').filter((p) => p.trim()) })
+          }
+        />
+      </Field>
+
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         {(['primaryCta', 'secondaryCta', 'tertiaryCta'] as const).map((key) => (
           <div key={key} className="rounded-xl border border-[var(--border-1)] p-3">
