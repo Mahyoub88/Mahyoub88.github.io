@@ -39,7 +39,7 @@ import { loadGitHubConfig, isGitHubConfigReady, publishContentToGitHub } from '.
 const tabs = [
   { id: 'brand', label: 'Brand & Nav', icon: LayoutDashboard },
   { id: 'hero', label: 'Hero', icon: User },
-  { id: 'specializations', label: 'Specializations', icon: Sparkles },
+  { id: 'specializations', label: 'Core Expertise', icon: Sparkles },
   { id: 'tools', label: 'Tools', icon: Wrench },
   { id: 'stats', label: 'Stats', icon: BarChart3 },
   { id: 'about', label: 'About', icon: FileText },
