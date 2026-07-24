@@ -15,7 +15,7 @@ export function StatsBar() {
   return (
     <section className="relative -mt-6 pb-4 lg:-mt-10">
       <Container>
-        <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-[var(--border-1)] bg-[var(--border-1)] shadow-[var(--shadow-card)] lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-[var(--border-1)] bg-[var(--border-1)] shadow-[var(--shadow-card)] sm:grid-cols-3">
           {content.stats.map((stat, i) => {
             const Icon = getIcon(stat.icon)
             return (
@@ -28,9 +28,19 @@ export function StatsBar() {
                 >
                   <Icon size={20} />
                 </span>
-                <div>
-                  <p className="text-2xl font-extrabold text-[var(--text-1)]">{stat.value}</p>
-                  <p className="text-xs text-[var(--text-3)]">{stat.label}</p>
+                <div className="min-w-0">
+                  {stat.value && (
+                    <p className="text-2xl font-extrabold text-[var(--text-1)]">{stat.value}</p>
+                  )}
+                  <p
+                    className={
+                      stat.value
+                        ? 'text-xs text-[var(--text-3)]'
+                        : 'text-sm font-semibold text-[var(--text-1)]'
+                    }
+                  >
+                    {stat.label}
+                  </p>
                 </div>
               </div>
             )
