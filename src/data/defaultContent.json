@@ -137,19 +137,19 @@
     {
       "id": "stat-1",
       "icon": "briefcase",
-      "value": "6+",
+      "value": "10+",
       "label": "Years of Experience"
     },
     {
       "id": "stat-2",
       "icon": "monitor",
-      "value": "500+",
+      "value": "2500+",
       "label": "Systems Supported"
     },
     {
       "id": "stat-3",
       "icon": "globe",
-      "value": "3",
+      "value": "6",
       "label": "Countries Worked"
     },
     {
