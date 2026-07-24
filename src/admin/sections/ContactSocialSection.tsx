@@ -13,6 +13,10 @@ export function ContactSocialSection({
   const update = (patch: Partial<SiteContent['contact']>) =>
     onChange({ contact: { ...contact, ...patch } })
 
+  const footerLinks = content.footerLinks
+  const updateFooterLinks = (patch: Partial<SiteContent['footerLinks']>) =>
+    onChange({ footerLinks: { ...footerLinks, ...patch } })
+
   return (
     <div className="space-y-8">
       <div>
@@ -72,6 +76,26 @@ export function ContactSocialSection({
             </div>
           )}
         />
+      </div>
+
+      <div>
+        <h2 className="mb-4 text-lg font-bold text-[var(--text-1)]">Footer Links</h2>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <Field label="Resume URL" hint="Leave empty to hide">
+            <TextInput
+              value={footerLinks.resumeUrl}
+              onChange={(e) => updateFooterLinks({ resumeUrl: e.target.value })}
+              placeholder="https://..."
+            />
+          </Field>
+          <Field label="ORCID URL" hint="Leave empty to hide">
+            <TextInput
+              value={footerLinks.orcidUrl}
+              onChange={(e) => updateFooterLinks({ orcidUrl: e.target.value })}
+              placeholder="https://orcid.org/..."
+            />
+          </Field>
+        </div>
       </div>
     </div>
   )
