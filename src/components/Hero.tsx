@@ -71,7 +71,7 @@ export function Hero() {
 
         <div className="lg:col-span-6">
           <div className="grid min-w-0 grid-cols-1 items-stretch gap-5 sm:grid-cols-2">
-            <div className="relative h-[460px] w-full min-w-0 overflow-hidden rounded-2xl border border-[var(--border-2)] bg-gradient-to-br from-blue-50 via-purple-50 to-white shadow-2xl dark:from-slate-950 dark:via-purple-950/30 dark:to-slate-950">
+            <div className="relative min-h-[460px] w-full min-w-0 overflow-hidden rounded-2xl border border-[var(--border-2)] bg-gradient-to-br from-blue-50 via-purple-50 to-white shadow-2xl dark:from-slate-950 dark:via-purple-950/30 dark:to-slate-950">
               <div
                 aria-hidden
                 className="animate-glow-pulse pointer-events-none absolute inset-0 bg-gradient-to-br from-brand-blue-500/15 via-brand-purple-500/15 to-transparent blur-2xl"
@@ -89,7 +89,7 @@ export function Hero() {
               )}
             </div>
 
-            <div className="flex h-[460px] w-full min-w-0 flex-col rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] p-5 shadow-[var(--shadow-card)]">
+            <div className="flex min-h-[460px] w-full min-w-0 flex-col rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] p-5 shadow-[var(--shadow-card)]">
               <p className="mb-3 text-xs font-semibold tracking-wider text-[var(--text-3)]">
                 CORE EXPERTISE
               </p>
