@@ -91,7 +91,7 @@ export function Hero() {
 
             <div className="flex h-[460px] w-full min-w-0 flex-col rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] p-5 shadow-[var(--shadow-card)]">
               <p className="mb-3 text-xs font-semibold tracking-wider text-[var(--text-3)]">
-                SPECIALIZATIONS
+                CORE EXPERTISE
               </p>
               <ul className="mb-4 space-y-2.5">
                 {specializations.map((item) => {
