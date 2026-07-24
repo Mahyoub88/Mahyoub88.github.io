@@ -57,6 +57,7 @@ export interface HeroContent {
   tertiaryCta: CtaLink
   photoUrl: string
   backgroundUrl: string
+  currentFocus: string[]
 }
 
 export interface BrandContent {
