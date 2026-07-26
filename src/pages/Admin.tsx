@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import {
   LayoutDashboard,
@@ -69,28 +69,45 @@ function AdminDashboard() {
   const [saveState, setSaveState] = useState<'idle' | 'saving' | 'saved' | 'published' | 'publish-failed'>(
     'idle',
   )
+  const [publishError, setPublishError] = useState<string | null>(null)
 
   const isDirty = JSON.stringify(draft) !== JSON.stringify(content)
+
+  useEffect(() => {
+    if (!isDirty) return
+    const handler = (e: BeforeUnloadEvent) => {
+      e.preventDefault()
+      e.returnValue = ''
+    }
+    window.addEventListener('beforeunload', handler)
+    return () => window.removeEventListener('beforeunload', handler)
+  }, [isDirty])
 
   const patch = (p: Partial<SiteContent>) => setDraft((prev) => ({ ...prev, ...p }))
 
   const handleSave = async () => {
     setContent(draft)
     setSaveState('saving')
+    setPublishError(null)
+    let failed = false
 
     const gh = loadGitHubConfig()
     if (isGitHubConfigReady(gh)) {
       try {
         await publishContentToGitHub(gh, JSON.stringify(draft, null, 2))
         setSaveState('published')
-      } catch {
+      } catch (err) {
+        failed = true
         setSaveState('publish-failed')
+        setPublishError(err instanceof Error ? err.message : String(err))
       }
     } else {
       setSaveState('saved')
     }
 
-    setTimeout(() => setSaveState('idle'), 2500)
+    if (!failed) {
+      setTimeout(() => setSaveState('idle'), 2500)
+    }
   }
 
   const handleReset = () => {
@@ -165,7 +182,9 @@ function AdminDashboard() {
             </h1>
             {isDirty && <p className="text-xs text-brand-amber-400">Unsaved changes</p>}
             {saveState === 'publish-failed' && (
-              <p className="text-xs text-red-400">Saved locally, but publish to GitHub failed.</p>
+              <p className="text-xs text-red-400">
+                Saved locally, but publish to GitHub failed{publishError ? `: ${publishError}` : '.'}
+              </p>
             )}
           </div>
           <div className="flex items-center gap-2">
