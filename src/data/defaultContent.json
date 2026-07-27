@@ -1,7 +1,7 @@
 {
   "brand": {
     "name": "M.Mahyoub",
-    "title": "AI & Intelligent Systems Engineer",
+    "title": "ITS • AI • Machine Vision • Automation",
     "logoInitial": "M"
   },
   "nav": [
@@ -16,19 +16,14 @@
       "href": "#about"
     },
     {
-      "id": "work",
-      "label": "Projects",
-      "href": "#work"
-    },
-    {
       "id": "experience",
       "label": "Experience",
       "href": "#experience"
     },
     {
-      "id": "skills",
-      "label": "Skills",
-      "href": "#skills"
+      "id": "work",
+      "label": "Projects",
+      "href": "#work"
     },
     {
       "id": "articles",
@@ -36,22 +31,32 @@
       "href": "#articles"
     },
     {
+      "id": "skills",
+      "label": "Skills",
+      "href": "#skills"
+    },
+    {
       "id": "contact",
       "label": "Contact",
       "href": "#contact"
+    },
+    {
+      "id": "nav-1785146574642",
+      "label": "Education ",
+      "href": "#education"
     }
   ],
   "hero": {
-    "badge": "AI • ITS • System Integration",
-    "greetingName": "Mohammed",
-    "tagline": "Engineering Smart Infrastructure with AI",
-    "description": "Senior Intelligent Solutions Engineer with 10+ years of experience delivering intelligent transportation systems, AI-powered automation, ANPR, LiDAR, and enterprise system integration across the UAE and international projects.",
+    "badge": "SENIOR INTELLIGENT SOLUTIONS ENGINEER",
+    "greetingName": "Mohammed Mahyoub",
+    "tagline": "Building Intelligent Systems with AI & Automation",
+    "description": "Senior Intelligent Solutions Engineer with over 10+ years of experience designing, integrating, and supporting intelligent transportation systems across the UAE and international projects. \n\nPassionate about Artificial Intelligence, Machine Vision, automation, and building reliable solutions for smart cities.",
     "primaryCta": {
       "label": "Download CV",
       "href": "#contact"
     },
     "secondaryCta": {
-      "label": "View Projects",
+      "label": "View Portfolio",
       "href": "#work"
     },
     "tertiaryCta": {
@@ -59,84 +64,93 @@
       "href": "#contact"
     },
     "photoUrl": "https://mahyoub88.github.io/mahyoub.jpg",
+    "backgroundUrl": "/hero-bg.jpg",
     "currentFocus": [
-      "🎓 Artificial Intelligence",
-      "☁   Azure AI",
-      "🚦 Intelligent Systems",
-      "🤖 AI & Machine Learning",
-      "🔬 Computer Vision"
+      "Scaling AI-driven ITS platforms across the UAE",
+      "Predictive maintenance automation",
+      "Machine vision R&D for smart traffic enforcement"
     ]
   },
   "specializations": [
     {
       "id": "spec-1",
       "icon": "network",
-      "label": "Intelligent Infrastructure"
+      "label": "✔ Intelligent Transportation Systems"
     },
     {
       "id": "spec-2",
       "icon": "workflow",
-      "label": "System Integration"
+      "label": "✔ Machine Vision"
     },
     {
       "id": "spec-3",
       "icon": "brain",
-      "label": "AI & Machine Learning"
+      "label": "✔ Traffic Solutions"
     },
     {
       "id": "spec-4",
       "icon": "cog",
-      "label": "Software & Automation"
+      "label": "✔ AI & Machine Learning"
+    },
+    {
+      "id": "spec-1784868630176",
+      "icon": "cog",
+      "label": "✔ System Integration"
+    },
+    {
+      "id": "spec-1784868632888",
+      "icon": "cog",
+      "label": "✔ Automation"
     }
   ],
   "tools": [
     {
       "id": "tool-1",
-      "label": "Python",
-      "abbr": "Py",
-      "color": "#3776ab"
+      "label": "ITS",
+      "abbr": "🚦",
+      "color": "#3B82F6"
     },
     {
       "id": "tool-2",
-      "label": "JavaScript",
-      "abbr": "JS",
-      "color": "#f0db4f"
+      "label": "AI",
+      "abbr": "🤖",
+      "color": "#A855F7"
     },
     {
       "id": "tool-3",
-      "label": "TypeScript",
-      "abbr": "TS",
-      "color": "#3178c6"
+      "label": "ANPR",
+      "abbr": "📷",
+      "color": "#22C55E"
     },
     {
       "id": "tool-4",
-      "label": "React",
-      "abbr": "⚛",
-      "color": "#61dafb"
+      "label": "LiDAR",
+      "abbr": "📡",
+      "color": "#06B6D4"
     },
     {
       "id": "tool-5",
-      "label": "Node.js",
-      "abbr": "JS",
-      "color": "#83cd29"
+      "label": "Integration",
+      "abbr": "🔗",
+      "color": "#F59E0B"
     },
     {
       "id": "tool-6",
-      "label": "PostgreSQL",
-      "abbr": "🐘",
-      "color": "#336791"
+      "label": "Data Analytics",
+      "abbr": "📊",
+      "color": "#6366F1"
     },
     {
       "id": "tool-7",
-      "label": "Docker",
-      "abbr": "🐳",
-      "color": "#2496ed"
+      "label": "Automation",
+      "abbr": "⚙️",
+      "color": "#10B981"
     },
     {
       "id": "tool-8",
-      "label": "Git",
-      "abbr": "◆",
-      "color": "#f05032"
+      "label": "Cloud ",
+      "abbr": "☁️",
+      "color": "#0EA5E9"
     }
   ],
   "stats": [
@@ -149,14 +163,20 @@
     {
       "id": "stat-2",
       "icon": "monitor",
-      "value": "900+",
-      "label": "Systems Supported"
+      "value": "800+",
+      "label": "ITS Systems"
     },
     {
       "id": "stat-3",
       "icon": "globe",
-      "value": "6+",
-      "label": "Countries Worked"
+      "value": "6",
+      "label": "Countries Served"
+    },
+    {
+      "id": "stat-4",
+      "icon": "trophy",
+      "value": "10+",
+      "label": "Technical Projects"
     }
   ],
   "about": {
@@ -206,21 +226,21 @@
       ]
     }
   ],
-  "projectsTitle": "Featured Projects",
-  "projectsSubtitle": "A showcase of projects and solutions I've built.",
+  "projectsTitle": "Professional & Research Projects",
+  "projectsSubtitle": "Professional engineering, AI, and research projects.",
   "projectsCtaLabel": "View all projects",
   "projectsCtaHref": "#work",
   "projects": [
     {
       "id": "proj-1",
-      "category": "Machine Learning",
-      "title": "Vehicle Type Classification",
-      "description": "ML model to classify vehicle types using NGSIM trajectory data with 99%+ accuracy.",
+      "category": "Research Project",
+      "title": "AI-Based Vehicle Type Classification",
+      "description": "Developed a machine learning model to classify vehicle types using the NGSIM US-101 dataset, achieving over 99% classification accuracy through vehicle-level feature engineering and model optimization.",
       "tags": [
-        "Python",
-        "Scikit-learn",
-        "Pandas",
-        "Matplotlib"
+        "Machine Learning",
+        "Classification",
+        "NGSIM",
+        "Python"
       ],
       "link": "https://github.com/mahyoub88/predicting-vehicle-type-using-ngsim-us101",
       "accent": "blue"
@@ -294,22 +314,7 @@
     }
   ],
   "technicalExpertise": [],
-  "education": [
-    {
-      "id": "edu-1785087451015",
-      "degree": "Master of Science (MSc) in Artificial Intelligence",
-      "institution": "University of the West of England (UWE Bristol), United Kingdom (Online)",
-      "period": "Jun 2026 – Present",
-      "status": "In Progress"
-    },
-    {
-      "id": "edu-1785087507711",
-      "degree": "BEng Electrical Engineering (Communications & Electronics)",
-      "institution": "Sana'a University, Yemen",
-      "period": "2012– 2017",
-      "status": "Completed"
-    }
-  ],
+  "education": [],
   "certifications": [],
   "footerLinks": {
     "resumeUrl": "",
