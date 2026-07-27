@@ -27,7 +27,7 @@
     },
     {
       "id": "articles",
-      "label": "Research.",
+      "label": "Research",
       "href": "#articles"
     },
     {
@@ -62,7 +62,7 @@
     "currentFocus": [
       "🎓 Artificial Intelligence",
       "☁   Azure AI",
-      "🚦 Intelligent Transportation Systems",
+      "🚦 Intelligent Systems",
       "🤖 AI & Machine Learning",
       "🔬 Computer Vision"
     ]
