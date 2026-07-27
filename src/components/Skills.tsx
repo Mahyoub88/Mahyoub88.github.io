@@ -5,7 +5,7 @@ export function Skills() {
   const { content } = useContent()
 
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="pb-14 pt-20">
       <Container>
         <p className="text-xs font-semibold tracking-wider text-brand-blue-400">SKILLS</p>
         <h2 className="mt-2 text-3xl font-extrabold text-[var(--text-1)]">Technical Expertise</h2>
