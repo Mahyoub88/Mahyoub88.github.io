@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { useContent } from '../context/ContentContext'
 import { Header } from '../components/Header'
 import { Hero } from '../components/Hero'
 import { StatsBar } from '../components/StatsBar'
@@ -12,6 +14,12 @@ import { Contact } from '../components/Contact'
 import { Footer } from '../components/Footer'
 
 export function Home() {
+  const { content } = useContent()
+
+  useEffect(() => {
+    document.title = `${content.brand.name} — ${content.brand.title}`
+  }, [content.brand.name, content.brand.title])
+
   return (
     <div className="min-h-screen bg-[var(--surface-0)]">
       <Header />
