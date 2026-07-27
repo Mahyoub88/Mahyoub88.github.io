@@ -171,12 +171,6 @@
       "icon": "globe",
       "value": "6",
       "label": "Countries Served"
-    },
-    {
-      "id": "stat-4",
-      "icon": "trophy",
-      "value": "10+",
-      "label": "Technical Projects"
     }
   ],
   "about": {
