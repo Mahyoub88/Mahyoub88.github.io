@@ -308,7 +308,22 @@
     }
   ],
   "technicalExpertise": [],
-  "education": [],
+  "education": [
+    {
+      "id": "edu-1785147336033",
+      "degree": "Master of Science (MSc) in Artificial Intelligence",
+      "institution": "rsity of the West of England (UWE Bristol), United Kingdom ",
+      "period": "Jun 2026 – Present",
+      "status": "In Progress"
+    },
+    {
+      "id": "edu-1785147373644",
+      "degree": "BEng Electrical Engineering (Communications & Electronics)",
+      "institution": "Sana'a University, Yemen",
+      "period": "2012 – 2017",
+      "status": "Completed"
+    }
+  ],
   "certifications": [],
   "footerLinks": {
     "resumeUrl": "",
