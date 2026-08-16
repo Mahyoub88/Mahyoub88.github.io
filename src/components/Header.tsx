@@ -13,6 +13,13 @@ export function Header() {
   const { isAuthenticated } = useAuth()
   const [open, setOpen] = useState(false)
 
+  // Same rule as the hero CTA: a file link (not an in-page #anchor) opens in a
+  // new tab and downloads, so the header CV button behaves like a real download.
+  const ctaIsFile = !content.hero.primaryCta.href.startsWith('#')
+  const ctaFileProps = ctaIsFile
+    ? { target: '_blank', rel: 'noopener noreferrer', download: '' }
+    : {}
+
   const sectionIds = useMemo(
     () =>
       content.nav
@@ -76,6 +83,7 @@ export function Header() {
           </button>
           <a
             href={content.hero.primaryCta.href}
+            {...ctaFileProps}
             className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue-500 to-brand-purple-500 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-blue-500/20 transition hover:brightness-110"
           >
             <Download size={16} />
@@ -122,6 +130,7 @@ export function Header() {
               </button>
               <a
                 href={content.hero.primaryCta.href}
+                {...ctaFileProps}
                 className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue-500 to-brand-purple-500 px-4 py-2.5 text-sm font-semibold text-white"
               >
                 <Download size={16} />
