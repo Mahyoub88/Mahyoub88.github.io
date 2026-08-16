@@ -1,6 +1,5 @@
 import { useContent } from '../context/ContentContext'
 import { Container } from './Container'
-import { SocialIcons } from './SocialIcons'
 
 export function Footer() {
   const { content } = useContent()
@@ -29,7 +28,6 @@ export function Footer() {
               {link.label}
             </a>
           ))}
-          <SocialIcons links={content.social} />
         </div>
       </Container>
     </footer>
