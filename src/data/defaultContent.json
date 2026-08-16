@@ -53,7 +53,7 @@
     "description": "Senior Intelligent Solutions Engineer with over 14+ years of multidisciplinary engineering experience, including 6+ years designing, integrating, and supporting intelligent transportation systems across the UAE. \n\nPassionate about Artificial Intelligence, Machine Vision, automation, and building reliable solutions for smart cities.",
     "primaryCta": {
       "label": "Download CV",
-      "href": "#contact"
+      "href": "/Mohammed_Mahyoub_CV.pdf"
     },
     "secondaryCta": {
       "label": "View Portfolio",
@@ -351,7 +351,7 @@
     }
   ],
   "footerLinks": {
-    "resumeUrl": "",
+    "resumeUrl": "/Mohammed_Mahyoub_CV.pdf",
     "orcidUrl": "https://orcid.org/0009-0003-5640-352X"
   }
 }
