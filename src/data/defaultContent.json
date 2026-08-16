@@ -310,7 +310,74 @@
       "url": "mailto:almlike5@gmail.com"
     }
   ],
-  "technicalExpertise": [],
+  "technicalExpertise": [
+    {
+      "id": "exp-cat-1",
+      "category": "ITS & SMART INFRASTRUCTURE",
+      "items": [
+        "Intelligent Transportation Systems",
+        "Traffic Enforcement Systems",
+        "Machine Vision & ANPR",
+        "LiDAR & Sensor Systems",
+        "Commissioning & Calibration",
+        "FAT / SAT & Acceptance Testing"
+      ]
+    },
+    {
+      "id": "exp-cat-2",
+      "category": "SYSTEMS ENGINEERING",
+      "items": [
+        "System Integration",
+        "Root-Cause Analysis",
+        "Interface Validation",
+        "Preventive Maintenance",
+        "Incident Response",
+        "Technical Documentation"
+      ]
+    },
+    {
+      "id": "exp-cat-3",
+      "category": "AI & DATA",
+      "items": [
+        "Python",
+        "scikit-learn",
+        "Machine Learning",
+        "Computer Vision",
+        "Feature Engineering",
+        "Data Analysis"
+      ]
+    },
+    {
+      "id": "exp-cat-4",
+      "category": "NETWORKS & PLATFORMS",
+      "items": [
+        "Cisco (CCNA)",
+        "MikroTik",
+        "Ubiquiti",
+        "MPLS / OSPF / BGP",
+        "VPN & Firewalls",
+        "GNS3",
+        "VMware ESXi",
+        "Databases & Backend Integration"
+      ]
+    },
+    {
+      "id": "exp-cat-5",
+      "category": "EMBEDDED & AUTOMATION",
+      "items": [
+        "PIC / AVR / Arduino",
+        "PCB Prototyping",
+        "Sensor-Based Automation",
+        "VB.NET Applications",
+        "Hardware Debugging"
+      ]
+    },
+    {
+      "id": "exp-cat-6",
+      "category": "LANGUAGES",
+      "items": ["Arabic — Native / Bilingual", "English — Professional Working"]
+    }
+  ],
   "education": [
     {
       "id": "edu-1785147336033",
