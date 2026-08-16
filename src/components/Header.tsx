@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Sun, Moon, Menu, X, Download, LayoutDashboard } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useContent } from '../context/ContentContext'
@@ -19,6 +19,42 @@ export function Header() {
   const ctaFileProps = ctaIsFile
     ? { target: '_blank', rel: 'noopener noreferrer', download: '' }
     : {}
+
+  // The hero already shows this CTA, so showing it in the sticky header at the
+  // same time duplicates it on screen. Reveal the header copy only once the
+  // hero has scrolled away, keeping the CV reachable without the duplication.
+  const [heroPassed, setHeroPassed] = useState(false)
+  useEffect(() => {
+    const update = () => {
+      const hero = document.getElementById('home')
+      // No hero yet (first paint) or no hero at all (admin route): fall back to
+      // one viewport, so the button never flashes in beside the hero's own CTA.
+      if (!hero) {
+        setHeroPassed(window.scrollY > window.innerHeight * 0.8)
+        return
+      }
+      const heroBottom = hero.offsetTop + hero.offsetHeight
+      // Before first layout the hero measures 0; treat that as "still on the
+      // hero" so the button never flashes next to the hero's own CTA.
+      if (heroBottom <= 0) {
+        setHeroPassed(false)
+        return
+      }
+      // 80px ≈ the sticky header's own height, so the button appears just as
+      // the hero's CTA scrolls out from under it.
+      setHeroPassed(window.scrollY > heroBottom - 80)
+    }
+    update()
+    window.addEventListener('scroll', update, { passive: true })
+    window.addEventListener('resize', update)
+    // Late layout shifts (web font, hero background) change the hero's height.
+    window.addEventListener('load', update)
+    return () => {
+      window.removeEventListener('scroll', update)
+      window.removeEventListener('resize', update)
+      window.removeEventListener('load', update)
+    }
+  }, [])
 
   const sectionIds = useMemo(
     () =>
@@ -84,7 +120,11 @@ export function Header() {
           <a
             href={content.hero.primaryCta.href}
             {...ctaFileProps}
-            className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue-500 to-brand-purple-500 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-blue-500/20 transition hover:brightness-110"
+            aria-hidden={!heroPassed}
+            tabIndex={heroPassed ? undefined : -1}
+            className={`flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue-500 to-brand-purple-500 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-blue-500/20 transition hover:brightness-110 ${
+              heroPassed ? 'opacity-100' : 'pointer-events-none opacity-0'
+            }`}
           >
             <Download size={16} />
             {content.hero.primaryCta.label}
