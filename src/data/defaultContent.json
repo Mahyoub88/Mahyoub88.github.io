@@ -177,7 +177,7 @@
     "heading": "About Me",
     "subheading": "A bit about my background and how I work.",
     "paragraphs": [
-      "I'm a Senior Engineer with a background spanning intelligent transportation systems, infrastructure engineering, and software development. Over the past 6+ years I've worked across the full stack of ITS delivery — from field installation and calibration to building the software that monitors and controls those systems.",
+      "I'm a senior engineer with 14+ years of multidisciplinary experience spanning electronics and embedded systems, network infrastructure, and intelligent transportation systems. The last 6+ years have been at VITRONIC, delivering smart infrastructure and traffic enforcement systems across the UAE — across the full stack of ITS delivery, from field installation and calibration to the integration and software that keeps those systems running.",
       "My MSc in Artificial Intelligence sharpened my focus on applying machine learning to real engineering problems: classifying vehicle types from trajectory data, predicting system faults before they happen, and automating workflows that used to take hours of manual work.",
       "I care about building things that are reliable in production, not just accurate in a notebook — clear interfaces, sensible defaults, and systems that fail safely."
     ]
