@@ -8,6 +8,10 @@ export function Hero() {
   const { content } = useContent()
   const { hero, specializations } = content
 
+  // A CV / file link (anything that is not an in-page #anchor) should open in a
+  // new tab and download, instead of being treated as a scroll target.
+  const primaryIsFile = !hero.primaryCta.href.startsWith('#')
+
   return (
     <section id="home" className="relative overflow-hidden py-14 lg:py-16">
       {hero.backgroundUrl && (
@@ -45,6 +49,9 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
               href={hero.primaryCta.href}
+              {...(primaryIsFile
+                ? { target: '_blank', rel: 'noopener noreferrer', download: '' }
+                : {})}
               className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue-500 to-brand-purple-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-blue-500/25 transition hover:brightness-110"
             >
               <Download size={16} />
