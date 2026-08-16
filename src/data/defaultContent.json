@@ -50,7 +50,7 @@
     "badge": "SENIOR INTELLIGENT SOLUTIONS ENGINEER",
     "greetingName": "Mohammed Mahyoub",
     "tagline": "Building Intelligent Systems with AI & Automation",
-    "description": "Senior Intelligent Solutions Engineer with over 10+ years of experience designing, integrating, and supporting intelligent transportation systems across the UAE and international projects. \n\nPassionate about Artificial Intelligence, Machine Vision, automation, and building reliable solutions for smart cities.",
+    "description": "Senior Intelligent Solutions Engineer with over 14+ years of multidisciplinary engineering experience, including 6+ years designing, integrating, and supporting intelligent transportation systems across the UAE. \n\nPassionate about Artificial Intelligence, Machine Vision, automation, and building reliable solutions for smart cities.",
     "primaryCta": {
       "label": "Download CV",
       "href": "#contact"
@@ -157,7 +157,7 @@
     {
       "id": "stat-1",
       "icon": "briefcase",
-      "value": "10+",
+      "value": "14+",
       "label": "Years of Experience"
     },
     {
@@ -185,38 +185,41 @@
   "experience": [
     {
       "id": "exp-1",
-      "role": "Senior Engineer",
-      "company": "Intelligent Transportation Systems",
-      "period": "2022 — Present",
-      "description": "Leading system integration and software delivery for ITS deployments, including monitoring dashboards, remote control interfaces, and field calibration support.",
+      "role": "Senior Service Engineer — Smart Infrastructure & ITS Systems",
+      "company": "VITRONIC Machine Vision",
+      "period": "Oct 2019 — Present",
+      "description": "Deploy, integrate, commission, and support intelligent traffic enforcement and ITS solutions across mission-critical sites in the UAE. Integrate cameras, LiDAR, sensors, control units, networking, databases, and backend platforms into reliable end-to-end systems, and lead FAT/SAT, calibration, and structured root-cause analysis.",
       "tags": [
         "System Integration",
         "ITS",
-        "Leadership"
+        "Machine Vision & LiDAR",
+        "Commissioning & Calibration"
       ]
     },
     {
       "id": "exp-2",
-      "role": "Software & Automation Engineer",
-      "company": "Infrastructure Projects",
-      "period": "2020 — 2022",
-      "description": "Built automation tooling and web interfaces for infrastructure monitoring systems, reducing manual configuration time significantly across multiple sites.",
+      "role": "Electronics, Embedded Systems & Automation Engineer",
+      "company": "Electronic Science Company",
+      "period": "Jun 2015 — Aug 2019",
+      "description": "Designed, assembled, and troubleshot electronic circuits, embedded control systems, and sensor-based automation. Programmed PIC, AVR, and Arduino microcontrollers, performed PCB prototyping and hardware debugging, and built VB.NET desktop applications for monitoring, diagnostics, and workflow automation.",
       "tags": [
+        "Embedded Systems",
         "Automation",
-        "Web Development",
-        "Node.js"
+        "Microcontrollers",
+        "VB.NET"
       ]
     },
     {
       "id": "exp-3",
-      "role": "Field Engineer",
-      "company": "Traffic Enforcement Support",
-      "period": "2019 — 2020",
-      "description": "Installed, calibrated, and troubleshot traffic enforcement hardware and supporting systems across multiple sites and countries.",
+      "role": "Independent Engineering Consultant — Network Infrastructure",
+      "company": "Independent Engineering Projects",
+      "period": "Mar 2012 — May 2018",
+      "description": "Delivered project-based network and infrastructure engineering: routing, switching, firewall, VPN, MikroTik, and Ubiquiti environments, plus MPLS/OSPF/BGP/VRF design and simulation using GNS3 and Cisco platforms, with network diagrams, RF calculations, and technical reports.",
       "tags": [
-        "Calibration",
-        "Troubleshooting",
-        "Support"
+        "Networking",
+        "Cisco",
+        "MikroTik",
+        "GNS3"
       ]
     }
   ],
@@ -299,7 +302,7 @@
     {
       "id": "social-2",
       "type": "linkedin",
-      "url": "https://linkedin.com"
+      "url": "https://www.linkedin.com/in/mohammed-mahyoub/"
     },
     {
       "id": "social-3",
@@ -324,9 +327,31 @@
       "status": "Completed"
     }
   ],
-  "certifications": [],
+  "certifications": [
+    {
+      "id": "cert-1",
+      "name": "Certificate of Appreciation — Dubai Police",
+      "issuer": "Dubai Police HQ, UAE",
+      "date": "2023",
+      "type": "Recognition"
+    },
+    {
+      "id": "cert-2",
+      "name": "CompTIA A+",
+      "issuer": "CompTIA",
+      "date": "",
+      "type": "Certification"
+    },
+    {
+      "id": "cert-3",
+      "name": "Cisco Certified Network Associate (CCNA) — Routing & Switching",
+      "issuer": "Cisco",
+      "date": "",
+      "type": "Certification"
+    }
+  ],
   "footerLinks": {
     "resumeUrl": "",
-    "orcidUrl": ""
+    "orcidUrl": "https://orcid.org/0009-0003-5640-352X"
   }
 }
