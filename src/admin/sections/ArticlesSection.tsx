@@ -11,7 +11,7 @@ export function ArticlesSection({
 }) {
   return (
     <div>
-      <h2 className="mb-4 text-lg font-bold text-[var(--text-1)]">Research &amp; Publications</h2>
+      <h2 className="mb-4 text-lg font-bold text-[var(--text-1)]">Research &amp; Technical Work</h2>
       <p className="mb-4 text-sm text-[var(--text-3)]">
         This section stays hidden on the site until you add at least one entry.
       </p>
@@ -37,7 +37,7 @@ export function ArticlesSection({
                   />
                 </Field>
               </div>
-              <Field label="Date">
+              <Field label="Date" hint="Leave empty to hide the date">
                 <TextInput
                   type="date"
                   value={item.date}
