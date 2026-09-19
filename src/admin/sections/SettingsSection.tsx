@@ -1,15 +1,21 @@
 import { useRef, useState } from 'react'
-import { Download, Upload, RotateCcw, Save, KeyRound, AlertTriangle } from 'lucide-react'
+import {
+  Download,
+  Upload,
+  RotateCcw,
+  Save,
+  KeyRound,
+  AlertTriangle,
+  ShieldCheck,
+  Trash2,
+} from 'lucide-react'
 import { GitHubIcon } from '../../components/BrandIcons'
 import type { SiteContent } from '../../types/content'
 import { Field, TextInput } from '../ui/Field'
 import { useAuth } from '../../context/AuthContext'
-import {
-  publishContentToGitHub,
-  loadGitHubConfig,
-  saveGitHubConfig,
-  type GitHubPublishConfig,
-} from '../github'
+import { publishContentToGitHub } from '../github'
+import { MIN_PASSWORD_LENGTH } from '../crypto'
+import { readToken, writeTarget, writeToken, type GitHubTarget } from '../vault'
 
 export function SettingsSection({
   content,
@@ -20,23 +26,47 @@ export function SettingsSection({
   onImport: (next: SiteContent) => void
   onReset: () => void
 }) {
-  const { changePassword } = useAuth()
+  const { changePassword, vault, setVault, cryptoKey } = useAuth()
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const [currentPw, setCurrentPw] = useState('')
   const [newPw, setNewPw] = useState('')
   const [pwMessage, setPwMessage] = useState<{ type: 'ok' | 'error'; text: string } | null>(null)
 
-  const [gh, setGh] = useState<GitHubPublishConfig>(() => loadGitHubConfig())
+  const target = vault?.github
+  const hasToken = Boolean(vault?.token)
+  // Never prefilled: the stored token is ciphertext, and decrypting it just to
+  // paint it into an input would put it back in the DOM for no reason.
+  const [tokenDraft, setTokenDraft] = useState('')
+  const [tokenMessage, setTokenMessage] = useState<{ type: 'ok' | 'error'; text: string } | null>(
+    null,
+  )
   const [publishStatus, setPublishStatus] = useState<{
     type: 'ok' | 'error' | 'loading'
     text: string
   } | null>(null)
 
-  const updateGh = (patch: Partial<GitHubPublishConfig>) => {
-    const next = { ...gh, ...patch }
-    setGh(next)
-    saveGitHubConfig(next)
+  const updateTarget = (patch: Partial<GitHubTarget>) => {
+    if (!vault) return
+    setVault(writeTarget(vault, patch))
+  }
+
+  const handleSaveToken = async () => {
+    if (!vault || !cryptoKey) return
+    if (!tokenDraft.trim()) {
+      setTokenMessage({ type: 'error', text: 'Paste a token first.' })
+      return
+    }
+    setVault(await writeToken(cryptoKey, vault, tokenDraft.trim()))
+    setTokenDraft('')
+    setTokenMessage({ type: 'ok', text: 'Token encrypted and saved to this browser.' })
+  }
+
+  const handleClearToken = async () => {
+    if (!vault || !cryptoKey) return
+    if (!confirm('Remove the stored token from this browser?')) return
+    setVault(await writeToken(cryptoKey, vault, ''))
+    setTokenMessage({ type: 'ok', text: 'Token removed from this browser.' })
   }
 
   const handleExport = () => {
@@ -62,36 +92,33 @@ export function SettingsSection({
     reader.readAsText(file)
   }
 
-  const handlePasswordChange = (e: React.FormEvent) => {
+  const handlePasswordChange = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (newPw.length < 4) {
-      setPwMessage({ type: 'error', text: 'New password must be at least 4 characters.' })
+    const problem = await changePassword(currentPw, newPw)
+    if (problem) {
+      setPwMessage({ type: 'error', text: problem })
       return
     }
-    const ok = changePassword(currentPw, newPw)
-    if (ok) {
-      setPwMessage({ type: 'ok', text: 'Password updated.' })
-      setCurrentPw('')
-      setNewPw('')
-    } else {
-      setPwMessage({ type: 'error', text: 'Current password is incorrect.' })
-    }
+    setPwMessage({ type: 'ok', text: 'Password updated and the stored token re-encrypted.' })
+    setCurrentPw('')
+    setNewPw('')
   }
 
   const handlePublish = async () => {
-    if (!gh.owner || !gh.repo || !gh.token) {
-      setPublishStatus({ type: 'error', text: 'Owner, repo, and token are required.' })
+    if (!vault || !cryptoKey) return
+    if (!target?.owner || !target?.repo || !hasToken) {
+      setPublishStatus({ type: 'error', text: 'Owner, repository and a saved token are required.' })
       return
     }
     setPublishStatus({ type: 'loading', text: 'Publishing…' })
+    const token = await readToken(cryptoKey, vault)
+    if (!token) {
+      setPublishStatus({ type: 'error', text: 'Could not decrypt the stored token.' })
+      return
+    }
     try {
-      const result = await publishContentToGitHub(gh, JSON.stringify(content, null, 2))
-      setPublishStatus({
-        type: 'ok',
-        text: result.commit?.html_url
-          ? `Published. Redeploy will pick this up automatically.`
-          : 'Published successfully.',
-      })
+      await publishContentToGitHub(target, token, JSON.stringify(content, null, 2))
+      setPublishStatus({ type: 'ok', text: 'Published. The redeploy picks this up automatically.' })
     } catch (err) {
       setPublishStatus({
         type: 'error',
@@ -143,9 +170,8 @@ export function SettingsSection({
           </button>
         </div>
         <p className="mt-2 text-xs text-[var(--text-3)]">
-          Changes save to this browser instantly. Once a GitHub token is configured below, every
-          Save Changes also publishes automatically — see Brand &amp; Nav for the main save
-          button.
+          Changes save to this browser instantly. Once a token is saved below, every Save Changes
+          also publishes automatically.
         </p>
       </div>
 
@@ -155,52 +181,85 @@ export function SettingsSection({
           Publish to GitHub
         </h2>
         <p className="mb-4 text-sm text-[var(--text-2)]">
-          Commits the current content directly to your repository so it becomes the new default
-          for every visitor after your host redeploys (GitHub Pages / Vercel / Netlify all
-          redeploy automatically on push). Once these fields are filled in, every{' '}
-          <strong>Save Changes</strong> click across the dashboard publishes automatically too —
-          no need to come back here each time.
+          Commits the current content to your repository so it becomes the new default for every
+          visitor after the next deploy. Once these fields are filled in, every{' '}
+          <strong>Save Changes</strong> click across the dashboard publishes automatically too.
         </p>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Field label="Owner">
             <TextInput
-              placeholder="mahyoub88"
-              value={gh.owner}
-              onChange={(e) => updateGh({ owner: e.target.value })}
+              placeholder="Mahyoub88"
+              value={target?.owner ?? ''}
+              onChange={(e) => updateTarget({ owner: e.target.value })}
             />
           </Field>
           <Field label="Repository">
             <TextInput
               placeholder="mahyoub88.github.io"
-              value={gh.repo}
-              onChange={(e) => updateGh({ repo: e.target.value })}
+              value={target?.repo ?? ''}
+              onChange={(e) => updateTarget({ repo: e.target.value })}
             />
           </Field>
           <Field label="Branch">
-            <TextInput value={gh.branch} onChange={(e) => updateGh({ branch: e.target.value })} />
+            <TextInput
+              value={target?.branch ?? ''}
+              onChange={(e) => updateTarget({ branch: e.target.value })}
+            />
           </Field>
           <Field label="File path in repo">
-            <TextInput value={gh.path} onChange={(e) => updateGh({ path: e.target.value })} />
+            <TextInput
+              value={target?.path ?? ''}
+              onChange={(e) => updateTarget({ path: e.target.value })}
+            />
           </Field>
           <div className="sm:col-span-2">
             <Field
               label="Personal Access Token"
-              hint="Fine-grained token with 'Contents: read and write' on this repo only. Stored in this browser's local storage — never share it."
+              hint="Fine-grained token with 'Contents: read and write' on this repository only. Encrypted with your admin password before it touches storage."
             >
               <TextInput
                 type="password"
-                placeholder="github_pat_..."
-                value={gh.token}
-                onChange={(e) => updateGh({ token: e.target.value })}
+                autoComplete="off"
+                placeholder={hasToken ? '•••••••• saved — paste a new one to replace' : 'github_pat_...'}
+                value={tokenDraft}
+                onChange={(e) => {
+                  setTokenDraft(e.target.value)
+                  setTokenMessage(null)
+                }}
               />
             </Field>
+            <div className="mt-2 flex flex-wrap items-center gap-2">
+              <button
+                onClick={handleSaveToken}
+                className="flex items-center gap-2 rounded-lg border border-[var(--border-1)] px-3 py-2 text-sm font-medium text-[var(--text-1)] hover:border-brand-blue-500/60"
+              >
+                <ShieldCheck size={15} />
+                Encrypt &amp; Save Token
+              </button>
+              {hasToken && (
+                <button
+                  onClick={handleClearToken}
+                  className="flex items-center gap-2 rounded-lg border border-red-500/30 px-3 py-2 text-sm font-medium text-red-400 hover:bg-red-500/10"
+                >
+                  <Trash2 size={15} />
+                  Remove Token
+                </button>
+              )}
+              {tokenMessage && (
+                <span
+                  className={`text-xs ${tokenMessage.type === 'ok' ? 'text-brand-emerald-400' : 'text-red-400'}`}
+                >
+                  {tokenMessage.text}
+                </span>
+              )}
+            </div>
           </div>
         </div>
 
         <div className="mt-3 flex items-start gap-2 rounded-lg border border-brand-amber-400/30 bg-brand-amber-400/10 px-3 py-2 text-xs text-brand-amber-400">
           <AlertTriangle size={14} className="mt-0.5 shrink-0" />
-          Only use this on a device you trust. The token is stored locally and used to call the
-          GitHub API directly from your browser.
+          The token is stored encrypted, but it is still decrypted in this tab while you are signed
+          in — only use this on a device you trust, and scope the token to this one repository.
         </div>
 
         <button
@@ -229,12 +288,18 @@ export function SettingsSection({
           <Field label="Current password">
             <TextInput
               type="password"
+              autoComplete="current-password"
               value={currentPw}
               onChange={(e) => setCurrentPw(e.target.value)}
             />
           </Field>
-          <Field label="New password">
-            <TextInput type="password" value={newPw} onChange={(e) => setNewPw(e.target.value)} />
+          <Field label={`New password (${MIN_PASSWORD_LENGTH}+ characters)`}>
+            <TextInput
+              type="password"
+              autoComplete="new-password"
+              value={newPw}
+              onChange={(e) => setNewPw(e.target.value)}
+            />
           </Field>
           {pwMessage && (
             <p className={`text-sm ${pwMessage.type === 'ok' ? 'text-brand-emerald-400' : 'text-red-400'}`}>
