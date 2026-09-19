@@ -11,7 +11,7 @@ export function Certifications() {
       <Container className="max-w-4xl">
         <p className="text-xs font-semibold tracking-wider text-brand-blue-400">CREDENTIALS</p>
         <h2 className="mt-2 text-3xl font-extrabold text-[var(--text-1)]">
-          Certifications &amp; Training
+          Credentials &amp; Recognition
         </h2>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
