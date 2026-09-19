@@ -1,185 +1,85 @@
 {
   "brand": {
-    "name": "M.Mahyoub",
-    "title": "ITS • AI • Machine Vision • Automation",
+    "name": "Mohammed Mahyoub",
+    "title": "ITS & Systems Integration Engineer",
     "logoInitial": "M"
   },
   "nav": [
-    {
-      "id": "home",
-      "label": "Home",
-      "href": "#home"
-    },
-    {
-      "id": "about",
-      "label": "About",
-      "href": "#about"
-    },
-    {
-      "id": "experience",
-      "label": "Experience",
-      "href": "#experience"
-    },
-    {
-      "id": "work",
-      "label": "Projects",
-      "href": "#work"
-    },
-    {
-      "id": "articles",
-      "label": "Research",
-      "href": "#articles"
-    },
-    {
-      "id": "skills",
-      "label": "Skills",
-      "href": "#skills"
-    },
-    {
-      "id": "contact",
-      "label": "Contact",
-      "href": "#contact"
-    },
-    {
-      "id": "nav-1785146574642",
-      "label": "Education",
-      "href": "#education"
-    }
+    { "id": "home", "label": "Home", "href": "#home" },
+    { "id": "about", "label": "About", "href": "#about" },
+    { "id": "experience", "label": "Experience", "href": "#experience" },
+    { "id": "work", "label": "Selected Work", "href": "#work" },
+    { "id": "articles", "label": "Research", "href": "#articles" },
+    { "id": "skills", "label": "Skills", "href": "#skills" },
+    { "id": "education", "label": "Education", "href": "#education" },
+    { "id": "contact", "label": "Contact", "href": "#contact" }
   ],
   "hero": {
-    "badge": "SENIOR INTELLIGENT SOLUTIONS ENGINEER",
+    "badge": "SENIOR ITS & SYSTEMS INTEGRATION ENGINEER",
     "greetingName": "Mohammed Mahyoub",
-    "tagline": "Building Intelligent Systems with AI & Automation",
-    "description": "Senior Intelligent Solutions Engineer with over 14+ years of multidisciplinary engineering experience, including 6+ years designing, integrating, and supporting intelligent transportation systems across the UAE. \n\nPassionate about Artificial Intelligence, Machine Vision, automation, and building reliable solutions for smart cities.",
-    "primaryCta": {
-      "label": "Download CV",
-      "href": "/Mohammed_Mahyoub_CV.pdf"
-    },
-    "secondaryCta": {
-      "label": "View Portfolio",
-      "href": "#work"
-    },
-    "tertiaryCta": {
-      "label": "Contact Me",
-      "href": "#contact"
-    },
-    "photoUrl": "https://mahyoub88.github.io/mahyoub.jpg",
-    "backgroundUrl": "/hero-bg.jpg",
+    "tagline": "Engineering Reliable Traffic Systems — and Applying AI to Smarter Mobility",
+    "description": "Senior Service Engineer with 10+ years of multidisciplinary engineering experience, including 6+ years supporting intelligent transportation, smart infrastructure, and traffic enforcement systems across the UAE.\n\nI integrate cameras, LiDAR, sensors, control units, networks, databases, and backend platforms into reliable end-to-end operational systems.",
+    "primaryCta": { "label": "View Selected Work", "href": "#work" },
+    "secondaryCta": { "label": "Download CV", "href": "/Mohammed_Mahyoub_CV.pdf" },
+    "tertiaryCta": { "label": "Contact Me", "href": "#contact" },
+    "photoUrl": "/mahyoub.jpg",
+    "backgroundUrl": "",
     "currentFocus": [
-      "Scaling AI-driven ITS platforms across the UAE",
-      "Predictive maintenance automation",
-      "Machine vision R&D for smart traffic enforcement"
+      "Reliable ITS integration and operational performance",
+      "Computer vision for intelligent mobility",
+      "Data quality, model efficiency, and explainable AI"
     ]
   },
   "specializations": [
-    {
-      "id": "spec-1",
-      "icon": "network",
-      "label": "✔ Intelligent Transportation Systems"
-    },
-    {
-      "id": "spec-2",
-      "icon": "workflow",
-      "label": "✔ Machine Vision"
-    },
-    {
-      "id": "spec-3",
-      "icon": "brain",
-      "label": "✔ Traffic Solutions"
-    },
-    {
-      "id": "spec-4",
-      "icon": "cog",
-      "label": "✔ AI & Machine Learning"
-    },
-    {
-      "id": "spec-1784868630176",
-      "icon": "cog",
-      "label": "✔ System Integration"
-    },
-    {
-      "id": "spec-1784868632888",
-      "icon": "cog",
-      "label": "✔ Automation"
-    }
+    { "id": "spec-1", "icon": "network", "label": "Intelligent Transportation Systems" },
+    { "id": "spec-2", "icon": "workflow", "label": "Systems Integration" },
+    { "id": "spec-3", "icon": "camera", "label": "Traffic Enforcement Systems" },
+    { "id": "spec-4", "icon": "wrench", "label": "Testing & Commissioning" },
+    { "id": "spec-5", "icon": "radar", "label": "Machine Vision & LiDAR" },
+    { "id": "spec-6", "icon": "brain", "label": "Applied AI & Computer Vision" }
   ],
   "tools": [
-    {
-      "id": "tool-1",
-      "label": "ITS",
-      "abbr": "🚦",
-      "color": "#3B82F6"
-    },
-    {
-      "id": "tool-2",
-      "label": "AI",
-      "abbr": "🤖",
-      "color": "#A855F7"
-    },
-    {
-      "id": "tool-3",
-      "label": "ANPR",
-      "abbr": "📷",
-      "color": "#22C55E"
-    },
-    {
-      "id": "tool-4",
-      "label": "LiDAR",
-      "abbr": "📡",
-      "color": "#06B6D4"
-    },
-    {
-      "id": "tool-5",
-      "label": "Integration",
-      "abbr": "🔗",
-      "color": "#F59E0B"
-    },
-    {
-      "id": "tool-6",
-      "label": "Data Analytics",
-      "abbr": "📊",
-      "color": "#6366F1"
-    },
-    {
-      "id": "tool-7",
-      "label": "Automation",
-      "abbr": "⚙️",
-      "color": "#10B981"
-    },
-    {
-      "id": "tool-8",
-      "label": "Cloud",
-      "abbr": "☁️",
-      "color": "#0EA5E9"
-    }
+    { "id": "tool-1", "label": "ITS", "abbr": "🚦", "color": "#3B82F6" },
+    { "id": "tool-2", "label": "Machine Vision", "abbr": "📷", "color": "#22C55E" },
+    { "id": "tool-3", "label": "LiDAR", "abbr": "📡", "color": "#06B6D4" },
+    { "id": "tool-4", "label": "Integration", "abbr": "🔗", "color": "#F59E0B" },
+    { "id": "tool-5", "label": "Python", "abbr": "🐍", "color": "#6366F1" },
+    { "id": "tool-6", "label": "PyTorch", "abbr": "🔥", "color": "#EF4444" },
+    { "id": "tool-7", "label": "Networking", "abbr": "🌐", "color": "#0EA5E9" },
+    { "id": "tool-8", "label": "Embedded", "abbr": "⚙️", "color": "#10B981" }
   ],
   "stats": [
-    {
-      "id": "stat-1",
-      "icon": "briefcase",
-      "value": "14+",
-      "label": "Years of Experience"
-    },
-    {
-      "id": "stat-2",
-      "icon": "monitor",
-      "value": "800+",
-      "label": "ITS Systems"
-    },
-    {
-      "id": "stat-3",
-      "icon": "globe",
-      "value": "6",
-      "label": "Countries Served"
-    }
+    { "id": "stat-1", "icon": "briefcase", "value": "10+", "label": "Years of Engineering Experience" },
+    { "id": "stat-2", "icon": "network", "value": "6+", "label": "Years in ITS & Smart Infrastructure" },
+    { "id": "stat-3", "icon": "brain", "value": "MSc AI", "label": "Currently in Progress" }
   ],
   "about": {
-    "heading": "About Me",
-    "subheading": "A bit about my background and how I work.",
+    "heading": "Engineering at the Intersection of ITS, Systems Integration, and Applied AI",
+    "subheading": "",
     "paragraphs": [
-      "I'm a senior engineer with 14+ years of multidisciplinary experience spanning electronics and embedded systems, network infrastructure, and intelligent transportation systems. The last 6+ years have been at VITRONIC, delivering smart infrastructure and traffic enforcement systems across the UAE — across the full stack of ITS delivery, from field installation and calibration to the integration and software that keeps those systems running.",
-      "My MSc in Artificial Intelligence sharpened my focus on applying machine learning to real engineering problems: classifying vehicle types from trajectory data, predicting system faults before they happen, and automating workflows that used to take hours of manual work.",
-      "I care about building things that are reliable in production, not just accurate in a notebook — clear interfaces, sensible defaults, and systems that fail safely."
+      "I am a Senior Service Engineer specializing in intelligent transportation systems, smart infrastructure, and traffic enforcement.",
+      "My background spans electronics, embedded systems, network infrastructure, software automation, and the integration of complex operational systems. Over the past 6+ years, I have supported ITS deployments across the UAE, working across cameras, LiDAR, sensors, control units, networking, databases, and backend platforms.",
+      "My work covers FAT and SAT, commissioning, calibration, interface validation, performance verification, technical documentation, incident support, and structured root-cause analysis across hardware, software, communication, and database layers.",
+      "I work closely with customers, vendors, software teams, and field engineers to resolve complex integration issues and support reliable service delivery.",
+      "Alongside my engineering role, I am pursuing an MSc in Artificial Intelligence at UWE Bristol. My current academic work applies machine learning and computer vision to transportation problems, with a particular focus on data quality, leakage-resistant evaluation, efficient neural networks, and model explainability.",
+      "My long-term direction is to combine real-world ITS engineering with applied computer vision to build safer, more reliable, and more intelligent mobility infrastructure."
+    ],
+    "cards": [
+      {
+        "id": "about-card-1",
+        "title": "Systems Integration",
+        "description": "Connecting field hardware, networks, databases, and backend platforms into dependable operational systems."
+      },
+      {
+        "id": "about-card-2",
+        "title": "Field Engineering",
+        "description": "Commissioning, calibration, validation, troubleshooting, acceptance testing, and operational support."
+      },
+      {
+        "id": "about-card-3",
+        "title": "Applied AI",
+        "description": "Applying machine learning and computer vision to transportation data and intelligent mobility problems."
+      }
     ]
   },
   "experience": [
@@ -187,10 +87,20 @@
       "id": "exp-1",
       "role": "Senior Service Engineer — Smart Infrastructure & ITS Systems",
       "company": "VITRONIC Machine Vision",
-      "period": "Oct 2019 — Present",
-      "description": "Deploy, integrate, commission, and support intelligent traffic enforcement and ITS solutions across mission-critical sites in the UAE. Integrate cameras, LiDAR, sensors, control units, networking, databases, and backend platforms into reliable end-to-end systems, and lead FAT/SAT, calibration, and structured root-cause analysis.",
+      "period": "October 2019 — Present",
+      "location": "United Arab Emirates",
+      "employmentType": "",
+      "description": "Deploy, integrate, commission, and support intelligent traffic enforcement and ITS solutions across mission-critical operational environments in the UAE.",
+      "bullets": [
+        "Integrate cameras, LiDAR, sensors, control units, networks, databases, and backend platforms into reliable end-to-end systems.",
+        "Perform FAT, SAT, commissioning, calibration, interface validation, acceptance testing, and performance verification.",
+        "Diagnose complex faults across hardware, software, communication, database, and system-interface layers using structured root-cause analysis.",
+        "Support incident response, preventive maintenance, system upgrades, configuration changes, and field operations.",
+        "Coordinate technical resolution across customers, vendors, software teams, and multidisciplinary engineering teams.",
+        "Prepare technical reports, test records, incident analyses, and system handover documentation."
+      ],
       "tags": [
-        "System Integration",
+        "Systems Integration",
         "ITS",
         "Machine Vision & LiDAR",
         "Commissioning & Calibration"
@@ -200,115 +110,212 @@
       "id": "exp-2",
       "role": "Electronics, Embedded Systems & Automation Engineer",
       "company": "Electronic Science Company",
-      "period": "Jun 2015 — Aug 2019",
-      "description": "Designed, assembled, and troubleshot electronic circuits, embedded control systems, and sensor-based automation. Programmed PIC, AVR, and Arduino microcontrollers, performed PCB prototyping and hardware debugging, and built VB.NET desktop applications for monitoring, diagnostics, and workflow automation.",
-      "tags": [
-        "Embedded Systems",
-        "Automation",
-        "Microcontrollers",
-        "VB.NET"
-      ]
+      "period": "June 2015 — August 2019",
+      "location": "Yemen",
+      "employmentType": "",
+      "description": "Designed, assembled, tested, and supported electronics, embedded control, automation, and desktop software solutions.",
+      "bullets": [
+        "Developed monitoring and automation applications using PIC, AVR, and Arduino microcontrollers.",
+        "Integrated sensors, controllers, displays, communication modules, and peripheral devices.",
+        "Performed PCB prototyping, hardware debugging, functional testing, and technical validation.",
+        "Built VB.NET desktop applications for monitoring, diagnostics, reporting, and operational workflow support.",
+        "Prepared technical documentation and provided continuous troubleshooting and customer support."
+      ],
+      "tags": ["Embedded Systems", "Automation", "Microcontrollers", "VB.NET"]
     },
     {
       "id": "exp-3",
-      "role": "Independent Engineering Consultant — Network Infrastructure",
+      "role": "Independent Engineering Projects — Network Infrastructure & Technical Systems",
       "company": "Independent Engineering Projects",
-      "period": "Mar 2012 — May 2018",
-      "description": "Delivered project-based network and infrastructure engineering: routing, switching, firewall, VPN, MikroTik, and Ubiquiti environments, plus MPLS/OSPF/BGP/VRF design and simulation using GNS3 and Cisco platforms, with network diagrams, RF calculations, and technical reports.",
-      "tags": [
-        "Networking",
-        "Cisco",
-        "MikroTik",
-        "GNS3"
-      ]
+      "period": "March 2012 — May 2018",
+      "location": "",
+      "employmentType": "Part-time / Project-based",
+      "description": "Delivered selected project-based engineering work alongside study and professional employment.",
+      "bullets": [
+        "Designed and supported wired and wireless network infrastructure using Cisco, MikroTik, and Ubiquiti technologies.",
+        "Worked with routing, switching, firewall, VPN, MPLS, OSPF, BGP, and VRF concepts.",
+        "Performed wireless coverage planning, point-to-point link design, network troubleshooting, and performance analysis.",
+        "Developed engineering tools for RF calculations, reporting, and technical workflows.",
+        "Prepared network diagrams, simulations, configurations, engineering calculations, and technical reports."
+      ],
+      "tags": ["Networking", "Cisco", "MikroTik", "RF Planning"]
     }
   ],
-  "projectsTitle": "Professional & Research Projects",
-  "projectsSubtitle": "Professional engineering, AI, and research projects.",
-  "projectsCtaLabel": "View all projects",
-  "projectsCtaHref": "#work",
+  "projectsTitle": "Selected Work",
+  "projectsSubtitle": "Research, professional engineering, and technical projects across intelligent transportation, applied AI, and systems engineering.",
+  "projectsCtaLabel": "",
+  "projectsCtaHref": "",
   "projects": [
     {
-      "id": "proj-1",
-      "category": "Research Project",
-      "title": "AI-Based Vehicle Type Classification",
-      "description": "Developed a machine learning model to classify vehicle types using the NGSIM US-101 dataset, achieving over 99% classification accuracy through vehicle-level feature engineering and model optimization.",
-      "tags": [
-        "Machine Learning",
-        "Classification",
-        "NGSIM",
-        "Python"
+      "id": "proj-vtid2",
+      "group": "selected",
+      "category": "MSc Artificial Intelligence Research · Computer Vision · PyTorch",
+      "title": "Efficient Neural Network Architectures for Vehicle Type Classification",
+      "subtitle": "A content-audited, leakage-aware, and efficiency-focused study using VTID2",
+      "description": "Developed and evaluated neural network architectures for vehicle type classification using the VTID2 image dataset. The evaluated architectures included an MLP, a standard CNN, an efficient depthwise-separable CNN, and an efficient CNN with Squeeze-and-Excitation.",
+      "meta": [
+        {
+          "label": "Problem",
+          "value": "A content-based dataset audit identified 2,425 redundant exact copies among 4,356 valid images, leaving 1,931 exact-unique images."
+        },
+        {
+          "label": "Method",
+          "value": "Compared conventional and leakage-controlled evaluation protocols, and examined the trade-off between classification performance and computational efficiency."
+        },
+        {
+          "label": "Result",
+          "value": "The efficient CNN achieved substantial reductions in trainable parameters and MACs while maintaining competitive Macro-F1. Grad-CAM was used to analyse model attention and the influence of preprocessing and letterbox padding."
+        }
       ],
-      "link": "https://github.com/mahyoub88/predicting-vehicle-type-using-ngsim-us101",
-      "accent": "blue"
-    },
-    {
-      "id": "proj-2",
-      "category": "Web Application",
-      "title": "MU Control Web Interface",
-      "description": "Web application for monitoring and controlling MU systems with real-time status and remote commands.",
       "tags": [
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Node.js"
+        "PyTorch",
+        "CNN",
+        "Efficient AI",
+        "Grad-CAM",
+        "Model Evaluation",
+        "Data Quality"
       ],
+      "status": { "kind": "academic", "label": "Academic Research — Code Private During Assessment" },
       "link": "",
+      "links": [],
       "accent": "purple"
     },
     {
-      "id": "proj-3",
-      "category": "Infrastructure",
-      "title": "Traffic Enforcement Support",
-      "description": "Field engineering support for traffic enforcement systems including installation, calibration and troubleshooting.",
-      "tags": [
-        "ITS",
-        "Calibration",
-        "Troubleshooting",
-        "Support"
+      "id": "proj-ngsim",
+      "group": "selected",
+      "category": "Machine Learning · Intelligent Transportation Systems",
+      "title": "Vehicle Type Classification Using NGSIM US-101",
+      "description": "Developed and evaluated supervised machine-learning models for classifying motorcycles, passenger cars, and trucks using the NGSIM US-101 traffic trajectory dataset. Models compared: Logistic Regression, Decision Tree, and Random Forest.",
+      "meta": [
+        {
+          "label": "Method",
+          "value": "Vehicle records were aggregated to the vehicle level to reduce data leakage and create independent observations for training and evaluation."
+        },
+        {
+          "label": "Scope",
+          "value": "Data preprocessing, exploratory analysis, feature engineering, model comparison, hyperparameter optimisation, classification evaluation, and feature-importance analysis."
+        }
       ],
+      "tags": ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"],
+      "status": { "kind": "public", "label": "Public Repository" },
       "link": "",
+      "links": [
+        {
+          "label": "View GitHub Repository",
+          "href": "https://github.com/Mahyoub88/predicting-vehicle-type-using-ngsim-us101"
+        }
+      ],
+      "accent": "blue"
+    },
+    {
+      "id": "proj-its-support",
+      "group": "selected",
+      "category": "Professional Engineering · Smart Infrastructure",
+      "title": "ITS Systems Integration & Traffic Enforcement Support",
+      "description": "Supported the integration, commissioning, calibration, validation, troubleshooting, and operational performance of intelligent traffic enforcement systems across field and backend environments.",
+      "meta": [
+        {
+          "label": "Role",
+          "value": "Field and systems engineering across cameras, LiDAR, sensors, control units, networking, databases, and software interfaces."
+        },
+        {
+          "label": "Method",
+          "value": "Structured commissioning and root-cause analysis, with technical coordination across customers, vendors, field teams, and software teams."
+        }
+      ],
+      "tags": ["ITS", "System Integration", "Commissioning", "Calibration", "Troubleshooting"],
+      "status": { "kind": "professional", "label": "Professional Case Study — Details Anonymised" },
+      "link": "",
+      "links": [],
+      "accent": "amber"
+    },
+    {
+      "id": "proj-monitoring-apps",
+      "group": "selected",
+      "category": "Desktop Software · Engineering Automation",
+      "title": "Engineering Monitoring & Service Operations Applications",
+      "description": "Developed VB.NET desktop applications and engineering tools for system monitoring, service documentation, repair tracking, operational reporting, device integration, and RF analysis.",
+      "meta": [
+        {
+          "label": "Scope",
+          "value": "Structured data management, diagnostics, service records, maintenance workflows, technical calculations, and exportable reports."
+        }
+      ],
+      "tags": [
+        "VB.NET",
+        "WinForms",
+        "SQL / Structured Data",
+        "Reporting",
+        "Engineering Calculations"
+      ],
+      "status": { "kind": "professional", "label": "Professional Case Study" },
+      "link": "",
+      "links": [],
+      "accent": "blue"
+    },
+    {
+      "id": "proj-embedded-iot",
+      "group": "selected",
+      "category": "Embedded Systems · IoT · Industrial Automation",
+      "title": "Embedded Systems, IoT & Industrial Automation",
+      "description": "Designed and prototyped embedded monitoring and control solutions using microcontrollers, sensors, communication modules, actuators, and PLC platforms.",
+      "meta": [
+        {
+          "label": "Scope",
+          "value": "Real-time monitoring concepts, sensor integration, telemetry, hardware configuration, functional testing, and technical validation."
+        }
+      ],
+      "tags": ["PIC", "AVR", "Arduino", "Sensors", "PLC", "IoT"],
+      "status": { "kind": "professional", "label": "Professional Case Study" },
+      "link": "",
+      "links": [],
+      "accent": "purple"
+    },
+    {
+      "id": "proj-rf-network",
+      "group": "selected",
+      "category": "Network Infrastructure · RF Planning",
+      "title": "Wireless & RF Network Infrastructure Design",
+      "description": "Designed and validated wireless and LAN infrastructure concepts using MikroTik, Ubiquiti, Cisco, RF planning, and network simulation.",
+      "meta": [
+        {
+          "label": "Scope",
+          "value": "Multi-site connectivity, wireless coverage, point-to-point links, antenna planning, routing, VPN connectivity, traffic management, surveillance integration, and technical documentation."
+        }
+      ],
+      "tags": ["Cisco", "MikroTik", "Ubiquiti", "RF Planning", "VPN", "Routing"],
+      "status": { "kind": "professional", "label": "Professional Case Study" },
+      "link": "",
+      "links": [],
       "accent": "amber"
     }
   ],
   "articles": [
     {
-      "id": "article-1",
-      "title": "Classifying Vehicle Types from Trajectory Data",
-      "excerpt": "How aggregating NGSIM trajectories to the vehicle level avoids data leakage and improves model reliability.",
-      "date": "2026-03-10",
-      "url": "https://github.com/mahyoub88/predicting-vehicle-type-using-ngsim-us101"
+      "id": "research-vtid2",
+      "title": "Efficient Neural Network Architectures for Vehicle Type Classification",
+      "excerpt": "Dataset auditing, leakage-controlled evaluation, efficient CNN architectures, Grad-CAM analysis, and computational-efficiency comparison using VTID2.",
+      "date": "",
+      "url": ""
     },
     {
-      "id": "article-2",
-      "title": "Notes on Building Reliable ITS Software",
-      "excerpt": "Lessons from years of field deployments — why simple, observable systems beat clever ones.",
-      "date": "2026-01-22",
-      "url": ""
+      "id": "research-ngsim",
+      "title": "Vehicle Type Classification from Traffic Trajectory Data",
+      "excerpt": "Vehicle-level feature engineering and supervised classification using the NGSIM US-101 dataset.",
+      "date": "",
+      "url": "https://github.com/Mahyoub88/predicting-vehicle-type-using-ngsim-us101"
     }
   ],
   "contact": {
-    "heading": "Let's Work Together",
-    "subheading": "Have a project in mind or just want to connect? I'm always open to discussing new opportunities.",
+    "heading": "Let's Connect",
+    "subheading": "I am open to professional conversations, technical collaboration, and opportunities at the intersection of intelligent transportation systems, systems integration, smart mobility, and applied computer vision.",
     "email": "almlike5@gmail.com",
-    "location": "Available for remote & on-site work"
+    "location": "Abu Dhabi, United Arab Emirates"
   },
   "social": [
-    {
-      "id": "social-1",
-      "type": "github",
-      "url": "https://github.com/mahyoub88"
-    },
-    {
-      "id": "social-2",
-      "type": "linkedin",
-      "url": "https://www.linkedin.com/in/mohammed-mahyoub/"
-    },
-    {
-      "id": "social-3",
-      "type": "email",
-      "url": "mailto:almlike5@gmail.com"
-    }
+    { "id": "social-1", "type": "linkedin", "url": "https://www.linkedin.com/in/mohammed-mahyoub/" },
+    { "id": "social-2", "type": "github", "url": "https://github.com/Mahyoub88" },
+    { "id": "social-3", "type": "email", "url": "mailto:almlike5@gmail.com" }
   ],
   "technicalExpertise": [
     {
@@ -317,102 +324,119 @@
       "items": [
         "Intelligent Transportation Systems",
         "Traffic Enforcement Systems",
-        "Machine Vision & ANPR",
-        "LiDAR & Sensor Systems",
-        "Commissioning & Calibration",
-        "FAT / SAT & Acceptance Testing"
+        "Systems Integration",
+        "Camera Systems",
+        "LiDAR & Sensor Integration",
+        "Smart City Infrastructure"
       ]
     },
     {
       "id": "exp-cat-2",
-      "category": "SYSTEMS ENGINEERING",
+      "category": "TESTING, COMMISSIONING & OPERATIONS",
       "items": [
-        "System Integration",
-        "Root-Cause Analysis",
+        "FAT / SAT",
+        "Testing & Commissioning",
+        "Calibration",
         "Interface Validation",
-        "Preventive Maintenance",
-        "Incident Response",
+        "Performance Verification",
+        "Troubleshooting",
+        "Root-Cause Analysis",
         "Technical Documentation"
       ]
     },
     {
       "id": "exp-cat-3",
-      "category": "AI & DATA",
+      "category": "AI & COMPUTER VISION",
       "items": [
         "Python",
-        "scikit-learn",
         "Machine Learning",
+        "Deep Learning",
+        "PyTorch",
+        "Convolutional Neural Networks",
         "Computer Vision",
+        "Grad-CAM",
+        "Model Evaluation",
+        "Data Preprocessing",
         "Feature Engineering",
-        "Data Analysis"
+        "Scikit-learn"
       ]
     },
     {
       "id": "exp-cat-4",
       "category": "NETWORKS & PLATFORMS",
       "items": [
-        "Cisco (CCNA)",
+        "Network Infrastructure",
+        "Routing & Switching",
+        "MPLS",
+        "OSPF",
+        "BGP",
+        "VPN & Firewalls",
         "MikroTik",
         "Ubiquiti",
-        "MPLS / OSPF / BGP",
-        "VPN & Firewalls",
-        "GNS3",
         "VMware ESXi",
-        "Databases & Backend Integration"
+        "Database & Backend Integration"
       ]
     },
     {
       "id": "exp-cat-5",
-      "category": "EMBEDDED & AUTOMATION",
+      "category": "EMBEDDED SYSTEMS & AUTOMATION",
       "items": [
+        "Embedded Systems",
         "PIC / AVR / Arduino",
-        "PCB Prototyping",
+        "Microcontrollers",
         "Sensor-Based Automation",
-        "VB.NET Applications",
+        "IoT",
+        "VB.NET",
         "Hardware Debugging"
       ]
-    },
-    {
-      "id": "exp-cat-6",
-      "category": "LANGUAGES",
-      "items": ["Arabic — Native / Bilingual", "English — Professional Working"]
     }
   ],
   "education": [
     {
-      "id": "edu-1785147336033",
-      "degree": "Master of Science (MSc) in Artificial Intelligence",
-      "institution": "University of the West of England (UWE Bristol), United Kingdom",
-      "period": "Jun 2026 – Present",
-      "status": "In Progress"
+      "id": "edu-msc",
+      "degree": "MSc Artificial Intelligence — In Progress",
+      "institution": "University of the West of England, UWE Bristol",
+      "period": "2026 – Expected 2028",
+      "status": "In Progress",
+      "description": "Focused on machine learning, neural networks, computer vision, data quality, model evaluation, computational efficiency, and the application of AI to intelligent transportation and smart mobility.",
+      "highlights": [
+        "Vehicle Classification Using NGSIM US-101",
+        "Efficient Neural Networks Using VTID2",
+        "Dataset Auditing and Leakage-Controlled Evaluation",
+        "Grad-CAM and Model Explainability"
+      ],
+      "note": ""
     },
     {
-      "id": "edu-1785147373644",
-      "degree": "BEng Electrical Engineering (Communications & Electronics)",
+      "id": "edu-beng",
+      "degree": "BEng Electrical Engineering — Communications & Electronics",
       "institution": "Sana'a University, Yemen",
       "period": "2012 – 2017",
-      "status": "Completed"
+      "status": "Completed",
+      "description": "Engineering foundation in electronics, communications, networking, control systems, signal processing, and embedded technologies.",
+      "highlights": [],
+      "note": "UAE Ministry of Education degree equivalency obtained."
     }
   ],
   "certifications": [
     {
-      "id": "cert-1",
-      "name": "Certificate of Appreciation — Dubai Police",
+      "id": "cert-dubai-police",
+      "name": "Certificate of Appreciation — Dubai Police HQ",
       "issuer": "Dubai Police HQ, UAE",
       "date": "2023",
       "type": "Recognition"
     },
     {
-      "id": "cert-2",
-      "name": "CompTIA A+",
-      "issuer": "CompTIA",
+      "id": "cert-ccna",
+      "name": "Cisco Certified Network Associate — Routing & Switching",
+      "issuer": "Cisco",
       "date": "",
       "type": "Certification"
     },
     {
-      "id": "cert-3",
-      "name": "Cisco Certified Network Associate (CCNA) — Routing & Switching",
-      "issuer": "Cisco",
+      "id": "cert-comptia",
+      "name": "CompTIA A+",
+      "issuer": "CompTIA",
       "date": "",
       "type": "Certification"
     }
