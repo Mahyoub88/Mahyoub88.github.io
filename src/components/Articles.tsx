@@ -7,12 +7,18 @@ export function Articles() {
   if (content.articles.length === 0) return null
 
   return (
-    <section id="articles" className="border-y border-[var(--border-1)] bg-[var(--surface-1)] py-20">
+    <section id="articles" className="border-y border-[var(--border-1)] bg-[var(--surface-1)] py-24">
       <Container>
         <p className="text-xs font-semibold tracking-wider text-brand-blue-400">RESEARCH</p>
-        <h2 className="mt-2 text-3xl font-extrabold text-[var(--text-1)]">Research &amp; Publications</h2>
+        <h2 className="mt-2 text-3xl font-extrabold text-[var(--text-1)]">
+          Research &amp; Technical Work
+        </h2>
+        <p className="mt-3 max-w-[68ch] text-[var(--text-2)]">
+          Selected academic research and technical studies at the intersection of artificial
+          intelligence, computer vision, and intelligent transportation.
+        </p>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
           {content.articles.map((article) => {
             const hasLink = Boolean(article.url)
             const Wrapper = hasLink ? 'a' : 'div'
@@ -35,13 +41,16 @@ export function Articles() {
                       />
                     )}
                   </div>
-                  <p className="mt-1 text-xs text-[var(--text-3)]">
-                    {new Date(article.date).toLocaleDateString('en-US', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric',
-                    })}
-                  </p>
+                  {/* An entry with no date, or a malformed one, shows no date line
+                      rather than rendering "Invalid Date". */}
+                  {!Number.isNaN(new Date(article.date).getTime()) && (
+                    <p className="mt-1 text-xs text-[var(--text-3)]">
+                      {new Date(article.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                      })}
+                    </p>
+                  )}
                   <p className="mt-2 text-sm leading-relaxed text-[var(--text-2)]">
                     {article.excerpt}
                   </p>
