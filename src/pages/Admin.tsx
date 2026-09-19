@@ -55,7 +55,7 @@ const tabs = [
   { id: 'education', label: 'Education', icon: GraduationCap },
   { id: 'certifications', label: 'Certifications', icon: ShieldCheck },
   { id: 'projects', label: 'Projects', icon: FolderKanban },
-  { id: 'articles', label: 'Research & Publications', icon: Newspaper },
+  { id: 'articles', label: 'Research & Technical Work', icon: Newspaper },
   { id: 'contact', label: 'Contact & Social', icon: MessageSquare },
   { id: 'settings', label: 'Settings', icon: Settings },
 ] as const
