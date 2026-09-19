@@ -10,7 +10,7 @@ export function Experience() {
         {/* Same two-column rail as About: the heading holds the left column so
             the timeline keeps a readable measure without leaving the right half
             of a wide screen empty. */}
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] lg:gap-16">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] lg:gap-20">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <p className="text-xs font-semibold tracking-wider text-brand-blue-400">EXPERIENCE</p>
             <h2 className="mt-2 text-3xl font-extrabold leading-tight text-[var(--text-1)]">
@@ -51,7 +51,7 @@ export function Experience() {
                 {/* Two bullet columns on very wide screens: one long column
                     beside a sticky heading is what left the right side empty. */}
                 {item.bullets && item.bullets.length > 0 && (
-                  <ul className="mt-4 grid max-w-[115ch] gap-x-10 gap-y-2 xl:grid-cols-2">
+                  <ul className="mt-4 grid max-w-none gap-x-10 gap-y-2 xl:grid-cols-2">
                     {item.bullets.map((bullet, i) => (
                       <li key={i} className="flex gap-3 text-sm leading-relaxed text-[var(--text-2)]">
                         <span
