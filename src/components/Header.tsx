@@ -78,14 +78,14 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-[var(--border-1)] bg-[var(--surface-0)]/80 backdrop-blur-md">
       <Container className="flex h-20 items-center justify-between">
         <a href="#home" className="flex items-center gap-3">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand-blue-500 to-brand-purple-500 font-bold text-white shadow-lg shadow-brand-blue-500/20">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-blue-500 to-brand-purple-500 font-bold text-white shadow-lg shadow-brand-blue-500/20">
             {content.brand.logoInitial}
           </span>
-          <span className="flex flex-col leading-none">
-            <span className="text-base font-semibold text-[var(--text-1)]">
+          <span className="flex min-w-0 flex-col gap-0.5 leading-none">
+            <span className="whitespace-nowrap text-base font-semibold text-[var(--text-1)]">
               {content.brand.name}
             </span>
-            <span className="text-xs text-[var(--text-3)]">{content.brand.title}</span>
+            <span className="truncate text-xs text-[var(--text-3)]">{content.brand.title}</span>
           </span>
         </a>
 
@@ -141,7 +141,7 @@ export function Header() {
         </div>
 
         <button
-          className="flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--border-1)] text-[var(--text-2)] lg:hidden"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[var(--border-1)] text-[var(--text-2)] lg:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
