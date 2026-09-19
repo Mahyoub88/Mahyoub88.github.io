@@ -89,7 +89,9 @@ export function Header() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-1 rounded-full border border-[var(--border-1)] bg-[var(--surface-1)] p-1 lg:flex">
+        {/* Eight nav items measure ~780px, which does not fit beside the brand
+            until 1280px — below that the menu button takes over. */}
+        <nav className="hidden items-center gap-1 rounded-full border border-[var(--border-1)] bg-[var(--surface-1)] p-1 xl:flex">
           {content.nav.map((link) => {
             const isActive = link.href === `#${activeSection}`
             return (
@@ -108,7 +110,7 @@ export function Header() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           {isAuthenticated && (
             <Link
               to="/admin"
@@ -126,12 +128,14 @@ export function Header() {
           >
             {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
           </button>
+          {/* Hidden until 1536px: brand, nav and this button together overflow a
+              1280px header, and the hero already carries the same CTA. */}
           <a
             href={content.hero.primaryCta.href}
             {...ctaFileProps}
             aria-hidden={!heroPassed}
             tabIndex={heroPassed ? undefined : -1}
-            className={`flex items-center gap-2 whitespace-nowrap rounded-xl bg-gradient-to-r from-brand-blue-500 to-brand-purple-500 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-blue-500/20 transition hover:brightness-110 ${
+            className={`hidden items-center gap-2 whitespace-nowrap rounded-xl bg-gradient-to-r from-brand-blue-500 to-brand-purple-500 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-blue-500/20 transition hover:brightness-110 2xl:flex ${
               heroPassed ? 'opacity-100' : 'pointer-events-none opacity-0'
             }`}
           >
@@ -141,7 +145,7 @@ export function Header() {
         </div>
 
         <button
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[var(--border-1)] text-[var(--text-2)] lg:hidden"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[var(--border-1)] text-[var(--text-2)] xl:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
@@ -150,7 +154,7 @@ export function Header() {
       </Container>
 
       {open && (
-        <div className="border-t border-[var(--border-1)] bg-[var(--surface-0)] lg:hidden">
+        <div className="border-t border-[var(--border-1)] bg-[var(--surface-0)] xl:hidden">
           <Container className="flex flex-col gap-1 py-4">
             {content.nav.map((link) => {
               const isActive = link.href === `#${activeSection}`
