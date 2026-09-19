@@ -8,13 +8,13 @@ export function Certifications() {
 
   return (
     <section id="certifications" className="border-y border-[var(--border-1)] bg-[var(--surface-1)] py-20">
-      <Container className="max-w-4xl">
+      <Container>
         <p className="text-xs font-semibold tracking-wider text-brand-blue-400">CREDENTIALS</p>
         <h2 className="mt-2 text-3xl font-extrabold text-[var(--text-1)]">
           Credentials &amp; Recognition
         </h2>
 
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {content.certifications.map((item) => (
             <div
               key={item.id}
