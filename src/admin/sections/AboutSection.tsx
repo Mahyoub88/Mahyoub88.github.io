@@ -1,5 +1,6 @@
-import type { SiteContent } from '../../types/content'
+import type { SiteContent, AboutCard } from '../../types/content'
 import { Field, TextInput, TextArea } from '../ui/Field'
+import { ArrayEditor } from '../ui/ArrayEditor'
 
 export function AboutSection({
   content,
@@ -19,7 +20,7 @@ export function AboutSection({
         <Field label="Heading">
           <TextInput value={about.heading} onChange={(e) => update({ heading: e.target.value })} />
         </Field>
-        <Field label="Subheading">
+        <Field label="Subheading" hint="Leave empty to hide">
           <TextInput
             value={about.subheading}
             onChange={(e) => update({ subheading: e.target.value })}
@@ -33,6 +34,37 @@ export function AboutSection({
           onChange={(e) => update({ paragraphs: e.target.value.split('\n').filter((p) => p.trim()) })}
         />
       </Field>
+
+      <div>
+        <h3 className="mb-3 text-sm font-semibold text-[var(--text-1)]">Capability cards</h3>
+        <ArrayEditor
+          items={about.cards ?? []}
+          itemLabel="Card"
+          onChange={(cards) => update({ cards })}
+          makeItem={(): AboutCard => ({
+            id: `about-card-${Date.now()}`,
+            title: 'New capability',
+            description: '',
+          })}
+          renderItem={(card, updateCard) => (
+            <div className="space-y-3">
+              <Field label="Title">
+                <TextInput
+                  value={card.title}
+                  onChange={(e) => updateCard({ title: e.target.value })}
+                />
+              </Field>
+              <Field label="Description">
+                <TextArea
+                  rows={2}
+                  value={card.description}
+                  onChange={(e) => updateCard({ description: e.target.value })}
+                />
+              </Field>
+            </div>
+          )}
+        />
+      </div>
     </div>
   )
 }
