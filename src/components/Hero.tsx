@@ -4,13 +4,31 @@ import { getIcon } from '../data/icons'
 import { Container } from './Container'
 import { SocialIcons } from './SocialIcons'
 
+// A CV / file link (anything that is not an in-page #anchor) opens in a new tab
+// and downloads instead of being treated as a scroll target.
+const isFileLink = (href: string) => !href.startsWith('#')
+
+// The icon follows the destination, so reordering the buttons in the dashboard
+// never leaves a "Download" icon on a link that scrolls to a section.
+function ctaIcon(href: string) {
+  if (isFileLink(href)) return Download
+  if (href.startsWith('#contact')) return Send
+  return LayoutGrid
+}
+
+const fileLinkProps = (href: string) =>
+  isFileLink(href) ? { target: '_blank', rel: 'noopener noreferrer', download: '' } : {}
+
 export function Hero() {
   const { content } = useContent()
   const { hero, specializations } = content
 
-  // A CV / file link (anything that is not an in-page #anchor) should open in a
-  // new tab and download, instead of being treated as a scroll target.
-  const primaryIsFile = !hero.primaryCta.href.startsWith('#')
+  const PrimaryIcon = ctaIcon(hero.primaryCta.href)
+  const SecondaryIcon = ctaIcon(hero.secondaryCta.href)
+  const TertiaryIcon = ctaIcon(hero.tertiaryCta.href)
+
+  // The intro is authored as blank-line separated paragraphs.
+  const introParagraphs = hero.description.split(/\n\s*\n/).filter((p) => p.trim())
 
   return (
     <section id="home" className="relative overflow-hidden py-14 lg:py-16">
@@ -37,38 +55,45 @@ export function Hero() {
             {hero.badge}
           </span>
 
-          <h1 className="text-5xl font-extrabold tracking-tight text-[var(--text-1)] sm:text-6xl">
+          {/* text-4xl on phones so the full name always fits on one line. */}
+          <h1 className="text-4xl font-extrabold tracking-tight text-[var(--text-1)] sm:text-5xl lg:text-6xl">
             {hero.greetingName}
           </h1>
-          <h2 className="gradient-text mt-2 text-2xl font-bold sm:text-3xl">{hero.tagline}</h2>
+          <h2 className="gradient-text mt-3 text-xl font-bold leading-snug sm:text-2xl lg:text-3xl">
+            {hero.tagline}
+          </h2>
 
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-[var(--text-2)]">
-            {hero.description}
-          </p>
+          <div className="mt-6 max-w-[62ch] space-y-4">
+            {introParagraphs.map((p, i) => (
+              <p key={i} className="text-base leading-relaxed text-[var(--text-2)]">
+                {p}
+              </p>
+            ))}
+          </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
               href={hero.primaryCta.href}
-              {...(primaryIsFile
-                ? { target: '_blank', rel: 'noopener noreferrer', download: '' }
-                : {})}
+              {...fileLinkProps(hero.primaryCta.href)}
               className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue-500 to-brand-purple-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-blue-500/25 transition hover:brightness-110"
             >
-              <Download size={16} />
+              <PrimaryIcon size={16} />
               {hero.primaryCta.label}
             </a>
             <a
               href={hero.secondaryCta.href}
+              {...fileLinkProps(hero.secondaryCta.href)}
               className="flex items-center gap-2 rounded-xl border border-[var(--border-2)] px-5 py-3 text-sm font-semibold text-[var(--text-1)] transition hover:border-brand-blue-500/60"
             >
-              <LayoutGrid size={16} />
+              <SecondaryIcon size={16} />
               {hero.secondaryCta.label}
             </a>
             <a
               href={hero.tertiaryCta.href}
+              {...fileLinkProps(hero.tertiaryCta.href)}
               className="flex items-center gap-2 rounded-xl border border-[var(--border-2)] px-5 py-3 text-sm font-semibold text-[var(--text-1)] transition hover:border-brand-blue-500/60"
             >
-              <Send size={16} />
+              <TertiaryIcon size={16} />
               {hero.tertiaryCta.label}
             </a>
           </div>
@@ -78,7 +103,7 @@ export function Hero() {
 
         <div className="lg:col-span-6">
           <div className="grid min-w-0 grid-cols-1 items-stretch gap-5 sm:grid-cols-2">
-            <div className="relative min-h-[460px] w-full min-w-0 overflow-hidden rounded-2xl border border-[var(--border-2)] bg-gradient-to-br from-blue-50 via-purple-50 to-white shadow-2xl dark:from-slate-950 dark:via-purple-950/30 dark:to-slate-950">
+            <div className="relative min-h-[420px] w-full min-w-0 overflow-hidden rounded-2xl border border-[var(--border-2)] bg-gradient-to-br from-blue-50 via-purple-50 to-white shadow-2xl dark:from-slate-950 dark:via-purple-950/30 dark:to-slate-950">
               <div
                 aria-hidden
                 className="animate-glow-pulse pointer-events-none absolute inset-0 bg-gradient-to-br from-brand-blue-500/15 via-brand-purple-500/15 to-transparent blur-2xl"
@@ -87,7 +112,7 @@ export function Hero() {
                 <img
                   src={hero.photoUrl}
                   alt={hero.greetingName}
-                  className="absolute inset-0 h-full w-full object-contain object-bottom"
+                  className="absolute inset-0 h-full w-full object-cover object-top"
                 />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -96,7 +121,7 @@ export function Hero() {
               )}
             </div>
 
-            <div className="flex min-h-[460px] w-full min-w-0 flex-col rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] p-5 shadow-[var(--shadow-card)]">
+            <div className="flex min-h-[420px] w-full min-w-0 flex-col rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] p-5 shadow-[var(--shadow-card)]">
               <p className="mb-3 text-xs font-semibold tracking-wider text-[var(--text-3)]">
                 CORE EXPERTISE
               </p>
@@ -106,12 +131,14 @@ export function Hero() {
                   return (
                     <li
                       key={item.id}
-                      className="flex items-center gap-3 text-sm text-[var(--text-1)]"
+                      className="flex items-start gap-3 text-sm leading-snug text-[var(--text-1)]"
                     >
                       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--surface-2)] text-brand-blue-400">
                         <Icon size={16} />
                       </span>
-                      <span className="min-w-0 truncate">{item.label}</span>
+                      {/* No truncate: full labels like "Intelligent Transportation
+                          Systems" must stay readable rather than being cut off. */}
+                      <span className="min-w-0 pt-1.5">{item.label}</span>
                     </li>
                   )
                 })}
