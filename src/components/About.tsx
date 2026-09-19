@@ -12,19 +12,22 @@ export function About() {
   return (
     <section id="about" className="py-24">
       <Container className="max-w-4xl">
-        <p className="text-xs font-semibold tracking-wider text-brand-blue-400">ABOUT</p>
-        <h2 className="mt-2 text-3xl font-extrabold leading-tight text-[var(--text-1)]">
-          {about.heading}
-        </h2>
-        {about.subheading && <p className="mt-3 text-[var(--text-2)]">{about.subheading}</p>}
+        {/* Heading and body share one measure so the column has a single right
+            edge — a full-width heading over a 68ch body reads as a gap. */}
+        <div className="max-w-[68ch]">
+          <p className="text-xs font-semibold tracking-wider text-brand-blue-400">ABOUT</p>
+          <h2 className="mt-2 text-3xl font-extrabold leading-tight text-[var(--text-1)]">
+            {about.heading}
+          </h2>
+          {about.subheading && <p className="mt-3 text-[var(--text-2)]">{about.subheading}</p>}
 
-        {/* max-w-[68ch] keeps the measure inside the comfortable reading range. */}
-        <div className="mt-8 max-w-[68ch] space-y-5">
-          {about.paragraphs.map((p, i) => (
-            <p key={i} className="leading-relaxed text-[var(--text-2)]">
-              {p}
-            </p>
-          ))}
+          <div className="mt-8 space-y-5">
+            {about.paragraphs.map((p, i) => (
+              <p key={i} className="leading-relaxed text-[var(--text-2)]">
+                {p}
+              </p>
+            ))}
+          </div>
         </div>
 
         {cards.length > 0 && (
