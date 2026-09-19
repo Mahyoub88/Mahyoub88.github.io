@@ -22,7 +22,10 @@ export function ExperienceSection({
           role: 'New Role',
           company: 'Company',
           period: '2026 — Present',
+          location: '',
+          employmentType: '',
           description: '',
+          bullets: [],
           tags: [],
         })}
         renderItem={(item, update) => (
@@ -43,12 +46,35 @@ export function ExperienceSection({
                   onChange={(e) => update({ period: e.target.value })}
                 />
               </Field>
+              <Field label="Location">
+                <TextInput
+                  value={item.location ?? ''}
+                  onChange={(e) => update({ location: e.target.value })}
+                />
+              </Field>
+              <div className="sm:col-span-2">
+                <Field label="Employment type" hint="e.g. Part-time / Project-based. Leave empty to hide.">
+                  <TextInput
+                    value={item.employmentType ?? ''}
+                    onChange={(e) => update({ employmentType: e.target.value })}
+                  />
+                </Field>
+              </div>
             </div>
-            <Field label="Description">
+            <Field label="Summary">
               <TextArea
-                rows={3}
+                rows={2}
                 value={item.description}
                 onChange={(e) => update({ description: e.target.value })}
+              />
+            </Field>
+            <Field label="Bullets" hint="One bullet per line">
+              <TextArea
+                rows={6}
+                value={(item.bullets ?? []).join('\n')}
+                onChange={(e) =>
+                  update({ bullets: e.target.value.split('\n').filter((b) => b.trim()) })
+                }
               />
             </Field>
             <Field label="Tags">
