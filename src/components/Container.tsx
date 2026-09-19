@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 
-const DEFAULT_MAX_WIDTH = 'max-w-[1440px]'
+const DEFAULT_MAX_WIDTH = 'max-w-[1680px]'
 
 /**
  * Two max-w utilities on one element are resolved by stylesheet order, not by
@@ -19,7 +19,7 @@ export function Container({
 
   return (
     <div
-      className={`mx-auto w-full ${callerSetsWidth ? '' : DEFAULT_MAX_WIDTH} px-6 lg:px-14 xl:px-20 ${className}`}
+      className={`mx-auto w-full ${callerSetsWidth ? '' : DEFAULT_MAX_WIDTH} px-6 lg:px-10 xl:px-14 ${className}`}
     >
       {children}
     </div>
