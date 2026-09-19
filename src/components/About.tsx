@@ -13,10 +13,10 @@ export function About() {
     <section id="about" className="py-20">
       <Container>
         {/* Two columns on wide screens: the heading takes the left rail, the
-            prose the right. Body text has to stay near 68ch to stay readable,
+            prose the right. Body text has to stay near 70ch to stay readable,
             so stretching it across a wide viewport is not an option — giving
             the heading its own column is what puts that space to work. */}
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] lg:gap-16">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] lg:gap-20">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <p className="text-xs font-semibold tracking-wider text-brand-blue-400">ABOUT</p>
             <h2 className="mt-2 text-3xl font-extrabold leading-tight text-[var(--text-1)]">
@@ -25,7 +25,7 @@ export function About() {
             {about.subheading && <p className="mt-3 text-[var(--text-2)]">{about.subheading}</p>}
           </div>
 
-          <div className="max-w-[68ch] space-y-5">
+          <div className="max-w-[74ch] space-y-5">
             {about.paragraphs.map((p, i) => (
               <p key={i} className="leading-relaxed text-[var(--text-2)]">
                 {p}
