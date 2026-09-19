@@ -40,7 +40,8 @@ import { ContactSocialSection } from '../admin/sections/ContactSocialSection'
 import { SettingsSection } from '../admin/sections/SettingsSection'
 import type { SiteContent } from '../types/content'
 import { defaultContent } from '../data/defaultContent'
-import { loadGitHubConfig, isGitHubConfigReady, publishContentToGitHub } from '../admin/github'
+import { publishContentToGitHub } from '../admin/github'
+import { isTargetReady, readToken } from '../admin/vault'
 
 const tabs = [
   { id: 'brand', label: 'Brand & Nav', icon: LayoutDashboard },
@@ -63,7 +64,7 @@ type TabId = (typeof tabs)[number]['id']
 
 function AdminDashboard() {
   const { content, setContent, resetContent } = useContent()
-  const { logout } = useAuth()
+  const { logout, vault, cryptoKey } = useAuth()
   const [draft, setDraft] = useState<SiteContent>(content)
   const [activeTab, setActiveTab] = useState<TabId>('brand')
   const [saveState, setSaveState] = useState<'idle' | 'saving' | 'saved' | 'published' | 'publish-failed'>(
@@ -91,10 +92,11 @@ function AdminDashboard() {
     setPublishError(null)
     let failed = false
 
-    const gh = loadGitHubConfig()
-    if (isGitHubConfigReady(gh)) {
+    if (vault && cryptoKey && isTargetReady(vault)) {
       try {
-        await publishContentToGitHub(gh, JSON.stringify(draft, null, 2))
+        const token = await readToken(cryptoKey, vault)
+        if (!token) throw new Error('the stored token could not be decrypted')
+        await publishContentToGitHub(vault.github, token, JSON.stringify(draft, null, 2))
         setSaveState('published')
       } catch (err) {
         failed = true
@@ -247,6 +249,19 @@ function AdminDashboard() {
 
 export function Admin() {
   const { isAuthenticated } = useAuth()
+
+  // Keep the dashboard out of search results. The route is client-side, so the
+  // tag has to be added while it is mounted and removed on the way out.
+  useEffect(() => {
+    const meta = document.createElement('meta')
+    meta.name = 'robots'
+    meta.content = 'noindex, nofollow'
+    document.head.appendChild(meta)
+    return () => {
+      document.head.removeChild(meta)
+    }
+  }, [])
+
   if (!isAuthenticated) return <AdminLogin />
   return <AdminDashboard />
 }
