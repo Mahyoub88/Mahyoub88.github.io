@@ -92,6 +92,7 @@
       "employmentType": "",
       "description": "Deploy, integrate, commission, and support intelligent traffic enforcement and ITS solutions across mission-critical operational environments in the UAE.",
       "bullets": [
+        "Support an installed base of 800+ intelligent transportation and traffic enforcement systems across the UAE.",
         "Integrate cameras, LiDAR, sensors, control units, networks, databases, and backend platforms into reliable end-to-end systems.",
         "Perform FAT, SAT, commissioning, calibration, interface validation, acceptance testing, and performance verification.",
         "Diagnose complex faults across hardware, software, communication, database, and system-interface layers using structured root-cause analysis.",
@@ -215,6 +216,10 @@
       "description": "Supported the integration, commissioning, calibration, validation, troubleshooting, and operational performance of intelligent traffic enforcement systems across field and backend environments.",
       "meta": [
         {
+          "label": "Scale",
+          "value": "800+ intelligent transportation and traffic enforcement systems supported across the UAE."
+        },
+        {
           "label": "Role",
           "value": "Field and systems engineering across cameras, LiDAR, sensors, control units, networking, databases, and software interfaces."
         },
@@ -285,6 +290,42 @@
       ],
       "tags": ["Cisco", "MikroTik", "Ubiquiti", "RF Planning", "VPN", "Routing"],
       "status": { "kind": "professional", "label": "Professional Case Study" },
+      "link": "",
+      "links": [],
+      "accent": "amber"
+    },
+    {
+      "id": "proj-sddc-lab",
+      "group": "earlier",
+      "category": "Virtualisation · Infrastructure Lab",
+      "title": "Software-Defined Data Center Lab",
+      "description": "Built and documented a virtualised data-center lab to study software-defined infrastructure: hypervisor deployment, virtual networking and switching, storage configuration, and centralised management.",
+      "meta": [
+        {
+          "label": "Scope",
+          "value": "Hypervisor setup, virtual machine provisioning, virtual network design, storage layout, and administration workflows."
+        }
+      ],
+      "tags": ["VMware ESXi", "Virtualisation", "Virtual Networking", "Storage"],
+      "status": { "kind": "academic", "label": "Self-Directed Lab" },
+      "link": "",
+      "links": [],
+      "accent": "blue"
+    },
+    {
+      "id": "proj-solar-study",
+      "group": "earlier",
+      "category": "Renewable Energy · Systems Engineering",
+      "title": "Solar Energy Systems Engineering Study",
+      "description": "Studied the design and sizing of photovoltaic systems, covering load assessment, array and battery sizing, inverter and charge-controller selection, and system protection.",
+      "meta": [
+        {
+          "label": "Scope",
+          "value": "Load analysis, component sizing and selection, wiring and protection concepts, and performance estimation."
+        }
+      ],
+      "tags": ["Photovoltaics", "System Sizing", "Load Analysis", "Power Electronics"],
+      "status": { "kind": "academic", "label": "Self-Directed Study" },
       "link": "",
       "links": [],
       "accent": "amber"
@@ -389,6 +430,11 @@
         "VB.NET",
         "Hardware Debugging"
       ]
+    },
+    {
+      "id": "exp-cat-6",
+      "category": "LANGUAGES",
+      "items": ["Arabic — Native / Bilingual", "English — Professional Working"]
     }
   ],
   "education": [
@@ -431,14 +477,14 @@
       "name": "Cisco Certified Network Associate — Routing & Switching",
       "issuer": "Cisco",
       "date": "",
-      "type": "Certification"
+      "type": "Previously certified"
     },
     {
       "id": "cert-comptia",
       "name": "CompTIA A+",
       "issuer": "CompTIA",
       "date": "",
-      "type": "Certification"
+      "type": "Previously certified"
     }
   ],
   "footerLinks": {
