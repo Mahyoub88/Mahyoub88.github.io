@@ -1,11 +1,19 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Sun, Moon, Menu, X, Download, LayoutDashboard } from 'lucide-react'
+import { Sun, Moon, Menu, X, Download, LayoutGrid, Send, LayoutDashboard } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useContent } from '../context/ContentContext'
 import { useTheme } from '../context/ThemeContext'
 import { useAuth } from '../context/AuthContext'
 import { useActiveSection } from '../hooks/useActiveSection'
 import { Container } from './Container'
+
+// Mirrors the hero: the icon follows the destination, so the shared CTA never
+// shows a Download glyph on a link that only scrolls to a section.
+function ctaIcon(href: string) {
+  if (!href.startsWith('#')) return Download
+  if (href.startsWith('#contact')) return Send
+  return LayoutGrid
+}
 
 export function Header() {
   const { content } = useContent()
@@ -19,6 +27,7 @@ export function Header() {
   const ctaFileProps = ctaIsFile
     ? { target: '_blank', rel: 'noopener noreferrer', download: '' }
     : {}
+  const CtaIcon = ctaIcon(content.hero.primaryCta.href)
 
   // The hero already shows this CTA, so showing it in the sticky header at the
   // same time duplicates it on screen. Reveal the header copy only once the
@@ -87,7 +96,7 @@ export function Header() {
               <a
                 key={link.id}
                 href={link.href}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                className={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                   isActive
                     ? 'bg-[var(--surface-2)] text-brand-blue-400'
                     : 'text-[var(--text-2)] hover:text-[var(--text-1)]'
@@ -122,11 +131,11 @@ export function Header() {
             {...ctaFileProps}
             aria-hidden={!heroPassed}
             tabIndex={heroPassed ? undefined : -1}
-            className={`flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue-500 to-brand-purple-500 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-blue-500/20 transition hover:brightness-110 ${
+            className={`flex items-center gap-2 whitespace-nowrap rounded-xl bg-gradient-to-r from-brand-blue-500 to-brand-purple-500 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-blue-500/20 transition hover:brightness-110 ${
               heroPassed ? 'opacity-100' : 'pointer-events-none opacity-0'
             }`}
           >
-            <Download size={16} />
+            <CtaIcon size={16} />
             {content.hero.primaryCta.label}
           </a>
         </div>
@@ -171,9 +180,10 @@ export function Header() {
               <a
                 href={content.hero.primaryCta.href}
                 {...ctaFileProps}
+                onClick={() => setOpen(false)}
                 className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue-500 to-brand-purple-500 px-4 py-2.5 text-sm font-semibold text-white"
               >
-                <Download size={16} />
+                <CtaIcon size={16} />
                 {content.hero.primaryCta.label}
               </a>
             </div>
