@@ -9,13 +9,13 @@ export function Education() {
   return (
     <section
       id="education"
-      className="border-y border-[var(--border-1)] bg-[var(--surface-1)] py-24"
+      className="border-y border-[var(--border-1)] bg-[var(--surface-1)] py-20"
     >
-      <Container className="max-w-4xl">
+      <Container>
         <p className="text-xs font-semibold tracking-wider text-brand-blue-400">EDUCATION</p>
         <h2 className="mt-2 text-3xl font-extrabold text-[var(--text-1)]">Education</h2>
 
-        <div className="mt-12 space-y-5">
+        <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-2">
           {content.education.map((item) => (
             <div
               key={item.id}
