@@ -32,6 +32,28 @@ export interface Stat {
 
 export type ProjectAccent = 'blue' | 'purple' | 'amber'
 
+/** Where a card is shown: the headline grid, or the de-emphasised earlier work. */
+export type ProjectGroup = 'selected' | 'earlier'
+
+/** Drives the badge colour. Keep these honest — they set the reader's expectations. */
+export type ProjectStatusKind = 'public' | 'academic' | 'professional'
+
+export interface ProjectStatus {
+  kind: ProjectStatusKind
+  label: string
+}
+
+export interface ProjectLink {
+  label: string
+  href: string
+}
+
+/** A Problem / Role / Method / Result row. Omit a row rather than inventing one. */
+export interface ProjectMeta {
+  label: string
+  value: string
+}
+
 export interface Project {
   id: string
   category: string
@@ -40,6 +62,11 @@ export interface Project {
   tags: string[]
   link: string
   accent: ProjectAccent
+  subtitle?: string
+  status?: ProjectStatus
+  links?: ProjectLink[]
+  meta?: ProjectMeta[]
+  group?: ProjectGroup
 }
 
 export interface CtaLink {
@@ -66,10 +93,17 @@ export interface BrandContent {
   logoInitial: string
 }
 
+export interface AboutCard {
+  id: string
+  title: string
+  description: string
+}
+
 export interface AboutContent {
   heading: string
   subheading: string
   paragraphs: string[]
+  cards?: AboutCard[]
 }
 
 export interface ExperienceItem {
@@ -79,6 +113,10 @@ export interface ExperienceItem {
   period: string
   description: string
   tags: string[]
+  location?: string
+  /** Shown as a chip beside the period, e.g. "Part-time / Project-based". */
+  employmentType?: string
+  bullets?: string[]
 }
 
 export interface ArticleItem {
@@ -108,6 +146,11 @@ export interface EducationItem {
   institution: string
   period: string
   status: string
+  description?: string
+  /** "Selected work" bullets under a degree. */
+  highlights?: string[]
+  /** A short footnote, e.g. a degree-equivalency statement. */
+  note?: string
 }
 
 export interface CertificationItem {
