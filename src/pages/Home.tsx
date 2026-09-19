@@ -17,22 +17,24 @@ export function Home() {
   const { content } = useContent()
 
   useEffect(() => {
-    document.title = `${content.brand.name} — ${content.brand.title}`
+    document.title = `${content.brand.name} | ${content.brand.title}`
   }, [content.brand.name, content.brand.title])
 
   return (
     <div className="min-h-screen bg-[var(--surface-0)]">
       <Header />
       <main>
+        {/* Order mirrors the nav: Home, About, Experience, Selected Work,
+            Research, Skills, Education, then credentials and contact. */}
         <Hero />
         <StatsBar />
         <About />
-        <FeaturedProjects />
         <Experience />
+        <FeaturedProjects />
+        <Articles />
         <Skills />
         <Education />
         <Certifications />
-        <Articles />
         <Contact />
       </main>
       <Footer />
