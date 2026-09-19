@@ -7,7 +7,7 @@ export function Articles() {
   if (content.articles.length === 0) return null
 
   return (
-    <section id="articles" className="border-y border-[var(--border-1)] bg-[var(--surface-1)] py-24">
+    <section id="articles" className="border-y border-[var(--border-1)] bg-[var(--surface-1)] py-20">
       <Container>
         <p className="text-xs font-semibold tracking-wider text-brand-blue-400">RESEARCH</p>
         <h2 className="mt-2 text-3xl font-extrabold text-[var(--text-1)]">
