@@ -11,7 +11,7 @@ export function FeaturedProjects() {
   const earlier = content.projects.filter((p) => p.group === 'earlier')
 
   return (
-    <section id="work" className="py-24">
+    <section id="work" className="py-20">
       <Container>
         <p className="text-xs font-semibold tracking-wider text-brand-blue-400">SELECTED WORK</p>
         <h2 className="mt-2 text-3xl font-extrabold text-[var(--text-1)]">
