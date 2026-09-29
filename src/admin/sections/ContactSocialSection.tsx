@@ -63,6 +63,7 @@ export function ContactSocialSection({
                 >
                   <option value="github">GitHub</option>
                   <option value="linkedin">LinkedIn</option>
+                  <option value="orcid">ORCID</option>
                   <option value="email">Email</option>
                   <option value="twitter">Twitter / X</option>
                   <option value="other">Other</option>
