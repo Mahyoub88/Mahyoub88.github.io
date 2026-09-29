@@ -6,7 +6,7 @@ export interface NavLink {
 
 export interface SocialLink {
   id: string
-  type: 'github' | 'linkedin' | 'email' | 'twitter' | 'other'
+  type: 'github' | 'linkedin' | 'orcid' | 'email' | 'twitter' | 'other'
   url: string
 }
 
