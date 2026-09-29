@@ -356,6 +356,7 @@
   "social": [
     { "id": "social-1", "type": "linkedin", "url": "https://www.linkedin.com/in/mohammed-mahyoub/" },
     { "id": "social-2", "type": "github", "url": "https://github.com/Mahyoub88" },
+    { "id": "social-4", "type": "orcid", "url": "https://orcid.org/0009-0003-5640-352X" },
     { "id": "social-3", "type": "email", "url": "mailto:almlike5@gmail.com" }
   ],
   "technicalExpertise": [
