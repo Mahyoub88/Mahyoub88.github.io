@@ -1,6 +1,6 @@
 import { Mail, Link2 } from 'lucide-react'
 import type { SocialLink } from '../types/content'
-import { GitHubIcon, LinkedInIcon, OrcidIcon, XIcon } from './BrandIcons'
+import { FacebookIcon, GitHubIcon, LinkedInIcon, OrcidIcon, XIcon } from './BrandIcons'
 
 const iconFor = {
   github: GitHubIcon,
@@ -8,6 +8,7 @@ const iconFor = {
   orcid: OrcidIcon,
   email: Mail,
   twitter: XIcon,
+  facebook: FacebookIcon,
   other: Link2,
 }
 
