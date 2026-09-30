@@ -198,12 +198,16 @@
         }
       ],
       "tags": ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"],
-      "status": { "kind": "public", "label": "Public Repository" },
+      "status": { "kind": "public", "label": "Public Repository · Archived on Zenodo (DOI)" },
       "link": "",
       "links": [
         {
           "label": "View GitHub Repository",
           "href": "https://github.com/Mahyoub88/predicting-vehicle-type-using-ngsim-us101"
+        },
+        {
+          "label": "DOI: 10.5281/zenodo.23033235",
+          "href": "https://doi.org/10.5281/zenodo.23033235"
         }
       ],
       "accent": "blue"
@@ -342,9 +346,9 @@
     {
       "id": "research-ngsim",
       "title": "Vehicle Type Classification from Traffic Trajectory Data",
-      "excerpt": "Vehicle-level feature engineering and supervised classification using the NGSIM US-101 dataset.",
-      "date": "",
-      "url": "https://github.com/Mahyoub88/predicting-vehicle-type-using-ngsim-us101"
+      "excerpt": "Vehicle-level feature engineering and supervised classification using the NGSIM US-101 dataset. Archived on Zenodo — DOI: 10.5281/zenodo.23033235.",
+      "date": "2026",
+      "url": "https://doi.org/10.5281/zenodo.23033235"
     }
   ],
   "contact": {
