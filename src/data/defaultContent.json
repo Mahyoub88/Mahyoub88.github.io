@@ -20,7 +20,7 @@
     "tagline": "Engineering Reliable Traffic Systems — and Applying AI to Smarter Mobility",
     "description": "Senior Service Engineer with 10+ years of multidisciplinary engineering experience, including 6+ years supporting intelligent transportation, smart infrastructure, and traffic enforcement systems across the UAE.\n\nI integrate cameras, LiDAR, sensors, control units, networks, databases, and backend platforms into reliable end-to-end operational systems.",
     "primaryCta": { "label": "View Selected Work", "href": "#work" },
-    "secondaryCta": { "label": "Download CV", "href": "/Mohammed_Mahyoub_CV.pdf" },
+    "secondaryCta": { "label": "Download CV", "href": "/Mohammed_Mahyoub_CV_1.pdf" },
     "tertiaryCta": { "label": "Contact Me", "href": "#contact" },
     "photoUrl": "/mahyoub.jpg",
     "backgroundUrl": "",
@@ -494,7 +494,7 @@
     }
   ],
   "footerLinks": {
-    "resumeUrl": "/Mohammed_Mahyoub_CV.pdf",
+    "resumeUrl": "/Mohammed_Mahyoub_CV_1.pdf",
     "orcidUrl": "https://orcid.org/0009-0003-5640-352X"
   }
 }
