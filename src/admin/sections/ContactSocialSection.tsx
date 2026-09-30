@@ -66,6 +66,7 @@ export function ContactSocialSection({
                   <option value="orcid">ORCID</option>
                   <option value="email">Email</option>
                   <option value="twitter">Twitter / X</option>
+                  <option value="facebook">Facebook</option>
                   <option value="other">Other</option>
                 </SelectInput>
               </Field>
