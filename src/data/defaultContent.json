@@ -346,7 +346,12 @@
         "label": "Engineering Lab & Network Simulation"
       },
       "link": "",
-      "links": [],
+      "links": [
+        {
+          "label": "View GitHub Repository",
+          "href": "https://github.com/Mahyoub88/ims-voip-iptv-volte-lab"
+        }
+      ],
       "accent": "blue"
     },
     {
