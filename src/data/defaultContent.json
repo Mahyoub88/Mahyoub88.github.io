@@ -272,9 +272,17 @@
         {
           "label": "Scope",
           "value": "Real-time monitoring concepts, sensor integration, telemetry, hardware configuration, functional testing, and technical validation."
+        },
+        {
+          "label": "Firmware",
+          "value": "PIC16 firmware in mikroC, simulated in Proteus and built on hardware: multiplexed 7-segment displays, ADC measurement with Timer0 interrupts, EEPROM storage, DS1307 RTC over I²C, 74HC595 shift registers, keypad/LCD access control with alarm, and Nokia 5110 graphic LCD."
+        },
+        {
+          "label": "Devices",
+          "value": "IC and memory programming: ROM/PROM/EPROM/EEPROM/Flash, SRAM/DRAM/NV-RAM organisation, and hardware device programmers."
         }
       ],
-      "tags": ["PIC", "AVR", "Arduino", "Sensors", "PLC", "IoT"],
+      "tags": ["PIC", "mikroC", "Proteus", "AVR", "Arduino", "Sensors", "PLC", "IoT"],
       "status": { "kind": "professional", "label": "Professional Case Study" },
       "link": "",
       "links": [],
@@ -550,6 +558,13 @@
       "issuer": "CompTIA",
       "date": "",
       "type": "Previously certified"
+    },
+    {
+      "id": "cert-pic-training",
+      "name": "PIC Microcontroller Programming — mikroC & Proteus",
+      "issuer": "Microcontroller Programming Techniques (training group)",
+      "date": "",
+      "type": "Training"
     }
   ],
   "footerLinks": {
