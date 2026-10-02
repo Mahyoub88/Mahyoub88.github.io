@@ -509,6 +509,22 @@
       ]
     },
     {
+      "id": "exp-cat-7",
+      "category": "MARINE AUTONOMY & USV INTEGRATION — IN-DEPTH STUDY",
+      "items": [
+        "USV / MASS Concepts",
+        "Marine Navigation (Heading, COG/SOG, XTE)",
+        "Sensor Fusion (GNSS, IMU, Radar, AIS)",
+        "Autopilot & PID Heading Control",
+        "NMEA 2000 / NMEA 0183 & PGNs",
+        "Radar / ARPA (CPA, TCPA)",
+        "COLREGs",
+        "Vessel Networks & Link Failover",
+        "SocketCAN & Linux Diagnostics",
+        "Safety, FMEA & ICD"
+      ]
+    },
+    {
       "id": "exp-cat-6",
       "category": "LANGUAGES",
       "items": ["Arabic — Native / Bilingual", "English — Professional Working"]
