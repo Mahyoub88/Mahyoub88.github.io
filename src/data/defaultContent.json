@@ -280,9 +280,13 @@
         {
           "label": "Devices",
           "value": "IC and memory programming: ROM/PROM/EPROM/EEPROM/Flash, SRAM/DRAM/NV-RAM organisation, and hardware device programmers."
+        },
+        {
+          "label": "UAV",
+          "value": "UAV communication and onboard electronics: command-and-control and telemetry links (GSM/GPRS, line-of-sight 900 MHz–5.8 GHz), UAS spectrum requirements (ITU-R M.2171), ground control stations, and onboard sensors."
         }
       ],
-      "tags": ["PIC", "mikroC", "Proteus", "AVR", "Arduino", "Sensors", "PLC", "IoT"],
+      "tags": ["PIC", "mikroC", "Proteus", "AVR", "Arduino", "Sensors", "PLC", "IoT", "UAV"],
       "status": { "kind": "professional", "label": "Professional Case Study" },
       "link": "",
       "links": [],
