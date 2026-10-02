@@ -342,7 +342,12 @@
         "label": "Engineering Build & Flight Testing"
       },
       "link": "",
-      "links": [],
+      "links": [
+        {
+          "label": "View GitHub Repository",
+          "href": "https://github.com/Mahyoub88/autonomous-quadcopter-uav"
+        }
+      ],
       "accent": "purple"
     },
     {
