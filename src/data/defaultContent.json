@@ -126,7 +126,7 @@
     },
     {
       "id": "exp-3",
-      "role": "Independent Engineering Projects — Network Infrastructure & Technical Systems",
+      "role": "Independent Engineering Consultant — Network Infrastructure & Technical Projects",
       "company": "Independent Engineering Projects",
       "period": "March 2012 — May 2018",
       "location": "",
@@ -242,12 +242,20 @@
       "id": "proj-monitoring-apps",
       "group": "selected",
       "category": "Desktop Software · Engineering Automation",
-      "title": "Engineering Monitoring & Service Operations Applications",
+      "title": "Engineering Monitoring & Automation Applications (.NET)",
       "description": "Developed VB.NET desktop applications and engineering tools for system monitoring, service documentation, repair tracking, operational reporting, device integration, and RF analysis.",
       "meta": [
         {
           "label": "Scope",
           "value": "Structured data management, diagnostics, service records, maintenance workflows, technical calculations, and exportable reports."
+        },
+        {
+          "label": "Example",
+          "value": "Monitoring & Diagnostics Console — a WinForms dashboard for multi-site system monitoring, real-time diagnostics, automated health evaluation, issue tracking, and technical reporting."
+        },
+        {
+          "label": "RF tools",
+          "value": "Calculators for path loss, Fresnel-zone clearance, receiver sensitivity, thermal noise, and RF propagation modelling."
         }
       ],
       "tags": [
@@ -340,16 +348,24 @@
     {
       "id": "proj-rf-network",
       "group": "selected",
-      "category": "Network Infrastructure · RF Planning",
-      "title": "Wireless & RF Network Infrastructure Design",
-      "description": "Designed and validated wireless and LAN infrastructure concepts using MikroTik, Ubiquiti, Cisco, RF planning, and network simulation.",
+      "category": "Network Infrastructure · RF Planning · Service-Provider Networks",
+      "title": "Network Infrastructure Design — Wireless, RF & MPLS Backbone",
+      "description": "Designed and validated multi-site network infrastructure, from wireless access and RF links to a simulated carrier-grade MPLS backbone, using MikroTik, Ubiquiti, Cisco, RF planning, and GNS3.",
       "meta": [
         {
-          "label": "Scope",
-          "value": "Multi-site connectivity, wireless coverage, point-to-point links, antenna planning, routing, VPN connectivity, traffic management, surveillance integration, and technical documentation."
+          "label": "Wireless",
+          "value": "Multi-zone wireless and LAN architecture: coverage modelling, point-to-point links, antenna alignment, capacity planning, secure routing, VPN, traffic management, and surveillance and access-control connectivity."
+        },
+        {
+          "label": "Backbone",
+          "value": "Carrier-grade MPLS backbone simulated in GNS3 with Cisco 7200 routers: OSPF, MPLS-TE, VRF / MPLS VPN, and MP-BGP for multi-site connectivity and traffic engineering."
+        },
+        {
+          "label": "Output",
+          "value": "Network diagrams, equipment layouts, configurations, engineering calculations, and validation documentation."
         }
       ],
-      "tags": ["Cisco", "MikroTik", "Ubiquiti", "RF Planning", "VPN", "Routing"],
+      "tags": ["Cisco", "MikroTik", "Ubiquiti", "RF Planning", "MPLS", "OSPF", "BGP", "VPN", "GNS3"],
       "status": { "kind": "professional", "label": "Professional Case Study" },
       "link": "",
       "links": [],
@@ -415,15 +431,19 @@
       "id": "proj-sddc-lab",
       "group": "earlier",
       "category": "Virtualisation · Infrastructure Lab",
-      "title": "Software-Defined Data Center Lab",
-      "description": "Built and documented a virtualised data-center lab to study software-defined infrastructure: hypervisor deployment, virtual networking and switching, storage configuration, and centralised management.",
+      "title": "Software-Defined Data Center (SDDC) Lab Implementation",
+      "description": "Designed, configured, and validated a software-defined data-center lab integrating compute, storage, networking, and virtual application delivery.",
       "meta": [
         {
           "label": "Scope",
-          "value": "Hypervisor setup, virtual machine provisioning, virtual network design, storage layout, and administration workflows."
+          "value": "VMware ESXi virtualisation with multiple VMs, FreeNAS storage over iSCSI, and a Citrix XenApp lab for remote application delivery and controlled user access."
+        },
+        {
+          "label": "Checks",
+          "value": "Resource allocation, network connectivity, storage accessibility, scalability, and operational readiness — with documented architecture, configuration, testing, and troubleshooting."
         }
       ],
-      "tags": ["VMware ESXi", "Virtualisation", "Virtual Networking", "Storage"],
+      "tags": ["VMware ESXi", "FreeNAS", "iSCSI", "Citrix XenApp", "Virtualisation", "Storage"],
       "status": { "kind": "academic", "label": "Self-Directed Lab" },
       "link": "",
       "links": [],
@@ -433,15 +453,19 @@
       "id": "proj-solar-study",
       "group": "earlier",
       "category": "Renewable Energy · Systems Engineering",
-      "title": "Solar Energy Systems Engineering Study",
+      "title": "Solar Energy Systems Engineering Study & Deployment Concepts",
       "description": "Studied the design and sizing of photovoltaic systems, covering load assessment, array and battery sizing, inverter and charge-controller selection, and system protection.",
       "meta": [
         {
           "label": "Scope",
           "value": "Load analysis, component sizing and selection, wiring and protection concepts, and performance estimation."
+        },
+        {
+          "label": "Concepts",
+          "value": "Solar-powered supply and backup concepts for remote telecommunications and infrastructure sites."
         }
       ],
-      "tags": ["Photovoltaics", "System Sizing", "Load Analysis", "Power Electronics"],
+      "tags": ["Photovoltaics", "System Sizing", "Load Analysis", "Power Electronics", "Off-Grid Power"],
       "status": { "kind": "academic", "label": "Self-Directed Study" },
       "link": "",
       "links": [],
