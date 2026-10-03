@@ -615,7 +615,7 @@
         },
         {
           "label": "Compute",
-          "value": "VMware ESXi 5.5 host managed with vSphere Client, running Windows Server 2008 R2 virtual machines with planned CPU, memory and thick/thin disk provisioning."
+          "value": "VMware ESXi 5.5 on an Intel Core i7 host (20 GB RAM) managed with vSphere Client, running Windows Server 2008 R2 virtual machines with planned CPU, memory and thick/thin disk provisioning; storage served by an AMD Opteron server with SAS and SATA disks."
         },
         {
           "label": "Network",
@@ -645,7 +645,7 @@
       "link": "",
       "links": [
         {
-          "label": "View GitHub Repository",
+          "label": "View GitHub Repository — screenshots & configuration files",
           "href": "https://github.com/Mahyoub88/sddc-lab-implementation"
         }
       ],
