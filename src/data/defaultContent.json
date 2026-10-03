@@ -259,7 +259,7 @@
       "description": "Delivered selected project-based engineering work alongside study and professional employment.",
       "bullets": [
         "Designed and supported wired and wireless network infrastructure using Cisco, MikroTik, and Ubiquiti technologies.",
-        "Worked with routing, switching, firewall, VPN, MPLS, OSPF, BGP, and VRF concepts.",
+        "Configured and operated routing, switching, firewall, VPN, MPLS, OSPF, BGP, and VRF.",
         "Performed wireless coverage planning, point-to-point link design, network troubleshooting, and performance analysis.",
         "Developed engineering tools for RF calculations, reporting, and technical workflows.",
         "Prepared network diagrams, simulations, configurations, engineering calculations, and technical reports."
@@ -434,7 +434,7 @@
       "meta": [
         {
           "label": "Scope",
-          "value": "Real-time monitoring concepts, sensor integration, telemetry, hardware configuration, functional testing, and technical validation."
+          "value": "Real-time monitoring and control systems, sensor integration, telemetry, hardware configuration, functional testing, and technical validation."
         },
         {
           "label": "Firmware",
