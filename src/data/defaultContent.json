@@ -491,6 +491,13 @@
       "excerpt": "Vehicle-level feature engineering and supervised classification using the NGSIM US-101 dataset. Archived on Zenodo — DOI: 10.5281/zenodo.23033235.",
       "date": "2026",
       "url": "https://doi.org/10.5281/zenodo.23033235"
+    },
+    {
+      "id": "research-usv-notes",
+      "title": "USV Systems Integration — Study Notes",
+      "excerpt": "Structured study notes on uncrewed surface vehicle integration: navigation and sensor fusion, autopilot and PID heading control, NMEA 2000 / 0183 and PGNs, radar/ARPA, COLREGs, vessel networks and link failover, Linux diagnostics, safety, ICD and FAT/SAT.",
+      "date": "",
+      "url": "https://github.com/Mahyoub88/usv-systems-integration-notes"
     }
   ],
   "contact": {
