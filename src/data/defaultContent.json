@@ -475,6 +475,28 @@
       "link": "",
       "links": [],
       "accent": "amber"
+    },
+    {
+      "id": "proj-rfid-study",
+      "group": "earlier",
+      "category": "RFID · Wireless Identification · Automation",
+      "title": "RFID Systems Study — Library Automation (ISO 15693)",
+      "description": "Prepared and presented a technical study of radio-frequency identification systems and their application to library automation.",
+      "meta": [
+        {
+          "label": "Scope",
+          "value": "Reader–tag–database architecture and RF coupling; tag construction (chip, antenna, package); active, passive and semi-passive tags compared by power source, frequency band, read range, memory and cost."
+        },
+        {
+          "label": "Example",
+          "value": "Library RFID reader: ISO 15693 at 13.56 MHz, RS-232 interface, SIP / STX-ETX protocol — supporting self check-in/out, security gates, fast inventory, theft prevention and usage statistics."
+        }
+      ],
+      "tags": ["RFID", "ISO 15693", "13.56 MHz", "RS-232", "Automation"],
+      "status": { "kind": "academic", "label": "Technical Study & Presentation" },
+      "link": "",
+      "links": [],
+      "accent": "purple"
     }
   ],
   "articles": [
@@ -578,6 +600,7 @@
         "Microcontrollers",
         "Sensor-Based Automation",
         "IoT",
+        "RFID Systems",
         "VB.NET",
         "Hardware Debugging"
       ]
