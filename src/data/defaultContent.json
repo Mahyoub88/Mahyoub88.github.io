@@ -459,7 +459,7 @@
         },
         {
           "label": "Testing",
-          "value": "Calibrated accelerometer, compass, RC and ESCs; tuned stabilize PIDs; flight-tested Stabilize, Loiter, AltHold, Auto (waypoints), Guided and Follow-Me (phone GCS), plus radio and geofence failsafes (land / return-to-launch)."
+          "value": "Calibrated accelerometer, compass, RC and ESCs; tuned the PIDs (final rate gains roll/pitch P 0.15 · I 0.10 · D 0.004, stabilize P 4.5); flight-tested Stabilize, Loiter, AltHold, Auto (waypoints), Guided and Follow-Me (phone GCS), plus radio, geofence and battery failsafes (land / return-to-launch)."
         },
         {
           "label": "Fixes",
@@ -489,7 +489,7 @@
       "link": "",
       "links": [
         {
-          "label": "View GitHub Repository",
+          "label": "View GitHub Repository — code, test images & tuned parameters",
           "href": "https://github.com/Mahyoub88/autonomous-quadcopter-uav"
         }
       ],
