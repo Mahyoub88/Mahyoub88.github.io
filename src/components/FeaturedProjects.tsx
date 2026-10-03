@@ -29,9 +29,9 @@ export function FeaturedProjects() {
 
         {earlier.length > 0 && (
           <div className="mt-16">
-            <h3 className="text-lg font-bold text-[var(--text-1)]">Earlier Engineering Work</h3>
+            <h3 className="text-lg font-bold text-[var(--text-1)]">Engineering Implementations</h3>
             <p className="mt-2 max-w-2xl text-sm text-[var(--text-3)]">
-              Foundational engineering work that predates the current ITS and applied-AI focus.
+              Completed work across communications, infrastructure, software, embedded systems and automation.
             </p>
             <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {earlier.map((project) => (

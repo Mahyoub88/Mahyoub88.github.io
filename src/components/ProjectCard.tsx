@@ -38,10 +38,11 @@ export function ProjectCard({ project }: { project: Project }) {
 
   return (
     <Wrapper
+      id={project.id}
       {...(wholeCardLink
         ? { href: project.link, target: '_blank', rel: 'noreferrer' }
         : {})}
-      className={`${wholeCardLink ? 'group ' : ''}flex flex-col overflow-hidden rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] shadow-[var(--shadow-card)] transition ${accent.ring}`}
+      className={`${wholeCardLink ? 'group ' : ''}scroll-mt-24 flex flex-col overflow-hidden rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] shadow-[var(--shadow-card)] transition ${accent.ring}`}
     >
       <div
         className={`relative flex h-32 items-center justify-center bg-gradient-to-br ${accent.gradient}`}
@@ -83,16 +84,19 @@ export function ProjectCard({ project }: { project: Project }) {
         <p className="mt-3 text-sm leading-relaxed text-[var(--text-2)]">{project.description}</p>
 
         {project.meta && project.meta.length > 0 && (
-          <dl className="mt-4 space-y-2 border-t border-[var(--border-1)] pt-4">
+          <details className="mt-4 border-t border-[var(--border-1)] pt-4">
+            <summary className="cursor-pointer text-sm font-semibold text-[var(--text-2)]">Implementation details</summary>
+            <dl className="mt-3 space-y-2">
             {project.meta.map((row) => (
-              <div key={row.label} className="grid grid-cols-[4.25rem_1fr] gap-2">
-                <dt className="text-[11px] font-semibold uppercase tracking-wide text-[var(--text-3)]">
+              <div key={row.label} className="grid grid-cols-[5.25rem_minmax(0,1fr)] gap-2">
+                <dt className="break-words text-[10px] font-semibold uppercase tracking-wide text-[var(--text-3)]">
                   {row.label}
                 </dt>
                 <dd className="text-sm leading-snug text-[var(--text-2)]">{row.value}</dd>
               </div>
             ))}
           </dl>
+          </details>
         )}
 
         <div className="mt-5 flex flex-1 flex-wrap content-start gap-2">
@@ -126,3 +130,4 @@ export function ProjectCard({ project }: { project: Project }) {
     </Wrapper>
   )
 }
+

@@ -20,6 +20,11 @@ export function Home() {
     document.title = `${content.brand.name} | ${content.brand.title}`
   }, [content.brand.name, content.brand.title])
 
+  useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1))
+    if (id) document.getElementById(id)?.scrollIntoView()
+  }, [])
+
   return (
     <div className="min-h-screen bg-[var(--surface-0)]">
       <Header />

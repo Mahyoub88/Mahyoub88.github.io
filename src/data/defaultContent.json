@@ -273,10 +273,50 @@
     }
   ],
   "projectsTitle": "Selected Work",
-  "projectsSubtitle": "Research, professional engineering, and technical projects across intelligent transportation, applied AI, and systems engineering.",
+  "projectsSubtitle": "Selected projects in ITS, applied AI and robotics, followed by engineering implementations in networking, software, embedded systems and infrastructure.",
   "projectsCtaLabel": "",
   "projectsCtaHref": "",
   "projects": [
+    {
+      "id": "proj-its-support",
+      "group": "selected",
+      "category": "Professional Engineering · Smart Infrastructure",
+      "title": "ITS Systems Integration & Traffic Enforcement Support",
+      "description": "Supported the integration, commissioning, calibration, validation, troubleshooting, and operational performance of intelligent traffic enforcement systems across field and backend environments.",
+      "meta": [
+        {
+          "label": "Scale",
+          "value": "800+ intelligent transportation and traffic enforcement systems supported across the UAE."
+        },
+        {
+          "label": "Role",
+          "value": "Field and systems engineering across cameras, LiDAR, sensors, control units, networking, databases, and software interfaces."
+        },
+        {
+          "label": "Method",
+          "value": "Structured commissioning and root-cause analysis, with technical coordination across customers, vendors, field teams, and software teams."
+        }
+      ],
+      "tags": [
+        "ITS",
+        "System Integration",
+        "Commissioning",
+        "Calibration",
+        "Troubleshooting"
+      ],
+      "status": {
+        "kind": "professional",
+        "label": "Professional Case Study — Details Anonymised"
+      },
+      "link": "",
+      "links": [
+        {
+          "label": "Read Project Details",
+          "href": "https://github.com/Mahyoub88/Mahyoub88.github.io/blob/main/docs/projects/its-support.md"
+        }
+      ],
+      "accent": "amber"
+    },
     {
       "id": "proj-vtid2",
       "group": "selected",
@@ -356,111 +396,49 @@
       "accent": "blue"
     },
     {
-      "id": "proj-its-support",
+      "id": "proj-reconnaissance-robot",
       "group": "selected",
-      "category": "Professional Engineering · Smart Infrastructure",
-      "title": "ITS Systems Integration & Traffic Enforcement Support",
-      "description": "Supported the integration, commissioning, calibration, validation, troubleshooting, and operational performance of intelligent traffic enforcement systems across field and backend environments.",
+      "category": "Robotics · RGB-D Mapping · Embedded Integration",
+      "title": "Reconnaissance Robot — RGB-D Mapping & Remote Control",
+      "description": "Designed, programmed, integrated and tested a reconnaissance rover combining Kinect-based 3D mapping, ultrasonic 2D mapping, environmental sensing, GPS/GSM reporting and remote control.",
       "meta": [
-        {
-          "label": "Scale",
-          "value": "800+ intelligent transportation and traffic enforcement systems supported across the UAE."
-        },
         {
           "label": "Role",
-          "value": "Field and systems engineering across cameras, LiDAR, sensors, control units, networking, databases, and software interfaces."
+          "value": "End-to-end implementation: system design, programming, assembly, integration, testing and documentation."
         },
         {
-          "label": "Method",
-          "value": "Structured commissioning and root-cause analysis, with technical coordination across customers, vendors, field teams, and software teams."
+          "label": "Mapping",
+          "value": "Integrated a Microsoft Kinect RGB-D sensor with RTAB-Map on Linux; built the required software and sensor drivers. Used ultrasonic sensing for 2D mapping."
+        },
+        {
+          "label": "Interfaces",
+          "value": "Integrated a four-motor rover, a touchscreen controller, XBee sensor telemetry, nRF control, Bluetooth mapping data and GPS/GSM location reporting."
+        },
+        {
+          "label": "Integration",
+          "value": "Resolved software-build and Kinect-driver compatibility issues; retained a wired USB connection for Kinect depth data."
         }
       ],
       "tags": [
-        "ITS",
-        "System Integration",
-        "Commissioning",
-        "Calibration",
-        "Troubleshooting"
+        "RGB-D",
+        "Kinect",
+        "RTAB-Map",
+        "Linux",
+        "Embedded Systems",
+        "Telemetry",
+        "GPS / GSM"
       ],
       "status": {
         "kind": "professional",
-        "label": "Professional Case Study — Details Anonymised"
+        "label": "Implemented Project"
       },
       "link": "",
-      "links": [],
-      "accent": "amber"
-    },
-    {
-      "id": "proj-monitoring-apps",
-      "group": "selected",
-      "category": "Desktop Software · Engineering Automation",
-      "title": "Engineering Monitoring & Automation Applications (.NET)",
-      "description": "Developed VB.NET desktop applications and engineering tools for system monitoring, service documentation, repair tracking, operational reporting, device integration, and RF analysis.",
-      "meta": [
+      "links": [
         {
-          "label": "Scope",
-          "value": "Structured data management, diagnostics, service records, maintenance workflows, technical calculations, and exportable reports."
-        },
-        {
-          "label": "Example",
-          "value": "Monitoring & Diagnostics Console — a WinForms dashboard for multi-site system monitoring, real-time diagnostics, automated health evaluation, issue tracking, and technical reporting."
-        },
-        {
-          "label": "RF tools",
-          "value": "Calculators for path loss, Fresnel-zone clearance, receiver sensitivity, thermal noise, and RF propagation modelling."
+          "label": "Read Project Details",
+          "href": "https://github.com/Mahyoub88/Mahyoub88.github.io/blob/main/docs/projects/reconnaissance-robot.md"
         }
       ],
-      "tags": [
-        "VB.NET",
-        "WinForms",
-        "SQL / Structured Data",
-        "Reporting",
-        "Engineering Calculations"
-      ],
-      "status": {
-        "kind": "professional",
-        "label": "Professional Case Study"
-      },
-      "link": "",
-      "links": [],
-      "accent": "blue"
-    },
-    {
-      "id": "proj-embedded-iot",
-      "group": "selected",
-      "category": "Embedded Systems · IoT · Industrial Automation",
-      "title": "Embedded Systems, IoT & Industrial Automation",
-      "description": "Designed and prototyped embedded monitoring and control solutions using microcontrollers, sensors, communication modules, actuators, and PLC platforms.",
-      "meta": [
-        {
-          "label": "Scope",
-          "value": "Real-time monitoring and control systems, sensor integration, telemetry, hardware configuration, functional testing, and technical validation."
-        },
-        {
-          "label": "Firmware",
-          "value": "PIC16 firmware in mikroC, simulated in Proteus and built on hardware: multiplexed 7-segment displays, ADC measurement with Timer0 interrupts, EEPROM storage, DS1307 RTC over I²C, 74HC595 shift registers, keypad/LCD access control with alarm, and Nokia 5110 graphic LCD."
-        },
-        {
-          "label": "Devices",
-          "value": "IC and memory programming: ROM/PROM/EPROM/EEPROM/Flash, SRAM/DRAM/NV-RAM organisation, and hardware device programmers."
-        }
-      ],
-      "tags": [
-        "PIC",
-        "mikroC",
-        "Proteus",
-        "AVR",
-        "Arduino",
-        "Sensors",
-        "PLC",
-        "IoT"
-      ],
-      "status": {
-        "kind": "professional",
-        "label": "Professional Case Study"
-      },
-      "link": "",
-      "links": [],
       "accent": "purple"
     },
     {
@@ -518,47 +496,54 @@
       "accent": "purple"
     },
     {
-      "id": "proj-rf-network",
+      "id": "proj-sdn",
       "group": "selected",
-      "category": "Network Infrastructure · RF Planning · Service-Provider Networks",
-      "title": "Network Infrastructure Design — Wireless, RF & MPLS Backbone",
-      "description": "Designed and validated multi-site network infrastructure, from wireless access and RF links to a carrier-grade MPLS backbone, using MikroTik, Ubiquiti, Cisco, RF planning, and GNS3.",
+      "category": "Software-Defined Networking · Network Automation",
+      "title": "Software-Defined Networking — Automation & Video Streaming",
+      "description": "Implemented an SDN environment with OpenDaylight, OpenFlow and Mininet, connecting a programmable network to a real IP network for configuration automation and video-streaming evaluation.",
       "meta": [
         {
-          "label": "Wireless",
-          "value": "Multi-zone wireless and LAN architecture: coverage modelling, point-to-point links, antenna alignment, capacity planning, secure routing, VPN, traffic management, and surveillance and access-control connectivity."
+          "label": "Role",
+          "value": "End-to-end design, implementation, programming, integration, testing and technical documentation."
         },
         {
-          "label": "Backbone",
-          "value": "Carrier-grade MPLS backbone built and validated with Cisco 7200 routers in GNS3: OSPF, MPLS-TE, VRF / MPLS VPN, and MP-BGP for multi-site connectivity and traffic engineering."
+          "label": "Automation",
+          "value": "Used Postman and controller APIs to install XML-defined forwarding rules. Restored h4-to-h6 connectivity after removing the relevant switch flow table."
         },
         {
-          "label": "Output",
-          "value": "Network diagrams, equipment layouts, configurations, engineering calculations, and validation documentation."
+          "label": "Streaming",
+          "value": "Built Python-defined topologies and evaluated video transmission from different hosts across a Mininet environment connected to a real IP network."
+        },
+        {
+          "label": "Results",
+          "value": "Verified connectivity restoration and observed different video quality between sender paths. Findings are qualitative; no unverified latency, throughput or percentage improvements are claimed."
         }
       ],
       "tags": [
-        "Cisco",
-        "MikroTik",
-        "Ubiquiti",
-        "RF Planning",
-        "MPLS",
-        "OSPF",
-        "BGP",
-        "VPN",
-        "GNS3"
+        "OpenDaylight",
+        "OpenFlow",
+        "Mininet",
+        "Python",
+        "REST APIs",
+        "QoS",
+        "Video Streaming"
       ],
       "status": {
         "kind": "professional",
-        "label": "Professional Case Study"
+        "label": "Implemented Project"
       },
       "link": "",
-      "links": [],
-      "accent": "amber"
+      "links": [
+        {
+          "label": "Read Project Details",
+          "href": "https://github.com/Mahyoub88/Mahyoub88.github.io/blob/main/docs/projects/sdn.md"
+        }
+      ],
+      "accent": "blue"
     },
     {
       "id": "proj-ims-voip-volte",
-      "group": "selected",
+      "group": "earlier",
       "category": "Telecommunications · IP Multimedia Subsystem (IMS) · VoIP / VoLTE",
       "title": "IMS Multimedia Services — VoIP, IPTV & VoLTE",
       "subtitle": "Cisco Unified Communications, IPTV streaming and VoLTE performance analysis over an IMS core",
@@ -667,35 +652,131 @@
       "accent": "blue"
     },
     {
-      "id": "proj-solar-study",
+      "id": "proj-rf-network",
       "group": "earlier",
-      "category": "Renewable Energy · Power Systems",
-      "title": "Solar Energy Systems — Design, Sizing & Deployment",
-      "description": "Designed and sized photovoltaic power systems, covering load assessment, array and battery sizing, inverter and charge-controller selection, and system protection.",
+      "category": "Network Infrastructure · RF Planning · Service-Provider Networks",
+      "title": "Network Infrastructure Design — Wireless, RF & MPLS Backbone",
+      "description": "Designed and validated multi-site network infrastructure, from wireless access and RF links to a carrier-grade MPLS backbone, using MikroTik, Ubiquiti, Cisco, RF planning, and GNS3.",
       "meta": [
         {
-          "label": "Scope",
-          "value": "Load analysis, component sizing and selection, wiring and protection, and performance estimation."
+          "label": "Wireless",
+          "value": "Multi-zone wireless and LAN architecture: coverage modelling, point-to-point links, antenna alignment, capacity planning, secure routing, VPN, traffic management, and surveillance and access-control connectivity."
         },
         {
-          "label": "Use",
-          "value": "Solar-powered supply and backup for remote telecommunications and infrastructure sites."
+          "label": "Backbone",
+          "value": "Carrier-grade MPLS backbone built and validated with Cisco 7200 routers in GNS3: OSPF, MPLS-TE, VRF / MPLS VPN, and MP-BGP for multi-site connectivity and traffic engineering."
+        },
+        {
+          "label": "Output",
+          "value": "Network diagrams, equipment layouts, configurations, engineering calculations, and validation documentation."
         }
       ],
       "tags": [
-        "Photovoltaics",
-        "System Sizing",
-        "Load Analysis",
-        "Power Electronics",
-        "Off-Grid Power"
+        "Cisco",
+        "MikroTik",
+        "Ubiquiti",
+        "RF Planning",
+        "MPLS",
+        "OSPF",
+        "BGP",
+        "VPN",
+        "GNS3"
       ],
       "status": {
         "kind": "professional",
-        "label": "Implemented Project"
+        "label": "Professional Case Study"
       },
       "link": "",
-      "links": [],
+      "links": [
+        {
+          "label": "Read Project Details",
+          "href": "https://github.com/Mahyoub88/Mahyoub88.github.io/blob/main/docs/projects/rf-network.md"
+        }
+      ],
       "accent": "amber"
+    },
+    {
+      "id": "proj-monitoring-apps",
+      "group": "earlier",
+      "category": "Desktop Software · Engineering Automation",
+      "title": "Engineering Monitoring & Automation Applications (.NET)",
+      "description": "Developed VB.NET desktop applications and engineering tools for system monitoring, service documentation, repair tracking, operational reporting, device integration, and RF analysis.",
+      "meta": [
+        {
+          "label": "Scope",
+          "value": "Structured data management, diagnostics, service records, maintenance workflows, technical calculations, and exportable reports."
+        },
+        {
+          "label": "Example",
+          "value": "Monitoring & Diagnostics Console — a WinForms dashboard for multi-site system monitoring, real-time diagnostics, automated health evaluation, issue tracking, and technical reporting."
+        },
+        {
+          "label": "RF tools",
+          "value": "Calculators for path loss, Fresnel-zone clearance, receiver sensitivity, thermal noise, and RF propagation modelling."
+        }
+      ],
+      "tags": [
+        "VB.NET",
+        "WinForms",
+        "SQL / Structured Data",
+        "Reporting",
+        "Engineering Calculations"
+      ],
+      "status": {
+        "kind": "professional",
+        "label": "Professional Case Study"
+      },
+      "link": "",
+      "links": [
+        {
+          "label": "Read Project Details",
+          "href": "https://github.com/Mahyoub88/Mahyoub88.github.io/blob/main/docs/projects/monitoring-apps.md"
+        }
+      ],
+      "accent": "blue"
+    },
+    {
+      "id": "proj-embedded-iot",
+      "group": "earlier",
+      "category": "Embedded Systems · IoT · Industrial Automation",
+      "title": "Embedded Systems, IoT & Industrial Automation",
+      "description": "Designed and prototyped embedded monitoring and control solutions using microcontrollers, sensors, communication modules, actuators, and PLC platforms.",
+      "meta": [
+        {
+          "label": "Scope",
+          "value": "Real-time monitoring and control systems, sensor integration, telemetry, hardware configuration, functional testing, and technical validation."
+        },
+        {
+          "label": "Firmware",
+          "value": "PIC16 firmware in mikroC, simulated in Proteus and built on hardware: multiplexed 7-segment displays, ADC measurement with Timer0 interrupts, EEPROM storage, DS1307 RTC over I²C, 74HC595 shift registers, keypad/LCD access control with alarm, and Nokia 5110 graphic LCD."
+        },
+        {
+          "label": "Devices",
+          "value": "IC and memory programming: ROM/PROM/EPROM/EEPROM/Flash, SRAM/DRAM/NV-RAM organisation, and hardware device programmers."
+        }
+      ],
+      "tags": [
+        "PIC",
+        "mikroC",
+        "Proteus",
+        "AVR",
+        "Arduino",
+        "Sensors",
+        "PLC",
+        "IoT"
+      ],
+      "status": {
+        "kind": "professional",
+        "label": "Professional Case Study"
+      },
+      "link": "",
+      "links": [
+        {
+          "label": "Read Project Details",
+          "href": "https://github.com/Mahyoub88/Mahyoub88.github.io/blob/main/docs/projects/embedded-iot.md"
+        }
+      ],
+      "accent": "purple"
     },
     {
       "id": "proj-rfid-study",
@@ -725,18 +806,52 @@
         "label": "Implemented Project"
       },
       "link": "",
-      "links": [],
+      "links": [
+        {
+          "label": "Read Project Details",
+          "href": "https://github.com/Mahyoub88/Mahyoub88.github.io/blob/main/docs/projects/rfid-study.md"
+        }
+      ],
       "accent": "purple"
+    },
+    {
+      "id": "proj-solar-study",
+      "group": "earlier",
+      "category": "Renewable Energy · Power Systems",
+      "title": "Solar Energy Systems — Design, Sizing & Deployment",
+      "description": "Designed and sized photovoltaic power systems, covering load assessment, array and battery sizing, inverter and charge-controller selection, and system protection.",
+      "meta": [
+        {
+          "label": "Scope",
+          "value": "Load analysis, component sizing and selection, wiring and protection, and performance estimation."
+        },
+        {
+          "label": "Use",
+          "value": "Solar-powered supply and backup for remote telecommunications and infrastructure sites."
+        }
+      ],
+      "tags": [
+        "Photovoltaics",
+        "System Sizing",
+        "Load Analysis",
+        "Power Electronics",
+        "Off-Grid Power"
+      ],
+      "status": {
+        "kind": "professional",
+        "label": "Implemented Project"
+      },
+      "link": "",
+      "links": [
+        {
+          "label": "Read Project Details",
+          "href": "https://github.com/Mahyoub88/Mahyoub88.github.io/blob/main/docs/projects/solar-study.md"
+        }
+      ],
+      "accent": "amber"
     }
   ],
   "articles": [
-    {
-      "id": "research-ngsim",
-      "title": "Predicting Vehicle Type Using NGSIM US-101",
-      "excerpt": "Software and dataset-preparation archive for the NGSIM US-101 vehicle-type classification project, published on Zenodo with a permanent DOI: 10.5281/zenodo.23033235.",
-      "date": "2026-09",
-      "url": "https://doi.org/10.5281/zenodo.23033235"
-    },
     {
       "id": "research-usv-notes",
       "title": "USV Systems Integration — Study Notes",
