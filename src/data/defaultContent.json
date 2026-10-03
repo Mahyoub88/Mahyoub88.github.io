@@ -435,23 +435,55 @@
     {
       "id": "proj-sddc-lab",
       "group": "earlier",
-      "category": "Virtualisation · Infrastructure Lab",
-      "title": "Software-Defined Data Center (SDDC) Lab Implementation",
-      "description": "Designed, configured, and validated a software-defined data-center lab integrating compute, storage, networking, and virtual application delivery.",
+      "category": "Virtualisation · Data-Center Infrastructure",
+      "title": "Software-Defined Data Center (SDDC) — Design & Lab Implementation",
+      "subtitle": "Compute, storage and network virtualisation hosting directory, cloud-application, web and e-mail services",
+      "description": "Designed and implemented a working software-defined data-center lab on physical hardware, virtualising compute, storage and networking and hosting directory, cloud-application, web and e-mail services.",
       "meta": [
         {
           "label": "Scope",
-          "value": "VMware ESXi virtualisation with multiple VMs, FreeNAS storage over iSCSI, and a Citrix XenApp lab for remote application delivery and controlled user access."
+          "value": "Team project covering design, implementation, configuration, testing and technical documentation, alongside a study of SDDC architecture, storage networking (DAS/NAS/SAN, FC, IP SAN), network virtualisation and cloud models."
         },
         {
-          "label": "Checks",
-          "value": "Resource allocation, network connectivity, storage accessibility, scalability, and operational readiness — with documented architecture, configuration, testing, and troubleshooting."
+          "label": "Storage",
+          "value": "FreeNAS 11 on a dedicated server: ZFS volumes exported over iSCSI (portal, authorised initiators, CHAP authentication, target–extent LUN mapping) and attached to ESXi as shared storage."
+        },
+        {
+          "label": "Compute",
+          "value": "VMware ESXi 5.5 host managed with vSphere Client, running Windows Server 2008 R2 virtual machines with planned CPU, memory and thick/thin disk provisioning."
+        },
+        {
+          "label": "Network",
+          "value": "ESXi standard vSwitch with network labels and optional VLAN IDs, plus NIC teaming (active/standby), on a switched LAN with Wi-Fi access."
+        },
+        {
+          "label": "Services",
+          "value": "AD/DNS/DHCP domain controller; Citrix XenApp 6.5 farm publishing applications to domain users via Citrix Receiver; AppServ web stack (Apache, PHP, MySQL); Exchange 2013 with OWA/ECP, PowerShell mailbox provisioning, groups, connectors and transport rules."
         }
       ],
-      "tags": ["VMware ESXi", "FreeNAS", "iSCSI", "Citrix XenApp", "Virtualisation", "Storage"],
-      "status": { "kind": "academic", "label": "Self-Directed Lab" },
+      "tags": [
+        "VMware ESXi",
+        "vSphere",
+        "FreeNAS / ZFS",
+        "iSCSI",
+        "vSwitch",
+        "Active Directory",
+        "Citrix XenApp",
+        "Exchange 2013",
+        "Windows Server",
+        "Apache / PHP / MySQL"
+      ],
+      "status": {
+        "kind": "academic",
+        "label": "Engineering Lab & Implementation"
+      },
       "link": "",
-      "links": [],
+      "links": [
+        {
+          "label": "View GitHub Repository",
+          "href": "https://github.com/Mahyoub88/sddc-lab-implementation"
+        }
+      ],
       "accent": "blue"
     },
     {
