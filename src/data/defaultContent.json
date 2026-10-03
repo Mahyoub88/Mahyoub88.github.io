@@ -499,29 +499,30 @@
       "id": "proj-sdn",
       "group": "selected",
       "category": "Software-Defined Networking · Network Automation",
-      "title": "Software-Defined Networking — Automation & Video Streaming",
-      "description": "Implemented an SDN environment with OpenDaylight, OpenFlow and Mininet, connecting a programmable network to a real IP network for configuration automation and video-streaming evaluation.",
+      "title": "Software-Defined Networking — OpenFlow Automation & Video Streaming Control",
+      "description": "Built an SDN lab with Mininet, Open vSwitch (OpenFlow 1.3) and the Ryu controller, programmed entirely through the controller REST API: flow tables are generated and installed automatically, and OpenFlow meters control the quality of a live video stream.",
       "meta": [
         {
           "label": "Role",
-          "value": "End-to-end design, implementation, programming, integration, testing and technical documentation."
+          "value": "End-to-end design, implementation, programming, testing and technical documentation."
         },
         {
           "label": "Automation",
-          "value": "Used Postman and controller APIs to install XML-defined forwarding rules. Restored h4-to-h6 connectivity after removing the relevant switch flow table."
+          "value": "Python REST client (and Postman collection) for the Ryu ofctl_rest API. Flow tables for three switches are computed from the topology and installed in 21 REST calls (0.038 s); after the s3 table is wiped, h4→h6 connectivity is restored in 7 calls (0.008 s)."
         },
         {
           "label": "Streaming",
-          "value": "Built Python-defined topologies and evaluated video transmission from different hosts across a Mininet environment connected to a real IP network."
+          "value": "2.5 Mbit/s H.264 stream from h1 to h6 across the three-switch path, rate-limited with OpenFlow 1.3 meters at 3000, 1500 and 800 kbit/s; quality measured with FFmpeg PSNR/SSIM."
         },
         {
           "label": "Results",
-          "value": "Verified connectivity restoration and observed different video quality between sender paths. Findings are qualitative; no unverified latency, throughput or percentage improvements are claimed."
+          "value": "No meter / 3000 kbit/s: PSNR ≈ 40 dB, SSIM 0.998. 1500 kbit/s: 19.3 dB, SSIM 0.819. 800 kbit/s: 15.4 dB, SSIM 0.706. All logs, flow dumps and raw results are in the repository."
         }
       ],
       "tags": [
-        "OpenDaylight",
-        "OpenFlow",
+        "Ryu",
+        "OpenFlow 1.3",
+        "Open vSwitch",
         "Mininet",
         "Python",
         "REST APIs",
@@ -535,8 +536,8 @@
       "link": "",
       "links": [
         {
-          "label": "Read Project Details",
-          "href": "https://github.com/Mahyoub88/Mahyoub88.github.io/blob/main/docs/projects/sdn.md"
+          "label": "View GitHub Repository — code, results & figures",
+          "href": "https://github.com/Mahyoub88/sdn-openflow-lab"
         }
       ],
       "accent": "blue"
