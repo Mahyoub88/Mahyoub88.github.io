@@ -479,16 +479,9 @@
   ],
   "articles": [
     {
-      "id": "research-vtid2",
-      "title": "Efficient Neural Network Architectures for Vehicle Type Classification",
-      "excerpt": "Dataset auditing, leakage-controlled evaluation, efficient CNN architectures, Grad-CAM analysis, and computational-efficiency comparison using VTID2.",
-      "date": "",
-      "url": ""
-    },
-    {
       "id": "research-ngsim",
-      "title": "Vehicle Type Classification from Traffic Trajectory Data",
-      "excerpt": "Vehicle-level feature engineering and supervised classification using the NGSIM US-101 dataset. Archived on Zenodo — DOI: 10.5281/zenodo.23033235.",
+      "title": "Predicting Vehicle Type Using NGSIM US-101",
+      "excerpt": "Software and dataset-preparation archive for the NGSIM US-101 vehicle-type classification project, published on Zenodo with a permanent DOI: 10.5281/zenodo.23033235.",
       "date": "2026",
       "url": "https://doi.org/10.5281/zenodo.23033235"
     },
