@@ -5,23 +5,64 @@
     "logoInitial": "M"
   },
   "nav": [
-    { "id": "home", "label": "Home", "href": "#home" },
-    { "id": "about", "label": "About", "href": "#about" },
-    { "id": "experience", "label": "Experience", "href": "#experience" },
-    { "id": "work", "label": "Selected Work", "href": "#work" },
-    { "id": "articles", "label": "Research", "href": "#articles" },
-    { "id": "skills", "label": "Skills", "href": "#skills" },
-    { "id": "education", "label": "Education", "href": "#education" },
-    { "id": "contact", "label": "Contact", "href": "#contact" }
+    {
+      "id": "home",
+      "label": "Home",
+      "href": "#home"
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "id": "experience",
+      "label": "Experience",
+      "href": "#experience"
+    },
+    {
+      "id": "work",
+      "label": "Selected Work",
+      "href": "#work"
+    },
+    {
+      "id": "articles",
+      "label": "Research",
+      "href": "#articles"
+    },
+    {
+      "id": "skills",
+      "label": "Skills",
+      "href": "#skills"
+    },
+    {
+      "id": "education",
+      "label": "Education",
+      "href": "#education"
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "href": "#contact"
+    }
   ],
   "hero": {
     "badge": "SENIOR ITS & SYSTEMS INTEGRATION ENGINEER",
     "greetingName": "Mohammed Mahyoub",
     "tagline": "Engineering Reliable Traffic Systems — and Applying AI to Smarter Mobility",
     "description": "Senior Service Engineer with 10+ years of multidisciplinary engineering experience, including 6+ years supporting intelligent transportation, smart infrastructure, and traffic enforcement systems across the UAE.\n\nI integrate cameras, LiDAR, sensors, control units, networks, databases, and backend platforms into reliable end-to-end operational systems.",
-    "primaryCta": { "label": "View Selected Work", "href": "#work" },
-    "secondaryCta": { "label": "Download CV", "href": "/Mohammed_Mahyoub_CV_1.pdf" },
-    "tertiaryCta": { "label": "Contact Me", "href": "#contact" },
+    "primaryCta": {
+      "label": "View Selected Work",
+      "href": "#work"
+    },
+    "secondaryCta": {
+      "label": "Download CV",
+      "href": "/Mohammed_Mahyoub_CV_1.pdf"
+    },
+    "tertiaryCta": {
+      "label": "Contact Me",
+      "href": "#contact"
+    },
     "photoUrl": "/mahyoub.jpg",
     "backgroundUrl": "",
     "currentFocus": [
@@ -31,27 +72,106 @@
     ]
   },
   "specializations": [
-    { "id": "spec-1", "icon": "network", "label": "Intelligent Transportation Systems" },
-    { "id": "spec-2", "icon": "workflow", "label": "Systems Integration" },
-    { "id": "spec-3", "icon": "camera", "label": "Traffic Enforcement Systems" },
-    { "id": "spec-4", "icon": "wrench", "label": "Testing & Commissioning" },
-    { "id": "spec-5", "icon": "radar", "label": "Machine Vision & LiDAR" },
-    { "id": "spec-6", "icon": "brain", "label": "Applied AI & Computer Vision" }
+    {
+      "id": "spec-1",
+      "icon": "network",
+      "label": "Intelligent Transportation Systems"
+    },
+    {
+      "id": "spec-2",
+      "icon": "workflow",
+      "label": "Systems Integration"
+    },
+    {
+      "id": "spec-3",
+      "icon": "camera",
+      "label": "Traffic Enforcement Systems"
+    },
+    {
+      "id": "spec-4",
+      "icon": "wrench",
+      "label": "Testing & Commissioning"
+    },
+    {
+      "id": "spec-5",
+      "icon": "radar",
+      "label": "Machine Vision & LiDAR"
+    },
+    {
+      "id": "spec-6",
+      "icon": "brain",
+      "label": "Applied AI & Computer Vision"
+    }
   ],
   "tools": [
-    { "id": "tool-1", "label": "ITS", "abbr": "🚦", "color": "#3B82F6" },
-    { "id": "tool-2", "label": "Machine Vision", "abbr": "📷", "color": "#22C55E" },
-    { "id": "tool-3", "label": "LiDAR", "abbr": "📡", "color": "#06B6D4" },
-    { "id": "tool-4", "label": "Integration", "abbr": "🔗", "color": "#F59E0B" },
-    { "id": "tool-5", "label": "Python", "abbr": "🐍", "color": "#6366F1" },
-    { "id": "tool-6", "label": "PyTorch", "abbr": "🔥", "color": "#EF4444" },
-    { "id": "tool-7", "label": "Networking", "abbr": "🌐", "color": "#0EA5E9" },
-    { "id": "tool-8", "label": "Embedded", "abbr": "⚙️", "color": "#10B981" }
+    {
+      "id": "tool-1",
+      "label": "ITS",
+      "abbr": "🚦",
+      "color": "#3B82F6"
+    },
+    {
+      "id": "tool-2",
+      "label": "Machine Vision",
+      "abbr": "📷",
+      "color": "#22C55E"
+    },
+    {
+      "id": "tool-3",
+      "label": "LiDAR",
+      "abbr": "📡",
+      "color": "#06B6D4"
+    },
+    {
+      "id": "tool-4",
+      "label": "Integration",
+      "abbr": "🔗",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "tool-5",
+      "label": "Python",
+      "abbr": "🐍",
+      "color": "#6366F1"
+    },
+    {
+      "id": "tool-6",
+      "label": "PyTorch",
+      "abbr": "🔥",
+      "color": "#EF4444"
+    },
+    {
+      "id": "tool-7",
+      "label": "Networking",
+      "abbr": "🌐",
+      "color": "#0EA5E9"
+    },
+    {
+      "id": "tool-8",
+      "label": "Embedded",
+      "abbr": "⚙️",
+      "color": "#10B981"
+    }
   ],
   "stats": [
-    { "id": "stat-1", "icon": "briefcase", "value": "10+", "label": "Years of Engineering Experience" },
-    { "id": "stat-2", "icon": "network", "value": "6+", "label": "Years in ITS & Smart Infrastructure" },
-    { "id": "stat-3", "icon": "brain", "value": "MSc AI", "label": "Currently in Progress" }
+    {
+      "id": "stat-1",
+      "icon": "briefcase",
+      "value": "10+",
+      "label": "Years of Engineering Experience"
+    },
+    {
+      "id": "stat-2",
+      "icon": "network",
+      "value": "6+",
+      "label": "Years in ITS & Smart Infrastructure"
+    },
+    {
+      "id": "stat-3",
+      "icon": "brain",
+      "value": "MSc AI",
+      "label": "Currently in Progress"
+    }
   ],
   "about": {
     "heading": "Engineering at the Intersection of ITS, Systems Integration, and Applied AI",
@@ -122,7 +242,12 @@
         "Built VB.NET desktop applications for monitoring, diagnostics, reporting, and operational workflow support.",
         "Prepared technical documentation and provided continuous troubleshooting and customer support."
       ],
-      "tags": ["Embedded Systems", "Automation", "Microcontrollers", "VB.NET"]
+      "tags": [
+        "Embedded Systems",
+        "Automation",
+        "Microcontrollers",
+        "VB.NET"
+      ]
     },
     {
       "id": "exp-3",
@@ -139,7 +264,12 @@
         "Developed engineering tools for RF calculations, reporting, and technical workflows.",
         "Prepared network diagrams, simulations, configurations, engineering calculations, and technical reports."
       ],
-      "tags": ["Networking", "Cisco", "MikroTik", "RF Planning"]
+      "tags": [
+        "Networking",
+        "Cisco",
+        "MikroTik",
+        "RF Planning"
+      ]
     }
   ],
   "projectsTitle": "Selected Work",
@@ -176,7 +306,10 @@
         "Model Evaluation",
         "Data Quality"
       ],
-      "status": { "kind": "academic", "label": "Academic Research — Code Private During Assessment" },
+      "status": {
+        "kind": "academic",
+        "label": "Academic Research — Code Private During Assessment"
+      },
       "link": "",
       "links": [],
       "accent": "purple"
@@ -197,8 +330,18 @@
           "value": "Data preprocessing, exploratory analysis, feature engineering, model comparison, hyperparameter optimisation, classification evaluation, and feature-importance analysis."
         }
       ],
-      "tags": ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"],
-      "status": { "kind": "public", "label": "Public Repository · Archived on Zenodo (DOI)" },
+      "tags": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "Matplotlib",
+        "Seaborn"
+      ],
+      "status": {
+        "kind": "public",
+        "label": "Public Repository · Archived on Zenodo (DOI)"
+      },
       "link": "",
       "links": [
         {
@@ -232,8 +375,17 @@
           "value": "Structured commissioning and root-cause analysis, with technical coordination across customers, vendors, field teams, and software teams."
         }
       ],
-      "tags": ["ITS", "System Integration", "Commissioning", "Calibration", "Troubleshooting"],
-      "status": { "kind": "professional", "label": "Professional Case Study — Details Anonymised" },
+      "tags": [
+        "ITS",
+        "System Integration",
+        "Commissioning",
+        "Calibration",
+        "Troubleshooting"
+      ],
+      "status": {
+        "kind": "professional",
+        "label": "Professional Case Study — Details Anonymised"
+      },
       "link": "",
       "links": [],
       "accent": "amber"
@@ -265,7 +417,10 @@
         "Reporting",
         "Engineering Calculations"
       ],
-      "status": { "kind": "professional", "label": "Professional Case Study" },
+      "status": {
+        "kind": "professional",
+        "label": "Professional Case Study"
+      },
       "link": "",
       "links": [],
       "accent": "blue"
@@ -290,8 +445,20 @@
           "value": "IC and memory programming: ROM/PROM/EPROM/EEPROM/Flash, SRAM/DRAM/NV-RAM organisation, and hardware device programmers."
         }
       ],
-      "tags": ["PIC", "mikroC", "Proteus", "AVR", "Arduino", "Sensors", "PLC", "IoT"],
-      "status": { "kind": "professional", "label": "Professional Case Study" },
+      "tags": [
+        "PIC",
+        "mikroC",
+        "Proteus",
+        "AVR",
+        "Arduino",
+        "Sensors",
+        "PLC",
+        "IoT"
+      ],
+      "status": {
+        "kind": "professional",
+        "label": "Professional Case Study"
+      },
       "link": "",
       "links": [],
       "accent": "purple"
@@ -338,8 +505,8 @@
         "Failsafe"
       ],
       "status": {
-        "kind": "academic",
-        "label": "Engineering Build & Flight Testing"
+        "kind": "professional",
+        "label": "Implemented Project — Built & Flight-Tested"
       },
       "link": "",
       "links": [
@@ -355,7 +522,7 @@
       "group": "selected",
       "category": "Network Infrastructure · RF Planning · Service-Provider Networks",
       "title": "Network Infrastructure Design — Wireless, RF & MPLS Backbone",
-      "description": "Designed and validated multi-site network infrastructure, from wireless access and RF links to a simulated carrier-grade MPLS backbone, using MikroTik, Ubiquiti, Cisco, RF planning, and GNS3.",
+      "description": "Designed and validated multi-site network infrastructure, from wireless access and RF links to a carrier-grade MPLS backbone, using MikroTik, Ubiquiti, Cisco, RF planning, and GNS3.",
       "meta": [
         {
           "label": "Wireless",
@@ -363,15 +530,28 @@
         },
         {
           "label": "Backbone",
-          "value": "Carrier-grade MPLS backbone simulated in GNS3 with Cisco 7200 routers: OSPF, MPLS-TE, VRF / MPLS VPN, and MP-BGP for multi-site connectivity and traffic engineering."
+          "value": "Carrier-grade MPLS backbone built and validated with Cisco 7200 routers in GNS3: OSPF, MPLS-TE, VRF / MPLS VPN, and MP-BGP for multi-site connectivity and traffic engineering."
         },
         {
           "label": "Output",
           "value": "Network diagrams, equipment layouts, configurations, engineering calculations, and validation documentation."
         }
       ],
-      "tags": ["Cisco", "MikroTik", "Ubiquiti", "RF Planning", "MPLS", "OSPF", "BGP", "VPN", "GNS3"],
-      "status": { "kind": "professional", "label": "Professional Case Study" },
+      "tags": [
+        "Cisco",
+        "MikroTik",
+        "Ubiquiti",
+        "RF Planning",
+        "MPLS",
+        "OSPF",
+        "BGP",
+        "VPN",
+        "GNS3"
+      ],
+      "status": {
+        "kind": "professional",
+        "label": "Professional Case Study"
+      },
       "link": "",
       "links": [],
       "accent": "amber"
@@ -380,13 +560,13 @@
       "id": "proj-ims-voip-volte",
       "group": "selected",
       "category": "Telecommunications · IP Multimedia Subsystem (IMS) · VoIP / VoLTE",
-      "title": "IMS Multimedia Services Lab — VoIP, IPTV & VoLTE",
-      "subtitle": "Cisco Unified Communications lab, IPTV streaming, and VoLTE performance simulation over an IMS core",
+      "title": "IMS Multimedia Services — VoIP, IPTV & VoLTE",
+      "subtitle": "Cisco Unified Communications, IPTV streaming and VoLTE performance analysis over an IMS core",
       "description": "Built and tested an end-to-end IP multimedia environment covering enterprise VoIP, IPTV streaming, and Voice over LTE, and studied how an IMS core could interconnect a fixed-line operator and a mobile operator.",
       "meta": [
         {
           "label": "Role",
-          "value": "Worked across all workstreams of a team project: VoIP / Cisco UC lab, VoLTE simulation, IPTV streaming, the operator-integration study, and technical documentation."
+          "value": "Worked across all workstreams of a team project: VoIP / Cisco UC deployment, VoLTE performance analysis, IPTV streaming, the operator-integration study, and technical documentation."
         },
         {
           "label": "VoIP",
@@ -420,8 +600,8 @@
         "QoS"
       ],
       "status": {
-        "kind": "academic",
-        "label": "Engineering Lab & Network Simulation"
+        "kind": "professional",
+        "label": "Implemented Project"
       },
       "link": "",
       "links": [
@@ -436,9 +616,9 @@
       "id": "proj-sddc-lab",
       "group": "earlier",
       "category": "Virtualisation · Data-Center Infrastructure",
-      "title": "Software-Defined Data Center (SDDC) — Design & Lab Implementation",
+      "title": "Software-Defined Data Center (SDDC) — Design & Implementation",
       "subtitle": "Compute, storage and network virtualisation hosting directory, cloud-application, web and e-mail services",
-      "description": "Designed and implemented a working software-defined data-center lab on physical hardware, virtualising compute, storage and networking and hosting directory, cloud-application, web and e-mail services.",
+      "description": "Designed and implemented a working software-defined data center on physical hardware, virtualising compute, storage and networking and hosting directory, cloud-application, web and e-mail services.",
       "meta": [
         {
           "label": "Scope",
@@ -474,8 +654,8 @@
         "Apache / PHP / MySQL"
       ],
       "status": {
-        "kind": "academic",
-        "label": "Engineering Lab & Implementation"
+        "kind": "professional",
+        "label": "Implemented Project"
       },
       "link": "",
       "links": [
@@ -489,21 +669,30 @@
     {
       "id": "proj-solar-study",
       "group": "earlier",
-      "category": "Renewable Energy · Systems Engineering",
-      "title": "Solar Energy Systems Engineering Study & Deployment Concepts",
-      "description": "Studied the design and sizing of photovoltaic systems, covering load assessment, array and battery sizing, inverter and charge-controller selection, and system protection.",
+      "category": "Renewable Energy · Power Systems",
+      "title": "Solar Energy Systems — Design, Sizing & Deployment",
+      "description": "Designed and sized photovoltaic power systems, covering load assessment, array and battery sizing, inverter and charge-controller selection, and system protection.",
       "meta": [
         {
           "label": "Scope",
-          "value": "Load analysis, component sizing and selection, wiring and protection concepts, and performance estimation."
+          "value": "Load analysis, component sizing and selection, wiring and protection, and performance estimation."
         },
         {
-          "label": "Concepts",
-          "value": "Solar-powered supply and backup concepts for remote telecommunications and infrastructure sites."
+          "label": "Use",
+          "value": "Solar-powered supply and backup for remote telecommunications and infrastructure sites."
         }
       ],
-      "tags": ["Photovoltaics", "System Sizing", "Load Analysis", "Power Electronics", "Off-Grid Power"],
-      "status": { "kind": "academic", "label": "Self-Directed Study" },
+      "tags": [
+        "Photovoltaics",
+        "System Sizing",
+        "Load Analysis",
+        "Power Electronics",
+        "Off-Grid Power"
+      ],
+      "status": {
+        "kind": "professional",
+        "label": "Implemented Project"
+      },
       "link": "",
       "links": [],
       "accent": "amber"
@@ -512,20 +701,29 @@
       "id": "proj-rfid-study",
       "group": "earlier",
       "category": "RFID · Wireless Identification · Automation",
-      "title": "RFID Systems Study — Library Automation (ISO 15693)",
-      "description": "Prepared and presented a technical study of radio-frequency identification systems and their application to library automation.",
+      "title": "RFID Library Automation System (ISO 15693)",
+      "description": "Implemented a radio-frequency identification (RFID) system for library automation.",
       "meta": [
         {
           "label": "Scope",
           "value": "Reader–tag–database architecture and RF coupling; tag construction (chip, antenna, package); active, passive and semi-passive tags compared by power source, frequency band, read range, memory and cost."
         },
         {
-          "label": "Example",
+          "label": "System",
           "value": "Library RFID reader: ISO 15693 at 13.56 MHz, RS-232 interface, SIP / STX-ETX protocol — supporting self check-in/out, security gates, fast inventory, theft prevention and usage statistics."
         }
       ],
-      "tags": ["RFID", "ISO 15693", "13.56 MHz", "RS-232", "Automation"],
-      "status": { "kind": "academic", "label": "Technical Study & Presentation" },
+      "tags": [
+        "RFID",
+        "ISO 15693",
+        "13.56 MHz",
+        "RS-232",
+        "Automation"
+      ],
+      "status": {
+        "kind": "professional",
+        "label": "Implemented Project"
+      },
       "link": "",
       "links": [],
       "accent": "purple"
@@ -554,11 +752,31 @@
     "location": "Abu Dhabi, United Arab Emirates"
   },
   "social": [
-    { "id": "social-1", "type": "linkedin", "url": "https://www.linkedin.com/in/mohammed-mahyoub/" },
-    { "id": "social-2", "type": "github", "url": "https://github.com/Mahyoub88" },
-    { "id": "social-4", "type": "orcid", "url": "https://orcid.org/0009-0003-5640-352X" },
-    { "id": "social-5", "type": "facebook", "url": "https://www.facebook.com/mohammed.mahyoub.its" },
-    { "id": "social-3", "type": "email", "url": "mailto:almlike5@gmail.com" }
+    {
+      "id": "social-1",
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/mohammed-mahyoub/"
+    },
+    {
+      "id": "social-2",
+      "type": "github",
+      "url": "https://github.com/Mahyoub88"
+    },
+    {
+      "id": "social-4",
+      "type": "orcid",
+      "url": "https://orcid.org/0009-0003-5640-352X"
+    },
+    {
+      "id": "social-5",
+      "type": "facebook",
+      "url": "https://www.facebook.com/mohammed.mahyoub.its"
+    },
+    {
+      "id": "social-3",
+      "type": "email",
+      "url": "mailto:almlike5@gmail.com"
+    }
   ],
   "technicalExpertise": [
     {
@@ -656,7 +874,10 @@
     {
       "id": "exp-cat-6",
       "category": "LANGUAGES",
-      "items": ["Arabic — Native / Bilingual", "English — Professional Working"]
+      "items": [
+        "Arabic — Native / Bilingual",
+        "English — Professional Working"
+      ]
     }
   ],
   "education": [
