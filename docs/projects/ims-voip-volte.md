@@ -89,7 +89,7 @@ Multicast with IGMP snooping:
 
 ## Credits
 
-- **Project report:** Kholoud Saleh Hazzam, Anwaar Ahmed Al-Hamdani, Najla Abdulkhaleq Al-Zubairi and Leena Abdulbaset Al-Huribi. Electrical Engineering Department, Faculty of Engineering, Sana'a University.
+- **Team project:** Electrical Engineering Department, Faculty of Engineering, Sana'a University.
 - **Academic supervisor:** Dr. Ali Naji Nosary.
 - **Implementation and technical supervision:** Mohammed Mahyoub.
 
