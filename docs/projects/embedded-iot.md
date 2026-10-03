@@ -1,5 +1,7 @@
 # Embedded Systems, IoT & Industrial Automation
 
+**Author:** Mohammed Mahyoub.
+
 Designed and prototyped embedded monitoring and control solutions using microcontrollers, sensors, communication modules, actuators, and PLC platforms.
 
 ## Scope

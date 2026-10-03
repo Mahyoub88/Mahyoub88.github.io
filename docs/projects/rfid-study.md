@@ -1,5 +1,7 @@
 # RFID Library Automation System (ISO 15693)
 
+**Author:** Mohammed Mahyoub.
+
 Implemented a radio-frequency identification (RFID) system for library automation.
 
 ## Scope

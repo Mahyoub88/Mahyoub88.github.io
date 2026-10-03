@@ -1,10 +1,12 @@
 # Software-Defined Data Center (SDDC) — Design & Implementation
 
+**Author:** Mohammed Mahyoub.
+
 Designed and implemented a working software-defined data center on physical hardware, virtualising compute, storage and networking and hosting directory, cloud-application, web and e-mail services.
 
 ## Scope
 
-Team project covering design, implementation, configuration, testing and technical documentation, alongside a study of SDDC architecture, storage networking (DAS/NAS/SAN, FC, IP SAN), network virtualisation and cloud models.
+Independent project covering design, implementation, configuration, testing and technical documentation, alongside a study of SDDC architecture, storage networking (DAS/NAS/SAN, FC, IP SAN), network virtualisation and cloud models.
 
 ## Storage
 

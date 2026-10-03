@@ -1,5 +1,7 @@
 # Solar Energy Systems — Design, Sizing & Deployment
 
+**Author:** Mohammed Mahyoub.
+
 Designed and sized photovoltaic power systems, covering load assessment, array and battery sizing, inverter and charge-controller selection, and system protection.
 
 ## Scope

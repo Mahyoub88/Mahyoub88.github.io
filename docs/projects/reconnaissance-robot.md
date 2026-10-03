@@ -1,5 +1,7 @@
 # Reconnaissance Robot — RGB-D Mapping & Remote Control
 
+**Author:** Mohammed Mahyoub.
+
 Designed, programmed, integrated and tested a reconnaissance rover combining Kinect-based 3D mapping, ultrasonic 2D mapping, environmental sensing, GPS/GSM reporting and remote control.
 
 ## Role

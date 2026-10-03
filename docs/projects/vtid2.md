@@ -1,5 +1,7 @@
 # Efficient Neural Network Architectures for Vehicle Type Classification
 
+**Author:** Mohammed Mahyoub.
+
 Developed and evaluated neural network architectures for vehicle type classification using the VTID2 image dataset. The evaluated architectures included an MLP, a standard CNN, an efficient depthwise-separable CNN, and an efficient CNN with Squeeze-and-Excitation.
 
 ## Problem

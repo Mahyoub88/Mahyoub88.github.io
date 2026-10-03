@@ -285,6 +285,10 @@
       "description": "Supported the integration, commissioning, calibration, validation, troubleshooting, and operational performance of intelligent traffic enforcement systems across field and backend environments.",
       "meta": [
         {
+          "label": "Author",
+          "value": "Mohammed Mahyoub"
+        },
+        {
           "label": "Scale",
           "value": "800+ intelligent transportation and traffic enforcement systems supported across the UAE."
         },
@@ -294,7 +298,7 @@
         },
         {
           "label": "Method",
-          "value": "Structured commissioning and root-cause analysis, with technical coordination across customers, vendors, field teams, and software teams."
+          "value": "Structured commissioning and root-cause analysis to resolve integration issues across hardware, networking and software."
         }
       ],
       "tags": [
@@ -325,6 +329,10 @@
       "subtitle": "A content-audited, leakage-aware, and efficiency-focused study using VTID2",
       "description": "Developed and evaluated neural network architectures for vehicle type classification using the VTID2 image dataset. The evaluated architectures included an MLP, a standard CNN, an efficient depthwise-separable CNN, and an efficient CNN with Squeeze-and-Excitation.",
       "meta": [
+        {
+          "label": "Author",
+          "value": "Mohammed Mahyoub"
+        },
         {
           "label": "Problem",
           "value": "A content-based dataset audit identified 2,425 redundant exact copies among 4,356 valid images, leaving 1,931 exact-unique images."
@@ -361,6 +369,10 @@
       "title": "Vehicle Type Classification Using NGSIM US-101",
       "description": "Developed and evaluated supervised machine-learning models for classifying motorcycles, passenger cars, and trucks using the NGSIM US-101 traffic trajectory dataset. Models compared: Logistic Regression, Decision Tree, and Random Forest.",
       "meta": [
+        {
+          "label": "Author",
+          "value": "Mohammed Mahyoub"
+        },
         {
           "label": "Method",
           "value": "Vehicle records were aggregated to the vehicle level to reduce data leakage and create independent observations for training and evaluation."
@@ -402,6 +414,10 @@
       "title": "Reconnaissance Robot — RGB-D Mapping & Remote Control",
       "description": "Designed, programmed, integrated and tested a reconnaissance rover combining Kinect-based 3D mapping, ultrasonic 2D mapping, environmental sensing, GPS/GSM reporting and remote control.",
       "meta": [
+        {
+          "label": "Author",
+          "value": "Mohammed Mahyoub"
+        },
         {
           "label": "Role",
           "value": "End-to-end implementation: system design, programming, assembly, integration, testing and documentation."
@@ -450,8 +466,12 @@
       "description": "Designed, assembled and flight-tested an autonomous quadcopter with GPS waypoint navigation, MAVLink telemetry to a ground control station, failsafe protection, and a live 5.8 GHz video link for remote surveillance.",
       "meta": [
         {
+          "label": "Author",
+          "value": "Mohammed Mahyoub"
+        },
+        {
           "label": "Scope",
-          "value": "Team project covering propulsion sizing, airframe and electronics integration, sensor calibration, PID tuning, flight-mode and failsafe testing, telemetry and video systems, and technical documentation."
+          "value": "Independent project covering propulsion sizing, airframe and electronics integration, sensor calibration, PID tuning, flight-mode and failsafe testing, telemetry and video systems, and technical documentation."
         },
         {
           "label": "Build",
@@ -503,6 +523,10 @@
       "description": "Built an SDN lab with Mininet, Open vSwitch (OpenFlow 1.3) and the Ryu controller, programmed entirely through the controller REST API: flow tables are generated and installed automatically, and OpenFlow meters control the quality of a live video stream.",
       "meta": [
         {
+          "label": "Author",
+          "value": "Mohammed Mahyoub"
+        },
+        {
           "label": "Role",
           "value": "End-to-end design, implementation, programming, testing and technical documentation."
         },
@@ -548,11 +572,15 @@
       "category": "Telecommunications · IP Multimedia Subsystem (IMS) · VoIP / IPTV / VoLTE",
       "title": "IMS Multimedia Services — VoIP, IPTV & VoLTE",
       "subtitle": "Cisco CUCM/CME voice network on GNS3, VLC IPTV, VoLTE over LTE/IMS in OPNET, plus a reproducible Kamailio + Asterisk IMS lab with measured QoS",
-      "description": "Team project on IP multimedia services around an IMS core: VoIP on Cisco Unified Communications (CUCM 8.6 and a three-router GNS3 network with a branch CME), IPTV streaming over the LAN with VLC, and VoLTE simulated in OPNET Modeler with an IMS core connected to the PSTN, plus an IMS case study for a fixed-line and a mobile operator. The same service areas were then rebuilt as a reproducible open-source lab with measured results.",
+      "description": "Independent project on IP multimedia services around an IMS core: VoIP on Cisco Unified Communications (CUCM 8.6 and a three-router GNS3 network with a branch CME), IPTV streaming over the LAN with VLC, and VoLTE simulated in OPNET Modeler with an IMS core connected to the PSTN, plus an IMS case study for a fixed-line and a mobile operator. The same service areas were then rebuilt as a reproducible open-source lab with measured results.",
       "meta": [
         {
+          "label": "Author",
+          "value": "Mohammed Mahyoub"
+        },
+        {
           "label": "Role",
-          "value": "Implementation and technical supervision of the team project; design, implementation and testing of the reproducible lab."
+          "value": "Independent design, implementation and testing of the project; design, implementation and testing of the reproducible lab."
         },
         {
           "label": "VoIP (Cisco)",
@@ -612,8 +640,12 @@
       "description": "Designed and implemented a working software-defined data center on physical hardware, virtualising compute, storage and networking and hosting directory, cloud-application, web and e-mail services.",
       "meta": [
         {
+          "label": "Author",
+          "value": "Mohammed Mahyoub"
+        },
+        {
           "label": "Scope",
-          "value": "Team project covering design, implementation, configuration, testing and technical documentation, alongside a study of SDDC architecture, storage networking (DAS/NAS/SAN, FC, IP SAN), network virtualisation and cloud models."
+          "value": "Independent project covering design, implementation, configuration, testing and technical documentation, alongside a study of SDDC architecture, storage networking (DAS/NAS/SAN, FC, IP SAN), network virtualisation and cloud models."
         },
         {
           "label": "Storage",
@@ -665,6 +697,10 @@
       "description": "Designed and validated multi-site network infrastructure, from wireless access and RF links to a carrier-grade MPLS backbone, using MikroTik, Ubiquiti, Cisco, RF planning, and GNS3.",
       "meta": [
         {
+          "label": "Author",
+          "value": "Mohammed Mahyoub"
+        },
+        {
           "label": "Wireless",
           "value": "Multi-zone wireless and LAN architecture: coverage modelling, point-to-point links, antenna alignment, capacity planning, secure routing, VPN, traffic management, and surveillance and access-control connectivity."
         },
@@ -709,6 +745,10 @@
       "description": "Developed VB.NET desktop applications and engineering tools for system monitoring, service documentation, repair tracking, operational reporting, device integration, and RF analysis.",
       "meta": [
         {
+          "label": "Author",
+          "value": "Mohammed Mahyoub"
+        },
+        {
           "label": "Scope",
           "value": "Structured data management, diagnostics, service records, maintenance workflows, technical calculations, and exportable reports."
         },
@@ -748,6 +788,10 @@
       "title": "Embedded Systems, IoT & Industrial Automation",
       "description": "Designed and prototyped embedded monitoring and control solutions using microcontrollers, sensors, communication modules, actuators, and PLC platforms.",
       "meta": [
+        {
+          "label": "Author",
+          "value": "Mohammed Mahyoub"
+        },
         {
           "label": "Scope",
           "value": "Real-time monitoring and control systems, sensor integration, telemetry, hardware configuration, functional testing, and technical validation."
@@ -792,6 +836,10 @@
       "description": "Implemented a radio-frequency identification (RFID) system for library automation.",
       "meta": [
         {
+          "label": "Author",
+          "value": "Mohammed Mahyoub"
+        },
+        {
           "label": "Scope",
           "value": "Reader–tag–database architecture and RF coupling; tag construction (chip, antenna, package); active, passive and semi-passive tags compared by power source, frequency band, read range, memory and cost."
         },
@@ -827,6 +875,10 @@
       "title": "Solar Energy Systems — Design, Sizing & Deployment",
       "description": "Designed and sized photovoltaic power systems, covering load assessment, array and battery sizing, inverter and charge-controller selection, and system protection.",
       "meta": [
+        {
+          "label": "Author",
+          "value": "Mohammed Mahyoub"
+        },
         {
           "label": "Scope",
           "value": "Load analysis, component sizing and selection, wiring and protection, and performance estimation."

@@ -1,10 +1,12 @@
 # Autonomous Quadcopter UAV — Flight Control, Telemetry & FPV
 
+**Author:** Mohammed Mahyoub.
+
 Designed, assembled and flight-tested an autonomous quadcopter with GPS waypoint navigation, MAVLink telemetry to a ground control station, failsafe protection, and a live 5.8 GHz video link for remote surveillance.
 
 ## Scope
 
-Team project covering propulsion sizing, airframe and electronics integration, sensor calibration, PID tuning, flight-mode and failsafe testing, telemetry and video systems, and technical documentation.
+Independent project covering propulsion sizing, airframe and electronics integration, sensor calibration, PID tuning, flight-mode and failsafe testing, telemetry and video systems, and technical documentation.
 
 ## Build
 

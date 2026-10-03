@@ -1,5 +1,7 @@
 # Vehicle Type Classification Using NGSIM US-101
 
+**Author:** Mohammed Mahyoub.
+
 Developed and evaluated supervised machine-learning models for classifying motorcycles, passenger cars, and trucks using the NGSIM US-101 traffic trajectory dataset. Models compared: Logistic Regression, Decision Tree, and Random Forest.
 
 ## Method

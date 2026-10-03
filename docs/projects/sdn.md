@@ -1,5 +1,7 @@
 # Software-Defined Networking — OpenFlow Automation & Video Streaming Control
 
+**Author:** Mohammed Mahyoub.
+
 Built an SDN lab with Mininet, Open vSwitch (OpenFlow 1.3) and the Ryu controller, programmed entirely through the controller REST API: flow tables are generated and installed automatically, and OpenFlow meters control the quality of a live video stream.
 
 ## Role

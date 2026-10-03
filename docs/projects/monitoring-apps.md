@@ -1,5 +1,7 @@
 # Engineering Monitoring & Automation Applications (.NET)
 
+**Author:** Mohammed Mahyoub.
+
 Developed VB.NET desktop applications and engineering tools for system monitoring, service documentation, repair tracking, operational reporting, device integration, and RF analysis.
 
 ## Scope

@@ -1,13 +1,15 @@
 # IMS Multimedia Services — VoIP, IPTV & VoLTE
 
+**Author:** Mohammed Mahyoub.
+
 IP multimedia services built around an IP Multimedia Subsystem (IMS) core, in two parts:
 
-- **Part A, the team project:** VoIP on Cisco Unified Communications, IPTV streaming and VoLTE simulated in OPNET, plus an IMS case study for a fixed-line and a mobile operator.
+- **Part A, the independent project:** VoIP on Cisco Unified Communications, IPTV streaming and VoLTE simulated in OPNET, plus an IMS case study for a fixed-line and a mobile operator.
 - **Part B, a reproducible open-source lab:** the same service areas rebuilt and measured with Kamailio, Asterisk and Mininet.
 
 ## Role
 
-Implementation and technical supervision of the team project. Design, implementation, testing and documentation of the reproducible lab.
+Independent design, implementation and testing of the project. Design, implementation, testing and documentation of the reproducible lab.
 
 ## Part A — Project implementation
 
@@ -87,11 +89,9 @@ Multicast with IGMP snooping:
 - sends nothing to ports without viewers;
 - delivers bit-exact frames (375/375).
 
-## Credits
+## Project authorship
 
-- **Team project:** Electrical Engineering Department, Faculty of Engineering, Sana'a University.
-- **Academic supervisor:** Dr. Ali Naji Nosary.
-- **Implementation and technical supervision:** Mohammed Mahyoub.
+- **Design, implementation, testing and documentation:** Mohammed Mahyoub.
 
 ## Technologies
 

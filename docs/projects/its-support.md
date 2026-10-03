@@ -1,5 +1,7 @@
 # ITS Systems Integration & Traffic Enforcement Support
 
+**Author:** Mohammed Mahyoub.
+
 Supported the integration, commissioning, calibration, validation, troubleshooting, and operational performance of intelligent traffic enforcement systems across field and backend environments.
 
 ## Scale
@@ -12,7 +14,7 @@ Field and systems engineering across cameras, LiDAR, sensors, control units, net
 
 ## Method
 
-Structured commissioning and root-cause analysis, with technical coordination across customers, vendors, field teams, and software teams.
+Structured commissioning and root-cause analysis to resolve integration issues across hardware, networking and software.
 
 ## Technologies
 
