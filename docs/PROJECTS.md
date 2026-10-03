@@ -8,7 +8,7 @@ Projects are ordered by relevance to ITS, applied AI, robotics and systems integ
 4. [Reconnaissance Robot — RGB-D Mapping & Remote Control](projects/reconnaissance-robot.md) — [website](https://mahyoub88.github.io/#proj-reconnaissance-robot)
 5. [Autonomous Quadcopter UAV — Flight Control, Telemetry & FPV](projects/quadcopter-uav.md) — [website](https://mahyoub88.github.io/#proj-quadcopter-uav)
 6. [Software-Defined Networking — OpenFlow Automation & Video Streaming Control](projects/sdn.md) — [website](https://mahyoub88.github.io/#proj-sdn) — [repository](https://github.com/Mahyoub88/sdn-openflow-lab)
-7. [IMS Multimedia Services — VoIP, IPTV & VoLTE](projects/ims-voip-volte.md) — [website](https://mahyoub88.github.io/#proj-ims-voip-volte)
+7. [IMS Lab — SIP/IMS Core, VoIP QoS & IPTV Multicast](projects/ims-voip-volte.md) — [website](https://mahyoub88.github.io/#proj-ims-voip-volte) — [repository](https://github.com/Mahyoub88/ims-voip-iptv-volte-lab)
 8. [Software-Defined Data Center (SDDC) — Design & Implementation](projects/sddc-lab.md) — [website](https://mahyoub88.github.io/#proj-sddc-lab)
 9. [Network Infrastructure Design — Wireless, RF & MPLS Backbone](projects/rf-network.md) — [website](https://mahyoub88.github.io/#proj-rf-network)
 10. [Engineering Monitoring & Automation Applications (.NET)](projects/monitoring-apps.md) — [website](https://mahyoub88.github.io/#proj-monitoring-apps)
