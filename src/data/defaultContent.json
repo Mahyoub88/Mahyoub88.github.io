@@ -1,4 +1,4 @@
-{
+Site: RFID card with full project details{
   "brand": {
     "name": "Mohammed Mahyoub",
     "title": "ITS & Systems Integration Engineer",
@@ -833,27 +833,37 @@
       "group": "earlier",
       "category": "RFID · Wireless Identification · Automation",
       "title": "RFID Library Automation System (ISO 15693)",
-      "description": "Implemented a radio-frequency identification (RFID) system for library automation.",
+      "description": "Implemented a radio-frequency identification (RFID) system for library automation: tagged items are identified over RF by readers at the counter, self-service kiosk, shelves and exit gates, with every transaction recorded in a host database.",
       "meta": [
         {
-          "label": "Author",
-          "value": "Mohammed Mahyoub"
+          "label": "Role",
+          "value": "Design, implementation and technical presentation of the system."
         },
         {
-          "label": "Scope",
-          "value": "Reader–tag–database architecture and RF coupling; tag construction (chip, antenna, package); active, passive and semi-passive tags compared by power source, frequency band, read range, memory and cost."
+          "label": "How it works",
+          "value": "The reader energizes the tag through its antenna (RF coupling); the tag returns its data, which the host PC logs in the database and can write back to the tag. A personalizer programs tags for new items."
         },
         {
-          "label": "System",
-          "value": "Library RFID reader: ISO 15693 at 13.56 MHz, RS-232 interface, SIP / STX-ETX protocol — supporting self check-in/out, security gates, fast inventory, theft prevention and usage statistics."
+          "label": "Tags",
+          "value": "Chip, antenna and package. Passive tags (reader-powered, 2–5 m, up to 256 bytes, about USD 1, no maintenance) chosen over active tags (battery, up to 100 m, up to 128 KB, USD 10–100)."
+        },
+        {
+          "label": "Reader",
+          "value": "ISO 15693 at 13.56 MHz, RS-232 interface, SIP / STX-ETX protocol, metal housing, 230 V, CE and radio approval."
+        },
+        {
+          "label": "Library use",
+          "value": "Staff counter, self check-in/out kiosk, handheld shelf inventory, book-drop and security gates: faster circulation, fast inventory, theft prevention and usage statistics."
         }
       ],
       "tags": [
         "RFID",
         "ISO 15693",
         "13.56 MHz",
+        "Passive Tags",
         "RS-232",
-        "Automation"
+        "SIP",
+        "Library Automation"
       ],
       "status": {
         "kind": "professional",
@@ -862,7 +872,7 @@
       "link": "",
       "links": [
         {
-          "label": "Read Project Details",
+          "label": "Read Project Details — diagrams, slides & specifications",
           "href": "https://github.com/Mahyoub88/Mahyoub88.github.io/blob/main/docs/projects/rfid-study.md"
         }
       ],
