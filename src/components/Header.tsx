@@ -49,7 +49,7 @@ export function Header() {
         setHeroPassed(false)
         return
       }
-      // 80px ≈ the sticky header's own height, so the button appears just as
+      // 80px â‰ˆ the sticky header's own height, so the button appears just as
       // the hero's CTA scrolls out from under it.
       setHeroPassed(window.scrollY > heroBottom - 80)
     }
@@ -89,9 +89,9 @@ export function Header() {
           </span>
         </a>
 
-        {/* Eight nav items measure ~780px, which does not fit beside the brand
-            until 1280px — below that the menu button takes over. */}
-        <nav className="hidden items-center gap-1 rounded-full border border-[var(--border-1)] bg-[var(--surface-1)] p-1 xl:flex">
+        {/* The credentials link adds a ninth nav item; the full navigation fits beside the brand
+            at 1536px â€” below that the menu button takes over. */}
+        <nav className="hidden items-center gap-1 rounded-full border border-[var(--border-1)] bg-[var(--surface-1)] p-1 2xl:flex">
           {content.nav.map((link) => {
             const isActive = link.href === `#${activeSection}`
             return (
@@ -110,7 +110,7 @@ export function Header() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-3 xl:flex">
+        <div className="hidden items-center gap-3 2xl:flex">
           {isAuthenticated && (
             <Link
               to="/admin"
@@ -145,7 +145,7 @@ export function Header() {
         </div>
 
         <button
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[var(--border-1)] text-[var(--text-2)] xl:hidden"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[var(--border-1)] text-[var(--text-2)] 2xl:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
@@ -154,7 +154,7 @@ export function Header() {
       </Container>
 
       {open && (
-        <div className="border-t border-[var(--border-1)] bg-[var(--surface-0)] xl:hidden">
+        <div className="border-t border-[var(--border-1)] bg-[var(--surface-0)] 2xl:hidden">
           <Container className="flex flex-col gap-1 py-4">
             {content.nav.map((link) => {
               const isActive = link.href === `#${activeSection}`

@@ -41,6 +41,11 @@
       "href": "#education"
     },
     {
+      "id": "certifications",
+      "label": "Credentials",
+      "href": "#certifications"
+    },
+    {
       "id": "contact",
       "label": "Contact",
       "href": "#contact"
@@ -1175,28 +1180,43 @@
       "name": "Certificate of Appreciation — Dubai Police HQ",
       "issuer": "Dubai Police HQ, UAE",
       "date": "2023",
-      "type": "Recognition"
+      "type": "Recognition",
+      "sourceUrl": "https://www.linkedin.com/in/mohammed-mahyoub/details/certifications/",
+      "image": "/images/certificates/dubai-police.jpg",
+      "description": "Recognition from Dubai Police for technical contribution and continuous support in improving intelligent traffic enforcement systems performance."
     },
     {
       "id": "cert-ccna",
       "name": "Cisco Certified Network Associate — Routing & Switching",
       "issuer": "Cisco",
-      "date": "",
-      "type": "Previously certified"
+      "date": "9 April 2019",
+      "type": "Previously certified",
+      "sourceUrl": "https://www.linkedin.com/in/mohammed-mahyoub/details/certifications/",
+      "image": "/images/certificates/cisco-ccna.jpg",
+      "validUntil": "9 April 2022",
+      "credentialUrl": "https://cp.certmetrics.com/cisco/en/public/verify/credential",
+      "description": "Certification in routing and switching, supporting a foundation in network infrastructure, connectivity and troubleshooting. Presented as a previously earned certification."
     },
     {
       "id": "cert-comptia",
       "name": "CompTIA A+",
       "issuer": "CompTIA",
-      "date": "",
-      "type": "Previously certified"
+      "date": "21 December 2019",
+      "type": "Previously certified",
+      "sourceUrl": "https://www.linkedin.com/in/mohammed-mahyoub/details/certifications/",
+      "image": "/images/certificates/comptia-a-plus.jpg",
+      "validUntil": "21 December 2022",
+      "credentialUrl": "https://cp.certmetrics.com/CompTIA/en/public/verify/credential",
+      "description": "Foundational IT support certification covering hardware, operating systems, networking and troubleshooting. Presented as a previously earned certification."
     },
     {
       "id": "cert-pic-training",
       "name": "PIC Microcontroller Programming — mikroC & Proteus",
       "issuer": "Microcontroller Programming Techniques (training group)",
       "date": "",
-      "type": "Training"
+      "type": "Training",
+      "sourceUrl": "https://www.linkedin.com/in/mohammed-mahyoub/details/certifications/",
+      "description": "Technical training in PIC microcontroller programming using mikroC and Proteus. The LinkedIn entry does not include a certificate image or an issue date."
     }
   ],
   "footerLinks": {

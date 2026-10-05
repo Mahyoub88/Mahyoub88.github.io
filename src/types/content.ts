@@ -156,6 +156,11 @@ export interface EducationItem {
 }
 
 export interface CertificationItem {
+  image?: string
+  description?: string
+  credentialUrl?: string
+  sourceUrl?: string
+  validUntil?: string
   id: string
   name: string
   issuer: string
