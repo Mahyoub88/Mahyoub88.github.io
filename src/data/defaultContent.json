@@ -324,8 +324,8 @@
         }
       ],
       "accent": "amber",
-      "image": "/projects/proj-its-support/media/architecture.svg",
-      "imageAlt": "Functional overview of ITS Systems Integration & Traffic Enforcement Support"
+      "image": "/images/project-covers/proj-its-support.webp",
+      "imageAlt": "Conceptual illustration of intelligent traffic intersection with cameras, lidar beams, traffic signals and road lanes linked visually to an operations server"
     },
     {
       "id": "proj-vtid2",
@@ -372,8 +372,8 @@
         }
       ],
       "accent": "purple",
-      "image": "/projects/proj-vtid2/media/architecture.svg",
-      "imageAlt": "Functional overview of Efficient Neural Network Architectures for Vehicle Type Classification"
+      "image": "/images/project-covers/proj-vtid2.webp",
+      "imageAlt": "Conceptual illustration of three stylized vehicle silhouettes (car, truck, motorcycle) feeding into a glowing compact neural network with layered nodes and a visual attention heatmap"
     },
     {
       "id": "proj-ngsim",
@@ -423,8 +423,8 @@
         }
       ],
       "accent": "blue",
-      "image": "/projects/proj-ngsim/media/architecture.svg",
-      "imageAlt": "Functional overview of Vehicle Type Classification Using NGSIM US-101"
+      "image": "/images/project-covers/proj-ngsim.webp",
+      "imageAlt": "Conceptual illustration of overhead freeway with car, truck and motorcycle trajectories represented as dotted paths converging into three classification symbols and a clean scatterplot motif"
     },
     {
       "id": "proj-reconnaissance-robot",
@@ -479,8 +479,8 @@
         }
       ],
       "accent": "purple",
-      "image": "/projects/proj-reconnaissance-robot/media/architecture.svg",
-      "imageAlt": "Functional overview of Reconnaissance Robot — RGB-D Mapping & Remote Control"
+      "image": "/images/project-covers/proj-reconnaissance-robot.webp",
+      "imageAlt": "Conceptual illustration of small wheeled exploration rover with RGB-D depth camera, colorful point cloud mapping an indoor corridor, remote control signal"
     },
     {
       "id": "proj-quadcopter-uav",
@@ -543,8 +543,8 @@
         }
       ],
       "accent": "purple",
-      "image": "/projects/proj-quadcopter-uav/media/architecture.svg",
-      "imageAlt": "Functional overview of Autonomous Quadcopter UAV — Flight Control, Telemetry & FPV"
+      "image": "/images/project-covers/proj-quadcopter-uav.webp",
+      "imageAlt": "Conceptual illustration of four-rotor quadcopter in three-quarter view, dotted waypoint flight path, ground telemetry receiver and tiny FPV camera"
     },
     {
       "id": "proj-sdn",
@@ -600,8 +600,8 @@
         }
       ],
       "accent": "blue",
-      "image": "/projects/proj-sdn/media/architecture.svg",
-      "imageAlt": "Functional overview of Software-Defined Networking — OpenFlow Automation & Video Streaming Control"
+      "image": "/images/project-covers/proj-sdn.webp",
+      "imageAlt": "Conceptual illustration of network switches connected with luminous paths, central software controller redirecting a stream of video frames"
     },
     {
       "id": "proj-ims-voip-volte",
@@ -671,8 +671,8 @@
         }
       ],
       "accent": "blue",
-      "image": "/projects/proj-ims-voip-volte/media/architecture.svg",
-      "imageAlt": "Functional overview of IMS Multimedia Services — VoIP, IPTV & VoLTE"
+      "image": "/images/project-covers/proj-ims-voip-volte.webp",
+      "imageAlt": "Conceptual illustration of IP phone, mobile handset, television video screen and central telecom cloud connected with three distinct communication streams"
     },
     {
       "id": "proj-sddc-lab",
@@ -735,8 +735,8 @@
         }
       ],
       "accent": "blue",
-      "image": "/projects/proj-sddc-lab/media/architecture.svg",
-      "imageAlt": "Functional overview of Software-Defined Data Center (SDDC) — Design & Implementation"
+      "image": "/images/project-covers/proj-sddc-lab.webp",
+      "imageAlt": "Conceptual illustration of isometric server racks, virtual machine layers, shared storage disks and network switch as a coherent miniature data center"
     },
     {
       "id": "proj-rf-network",
@@ -789,8 +789,8 @@
         }
       ],
       "accent": "amber",
-      "image": "/projects/proj-rf-network/media/architecture.svg",
-      "imageAlt": "Functional overview of Network Infrastructure Design — Wireless, RF & MPLS Backbone"
+      "image": "/images/project-covers/proj-rf-network.webp",
+      "imageAlt": "Conceptual illustration of two rooftop radio dishes with wireless signal arcs, distant relay towers and a connected backbone of routing nodes"
     },
     {
       "id": "proj-monitoring-apps",
@@ -839,8 +839,8 @@
         }
       ],
       "accent": "blue",
-      "image": "/projects/proj-monitoring-apps/media/architecture.svg",
-      "imageAlt": "Functional overview of Engineering Monitoring & Automation Applications (.NET)"
+      "image": "/images/project-covers/proj-monitoring-apps.webp",
+      "imageAlt": "Conceptual illustration of desktop monitor showing symbolic monitoring gauges and service cards, connected device and automation gear"
     },
     {
       "id": "proj-embedded-iot",
@@ -892,8 +892,8 @@
         }
       ],
       "accent": "purple",
-      "image": "/projects/proj-embedded-iot/media/architecture.svg",
-      "imageAlt": "Functional overview of Embedded Systems, IoT & Industrial Automation"
+      "image": "/images/project-covers/proj-embedded-iot.webp",
+      "imageAlt": "Conceptual illustration of microcontroller circuit board connected to a temperature sensor, motor actuator and PLC module, wireless IoT arcs"
     },
     {
       "id": "proj-rfid-study",
@@ -948,8 +948,8 @@
         }
       ],
       "accent": "purple",
-      "image": "/projects/proj-rfid-study/media/architecture.svg",
-      "imageAlt": "Functional overview of RFID Library Automation System (ISO 15693)"
+      "image": "/images/project-covers/proj-rfid-study.webp",
+      "imageAlt": "Conceptual illustration of library books carrying tiny RFID tags, reader scanning one book, self-service checkout terminal and RFID gate"
     },
     {
       "id": "proj-solar-study",
@@ -994,8 +994,8 @@
         }
       ],
       "accent": "amber",
-      "image": "/projects/proj-solar-study/media/architecture.svg",
-      "imageAlt": "Functional overview of Solar Energy Systems — Design, Sizing & Deployment"
+      "image": "/images/project-covers/proj-solar-study.webp",
+      "imageAlt": "Conceptual illustration of photovoltaic panels receiving sunlight, charge controller, battery bank and inverter connected to a small house load"
     }
   ],
   "articles": [

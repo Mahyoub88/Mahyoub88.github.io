@@ -45,14 +45,14 @@ export function ProjectCard({ project }: { project: Project }) {
       className={`${wholeCardLink ? 'group ' : ''}scroll-mt-24 flex flex-col overflow-hidden rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] shadow-[var(--shadow-card)] transition ${accent.ring}`}
     >
       <div
-        className={`relative flex h-44 items-center justify-center bg-gradient-to-br ${accent.gradient}`}
+        className={`relative flex aspect-video items-center justify-center bg-gradient-to-br ${accent.gradient}`}
       >
         <div
           aria-hidden
           className="absolute inset-0 opacity-40 [background-image:radial-gradient(circle_at_1px_1px,var(--border-2)_1px,transparent_0)] [background-size:16px_16px]"
         />
         {project.image ? (
-          <img src={project.image} alt={project.imageAlt ?? project.title} loading="lazy" className="relative h-full w-full object-contain" />
+          <img src={project.image} alt={project.imageAlt ?? project.title} loading="lazy" className="relative h-full w-full object-cover" />
         ) : <span className={`relative text-4xl font-black tracking-tight opacity-20 ${accent.text}`}>
           {project.category.slice(0, 2).toUpperCase()}
         </span>}
