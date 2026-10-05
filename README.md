@@ -90,3 +90,11 @@ works on direct load and refresh.
 ### Any static host
 
 Run `npm run build` and upload the contents of `dist/`.
+
+## Illustrated project documentation
+
+[Browse all case studies](https://mahyoub88.github.io/projects/) · [Project index](docs/PROJECTS.md)
+
+Every portfolio project has a standalone page under `public/projects/`, with two explanatory SVG diagrams, engineering rationale, source notes and an evidence checklist. Existing repository figures, public notebook plots and LinkedIn project media are reused with source context. The cards link to these pages and their source repositories.
+
+To update a case study, edit its `public/projects/<project-id>/index.html` and associated `media/` files. Keep the corresponding repository engineering guide and source captions aligned. New illustrations must not be described as implementation photographs or measured results.

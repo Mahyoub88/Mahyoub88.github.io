@@ -315,11 +315,17 @@
       "link": "",
       "links": [
         {
+          "label": "Read illustrated case study",
+          "href": "/projects/proj-its-support/"
+        },
+        {
           "label": "View GitHub Repository",
           "href": "https://github.com/Mahyoub88/its-systems-integration"
         }
       ],
-      "accent": "amber"
+      "accent": "amber",
+      "image": "/projects/proj-its-support/media/architecture.svg",
+      "imageAlt": "Functional overview of ITS Systems Integration & Traffic Enforcement Support"
     },
     {
       "id": "proj-vtid2",
@@ -359,8 +365,15 @@
         "label": "Academic Research — Code Private During Assessment"
       },
       "link": "",
-      "links": [],
-      "accent": "purple"
+      "links": [
+        {
+          "label": "Read illustrated case study",
+          "href": "/projects/proj-vtid2/"
+        }
+      ],
+      "accent": "purple",
+      "image": "/projects/proj-vtid2/media/architecture.svg",
+      "imageAlt": "Functional overview of Efficient Neural Network Architectures for Vehicle Type Classification"
     },
     {
       "id": "proj-ngsim",
@@ -397,6 +410,10 @@
       "link": "",
       "links": [
         {
+          "label": "Read illustrated case study",
+          "href": "/projects/proj-ngsim/"
+        },
+        {
           "label": "View GitHub Repository",
           "href": "https://github.com/Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101"
         },
@@ -405,7 +422,9 @@
           "href": "https://doi.org/10.5281/zenodo.23033235"
         }
       ],
-      "accent": "blue"
+      "accent": "blue",
+      "image": "/projects/proj-ngsim/media/architecture.svg",
+      "imageAlt": "Functional overview of Vehicle Type Classification Using NGSIM US-101"
     },
     {
       "id": "proj-reconnaissance-robot",
@@ -451,11 +470,17 @@
       "link": "",
       "links": [
         {
+          "label": "Read illustrated case study",
+          "href": "/projects/proj-reconnaissance-robot/"
+        },
+        {
           "label": "View GitHub Repository",
           "href": "https://github.com/Mahyoub88/reconnaissance-robot-rgbd"
         }
       ],
-      "accent": "purple"
+      "accent": "purple",
+      "image": "/projects/proj-reconnaissance-robot/media/architecture.svg",
+      "imageAlt": "Functional overview of Reconnaissance Robot — RGB-D Mapping & Remote Control"
     },
     {
       "id": "proj-quadcopter-uav",
@@ -471,7 +496,7 @@
         },
         {
           "label": "Scope",
-          "value": "Independent project covering propulsion sizing, airframe and electronics integration, sensor calibration, PID tuning, flight-mode and failsafe testing, telemetry and video systems, and technical documentation."
+          "value": "Team project covering propulsion sizing, airframe and electronics integration, sensor calibration, PID tuning, flight-mode and failsafe testing, telemetry and video systems, and technical documentation."
         },
         {
           "label": "Build",
@@ -509,11 +534,17 @@
       "link": "",
       "links": [
         {
+          "label": "Read illustrated case study",
+          "href": "/projects/proj-quadcopter-uav/"
+        },
+        {
           "label": "View GitHub Repository — code, test images & tuned parameters",
           "href": "https://github.com/Mahyoub88/autonomous-quadcopter-uav"
         }
       ],
-      "accent": "purple"
+      "accent": "purple",
+      "image": "/projects/proj-quadcopter-uav/media/architecture.svg",
+      "imageAlt": "Functional overview of Autonomous Quadcopter UAV — Flight Control, Telemetry & FPV"
     },
     {
       "id": "proj-sdn",
@@ -560,11 +591,17 @@
       "link": "",
       "links": [
         {
+          "label": "Read illustrated case study",
+          "href": "/projects/proj-sdn/"
+        },
+        {
           "label": "View GitHub Repository — code, results & figures",
           "href": "https://github.com/Mahyoub88/sdn-openflow-lab"
         }
       ],
-      "accent": "blue"
+      "accent": "blue",
+      "image": "/projects/proj-sdn/media/architecture.svg",
+      "imageAlt": "Functional overview of Software-Defined Networking — OpenFlow Automation & Video Streaming Control"
     },
     {
       "id": "proj-ims-voip-volte",
@@ -580,7 +617,7 @@
         },
         {
           "label": "Role",
-          "value": "Independent design, implementation and testing of the project; design, implementation and testing of the reproducible lab."
+          "value": "Team design, implementation and testing of the project; design, implementation and testing of the reproducible lab."
         },
         {
           "label": "VoIP (Cisco)",
@@ -625,11 +662,17 @@
       "link": "",
       "links": [
         {
+          "label": "Read illustrated case study",
+          "href": "/projects/proj-ims-voip-volte/"
+        },
+        {
           "label": "View GitHub Repository — screenshots, Cisco configs, lab code & results",
           "href": "https://github.com/Mahyoub88/ims-voip-iptv-volte-lab"
         }
       ],
-      "accent": "blue"
+      "accent": "blue",
+      "image": "/projects/proj-ims-voip-volte/media/architecture.svg",
+      "imageAlt": "Functional overview of IMS Multimedia Services — VoIP, IPTV & VoLTE"
     },
     {
       "id": "proj-sddc-lab",
@@ -645,7 +688,7 @@
         },
         {
           "label": "Scope",
-          "value": "Independent project covering design, implementation, configuration, testing and technical documentation, alongside a study of SDDC architecture, storage networking (DAS/NAS/SAN, FC, IP SAN), network virtualisation and cloud models."
+          "value": "Team project covering design, implementation, configuration, testing and technical documentation, alongside a study of SDDC architecture, storage networking (DAS/NAS/SAN, FC, IP SAN), network virtualisation and cloud models."
         },
         {
           "label": "Storage",
@@ -683,11 +726,17 @@
       "link": "",
       "links": [
         {
+          "label": "Read illustrated case study",
+          "href": "/projects/proj-sddc-lab/"
+        },
+        {
           "label": "View GitHub Repository — screenshots & configuration files",
           "href": "https://github.com/Mahyoub88/sddc-lab-implementation"
         }
       ],
-      "accent": "blue"
+      "accent": "blue",
+      "image": "/projects/proj-sddc-lab/media/architecture.svg",
+      "imageAlt": "Functional overview of Software-Defined Data Center (SDDC) — Design & Implementation"
     },
     {
       "id": "proj-rf-network",
@@ -731,11 +780,17 @@
       "link": "",
       "links": [
         {
+          "label": "Read illustrated case study",
+          "href": "/projects/proj-rf-network/"
+        },
+        {
           "label": "View GitHub Repository",
           "href": "https://github.com/Mahyoub88/rf-mpls-network-design"
         }
       ],
-      "accent": "amber"
+      "accent": "amber",
+      "image": "/projects/proj-rf-network/media/architecture.svg",
+      "imageAlt": "Functional overview of Network Infrastructure Design — Wireless, RF & MPLS Backbone"
     },
     {
       "id": "proj-monitoring-apps",
@@ -775,11 +830,17 @@
       "link": "",
       "links": [
         {
+          "label": "Read illustrated case study",
+          "href": "/projects/proj-monitoring-apps/"
+        },
+        {
           "label": "View GitHub Repository",
           "href": "https://github.com/Mahyoub88/dotnet-monitoring-apps"
         }
       ],
-      "accent": "blue"
+      "accent": "blue",
+      "image": "/projects/proj-monitoring-apps/media/architecture.svg",
+      "imageAlt": "Functional overview of Engineering Monitoring & Automation Applications (.NET)"
     },
     {
       "id": "proj-embedded-iot",
@@ -822,11 +883,17 @@
       "link": "",
       "links": [
         {
+          "label": "Read illustrated case study",
+          "href": "/projects/proj-embedded-iot/"
+        },
+        {
           "label": "View GitHub Repository",
           "href": "https://github.com/Mahyoub88/embedded-iot-automation"
         }
       ],
-      "accent": "purple"
+      "accent": "purple",
+      "image": "/projects/proj-embedded-iot/media/architecture.svg",
+      "imageAlt": "Functional overview of Embedded Systems, IoT & Industrial Automation"
     },
     {
       "id": "proj-rfid-study",
@@ -872,11 +939,17 @@
       "link": "",
       "links": [
         {
+          "label": "Read illustrated case study",
+          "href": "/projects/proj-rfid-study/"
+        },
+        {
           "label": "View GitHub Repository — diagrams, slides & specifications",
           "href": "https://github.com/Mahyoub88/rfid-library-automation"
         }
       ],
-      "accent": "purple"
+      "accent": "purple",
+      "image": "/projects/proj-rfid-study/media/architecture.svg",
+      "imageAlt": "Functional overview of RFID Library Automation System (ISO 15693)"
     },
     {
       "id": "proj-solar-study",
@@ -912,11 +985,17 @@
       "link": "",
       "links": [
         {
+          "label": "Read illustrated case study",
+          "href": "/projects/proj-solar-study/"
+        },
+        {
           "label": "View GitHub Repository",
           "href": "https://github.com/Mahyoub88/solar-energy-systems"
         }
       ],
-      "accent": "amber"
+      "accent": "amber",
+      "image": "/projects/proj-solar-study/media/architecture.svg",
+      "imageAlt": "Functional overview of Solar Energy Systems — Design, Sizing & Deployment"
     }
   ],
   "articles": [

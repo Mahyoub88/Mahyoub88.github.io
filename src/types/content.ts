@@ -56,6 +56,8 @@ export interface ProjectMeta {
 
 export interface Project {
   id: string
+  image?: string
+  imageAlt?: string
   category: string
   title: string
   description: string

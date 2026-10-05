@@ -23,3 +23,9 @@ PyTorch, CNN, Efficient AI, Grad-CAM, Model Evaluation, Data Quality
 ## Links
 
 - [Portfolio project](https://mahyoub88.github.io/#proj-vtid2)
+
+## Illustrated engineering guide
+
+[Read the public illustrated guide](vtid2-engineering-guide.md) · [Web case study](https://mahyoub88.github.io/projects/proj-vtid2/)
+
+The private assessment repository and code remain private.
