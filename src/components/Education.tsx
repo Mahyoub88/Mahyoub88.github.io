@@ -15,7 +15,7 @@ export function Education() {
         <p className="text-xs font-semibold tracking-wider text-brand-blue-400">EDUCATION</p>
         <h2 className="mt-2 text-3xl font-extrabold text-[var(--text-1)]">Education</h2>
 
-        <div className="mt-10 grid grid-cols-1 items-start gap-6 lg:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 items-stretch gap-6 lg:grid-cols-2">
           {content.education.map((item) => (
             <article
               key={item.id}
@@ -26,7 +26,7 @@ export function Education() {
                 <GraduationCap size={20} strokeWidth={1.5} aria-hidden />
                 <span className="text-[10px] font-bold uppercase tracking-widest">{item.degree.split(' ')[0]}</span>
               </div>
-              <div className="min-w-0 flex-1 p-5">
+              <div className="flex min-w-0 flex-1 flex-col p-5">
                 <div className="flex flex-wrap items-start justify-between gap-2">
                   <h3 className="text-base font-bold leading-snug text-[var(--text-1)]">
                     {item.degree}
@@ -52,7 +52,7 @@ export function Education() {
                 )}
 
                 {item.highlights && item.highlights.length > 0 && (
-                  <details className="mt-4 border-t border-[var(--border-1)] pt-3">
+                  <details className="mt-auto border-t border-[var(--border-1)] pt-3">
                     <summary className="cursor-pointer text-xs font-semibold text-brand-blue-400">
                       Selected work
                     </summary>
@@ -70,7 +70,7 @@ export function Education() {
                 )}
 
                 {item.document && (
-                  <a href={item.document.image} target="_blank" rel="noreferrer" className="mt-4 flex items-center gap-3 rounded-xl border border-brand-blue-400/20 bg-[var(--surface-2)] p-3 transition hover:border-brand-blue-400/50">
+                  <a href={item.document.image} target="_blank" rel="noreferrer" className="mt-auto flex items-center gap-3 rounded-xl border border-brand-blue-400/20 bg-[var(--surface-2)] p-3 transition hover:border-brand-blue-400/50">
                     <img src={item.document.image} alt={item.document.title} loading="lazy" className="h-24 w-16 shrink-0 rounded object-contain" />
                     <span className="min-w-0">
                       <span className="block text-xs font-bold leading-relaxed text-[var(--text-1)]">{item.document.title}</span>
