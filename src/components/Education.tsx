@@ -1,4 +1,4 @@
-import { BrainCircuit, CircuitBoard, GraduationCap } from 'lucide-react'
+import { ArrowUpRight, BrainCircuit, CircuitBoard, GraduationCap } from 'lucide-react'
 import { useContent } from '../context/ContentContext'
 import { Container } from './Container'
 
@@ -69,7 +69,17 @@ export function Education() {
                   </details>
                 )}
 
-                {item.note && (
+                {item.document && (
+                  <a href={item.document.image} target="_blank" rel="noreferrer" className="mt-4 flex items-center gap-3 rounded-xl border border-brand-blue-400/20 bg-[var(--surface-2)] p-3 transition hover:border-brand-blue-400/50">
+                    <img src={item.document.image} alt={item.document.title} loading="lazy" className="h-24 w-16 shrink-0 rounded object-contain" />
+                    <span className="min-w-0">
+                      <span className="block text-xs font-bold leading-relaxed text-[var(--text-1)]">{item.document.title}</span>
+                      <span className="mt-1 block text-[11px] text-[var(--text-3)]">{item.document.issuer}{item.document.date ? ` · ${item.document.date}` : ''}</span>
+                      <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-brand-blue-400">View equivalency certificate <ArrowUpRight size={13} aria-hidden /></span>
+                    </span>
+                  </a>
+                )}
+                {item.note && !item.document && (
                   <p className="mt-4 text-xs italic text-[var(--text-3)]">{item.note}</p>
                 )}
               </div>

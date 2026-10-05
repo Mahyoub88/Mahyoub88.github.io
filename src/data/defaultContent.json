@@ -1171,7 +1171,13 @@
       "status": "Completed",
       "description": "Engineering foundation in electronics, communications, networking, control systems, signal processing, and embedded technologies.",
       "highlights": [],
-      "note": "UAE Ministry of Education degree equivalency obtained."
+      "note": "UAE Ministry of Education degree equivalency obtained.",
+      "document": {
+        "title": "UAE Degree Equivalency Certificate",
+        "image": "/images/certificates/uae-degree-equivalency.jpg",
+        "issuer": "UAE Ministry of Education",
+        "date": "22 July 2019"
+      }
     }
   ],
   "certifications": [

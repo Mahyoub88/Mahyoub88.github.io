@@ -143,6 +143,7 @@ export interface ExpertiseCategory {
 }
 
 export interface EducationItem {
+  document?: { title: string; image: string; issuer: string; date?: string }
   id: string
   degree: string
   institution: string
