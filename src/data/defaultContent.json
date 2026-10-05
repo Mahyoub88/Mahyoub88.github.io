@@ -315,8 +315,8 @@
       "link": "",
       "links": [
         {
-          "label": "Read Project Details",
-          "href": "https://github.com/Mahyoub88/Mahyoub88.github.io/blob/main/docs/projects/its-support.md"
+          "label": "View GitHub Repository",
+          "href": "https://github.com/Mahyoub88/its-systems-integration"
         }
       ],
       "accent": "amber"
@@ -398,7 +398,7 @@
       "links": [
         {
           "label": "View GitHub Repository",
-          "href": "https://github.com/Mahyoub88/predicting-vehicle-type-using-ngsim-us101"
+          "href": "https://github.com/Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101"
         },
         {
           "label": "DOI: 10.5281/zenodo.23033235",
@@ -451,8 +451,8 @@
       "link": "",
       "links": [
         {
-          "label": "Read Project Details",
-          "href": "https://github.com/Mahyoub88/Mahyoub88.github.io/blob/main/docs/projects/reconnaissance-robot.md"
+          "label": "View GitHub Repository",
+          "href": "https://github.com/Mahyoub88/reconnaissance-robot-rgbd"
         }
       ],
       "accent": "purple"
@@ -731,8 +731,8 @@
       "link": "",
       "links": [
         {
-          "label": "Read Project Details",
-          "href": "https://github.com/Mahyoub88/Mahyoub88.github.io/blob/main/docs/projects/rf-network.md"
+          "label": "View GitHub Repository",
+          "href": "https://github.com/Mahyoub88/rf-mpls-network-design"
         }
       ],
       "accent": "amber"
@@ -775,8 +775,8 @@
       "link": "",
       "links": [
         {
-          "label": "Read Project Details",
-          "href": "https://github.com/Mahyoub88/Mahyoub88.github.io/blob/main/docs/projects/monitoring-apps.md"
+          "label": "View GitHub Repository",
+          "href": "https://github.com/Mahyoub88/dotnet-monitoring-apps"
         }
       ],
       "accent": "blue"
@@ -822,8 +822,8 @@
       "link": "",
       "links": [
         {
-          "label": "Read Project Details",
-          "href": "https://github.com/Mahyoub88/Mahyoub88.github.io/blob/main/docs/projects/embedded-iot.md"
+          "label": "View GitHub Repository",
+          "href": "https://github.com/Mahyoub88/embedded-iot-automation"
         }
       ],
       "accent": "purple"
@@ -845,7 +845,7 @@
         },
         {
           "label": "Tags",
-          "value": "Chip, antenna and package. Passive tags (reader-powered, 2–5 m, up to 256 bytes, about USD 1, no maintenance) chosen over active tags (battery, up to 100 m, up to 128 KB, USD 10–100)."
+          "value": "Chip, antenna and package. Passive HF tags (reader-powered, centimetres at the pad up to about 1 m at the gates, about USD 1, no maintenance) chosen over active tags (battery, up to 100 m, up to 128 KB, USD 10–100)."
         },
         {
           "label": "Reader",
@@ -872,8 +872,8 @@
       "link": "",
       "links": [
         {
-          "label": "Read Project Details — diagrams, slides & specifications",
-          "href": "https://github.com/Mahyoub88/Mahyoub88.github.io/blob/main/docs/projects/rfid-study.md"
+          "label": "View GitHub Repository — diagrams, slides & specifications",
+          "href": "https://github.com/Mahyoub88/rfid-library-automation"
         }
       ],
       "accent": "purple"
@@ -912,8 +912,8 @@
       "link": "",
       "links": [
         {
-          "label": "Read Project Details",
-          "href": "https://github.com/Mahyoub88/Mahyoub88.github.io/blob/main/docs/projects/solar-study.md"
+          "label": "View GitHub Repository",
+          "href": "https://github.com/Mahyoub88/solar-energy-systems"
         }
       ],
       "accent": "amber"
