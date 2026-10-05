@@ -56,16 +56,16 @@ export function ProjectCard({ project }: { project: Project }) {
         ) : <span className={`relative text-4xl font-black tracking-tight opacity-20 ${accent.text}`}>
           {project.category.slice(0, 2).toUpperCase()}
         </span>}
+      </div>
+
+      <div className="flex flex-1 flex-col p-6">
         {project.status && (
           <span
-            className={`absolute right-3 top-3 rounded-md border px-2 py-1 text-[10px] font-semibold leading-tight ${statusStyles[project.status.kind]}`}
+            className={`mb-3 max-w-full self-start rounded-md border px-2 py-1 text-[10px] font-semibold leading-relaxed break-words ${statusStyles[project.status.kind]}`}
           >
             {project.status.label}
           </span>
         )}
-      </div>
-
-      <div className="flex flex-1 flex-col p-6">
         <div className="mb-2 flex items-start justify-between gap-3">
           <span className={`text-xs font-semibold tracking-wide ${accent.text}`}>
             {project.category}
