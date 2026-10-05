@@ -19,21 +19,21 @@ export function Certifications() {
           {content.certifications.map((item) => (
             <article
               key={item.id}
-              className="flex flex-col overflow-hidden rounded-2xl border border-[var(--border-1)] bg-[var(--surface-0)] shadow-[var(--shadow-card)]"
+              className="flex flex-col overflow-hidden rounded-2xl border border-[var(--border-1)] bg-[var(--surface-0)] shadow-[var(--shadow-card)] transition hover:border-brand-blue-400/40 sm:flex-row"
             >
               {item.image ? (
-                <a href={item.image} target="_blank" rel="noreferrer" aria-label={`View full certificate: ${item.name}`} className="group block border-b border-[var(--border-1)] bg-slate-100 p-4">
-                  <img src={item.image} alt={`Original certificate: ${item.name}`} loading="lazy" className="h-64 w-full object-contain transition group-hover:scale-[1.02] sm:h-72" />
+                <a href={item.image} target="_blank" rel="noreferrer" aria-label={`View full certificate: ${item.name}`} className="group flex shrink-0 items-center justify-center border-b border-[var(--border-1)] bg-[var(--surface-2)] p-4 sm:w-44 sm:border-b-0 sm:border-r">
+                  <img src={item.image} alt={`Original certificate: ${item.name}`} loading="lazy" className="h-36 w-full rounded-md object-contain drop-shadow-lg transition group-hover:scale-[1.03] sm:h-auto sm:max-h-40" />
                 </a>
               ) : (
-                <div className="flex h-64 flex-col items-center justify-center gap-4 border-b border-[var(--border-1)] bg-gradient-to-br from-brand-blue-500/10 to-brand-purple-500/10 p-6 sm:h-72">
-                  <Cpu size={56} strokeWidth={1.3} className="text-brand-blue-400" aria-hidden />
-                  <p className="text-xs font-semibold uppercase tracking-widest text-[var(--text-3)]">Technical Training</p>
+                <div className="flex h-44 shrink-0 flex-col items-center justify-center gap-3 border-b border-[var(--border-1)] bg-gradient-to-br from-brand-blue-500/10 to-brand-purple-500/10 p-4 sm:h-auto sm:w-44 sm:border-b-0 sm:border-r">
+                  <Cpu size={44} strokeWidth={1.3} className="text-brand-blue-400" aria-hidden />
+                  <p className="text-center text-[10px] font-semibold uppercase tracking-widest text-[var(--text-3)]">Technical Training</p>
                 </div>
               )}
-              <div className="flex flex-1 flex-col p-6">
+              <div className="flex min-w-0 flex-1 flex-col p-5">
                 <span className="mb-3 text-brand-blue-400">{item.type === 'Recognition' ? <Award size={22} aria-hidden /> : <ShieldCheck size={22} aria-hidden />}</span>
-                <h3 className="text-lg font-bold leading-snug text-[var(--text-1)]">{item.name}</h3>
+                <h3 className="text-base font-bold leading-snug text-[var(--text-1)]">{item.name}</h3>
                 <p className="mt-2 text-sm font-medium text-[var(--text-2)]">
                   {item.issuer}
                 </p>
