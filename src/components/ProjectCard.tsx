@@ -44,6 +44,15 @@ export function ProjectCard({ project }: { project: Project }) {
         : {})}
       className={`${wholeCardLink ? 'group ' : ''}scroll-mt-24 flex flex-col overflow-hidden rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] shadow-[var(--shadow-card)] transition ${accent.ring}`}
     >
+      {project.status && (
+        <div className="flex min-h-14 items-center border-b border-[var(--border-1)] bg-[var(--surface-1)] px-4 py-3">
+          <span
+            className={`max-w-full rounded-md border px-2 py-1 text-[10px] font-semibold leading-relaxed break-words ${statusStyles[project.status.kind]}`}
+          >
+            {project.status.label}
+          </span>
+        </div>
+      )}
       <div
         className={`relative flex aspect-video items-center justify-center bg-gradient-to-br ${accent.gradient}`}
       >
@@ -59,13 +68,6 @@ export function ProjectCard({ project }: { project: Project }) {
       </div>
 
       <div className="flex flex-1 flex-col p-6">
-        {project.status && (
-          <span
-            className={`mb-3 max-w-full self-start rounded-md border px-2 py-1 text-[10px] font-semibold leading-relaxed break-words ${statusStyles[project.status.kind]}`}
-          >
-            {project.status.label}
-          </span>
-        )}
         <div className="mb-2 flex items-start justify-between gap-3">
           <span className={`text-xs font-semibold tracking-wide ${accent.text}`}>
             {project.category}
