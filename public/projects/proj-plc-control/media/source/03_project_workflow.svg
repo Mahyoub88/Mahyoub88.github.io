@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" fill="#1d2733" role="img" aria-label="Project workflow">
+<title>Project workflow</title>
+<defs><style>text{font-family:'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif}.m{font-family:Consolas, 'DejaVu Sans Mono', monospace}</style><marker id="k1f3a5f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f3a5f"/></marker><marker id="k0b7a83" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0b7a83"/></marker><marker id="kb86e00" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b86e00"/></marker><marker id="kb3261e" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b3261e"/></marker><marker id="k2e7d4f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d4f"/></marker><marker id="k5b6b7c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6b7c"/></marker><marker id="k1d2733" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d2733"/></marker></defs>
+<rect width="1200" height="520" fill="#ffffff"/>
+<rect x="0" y="0" width="1200" height="6" fill="#1f3a5f"/>
+<text x="40" y="52" font-size="26" font-weight="700">Project workflow</text>
+<text x="40" y="80" font-size="15" fill="#5b6b7c">Seven stages from requirements to optimisation</text>
+<circle cx="113" cy="130" r="12" fill="#1f3a5f"/>
+<text x="113" y="134.5" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">1</text>
+<rect x="40" y="150" width="146" height="100" rx="8" fill="#ffffff" stroke="#1f3a5f" stroke-width="1.5"/>
+<text x="113" y="193.8" font-size="15" fill="#1f3a5f" font-weight="700" text-anchor="middle">Requirements</text>
+<text x="113" y="217.4" font-size="12.5" text-anchor="middle">process analysis</text>
+<line x1="188" y1="200" x2="200" y2="200" stroke="#5b6b7c" stroke-width="2" marker-end="url(#k5b6b7c)"/>
+<circle cx="275" cy="130" r="12" fill="#1f3a5f"/>
+<text x="275" y="134.5" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">2</text>
+<rect x="202" y="150" width="146" height="100" rx="8" fill="#ffffff" stroke="#1f3a5f" stroke-width="1.5"/>
+<text x="275" y="193.8" font-size="15" fill="#1f3a5f" font-weight="700" text-anchor="middle">System design</text>
+<text x="275" y="217.4" font-size="12.5" text-anchor="middle">architecture, I/O list</text>
+<line x1="350" y1="200" x2="362" y2="200" stroke="#5b6b7c" stroke-width="2" marker-end="url(#k5b6b7c)"/>
+<circle cx="437" cy="130" r="12" fill="#b86e00"/>
+<text x="437" y="134.5" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">3</text>
+<rect x="364" y="150" width="146" height="100" rx="8" fill="#ffffff" stroke="#b86e00" stroke-width="1.5"/>
+<text x="437" y="193.8" font-size="15" fill="#b86e00" font-weight="700" text-anchor="middle">PLC programming</text>
+<text x="437" y="217.4" font-size="12.5" text-anchor="middle">logic development</text>
+<line x1="512" y1="200" x2="524" y2="200" stroke="#5b6b7c" stroke-width="2" marker-end="url(#k5b6b7c)"/>
+<circle cx="599" cy="130" r="12" fill="#0b7a83"/>
+<text x="599" y="134.5" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">4</text>
+<rect x="526" y="150" width="146" height="100" rx="8" fill="#ffffff" stroke="#0b7a83" stroke-width="1.5"/>
+<text x="599" y="193.8" font-size="15" fill="#0b7a83" font-weight="700" text-anchor="middle">HMI design</text>
+<text x="599" y="217.4" font-size="12.5" text-anchor="middle">screens, alarms</text>
+<line x1="674" y1="200" x2="686" y2="200" stroke="#5b6b7c" stroke-width="2" marker-end="url(#k5b6b7c)"/>
+<circle cx="761" cy="130" r="12" fill="#2e7d4f"/>
+<text x="761" y="134.5" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">5</text>
+<rect x="688" y="150" width="146" height="100" rx="8" fill="#ffffff" stroke="#2e7d4f" stroke-width="1.5"/>
+<text x="761" y="193.8" font-size="15" fill="#2e7d4f" font-weight="700" text-anchor="middle">Panel &amp; wiring</text>
+<text x="761" y="217.4" font-size="12.5" text-anchor="middle">hardware integration</text>
+<line x1="836" y1="200" x2="848" y2="200" stroke="#5b6b7c" stroke-width="2" marker-end="url(#k5b6b7c)"/>
+<circle cx="923" cy="130" r="12" fill="#b3261e"/>
+<text x="923" y="134.5" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">6</text>
+<rect x="850" y="150" width="146" height="100" rx="8" fill="#ffffff" stroke="#b3261e" stroke-width="1.5"/>
+<text x="923" y="193.8" font-size="15" fill="#b3261e" font-weight="700" text-anchor="middle">Commissioning</text>
+<text x="923" y="217.4" font-size="12.5" text-anchor="middle">testing, validation</text>
+<line x1="998" y1="200" x2="1010" y2="200" stroke="#5b6b7c" stroke-width="2" marker-end="url(#k5b6b7c)"/>
+<circle cx="1085" cy="130" r="12" fill="#1f3a5f"/>
+<text x="1085" y="134.5" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">7</text>
+<rect x="1012" y="150" width="146" height="100" rx="8" fill="#ffffff" stroke="#1f3a5f" stroke-width="1.5"/>
+<text x="1085" y="193.8" font-size="15" fill="#1f3a5f" font-weight="700" text-anchor="middle">Optimisation</text>
+<text x="1085" y="217.4" font-size="12.5" text-anchor="middle">monitoring, tuning</text>
+<rect x="40" y="290" width="1120" height="190" rx="10" fill="#f6f8fb" stroke="#d5dde6" stroke-width="1"/>
+<text x="60" y="320" font-size="16" fill="#1f3a5f" font-weight="700">What each stage produces</text>
+<text x="60" y="348" font-size="14">1–2: process description, I/O list, control philosophy, panel layout.</text>
+<text x="60" y="374" font-size="14">3: PLC program with sequences, interlocks and alarms.</text>
+<text x="60" y="400" font-size="14">4: HMI and SCADA screens for operation, recipes and trends.</text>
+<text x="60" y="426" font-size="14">5: wired and labelled control panel, checked point to point.</text>
+<text x="60" y="452" font-size="14">6–7: I/O and sequence tests on site, then tuning from logged production data.</text>
+<text x="1160" y="504" font-size="12" fill="#5b6b7c" text-anchor="end">Mohammed Mahyoub, Industrial Automation &amp; PLC-Based Control Systems</text>
+</svg>

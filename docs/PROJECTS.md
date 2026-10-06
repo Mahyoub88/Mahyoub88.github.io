@@ -1,21 +1,24 @@
 # Engineering Project Index
 
-Projects are ordered by relevance to ITS, applied AI, robotics and systems integration. Every project now has an illustrated web case study with architecture, workflow, engineering rationale and an evidence gallery. Repository guides retain the full supporting material.
+Each entry below is an independent case study. Software and network collections remain available at their existing URLs for compatibility.
 
-[Browse all illustrated case studies](https://mahyoub88.github.io/projects/)
-
-1. [ITS Systems Integration & Traffic Enforcement Support](https://github.com/Mahyoub88/its-systems-integration) — [website](https://mahyoub88.github.io/projects/proj-its-support/)
-2. [Efficient Neural Network Architectures for Vehicle Type Classification](projects/vtid2.md) — [website](https://mahyoub88.github.io/projects/proj-vtid2/) — code private during assessment
-3. [Vehicle Type Classification Using NGSIM US-101](https://github.com/Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101) — [website](https://mahyoub88.github.io/projects/proj-ngsim/) — [DOI](https://doi.org/10.5281/zenodo.23033235)
-4. [Reconnaissance Robot — RGB-D Mapping & Remote Control](https://github.com/Mahyoub88/reconnaissance-robot-rgbd) — [website](https://mahyoub88.github.io/projects/proj-reconnaissance-robot/)
-5. [Autonomous Quadcopter UAV — Flight Control, Telemetry & FPV](https://github.com/Mahyoub88/autonomous-quadcopter-uav) — [website](https://mahyoub88.github.io/projects/proj-quadcopter-uav/)
-6. [Software-Defined Networking — OpenFlow Automation & Video Streaming Control](https://github.com/Mahyoub88/sdn-openflow-lab) — [website](https://mahyoub88.github.io/projects/proj-sdn/)
-7. [IMS Multimedia Services — VoIP, IPTV & VoLTE](https://github.com/Mahyoub88/ims-voip-iptv-volte-lab) — [website](https://mahyoub88.github.io/projects/proj-ims-voip-volte/)
-8. [Software-Defined Data Center (SDDC) — Design & Implementation](https://github.com/Mahyoub88/sddc-lab-implementation) — [website](https://mahyoub88.github.io/projects/proj-sddc-lab/)
-9. [Network Infrastructure Design — Wireless, RF & MPLS Backbone](https://github.com/Mahyoub88/rf-mpls-network-design) — [website](https://mahyoub88.github.io/projects/proj-rf-network/)
-10. [Engineering Monitoring & Automation Applications (.NET)](https://github.com/Mahyoub88/dotnet-monitoring-apps) — [website](https://mahyoub88.github.io/projects/proj-monitoring-apps/)
-11. [Industrial Automation & PLC-Based Control Systems](https://github.com/Mahyoub88/industrial-automation-plc)
-12. [Embedded Systems, IoT & Industrial Automation](https://github.com/Mahyoub88/embedded-iot-automation) — [website](https://mahyoub88.github.io/projects/proj-embedded-iot/)
-13. [Embedded EEPROM Data Storage & Retrieval System](https://github.com/Mahyoub88/eeprom-data-storage-pic)
-14. [RFID Library Automation System (ISO 15693)](https://github.com/Mahyoub88/rfid-library-automation) — [website](https://mahyoub88.github.io/projects/proj-rfid-study/)
-15. [Solar Energy Systems — Design, Sizing & Deployment](https://github.com/Mahyoub88/solar-energy-systems) — [website](https://mahyoub88.github.io/projects/proj-solar-study/)
+1. [ITS Systems Integration & Traffic Enforcement Support](https://mahyoub88.github.io/projects/proj-its-support/) — [source documentation](https://github.com/Mahyoub88/its-systems-integration)
+2. [Efficient Neural Network Architectures for Vehicle Type Classification](https://mahyoub88.github.io/projects/proj-vtid2/)
+3. [Vehicle Type Classification Using NGSIM US-101](https://mahyoub88.github.io/projects/proj-ngsim/) — [source documentation](https://github.com/Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101)
+4. [Reconnaissance Robot — RGB-D Mapping & Remote Control](https://mahyoub88.github.io/projects/proj-reconnaissance-robot/) — [source documentation](https://github.com/Mahyoub88/reconnaissance-robot-rgbd)
+5. [Autonomous Quadcopter UAV — Flight Control, Telemetry & FPV](https://mahyoub88.github.io/projects/proj-quadcopter-uav/) — [source documentation](https://github.com/Mahyoub88/autonomous-quadcopter-uav)
+6. [Software-Defined Networking — Automation & Video Streaming](https://mahyoub88.github.io/projects/proj-sdn/) — [source documentation](https://github.com/Mahyoub88/sdn-openflow-lab)
+7. [IMS Multimedia Services — VoIP, IPTV & VoLTE](https://mahyoub88.github.io/projects/proj-ims-voip-volte/) — [source documentation](https://github.com/Mahyoub88/ims-voip-iptv-volte-lab)
+8. [Software-Defined Data Center (SDDC) — Design & Implementation](https://mahyoub88.github.io/projects/proj-sddc-lab/) — [source documentation](https://github.com/Mahyoub88/sddc-lab-implementation)
+9. [Embedded Systems & IoT — PIC Firmware and Peripheral Integration](https://mahyoub88.github.io/projects/proj-embedded-iot/) — [source documentation](https://github.com/Mahyoub88/embedded-iot-automation)
+10. [RFID Library Automation System (ISO 15693)](https://mahyoub88.github.io/projects/proj-rfid-study/) — [source documentation](https://github.com/Mahyoub88/rfid-library-automation)
+11. [Solar Energy Systems — Design, Sizing & Deployment](https://mahyoub88.github.io/projects/proj-solar-study/) — [source documentation](https://github.com/Mahyoub88/solar-energy-systems)
+12. [Industrial Automation & PLC-Based Control Systems](https://mahyoub88.github.io/projects/proj-plc-control/) — [source documentation](https://github.com/Mahyoub88/industrial-automation-plc)
+13. [Embedded EEPROM Data Storage & Retrieval System](https://mahyoub88.github.io/projects/proj-eeprom-storage/) — [source documentation](https://github.com/Mahyoub88/eeprom-data-storage-pic)
+14. [Monitoring & Diagnostics Console — VB.NET](https://mahyoub88.github.io/projects/proj-monitoring-console/) — [source documentation](https://github.com/Mahyoub88/dotnet-monitoring-apps)
+15. [Service Operations & Technical Documentation Management System](https://mahyoub88.github.io/projects/proj-service-operations/) — [source documentation](https://github.com/Mahyoub88/dotnet-monitoring-apps)
+16. [RF Link Budget & Propagation Analysis Engine](https://mahyoub88.github.io/projects/proj-rf-link-budget/) — [source documentation](https://github.com/Mahyoub88/dotnet-monitoring-apps)
+17. [Line-of-Sight & Fresnel Zone Wireless Planning Tool](https://mahyoub88.github.io/projects/proj-fresnel-planning/) — [source documentation](https://github.com/Mahyoub88/dotnet-monitoring-apps)
+18. [Enterprise Wireless & Network Infrastructure Architecture](https://mahyoub88.github.io/projects/proj-enterprise-network/) — [source documentation](https://github.com/Mahyoub88/rf-mpls-network-design)
+19. [Wireless Coverage & Point-to-Point Network Planning](https://mahyoub88.github.io/projects/proj-wireless-coverage/) — [source documentation](https://github.com/Mahyoub88/rf-mpls-network-design)
+20. [Network Infrastructure Design — MPLS Backbone](https://mahyoub88.github.io/projects/proj-mpls-backbone/) — [source documentation](https://github.com/Mahyoub88/rf-mpls-network-design)

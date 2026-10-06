@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" fill="#1d2733" role="img" aria-label="I/O structure and field wiring">
+<title>I/O structure and field wiring</title>
+<defs><style>text{font-family:'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif}.m{font-family:Consolas, 'DejaVu Sans Mono', monospace}</style><marker id="k1f3a5f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f3a5f"/></marker><marker id="k0b7a83" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0b7a83"/></marker><marker id="kb86e00" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b86e00"/></marker><marker id="kb3261e" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b3261e"/></marker><marker id="k2e7d4f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d4f"/></marker><marker id="k5b6b7c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6b7c"/></marker><marker id="k1d2733" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d2733"/></marker></defs>
+<rect width="1200" height="800" fill="#ffffff"/>
+<rect x="0" y="0" width="1200" height="6" fill="#1f3a5f"/>
+<text x="40" y="52" font-size="26" font-weight="700">I/O structure and field wiring</text>
+<text x="40" y="80" font-size="15" fill="#5b6b7c">How each field device reaches the PLC, and how the PLC drives the plant (typical batching-plant pattern)</text>
+<text x="40" y="128" font-size="15" fill="#0b7a83" font-weight="700">Field inputs</text>
+<rect x="40" y="142" width="300" height="54" rx="6" fill="#e3f3f4" stroke="#0b7a83" stroke-width="1.3"/>
+<text x="56" y="165" font-size="13.5" font-weight="600">Push buttons, selectors</text>
+<text x="56" y="184" font-size="12.5" fill="#0b7a83" font-weight="700">DI 24 V DC</text>
+<line x1="342" y1="169" x2="420" y2="245" stroke="#0b7a83" stroke-width="1.5" marker-end="url(#k0b7a83)"/>
+<rect x="40" y="208" width="300" height="54" rx="6" fill="#e3f3f4" stroke="#0b7a83" stroke-width="1.3"/>
+<text x="56" y="231" font-size="13.5" font-weight="600">Limit / proximity switches</text>
+<text x="56" y="250" font-size="12.5" fill="#0b7a83" font-weight="700">DI 24 V DC</text>
+<line x1="342" y1="235" x2="420" y2="267" stroke="#0b7a83" stroke-width="1.5" marker-end="url(#k0b7a83)"/>
+<rect x="40" y="274" width="300" height="54" rx="6" fill="#e3f3f4" stroke="#0b7a83" stroke-width="1.3"/>
+<text x="56" y="297" font-size="13.5" font-weight="600">Motor feedback, overloads</text>
+<text x="56" y="316" font-size="12.5" fill="#0b7a83" font-weight="700">DI 24 V DC</text>
+<line x1="342" y1="301" x2="420" y2="289" stroke="#0b7a83" stroke-width="1.5" marker-end="url(#k0b7a83)"/>
+<rect x="40" y="340" width="300" height="54" rx="6" fill="#e3f3f4" stroke="#0b7a83" stroke-width="1.3"/>
+<text x="56" y="363" font-size="13.5" font-weight="600">Level sensors (silos, bins)</text>
+<text x="56" y="382" font-size="12.5" fill="#0b7a83" font-weight="700">DI or AI 4–20 mA</text>
+<line x1="342" y1="367" x2="420" y2="311" stroke="#0b7a83" stroke-width="1.5" marker-end="url(#k0b7a83)"/>
+<rect x="40" y="406" width="300" height="54" rx="6" fill="#e3f3f4" stroke="#0b7a83" stroke-width="1.3"/>
+<text x="56" y="429" font-size="13.5" font-weight="600">Load cells → weighing unit</text>
+<text x="56" y="448" font-size="12.5" fill="#0b7a83" font-weight="700">AI or Modbus</text>
+<line x1="342" y1="433" x2="420" y2="333" stroke="#0b7a83" stroke-width="1.5" marker-end="url(#k0b7a83)"/>
+<rect x="40" y="472" width="300" height="54" rx="6" fill="#e3f3f4" stroke="#0b7a83" stroke-width="1.3"/>
+<text x="56" y="495" font-size="13.5" font-weight="600">Moisture, pressure, flow</text>
+<text x="56" y="514" font-size="12.5" fill="#0b7a83" font-weight="700">AI 4–20 mA</text>
+<line x1="342" y1="499" x2="420" y2="355" stroke="#0b7a83" stroke-width="1.5" marker-end="url(#k0b7a83)"/>
+<rect x="425" y="150" width="350" height="390" rx="12" fill="#e8eef6" stroke="#1f3a5f" stroke-width="2"/>
+<text x="600" y="182" font-size="18" fill="#1f3a5f" font-weight="700" text-anchor="middle">PLC rack</text>
+<rect x="445" y="205" width="40" height="210" rx="5" fill="#ffffff" stroke="#5b6b7c" stroke-width="1.6"/>
+<text x="465" y="310" font-size="13" fill="#5b6b7c" font-weight="700" text-anchor="middle" transform="rotate(-90 465 310)">PS</text>
+<rect x="491" y="205" width="40" height="210" rx="5" fill="#ffffff" stroke="#1f3a5f" stroke-width="1.6"/>
+<text x="511" y="310" font-size="13" fill="#1f3a5f" font-weight="700" text-anchor="middle" transform="rotate(-90 511 310)">CPU</text>
+<rect x="537" y="205" width="40" height="210" rx="5" fill="#ffffff" stroke="#0b7a83" stroke-width="1.6"/>
+<text x="557" y="310" font-size="13" fill="#0b7a83" font-weight="700" text-anchor="middle" transform="rotate(-90 557 310)">DI</text>
+<rect x="583" y="205" width="40" height="210" rx="5" fill="#ffffff" stroke="#0b7a83" stroke-width="1.6"/>
+<text x="603" y="310" font-size="13" fill="#0b7a83" font-weight="700" text-anchor="middle" transform="rotate(-90 603 310)">AI</text>
+<rect x="629" y="205" width="40" height="210" rx="5" fill="#ffffff" stroke="#b86e00" stroke-width="1.6"/>
+<text x="649" y="310" font-size="13" fill="#b86e00" font-weight="700" text-anchor="middle" transform="rotate(-90 649 310)">DO</text>
+<rect x="675" y="205" width="40" height="210" rx="5" fill="#ffffff" stroke="#b86e00" stroke-width="1.6"/>
+<text x="695" y="310" font-size="13" fill="#b86e00" font-weight="700" text-anchor="middle" transform="rotate(-90 695 310)">AO</text>
+<rect x="721" y="205" width="40" height="210" rx="5" fill="#ffffff" stroke="#2e7d4f" stroke-width="1.6"/>
+<text x="741" y="310" font-size="13" fill="#2e7d4f" font-weight="700" text-anchor="middle" transform="rotate(-90 741 310)">COM</text>
+<text x="445" y="445" font-size="12.5">Scan cycle: read all inputs → run the</text>
+<text x="445" y="464" font-size="12.5">program → write all outputs → repeat,</text>
+<text x="445" y="483" font-size="12.5">typically every few milliseconds.</text>
+<text x="1160" y="128" font-size="15" fill="#b86e00" font-weight="700" text-anchor="end">Field outputs</text>
+<rect x="860" y="142" width="300" height="54" rx="6" fill="#fbf1e1" stroke="#b86e00" stroke-width="1.3"/>
+<text x="876" y="165" font-size="13" font-weight="600">Contactors → motors</text>
+<text x="876" y="184" font-size="12.5" fill="#b86e00" font-weight="700">DO 24 V DC</text>
+<line x1="780" y1="245" x2="856" y2="169" stroke="#b86e00" stroke-width="1.5" marker-end="url(#kb86e00)"/>
+<rect x="860" y="208" width="300" height="54" rx="6" fill="#fbf1e1" stroke="#b86e00" stroke-width="1.3"/>
+<text x="876" y="231" font-size="13" font-weight="600">Solenoid valves → gates, water</text>
+<text x="876" y="250" font-size="12.5" fill="#b86e00" font-weight="700">DO 24 V DC</text>
+<line x1="780" y1="267" x2="856" y2="235" stroke="#b86e00" stroke-width="1.5" marker-end="url(#kb86e00)"/>
+<rect x="860" y="274" width="300" height="54" rx="6" fill="#fbf1e1" stroke="#b86e00" stroke-width="1.3"/>
+<text x="876" y="297" font-size="13" font-weight="600">Pneumatic cylinders → gates</text>
+<text x="876" y="316" font-size="12.5" fill="#b86e00" font-weight="700">DO 24 V DC</text>
+<line x1="780" y1="289" x2="856" y2="301" stroke="#b86e00" stroke-width="1.5" marker-end="url(#kb86e00)"/>
+<rect x="860" y="340" width="300" height="54" rx="6" fill="#fbf1e1" stroke="#b86e00" stroke-width="1.3"/>
+<text x="876" y="363" font-size="13" font-weight="600">VFD speed reference</text>
+<text x="876" y="382" font-size="12.5" fill="#b86e00" font-weight="700">AO 4–20 mA / 0–10 V</text>
+<line x1="780" y1="311" x2="856" y2="367" stroke="#b86e00" stroke-width="1.5" marker-end="url(#kb86e00)"/>
+<rect x="860" y="406" width="300" height="54" rx="6" fill="#fbf1e1" stroke="#b86e00" stroke-width="1.3"/>
+<text x="876" y="429" font-size="13" font-weight="600">Pilot lamps, horn, beacon</text>
+<text x="876" y="448" font-size="12.5" fill="#b86e00" font-weight="700">DO 24 V DC</text>
+<line x1="780" y1="333" x2="856" y2="433" stroke="#b86e00" stroke-width="1.5" marker-end="url(#kb86e00)"/>
+<rect x="860" y="472" width="300" height="54" rx="6" fill="#fbf1e1" stroke="#b86e00" stroke-width="1.3"/>
+<text x="876" y="495" font-size="13" font-weight="600">Interlock relays</text>
+<text x="876" y="514" font-size="12.5" fill="#b86e00" font-weight="700">DO 24 V DC</text>
+<line x1="780" y1="355" x2="856" y2="499" stroke="#b86e00" stroke-width="1.5" marker-end="url(#kb86e00)"/>
+<rect x="40" y="580" width="1120" height="190" rx="10" fill="#f6f8fb" stroke="#d5dde6" stroke-width="1"/>
+<text x="60" y="610" font-size="16" fill="#1f3a5f" font-weight="700">Wiring practice in the control panel</text>
+<text x="60" y="638" font-size="14">Every field wire lands on a numbered terminal block, so a device can be changed without touching the PLC module.</text>
+<text x="60" y="664" font-size="14">Outputs drive interposing relays or contactors; the PLC output never switches a motor directly.</text>
+<text x="60" y="690" font-size="14">Analog signals use 4–20 mA on shielded cable, grounded at one end, so a broken wire reads as a fault (below 4 mA).</text>
+<text x="60" y="716" font-size="14">Emergency stop runs through a hard-wired safety circuit as well as a PLC input, so it works even if the PLC fails.</text>
+<text x="60" y="742" font-size="14">An I/O list ties each tag, terminal, module channel and description together; it is the reference for testing.</text>
+<text x="1160" y="784" font-size="12" fill="#5b6b7c" text-anchor="end">Mohammed Mahyoub, Industrial Automation &amp; PLC-Based Control Systems</text>
+</svg>

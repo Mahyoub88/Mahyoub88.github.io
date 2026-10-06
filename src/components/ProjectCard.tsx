@@ -61,7 +61,7 @@ export function ProjectCard({ project }: { project: Project }) {
           className="absolute inset-0 opacity-40 [background-image:radial-gradient(circle_at_1px_1px,var(--border-2)_1px,transparent_0)] [background-size:16px_16px]"
         />
         {project.image ? (
-          <img src={project.image} alt={project.imageAlt ?? project.title} loading="lazy" className="relative h-full w-full object-cover" />
+          <img src={project.image} alt={project.imageAlt ?? project.title} loading="lazy" className={`relative h-full w-full ${project.image.startsWith('/projects/') ? 'object-contain' : 'object-cover'}`} />
         ) : <span className={`relative text-4xl font-black tracking-tight opacity-20 ${accent.text}`}>
           {project.category.slice(0, 2).toUpperCase()}
         </span>}
@@ -120,8 +120,8 @@ export function ProjectCard({ project }: { project: Project }) {
               <a
                 key={link.href + link.label}
                 href={link.href}
-                target="_blank"
-                rel="noreferrer"
+                target={link.href.startsWith('/') ? undefined : '_blank'}
+                rel={link.href.startsWith('/') ? undefined : 'noreferrer'}
                 className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--border-1)] px-3 py-1.5 text-xs font-semibold text-[var(--text-1)] transition hover:border-brand-blue-500/60 hover:text-brand-blue-400"
               >
                 {link.label}

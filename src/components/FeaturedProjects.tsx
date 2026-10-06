@@ -20,6 +20,9 @@ export function FeaturedProjects() {
         {content.projectsSubtitle && (
           <p className="mt-3 max-w-2xl text-[var(--text-2)]">{content.projectsSubtitle}</p>
         )}
+        <a href="/projects/" className="mt-5 inline-flex rounded-lg border border-[var(--border-1)] px-4 py-2 text-sm font-semibold text-brand-blue-400">
+          Browse all illustrated case studies →
+        </a>
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {selected.map((project) => (
@@ -40,6 +43,10 @@ export function FeaturedProjects() {
             </div>
           </div>
         )}
+        <nav aria-label="Related project collections" className="mt-10 flex flex-wrap gap-4 text-sm text-[var(--text-3)]">
+          <a id="proj-monitoring-apps" className="scroll-mt-24" href="/projects/proj-monitoring-apps/">Engineering software collection</a>
+          <a id="proj-rf-network" className="scroll-mt-24" href="/projects/proj-rf-network/">Network engineering collection</a>
+        </nav>
       </Container>
     </section>
   )

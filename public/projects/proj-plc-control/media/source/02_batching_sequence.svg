@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" fill="#1d2733" role="img" aria-label="Concrete batching sequence">
+<title>Concrete batching sequence</title>
+<defs><style>text{font-family:'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif}.m{font-family:Consolas, 'DejaVu Sans Mono', monospace}</style><marker id="k1f3a5f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f3a5f"/></marker><marker id="k0b7a83" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0b7a83"/></marker><marker id="kb86e00" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b86e00"/></marker><marker id="kb3261e" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b3261e"/></marker><marker id="k2e7d4f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d4f"/></marker><marker id="k5b6b7c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6b7c"/></marker><marker id="k1d2733" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d2733"/></marker></defs>
+<rect width="1200" height="780" fill="#ffffff"/>
+<rect x="0" y="0" width="1200" height="6" fill="#1f3a5f"/>
+<text x="40" y="52" font-size="26" font-weight="700">Concrete batching sequence</text>
+<text x="40" y="80" font-size="15" fill="#5b6b7c">What the PLC program does for each batch: dose, weigh, mix, discharge, with checks between steps</text>
+<circle cx="140" cy="128" r="12" fill="#1f3a5f"/>
+<text x="140" y="132.5" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">1</text>
+<rect x="40" y="150" width="200" height="110" rx="8" fill="#e8eef6" stroke="#1f3a5f" stroke-width="1.5"/>
+<text x="140" y="190" font-size="16" fill="#1f3a5f" font-weight="700" text-anchor="middle">Recipe &amp; start</text>
+<text x="140" y="214.3" font-size="13" text-anchor="middle">operator selects recipe</text>
+<text x="140" y="231.8" font-size="13" text-anchor="middle">on the HMI</text>
+<line x1="242" y1="205" x2="266" y2="205" stroke="#5b6b7c" stroke-width="2" marker-end="url(#k5b6b7c)"/>
+<circle cx="368" cy="128" r="12" fill="#0b7a83"/>
+<text x="368" y="132.5" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">2</text>
+<rect x="268" y="150" width="200" height="110" rx="8" fill="#e3f3f4" stroke="#0b7a83" stroke-width="1.5"/>
+<text x="368" y="190" font-size="16" fill="#0b7a83" font-weight="700" text-anchor="middle">Dose</text>
+<text x="368" y="214.3" font-size="13" text-anchor="middle">aggregates, cement,</text>
+<text x="368" y="231.8" font-size="13" text-anchor="middle">water, admixture</text>
+<line x1="470" y1="205" x2="494" y2="205" stroke="#5b6b7c" stroke-width="2" marker-end="url(#k5b6b7c)"/>
+<circle cx="596" cy="128" r="12" fill="#0b7a83"/>
+<text x="596" y="132.5" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">3</text>
+<rect x="496" y="150" width="200" height="110" rx="8" fill="#e3f3f4" stroke="#0b7a83" stroke-width="1.5"/>
+<text x="596" y="190" font-size="16" fill="#0b7a83" font-weight="700" text-anchor="middle">Weigh</text>
+<text x="596" y="214.3" font-size="13" text-anchor="middle">load cells check each</text>
+<text x="596" y="231.8" font-size="13" text-anchor="middle">material against target</text>
+<line x1="698" y1="205" x2="722" y2="205" stroke="#5b6b7c" stroke-width="2" marker-end="url(#k5b6b7c)"/>
+<circle cx="824" cy="128" r="12" fill="#b86e00"/>
+<text x="824" y="132.5" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">4</text>
+<rect x="724" y="150" width="200" height="110" rx="8" fill="#fbf1e1" stroke="#b86e00" stroke-width="1.5"/>
+<text x="824" y="190" font-size="16" fill="#b86e00" font-weight="700" text-anchor="middle">Mix</text>
+<text x="824" y="214.3" font-size="13" text-anchor="middle">mixer runs for the</text>
+<text x="824" y="231.8" font-size="13" text-anchor="middle">set mixing time</text>
+<line x1="926" y1="205" x2="950" y2="205" stroke="#5b6b7c" stroke-width="2" marker-end="url(#k5b6b7c)"/>
+<circle cx="1052" cy="128" r="12" fill="#2e7d4f"/>
+<text x="1052" y="132.5" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">5</text>
+<rect x="952" y="150" width="200" height="110" rx="8" fill="#e6f3ea" stroke="#2e7d4f" stroke-width="1.5"/>
+<text x="1052" y="190" font-size="16" fill="#2e7d4f" font-weight="700" text-anchor="middle">Discharge</text>
+<text x="1052" y="214.3" font-size="13" text-anchor="middle">gate opens, mixer</text>
+<text x="1052" y="231.8" font-size="13" text-anchor="middle">empties into truck</text>
+<path d="M 1052 262 V 312 H 140 V 264" fill="none" stroke="#1f3a5f" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#k1f3a5f)"/>
+<text x="596" y="304" font-size="13.5" fill="#1f3a5f" font-weight="600" text-anchor="middle">next batch</text>
+<text x="40" y="370" font-size="17" fill="#1f3a5f" font-weight="700">Checks the PLC makes before moving on</text>
+<rect x="40" y="390" width="1120" height="48" rx="6" fill="#f6f8fb" stroke="#d5dde6" stroke-width="1"/>
+<text x="60" y="420" font-size="14" fill="#1f3a5f" font-weight="700">Dose → Weigh</text>
+<text x="240" y="420" font-size="14">feed stops at target minus in-flight allowance; tolerance checked before the hopper is released</text>
+<rect x="40" y="448" width="1120" height="48" rx="6" fill="#ffffff" stroke="#d5dde6" stroke-width="1"/>
+<text x="60" y="478" font-size="14" fill="#1f3a5f" font-weight="700">Weigh → Mix</text>
+<text x="240" y="478" font-size="14">mixer running and empty, all materials in tolerance, otherwise hold and alarm</text>
+<rect x="40" y="506" width="1120" height="48" rx="6" fill="#f6f8fb" stroke="#d5dde6" stroke-width="1"/>
+<text x="60" y="536" font-size="14" fill="#1f3a5f" font-weight="700">Mix → Discharge</text>
+<text x="240" y="536" font-size="14">mixing time complete; discharge gate opens only with the truck in position</text>
+<rect x="40" y="564" width="1120" height="48" rx="6" fill="#ffffff" stroke="#d5dde6" stroke-width="1"/>
+<text x="60" y="594" font-size="14" fill="#1f3a5f" font-weight="700">Any step</text>
+<text x="240" y="594" font-size="14">emergency stop, motor overload, low silo level or a sensor fault stops the sequence and raises an alarm</text>
+<rect x="40" y="640" width="1120" height="110" rx="10" fill="#f6f8fb" stroke="#d5dde6" stroke-width="1"/>
+<text x="60" y="670" font-size="15" fill="#1f3a5f" font-weight="700">Logged for every batch</text>
+<text x="60" y="696" font-size="14">recipe, target and actual weights, mixing time, start and end time, alarms raised.</text>
+<text x="60" y="720" font-size="14" fill="#5b6b7c">SCADA keeps these as historical records for quality checks and production reports.</text>
+<text x="1160" y="764" font-size="12" fill="#5b6b7c" text-anchor="end">Mohammed Mahyoub, Industrial Automation &amp; PLC-Based Control Systems</text>
+</svg>

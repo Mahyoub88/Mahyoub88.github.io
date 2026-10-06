@@ -278,7 +278,7 @@
     }
   ],
   "projectsTitle": "Selected Work",
-  "projectsSubtitle": "Selected projects in ITS, applied AI and robotics, followed by engineering implementations in networking, software, embedded systems and infrastructure.",
+  "projectsSubtitle": "Explore independent implementations in applied AI, robotics, communications, software and industrial control. Each case study pairs engineering context with its own diagrams and source media.",
   "projectsCtaLabel": "",
   "projectsCtaHref": "",
   "projects": [
@@ -555,9 +555,13 @@
       "id": "proj-sdn",
       "group": "selected",
       "category": "Software-Defined Networking · Network Automation",
-      "title": "Software-Defined Networking — OpenFlow Automation & Video Streaming Control",
-      "description": "Built an SDN lab with Mininet, Open vSwitch (OpenFlow 1.3) and the Ryu controller, programmed entirely through the controller REST API: flow tables are generated and installed automatically, and OpenFlow meters control the quality of a live video stream.",
+      "title": "Software-Defined Networking — Automation & Video Streaming",
+      "description": "Implemented an OpenDaylight/OpenFlow network with Mininet and real IP network integration, using controller APIs to automate forwarding and evaluate video streaming. A separate Ryu/Open vSwitch extension provides reproducible measurements.",
       "meta": [
+        {
+          "label": "Original",
+          "value": "OpenDaylight, Postman, XML forwarding rules, Python topologies, connectivity restoration and video streaming across Mininet and a real IP network."
+        },
         {
           "label": "Author",
           "value": "Mohammed Mahyoub"
@@ -568,15 +572,15 @@
         },
         {
           "label": "Automation",
-          "value": "Python REST client (and Postman collection) for the Ryu ofctl_rest API. Flow tables for three switches are computed from the topology and installed in 21 REST calls (0.038 s); after the s3 table is wiped, h4→h6 connectivity is restored in 7 calls (0.008 s)."
+          "value": "Reproducible Ryu extension: Python REST client (and Postman collection) for the Ryu ofctl_rest API. Flow tables for three switches are computed from the topology and installed in 21 REST calls (0.038 s); after the s3 table is wiped, h4→h6 connectivity is restored in 7 calls (0.008 s)."
         },
         {
           "label": "Streaming",
-          "value": "2.5 Mbit/s H.264 stream from h1 to h6 across the three-switch path, rate-limited with OpenFlow 1.3 meters at 3000, 1500 and 800 kbit/s; quality measured with FFmpeg PSNR/SSIM."
+          "value": "Reproducible Ryu extension: 2.5 Mbit/s H.264 stream from h1 to h6 across the three-switch path, rate-limited with OpenFlow 1.3 meters at 3000, 1500 and 800 kbit/s; quality measured with FFmpeg PSNR/SSIM."
         },
         {
-          "label": "Results",
-          "value": "No meter / 3000 kbit/s: PSNR ≈ 40 dB, SSIM 0.998. 1500 kbit/s: 19.3 dB, SSIM 0.819. 800 kbit/s: 15.4 dB, SSIM 0.706. All logs, flow dumps and raw results are in the repository."
+          "label": "Ryu results",
+          "value": "Reproducible Ryu extension: No meter / 3000 kbit/s: PSNR ≈ 40 dB, SSIM 0.998. 1500 kbit/s: 19.3 dB, SSIM 0.819. 800 kbit/s: 15.4 dB, SSIM 0.706. All logs, flow dumps and raw results are in the repository."
         }
       ],
       "tags": [
@@ -744,115 +748,11 @@
       "imageAlt": "Conceptual illustration of isometric server racks, virtual machine layers, shared storage disks and network switch as a coherent miniature data center"
     },
     {
-      "id": "proj-rf-network",
-      "group": "earlier",
-      "category": "Network Infrastructure · RF Planning · Service-Provider Networks",
-      "title": "Network Infrastructure Design — Wireless, RF & MPLS Backbone",
-      "description": "Designed and validated multi-site network infrastructure, from wireless access and RF links to a carrier-grade MPLS backbone, using MikroTik, Ubiquiti, Cisco, RF planning, and GNS3.",
-      "meta": [
-        {
-          "label": "Author",
-          "value": "Mohammed Mahyoub"
-        },
-        {
-          "label": "Wireless",
-          "value": "Multi-zone wireless and LAN architecture: coverage modelling, point-to-point links, antenna alignment, capacity planning, secure routing, VPN, traffic management, and surveillance and access-control connectivity."
-        },
-        {
-          "label": "Backbone",
-          "value": "Carrier-grade MPLS backbone built and validated with Cisco 7200 routers in GNS3: OSPF, MPLS-TE, VRF / MPLS VPN, and MP-BGP for multi-site connectivity and traffic engineering."
-        },
-        {
-          "label": "Output",
-          "value": "Network diagrams, equipment layouts, configurations, engineering calculations, and validation documentation."
-        }
-      ],
-      "tags": [
-        "Cisco",
-        "MikroTik",
-        "Ubiquiti",
-        "RF Planning",
-        "MPLS",
-        "OSPF",
-        "BGP",
-        "VPN",
-        "GNS3"
-      ],
-      "status": {
-        "kind": "professional",
-        "label": "Professional Case Study"
-      },
-      "link": "",
-      "links": [
-        {
-          "label": "Read illustrated case study",
-          "href": "/projects/proj-rf-network/"
-        },
-        {
-          "label": "View GitHub Repository",
-          "href": "https://github.com/Mahyoub88/rf-mpls-network-design"
-        }
-      ],
-      "accent": "amber",
-      "image": "/images/project-covers/proj-rf-network.webp",
-      "imageAlt": "Conceptual illustration of two rooftop radio dishes with wireless signal arcs, distant relay towers and a connected backbone of routing nodes"
-    },
-    {
-      "id": "proj-monitoring-apps",
-      "group": "earlier",
-      "category": "Desktop Software · Engineering Automation",
-      "title": "Engineering Monitoring & Automation Applications (.NET)",
-      "description": "Developed VB.NET desktop applications and engineering tools for system monitoring, service documentation, repair tracking, operational reporting, device integration, and RF analysis.",
-      "meta": [
-        {
-          "label": "Author",
-          "value": "Mohammed Mahyoub"
-        },
-        {
-          "label": "Scope",
-          "value": "Structured data management, diagnostics, service records, maintenance workflows, technical calculations, and exportable reports."
-        },
-        {
-          "label": "Example",
-          "value": "Monitoring & Diagnostics Console — a WinForms dashboard for multi-site system monitoring, real-time diagnostics, automated health evaluation, issue tracking, and technical reporting."
-        },
-        {
-          "label": "RF tools",
-          "value": "Calculators for path loss, Fresnel-zone clearance, receiver sensitivity, thermal noise, and RF propagation modelling."
-        }
-      ],
-      "tags": [
-        "VB.NET",
-        "WinForms",
-        "SQL / Structured Data",
-        "Reporting",
-        "Engineering Calculations"
-      ],
-      "status": {
-        "kind": "professional",
-        "label": "Professional Case Study"
-      },
-      "link": "",
-      "links": [
-        {
-          "label": "Read illustrated case study",
-          "href": "/projects/proj-monitoring-apps/"
-        },
-        {
-          "label": "View GitHub Repository",
-          "href": "https://github.com/Mahyoub88/dotnet-monitoring-apps"
-        }
-      ],
-      "accent": "blue",
-      "image": "/images/project-covers/proj-monitoring-apps.webp",
-      "imageAlt": "Conceptual illustration of desktop monitor showing symbolic monitoring gauges and service cards, connected device and automation gear"
-    },
-    {
       "id": "proj-embedded-iot",
       "group": "earlier",
-      "category": "Embedded Systems · IoT · Industrial Automation",
-      "title": "Embedded Systems, IoT & Industrial Automation",
-      "description": "Designed and prototyped embedded monitoring and control solutions using microcontrollers, sensors, communication modules, actuators, and PLC platforms.",
+      "category": "Embedded Systems · Firmware · IoT",
+      "title": "Embedded Systems & IoT — PIC Firmware and Peripheral Integration",
+      "description": "Developed PIC16 firmware and hardware interfaces for timed sensing, displays, real-time clocks, output expansion and access control, using mikroC and Proteus during development.",
       "meta": [
         {
           "label": "Author",
@@ -878,12 +778,11 @@
         "AVR",
         "Arduino",
         "Sensors",
-        "PLC",
         "IoT"
       ],
       "status": {
         "kind": "professional",
-        "label": "Professional Case Study"
+        "label": "Implemented Project"
       },
       "link": "",
       "links": [
@@ -897,8 +796,8 @@
         }
       ],
       "accent": "purple",
-      "image": "/images/project-covers/proj-embedded-iot.webp",
-      "imageAlt": "Conceptual illustration of microcontroller circuit board connected to a temperature sensor, motor actuator and PLC module, wireless IoT arcs"
+      "image": "/projects/proj-embedded-iot/media/source/01_system_overview.svg",
+      "imageAlt": "PIC peripheral overview — explanatory source diagram"
     },
     {
       "id": "proj-rfid-study",
@@ -1001,6 +900,348 @@
       "accent": "amber",
       "image": "/images/project-covers/proj-solar-study.webp",
       "imageAlt": "Conceptual illustration of photovoltaic panels receiving sunlight, charge controller, battery bank and inverter connected to a small house load"
+    },
+    {
+      "id": "proj-plc-control",
+      "group": "earlier",
+      "category": "Industrial Automation · PLC · HMI",
+      "title": "Industrial Automation & PLC-Based Control Systems",
+      "description": "Integrated PLC-based control for concrete batching and industrial processes, with field I/O, HMI operation, SCADA monitoring and industrial communications.",
+      "meta": [
+        {
+          "label": "Scope",
+          "value": "The field layer measures level, pressure, flow and weight. PLC logic coordinates motors, valves and pumps, while HMI panels provide operator commands and SCADA provides alarms, trends and historical records."
+        }
+      ],
+      "tags": [
+        "PLC",
+        "HMI",
+        "SCADA",
+        "Modbus",
+        "Industrial Ethernet",
+        "WinCC"
+      ],
+      "status": {
+        "kind": "professional",
+        "label": "Implemented Project"
+      },
+      "link": "",
+      "links": [
+        {
+          "label": "Explore case study",
+          "href": "/projects/proj-plc-control/"
+        },
+        {
+          "label": "Source documentation",
+          "href": "https://github.com/Mahyoub88/industrial-automation-plc"
+        }
+      ],
+      "accent": "amber",
+      "image": "/projects/proj-plc-control/media/source/00_project_poster.jpg",
+      "imageAlt": "Original project poster"
+    },
+    {
+      "id": "proj-eeprom-storage",
+      "group": "earlier",
+      "category": "Embedded Systems · Non-volatile Storage",
+      "title": "Embedded EEPROM Data Storage & Retrieval System",
+      "description": "Implemented PIC-based data storage and retrieval using on-chip EEPROM, mikroC firmware and a display interface, preserving stored values across power loss.",
+      "meta": [
+        {
+          "label": "Scope",
+          "value": "The firmware separates the value being measured or entered from the stored byte. Read-back verifies persistence, while the display exposes the retrieved value to the operator."
+        }
+      ],
+      "tags": [
+        "PIC",
+        "EEPROM",
+        "mikroC",
+        "Proteus",
+        "LCD"
+      ],
+      "status": {
+        "kind": "professional",
+        "label": "Implemented Project"
+      },
+      "link": "",
+      "links": [
+        {
+          "label": "Explore case study",
+          "href": "/projects/proj-eeprom-storage/"
+        },
+        {
+          "label": "Source documentation",
+          "href": "https://github.com/Mahyoub88/eeprom-data-storage-pic"
+        }
+      ],
+      "accent": "amber",
+      "image": "/projects/proj-eeprom-storage/media/source/00_project_poster.jpg",
+      "imageAlt": "Original project poster"
+    },
+    {
+      "id": "proj-monitoring-console",
+      "group": "earlier",
+      "category": "Desktop Software · Operational Diagnostics",
+      "title": "Monitoring & Diagnostics Console — VB.NET",
+      "description": "Built a WinForms dashboard for multi-site system monitoring, real-time diagnostics, automated health evaluation, issue tracking and technical reporting.",
+      "meta": [
+        {
+          "label": "Scope",
+          "value": "The console presents device and system condition in one operational view. Its role is to support fault recognition, diagnosis and follow-up across multiple sites."
+        }
+      ],
+      "tags": [
+        "VB.NET",
+        "WinForms",
+        "Diagnostics",
+        "Monitoring",
+        "Reporting"
+      ],
+      "status": {
+        "kind": "professional",
+        "label": "Implemented Project"
+      },
+      "link": "",
+      "links": [
+        {
+          "label": "Explore case study",
+          "href": "/projects/proj-monitoring-console/"
+        },
+        {
+          "label": "Source documentation",
+          "href": "https://github.com/Mahyoub88/dotnet-monitoring-apps"
+        }
+      ],
+      "accent": "blue",
+      "image": "/projects/proj-monitoring-console/media/monitoring-console.jpg",
+      "imageAlt": "Monitoring console — original interface preview"
+    },
+    {
+      "id": "proj-service-operations",
+      "group": "earlier",
+      "category": "Desktop Software · Service Operations",
+      "title": "Service Operations & Technical Documentation Management System",
+      "description": "Developed a desktop application for device records, repair tracking, service documentation and operational reporting.",
+      "meta": [
+        {
+          "label": "Scope",
+          "value": "The source interface shows device records, repair details and warranty/calibration fields. These records connect the equipment identity with the work performed and the documents needed for follow-up."
+        }
+      ],
+      "tags": [
+        "VB.NET",
+        "WinForms",
+        "Service Records",
+        "Repair Tracking",
+        "Reporting"
+      ],
+      "status": {
+        "kind": "professional",
+        "label": "Implemented Project"
+      },
+      "link": "",
+      "links": [
+        {
+          "label": "Explore case study",
+          "href": "/projects/proj-service-operations/"
+        },
+        {
+          "label": "Source documentation",
+          "href": "https://github.com/Mahyoub88/dotnet-monitoring-apps"
+        }
+      ],
+      "accent": "blue",
+      "image": "/projects/proj-service-operations/media/02-service-tool.jpg",
+      "imageAlt": "Service application — device records and repair documentation"
+    },
+    {
+      "id": "proj-rf-link-budget",
+      "group": "earlier",
+      "category": "Engineering Software · RF Analysis",
+      "title": "RF Link Budget & Propagation Analysis Engine",
+      "description": "Developed a VB.NET engineering calculator for path loss, link budget, receiver sensitivity, thermal noise and RF propagation analysis.",
+      "meta": [
+        {
+          "label": "Scope",
+          "value": "The tool relates transmit power, antenna gains and propagation loss to the receive level used in link assessment. Its screenshot belongs to a standalone calculator rather than the monitoring application."
+        }
+      ],
+      "tags": [
+        "VB.NET",
+        "RF",
+        "Link Budget",
+        "Path Loss",
+        "Receiver Sensitivity"
+      ],
+      "status": {
+        "kind": "professional",
+        "label": "Implemented Project"
+      },
+      "link": "",
+      "links": [
+        {
+          "label": "Explore case study",
+          "href": "/projects/proj-rf-link-budget/"
+        },
+        {
+          "label": "Source documentation",
+          "href": "https://github.com/Mahyoub88/dotnet-monitoring-apps"
+        }
+      ],
+      "accent": "blue",
+      "image": "/projects/proj-rf-link-budget/media/01-rf-tool.jpg",
+      "imageAlt": "RF calculator — original interface and calculation fields"
+    },
+    {
+      "id": "proj-fresnel-planning",
+      "group": "earlier",
+      "category": "Engineering Software · Wireless Planning",
+      "title": "Line-of-Sight & Fresnel Zone Wireless Planning Tool",
+      "description": "Developed a planning tool for line-of-sight analysis and Fresnel-zone clearance in point-to-point wireless links.",
+      "meta": [
+        {
+          "label": "Scope",
+          "value": "Line-of-sight establishes the direct path between antennas. Fresnel analysis examines clearance around that path, giving the planner a different view from a power-only link budget."
+        }
+      ],
+      "tags": [
+        "VB.NET",
+        "Line of Sight",
+        "Fresnel Zone",
+        "Wireless Planning"
+      ],
+      "status": {
+        "kind": "professional",
+        "label": "Implemented Project"
+      },
+      "link": "",
+      "links": [
+        {
+          "label": "Explore case study",
+          "href": "/projects/proj-fresnel-planning/"
+        },
+        {
+          "label": "Source documentation",
+          "href": "https://github.com/Mahyoub88/dotnet-monitoring-apps"
+        }
+      ],
+      "accent": "blue",
+      "image": "/projects/proj-fresnel-planning/media/03-fresnel-tool.jpg",
+      "imageAlt": "Line-of-sight and Fresnel planning — source document view"
+    },
+    {
+      "id": "proj-enterprise-network",
+      "group": "earlier",
+      "category": "Network Engineering · Enterprise Infrastructure",
+      "title": "Enterprise Wireless & Network Infrastructure Architecture",
+      "description": "Designed multi-zone wireless and LAN infrastructure using MikroTik and Ubiquiti, including secure routing, VPN connectivity, traffic management and surveillance/access-control integration.",
+      "meta": [
+        {
+          "label": "Scope",
+          "value": "The architecture connects local users and infrastructure services through wireless and wired access. Routing and VPN connectivity provide the site-to-site boundary."
+        }
+      ],
+      "tags": [
+        "MikroTik",
+        "Ubiquiti",
+        "LAN",
+        "Routing",
+        "VPN"
+      ],
+      "status": {
+        "kind": "professional",
+        "label": "Implemented Project"
+      },
+      "link": "",
+      "links": [
+        {
+          "label": "Explore case study",
+          "href": "/projects/proj-enterprise-network/"
+        },
+        {
+          "label": "Source documentation",
+          "href": "https://github.com/Mahyoub88/rf-mpls-network-design"
+        }
+      ],
+      "accent": "amber",
+      "image": "/projects/proj-enterprise-network/media/01-network-architecture.jpg",
+      "imageAlt": "Enterprise wireless and network architecture — source project media"
+    },
+    {
+      "id": "proj-wireless-coverage",
+      "group": "earlier",
+      "category": "Network Engineering · RF Planning",
+      "title": "Wireless Coverage & Point-to-Point Network Planning",
+      "description": "Modelled wireless coverage and point-to-point connectivity, considering antenna alignment, capacity requirements and site coverage.",
+      "meta": [
+        {
+          "label": "Scope",
+          "value": "Coverage describes where access is available; point-to-point planning describes the transport between sites. Antenna placement and alignment influence both the proposed link and its installation."
+        }
+      ],
+      "tags": [
+        "Ubiquiti",
+        "RF Planning",
+        "Wireless Coverage",
+        "Point-to-Point"
+      ],
+      "status": {
+        "kind": "professional",
+        "label": "Implemented Project"
+      },
+      "link": "",
+      "links": [
+        {
+          "label": "Explore case study",
+          "href": "/projects/proj-wireless-coverage/"
+        },
+        {
+          "label": "Source documentation",
+          "href": "https://github.com/Mahyoub88/rf-mpls-network-design"
+        }
+      ],
+      "accent": "amber",
+      "image": "/projects/proj-wireless-coverage/media/02-network-coverage.jpg",
+      "imageAlt": "Wireless coverage and point-to-point planning — source project media"
+    },
+    {
+      "id": "proj-mpls-backbone",
+      "group": "earlier",
+      "category": "Service-provider Networks · MPLS",
+      "title": "Network Infrastructure Design — MPLS Backbone",
+      "description": "Built and validated a Cisco 7200 MPLS backbone in GNS3, using OSPF, MPLS traffic engineering, VRF/MPLS VPN and MP-BGP for multi-site connectivity.",
+      "meta": [
+        {
+          "label": "Scope",
+          "value": "OSPF provides the routing underlay. MPLS carries labelled traffic, while VRFs separate customer routing contexts and MP-BGP exchanges VPN routes."
+        }
+      ],
+      "tags": [
+        "Cisco 7200",
+        "GNS3",
+        "MPLS",
+        "OSPF",
+        "VRF",
+        "MP-BGP"
+      ],
+      "status": {
+        "kind": "professional",
+        "label": "Implemented Project"
+      },
+      "link": "",
+      "links": [
+        {
+          "label": "Explore case study",
+          "href": "/projects/proj-mpls-backbone/"
+        },
+        {
+          "label": "Source documentation",
+          "href": "https://github.com/Mahyoub88/rf-mpls-network-design"
+        }
+      ],
+      "accent": "amber",
+      "image": "/projects/proj-mpls-backbone/media/mpls-backbone.jpg",
+      "imageAlt": "Cisco MPLS backbone — GNS3 topology preview"
     }
   ],
   "articles": [

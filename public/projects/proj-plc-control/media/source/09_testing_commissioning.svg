@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" fill="#1d2733" role="img" aria-label="Testing and commissioning">
+<title>Testing and commissioning</title>
+<defs><style>text{font-family:'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif}.m{font-family:Consolas, 'DejaVu Sans Mono', monospace}</style><marker id="k1f3a5f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f3a5f"/></marker><marker id="k0b7a83" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0b7a83"/></marker><marker id="kb86e00" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b86e00"/></marker><marker id="kb3261e" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b3261e"/></marker><marker id="k2e7d4f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d4f"/></marker><marker id="k5b6b7c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6b7c"/></marker><marker id="k1d2733" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d2733"/></marker></defs>
+<rect width="1200" height="700" fill="#ffffff"/>
+<rect x="0" y="0" width="1200" height="6" fill="#1f3a5f"/>
+<text x="40" y="52" font-size="26" font-weight="700">Testing and commissioning</text>
+<text x="40" y="80" font-size="15" fill="#5b6b7c">From the workshop to production, each stage proves one layer before the next is added</text>
+<circle cx="125" cy="128" r="12" fill="#1f3a5f"/>
+<text x="125" y="132.5" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">1</text>
+<rect x="40" y="150" width="170" height="110" rx="8" fill="#e8eef6" stroke="#1f3a5f" stroke-width="1.5"/>
+<text x="54" y="176" font-size="15" fill="#1f3a5f" font-weight="700">Panel test</text>
+<text x="54" y="200.3" font-size="12.5">insulation, power-up,</text>
+<text x="54" y="217.1" font-size="12.5">24 V distribution</text>
+<line x1="212" y1="205" x2="228" y2="205" stroke="#5b6b7c" stroke-width="2" marker-end="url(#k5b6b7c)"/>
+<circle cx="315" cy="128" r="12" fill="#0b7a83"/>
+<text x="315" y="132.5" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">2</text>
+<rect x="230" y="150" width="170" height="110" rx="8" fill="#e3f3f4" stroke="#0b7a83" stroke-width="1.5"/>
+<text x="244" y="176" font-size="15" fill="#0b7a83" font-weight="700">I/O check</text>
+<text x="244" y="200.3" font-size="12.5">every point against</text>
+<text x="244" y="217.1" font-size="12.5">the I/O list</text>
+<line x1="402" y1="205" x2="418" y2="205" stroke="#5b6b7c" stroke-width="2" marker-end="url(#k5b6b7c)"/>
+<circle cx="505" cy="128" r="12" fill="#0b7a83"/>
+<text x="505" y="132.5" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">3</text>
+<rect x="420" y="150" width="170" height="110" rx="8" fill="#e3f3f4" stroke="#0b7a83" stroke-width="1.5"/>
+<text x="434" y="176" font-size="15" fill="#0b7a83" font-weight="700">Loop check</text>
+<text x="434" y="200.3" font-size="12.5">sensor → PLC → HMI</text>
+<text x="434" y="217.1" font-size="12.5">value and scaling</text>
+<line x1="592" y1="205" x2="608" y2="205" stroke="#5b6b7c" stroke-width="2" marker-end="url(#k5b6b7c)"/>
+<circle cx="695" cy="128" r="12" fill="#b3261e"/>
+<text x="695" y="132.5" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">4</text>
+<rect x="610" y="150" width="170" height="110" rx="8" fill="#fbe9e7" stroke="#b3261e" stroke-width="1.5"/>
+<text x="624" y="176" font-size="15" fill="#b3261e" font-weight="700">Interlocks</text>
+<text x="624" y="200.3" font-size="12.5">E-stop, overloads,</text>
+<text x="624" y="217.1" font-size="12.5">safety conditions</text>
+<line x1="782" y1="205" x2="798" y2="205" stroke="#5b6b7c" stroke-width="2" marker-end="url(#k5b6b7c)"/>
+<circle cx="885" cy="128" r="12" fill="#b86e00"/>
+<text x="885" y="132.5" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">5</text>
+<rect x="800" y="150" width="170" height="110" rx="8" fill="#fbf1e1" stroke="#b86e00" stroke-width="1.5"/>
+<text x="814" y="176" font-size="15" fill="#b86e00" font-weight="700">Sequence test</text>
+<text x="814" y="200.3" font-size="12.5">dry run, then with</text>
+<text x="814" y="217.1" font-size="12.5">material</text>
+<line x1="972" y1="205" x2="988" y2="205" stroke="#5b6b7c" stroke-width="2" marker-end="url(#k5b6b7c)"/>
+<circle cx="1075" cy="128" r="12" fill="#2e7d4f"/>
+<text x="1075" y="132.5" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">6</text>
+<rect x="990" y="150" width="170" height="110" rx="8" fill="#e6f3ea" stroke="#2e7d4f" stroke-width="1.5"/>
+<text x="1004" y="176" font-size="15" fill="#2e7d4f" font-weight="700">Handover</text>
+<text x="1004" y="200.3" font-size="12.5">trial batches,</text>
+<text x="1004" y="217.1" font-size="12.5">operator training</text>
+<path d="M 40 290 V 300 H 400 V 290" fill="none" stroke="#1f3a5f" stroke-width="1.5"/>
+<text x="220" y="320" font-size="13" fill="#1f3a5f" font-weight="700" text-anchor="middle">FAT: in the workshop</text>
+<path d="M 420 290 V 300 H 1160 V 290" fill="none" stroke="#2e7d4f" stroke-width="1.5"/>
+<text x="790" y="320" font-size="13" fill="#2e7d4f" font-weight="700" text-anchor="middle">SAT: on site, with the real plant</text>
+<text x="40" y="380" font-size="16" fill="#1f3a5f" font-weight="700">Checks recorded at each stage</text>
+<rect x="40" y="396" width="1120" height="40" rx="6" fill="#f6f8fb" stroke="#d5dde6" stroke-width="1"/>
+<text x="60" y="422" font-size="14" fill="#1f3a5f" font-weight="700">I/O check</text>
+<text x="200" y="422" font-size="14">force each output, toggle each input; mark the I/O list point by point</text>
+<rect x="40" y="442" width="1120" height="40" rx="6" fill="#ffffff" stroke="#d5dde6" stroke-width="1"/>
+<text x="60" y="468" font-size="14" fill="#1f3a5f" font-weight="700">Loop check</text>
+<text x="200" y="468" font-size="14">apply a known signal (e.g. 4, 12, 20 mA) and confirm the scaled value on the HMI</text>
+<rect x="40" y="488" width="1120" height="40" rx="6" fill="#f6f8fb" stroke="#d5dde6" stroke-width="1"/>
+<text x="60" y="514" font-size="14" fill="#1f3a5f" font-weight="700">Weighing</text>
+<text x="200" y="514" font-size="14">calibrate each scale with test weights; check zero and span</text>
+<rect x="40" y="534" width="1120" height="40" rx="6" fill="#ffffff" stroke="#d5dde6" stroke-width="1"/>
+<text x="60" y="560" font-size="14" fill="#1f3a5f" font-weight="700">Interlocks</text>
+<text x="200" y="560" font-size="14">trip every safety condition and confirm the plant stops or holds as designed</text>
+<rect x="40" y="580" width="1120" height="40" rx="6" fill="#f6f8fb" stroke="#d5dde6" stroke-width="1"/>
+<text x="60" y="606" font-size="14" fill="#1f3a5f" font-weight="700">Sequence</text>
+<text x="200" y="606" font-size="14">run complete batches, compare actual weights and times with the recipe</text>
+<rect x="40" y="626" width="1120" height="40" rx="6" fill="#ffffff" stroke="#d5dde6" stroke-width="1"/>
+<text x="60" y="652" font-size="14" fill="#1f3a5f" font-weight="700">SCADA</text>
+<text x="200" y="652" font-size="14">alarms, trends and batch reports appear correctly and are logged</text>
+<text x="1160" y="684" font-size="12" fill="#5b6b7c" text-anchor="end">Mohammed Mahyoub, Industrial Automation &amp; PLC-Based Control Systems</text>
+</svg>

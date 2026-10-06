@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" width="1200" height="840" fill="#1d2733" role="img" aria-label="Control system architecture">
+<title>Control system architecture</title>
+<defs><style>text{font-family:'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif}.m{font-family:Consolas, 'DejaVu Sans Mono', monospace}</style><marker id="k1f3a5f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f3a5f"/></marker><marker id="k0b7a83" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0b7a83"/></marker><marker id="kb86e00" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b86e00"/></marker><marker id="kb3261e" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b3261e"/></marker><marker id="k2e7d4f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d4f"/></marker><marker id="k5b6b7c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6b7c"/></marker><marker id="k1d2733" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d2733"/></marker></defs>
+<rect width="1200" height="840" fill="#ffffff"/>
+<rect x="0" y="0" width="1200" height="6" fill="#1f3a5f"/>
+<text x="40" y="52" font-size="26" font-weight="700">Control system architecture</text>
+<text x="40" y="80" font-size="15" fill="#5b6b7c">Four levels, from field devices up to supervision, linked by industrial communication</text>
+<rect x="40" y="120" width="820" height="100" rx="10" fill="#e8eef6" stroke="#1f3a5f" stroke-width="1.6"/>
+<text x="64" y="158" font-size="18" fill="#1f3a5f" font-weight="700">Supervision</text>
+<text x="64" y="188" font-size="14">SCADA / WinCC: process overview, alarms, trends, historical logs, reports</text>
+<rect x="40" y="250" width="820" height="100" rx="10" fill="#e3f3f4" stroke="#0b7a83" stroke-width="1.6"/>
+<text x="64" y="288" font-size="18" fill="#0b7a83" font-weight="700">Operator interface</text>
+<text x="64" y="318" font-size="14">HMI panels (Weintek / Siemens / Delta): set-points, recipes, manual and auto modes</text>
+<rect x="40" y="380" width="820" height="100" rx="10" fill="#fbf1e1" stroke="#b86e00" stroke-width="1.6"/>
+<text x="64" y="418" font-size="18" fill="#b86e00" font-weight="700">Control</text>
+<text x="64" y="448" font-size="14">PLC (Siemens / Modicon / Delta) with digital and analog I/O modules: sequence logic, interlocks, timing</text>
+<rect x="40" y="510" width="820" height="150" rx="10" fill="#e6f3ea" stroke="#2e7d4f" stroke-width="1.6"/>
+<text x="64" y="540" font-size="18" fill="#2e7d4f" font-weight="700">Field</text>
+<line x1="450" y1="222" x2="450" y2="248" stroke="#5b6b7c" stroke-width="2" marker-end="url(#k5b6b7c)" marker-start="url(#k5b6b7c)"/>
+<line x1="450" y1="352" x2="450" y2="378" stroke="#5b6b7c" stroke-width="2" marker-end="url(#k5b6b7c)" marker-start="url(#k5b6b7c)"/>
+<line x1="450" y1="482" x2="450" y2="508" stroke="#5b6b7c" stroke-width="2" marker-end="url(#k5b6b7c)" marker-start="url(#k5b6b7c)"/>
+<text x="462" y="244" font-size="12.5" fill="#5b6b7c" font-weight="600">Ethernet</text>
+<text x="462" y="374" font-size="12.5" fill="#5b6b7c" font-weight="600">RS485 / Modbus or Industrial Ethernet</text>
+<text x="462" y="504" font-size="12.5" fill="#5b6b7c" font-weight="600">wired I/O: 24 V DC digital, 4–20 mA / 0–10 V analog</text>
+<rect x="64" y="556" width="380" height="88" rx="8" fill="#ffffff" stroke="#2e7d4f" stroke-width="1.2"/>
+<text x="254" y="584" font-size="15" fill="#2e7d4f" font-weight="700" text-anchor="middle">Sensors</text>
+<text x="254" y="608" font-size="13" text-anchor="middle">level, pressure, flow, proximity,</text>
+<text x="254" y="627" font-size="13" text-anchor="middle">weight (load cells)</text>
+<rect x="458" y="556" width="380" height="88" rx="8" fill="#ffffff" stroke="#2e7d4f" stroke-width="1.2"/>
+<text x="648" y="584" font-size="15" fill="#2e7d4f" font-weight="700" text-anchor="middle">Actuators</text>
+<text x="648" y="608" font-size="13" text-anchor="middle">motors, valves, cylinders, pumps,</text>
+<text x="648" y="627" font-size="13" text-anchor="middle">indicator lamps and sirens</text>
+<rect x="890" y="120" width="270" height="540" rx="10" fill="#f6f8fb" stroke="#d5dde6" stroke-width="1"/>
+<text x="910" y="150" font-size="16" fill="#1f3a5f" font-weight="700">Control panel</text>
+<text x="910" y="180" font-size="13.5">PLC and I/O modules</text>
+<text x="910" y="206" font-size="13.5">24 V DC power supplies</text>
+<text x="910" y="232" font-size="13.5">circuit protection</text>
+<text x="910" y="258" font-size="13.5">terminal blocks, wiring</text>
+<text x="910" y="284" font-size="13.5">push buttons, selector</text>
+<text x="910" y="310" font-size="13.5">switches, indicators</text>
+<text x="910" y="336" font-size="13.5">emergency stop circuit</text>
+<text x="910" y="400" font-size="16" fill="#1f3a5f" font-weight="700">Engineering tools</text>
+<text x="910" y="430" font-size="13.5">TIA Portal / STEP 7 (Siemens)</text>
+<text x="910" y="456" font-size="13.5">Unity Pro (Schneider)</text>
+<text x="910" y="482" font-size="13.5">WPLSoft / ISPSoft (Delta)</text>
+<text x="910" y="508" font-size="13.5">WinCC / SCADA software</text>
+<text x="910" y="534" font-size="13.5">AutoCAD Electrical</text>
+<rect x="40" y="690" width="1120" height="110" rx="10" fill="#fbf1e1" stroke="#b86e00" stroke-width="1.2"/>
+<text x="60" y="720" font-size="15" fill="#b86e00" font-weight="700">Design principle</text>
+<text x="60" y="746" font-size="14">Safety and interlocks are enforced in the PLC, close to the process. The HMI and SCADA set targets and show status,</text>
+<text x="60" y="768" font-size="14">so the plant stays in a safe state even if the supervisory level or the network goes down.</text>
+<text x="1160" y="824" font-size="12" fill="#5b6b7c" text-anchor="end">Mohammed Mahyoub, Industrial Automation &amp; PLC-Based Control Systems</text>
+</svg>
