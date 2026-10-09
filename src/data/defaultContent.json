@@ -320,17 +320,18 @@
       "link": "",
       "links": [
         {
-          "label": "Read illustrated case study",
+          "label": "Read case study",
           "href": "/projects/proj-its-support/"
         },
         {
-          "label": "View GitHub Repository",
+          "label": "View repository",
           "href": "https://github.com/Mahyoub88/its-systems-integration"
         }
       ],
       "accent": "amber",
-      "image": "/images/project-covers/proj-its-support.webp",
-      "imageAlt": "Conceptual illustration of intelligent traffic intersection with cameras, lidar beams, traffic signals and road lanes linked visually to an operations server"
+      "image": "/projects/proj-its-support/media/its-field-to-backend.svg",
+      "imageAlt": "ITS Systems Integration & Traffic Enforcement Support — explanatory system diagram",
+      "imageCaption": "Explanatory system diagram"
     },
     {
       "id": "proj-vtid2",
@@ -372,13 +373,14 @@
       "link": "",
       "links": [
         {
-          "label": "Read illustrated case study",
+          "label": "Read case study",
           "href": "/projects/proj-vtid2/"
         }
       ],
       "accent": "purple",
-      "image": "/images/project-covers/proj-vtid2.webp",
-      "imageAlt": "Conceptual illustration of three stylized vehicle silhouettes (car, truck, motorcycle) feeding into a glowing compact neural network with layered nodes and a visual attention heatmap"
+      "image": "/projects/proj-vtid2/media/published-efficiency.svg",
+      "imageAlt": "Efficient Neural Network Architectures for Vehicle Type Classification — published result summary",
+      "imageCaption": "Published result summary"
     },
     {
       "id": "proj-ngsim",
@@ -415,11 +417,11 @@
       "link": "",
       "links": [
         {
-          "label": "Read illustrated case study",
+          "label": "Read case study",
           "href": "/projects/proj-ngsim/"
         },
         {
-          "label": "View GitHub Repository",
+          "label": "View repository",
           "href": "https://github.com/Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101"
         },
         {
@@ -428,8 +430,9 @@
         }
       ],
       "accent": "blue",
-      "image": "/images/project-covers/proj-ngsim.webp",
-      "imageAlt": "Conceptual illustration of overhead freeway with car, truck and motorcycle trajectories represented as dotted paths converging into three classification symbols and a clean scatterplot motif"
+      "image": "/projects/proj-ngsim/media/12-notebook-figure-12.png",
+      "imageAlt": "Vehicle Type Classification Using NGSIM US-101 — executed notebook output",
+      "imageCaption": "Executed notebook output"
     },
     {
       "id": "proj-reconnaissance-robot",
@@ -475,17 +478,18 @@
       "link": "",
       "links": [
         {
-          "label": "Read illustrated case study",
+          "label": "Read case study",
           "href": "/projects/proj-reconnaissance-robot/"
         },
         {
-          "label": "View GitHub Repository",
+          "label": "View repository",
           "href": "https://github.com/Mahyoub88/reconnaissance-robot-rgbd"
         }
       ],
       "accent": "purple",
-      "image": "/images/project-covers/proj-reconnaissance-robot.webp",
-      "imageAlt": "Conceptual illustration of small wheeled exploration rover with RGB-D depth camera, colorful point cloud mapping an indoor corridor, remote control signal"
+      "image": "/projects/proj-reconnaissance-robot/media/robot-system-illustration.svg",
+      "imageAlt": "Reconnaissance Robot — RGB-D Mapping & Remote Control — explanatory component diagram",
+      "imageCaption": "Explanatory component diagram"
     },
     {
       "id": "proj-quadcopter-uav",
@@ -539,17 +543,18 @@
       "link": "",
       "links": [
         {
-          "label": "Read illustrated case study",
+          "label": "Read case study",
           "href": "/projects/proj-quadcopter-uav/"
         },
         {
-          "label": "View GitHub Repository — code, test images & tuned parameters",
+          "label": "View repository",
           "href": "https://github.com/Mahyoub88/autonomous-quadcopter-uav"
         }
       ],
       "accent": "purple",
-      "image": "/images/project-covers/proj-quadcopter-uav.webp",
-      "imageAlt": "Conceptual illustration of four-rotor quadcopter in three-quarter view, dotted waypoint flight path, ground telemetry receiver and tiny FPV camera"
+      "image": "/projects/proj-quadcopter-uav/media/02-02-system-block-diagram.png",
+      "imageAlt": "Autonomous Quadcopter UAV — Flight Control, Telemetry & FPV — original project diagram",
+      "imageCaption": "Original project diagram"
     },
     {
       "id": "proj-sdn",
@@ -600,17 +605,18 @@
       "link": "",
       "links": [
         {
-          "label": "Read illustrated case study",
+          "label": "Read case study",
           "href": "/projects/proj-sdn/"
         },
         {
-          "label": "View GitHub Repository — code, results & figures",
+          "label": "View repository",
           "href": "https://github.com/Mahyoub88/sdn-openflow-lab"
         }
       ],
       "accent": "blue",
-      "image": "/images/project-covers/proj-sdn.webp",
-      "imageAlt": "Conceptual illustration of network switches connected with luminous paths, central software controller redirecting a stream of video frames"
+      "image": "/projects/proj-sdn/media/06-topology.svg",
+      "imageAlt": "Software-Defined Networking — Automation & Video Streaming — reproducible extension topology",
+      "imageCaption": "Reproducible extension topology"
     },
     {
       "id": "proj-ims-voip-volte",
@@ -618,7 +624,7 @@
       "category": "Telecommunications · IP Multimedia Subsystem (IMS) · VoIP / IPTV / VoLTE",
       "title": "IMS Multimedia Services — VoIP, IPTV & VoLTE",
       "subtitle": "Cisco CUCM/CME voice network on GNS3, VLC IPTV, VoLTE over LTE/IMS in OPNET, plus a reproducible Kamailio + Asterisk IMS lab with measured QoS",
-      "description": "Independent project on IP multimedia services around an IMS core: VoIP on Cisco Unified Communications (CUCM 8.6 and a three-router GNS3 network with a branch CME), IPTV streaming over the LAN with VLC, and VoLTE simulated in OPNET Modeler with an IMS core connected to the PSTN, plus an IMS case study for a fixed-line and a mobile operator. The same service areas were then rebuilt as a reproducible open-source lab with measured results.",
+      "description": "Implemented Cisco CUCM/CME voice services and VLC IPTV, with OPNET analysis of VoLTE/IMS. A separate Kamailio/Asterisk extension provides reproducible QoS and multicast measurements.",
       "meta": [
         {
           "label": "Author",
@@ -671,17 +677,18 @@
       "link": "",
       "links": [
         {
-          "label": "Read illustrated case study",
+          "label": "Read case study",
           "href": "/projects/proj-ims-voip-volte/"
         },
         {
-          "label": "View GitHub Repository — screenshots, Cisco configs, lab code & results",
+          "label": "View repository",
           "href": "https://github.com/Mahyoub88/ims-voip-iptv-volte-lab"
         }
       ],
       "accent": "blue",
-      "image": "/images/project-covers/proj-ims-voip-volte.webp",
-      "imageAlt": "Conceptual illustration of IP phone, mobile handset, television video screen and central telecom cloud connected with three distinct communication streams"
+      "image": "/projects/proj-ims-voip-volte/media/10-03_gns3_voice_topology.webp",
+      "imageAlt": "IMS Multimedia Services — VoIP, IPTV & VoLTE — original implementation screenshot",
+      "imageCaption": "Original implementation screenshot"
     },
     {
       "id": "proj-sddc-lab",
@@ -735,17 +742,18 @@
       "link": "",
       "links": [
         {
-          "label": "Read illustrated case study",
+          "label": "Read case study",
           "href": "/projects/proj-sddc-lab/"
         },
         {
-          "label": "View GitHub Repository — screenshots & configuration files",
+          "label": "View repository",
           "href": "https://github.com/Mahyoub88/sddc-lab-implementation"
         }
       ],
       "accent": "blue",
-      "image": "/images/project-covers/proj-sddc-lab.webp",
-      "imageAlt": "Conceptual illustration of isometric server racks, virtual machine layers, shared storage disks and network switch as a coherent miniature data center"
+      "image": "/projects/proj-sddc-lab/media/10-10-vsphere-host-inventory.png",
+      "imageAlt": "Software-Defined Data Center (SDDC) — Design & Implementation — original implementation screenshot",
+      "imageCaption": "Original implementation screenshot"
     },
     {
       "id": "proj-embedded-iot",
@@ -787,17 +795,18 @@
       "link": "",
       "links": [
         {
-          "label": "Read illustrated case study",
+          "label": "Read case study",
           "href": "/projects/proj-embedded-iot/"
         },
         {
-          "label": "View GitHub Repository",
+          "label": "View repository",
           "href": "https://github.com/Mahyoub88/embedded-iot-automation"
         }
       ],
       "accent": "purple",
       "image": "/projects/proj-embedded-iot/media/source/01_system_overview.svg",
-      "imageAlt": "PIC peripheral overview — explanatory source diagram"
+      "imageAlt": "PIC peripheral overview — explanatory source diagram",
+      "imageCaption": "Explanatory system diagram"
     },
     {
       "id": "proj-rfid-study",
@@ -843,24 +852,25 @@
       "link": "",
       "links": [
         {
-          "label": "Read illustrated case study",
+          "label": "Read case study",
           "href": "/projects/proj-rfid-study/"
         },
         {
-          "label": "View GitHub Repository — diagrams, slides & specifications",
+          "label": "View repository",
           "href": "https://github.com/Mahyoub88/rfid-library-automation"
         }
       ],
       "accent": "purple",
-      "image": "/images/project-covers/proj-rfid-study.webp",
-      "imageAlt": "Conceptual illustration of library books carrying tiny RFID tags, reader scanning one book, self-service checkout terminal and RFID gate"
+      "image": "/projects/proj-rfid-study/media/05-05_system_architecture.svg",
+      "imageAlt": "RFID Library Automation System (ISO 15693) — explanatory system diagram",
+      "imageCaption": "Explanatory system diagram"
     },
     {
       "id": "proj-solar-study",
       "group": "earlier",
       "category": "Renewable Energy · Power Systems",
       "title": "Solar Energy Systems — Design, Sizing & Deployment",
-      "description": "Designed and sized photovoltaic power systems, covering load assessment, array and battery sizing, inverter and charge-controller selection, and system protection.",
+      "description": "Designed and integrated photovoltaic supply and backup systems for telecommunications and infrastructure, covering load assessment, array and battery sizing, power conversion, wiring and protection.",
       "meta": [
         {
           "label": "Author",
@@ -889,17 +899,18 @@
       "link": "",
       "links": [
         {
-          "label": "Read illustrated case study",
+          "label": "Read case study",
           "href": "/projects/proj-solar-study/"
         },
         {
-          "label": "View GitHub Repository",
+          "label": "View repository",
           "href": "https://github.com/Mahyoub88/solar-energy-systems"
         }
       ],
       "accent": "amber",
-      "image": "/images/project-covers/proj-solar-study.webp",
-      "imageAlt": "Conceptual illustration of photovoltaic panels receiving sunlight, charge controller, battery bank and inverter connected to a small house load"
+      "image": "/projects/proj-solar-study/media/installation-gallery.png",
+      "imageAlt": "Solar Energy Systems — Design, Sizing & Deployment — source installation photographs",
+      "imageCaption": "Source installation photographs"
     },
     {
       "id": "proj-plc-control",
@@ -928,17 +939,18 @@
       "link": "",
       "links": [
         {
-          "label": "Explore case study",
+          "label": "Read case study",
           "href": "/projects/proj-plc-control/"
         },
         {
-          "label": "Source documentation",
+          "label": "View repository",
           "href": "https://github.com/Mahyoub88/industrial-automation-plc"
         }
       ],
       "accent": "amber",
-      "image": "/projects/proj-plc-control/media/source/00_project_poster.jpg",
-      "imageAlt": "Original project poster"
+      "image": "/projects/proj-plc-control/media/source/gallery/01_hardware_integration.jpg",
+      "imageAlt": "Industrial Automation & PLC-Based Control Systems — source project media",
+      "imageCaption": "Source project media"
     },
     {
       "id": "proj-eeprom-storage",
@@ -966,17 +978,18 @@
       "link": "",
       "links": [
         {
-          "label": "Explore case study",
+          "label": "Read case study",
           "href": "/projects/proj-eeprom-storage/"
         },
         {
-          "label": "Source documentation",
+          "label": "View repository",
           "href": "https://github.com/Mahyoub88/eeprom-data-storage-pic"
         }
       ],
       "accent": "amber",
       "image": "/projects/proj-eeprom-storage/media/source/00_project_poster.jpg",
-      "imageAlt": "Original project poster"
+      "imageAlt": "Original project poster",
+      "imageCaption": "Source project media"
     },
     {
       "id": "proj-monitoring-console",
@@ -1004,17 +1017,18 @@
       "link": "",
       "links": [
         {
-          "label": "Explore case study",
+          "label": "Read case study",
           "href": "/projects/proj-monitoring-console/"
         },
         {
-          "label": "Source documentation",
+          "label": "View repository",
           "href": "https://github.com/Mahyoub88/dotnet-monitoring-apps"
         }
       ],
       "accent": "blue",
       "image": "/projects/proj-monitoring-console/media/monitoring-console.jpg",
-      "imageAlt": "Monitoring console — original interface preview"
+      "imageAlt": "Monitoring console — original interface preview",
+      "imageCaption": "Source project media"
     },
     {
       "id": "proj-service-operations",
@@ -1042,17 +1056,18 @@
       "link": "",
       "links": [
         {
-          "label": "Explore case study",
+          "label": "Read case study",
           "href": "/projects/proj-service-operations/"
         },
         {
-          "label": "Source documentation",
+          "label": "View repository",
           "href": "https://github.com/Mahyoub88/dotnet-monitoring-apps"
         }
       ],
       "accent": "blue",
       "image": "/projects/proj-service-operations/media/02-service-tool.jpg",
-      "imageAlt": "Service application — device records and repair documentation"
+      "imageAlt": "Service application — device records and repair documentation",
+      "imageCaption": "Source project media"
     },
     {
       "id": "proj-rf-link-budget",
@@ -1080,17 +1095,18 @@
       "link": "",
       "links": [
         {
-          "label": "Explore case study",
+          "label": "Read case study",
           "href": "/projects/proj-rf-link-budget/"
         },
         {
-          "label": "Source documentation",
+          "label": "View repository",
           "href": "https://github.com/Mahyoub88/dotnet-monitoring-apps"
         }
       ],
       "accent": "blue",
       "image": "/projects/proj-rf-link-budget/media/01-rf-tool.jpg",
-      "imageAlt": "RF calculator — original interface and calculation fields"
+      "imageAlt": "RF calculator — original interface and calculation fields",
+      "imageCaption": "Source project media"
     },
     {
       "id": "proj-fresnel-planning",
@@ -1117,17 +1133,18 @@
       "link": "",
       "links": [
         {
-          "label": "Explore case study",
+          "label": "Read case study",
           "href": "/projects/proj-fresnel-planning/"
         },
         {
-          "label": "Source documentation",
+          "label": "View repository",
           "href": "https://github.com/Mahyoub88/dotnet-monitoring-apps"
         }
       ],
       "accent": "blue",
       "image": "/projects/proj-fresnel-planning/media/03-fresnel-tool.jpg",
-      "imageAlt": "Line-of-sight and Fresnel planning — source document view"
+      "imageAlt": "Line-of-sight and Fresnel planning — source document view",
+      "imageCaption": "Source project media"
     },
     {
       "id": "proj-enterprise-network",
@@ -1155,17 +1172,18 @@
       "link": "",
       "links": [
         {
-          "label": "Explore case study",
+          "label": "Read case study",
           "href": "/projects/proj-enterprise-network/"
         },
         {
-          "label": "Source documentation",
+          "label": "View repository",
           "href": "https://github.com/Mahyoub88/rf-mpls-network-design"
         }
       ],
       "accent": "amber",
       "image": "/projects/proj-enterprise-network/media/01-network-architecture.jpg",
-      "imageAlt": "Enterprise wireless and network architecture — source project media"
+      "imageAlt": "Enterprise wireless and network architecture — source project media",
+      "imageCaption": "Source project media"
     },
     {
       "id": "proj-wireless-coverage",
@@ -1192,17 +1210,18 @@
       "link": "",
       "links": [
         {
-          "label": "Explore case study",
+          "label": "Read case study",
           "href": "/projects/proj-wireless-coverage/"
         },
         {
-          "label": "Source documentation",
+          "label": "View repository",
           "href": "https://github.com/Mahyoub88/rf-mpls-network-design"
         }
       ],
       "accent": "amber",
       "image": "/projects/proj-wireless-coverage/media/02-network-coverage.jpg",
-      "imageAlt": "Wireless coverage and point-to-point planning — source project media"
+      "imageAlt": "Wireless coverage and point-to-point planning — source project media",
+      "imageCaption": "Source project media"
     },
     {
       "id": "proj-mpls-backbone",
@@ -1231,17 +1250,18 @@
       "link": "",
       "links": [
         {
-          "label": "Explore case study",
+          "label": "Read case study",
           "href": "/projects/proj-mpls-backbone/"
         },
         {
-          "label": "Source documentation",
+          "label": "View repository",
           "href": "https://github.com/Mahyoub88/rf-mpls-network-design"
         }
       ],
       "accent": "amber",
       "image": "/projects/proj-mpls-backbone/media/mpls-backbone.jpg",
-      "imageAlt": "Cisco MPLS backbone — GNS3 topology preview"
+      "imageAlt": "Cisco MPLS backbone — GNS3 topology preview",
+      "imageCaption": "Source project media"
     }
   ],
   "articles": [
@@ -1250,7 +1270,7 @@
       "title": "USV Systems Integration — Study Notes",
       "excerpt": "Structured study notes on uncrewed surface vehicle integration: navigation and sensor fusion, autopilot and PID heading control, NMEA 2000 / 0183 and PGNs, radar/ARPA, COLREGs, vessel networks and link failover, Linux diagnostics, safety, ICD and FAT/SAT.",
       "date": "",
-      "url": "https://github.com/Mahyoub88/usv-systems-integration-notes"
+      "url": "/notes/usv/"
     }
   ],
   "contact": {

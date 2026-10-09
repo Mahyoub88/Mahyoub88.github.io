@@ -33,7 +33,7 @@ The published preview has limited resolution. Small labels, exact readings and d
 
 Separate the desktop view from the background scheduler, device adapters, health rules, event storage, incident management and reporting. The scheduler runs time-limited checks without blocking the interface. Each observation includes its device, check type, timestamp, result and quality.
 
-![Monitoring architecture](media/monitoring-console-architecture.svg)
+![Monitoring architecture](../proj-monitoring-console/media/architecture.svg)
 
 Display condition and observation freshness separately. An unsuccessful network check does not alone prove hardware failure. Use healthy, warning, critical, unknown and stale states; show the last successful observation. An expired observation must not remain a fresh green status.
 
@@ -67,7 +67,7 @@ Use stable internal keys rather than names as relationships. Record actual event
 
 Receive equipment, document the fault, diagnose it, perform the repair, verify or calibrate as required, issue a reviewed report, then deliver and close the case. Failed verification returns the case to diagnosis or repair.
 
-![Service workflow](media/service-operations-workflow.svg)
+![Service workflow](../proj-service-operations/media/workflow.svg)
 
 Use unique service-case numbers and controlled status transitions. Reject a repair date before receipt. Save a case and related actions in one transaction. Use parameterized database operations, an audit history and concurrent-edit conflict detection. Records associated with issued reports should retain their history through archival rather than silent deletion.
 
@@ -89,7 +89,7 @@ The poster names FSPL, Hata, Okumura and ITU-R P.1546. Naming models does not es
 
 Separate calculations from WinForms button events. Validate inputs, normalize units, select an applicable model, calculate path loss and received power, evaluate receiver requirements, then report results with the original assumptions and model version.
 
-![RF calculation architecture](media/rf-link-budget-architecture.svg)
+![RF calculation architecture](../proj-rf-link-budget/media/architecture.svg)
 
 Keep power in dBm, gains in dBi and losses and margins in dB. Use explicit variable names or unit-aware values. Convert units at clear boundaries and avoid mixing Hz with MHz or metres with kilometres.
 
@@ -161,7 +161,7 @@ Use endpoint antenna elevations on a common vertical reference, sampled terrain,
 
 Use metres for every length and Hz for frequency. Apply the curvature correction only when the imported profile has not already incorporated it. State the vertical reference and curvature method to prevent double correction. Review other k assumptions where the planning requirement calls for them.
 
-![Fresnel planning workflow](media/fresnel-planning-workflow.svg)
+![Fresnel planning workflow](../proj-fresnel-planning/media/workflow.svg)
 
 A 60% first-zone clearance is an initial planning criterion, subject to path, refraction and availability assumptions. It does not guarantee every link’s performance. Reference: [ITU-R P.530, line-of-sight path-clearance considerations](https://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.530-18-202109-I%21%21PDF-E.pdf).
 

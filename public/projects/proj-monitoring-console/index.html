@@ -1,1 +1,110 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Monitoring &amp; Diagnostics Console — VB.NET | Mohammed Mahyoub</title><meta name="description" content="Built a WinForms dashboard for multi-site system monitoring, real-time diagnostics, automated health evaluation, issue tracking and technical reporting."><link rel="canonical" href="https://mahyoub88.github.io/projects/proj-monitoring-console/"><meta property="og:title" content="Monitoring &amp; Diagnostics Console — VB.NET"><meta property="og:description" content="Built a WinForms dashboard for multi-site system monitoring, real-time diagnostics, automated health evaluation, issue tracking and technical reporting."><meta property="og:image" content="https://mahyoub88.github.io/projects/proj-monitoring-console/media/monitoring-console.jpg"><link rel="stylesheet" href="/projects/case-study.css"></head><body><a class="skip" href="#main">Skip to content</a><header><nav><a href="/">← Engineering portfolio</a><a href="/projects/">All case studies</a></nav></header><main id="main"><p class="eyebrow">Desktop Software · Operational Diagnostics</p><h1>Monitoring &amp; Diagnostics Console — VB.NET</h1><p class="lede">Built a WinForms dashboard for multi-site system monitoring, real-time diagnostics, automated health evaluation, issue tracking and technical reporting.</p><span class="badge">Implemented Project</span><figure class="hero-media "><img src="/projects/proj-monitoring-console/media/monitoring-console.jpg" alt="Monitoring console — original interface preview"><figcaption>Project-specific source visual · open the gallery for the full figure</figcaption></figure><div class="tags"><span>VB.NET</span><span>WinForms</span><span>Diagnostics</span><span>Monitoring</span><span>Reporting</span></div><nav class="section-nav"><a href="#overview">Architecture</a><a href="#engineering">Engineering approach</a><a href="#analysis">Detailed analysis</a><a href="#gallery">Visual documentation</a><a href="#sources">Sources</a></nav><section id="overview"><h2>System architecture</h2><figure><a href="media/architecture.svg"><img loading="lazy" src="media/architecture.svg" alt="Proposed architecture — responsibilities inferred from documented scope"></a><figcaption>Proposed architecture — responsibilities inferred from documented scope</figcaption></figure><div class="summary"><h3>Implementation scope</h3><p>The console presents device and system condition in one operational view. Its role is to support fault recognition, diagnosis and follow-up across multiple sites.</p></div></section><section id="engineering"><h2>Engineering approach</h2><p>Status, health assessment and reporting are separate responsibilities. The available interface screenshot documents the console; application source code and deployment configuration are not published.</p><figure><a href="media/workflow.svg"><img loading="lazy" src="media/workflow.svg" alt="Proposed workflow — sequence and verification responsibilities"></a><figcaption>Proposed workflow — sequence and verification responsibilities</figcaption></figure></section><section id="analysis"><h2>Reading the original interface</h2><p>The source poster groups a main monitoring dashboard, site detail and rules analysis, a connection or fault-test panel, and an event / failure-tracking view. These areas support recognition, diagnosis and follow-up. The preview is low resolution: small labels, exact values and device protocols cannot reliably be recovered from it.</p><h3>Proposed functional design</h3><p>Collect observations through device-specific adapters on a background scheduler. Each observation records the check type, timestamp, result and data quality. A separate rule engine evaluates condition; the interface displays both condition and the time of the last successful observation.</p><p>Use healthy, warning, critical, unknown and stale states. A failed network check is evidence of an unsuccessful check, not sufficient proof of a hardware failure. Expired data must stop appearing as a fresh healthy reading.</p><h3>Records and operational flow</h3><p>Suggested entities are Site, Device, ProbeResult, HealthRule, Event, Incident and IncidentAction. A device has many observations; several repeated events may belong to one incident. Record state transitions and aggregate repeat failures to avoid creating an incident on every polling cycle.</p><h3>Verification scenarios</h3><p>Exercise unavailable devices, slow responses, stale observations, database failure, recovery and shutdown during an active check. The interface should remain responsive and display uncertainty explicitly. No measured uptime or response-time benchmark is inferred from the screenshot.</p></section><section id="gallery"><h2>Visual documentation</h2><p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p><div class="grid"><figure><a href="media/monitoring-console.jpg"><img loading="lazy" src="media/monitoring-console.jpg" alt="Monitoring console — original interface preview"></a><figcaption>Monitoring console — original interface preview</figcaption></figure></div></section><section id="sources"><h2>Source documentation</h2><p><a href="/projects/engineering-applications-analysis/">Complete English analysis and diagrams</a></p><ul><li><a href="https://github.com/Mahyoub88/dotnet-monitoring-apps">Source repository — dotnet-monitoring-apps</a></li><li><a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project record</a></li></ul></section></main><footer>Mohammed Mahyoub · Implementation media and explanatory diagrams retain their source context.</footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monitoring &amp; Diagnostics Console — VB.NET | Mohammed Mahyoub</title>
+<meta name="description" content="Built a WinForms dashboard for multi-site system monitoring, real-time diagnostics, automated health evaluation, issue tracking and technical reporting.">
+<link rel="canonical" href="https://mahyoub88.github.io/projects/proj-monitoring-console/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Monitoring &amp; Diagnostics Console — VB.NET">
+<meta property="og:description" content="Built a WinForms dashboard for multi-site system monitoring, real-time diagnostics, automated health evaluation, issue tracking and technical reporting.">
+<meta property="og:url" content="https://mahyoub88.github.io/projects/proj-monitoring-console/">
+<meta property="og:image" content="https://mahyoub88.github.io/projects/proj-monitoring-console/media/monitoring-console.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg">
+<link rel="stylesheet" href="/projects/case-study.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<nav aria-label="Portfolio navigation">
+<a href="/">← Engineering portfolio</a>
+<a href="/projects/">All case studies</a>
+</nav>
+</header>
+<main id="main">
+<p class="eyebrow">Desktop Software · Operational Diagnostics</p>
+<h1>Monitoring &amp; Diagnostics Console — VB.NET</h1>
+<p class="lede">Built a WinForms dashboard for multi-site system monitoring, real-time diagnostics, automated health evaluation, issue tracking and technical reporting.</p>
+<span class="badge">Implemented Project</span>
+<figure class="hero-media">
+<a href="/projects/proj-monitoring-console/media/monitoring-console.jpg">
+<img src="/projects/proj-monitoring-console/media/monitoring-console.jpg" alt="Monitoring console — original interface preview" fetchpriority="high">
+</a>
+<figcaption>Source project media · Open image for full detail.</figcaption>
+</figure>
+<div class="tags">
+<span>VB.NET</span>
+<span>WinForms</span>
+<span>Diagnostics</span>
+<span>Monitoring</span>
+<span>Reporting</span>
+</div>
+<nav class="section-nav">
+<a href="#overview">Architecture</a>
+<a href="#engineering">Engineering approach</a>
+<a href="#analysis">Detailed analysis</a>
+<a href="#gallery">Visual documentation</a>
+<a href="#sources">Sources</a>
+</nav>
+<section id="overview">
+<h2>System architecture</h2>
+<figure>
+<a href="media/architecture.svg">
+<img loading="lazy" src="media/architecture.svg" alt="Proposed architecture — responsibilities inferred from documented scope">
+</a>
+<figcaption>Proposed architecture — responsibilities inferred from documented scope</figcaption>
+</figure>
+<div class="summary">
+<h3>Implementation scope</h3>
+<p>The console presents device and system condition in one operational view. Its role is to support fault recognition, diagnosis and follow-up across multiple sites.</p>
+</div>
+</section>
+<section id="engineering">
+<h2>Engineering approach</h2>
+<p>Status, health assessment and reporting are separate responsibilities. The available interface screenshot documents the console; application source code and deployment configuration are not published.</p>
+<figure>
+<a href="media/workflow.svg">
+<img loading="lazy" src="media/workflow.svg" alt="Proposed workflow — sequence and verification responsibilities">
+</a>
+<figcaption>Proposed workflow — sequence and verification responsibilities</figcaption>
+</figure>
+</section>
+<section id="analysis">
+<h2>Reading the original interface</h2>
+<p>The source poster groups a main monitoring dashboard, site detail and rules analysis, a connection or fault-test panel, and an event / failure-tracking view. These areas support recognition, diagnosis and follow-up. The preview is low resolution: small labels, exact values and device protocols cannot reliably be recovered from it.</p>
+<h3>Proposed functional design</h3>
+<p>Collect observations through device-specific adapters on a background scheduler. Each observation records the check type, timestamp, result and data quality. A separate rule engine evaluates condition; the interface displays both condition and the time of the last successful observation.</p>
+<p>Use healthy, warning, critical, unknown and stale states. A failed network check is evidence of an unsuccessful check, not sufficient proof of a hardware failure. Expired data must stop appearing as a fresh healthy reading.</p>
+<h3>Records and operational flow</h3>
+<p>Suggested entities are Site, Device, ProbeResult, HealthRule, Event, Incident and IncidentAction. A device has many observations; several repeated events may belong to one incident. Record state transitions and aggregate repeat failures to avoid creating an incident on every polling cycle.</p>
+<h3>Verification scenarios</h3>
+<p>Exercise unavailable devices, slow responses, stale observations, database failure, recovery and shutdown during an active check. The interface should remain responsive and display uncertainty explicitly. No measured uptime or response-time benchmark is inferred from the screenshot.</p>
+</section>
+<section id="gallery">
+<h2>Source context</h2>
+<p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p>
+</section>
+<section id="sources">
+<h2>Source documentation</h2>
+<p>
+<a href="/projects/engineering-applications-analysis/">Complete English analysis and diagrams</a>
+</p>
+<ul>
+<li>
+<a href="https://github.com/Mahyoub88/dotnet-monitoring-apps">Source repository — dotnet-monitoring-apps</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project record</a>
+</li>
+</ul>
+</section>
+<nav class="project-pagination" aria-label="More case studies">
+<a href="/projects/proj-eeprom-storage/">← Embedded EEPROM Data Storage &amp; Retrieval System</a>
+<a href="/projects/proj-service-operations/">Service Operations &amp; Technical Documentation Management System →</a>
+</nav>
+</main>
+<footer>Mohammed Mahyoub · Source media, explanatory diagrams and recorded results are identified in their captions.</footer>
+</body>
+</html>
