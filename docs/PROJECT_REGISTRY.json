@@ -1,0 +1,229 @@
+{
+  "source": "src/data/defaultContent.json",
+  "projectCount": 20,
+  "projects": [
+    {
+      "id": "proj-its-support",
+      "title": "ITS Systems Integration & Traffic Enforcement Support",
+      "url": "https://mahyoub88.github.io/projects/proj-its-support/",
+      "repository": "https://github.com/Mahyoub88/its-systems-integration",
+      "status": "Professional Case Study — Details Anonymised",
+      "role": "Field and systems engineering across cameras, LiDAR, sensors, control units, networking, databases, and software interfaces.",
+      "image": "/projects/proj-its-support/media/its-field-to-backend.svg",
+      "imageCaption": "Explanatory system diagram"
+    },
+    {
+      "id": "proj-vtid2",
+      "title": "Efficient Neural Network Architectures for Vehicle Type Classification",
+      "url": "https://mahyoub88.github.io/projects/proj-vtid2/",
+      "repository": null,
+      "status": "Academic Research — Code Private During Assessment",
+      "role": "",
+      "image": "/projects/proj-vtid2/media/published-efficiency.svg",
+      "imageCaption": "Published result summary"
+    },
+    {
+      "id": "proj-ngsim",
+      "title": "Vehicle Type Classification Using NGSIM US-101",
+      "url": "https://mahyoub88.github.io/projects/proj-ngsim/",
+      "repository": "https://github.com/Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101",
+      "status": "Public Repository · Archived on Zenodo (DOI)",
+      "role": "Data preprocessing, exploratory analysis, feature engineering, model comparison, hyperparameter optimisation, classification evaluation, and feature-importance analysis.",
+      "image": "/projects/proj-ngsim/media/12-notebook-figure-12.png",
+      "imageCaption": "Executed notebook output"
+    },
+    {
+      "id": "proj-reconnaissance-robot",
+      "title": "Reconnaissance Robot — RGB-D Mapping & Remote Control",
+      "url": "https://mahyoub88.github.io/projects/proj-reconnaissance-robot/",
+      "repository": "https://github.com/Mahyoub88/reconnaissance-robot-rgbd",
+      "status": "Implemented Project",
+      "role": "End-to-end implementation: system design, programming, assembly, integration, testing and documentation.",
+      "image": "/projects/proj-reconnaissance-robot/media/robot-system-illustration.svg",
+      "imageCaption": "Explanatory component diagram"
+    },
+    {
+      "id": "proj-quadcopter-uav",
+      "title": "Autonomous Quadcopter UAV — Flight Control, Telemetry & FPV",
+      "url": "https://mahyoub88.github.io/projects/proj-quadcopter-uav/",
+      "repository": "https://github.com/Mahyoub88/autonomous-quadcopter-uav",
+      "status": "Implemented Project — Built & Flight-Tested",
+      "role": "Team project covering propulsion sizing, airframe and electronics integration, sensor calibration, PID tuning, flight-mode and failsafe testing, telemetry and video systems, and technical documentation.",
+      "image": "/projects/proj-quadcopter-uav/media/02-02-system-block-diagram.png",
+      "imageCaption": "Original project diagram"
+    },
+    {
+      "id": "proj-sdn",
+      "title": "Software-Defined Networking — Automation & Video Streaming",
+      "url": "https://mahyoub88.github.io/projects/proj-sdn/",
+      "repository": "https://github.com/Mahyoub88/sdn-openflow-lab",
+      "status": "Implemented Project",
+      "role": "End-to-end design, implementation, programming, testing and technical documentation.",
+      "image": "/projects/proj-sdn/media/06-topology.svg",
+      "imageCaption": "Reproducible extension topology"
+    },
+    {
+      "id": "proj-ims-voip-volte",
+      "title": "IMS Multimedia Services — VoIP, IPTV & VoLTE",
+      "url": "https://mahyoub88.github.io/projects/proj-ims-voip-volte/",
+      "repository": "https://github.com/Mahyoub88/ims-voip-iptv-volte-lab",
+      "status": "Implemented Project",
+      "role": "Team design, implementation and testing of the project; design, implementation and testing of the reproducible lab.",
+      "image": "/projects/proj-ims-voip-volte/media/10-03_gns3_voice_topology.webp",
+      "imageCaption": "Original implementation screenshot"
+    },
+    {
+      "id": "proj-sddc-lab",
+      "title": "Software-Defined Data Center (SDDC) — Design & Implementation",
+      "url": "https://mahyoub88.github.io/projects/proj-sddc-lab/",
+      "repository": "https://github.com/Mahyoub88/sddc-lab-implementation",
+      "status": "Implemented Project",
+      "role": "Team project covering design, implementation, configuration, testing and technical documentation, alongside a study of SDDC architecture, storage networking (DAS/NAS/SAN, FC, IP SAN), network virtualisation and cloud models.",
+      "image": "/projects/proj-sddc-lab/media/10-10-vsphere-host-inventory.png",
+      "imageCaption": "Original implementation screenshot"
+    },
+    {
+      "id": "proj-embedded-iot",
+      "title": "Embedded Systems & IoT — PIC Firmware and Peripheral Integration",
+      "url": "https://mahyoub88.github.io/projects/proj-embedded-iot/",
+      "repository": "https://github.com/Mahyoub88/embedded-iot-automation",
+      "status": "Implemented Project",
+      "role": "Real-time monitoring and control systems, sensor integration, telemetry, hardware configuration, functional testing, and technical validation.",
+      "image": "/projects/proj-embedded-iot/media/source/01_system_overview.svg",
+      "imageCaption": "Explanatory system diagram"
+    },
+    {
+      "id": "proj-rfid-study",
+      "title": "RFID Library Automation System (ISO 15693)",
+      "url": "https://mahyoub88.github.io/projects/proj-rfid-study/",
+      "repository": "https://github.com/Mahyoub88/rfid-library-automation",
+      "status": "Implemented Project",
+      "role": "Design, implementation and technical presentation of the system.",
+      "image": "/projects/proj-rfid-study/media/05-05_system_architecture.svg",
+      "imageCaption": "Explanatory system diagram"
+    },
+    {
+      "id": "proj-solar-study",
+      "title": "Solar Energy Systems — Design, Sizing & Deployment",
+      "url": "https://mahyoub88.github.io/projects/proj-solar-study/",
+      "repository": "https://github.com/Mahyoub88/solar-energy-systems",
+      "status": "Implemented Project",
+      "role": "Load analysis, component sizing and selection, wiring and protection, and performance estimation.",
+      "image": "/projects/proj-solar-study/media/installation-gallery.png",
+      "imageCaption": "Source installation photographs"
+    },
+    {
+      "id": "proj-plc-control",
+      "title": "Industrial Automation & PLC-Based Control Systems",
+      "url": "https://mahyoub88.github.io/projects/proj-plc-control/",
+      "repository": "https://github.com/Mahyoub88/industrial-automation-plc",
+      "status": "Implemented Project",
+      "role": "The field layer measures level, pressure, flow and weight. PLC logic coordinates motors, valves and pumps, while HMI panels provide operator commands and SCADA provides alarms, trends and historical records.",
+      "image": "/projects/proj-plc-control/media/source/gallery/01_hardware_integration.jpg",
+      "imageCaption": "Source project media"
+    },
+    {
+      "id": "proj-eeprom-storage",
+      "title": "Embedded EEPROM Data Storage & Retrieval System",
+      "url": "https://mahyoub88.github.io/projects/proj-eeprom-storage/",
+      "repository": "https://github.com/Mahyoub88/eeprom-data-storage-pic",
+      "status": "Implemented Project",
+      "role": "The firmware separates the value being measured or entered from the stored byte. Read-back verifies persistence, while the display exposes the retrieved value to the operator.",
+      "image": "/projects/proj-eeprom-storage/media/source/00_project_poster.jpg",
+      "imageCaption": "Source project media"
+    },
+    {
+      "id": "proj-monitoring-console",
+      "title": "Monitoring & Diagnostics Console — VB.NET",
+      "url": "https://mahyoub88.github.io/projects/proj-monitoring-console/",
+      "repository": "https://github.com/Mahyoub88/dotnet-monitoring-apps",
+      "status": "Implemented Project",
+      "role": "The console presents device and system condition in one operational view. Its role is to support fault recognition, diagnosis and follow-up across multiple sites.",
+      "image": "/projects/proj-monitoring-console/media/monitoring-console.jpg",
+      "imageCaption": "Source project media"
+    },
+    {
+      "id": "proj-service-operations",
+      "title": "Service Operations & Technical Documentation Management System",
+      "url": "https://mahyoub88.github.io/projects/proj-service-operations/",
+      "repository": "https://github.com/Mahyoub88/dotnet-monitoring-apps",
+      "status": "Implemented Project",
+      "role": "The source interface shows device records, repair details and warranty/calibration fields. These records connect the equipment identity with the work performed and the documents needed for follow-up.",
+      "image": "/projects/proj-service-operations/media/02-service-tool.jpg",
+      "imageCaption": "Source project media"
+    },
+    {
+      "id": "proj-rf-link-budget",
+      "title": "RF Link Budget & Propagation Analysis Engine",
+      "url": "https://mahyoub88.github.io/projects/proj-rf-link-budget/",
+      "repository": "https://github.com/Mahyoub88/dotnet-monitoring-apps",
+      "status": "Implemented Project",
+      "role": "The tool relates transmit power, antenna gains and propagation loss to the receive level used in link assessment. Its screenshot belongs to a standalone calculator rather than the monitoring application.",
+      "image": "/projects/proj-rf-link-budget/media/01-rf-tool.jpg",
+      "imageCaption": "Source project media"
+    },
+    {
+      "id": "proj-fresnel-planning",
+      "title": "Line-of-Sight & Fresnel Zone Wireless Planning Tool",
+      "url": "https://mahyoub88.github.io/projects/proj-fresnel-planning/",
+      "repository": "https://github.com/Mahyoub88/dotnet-monitoring-apps",
+      "status": "Implemented Project",
+      "role": "Line-of-sight establishes the direct path between antennas. Fresnel analysis examines clearance around that path, giving the planner a different view from a power-only link budget.",
+      "image": "/projects/proj-fresnel-planning/media/03-fresnel-tool.jpg",
+      "imageCaption": "Source project media"
+    },
+    {
+      "id": "proj-enterprise-network",
+      "title": "Enterprise Wireless & Network Infrastructure Architecture",
+      "url": "https://mahyoub88.github.io/projects/proj-enterprise-network/",
+      "repository": "https://github.com/Mahyoub88/rf-mpls-network-design",
+      "status": "Implemented Project",
+      "role": "The architecture connects local users and infrastructure services through wireless and wired access. Routing and VPN connectivity provide the site-to-site boundary.",
+      "image": "/projects/proj-enterprise-network/media/01-network-architecture.jpg",
+      "imageCaption": "Source project media"
+    },
+    {
+      "id": "proj-wireless-coverage",
+      "title": "Wireless Coverage & Point-to-Point Network Planning",
+      "url": "https://mahyoub88.github.io/projects/proj-wireless-coverage/",
+      "repository": "https://github.com/Mahyoub88/rf-mpls-network-design",
+      "status": "Implemented Project",
+      "role": "Coverage describes where access is available; point-to-point planning describes the transport between sites. Antenna placement and alignment influence both the proposed link and its installation.",
+      "image": "/projects/proj-wireless-coverage/media/02-network-coverage.jpg",
+      "imageCaption": "Source project media"
+    },
+    {
+      "id": "proj-mpls-backbone",
+      "title": "Network Infrastructure Design — MPLS Backbone",
+      "url": "https://mahyoub88.github.io/projects/proj-mpls-backbone/",
+      "repository": "https://github.com/Mahyoub88/rf-mpls-network-design",
+      "status": "Implemented Project",
+      "role": "OSPF provides the routing underlay. MPLS carries labelled traffic, while VRFs separate customer routing contexts and MP-BGP exchanges VPN routes.",
+      "image": "/projects/proj-mpls-backbone/media/mpls-backbone.jpg",
+      "imageCaption": "Source project media"
+    }
+  ],
+  "collections": [
+    {
+      "id": "proj-monitoring-apps",
+      "projectIds": [
+        "proj-monitoring-console",
+        "proj-service-operations",
+        "proj-rf-link-budget",
+        "proj-fresnel-planning"
+      ]
+    },
+    {
+      "id": "proj-rf-network",
+      "projectIds": [
+        "proj-enterprise-network",
+        "proj-wireless-coverage",
+        "proj-mpls-backbone"
+      ]
+    }
+  ],
+  "studyNotes": {
+    "title": "USV Systems Integration — Study Notes",
+    "url": "https://github.com/Mahyoub88/usv-systems-integration-notes"
+  }
+}

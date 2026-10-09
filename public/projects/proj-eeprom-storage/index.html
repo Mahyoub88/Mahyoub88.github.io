@@ -1,1 +1,157 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Embedded EEPROM Data Storage &amp; Retrieval System | Mohammed Mahyoub</title><meta name="description" content="Implemented PIC-based data storage and retrieval using on-chip EEPROM, mikroC firmware and a display interface, preserving stored values across power loss."><link rel="canonical" href="https://mahyoub88.github.io/projects/proj-eeprom-storage/"><meta property="og:title" content="Embedded EEPROM Data Storage &amp; Retrieval System"><meta property="og:description" content="Implemented PIC-based data storage and retrieval using on-chip EEPROM, mikroC firmware and a display interface, preserving stored values across power loss."><meta property="og:image" content="https://mahyoub88.github.io/projects/proj-eeprom-storage/media/source/00_project_poster.jpg"><link rel="stylesheet" href="/projects/case-study.css"></head><body><a class="skip" href="#main">Skip to content</a><header><nav><a href="/">← Engineering portfolio</a><a href="/projects/">All case studies</a></nav></header><main id="main"><p class="eyebrow">Embedded Systems · Non-volatile Storage</p><h1>Embedded EEPROM Data Storage &amp; Retrieval System</h1><p class="lede">Implemented PIC-based data storage and retrieval using on-chip EEPROM, mikroC firmware and a display interface, preserving stored values across power loss.</p><span class="badge">Implemented Project</span><figure class="hero-media "><img src="/projects/proj-eeprom-storage/media/source/00_project_poster.jpg" alt="Original project poster"><figcaption>Project-specific source visual · open the gallery for the full figure</figcaption></figure><div class="tags"><span>PIC</span><span>EEPROM</span><span>mikroC</span><span>Proteus</span><span>LCD</span></div><nav class="section-nav"><a href="#overview">Architecture</a><a href="#engineering">Engineering approach</a><a href="#gallery">Visual documentation</a><a href="#sources">Sources</a></nav><section id="overview"><h2>System architecture</h2><figure><a href="media/architecture.svg"><img loading="lazy" src="media/architecture.svg" alt="Explanatory architecture — functional boundaries for this project"></a><figcaption>Explanatory architecture — functional boundaries for this project</figcaption></figure><div class="summary"><h3>Implementation scope</h3><p>The firmware separates the value being measured or entered from the stored byte. Read-back verifies persistence, while the display exposes the retrieved value to the operator.</p></div></section><section id="engineering"><h2>Engineering approach</h2><p>Writing only when a value changes reduces unnecessary EEPROM writes. The public repository includes a store/read-back illustration and a reference snippet; the poster is a preview rather than a full schematic.</p><figure><a href="media/workflow.svg"><img loading="lazy" src="media/workflow.svg" alt="Explanatory workflow — project-specific sequence"></a><figcaption>Explanatory workflow — project-specific sequence</figcaption></figure></section><section id="gallery"><h2>Visual documentation</h2><p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p><div class="grid"><figure><a href="media/source/00_project_poster.jpg"><img loading="lazy" src="media/source/00_project_poster.jpg" alt="project poster — source repository figure"></a><figcaption>project poster — source repository figure</figcaption></figure><figure><a href="media/source/01_eeprom_store_and_readback.svg"><img loading="lazy" src="media/source/01_eeprom_store_and_readback.svg" alt="eeprom store and readback — source repository figure"></a><figcaption>eeprom store and readback — source repository figure</figcaption></figure></div></section><section id="sources"><h2>Source documentation</h2><ul><li><a href="https://github.com/Mahyoub88/eeprom-data-storage-pic">Source repository — eeprom-data-storage-pic</a></li><li><a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project record</a></li></ul></section></main><footer>Mohammed Mahyoub · Implementation media and explanatory diagrams retain their source context.</footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Embedded EEPROM Data Storage &amp; Retrieval System | Mohammed Mahyoub</title>
+<meta name="description" content="Implemented PIC-based data storage and retrieval using on-chip EEPROM, mikroC firmware and a display interface, preserving stored values across power loss.">
+<link rel="canonical" href="https://mahyoub88.github.io/projects/proj-eeprom-storage/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Embedded EEPROM Data Storage &amp; Retrieval System">
+<meta property="og:description" content="Implemented PIC-based data storage and retrieval using on-chip EEPROM, mikroC firmware and a display interface, preserving stored values across power loss.">
+<meta property="og:url" content="https://mahyoub88.github.io/projects/proj-eeprom-storage/">
+<meta property="og:image" content="https://mahyoub88.github.io/projects/proj-eeprom-storage/media/source/00_project_poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg">
+<link rel="stylesheet" href="/projects/case-study.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<nav aria-label="Portfolio navigation">
+<a href="/">← Engineering portfolio</a>
+<a href="/projects/">All case studies</a>
+</nav>
+</header>
+<main id="main">
+<p class="eyebrow">Embedded Systems · Non-volatile Storage</p>
+<h1>Embedded EEPROM Data Storage &amp; Retrieval System</h1>
+<p class="lede">Implemented PIC-based data storage and retrieval using on-chip EEPROM, mikroC firmware and a display interface, preserving stored values across power loss.</p>
+<span class="badge">Implemented Project</span>
+<figure class="hero-media">
+<a href="/projects/proj-eeprom-storage/media/source/00_project_poster.jpg">
+<img src="/projects/proj-eeprom-storage/media/source/00_project_poster.jpg" alt="Original project poster" fetchpriority="high">
+</a>
+<figcaption>Source project media · Open image for full detail.</figcaption>
+</figure>
+<div class="tags">
+<span>PIC</span>
+<span>EEPROM</span>
+<span>mikroC</span>
+<span>Proteus</span>
+<span>LCD</span>
+</div>
+<nav class="section-nav">
+<a href="#overview">Architecture</a>
+<a href="#engineering">Engineering approach</a>
+<a href="#gallery">Visual documentation</a>
+<a href="#sources">Sources</a>
+</nav>
+<section id="overview">
+<h2>System architecture</h2>
+<figure>
+<a href="media/architecture.svg">
+<img loading="lazy" src="media/architecture.svg" alt="Explanatory architecture — functional boundaries for this project">
+</a>
+<figcaption>Explanatory architecture — functional boundaries for this project</figcaption>
+</figure>
+<div class="summary">
+<h3>Implementation scope</h3>
+<p>The firmware separates the value being measured or entered from the stored byte. Read-back verifies persistence, while the display exposes the retrieved value to the operator.</p>
+</div>
+</section>
+<section id="engineering">
+<h2>Engineering approach</h2>
+<p>Writing only when a value changes reduces unnecessary EEPROM writes. The public repository includes a store/read-back illustration and a reference snippet; the poster is a preview rather than a full schematic.</p>
+<figure>
+<a href="media/workflow.svg">
+<img loading="lazy" src="media/workflow.svg" alt="Explanatory workflow — project-specific sequence">
+</a>
+<figcaption>Explanatory workflow — project-specific sequence</figcaption>
+</figure>
+</section>
+<section id="storage-example">
+<h2>Write, verify and restore</h2>
+<p>The value is stored in on-chip EEPROM rather than ordinary RAM, so firmware can recover it after power loss. Write completion and read-back need to follow the selected PIC device and mikroC library.</p>
+<div class="table-scroll">
+<table>
+<caption>Illustrative verification sequence — expected behavior, not a published device-test log</caption>
+<thead>
+<tr>
+<th scope="col">Step</th>
+<th scope="col">Action</th>
+<th scope="col">Expected observation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Store the example byte 42 at a valid EEPROM address</td>
+<td>Write completes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Read the same address</td>
+<td>The returned byte is 42</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Restart after a power cycle</td>
+<td>Start-up reads the retained byte</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Request storage of the unchanged byte</td>
+<td>Write-on-change avoids a redundant write</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Reference snippet</h3>
+<p>This mikroC-style example comes from the repository explanation. It is not recovered project firmware or a complete device configuration.</p>
+<pre class="formula">
+<code>void store_byte(unsigned char addr, unsigned char value) {
+  if (EEPROM_Read(addr) == value) return;
+  EEPROM_Write(addr, value);
+  Delay_ms(20);
+  if (EEPROM_Read(addr) != value) {
+    /* report a write error */
+  }
+}</code>
+</pre>
+<p>Valid addresses, timing, power stability and interrupt handling depend on the device and library. The <a href="https://download.mikroe.com/documents/compilers/mikroc/pic/help/eeprom_library.htm">mikroC EEPROM library documentation</a> describes supported devices and write behavior. Multi-byte persistence needs a defined layout and integrity strategy; a successful single-byte read-back does not establish atomic multi-byte updates.</p>
+<p>
+<a href="https://github.com/Mahyoub88/eeprom-data-storage-pic">Source explanation, poster and storage-cycle diagram</a>
+</p>
+</section>
+<section id="gallery">
+<h2>Visual documentation</h2>
+<p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p>
+<div class="grid">
+<figure>
+<a href="media/source/01_eeprom_store_and_readback.svg">
+<img loading="lazy" src="media/source/01_eeprom_store_and_readback.svg" alt="eeprom store and readback — source repository figure">
+</a>
+<figcaption>eeprom store and readback — source repository figure</figcaption>
+</figure>
+</div>
+</section>
+<section id="sources">
+<h2>Source documentation</h2>
+<ul>
+<li>
+<a href="https://github.com/Mahyoub88/eeprom-data-storage-pic">Source repository — eeprom-data-storage-pic</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project record</a>
+</li>
+</ul>
+</section>
+<nav class="project-pagination" aria-label="More case studies">
+<a href="/projects/proj-plc-control/">← Industrial Automation &amp; PLC-Based Control Systems</a>
+<a href="/projects/proj-monitoring-console/">Monitoring &amp; Diagnostics Console — VB.NET →</a>
+</nav>
+</main>
+<footer>Mohammed Mahyoub · Source media, explanatory diagrams and recorded results are identified in their captions.</footer>
+</body>
+</html>

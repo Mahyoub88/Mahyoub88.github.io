@@ -67,6 +67,12 @@ export function ProjectCard({ project }: { project: Project }) {
         </span>}
       </div>
 
+      {project.imageCaption && (
+        <p className="border-t border-[var(--border-1)] px-4 py-2 text-xs text-[var(--text-3)]">
+          {project.imageCaption}
+        </p>
+      )}
+
       <div className="flex flex-1 flex-col p-6">
         <div className="mb-2 flex items-start justify-between gap-3">
           <span className={`text-xs font-semibold tracking-wide ${accent.text}`}>

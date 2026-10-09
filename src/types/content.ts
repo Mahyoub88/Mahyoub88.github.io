@@ -58,6 +58,7 @@ export interface Project {
   id: string
   image?: string
   imageAlt?: string
+  imageCaption?: string
   category: string
   title: string
   description: string

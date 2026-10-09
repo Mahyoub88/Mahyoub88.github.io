@@ -97,4 +97,10 @@ Run `npm run build` and upload the contents of `dist/`.
 
 Every portfolio project has a standalone page under `public/projects/`, with two explanatory SVG diagrams, engineering rationale, source notes and an evidence checklist. Existing repository figures, public notebook plots and LinkedIn project media are reused with source context. The cards link to these pages and their source repositories.
 
-To update a case study, edit its `public/projects/<project-id>/index.html` and associated `media/` files. Keep the corresponding repository engineering guide and source captions aligned. New illustrations must not be described as implementation photographs or measured results.
+Project titles, links, status labels, previews and overview facts are canonical in `src/data/defaultContent.json`. `npm run sync:projects` generates the shared presentation fields, case-study index, collection indexes and `docs/PROJECTS.md`; build runs this synchronization automatically. Project-specific rationale and evidence sections remain editable in `public/projects/<project-id>/index.html`.
+
+Run `npm run check:projects` to verify generated content, unique project identities, image descriptions and local page/media links. Collections are navigation indexes and are excluded from the project count. USV study notes have a separate page at `/notes/usv/`.
+
+Public repositories retain their source documentation and credits. `docs/SOURCE_MEDIA.json` records each matched portfolio media snapshot, source commit and SHA-256 checksum. To restore those snapshots from checked-out source repositories, run `node scripts/sync-source-media.mjs --repo-root <source-checkouts-directory>`. It validates every source before copying. Local snapshots are intentional static-hosting artifacts; independent duplicate copies within the portfolio have been consolidated.
+
+New illustrations must be labeled as explanatory; reference snippets are not recovered firmware, and public-summary charts are not new experiments. Private assessment code and dataset outputs remain private.

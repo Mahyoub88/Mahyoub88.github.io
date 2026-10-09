@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>USV Systems Integration — Study Notes | Mohammed Mahyoub</title>
+<meta name="description" content="Visual study notes on navigation data, sensor fusion, NMEA 2000, communications and integration checks.">
+<link rel="canonical" href="https://mahyoub88.github.io/notes/usv/">
+<link rel="stylesheet" href="/projects/case-study.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<nav>
+<a href="/">← Engineering portfolio</a>
+<a href="/projects/">Engineering case studies</a>
+</nav>
+</header>
+<main id="main">
+<p class="eyebrow">Technical learning resource</p>
+<h1>USV Systems Integration — Study Notes</h1>
+<p class="lede">Follow navigation and control information from sensor to state estimate, decision and actuation.</p>
+<span class="badge">Study notes · explanatory diagrams</span>
+<p>These notes support structured learning. They are not a record of vessel implementation, field experience or sea trials.</p>
+<section>
+<h2>NMEA 2000 backbone</h2>
+<p>The bus, device drops, network power and end termination have separate roles.</p>
+<figure>
+<a href="media/nmea2000-backbone.svg">
+<img src="media/nmea2000-backbone.svg" alt="NMEA 2000 backbone — educational diagram" loading="lazy">
+</a>
+<figcaption>Educational diagram. Open for full detail.</figcaption>
+</figure>
+</section>
+<section>
+<h2>Sensor fusion</h2>
+<p>Validate timestamps, units, reference and source health before combining observations.</p>
+<figure>
+<a href="media/sensor-fusion.svg">
+<img src="media/sensor-fusion.svg" alt="Sensor fusion — educational diagram" loading="lazy">
+</a>
+<figcaption>Educational diagram. Open for full detail.</figcaption>
+</figure>
+</section>
+<section>
+<h2>Network data responsibilities</h2>
+<p>Navigation, control, video and management need distinct delivery and verification checks.</p>
+<figure>
+<a href="media/network-data-flows.svg">
+<img src="media/network-data-flows.svg" alt="Network data responsibilities — educational diagram" loading="lazy">
+</a>
+<figcaption>Educational diagram. Open for full detail.</figcaption>
+</figure>
+</section>
+<section>
+<h2>Fault isolation</h2>
+<p>Observe, make operation safe, trace the interface, prove the boundary, correct and verify.</p>
+<figure>
+<a href="media/fault-isolation.svg">
+<img src="media/fault-isolation.svg" alt="Fault isolation — educational diagram" loading="lazy">
+</a>
+<figcaption>Educational diagram. Open for full detail.</figcaption>
+</figure>
+</section>
+<p>
+<a href="https://github.com/Mahyoub88/usv-systems-integration-notes">Complete study notes and references</a> · <a href="https://github.com/Mahyoub88/usv-systems-integration-notes/blob/main/docs/visual-guide.md">Visual guide and technical source attribution</a>
+</p>
+</main>
+<footer>Mohammed Mahyoub · Technical study notes, kept separate from implemented projects.</footer>
+</body>
+</html>

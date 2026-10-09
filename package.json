@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "node scripts/sync-projects.mjs && node scripts/check-projects.mjs && tsc -b && vite build",
+    "sync:projects": "node scripts/sync-projects.mjs",
+    "check:projects": "node scripts/sync-projects.mjs --check && node scripts/check-projects.mjs",
     "lint": "oxlint",
     "preview": "vite preview"
   },

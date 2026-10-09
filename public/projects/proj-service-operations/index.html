@@ -1,1 +1,111 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Service Operations &amp; Technical Documentation Management System | Mohammed Mahyoub</title><meta name="description" content="Developed a desktop application for device records, repair tracking, service documentation and operational reporting."><link rel="canonical" href="https://mahyoub88.github.io/projects/proj-service-operations/"><meta property="og:title" content="Service Operations &amp; Technical Documentation Management System"><meta property="og:description" content="Developed a desktop application for device records, repair tracking, service documentation and operational reporting."><meta property="og:image" content="https://mahyoub88.github.io/projects/proj-service-operations/media/02-service-tool.jpg"><link rel="stylesheet" href="/projects/case-study.css"></head><body><a class="skip" href="#main">Skip to content</a><header><nav><a href="/">← Engineering portfolio</a><a href="/projects/">All case studies</a></nav></header><main id="main"><p class="eyebrow">Desktop Software · Service Operations</p><h1>Service Operations &amp; Technical Documentation Management System</h1><p class="lede">Developed a desktop application for device records, repair tracking, service documentation and operational reporting.</p><span class="badge">Implemented Project</span><figure class="hero-media "><img src="/projects/proj-service-operations/media/02-service-tool.jpg" alt="Service application — device records and repair documentation"><figcaption>Project-specific source visual · open the gallery for the full figure</figcaption></figure><div class="tags"><span>VB.NET</span><span>WinForms</span><span>Service Records</span><span>Repair Tracking</span><span>Reporting</span></div><nav class="section-nav"><a href="#overview">Architecture</a><a href="#engineering">Engineering approach</a><a href="#analysis">Detailed analysis</a><a href="#gallery">Visual documentation</a><a href="#sources">Sources</a></nav><section id="overview"><h2>System architecture</h2><figure><a href="media/architecture.svg"><img loading="lazy" src="media/architecture.svg" alt="Proposed architecture — responsibilities inferred from documented scope"></a><figcaption>Proposed architecture — responsibilities inferred from documented scope</figcaption></figure><div class="summary"><h3>Implementation scope</h3><p>The source interface shows device records, repair details and warranty/calibration fields. These records connect the equipment identity with the work performed and the documents needed for follow-up.</p></div></section><section id="engineering"><h2>Engineering approach</h2><p>Search and reporting make service history usable by engineers. This project has its own interface and workflow, distinct from the live monitoring console and RF calculation tools.</p><figure><a href="media/workflow.svg"><img loading="lazy" src="media/workflow.svg" alt="Proposed workflow — sequence and verification responsibilities"></a><figcaption>Proposed workflow — sequence and verification responsibilities</figcaption></figure></section><section id="analysis"><h2>Reading the original interface</h2><p>The screenshot shows device, article and serial identifiers; site and service-call details; receipt and repair dates; project, customer and region; warranty and calibration validity; return reasons; corrective-action summary; repair type and personnel; forwarding fields; status and a customer report. New, modify, save, delete and search controls sit above a record grid.</p><p>The poster names VB.NET, WinForms, ADO.NET, Crystal Reports and SQL Server / Access. It does not establish which database engine the published application actually uses.</p><h3>Proposed data design</h3><p>Keep device identity separate from each service visit. Model Customer → Project → Site → Device; link each Device to many ServiceCase records. RepairAction, PartReplacement and Document belong to a case. Warranty and Calibration retain historical records rather than overwriting prior validity dates.</p><h3>Integrity and workflow</h3><p>Use unique case identifiers, controlled status transitions and date checks so a repair cannot precede receipt. Save a case and its related actions atomically. Use parameterized database operations, a change audit and conflict detection for concurrent edits. Archive records that have issued reports rather than silently removing their history.</p><p>The workflow is receipt → fault documentation → diagnosis → repair → verification / calibration → reviewed report → delivery and closure. Failed verification returns to diagnosis. Internal engineering notes and the customer-facing report are separate records.</p><h3>Interface and verification</h3><p>A proposed layout uses search and the record list beside tabs for device identity, service visit, repairs / parts, warranty / calibration and documents. Verify multiple visits for one device, calibration renewal without loss of history, concurrent editing and failed attachment storage.</p></section><section id="gallery"><h2>Visual documentation</h2><p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p><div class="grid"><figure><a href="media/02-service-tool.jpg"><img loading="lazy" src="media/02-service-tool.jpg" alt="Service application — device records and repair documentation"></a><figcaption>Service application — device records and repair documentation</figcaption></figure></div></section><section id="sources"><h2>Source documentation</h2><p><a href="/projects/engineering-applications-analysis/">Complete English analysis and diagrams</a></p><ul><li><a href="https://github.com/Mahyoub88/dotnet-monitoring-apps">Source repository — dotnet-monitoring-apps</a></li><li><a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project record</a></li></ul></section></main><footer>Mohammed Mahyoub · Implementation media and explanatory diagrams retain their source context.</footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Service Operations &amp; Technical Documentation Management System | Mohammed Mahyoub</title>
+<meta name="description" content="Developed a desktop application for device records, repair tracking, service documentation and operational reporting.">
+<link rel="canonical" href="https://mahyoub88.github.io/projects/proj-service-operations/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Service Operations &amp; Technical Documentation Management System">
+<meta property="og:description" content="Developed a desktop application for device records, repair tracking, service documentation and operational reporting.">
+<meta property="og:url" content="https://mahyoub88.github.io/projects/proj-service-operations/">
+<meta property="og:image" content="https://mahyoub88.github.io/projects/proj-service-operations/media/02-service-tool.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg">
+<link rel="stylesheet" href="/projects/case-study.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<nav aria-label="Portfolio navigation">
+<a href="/">← Engineering portfolio</a>
+<a href="/projects/">All case studies</a>
+</nav>
+</header>
+<main id="main">
+<p class="eyebrow">Desktop Software · Service Operations</p>
+<h1>Service Operations &amp; Technical Documentation Management System</h1>
+<p class="lede">Developed a desktop application for device records, repair tracking, service documentation and operational reporting.</p>
+<span class="badge">Implemented Project</span>
+<figure class="hero-media">
+<a href="/projects/proj-service-operations/media/02-service-tool.jpg">
+<img src="/projects/proj-service-operations/media/02-service-tool.jpg" alt="Service application — device records and repair documentation" fetchpriority="high">
+</a>
+<figcaption>Source project media · Open image for full detail.</figcaption>
+</figure>
+<div class="tags">
+<span>VB.NET</span>
+<span>WinForms</span>
+<span>Service Records</span>
+<span>Repair Tracking</span>
+<span>Reporting</span>
+</div>
+<nav class="section-nav">
+<a href="#overview">Architecture</a>
+<a href="#engineering">Engineering approach</a>
+<a href="#analysis">Detailed analysis</a>
+<a href="#gallery">Visual documentation</a>
+<a href="#sources">Sources</a>
+</nav>
+<section id="overview">
+<h2>System architecture</h2>
+<figure>
+<a href="media/architecture.svg">
+<img loading="lazy" src="media/architecture.svg" alt="Proposed architecture — responsibilities inferred from documented scope">
+</a>
+<figcaption>Proposed architecture — responsibilities inferred from documented scope</figcaption>
+</figure>
+<div class="summary">
+<h3>Implementation scope</h3>
+<p>The source interface shows device records, repair details and warranty/calibration fields. These records connect the equipment identity with the work performed and the documents needed for follow-up.</p>
+</div>
+</section>
+<section id="engineering">
+<h2>Engineering approach</h2>
+<p>Search and reporting make service history usable by engineers. This project has its own interface and workflow, distinct from the live monitoring console and RF calculation tools.</p>
+<figure>
+<a href="media/workflow.svg">
+<img loading="lazy" src="media/workflow.svg" alt="Proposed workflow — sequence and verification responsibilities">
+</a>
+<figcaption>Proposed workflow — sequence and verification responsibilities</figcaption>
+</figure>
+</section>
+<section id="analysis">
+<h2>Reading the original interface</h2>
+<p>The screenshot shows device, article and serial identifiers; site and service-call details; receipt and repair dates; project, customer and region; warranty and calibration validity; return reasons; corrective-action summary; repair type and personnel; forwarding fields; status and a customer report. New, modify, save, delete and search controls sit above a record grid.</p>
+<p>The poster names VB.NET, WinForms, ADO.NET, Crystal Reports and SQL Server / Access. It does not establish which database engine the published application actually uses.</p>
+<h3>Proposed data design</h3>
+<p>Keep device identity separate from each service visit. Model Customer → Project → Site → Device; link each Device to many ServiceCase records. RepairAction, PartReplacement and Document belong to a case. Warranty and Calibration retain historical records rather than overwriting prior validity dates.</p>
+<h3>Integrity and workflow</h3>
+<p>Use unique case identifiers, controlled status transitions and date checks so a repair cannot precede receipt. Save a case and its related actions atomically. Use parameterized database operations, a change audit and conflict detection for concurrent edits. Archive records that have issued reports rather than silently removing their history.</p>
+<p>The workflow is receipt → fault documentation → diagnosis → repair → verification / calibration → reviewed report → delivery and closure. Failed verification returns to diagnosis. Internal engineering notes and the customer-facing report are separate records.</p>
+<h3>Interface and verification</h3>
+<p>A proposed layout uses search and the record list beside tabs for device identity, service visit, repairs / parts, warranty / calibration and documents. Verify multiple visits for one device, calibration renewal without loss of history, concurrent editing and failed attachment storage.</p>
+</section>
+<section id="gallery">
+<h2>Source context</h2>
+<p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p>
+</section>
+<section id="sources">
+<h2>Source documentation</h2>
+<p>
+<a href="/projects/engineering-applications-analysis/">Complete English analysis and diagrams</a>
+</p>
+<ul>
+<li>
+<a href="https://github.com/Mahyoub88/dotnet-monitoring-apps">Source repository — dotnet-monitoring-apps</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project record</a>
+</li>
+</ul>
+</section>
+<nav class="project-pagination" aria-label="More case studies">
+<a href="/projects/proj-monitoring-console/">← Monitoring &amp; Diagnostics Console — VB.NET</a>
+<a href="/projects/proj-rf-link-budget/">RF Link Budget &amp; Propagation Analysis Engine →</a>
+</nav>
+</main>
+<footer>Mohammed Mahyoub · Source media, explanatory diagrams and recorded results are identified in their captions.</footer>
+</body>
+</html>

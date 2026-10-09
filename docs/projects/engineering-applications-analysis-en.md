@@ -19,7 +19,7 @@ Source: [Independent applications repository](https://github.com/Mahyoub88/dotne
 | RF link budget | Assessing received power and receiver margin | Frequency, distance, power, gains, losses | Path loss, receive level, noise, margin |
 | LOS and Fresnel planning | Checking path geometry and obstruction clearance | Antenna elevations, terrain, obstacles, frequency | Profile, clearance deficits, alternatives |
 
-![Application boundaries](engineering-applications-assets/collection.svg)
+![Application boundaries](../../public/projects/engineering-applications-analysis/media/collection.svg)
 
 ## 1. Monitoring and Diagnostics Console
 
@@ -33,11 +33,11 @@ The published preview has limited resolution. Small labels, exact readings and d
 
 Separate the desktop view from the background scheduler, device adapters, health rules, event storage, incident management and reporting. The scheduler runs time-limited checks without blocking the interface. Each observation includes its device, check type, timestamp, result and quality.
 
-![Monitoring architecture](engineering-applications-assets/monitoring-console-architecture.svg)
+![Monitoring architecture](../../public/projects/proj-monitoring-console/media/architecture.svg)
 
 Display condition and observation freshness separately. An unsuccessful network check does not alone prove hardware failure. Use healthy, warning, critical, unknown and stale states; show the last successful observation. An expired observation must not remain a fresh green status.
 
-![Health and observation freshness](engineering-applications-assets/health-states.svg)
+![Health and observation freshness](../../public/projects/engineering-applications-analysis/media/health-states.svg)
 
 Suggested records are Site, Device, ProbeResult, HealthRule, Event, Incident and IncidentAction. A device has many observations. Repeated events may belong to one incident. Record state transitions, aggregate repeated failures and configure persistence thresholds before raising an alert. Confirm stable recovery before closing an incident.
 
@@ -59,7 +59,7 @@ New, modify, save, delete and search controls sit above the record grid. Selecti
 
 Keep equipment identity separate from a service visit. One device can have multiple visits and repairs. Customer, Project and Site define the ownership and installation context. Device has many ServiceCase records; each case has RepairAction, PartReplacement and Document records. Warranty and Calibration retain their historical validity records. Users and audit entries identify actions and changes.
 
-![Proposed service data relationships](engineering-applications-assets/service-data.svg)
+![Proposed service data relationships](../../public/projects/engineering-applications-analysis/media/service-data.svg)
 
 Use stable internal keys rather than names as relationships. Record actual event dates separately from entry timestamps. Keep internal engineering notes separate from the reviewed customer report. Renewing calibration must not erase the previous certificate or validity record.
 
@@ -67,7 +67,7 @@ Use stable internal keys rather than names as relationships. Record actual event
 
 Receive equipment, document the fault, diagnose it, perform the repair, verify or calibrate as required, issue a reviewed report, then deliver and close the case. Failed verification returns the case to diagnosis or repair.
 
-![Service workflow](engineering-applications-assets/service-operations-workflow.svg)
+![Service workflow](../../public/projects/proj-service-operations/media/workflow.svg)
 
 Use unique service-case numbers and controlled status transitions. Reject a repair date before receipt. Save a case and related actions in one transaction. Use parameterized database operations, an audit history and concurrent-edit conflict detection. Records associated with issued reports should retain their history through archival rather than silent deletion.
 
@@ -89,7 +89,7 @@ The poster names FSPL, Hata, Okumura and ITU-R P.1546. Naming models does not es
 
 Separate calculations from WinForms button events. Validate inputs, normalize units, select an applicable model, calculate path loss and received power, evaluate receiver requirements, then report results with the original assumptions and model version.
 
-![RF calculation architecture](engineering-applications-assets/rf-link-budget-architecture.svg)
+![RF calculation architecture](../../public/projects/proj-rf-link-budget/media/architecture.svg)
 
 Keep power in dBm, gains in dBi and losses and margins in dB. Use explicit variable names or unit-aware values. Convert units at clear boundaries and avoid mixing Hz with MHz or metres with kilometres.
 
@@ -161,7 +161,7 @@ Use endpoint antenna elevations on a common vertical reference, sampled terrain,
 
 Use metres for every length and Hz for frequency. Apply the curvature correction only when the imported profile has not already incorporated it. State the vertical reference and curvature method to prevent double correction. Review other k assumptions where the planning requirement calls for them.
 
-![Fresnel planning workflow](engineering-applications-assets/fresnel-planning-workflow.svg)
+![Fresnel planning workflow](../../public/projects/proj-fresnel-planning/media/workflow.svg)
 
 A 60% first-zone clearance is an initial planning criterion, subject to path, refraction and availability assumptions. It does not guarantee every link’s performance. Reference: [ITU-R P.530, line-of-sight path-clearance considerations](https://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.530-18-202109-I%21%21PDF-E.pdf).
 
@@ -181,7 +181,7 @@ Check an unobstructed profile, a midpoint obstacle, an obstacle near an endpoint
 
 The documented desktop technologies can support the proposed designs. Keep user-interface events separate from application services and domain logic. Data adapters manage storage and external sources. Reporting produces readable results from persisted records or calculation scenarios.
 
-![Implementation layers](engineering-applications-assets/common-layers.svg)
+![Implementation layers](../../public/projects/engineering-applications-analysis/media/common-layers.svg)
 
 The operational priorities differ: monitoring needs responsive background work and freshness handling; service records need transactions and durable history; RF and Fresnel tools need explicit units, applicable models and independently reproducible calculations. A common architectural pattern does not mean the four applications share a runtime or database.
 

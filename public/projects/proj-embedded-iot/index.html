@@ -1,1 +1,135 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Embedded Systems &amp; IoT — PIC Firmware and Peripheral Integration | Mohammed Mahyoub</title><meta name="description" content="Developed PIC16 firmware and hardware interfaces for timed sensing, displays, real-time clocks, output expansion and access control, using mikroC and Proteus during development."><link rel="canonical" href="https://mahyoub88.github.io/projects/proj-embedded-iot/"><meta property="og:title" content="Embedded Systems &amp; IoT — PIC Firmware and Peripheral Integration"><meta property="og:description" content="Developed PIC16 firmware and hardware interfaces for timed sensing, displays, real-time clocks, output expansion and access control, using mikroC and Proteus during development."><meta property="og:image" content="https://mahyoub88.github.io/projects/proj-embedded-iot/media/source/01_system_overview.svg"><link rel="stylesheet" href="/projects/case-study.css"></head><body><a class="skip" href="#main">Skip to content</a><header><nav><a href="/">← Engineering portfolio</a><a href="/projects/">All case studies</a></nav></header><main id="main"><p class="eyebrow">Embedded Systems · Firmware · IoT</p><h1>Embedded Systems &amp; IoT — PIC Firmware and Peripheral Integration</h1><p class="lede">Developed PIC16 firmware and hardware interfaces for timed sensing, displays, real-time clocks, output expansion and access control, using mikroC and Proteus during development.</p><span class="badge">Implemented Project</span><figure class="hero-media "><img src="/projects/proj-embedded-iot/media/source/01_system_overview.svg" alt="PIC peripheral overview — explanatory source diagram"><figcaption>Project-specific source visual · open the gallery for the full figure</figcaption></figure><div class="tags"><span>PIC</span><span>mikroC</span><span>Proteus</span><span>AVR</span><span>Arduino</span><span>Sensors</span><span>IoT</span></div><nav class="section-nav"><a href="#overview">Architecture</a><a href="#engineering">Engineering approach</a><a href="#gallery">Visual documentation</a><a href="#sources">Sources</a></nav><section id="overview"><h2>System architecture</h2><figure><a href="media/architecture.svg"><img loading="lazy" src="media/architecture.svg" alt="Explanatory architecture — functional boundaries for this project"></a><figcaption>Explanatory architecture — functional boundaries for this project</figcaption></figure><div class="summary"><h3>Implementation scope</h3><p>PIC16 firmware implements timed acquisition and peripheral interfaces. Timer0 schedules display refresh and measurements, I²C connects the DS1307 clock, and serial interfaces drive shift registers and the graphic LCD.</p></div></section><section id="engineering"><h2>Engineering approach</h2><p>These are related firmware implementations and peripheral techniques. PLC batching and the dedicated EEPROM storage system have their own case studies and are not presented as parts of one PIC circuit.</p><figure><a href="media/workflow.svg"><img loading="lazy" src="media/workflow.svg" alt="Explanatory workflow — project-specific sequence"></a><figcaption>Explanatory workflow — project-specific sequence</figcaption></figure></section><section id="gallery"><h2>Visual documentation</h2><p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p><div class="grid"><figure><a href="media/source/01_system_overview.svg"><img loading="lazy" src="media/source/01_system_overview.svg" alt="system overview — source repository figure"></a><figcaption>system overview — source repository figure</figcaption></figure><figure><a href="media/source/02_development_workflow.svg"><img loading="lazy" src="media/source/02_development_workflow.svg" alt="development workflow — source repository figure"></a><figcaption>development workflow — source repository figure</figcaption></figure><figure><a href="media/source/03_7segment_multiplexing.svg"><img loading="lazy" src="media/source/03_7segment_multiplexing.svg" alt="7segment multiplexing — source repository figure"></a><figcaption>7segment multiplexing — source repository figure</figcaption></figure><figure><a href="media/source/04_adc_timer0_scheduling.svg"><img loading="lazy" src="media/source/04_adc_timer0_scheduling.svg" alt="adc timer0 scheduling — source repository figure"></a><figcaption>adc timer0 scheduling — source repository figure</figcaption></figure><figure><a href="media/source/05_ds1307_i2c.svg"><img loading="lazy" src="media/source/05_ds1307_i2c.svg" alt="ds1307 i2c — source repository figure"></a><figcaption>ds1307 i2c — source repository figure</figcaption></figure><figure><a href="media/source/06_74hc595_output_expansion.svg"><img loading="lazy" src="media/source/06_74hc595_output_expansion.svg" alt="74hc595 output expansion — source repository figure"></a><figcaption>74hc595 output expansion — source repository figure</figcaption></figure><figure><a href="media/source/07_keypad_access_control.svg"><img loading="lazy" src="media/source/07_keypad_access_control.svg" alt="keypad access control — source repository figure"></a><figcaption>keypad access control — source repository figure</figcaption></figure><figure><a href="media/source/08_nokia5110_pcd8544.svg"><img loading="lazy" src="media/source/08_nokia5110_pcd8544.svg" alt="nokia5110 pcd8544 — source repository figure"></a><figcaption>nokia5110 pcd8544 — source repository figure</figcaption></figure><figure><a href="media/source/09_memory_technologies.svg"><img loading="lazy" src="media/source/09_memory_technologies.svg" alt="memory technologies — source repository figure"></a><figcaption>memory technologies — source repository figure</figcaption></figure></div></section><section id="sources"><h2>Source documentation</h2><ul><li><a href="https://github.com/Mahyoub88/embedded-iot-automation">Source repository — embedded-iot-automation</a></li><li><a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project record</a></li></ul></section></main><footer>Mohammed Mahyoub · Implementation media and explanatory diagrams retain their source context.</footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Embedded Systems &amp; IoT — PIC Firmware and Peripheral Integration | Mohammed Mahyoub</title>
+<meta name="description" content="Developed PIC16 firmware and hardware interfaces for timed sensing, displays, real-time clocks, output expansion and access control, using mikroC and Proteus during development.">
+<link rel="canonical" href="https://mahyoub88.github.io/projects/proj-embedded-iot/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Embedded Systems &amp; IoT — PIC Firmware and Peripheral Integration">
+<meta property="og:description" content="Developed PIC16 firmware and hardware interfaces for timed sensing, displays, real-time clocks, output expansion and access control, using mikroC and Proteus during development.">
+<meta property="og:url" content="https://mahyoub88.github.io/projects/proj-embedded-iot/">
+<meta property="og:image" content="https://mahyoub88.github.io/projects/proj-embedded-iot/media/source/01_system_overview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg">
+<link rel="stylesheet" href="/projects/case-study.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<nav aria-label="Portfolio navigation">
+<a href="/">← Engineering portfolio</a>
+<a href="/projects/">All case studies</a>
+</nav>
+</header>
+<main id="main">
+<p class="eyebrow">Embedded Systems · Firmware · IoT</p>
+<h1>Embedded Systems &amp; IoT — PIC Firmware and Peripheral Integration</h1>
+<p class="lede">Developed PIC16 firmware and hardware interfaces for timed sensing, displays, real-time clocks, output expansion and access control, using mikroC and Proteus during development.</p>
+<span class="badge">Implemented Project</span>
+<figure class="hero-media">
+<a href="/projects/proj-embedded-iot/media/source/01_system_overview.svg">
+<img src="/projects/proj-embedded-iot/media/source/01_system_overview.svg" alt="PIC peripheral overview — explanatory source diagram" fetchpriority="high">
+</a>
+<figcaption>Explanatory system diagram · Open image for full detail.</figcaption>
+</figure>
+<div class="tags">
+<span>PIC</span>
+<span>mikroC</span>
+<span>Proteus</span>
+<span>AVR</span>
+<span>Arduino</span>
+<span>Sensors</span>
+<span>IoT</span>
+</div>
+<nav class="section-nav">
+<a href="#overview">Architecture</a>
+<a href="#engineering">Engineering approach</a>
+<a href="#gallery">Visual documentation</a>
+<a href="#sources">Sources</a>
+</nav>
+<section id="overview">
+<h2>System architecture</h2>
+<div class="summary">
+<h3>Implementation scope</h3>
+<p>PIC16 firmware implements timed acquisition and peripheral interfaces. Timer0 schedules display refresh and measurements, I²C connects the DS1307 clock, and serial interfaces drive shift registers and the graphic LCD.</p>
+</div>
+</section>
+<section id="engineering">
+<h2>Engineering approach</h2>
+<p>These are related firmware implementations and peripheral techniques. PLC batching and the dedicated EEPROM storage system have their own case studies and are not presented as parts of one PIC circuit.</p>
+<figure>
+<a href="media/source/02_development_workflow.svg">
+<img loading="lazy" src="media/source/02_development_workflow.svg" alt="Explanatory workflow — project-specific sequence">
+</a>
+<figcaption>Explanatory workflow — project-specific sequence</figcaption>
+</figure>
+</section>
+<section id="gallery">
+<h2>Visual documentation</h2>
+<p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p>
+<div class="grid">
+<figure>
+<a href="media/source/03_7segment_multiplexing.svg">
+<img loading="lazy" src="media/source/03_7segment_multiplexing.svg" alt="7segment multiplexing — source repository figure">
+</a>
+<figcaption>7segment multiplexing — source repository figure</figcaption>
+</figure>
+<figure>
+<a href="media/source/04_adc_timer0_scheduling.svg">
+<img loading="lazy" src="media/source/04_adc_timer0_scheduling.svg" alt="adc timer0 scheduling — source repository figure">
+</a>
+<figcaption>adc timer0 scheduling — source repository figure</figcaption>
+</figure>
+<figure>
+<a href="media/source/05_ds1307_i2c.svg">
+<img loading="lazy" src="media/source/05_ds1307_i2c.svg" alt="ds1307 i2c — source repository figure">
+</a>
+<figcaption>ds1307 i2c — source repository figure</figcaption>
+</figure>
+<figure>
+<a href="media/source/06_74hc595_output_expansion.svg">
+<img loading="lazy" src="media/source/06_74hc595_output_expansion.svg" alt="74hc595 output expansion — source repository figure">
+</a>
+<figcaption>74hc595 output expansion — source repository figure</figcaption>
+</figure>
+<figure>
+<a href="media/source/07_keypad_access_control.svg">
+<img loading="lazy" src="media/source/07_keypad_access_control.svg" alt="keypad access control — source repository figure">
+</a>
+<figcaption>keypad access control — source repository figure</figcaption>
+</figure>
+<figure>
+<a href="media/source/08_nokia5110_pcd8544.svg">
+<img loading="lazy" src="media/source/08_nokia5110_pcd8544.svg" alt="nokia5110 pcd8544 — source repository figure">
+</a>
+<figcaption>nokia5110 pcd8544 — source repository figure</figcaption>
+</figure>
+<figure>
+<a href="media/source/09_memory_technologies.svg">
+<img loading="lazy" src="media/source/09_memory_technologies.svg" alt="memory technologies — source repository figure">
+</a>
+<figcaption>memory technologies — source repository figure</figcaption>
+</figure>
+</div>
+</section>
+<section id="sources">
+<h2>Source documentation</h2>
+<ul>
+<li>
+<a href="https://github.com/Mahyoub88/embedded-iot-automation">Source repository — embedded-iot-automation</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project record</a>
+</li>
+</ul>
+</section>
+<nav class="project-pagination" aria-label="More case studies">
+<a href="/projects/proj-sddc-lab/">← Software-Defined Data Center (SDDC) — Design &amp; Implementation</a>
+<a href="/projects/proj-rfid-study/">RFID Library Automation System (ISO 15693) →</a>
+</nav>
+</main>
+<footer>Mohammed Mahyoub · Source media, explanatory diagrams and recorded results are identified in their captions.</footer>
+</body>
+</html>

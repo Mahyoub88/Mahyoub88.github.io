@@ -1,0 +1,1020 @@
+{
+  "policy": "Public repositories remain the technical source. These pinned, checksum-verified snapshots are served locally by GitHub Pages. Reference figures retain their original attribution; a source match is not proof of deployment.",
+  "assets": [
+    {
+      "path": "public/notes/usv/media/fault-isolation.svg",
+      "repository": "Mahyoub88/usv-systems-integration-notes",
+      "source": "docs/visuals/fault-isolation.svg",
+      "commit": "dcbd31ddd5fbf0c020d9deddc8aacec3a40e39f2",
+      "sha256": "5b4cc8252ff0f3c4eb6118572e0b554a46715388c9ba52eac843fe7695de3e6d"
+    },
+    {
+      "path": "public/notes/usv/media/network-data-flows.svg",
+      "repository": "Mahyoub88/usv-systems-integration-notes",
+      "source": "docs/visuals/network-data-flows.svg",
+      "commit": "dcbd31ddd5fbf0c020d9deddc8aacec3a40e39f2",
+      "sha256": "1d923dabccfc3880752a6f8457891036b2b4c7674179b34fdfaeed5f34007c6d"
+    },
+    {
+      "path": "public/notes/usv/media/nmea2000-backbone.svg",
+      "repository": "Mahyoub88/usv-systems-integration-notes",
+      "source": "docs/visuals/nmea2000-backbone.svg",
+      "commit": "dcbd31ddd5fbf0c020d9deddc8aacec3a40e39f2",
+      "sha256": "645041f96825ad7acda4c5b51975a321d6d3ef7a6f3561e2853770dfaf9e00ef"
+    },
+    {
+      "path": "public/notes/usv/media/sensor-fusion.svg",
+      "repository": "Mahyoub88/usv-systems-integration-notes",
+      "source": "docs/visuals/sensor-fusion.svg",
+      "commit": "dcbd31ddd5fbf0c020d9deddc8aacec3a40e39f2",
+      "sha256": "dd0667afe633c0151d030d9432ba8e5b1e7dc0664cba005589a4d586435e60cf"
+    },
+    {
+      "path": "public/projects/engineering-applications-analysis/media/collection.svg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/analysis/media/collection.svg",
+      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "sha256": "0fc96e81e84f8cee5b2ac72797a7eb46716879658398ba696214cdafca510e01"
+    },
+    {
+      "path": "public/projects/engineering-applications-analysis/media/common-layers.svg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/analysis/media/common-layers.svg",
+      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "sha256": "b0ecd47eab54940d57187dc3987a2009d934908d2b5feae05bd4d1f177e6f71f"
+    },
+    {
+      "path": "public/projects/engineering-applications-analysis/media/health-states.svg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/analysis/media/health-states.svg",
+      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "sha256": "6dfeb5a42d57cd0e4e2cf91adcec60db9adcabcd30fa0f8bac6a311ede531cb8"
+    },
+    {
+      "path": "public/projects/engineering-applications-analysis/media/service-data.svg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/analysis/media/service-data.svg",
+      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "sha256": "5a048b3fa9adff71aa38272c3ad41f5e41f210ccbf330e8f0e13b1d6dfd27ed7"
+    },
+    {
+      "path": "public/projects/proj-eeprom-storage/media/source/00_project_poster.jpg",
+      "repository": "Mahyoub88/eeprom-data-storage-pic",
+      "source": "img/00_project_poster.jpg",
+      "commit": "97a2919ac9a6ba9dc3fefa6b52e746ee792448b3",
+      "sha256": "2f9ad8a8e7d7e466619cf681f160efa2ca8fe7da0364451011aeacbb53ca9aa2"
+    },
+    {
+      "path": "public/projects/proj-eeprom-storage/media/source/01_eeprom_store_and_readback.svg",
+      "repository": "Mahyoub88/eeprom-data-storage-pic",
+      "source": "img/01_eeprom_store_and_readback.svg",
+      "commit": "97a2919ac9a6ba9dc3fefa6b52e746ee792448b3",
+      "sha256": "26669d2c6ddd99f30533ce8e541ac40853a6866be775935078ce195e086f7079"
+    },
+    {
+      "path": "public/projects/proj-embedded-iot/media/source/01_system_overview.svg",
+      "repository": "Mahyoub88/embedded-iot-automation",
+      "source": "img/01_system_overview.svg",
+      "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
+      "sha256": "93343c2a4e68d11493a1d48b71ce8e81c4a9a468afc69c5ef8a042451fda9f7d"
+    },
+    {
+      "path": "public/projects/proj-embedded-iot/media/source/02_development_workflow.svg",
+      "repository": "Mahyoub88/embedded-iot-automation",
+      "source": "img/02_development_workflow.svg",
+      "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
+      "sha256": "b94a7d93406c2ceadbd79750b1281f922aed176ab052c0f37bb591a7e15b9028"
+    },
+    {
+      "path": "public/projects/proj-embedded-iot/media/source/03_7segment_multiplexing.svg",
+      "repository": "Mahyoub88/embedded-iot-automation",
+      "source": "img/03_7segment_multiplexing.svg",
+      "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
+      "sha256": "02812e7cfed301283c8a44a5dcdabe242c334e2b8311b7c8a0ae61e65cd35843"
+    },
+    {
+      "path": "public/projects/proj-embedded-iot/media/source/04_adc_timer0_scheduling.svg",
+      "repository": "Mahyoub88/embedded-iot-automation",
+      "source": "img/04_adc_timer0_scheduling.svg",
+      "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
+      "sha256": "78feec66941184df226c909c0814b6eb01476bbb736f9d08ebead124143faea0"
+    },
+    {
+      "path": "public/projects/proj-embedded-iot/media/source/05_ds1307_i2c.svg",
+      "repository": "Mahyoub88/embedded-iot-automation",
+      "source": "img/05_ds1307_i2c.svg",
+      "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
+      "sha256": "9e621bc23f6d9b5e078be7bd7c8f6385c856cffdbad682fb860c37c909a9df56"
+    },
+    {
+      "path": "public/projects/proj-embedded-iot/media/source/06_74hc595_output_expansion.svg",
+      "repository": "Mahyoub88/embedded-iot-automation",
+      "source": "img/06_74hc595_output_expansion.svg",
+      "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
+      "sha256": "208c872285008b6a224fd2ae66921c24a357bd28d027b4e763082e4e89c191ec"
+    },
+    {
+      "path": "public/projects/proj-embedded-iot/media/source/07_keypad_access_control.svg",
+      "repository": "Mahyoub88/embedded-iot-automation",
+      "source": "img/07_keypad_access_control.svg",
+      "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
+      "sha256": "da87351123f93e52ec0a3d2a60d5ef4a81c1d135a8c5963d2be09a38995a6bd6"
+    },
+    {
+      "path": "public/projects/proj-embedded-iot/media/source/08_nokia5110_pcd8544.svg",
+      "repository": "Mahyoub88/embedded-iot-automation",
+      "source": "img/08_nokia5110_pcd8544.svg",
+      "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
+      "sha256": "8d6bdaeb75777bcb26f4b7cdfdca1ae5d8bdd7f2a484d2efc0faacaf709c67a1"
+    },
+    {
+      "path": "public/projects/proj-embedded-iot/media/source/09_memory_technologies.svg",
+      "repository": "Mahyoub88/embedded-iot-automation",
+      "source": "img/09_memory_technologies.svg",
+      "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
+      "sha256": "79d846037322b0237863b4e2467769c9f074398ca09c9ced5b7e403e742f8244"
+    },
+    {
+      "path": "public/projects/proj-enterprise-network/media/01-network-architecture.jpg",
+      "repository": "Mahyoub88/rf-mpls-network-design",
+      "source": "docs/overview/network-architecture.jpg",
+      "commit": "c157feccfc86ff376333fc6b3fe3d21f90ef5237",
+      "sha256": "a53cf6ec075a983930f178209e8507bcde28928fa2f3e7054b4458cbcde7e72f"
+    },
+    {
+      "path": "public/projects/proj-enterprise-network/media/architecture.svg",
+      "repository": "Mahyoub88/rf-mpls-network-design",
+      "source": "docs/projects/proj-enterprise-network/architecture.svg",
+      "commit": "c157feccfc86ff376333fc6b3fe3d21f90ef5237",
+      "sha256": "dec178186d13a859713d676a43b3b9c00e2b37d7d9b0426d9259ef8bb3f1ab8d"
+    },
+    {
+      "path": "public/projects/proj-enterprise-network/media/workflow.svg",
+      "repository": "Mahyoub88/rf-mpls-network-design",
+      "source": "docs/projects/proj-enterprise-network/workflow.svg",
+      "commit": "c157feccfc86ff376333fc6b3fe3d21f90ef5237",
+      "sha256": "8042fffb8bbf23392ddc8d30c3cfe5a072eddc00638ebe21397cf68be0d40c04"
+    },
+    {
+      "path": "public/projects/proj-fresnel-planning/media/03-fresnel-tool.jpg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/overview/fresnel-tool.jpg",
+      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "sha256": "18f650daf2f59e25172acb797ec1329e0d76f21983de5f2c33858120416656af"
+    },
+    {
+      "path": "public/projects/proj-fresnel-planning/media/architecture.svg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/projects/proj-fresnel-planning/architecture.svg",
+      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "sha256": "a8313d7d140c4a96296e268a7e7d5f18924750f9bfa7e86fe7a5e01748074412"
+    },
+    {
+      "path": "public/projects/proj-fresnel-planning/media/workflow.svg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/projects/proj-fresnel-planning/workflow.svg",
+      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "sha256": "a769563aecafdaf8bf7935a68776efecd2363af2e290a51d9ae6d91c0eba07d4"
+    },
+    {
+      "path": "public/projects/proj-ims-voip-volte/media/08-01_cucm_cli_vmware.webp",
+      "repository": "Mahyoub88/ims-voip-iptv-volte-lab",
+      "source": "docs/project/01_cucm_cli_vmware.webp",
+      "commit": "b730721f255a93fcf6d1ebddf46f2a22f2779e28",
+      "sha256": "97c03d6c18b64b48c586d507b984bec64a09c12d9d0e4f65052f858719e4339a"
+    },
+    {
+      "path": "public/projects/proj-ims-voip-volte/media/09-02_cucm_web_admin.webp",
+      "repository": "Mahyoub88/ims-voip-iptv-volte-lab",
+      "source": "docs/project/02_cucm_web_admin.webp",
+      "commit": "b730721f255a93fcf6d1ebddf46f2a22f2779e28",
+      "sha256": "9c30babf561b5063f86ff06ea7c69ea1da0ec8f6cacd55660b2170e6cebb61c0"
+    },
+    {
+      "path": "public/projects/proj-ims-voip-volte/media/10-03_gns3_voice_topology.webp",
+      "repository": "Mahyoub88/ims-voip-iptv-volte-lab",
+      "source": "docs/project/03_gns3_voice_topology.webp",
+      "commit": "b730721f255a93fcf6d1ebddf46f2a22f2779e28",
+      "sha256": "26a718b5ad53322005e2e59e4799ebd93c39d51e4cc034e9245c2b51e5b3b269"
+    },
+    {
+      "path": "public/projects/proj-ims-voip-volte/media/11-04_gw_voip_dial_peers.webp",
+      "repository": "Mahyoub88/ims-voip-iptv-volte-lab",
+      "source": "docs/project/04_gw_voip_dial_peers.webp",
+      "commit": "b730721f255a93fcf6d1ebddf46f2a22f2779e28",
+      "sha256": "5e0428fa7fefe2ee23f53994c28e100279edc77d21a2f59bd3f8586d0e7550c1"
+    },
+    {
+      "path": "public/projects/proj-ims-voip-volte/media/12-05_gw_codec_h323_interworking.webp",
+      "repository": "Mahyoub88/ims-voip-iptv-volte-lab",
+      "source": "docs/project/05_gw_codec_h323_interworking.webp",
+      "commit": "b730721f255a93fcf6d1ebddf46f2a22f2779e28",
+      "sha256": "c26855b8290aa9c45f902e77a981d1f5aa94aa0d9ff496204c0065e37e6cac98"
+    },
+    {
+      "path": "public/projects/proj-ims-voip-volte/media/13-06_br_cme_telephony_service.webp",
+      "repository": "Mahyoub88/ims-voip-iptv-volte-lab",
+      "source": "docs/project/06_br_cme_telephony_service.webp",
+      "commit": "b730721f255a93fcf6d1ebddf46f2a22f2779e28",
+      "sha256": "e8e53a75f2e784bf8dc36986e1eeafffc1581fc6b7ab843bfb4974d0667e97dc"
+    },
+    {
+      "path": "public/projects/proj-ims-voip-volte/media/14-07_pstn_dial_peers.webp",
+      "repository": "Mahyoub88/ims-voip-iptv-volte-lab",
+      "source": "docs/project/07_pstn_dial_peers.webp",
+      "commit": "b730721f255a93fcf6d1ebddf46f2a22f2779e28",
+      "sha256": "28584e1ec8bfc6d2fbd06b3e0b851a8000bb0afe5672151ab44baf5f57f0ad22"
+    },
+    {
+      "path": "public/projects/proj-ims-voip-volte/media/15-08_cucm_registered_phones.webp",
+      "repository": "Mahyoub88/ims-voip-iptv-volte-lab",
+      "source": "docs/project/08_cucm_registered_phones.webp",
+      "commit": "b730721f255a93fcf6d1ebddf46f2a22f2779e28",
+      "sha256": "c1189d638d0dee61f1a2598082e9f3a8352e0b6e1031ab10db9488545348d20f"
+    },
+    {
+      "path": "public/projects/proj-ims-voip-volte/media/16-09_media5_android_sip_phone.webp",
+      "repository": "Mahyoub88/ims-voip-iptv-volte-lab",
+      "source": "docs/project/09_media5_android_sip_phone.webp",
+      "commit": "b730721f255a93fcf6d1ebddf46f2a22f2779e28",
+      "sha256": "2a31e60a703507accf79ba8aca9a596ad7dc20e563384ac5cf34f3de1e8ce636"
+    },
+    {
+      "path": "public/projects/proj-ims-voip-volte/media/17-10_vlc_network_stream.webp",
+      "repository": "Mahyoub88/ims-voip-iptv-volte-lab",
+      "source": "docs/project/10_vlc_network_stream.webp",
+      "commit": "b730721f255a93fcf6d1ebddf46f2a22f2779e28",
+      "sha256": "213c5d712baf4aa35fad2c359090e8b97e62d04d7af60ac2018a82b0d4188837"
+    },
+    {
+      "path": "public/projects/proj-ims-voip-volte/media/18-11_iptv_on_mobile.webp",
+      "repository": "Mahyoub88/ims-voip-iptv-volte-lab",
+      "source": "docs/project/11_iptv_on_mobile.webp",
+      "commit": "b730721f255a93fcf6d1ebddf46f2a22f2779e28",
+      "sha256": "2949d1b6e7183f32aed8a0327cbfa8096176310de35dda5f3fadebfc055b90dd"
+    },
+    {
+      "path": "public/projects/proj-ims-voip-volte/media/19-12_opnet_ims_lte_pstn_topology.webp",
+      "repository": "Mahyoub88/ims-voip-iptv-volte-lab",
+      "source": "docs/project/12_opnet_ims_lte_pstn_topology.webp",
+      "commit": "b730721f255a93fcf6d1ebddf46f2a22f2779e28",
+      "sha256": "3dc85ccbd3921a38e62b057edba92246a1ddbfc2625e8e939b3a97717c716d96"
+    },
+    {
+      "path": "public/projects/proj-ims-voip-volte/media/20-16_opnet_handover_voice_traffic.webp",
+      "repository": "Mahyoub88/ims-voip-iptv-volte-lab",
+      "source": "docs/project/16_opnet_handover_voice_traffic.webp",
+      "commit": "b730721f255a93fcf6d1ebddf46f2a22f2779e28",
+      "sha256": "682de75f488cf15125dbcfbb57cf93b11fe26b83496d24fd1589fb770e6beca1"
+    },
+    {
+      "path": "public/projects/proj-ims-voip-volte/media/21-17_opnet_jitter.webp",
+      "repository": "Mahyoub88/ims-voip-iptv-volte-lab",
+      "source": "docs/project/17_opnet_jitter.webp",
+      "commit": "b730721f255a93fcf6d1ebddf46f2a22f2779e28",
+      "sha256": "1892ae483d62dfd4aa1687202537e017d1acbf1277cc4ff7f27f5462eced2204"
+    },
+    {
+      "path": "public/projects/proj-ims-voip-volte/media/22-19_opnet_throughput.webp",
+      "repository": "Mahyoub88/ims-voip-iptv-volte-lab",
+      "source": "docs/project/19_opnet_throughput.webp",
+      "commit": "b730721f255a93fcf6d1ebddf46f2a22f2779e28",
+      "sha256": "7d239e24e9b467c458609837133693496029c476cb9aadf1f1a4080e926c188c"
+    },
+    {
+      "path": "public/projects/proj-ims-voip-volte/media/23-20_opnet_pstn_voice_calls.webp",
+      "repository": "Mahyoub88/ims-voip-iptv-volte-lab",
+      "source": "docs/project/20_opnet_pstn_voice_calls.webp",
+      "commit": "b730721f255a93fcf6d1ebddf46f2a22f2779e28",
+      "sha256": "0424f323093b44e3d821678b6d4f6d79da39f53a3edfd847a893c6e550c78758"
+    },
+    {
+      "path": "public/projects/proj-ims-voip-volte/media/24-21_case_two_hss_with_slf.webp",
+      "repository": "Mahyoub88/ims-voip-iptv-volte-lab",
+      "source": "docs/project/21_case_two_hss_with_slf.webp",
+      "commit": "b730721f255a93fcf6d1ebddf46f2a22f2779e28",
+      "sha256": "21ec47cdab0d7dc2c4cd5f421e47f90fd19c4d9b66165097255741e6b4765826"
+    },
+    {
+      "path": "public/projects/proj-ims-voip-volte/media/25-22_case_shared_hss.webp",
+      "repository": "Mahyoub88/ims-voip-iptv-volte-lab",
+      "source": "docs/project/22_case_shared_hss.webp",
+      "commit": "b730721f255a93fcf6d1ebddf46f2a22f2779e28",
+      "sha256": "5019025be51ce13735ba8c681d4af4d84ae460d7524fb35289d376ea4c9bbb02"
+    },
+    {
+      "path": "public/projects/proj-its-support/media/its-diagnostic-workflow.svg",
+      "repository": "Mahyoub88/its-systems-integration",
+      "source": "docs/visuals/its-diagnostic-workflow.svg",
+      "commit": "26ae18f2a34bf7f547a68bf63cb34e8323f673b7",
+      "sha256": "d6e16d07c96f1e6ea9fd2cd6a30ef14a57ab17bf89a5fb004b567ae882d0b97f"
+    },
+    {
+      "path": "public/projects/proj-its-support/media/its-field-to-backend.svg",
+      "repository": "Mahyoub88/its-systems-integration",
+      "source": "docs/visuals/its-field-to-backend.svg",
+      "commit": "26ae18f2a34bf7f547a68bf63cb34e8323f673b7",
+      "sha256": "c707dfc1d1c8c9c4fef7f5fc815149c5fe33382f05d753b4de6872e29b9317d7"
+    },
+    {
+      "path": "public/projects/proj-monitoring-console/media/architecture.svg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/projects/proj-monitoring-console/architecture.svg",
+      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "sha256": "96ed050f31e241b7ba071a68e5d830a38e7efcc81ebd4e4c257af5f4237a980a"
+    },
+    {
+      "path": "public/projects/proj-monitoring-console/media/monitoring-console.jpg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/overview/monitoring-console.jpg",
+      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "sha256": "0676e16c4180f3ff9fa401786d5994c4827b1fe4228445db189abb00a91fe1d0"
+    },
+    {
+      "path": "public/projects/proj-monitoring-console/media/workflow.svg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/projects/proj-monitoring-console/workflow.svg",
+      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "sha256": "d563c63d1abc97cf9a60c1ca1889e0fe66d5175057d7582b95db52ae642385eb"
+    },
+    {
+      "path": "public/projects/proj-mpls-backbone/media/architecture.svg",
+      "repository": "Mahyoub88/rf-mpls-network-design",
+      "source": "docs/projects/proj-mpls-backbone/architecture.svg",
+      "commit": "c157feccfc86ff376333fc6b3fe3d21f90ef5237",
+      "sha256": "5862df192d1f97126f78c32596cd676c911fe9945ec512a8074613426dc97fa5"
+    },
+    {
+      "path": "public/projects/proj-mpls-backbone/media/mpls-backbone.jpg",
+      "repository": "Mahyoub88/rf-mpls-network-design",
+      "source": "docs/overview/mpls-backbone.jpg",
+      "commit": "c157feccfc86ff376333fc6b3fe3d21f90ef5237",
+      "sha256": "030d2dc00fec557e2aef8258da1c6facf334e97bb11192e61131461605b84176"
+    },
+    {
+      "path": "public/projects/proj-mpls-backbone/media/workflow.svg",
+      "repository": "Mahyoub88/rf-mpls-network-design",
+      "source": "docs/projects/proj-mpls-backbone/workflow.svg",
+      "commit": "c157feccfc86ff376333fc6b3fe3d21f90ef5237",
+      "sha256": "a7a7299f3fbe34f7ccfda4901351935712e32222950b215fc4ba4a7250e7cf2b"
+    },
+    {
+      "path": "public/projects/proj-ngsim/media/01-notebook-figure-01.png",
+      "repository": "Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101",
+      "source": "docs/overview/notebook-figure-01.png",
+      "commit": "e62ef64a08e63eff49c55fc2dbcfdb84b95d6315",
+      "sha256": "3c26b14dfd7becd047e6bf35d17d31a3b6f72357f90f95fe7659bc2778fe1db9"
+    },
+    {
+      "path": "public/projects/proj-ngsim/media/02-notebook-figure-02.png",
+      "repository": "Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101",
+      "source": "docs/overview/notebook-figure-02.png",
+      "commit": "e62ef64a08e63eff49c55fc2dbcfdb84b95d6315",
+      "sha256": "29a230e432e1eba45a72558910998a2ce4909d6d0c3db35b6f7dfde2317ad837"
+    },
+    {
+      "path": "public/projects/proj-ngsim/media/03-notebook-figure-03.png",
+      "repository": "Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101",
+      "source": "docs/overview/notebook-figure-03.png",
+      "commit": "e62ef64a08e63eff49c55fc2dbcfdb84b95d6315",
+      "sha256": "77cd7494cef3e83b2a752e12f06a19b179dd20655a8efab646cdcd0d6fb42983"
+    },
+    {
+      "path": "public/projects/proj-ngsim/media/04-notebook-figure-04.png",
+      "repository": "Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101",
+      "source": "docs/overview/notebook-figure-04.png",
+      "commit": "e62ef64a08e63eff49c55fc2dbcfdb84b95d6315",
+      "sha256": "707c4a46c07d877f91733892e3d71bb2dfed80520891a71c2e700c6fcbb39922"
+    },
+    {
+      "path": "public/projects/proj-ngsim/media/05-notebook-figure-05.png",
+      "repository": "Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101",
+      "source": "docs/overview/notebook-figure-05.png",
+      "commit": "e62ef64a08e63eff49c55fc2dbcfdb84b95d6315",
+      "sha256": "59887281a2403533cdec68e117f1157190395d7710ccf312679ac9fc2ad54c2f"
+    },
+    {
+      "path": "public/projects/proj-ngsim/media/06-notebook-figure-06.png",
+      "repository": "Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101",
+      "source": "docs/overview/notebook-figure-06.png",
+      "commit": "e62ef64a08e63eff49c55fc2dbcfdb84b95d6315",
+      "sha256": "c6e6866506ff243726944d69eea2f605712458887c9271debbaa55f5da01522d"
+    },
+    {
+      "path": "public/projects/proj-ngsim/media/07-notebook-figure-07.png",
+      "repository": "Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101",
+      "source": "docs/overview/notebook-figure-07.png",
+      "commit": "e62ef64a08e63eff49c55fc2dbcfdb84b95d6315",
+      "sha256": "93b80e72386617f41afec7aa61fa23704534d382d8b3b45a28c2eb620bb3889e"
+    },
+    {
+      "path": "public/projects/proj-ngsim/media/08-notebook-figure-08.png",
+      "repository": "Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101",
+      "source": "docs/overview/notebook-figure-08.png",
+      "commit": "e62ef64a08e63eff49c55fc2dbcfdb84b95d6315",
+      "sha256": "cdd3d4f2b4992045dfb52985170ca5024fcd8a243e856cbdc88131530e86af77"
+    },
+    {
+      "path": "public/projects/proj-ngsim/media/09-notebook-figure-09.png",
+      "repository": "Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101",
+      "source": "docs/overview/notebook-figure-09.png",
+      "commit": "e62ef64a08e63eff49c55fc2dbcfdb84b95d6315",
+      "sha256": "5202b33887f371d5e560b7994a7c062e8d211888c195ce1a0e79af89c00d8564"
+    },
+    {
+      "path": "public/projects/proj-ngsim/media/10-notebook-figure-10.png",
+      "repository": "Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101",
+      "source": "docs/overview/notebook-figure-10.png",
+      "commit": "e62ef64a08e63eff49c55fc2dbcfdb84b95d6315",
+      "sha256": "eb47c2a216f2f3cb8c77b2c1158258d7de973b131702eae65f23fbedde70267e"
+    },
+    {
+      "path": "public/projects/proj-ngsim/media/11-notebook-figure-11.png",
+      "repository": "Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101",
+      "source": "docs/overview/notebook-figure-11.png",
+      "commit": "e62ef64a08e63eff49c55fc2dbcfdb84b95d6315",
+      "sha256": "141807acfa0bef79bcff0d73b01df385abe5946deb1f6c88c942a64b6d3263af"
+    },
+    {
+      "path": "public/projects/proj-ngsim/media/12-notebook-figure-12.png",
+      "repository": "Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101",
+      "source": "docs/overview/notebook-figure-12.png",
+      "commit": "e62ef64a08e63eff49c55fc2dbcfdb84b95d6315",
+      "sha256": "7c59a7176478037bada6d8bd3945754f4809a02d5ce67ccb98cda6bdd7a2b9cd"
+    },
+    {
+      "path": "public/projects/proj-ngsim/media/13-notebook-figure-13.png",
+      "repository": "Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101",
+      "source": "docs/overview/notebook-figure-13.png",
+      "commit": "e62ef64a08e63eff49c55fc2dbcfdb84b95d6315",
+      "sha256": "31f0f4ef3e62c583aa13cf2508a13ee2d1526cbaf7eb585722c405c39c8b3d14"
+    },
+    {
+      "path": "public/projects/proj-ngsim/media/14-notebook-figure-14.png",
+      "repository": "Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101",
+      "source": "docs/overview/notebook-figure-14.png",
+      "commit": "e62ef64a08e63eff49c55fc2dbcfdb84b95d6315",
+      "sha256": "218c6640988f72456bc2bee0cd1c1b204a10d62f742030ab35e9b3292367f4d2"
+    },
+    {
+      "path": "public/projects/proj-plc-control/media/source/00_project_poster.jpg",
+      "repository": "Mahyoub88/industrial-automation-plc",
+      "source": "img/00_project_poster.jpg",
+      "commit": "1b2f475e2628b118386eef160a450b412befb410",
+      "sha256": "e76529eded2174553ab512a4c81aeabf6f99ead7eadc6a8edab3d6da6272a432"
+    },
+    {
+      "path": "public/projects/proj-plc-control/media/source/01_control_architecture.svg",
+      "repository": "Mahyoub88/industrial-automation-plc",
+      "source": "img/01_control_architecture.svg",
+      "commit": "1b2f475e2628b118386eef160a450b412befb410",
+      "sha256": "e1594107fcba7322a1eac7632817acb0c2034bf1f6479ce8b4fd9113e6656421"
+    },
+    {
+      "path": "public/projects/proj-plc-control/media/source/02_batching_sequence.svg",
+      "repository": "Mahyoub88/industrial-automation-plc",
+      "source": "img/02_batching_sequence.svg",
+      "commit": "1b2f475e2628b118386eef160a450b412befb410",
+      "sha256": "c5813c85a74e51a27dded7c7383d57dab4b76d3ae5b4343c76d5acb4c2917ef5"
+    },
+    {
+      "path": "public/projects/proj-plc-control/media/source/03_project_workflow.svg",
+      "repository": "Mahyoub88/industrial-automation-plc",
+      "source": "img/03_project_workflow.svg",
+      "commit": "1b2f475e2628b118386eef160a450b412befb410",
+      "sha256": "e063494d87f8ab1a7900f04b7f0179de875276d57b7712e90ef78e8133e0cef6"
+    },
+    {
+      "path": "public/projects/proj-plc-control/media/source/04_io_and_field_wiring.svg",
+      "repository": "Mahyoub88/industrial-automation-plc",
+      "source": "img/04_io_and_field_wiring.svg",
+      "commit": "1b2f475e2628b118386eef160a450b412befb410",
+      "sha256": "7ccd0e0c29f17f9e32db2772418cc0fefc9665e8d945459481100c14259a830f"
+    },
+    {
+      "path": "public/projects/proj-plc-control/media/source/05_weighing_control.svg",
+      "repository": "Mahyoub88/industrial-automation-plc",
+      "source": "img/05_weighing_control.svg",
+      "commit": "1b2f475e2628b118386eef160a450b412befb410",
+      "sha256": "9afb63c16966e921e2f904181fa6ae096d409602a0e047f0bc7ba7ca1b07fb4a"
+    },
+    {
+      "path": "public/projects/proj-plc-control/media/source/06_ladder_logic_mixer.svg",
+      "repository": "Mahyoub88/industrial-automation-plc",
+      "source": "img/06_ladder_logic_mixer.svg",
+      "commit": "1b2f475e2628b118386eef160a450b412befb410",
+      "sha256": "6e9f4ab1eabb3170c669b6c3d9945960a0966e1ccc9e58f4010fd80659b73c53"
+    },
+    {
+      "path": "public/projects/proj-plc-control/media/source/07_communication_network.svg",
+      "repository": "Mahyoub88/industrial-automation-plc",
+      "source": "img/07_communication_network.svg",
+      "commit": "1b2f475e2628b118386eef160a450b412befb410",
+      "sha256": "6c62408dbcb494c4857ed931711625425dd2fb6a990b5b656e6d18b94cffbf06"
+    },
+    {
+      "path": "public/projects/proj-plc-control/media/source/08_alarm_management.svg",
+      "repository": "Mahyoub88/industrial-automation-plc",
+      "source": "img/08_alarm_management.svg",
+      "commit": "1b2f475e2628b118386eef160a450b412befb410",
+      "sha256": "f430cfcfe377de77db649452287e9ba501726c3a2434301cf402d9c6704fd2a6"
+    },
+    {
+      "path": "public/projects/proj-plc-control/media/source/09_testing_commissioning.svg",
+      "repository": "Mahyoub88/industrial-automation-plc",
+      "source": "img/09_testing_commissioning.svg",
+      "commit": "1b2f475e2628b118386eef160a450b412befb410",
+      "sha256": "a43887d49453e47e007e51908366dbef6cc40b056ba3dfc7e308ca64f5298926"
+    },
+    {
+      "path": "public/projects/proj-plc-control/media/source/gallery/01_hardware_integration.jpg",
+      "repository": "Mahyoub88/industrial-automation-plc",
+      "source": "img/gallery/01_hardware_integration.jpg",
+      "commit": "1b2f475e2628b118386eef160a450b412befb410",
+      "sha256": "7f7ff23943c8e2f1501a53f91a143269ca0acbfd6aed652fcfcd4b7a3997c740"
+    },
+    {
+      "path": "public/projects/proj-plc-control/media/source/gallery/02_hmi_operator_interface.jpg",
+      "repository": "Mahyoub88/industrial-automation-plc",
+      "source": "img/gallery/02_hmi_operator_interface.jpg",
+      "commit": "1b2f475e2628b118386eef160a450b412befb410",
+      "sha256": "f9473e16092df389e8e6d92b10dbe37006934f2700401b9595219aff9779a67d"
+    },
+    {
+      "path": "public/projects/proj-plc-control/media/source/gallery/03_concrete_batching_plant.jpg",
+      "repository": "Mahyoub88/industrial-automation-plc",
+      "source": "img/gallery/03_concrete_batching_plant.jpg",
+      "commit": "1b2f475e2628b118386eef160a450b412befb410",
+      "sha256": "b3750a72046e26cde691bfdbaa5606cb0f20e998825838c094dceb31e11314b7"
+    },
+    {
+      "path": "public/projects/proj-plc-control/media/source/gallery/04_process_control_diagram.jpg",
+      "repository": "Mahyoub88/industrial-automation-plc",
+      "source": "img/gallery/04_process_control_diagram.jpg",
+      "commit": "1b2f475e2628b118386eef160a450b412befb410",
+      "sha256": "7366c47a6ea3cc46f066d4737e3eb5438be88ed65d0a7c275557a227d7127db4"
+    },
+    {
+      "path": "public/projects/proj-plc-control/media/source/gallery/05_control_panel.jpg",
+      "repository": "Mahyoub88/industrial-automation-plc",
+      "source": "img/gallery/05_control_panel.jpg",
+      "commit": "1b2f475e2628b118386eef160a450b412befb410",
+      "sha256": "b01443cf756d4b1525e446993edbad0452a5a881b4c594503f2a1595637a0173"
+    },
+    {
+      "path": "public/projects/proj-plc-control/media/source/gallery/06_plc_io_modules.jpg",
+      "repository": "Mahyoub88/industrial-automation-plc",
+      "source": "img/gallery/06_plc_io_modules.jpg",
+      "commit": "1b2f475e2628b118386eef160a450b412befb410",
+      "sha256": "613adcd3e3764140ebe52019ab35fe735937b98a7af244ccef42c0288a3859b1"
+    },
+    {
+      "path": "public/projects/proj-plc-control/media/source/gallery/07_monitoring_alarm_system.jpg",
+      "repository": "Mahyoub88/industrial-automation-plc",
+      "source": "img/gallery/07_monitoring_alarm_system.jpg",
+      "commit": "1b2f475e2628b118386eef160a450b412befb410",
+      "sha256": "7aa20113f712d11e5cad87e8582a39708713572d0041f3318ce867ca224c7f33"
+    },
+    {
+      "path": "public/projects/proj-plc-control/media/source/gallery/08_scada_interface.jpg",
+      "repository": "Mahyoub88/industrial-automation-plc",
+      "source": "img/gallery/08_scada_interface.jpg",
+      "commit": "1b2f475e2628b118386eef160a450b412befb410",
+      "sha256": "66304f1b7ddfab91e37d07cba758c2296a67ad9b87dcf426991203656d2f072f"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/01-01-design-and-test-flow.png",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/01-design-and-test-flow.png",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "30091b142b034ae2a3b153dbe153ddd6233fe25a54c8a3f3ea774e7c6f3533cd"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/02-02-system-block-diagram.png",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/02-system-block-diagram.png",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "85e5761878209f81685940795e91a258530cc08e10c54809e5953c8c200de4dc"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/03-03-ecalc-inputs.png",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/03-ecalc-inputs.png",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "21cea3d1bc891cfdc2e3a8147e81d942a5d1f3355fe09d65fa9fda88173c878e"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/04-04-ecalc-results.png",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/04-ecalc-results.png",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "1afa2532d487a6175f3d81ef8825ecb407f1c6747870b6c5dc7f60339f76c74f"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/05-05-ecalc-motor-efficiency.png",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/05-ecalc-motor-efficiency.png",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "0fcdef0008ec074a2f58f4e2c82eb44a6dbdc6879593be6183b42d95e66b2cc5"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/06-06-barometer-test.png",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/06-barometer-test.png",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "c2d9fb1e81912e42c6ea79eeb1aebcf2ea2ac3ddf9f16a062b1e8a759bc24427"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/07-07-sonar-test.png",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/07-sonar-test.png",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "64fc00f396526fa363ca7fdcf9f6df862ccfa1e2e92c6fbb2a201bb6a08720ae"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/08-08-accelerometer-test.png",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/08-accelerometer-test.png",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "2c98acccc526606412d190482e23a88e69562693fc9ff272487691e444e74695"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/09-09-accelerometer-calibration-cli.png",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/09-accelerometer-calibration-cli.png",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "190469fd10573d52c793031799842719b3ff0103b48807339ab7d21a0664f055"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/10-10-gps-test.jpg",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/10-gps-test.jpg",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "f3c0c2a5bc14ea0ac28f775651dc4436350ad52dc40a30ea7315ea7c4717adc8"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/11-11-rc-calibration.png",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/11-rc-calibration.png",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "5f9cd8cd9cde08a542d252c5264be2feb33e0bc4a97a830692862b3fa8455cf9"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/12-12-rc-calibration-summary.png",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/12-rc-calibration-summary.png",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "8d78c91eb1ed8a68e9fd10d5b50324a90aed0d735e65474e82bb8cd8c2fc9ec3"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/13-14-loiter-flowchart.png",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/14-loiter-flowchart.png",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "67c4c1fd1ee747fe856c069c7856af8f1836bc984332377d551678e73a4c7d66"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/14-15-loiter-vibration-before.png",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/15-loiter-vibration-before.png",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "ba27bdde3abeeaf4422da405fc936a51ccb3d5b874bf63f87085c92f9db1d6d6"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/15-16-loiter-vibration-after.png",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/16-loiter-vibration-after.png",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "3d3db0b95028dd5a5211a7eb0b1edfb3a9cadba12eb6f324679ad598daa1805a"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/16-17-althold-flowchart.png",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/17-althold-flowchart.png",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "7a80356c16b625497e3fe7ea6ad2537bee2b11c0584ea8614bbac55d226eccad"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/17-18-sonar-noise-before.png",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/18-sonar-noise-before.png",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "a649e50ed2ca9963cdf63e38530a913ef1e44580fbcf539d4d7b754be7745c2d"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/18-19-sonar-after-low-pass.png",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/19-sonar-after-low-pass.png",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "a3c13b188a31cebafe377407d364ed551b588fb4a27c237bd0b8bdc65ee9a9c8"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/19-20-auto-heading-error.jpg",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/20-auto-heading-error.jpg",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "ed870f9b21e1abe66477878183b275b9f81c15498f5af57fc1987ba59b7f6f3d"
+    },
+    {
+      "path": "public/projects/proj-quadcopter-uav/media/20-21-auto-heading-corrected.jpg",
+      "repository": "Mahyoub88/autonomous-quadcopter-uav",
+      "source": "docs/images/21-auto-heading-corrected.jpg",
+      "commit": "099d24bbee0f4d00aaf4aa8ac3f526329941922f",
+      "sha256": "e942d7ef4699e60d3f4cf70f9322690bd9cbb48e0e866ec969dbe02a2e3c17bc"
+    },
+    {
+      "path": "public/projects/proj-reconnaissance-robot/media/robot-data-paths.svg",
+      "repository": "Mahyoub88/reconnaissance-robot-rgbd",
+      "source": "docs/visuals/robot-data-paths.svg",
+      "commit": "cd85fb79ad83f547d262332dae1f670fd3b96d51",
+      "sha256": "ad3e61ec9d178d856db35b8a54c97b3a3579ced385ef6fa8fc6c40c24c4ab58b"
+    },
+    {
+      "path": "public/projects/proj-reconnaissance-robot/media/robot-system-illustration.svg",
+      "repository": "Mahyoub88/reconnaissance-robot-rgbd",
+      "source": "docs/visuals/robot-system-illustration.svg",
+      "commit": "cd85fb79ad83f547d262332dae1f670fd3b96d51",
+      "sha256": "ab23f694349d98f84707e87aee77ed3f89d8c9c015c6a5e86f2f8aa95b21a0a8"
+    },
+    {
+      "path": "public/projects/proj-rf-link-budget/media/01-rf-tool.jpg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/overview/rf-tool.jpg",
+      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "sha256": "a4ac81b42527b146b3e173d6883b86b07d0bee3980f783caff074d8ceb04e3b9"
+    },
+    {
+      "path": "public/projects/proj-rf-link-budget/media/architecture.svg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/projects/proj-rf-link-budget/architecture.svg",
+      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "sha256": "fd458e6fa5196c1af01cf0d6fdc34ca1f2fa66fcae3f3c926828cb6b0fdd67fb"
+    },
+    {
+      "path": "public/projects/proj-rf-link-budget/media/workflow.svg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/projects/proj-rf-link-budget/workflow.svg",
+      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "sha256": "85b62d7bbb13a3e26e385685c664e16432804517b51a8cd261af69b078847dc9"
+    },
+    {
+      "path": "public/projects/proj-rfid-study/media/01-01_how_rfid_works.webp",
+      "repository": "Mahyoub88/rfid-library-automation",
+      "source": "img/01_how_rfid_works.webp",
+      "commit": "9c7de567621379e4fe46342f4509dd7023df413c",
+      "sha256": "91dc54251eec7746cbc87984fbf2edb228e50f4d51db2b2a951b460d954db7b3"
+    },
+    {
+      "path": "public/projects/proj-rfid-study/media/02-02_tag_structure.webp",
+      "repository": "Mahyoub88/rfid-library-automation",
+      "source": "img/02_tag_structure.webp",
+      "commit": "9c7de567621379e4fe46342f4509dd7023df413c",
+      "sha256": "4b480baeff1869f8da955709546bfc9f9c6f164f32744807f617eb5faa8359cf"
+    },
+    {
+      "path": "public/projects/proj-rfid-study/media/03-03_active_vs_passive_tags.webp",
+      "repository": "Mahyoub88/rfid-library-automation",
+      "source": "img/03_active_vs_passive_tags.webp",
+      "commit": "9c7de567621379e4fe46342f4509dd7023df413c",
+      "sha256": "a2b4971a733e163bc1ae760c499259bf0dc435cbd48ad4e2974aff3e375f06bb"
+    },
+    {
+      "path": "public/projects/proj-rfid-study/media/04-04_library_utilizations.webp",
+      "repository": "Mahyoub88/rfid-library-automation",
+      "source": "img/04_library_utilizations.webp",
+      "commit": "9c7de567621379e4fe46342f4509dd7023df413c",
+      "sha256": "084fb86c2a5a762706b31203eab3872de44c6ab06356fb69a343e4658c37ed2c"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/01-01-lab-architecture.jpg",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/01-lab-architecture.jpg",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "f32ee9db41670f2320d23cf53ca33149a9cc59974709b11057eb7b0a8fff78fb"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/02-02-freenas-volume-manager.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/02-freenas-volume-manager.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "3745faea09cb1f337d1a6c0744890d22f59f4083d1fb34299eabb7b62e190a6e"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/03-03-freenas-iscsi-portal-initiators.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/03-freenas-iscsi-portal-initiators.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "445bcf59b6ecc45059125761109f0acad878289c5f528f6b886fab8eb6c187b7"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/04-04-freenas-iscsi-target-extent.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/04-freenas-iscsi-target-extent.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "2a3ee2893bb30fc39f60731e4b4c3b3e35d35cdd5ec1097e8bdb864a51744010"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/05-05-esxi-install.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/05-esxi-install.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "5adcfbc091d4fcd8827da10c07f2bf4a2bd534654e2e420346dd70cd36e34b38"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/06-06-esxi-static-ip.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/06-esxi-static-ip.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "1e5cae1d9302e5a3280719578c8ff54a03ff10c72ae49d80dd1a2619d55e65b8"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/07-07-esxi-dns-hostname.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/07-esxi-dns-hostname.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "c365aaf50adfaeaa81bd006db6540618b97f5c4e0758be96eab19053b918b732"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/08-08-esxi-configured.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/08-esxi-configured.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "cead27183d6585fdd13bb7febe2d048f7d2f08f6e0b79380fa6261474d73c6b5"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/09-09-vsphere-client-login.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/09-vsphere-client-login.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "7b719a41bd16d2d3ae12696a587ff003ee165fd9e9aa50c558cefa4460c90c9e"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/10-10-vsphere-host-inventory.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/10-vsphere-host-inventory.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "83a08921b3504b8c4341d4afd7043fb086c68e275ea8f65d673e8023e34f0671"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/11-11-vm-hardware-settings.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/11-vm-hardware-settings.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "95a5fb9dfb6626d587e18905e588380b709004873a84e9e1d2ba5c82d50a44fe"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/12-12-vswitch-created.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/12-vswitch-created.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "2490b5e7f42fd99e4c41c579e383a5b4af6604432b9c3a16cb09e7f4499c282c"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/13-13-nic-teaming-failover-order.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/13-nic-teaming-failover-order.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "1aa6fbccec635cc7fca4ff4fdba4e0749dc1e3d5100376b7f47ec0f6bd34e945"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/14-14-xenapp-license-server.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/14-xenapp-license-server.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "d93cb5d8cfb35da6d9973834c25d21b2a547ce54ee6e358171897e4f5b6b5139"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/15-15-xenapp-sql-data-store.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/15-xenapp-sql-data-store.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "7abaf34f300029a8934c0b702bafb70ee8dd29d4cadd443d7f6616d279cfac73"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/16-16-xenapp-published-apps.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/16-xenapp-published-apps.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "ee84df4fe9905834647351f3f1ffdd8d4f96acae2c5e94d4d8ddc810bcd28f66"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/17-17-citrix-web-interface-login.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/17-citrix-web-interface-login.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "52c9607bbc57508cc23e1f3239a7735aa4adbd1636563b43b6179b277b7e3d3b"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/18-18-citrix-published-app-running.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/18-citrix-published-app-running.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "704cd4019c60504fcf1adefc36faf0c2d1d828d53cbf2e78ab26276d7c75e89b"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/19-19-apache-server-settings.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/19-apache-server-settings.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "736510c2ed7e838b325b7683ded024493d7114983dfc05f6f876271352b4d1a6"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/20-20-mysql-instance-config.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/20-mysql-instance-config.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "83736ea3b2f82fe2593ea305bebcac1fefda2246aaf0e5d2529ade21203bfc12"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/21-21-sanaa-website-served.jpg",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/21-sanaa-website-served.jpg",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "d59f0d90fc087911417b9d662b568ec9f8ab5848f4314121da4ae87784abb12c"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/22-22-exchange-powershell.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/22-exchange-powershell.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "4a04f24dbf978f3ead1b8a8d1f685d9c6c12e0d4f078c4ab26f000f9c705c520"
+    },
+    {
+      "path": "public/projects/proj-sddc-lab/media/23-24-exchange-send-connector.png",
+      "repository": "Mahyoub88/sddc-lab-implementation",
+      "source": "docs/images/24-exchange-send-connector.png",
+      "commit": "8735248ea6ddb4946053397d3bc63693630dba97",
+      "sha256": "5580182b4b9d9830143039ae919f3ec4a0c842bc58ff374325515611c5a8753e"
+    },
+    {
+      "path": "public/projects/proj-sdn/media/02-exp2_frames_t6s.webp",
+      "repository": "Mahyoub88/sdn-openflow-lab",
+      "source": "docs/images/exp2_frames_t6s.webp",
+      "commit": "70b11698ab3898905166556667b8a04c7802225d",
+      "sha256": "00903d47abb5648f1e700c190ea68805a002f438b2abbac9898cd1c7dca69760"
+    },
+    {
+      "path": "public/projects/proj-service-operations/media/02-service-tool.jpg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/overview/service-tool.jpg",
+      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "sha256": "11c7ce0360b5cd4cf4d3f102d4d68c10088379ccc69a4b21b8e85a289156e464"
+    },
+    {
+      "path": "public/projects/proj-service-operations/media/architecture.svg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/projects/proj-service-operations/architecture.svg",
+      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "sha256": "84e89bc75a2a57f1132458f0e2fe0d67c0ecd6893ae6ecd57166ecf1473817e7"
+    },
+    {
+      "path": "public/projects/proj-service-operations/media/workflow.svg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/projects/proj-service-operations/workflow.svg",
+      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "sha256": "c9ee96016908a0b14445650edf32f674de43d89d7a6162007036350fd093ead7"
+    },
+    {
+      "path": "public/projects/proj-solar-study/media/detailed-architecture.png",
+      "repository": "Mahyoub88/solar-energy-systems",
+      "source": "docs/overview/detailed-architecture.png",
+      "commit": "7933f2f806738f76ec895c36330534b76635b5e2",
+      "sha256": "16189698c0a6157d2e74d0c1148ee81857e786f841075d10cc04bea17c31164e"
+    },
+    {
+      "path": "public/projects/proj-solar-study/media/installation-gallery.png",
+      "repository": "Mahyoub88/solar-energy-systems",
+      "source": "docs/overview/installation-gallery.png",
+      "commit": "7933f2f806738f76ec895c36330534b76635b5e2",
+      "sha256": "171bed175edda8c507c104361ff0d0ff8d1a234013f42d5bc6bb3a7df8a4b321"
+    },
+    {
+      "path": "public/projects/proj-solar-study/media/solar-system.jpg",
+      "repository": "Mahyoub88/solar-energy-systems",
+      "source": "docs/overview/solar-system.jpg",
+      "commit": "7933f2f806738f76ec895c36330534b76635b5e2",
+      "sha256": "70572ab3f6789720a14832c5fa84d99a1d8636c38c365bf56cb030bec64c3606"
+    },
+    {
+      "path": "public/projects/proj-wireless-coverage/media/02-network-coverage.jpg",
+      "repository": "Mahyoub88/rf-mpls-network-design",
+      "source": "docs/overview/network-coverage.jpg",
+      "commit": "c157feccfc86ff376333fc6b3fe3d21f90ef5237",
+      "sha256": "1363ee21655109dd40a826a4de207f48e37d7f7b8733e46804ae3f18114c5c08"
+    },
+    {
+      "path": "public/projects/proj-wireless-coverage/media/architecture.svg",
+      "repository": "Mahyoub88/rf-mpls-network-design",
+      "source": "docs/projects/proj-wireless-coverage/architecture.svg",
+      "commit": "c157feccfc86ff376333fc6b3fe3d21f90ef5237",
+      "sha256": "3fc96488f56fb4f131d1a5b9944fb1ed1216a6a6f1e773577b73bbe5b523ac95"
+    },
+    {
+      "path": "public/projects/proj-wireless-coverage/media/workflow.svg",
+      "repository": "Mahyoub88/rf-mpls-network-design",
+      "source": "docs/projects/proj-wireless-coverage/workflow.svg",
+      "commit": "c157feccfc86ff376333fc6b3fe3d21f90ef5237",
+      "sha256": "4b939fb757410feef635458f602591587593c40c5fce6a076b9c162e4c7e588f"
+    }
+  ]
+}
