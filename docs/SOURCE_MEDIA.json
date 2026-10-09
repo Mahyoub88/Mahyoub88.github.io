@@ -1,5 +1,6 @@
 {
   "policy": "Public repositories remain the technical source. These pinned, checksum-verified snapshots are served locally by GitHub Pages. Reference figures retain their original attribution; a source match is not proof of deployment.",
+  "checksumNormalization": "SVG text uses LF line endings; binary media uses unchanged file bytes.",
   "assets": [
     {
       "path": "public/notes/usv/media/fault-isolation.svg",
@@ -69,70 +70,70 @@
       "repository": "Mahyoub88/eeprom-data-storage-pic",
       "source": "img/01_eeprom_store_and_readback.svg",
       "commit": "97a2919ac9a6ba9dc3fefa6b52e746ee792448b3",
-      "sha256": "26669d2c6ddd99f30533ce8e541ac40853a6866be775935078ce195e086f7079"
+      "sha256": "0d80b93e3760aa743de8ce0e9c91d9703a78094bc42aebaa8a3bd0174d9b3aff"
     },
     {
       "path": "public/projects/proj-embedded-iot/media/source/01_system_overview.svg",
       "repository": "Mahyoub88/embedded-iot-automation",
       "source": "img/01_system_overview.svg",
       "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
-      "sha256": "93343c2a4e68d11493a1d48b71ce8e81c4a9a468afc69c5ef8a042451fda9f7d"
+      "sha256": "e4b603d4bbde062fd903267a683452b96ef284c0b9821e78668820c9269a8b90"
     },
     {
       "path": "public/projects/proj-embedded-iot/media/source/02_development_workflow.svg",
       "repository": "Mahyoub88/embedded-iot-automation",
       "source": "img/02_development_workflow.svg",
       "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
-      "sha256": "b94a7d93406c2ceadbd79750b1281f922aed176ab052c0f37bb591a7e15b9028"
+      "sha256": "2c74b6ea7bf211d1c89e0e1e8a9062725ff15adc47f05fcc734a6d9b5b5be3b4"
     },
     {
       "path": "public/projects/proj-embedded-iot/media/source/03_7segment_multiplexing.svg",
       "repository": "Mahyoub88/embedded-iot-automation",
       "source": "img/03_7segment_multiplexing.svg",
       "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
-      "sha256": "02812e7cfed301283c8a44a5dcdabe242c334e2b8311b7c8a0ae61e65cd35843"
+      "sha256": "0888980f96539d80c6982ac1292974e2f4df9db8101159eedfee0d1314081d4e"
     },
     {
       "path": "public/projects/proj-embedded-iot/media/source/04_adc_timer0_scheduling.svg",
       "repository": "Mahyoub88/embedded-iot-automation",
       "source": "img/04_adc_timer0_scheduling.svg",
       "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
-      "sha256": "78feec66941184df226c909c0814b6eb01476bbb736f9d08ebead124143faea0"
+      "sha256": "342f2c2f02e064edac0afb04e134a93e0dac1c276a05533b144c8adc58d2e3f9"
     },
     {
       "path": "public/projects/proj-embedded-iot/media/source/05_ds1307_i2c.svg",
       "repository": "Mahyoub88/embedded-iot-automation",
       "source": "img/05_ds1307_i2c.svg",
       "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
-      "sha256": "9e621bc23f6d9b5e078be7bd7c8f6385c856cffdbad682fb860c37c909a9df56"
+      "sha256": "88f9d4c27f29cfdb14b30137f44121a0a321cfcc009f2502a649293f9b7ca37b"
     },
     {
       "path": "public/projects/proj-embedded-iot/media/source/06_74hc595_output_expansion.svg",
       "repository": "Mahyoub88/embedded-iot-automation",
       "source": "img/06_74hc595_output_expansion.svg",
       "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
-      "sha256": "208c872285008b6a224fd2ae66921c24a357bd28d027b4e763082e4e89c191ec"
+      "sha256": "d00f9db9ada9296e9cbc498e374c1ffc69af27367f6e82aa5f2c1770000f9cc6"
     },
     {
       "path": "public/projects/proj-embedded-iot/media/source/07_keypad_access_control.svg",
       "repository": "Mahyoub88/embedded-iot-automation",
       "source": "img/07_keypad_access_control.svg",
       "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
-      "sha256": "da87351123f93e52ec0a3d2a60d5ef4a81c1d135a8c5963d2be09a38995a6bd6"
+      "sha256": "a21bb0462621e00c5db2bc36af48d5e06782f4a46dd66629a1c36f544fa86fec"
     },
     {
       "path": "public/projects/proj-embedded-iot/media/source/08_nokia5110_pcd8544.svg",
       "repository": "Mahyoub88/embedded-iot-automation",
       "source": "img/08_nokia5110_pcd8544.svg",
       "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
-      "sha256": "8d6bdaeb75777bcb26f4b7cdfdca1ae5d8bdd7f2a484d2efc0faacaf709c67a1"
+      "sha256": "64dfa72b004e3e0608c4734313f7bc5e645adc459c9421f903b2ddeb14f9bef9"
     },
     {
       "path": "public/projects/proj-embedded-iot/media/source/09_memory_technologies.svg",
       "repository": "Mahyoub88/embedded-iot-automation",
       "source": "img/09_memory_technologies.svg",
       "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
-      "sha256": "79d846037322b0237863b4e2467769c9f074398ca09c9ced5b7e403e742f8244"
+      "sha256": "3eb7514d5ad618842b71070ad4019631b716cdbf9c4f2c1b35393527b4b488f1"
     },
     {
       "path": "public/projects/proj-enterprise-network/media/01-network-architecture.jpg",
@@ -468,63 +469,63 @@
       "repository": "Mahyoub88/industrial-automation-plc",
       "source": "img/01_control_architecture.svg",
       "commit": "1b2f475e2628b118386eef160a450b412befb410",
-      "sha256": "e1594107fcba7322a1eac7632817acb0c2034bf1f6479ce8b4fd9113e6656421"
+      "sha256": "fb48d0fdf28af97c3719a6b698391b3e9a24a9ef2b70b231ed18a31663020be1"
     },
     {
       "path": "public/projects/proj-plc-control/media/source/02_batching_sequence.svg",
       "repository": "Mahyoub88/industrial-automation-plc",
       "source": "img/02_batching_sequence.svg",
       "commit": "1b2f475e2628b118386eef160a450b412befb410",
-      "sha256": "c5813c85a74e51a27dded7c7383d57dab4b76d3ae5b4343c76d5acb4c2917ef5"
+      "sha256": "1d04899fbe5cbc8b959d57b63c5292c6cc96ceb5b834925825b1295c6aac8cc9"
     },
     {
       "path": "public/projects/proj-plc-control/media/source/03_project_workflow.svg",
       "repository": "Mahyoub88/industrial-automation-plc",
       "source": "img/03_project_workflow.svg",
       "commit": "1b2f475e2628b118386eef160a450b412befb410",
-      "sha256": "e063494d87f8ab1a7900f04b7f0179de875276d57b7712e90ef78e8133e0cef6"
+      "sha256": "fcb69332d79792ee73fd6297ff9d362193ad7cbe309950e9f77a73ff4d1f15a8"
     },
     {
       "path": "public/projects/proj-plc-control/media/source/04_io_and_field_wiring.svg",
       "repository": "Mahyoub88/industrial-automation-plc",
       "source": "img/04_io_and_field_wiring.svg",
       "commit": "1b2f475e2628b118386eef160a450b412befb410",
-      "sha256": "7ccd0e0c29f17f9e32db2772418cc0fefc9665e8d945459481100c14259a830f"
+      "sha256": "a08392090f657699533ae31d6e84736145064e9c2588b813e909a89115bcfb94"
     },
     {
       "path": "public/projects/proj-plc-control/media/source/05_weighing_control.svg",
       "repository": "Mahyoub88/industrial-automation-plc",
       "source": "img/05_weighing_control.svg",
       "commit": "1b2f475e2628b118386eef160a450b412befb410",
-      "sha256": "9afb63c16966e921e2f904181fa6ae096d409602a0e047f0bc7ba7ca1b07fb4a"
+      "sha256": "5a0c0c9a6f4cfbc48a4ba5bba16f2e6046ac21c5d5887129c2da0d1c9a2e7678"
     },
     {
       "path": "public/projects/proj-plc-control/media/source/06_ladder_logic_mixer.svg",
       "repository": "Mahyoub88/industrial-automation-plc",
       "source": "img/06_ladder_logic_mixer.svg",
       "commit": "1b2f475e2628b118386eef160a450b412befb410",
-      "sha256": "6e9f4ab1eabb3170c669b6c3d9945960a0966e1ccc9e58f4010fd80659b73c53"
+      "sha256": "033f7dc4b82c5effbd114797a6264645217fc5cf17f684ad13bf6b6f80f52229"
     },
     {
       "path": "public/projects/proj-plc-control/media/source/07_communication_network.svg",
       "repository": "Mahyoub88/industrial-automation-plc",
       "source": "img/07_communication_network.svg",
       "commit": "1b2f475e2628b118386eef160a450b412befb410",
-      "sha256": "6c62408dbcb494c4857ed931711625425dd2fb6a990b5b656e6d18b94cffbf06"
+      "sha256": "fe47104fe91559d13576c73b43dda079d58ed73d1542cdf9318ffc8ae6fbf876"
     },
     {
       "path": "public/projects/proj-plc-control/media/source/08_alarm_management.svg",
       "repository": "Mahyoub88/industrial-automation-plc",
       "source": "img/08_alarm_management.svg",
       "commit": "1b2f475e2628b118386eef160a450b412befb410",
-      "sha256": "f430cfcfe377de77db649452287e9ba501726c3a2434301cf402d9c6704fd2a6"
+      "sha256": "3e72421ed52decab2e99cb07c8e900b97777f8fdfee041a14be019b6e57c5fcb"
     },
     {
       "path": "public/projects/proj-plc-control/media/source/09_testing_commissioning.svg",
       "repository": "Mahyoub88/industrial-automation-plc",
       "source": "img/09_testing_commissioning.svg",
       "commit": "1b2f475e2628b118386eef160a450b412befb410",
-      "sha256": "a43887d49453e47e007e51908366dbef6cc40b056ba3dfc7e308ca64f5298926"
+      "sha256": "05cdd2988d340e926f11db4614c8f1b1f858276fe705d1265069a7c8ba57502f"
     },
     {
       "path": "public/projects/proj-plc-control/media/source/gallery/01_hardware_integration.jpg",

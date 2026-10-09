@@ -14,7 +14,8 @@ for(const asset of manifest.assets){
  const source=path.resolve(repoRoot,asset.repository.split('/')[1],asset.source);
  const target=path.resolve(root,asset.path);
  if(!source.startsWith(repoRoot+path.sep)||!target.startsWith(path.join(root,'public')+path.sep))throw new Error('Source or target path leaves its expected directory.');
- const bytes=fs.readFileSync(source);
+ const raw=fs.readFileSync(source);
+ const bytes=source.endsWith('.svg')?Buffer.from(raw.toString('utf8').replaceAll('\r\n','\n'),'utf8'):raw;
  if(digest(bytes)!==asset.sha256)throw new Error(`Source differs from pinned snapshot: ${asset.repository}/${asset.source}. Review the source and update its recorded commit/checksum before refreshing.`);
  checked.push({target,bytes});
 }
