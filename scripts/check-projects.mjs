@@ -10,6 +10,7 @@ const unique=(values,label)=>{if(new Set(values).size!==values.length)errors.pus
 unique(content.projects.map(p=>p.id),'project ids');
 unique(content.projects.map(p=>p.title),'project titles');
 unique(content.projects.map(p=>p.coverImage),'generated cover paths');
+unique(content.projects.map(p=>p.coverLightImage),'light cover paths');
 unique(content.projects.filter(p=>p.coverImage&&fs.existsSync(path.join(publicRoot,p.coverImage))).map(p=>crypto.createHash('sha256').update(fs.readFileSync(path.join(publicRoot,p.coverImage))).digest('hex')),'generated cover contents');
 const decode=s=>s.replaceAll('&amp;','&').replaceAll('&quot;','"').replaceAll('&lt;','<').replaceAll('&gt;','>');
 const visit=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?visit(path.join(dir,e.name)):[path.join(dir,e.name)]);
@@ -42,6 +43,7 @@ for(const p of content.projects){
  if(!p.imageCaption)errors.push(`${p.id}: media provenance label missing`);
  if(!p.coverImage || !p.coverAlt || p.coverCaption!=='AI-generated project cover illustration')errors.push(`${p.id}: generated cover metadata missing`);
  if(p.coverImage && !fs.existsSync(path.join(publicRoot,p.coverImage)))errors.push(`${p.id}: generated cover file missing`);
+ if(!p.coverLightImage || !fs.existsSync(path.join(publicRoot,p.coverLightImage)))errors.push(`${p.id}: light-theme cover missing`);
  if(p.links.some(l=>l.href.includes('VTID2-Efficient-Vehicle-Type-Classification')))errors.push(`${p.id}: private assessment repository exposed`);
  if(!fs.existsSync(path.join(publicRoot,p.image)))errors.push(`${p.id}: preview image missing`);
 }

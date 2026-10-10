@@ -1,5 +1,6 @@
 import { ArrowUpRight } from 'lucide-react'
 import type { Project, ProjectStatusKind } from '../types/content'
+import { useTheme } from '../context/ThemeContext'
 
 const accentStyles: Record<Project['accent'], { text: string; gradient: string; ring: string }> = {
   blue: {
@@ -29,7 +30,8 @@ const statusStyles: Record<ProjectStatusKind, string> = {
 
 export function ProjectCard({ project }: { project: Project }) {
   const accent = accentStyles[project.accent]
-  const previewImage = project.coverImage ?? project.image
+  const { theme } = useTheme()
+  const previewImage = (theme === 'light' ? project.coverLightImage : project.coverImage) ?? project.coverImage ?? project.image
   const previewAlt = project.coverAlt ?? project.imageAlt ?? project.title
   const previewCaption = project.coverCaption ?? project.imageCaption
   const buttons = project.links?.filter((l) => l.label && l.href) ?? []

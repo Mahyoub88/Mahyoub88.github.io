@@ -332,9 +332,10 @@
       "image": "/projects/proj-its-support/media/its-field-to-backend.svg",
       "imageAlt": "ITS Systems Integration & Traffic Enforcement Support — explanatory system diagram",
       "imageCaption": "Explanatory system diagram",
-      "coverImage": "/images/project-covers/engineering-v3/proj-its-support.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-its-support.webp",
       "coverAlt": "Engineering illustration of its integration: camera / lidar, edge control, network, backend",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-its-support.webp"
     },
     {
       "id": "proj-vtid2",
@@ -384,9 +385,10 @@
       "image": "/projects/proj-vtid2/media/published-efficiency.svg",
       "imageAlt": "Efficient Neural Network Architectures for Vehicle Type Classification — published result summary",
       "imageCaption": "Published result summary",
-      "coverImage": "/images/project-covers/engineering-v3/proj-vtid2.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-vtid2.webp",
       "coverAlt": "Engineering illustration of vehicle classification: images, efficient cnn, classes, grad-cam",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-vtid2.webp"
     },
     {
       "id": "proj-ngsim",
@@ -439,9 +441,10 @@
       "image": "/projects/proj-ngsim/media/12-notebook-figure-12.png",
       "imageAlt": "Vehicle Type Classification Using NGSIM US-101 — executed notebook output",
       "imageCaption": "Executed notebook output",
-      "coverImage": "/images/project-covers/engineering-v3/proj-ngsim.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-ngsim.webp",
       "coverAlt": "Engineering illustration of trajectory machine learning: trajectories, vehicle features, random forest, classes",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-ngsim.webp"
     },
     {
       "id": "proj-reconnaissance-robot",
@@ -499,9 +502,10 @@
       "image": "/projects/proj-reconnaissance-robot/media/robot-system-illustration.svg",
       "imageAlt": "Reconnaissance Robot — RGB-D Mapping & Remote Control — explanatory component diagram",
       "imageCaption": "Explanatory component diagram",
-      "coverImage": "/images/project-covers/engineering-v3/proj-reconnaissance-robot.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-reconnaissance-robot.webp",
       "coverAlt": "Engineering illustration of rgb-d mapping robot: rgb-d camera, usb / linux, rtab-map, remote control",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-reconnaissance-robot.webp"
     },
     {
       "id": "proj-quadcopter-uav",
@@ -567,9 +571,10 @@
       "image": "/projects/proj-quadcopter-uav/media/02-02-system-block-diagram.png",
       "imageAlt": "Autonomous Quadcopter UAV — Flight Control, Telemetry & FPV — original project diagram",
       "imageCaption": "Original project diagram",
-      "coverImage": "/images/project-covers/engineering-v3/proj-quadcopter-uav.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-quadcopter-uav.webp",
       "coverAlt": "Engineering illustration of autonomous quadcopter: apm 2.6, gps, mavlink, fpv",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-quadcopter-uav.webp"
     },
     {
       "id": "proj-sdn",
@@ -632,9 +637,10 @@
       "image": "/projects/proj-sdn/media/06-topology.svg",
       "imageAlt": "Software-Defined Networking — Automation & Video Streaming — reproducible extension topology",
       "imageCaption": "Reproducible extension topology",
-      "coverImage": "/images/project-covers/engineering-v3/proj-sdn.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-sdn.webp",
       "coverAlt": "Engineering illustration of software-defined network: rest api, controller, openflow, video path",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-sdn.webp"
     },
     {
       "id": "proj-ims-voip-volte",
@@ -707,9 +713,10 @@
       "image": "/projects/proj-ims-voip-volte/media/10-03_gns3_voice_topology.webp",
       "imageAlt": "IMS Multimedia Services — VoIP, IPTV & VoLTE — original implementation screenshot",
       "imageCaption": "Original implementation screenshot",
-      "coverImage": "/images/project-covers/engineering-v3/proj-ims-voip-volte.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-ims-voip-volte.webp",
       "coverAlt": "Engineering illustration of ims multimedia services: voip, iptv, volte, ims / sip",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-ims-voip-volte.webp"
     },
     {
       "id": "proj-sddc-lab",
@@ -775,9 +782,10 @@
       "image": "/projects/proj-sddc-lab/media/10-10-vsphere-host-inventory.png",
       "imageAlt": "Software-Defined Data Center (SDDC) — Design & Implementation — original implementation screenshot",
       "imageCaption": "Original implementation screenshot",
-      "coverImage": "/images/project-covers/engineering-v3/proj-sddc-lab.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-sddc-lab.webp",
       "coverAlt": "Engineering illustration of software-defined data center: virtual machines, esxi / vswitch, freenas, iscsi",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-sddc-lab.webp"
     },
     {
       "id": "proj-embedded-iot",
@@ -831,9 +839,10 @@
       "image": "/projects/proj-embedded-iot/media/source/01_system_overview.svg",
       "imageAlt": "PIC peripheral overview — explanatory source diagram",
       "imageCaption": "Explanatory system diagram",
-      "coverImage": "/images/project-covers/engineering-v3/proj-embedded-iot.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-embedded-iot.webp",
       "coverAlt": "Engineering illustration of pic firmware & peripherals: pic16, lcd / keypad, rtc / i2c, adc",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-embedded-iot.webp"
     },
     {
       "id": "proj-rfid-study",
@@ -891,9 +900,10 @@
       "image": "/projects/proj-rfid-study/media/05-05_system_architecture.svg",
       "imageAlt": "RFID Library Automation System (ISO 15693) — explanatory system diagram",
       "imageCaption": "Explanatory system diagram",
-      "coverImage": "/images/project-covers/engineering-v3/proj-rfid-study.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-rfid-study.webp",
       "coverAlt": "Engineering illustration of rfid library automation: passive hf tag, iso 15693, reader, library database",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-rfid-study.webp"
     },
     {
       "id": "proj-solar-study",
@@ -941,9 +951,10 @@
       "image": "/projects/proj-solar-study/media/installation-gallery.png",
       "imageAlt": "Solar Energy Systems — Design, Sizing & Deployment — source installation photographs",
       "imageCaption": "Source installation photographs",
-      "coverImage": "/images/project-covers/engineering-v3/proj-solar-study.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-solar-study.webp",
       "coverAlt": "Engineering illustration of solar power system: pv array, charge control, battery, inverter / load",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-solar-study.webp"
     },
     {
       "id": "proj-plc-control",
@@ -984,9 +995,10 @@
       "image": "/projects/proj-plc-control/media/source/gallery/01_hardware_integration.jpg",
       "imageAlt": "Industrial Automation & PLC-Based Control Systems — source project media",
       "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/engineering-v3/proj-plc-control.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-plc-control.webp",
       "coverAlt": "Engineering illustration of plc batching control: field sensors, plc / i-o, hmi / scada, mixer",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-plc-control.webp"
     },
     {
       "id": "proj-eeprom-storage",
@@ -1026,9 +1038,10 @@
       "image": "/projects/proj-eeprom-storage/media/source/00_project_poster.jpg",
       "imageAlt": "Original project poster",
       "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/engineering-v3/proj-eeprom-storage.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-eeprom-storage.webp",
       "coverAlt": "Engineering illustration of pic eeprom persistence: input, pic16, internal eeprom, read back",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-eeprom-storage.webp"
     },
     {
       "id": "proj-monitoring-console",
@@ -1068,9 +1081,10 @@
       "image": "/projects/proj-monitoring-console/media/monitoring-console.jpg",
       "imageAlt": "Monitoring console — original interface preview",
       "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/engineering-v3/proj-monitoring-console.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-monitoring-console.webp",
       "coverAlt": "Engineering illustration of monitoring & diagnostics: sites, device health, alarms, event log",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-monitoring-console.webp"
     },
     {
       "id": "proj-service-operations",
@@ -1110,9 +1124,10 @@
       "image": "/projects/proj-service-operations/media/02-service-tool.jpg",
       "imageAlt": "Service application — device records and repair documentation",
       "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/engineering-v3/proj-service-operations.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-service-operations.webp",
       "coverAlt": "Engineering illustration of service records & repairs: device records, repair workflow, documents, reports",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-service-operations.webp"
     },
     {
       "id": "proj-rf-link-budget",
@@ -1152,9 +1167,10 @@
       "image": "/projects/proj-rf-link-budget/media/01-rf-tool.jpg",
       "imageAlt": "RF calculator — original interface and calculation fields",
       "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/engineering-v3/proj-rf-link-budget.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-rf-link-budget.webp",
       "coverAlt": "Engineering illustration of rf link budget: transmit power, antenna gain, path loss, receive level",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-rf-link-budget.webp"
     },
     {
       "id": "proj-fresnel-planning",
@@ -1193,9 +1209,10 @@
       "image": "/projects/proj-fresnel-planning/media/03-fresnel-tool.jpg",
       "imageAlt": "Line-of-sight and Fresnel planning — source document view",
       "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/engineering-v3/proj-fresnel-planning.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-fresnel-planning.webp",
       "coverAlt": "Engineering illustration of fresnel & line of sight: antenna a, line of sight, fresnel zone, clearance",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-fresnel-planning.webp"
     },
     {
       "id": "proj-enterprise-network",
@@ -1235,9 +1252,10 @@
       "image": "/projects/proj-enterprise-network/media/01-network-architecture.jpg",
       "imageAlt": "Enterprise wireless and network architecture — source project media",
       "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/engineering-v3/proj-enterprise-network.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-enterprise-network.webp",
       "coverAlt": "Engineering illustration of enterprise network: vpn / edge, core switch, lan / wlan, cctv",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-enterprise-network.webp"
     },
     {
       "id": "proj-wireless-coverage",
@@ -1276,9 +1294,10 @@
       "image": "/projects/proj-wireless-coverage/media/02-network-coverage.jpg",
       "imageAlt": "Wireless coverage and point-to-point planning — source project media",
       "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/engineering-v3/proj-wireless-coverage.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-wireless-coverage.webp",
       "coverAlt": "Engineering illustration of wireless coverage planning: coverage, antenna alignment, point-to-point, site plan",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-wireless-coverage.webp"
     },
     {
       "id": "proj-mpls-backbone",
@@ -1319,9 +1338,10 @@
       "image": "/projects/proj-mpls-backbone/media/mpls-backbone.jpg",
       "imageAlt": "Cisco MPLS backbone — GNS3 topology preview",
       "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/engineering-v3/proj-mpls-backbone.webp",
+      "coverImage": "/images/project-covers/themed-v4/proj-mpls-backbone.webp",
       "coverAlt": "Engineering illustration of mpls vpn backbone: ce, pe / vrf, p / mpls, mp-bgp",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/engineering-v3/proj-mpls-backbone.webp"
     }
   ],
   "articles": [
