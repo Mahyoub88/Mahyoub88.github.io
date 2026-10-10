@@ -7,3 +7,5 @@
 
 /* Generated card covers keep source evidence inside the case studies. */
 .card img.project-cover{height:auto;aspect-ratio:16/9;object-fit:cover;width:100%;}
+.cards .card{background:#0a0e18;border-color:#1b2436}
+@media(prefers-color-scheme:light){.cards .card{background:#fff;border-color:#c4d0df}}
