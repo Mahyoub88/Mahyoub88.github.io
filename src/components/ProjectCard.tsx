@@ -29,6 +29,9 @@ const statusStyles: Record<ProjectStatusKind, string> = {
 
 export function ProjectCard({ project }: { project: Project }) {
   const accent = accentStyles[project.accent]
+  const previewImage = project.coverImage ?? project.image
+  const previewAlt = project.coverAlt ?? project.imageAlt ?? project.title
+  const previewCaption = project.coverCaption ?? project.imageCaption
   const buttons = project.links?.filter((l) => l.label && l.href) ?? []
   // A card with its own buttons must not also be one big link — nesting anchors
   // is invalid and steals the click from the buttons.
@@ -60,16 +63,16 @@ export function ProjectCard({ project }: { project: Project }) {
           aria-hidden
           className="absolute inset-0 opacity-40 [background-image:radial-gradient(circle_at_1px_1px,var(--border-2)_1px,transparent_0)] [background-size:16px_16px]"
         />
-        {project.image ? (
-          <img src={project.image} alt={project.imageAlt ?? project.title} loading="lazy" className={`relative h-full w-full ${project.image.startsWith('/projects/') ? 'object-contain' : 'object-cover'}`} />
+        {previewImage ? (
+          <img src={previewImage} alt={previewAlt} loading="lazy" width="1280" height="720" className={`relative h-full w-full ${!project.coverImage && previewImage.startsWith('/projects/') ? 'object-contain' : 'object-cover'}`} />
         ) : <span className={`relative text-4xl font-black tracking-tight opacity-20 ${accent.text}`}>
           {project.category.slice(0, 2).toUpperCase()}
         </span>}
       </div>
 
-      {project.imageCaption && (
+      {previewCaption && (
         <p className="border-t border-[var(--border-1)] px-4 py-2 text-xs text-[var(--text-3)]">
-          {project.imageCaption}
+          {previewCaption}
         </p>
       )}
 

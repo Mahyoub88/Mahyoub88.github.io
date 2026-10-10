@@ -331,7 +331,10 @@
       "accent": "amber",
       "image": "/projects/proj-its-support/media/its-field-to-backend.svg",
       "imageAlt": "ITS Systems Integration & Traffic Enforcement Support — explanatory system diagram",
-      "imageCaption": "Explanatory system diagram"
+      "imageCaption": "Explanatory system diagram",
+      "coverImage": "/images/project-covers/generated-v2/proj-its-support.webp",
+      "coverAlt": "Illustrated cover: traffic cameras, sensors, vehicles and backend integration",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-vtid2",
@@ -380,7 +383,10 @@
       "accent": "purple",
       "image": "/projects/proj-vtid2/media/published-efficiency.svg",
       "imageAlt": "Efficient Neural Network Architectures for Vehicle Type Classification — published result summary",
-      "imageCaption": "Published result summary"
+      "imageCaption": "Published result summary",
+      "coverImage": "/images/project-covers/generated-v2/proj-vtid2.webp",
+      "coverAlt": "Illustrated cover: Efficient vehicle image classification: a central car, truck and motorcycle with compact layered neural-network glass tiles and restrained visual feature activation highlights.",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-ngsim",
@@ -432,7 +438,10 @@
       "accent": "blue",
       "image": "/projects/proj-ngsim/media/12-notebook-figure-12.png",
       "imageAlt": "Vehicle Type Classification Using NGSIM US-101 — executed notebook output",
-      "imageCaption": "Executed notebook output"
+      "imageCaption": "Executed notebook output",
+      "coverImage": "/images/project-covers/generated-v2/proj-ngsim.webp",
+      "coverAlt": "Illustrated cover: Freeway trajectory machine learning: miniature multilane freeway seen obliquely from above with cars and trucks, distinct luminous trajectory trails flowing into a compact data-analysis plane.",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-reconnaissance-robot",
@@ -489,7 +498,10 @@
       "accent": "purple",
       "image": "/projects/proj-reconnaissance-robot/media/robot-system-illustration.svg",
       "imageAlt": "Reconnaissance Robot — RGB-D Mapping & Remote Control — explanatory component diagram",
-      "imageCaption": "Explanatory component diagram"
+      "imageCaption": "Explanatory component diagram",
+      "coverImage": "/images/project-covers/generated-v2/proj-reconnaissance-robot.webp",
+      "coverAlt": "Illustrated cover: RGB-D reconnaissance mapping: a credible four-wheel compact rover with forward horizontal depth camera and electronics, next to a translucent cyan point-cloud representation of an indoor corridor.",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-quadcopter-uav",
@@ -554,7 +566,10 @@
       "accent": "purple",
       "image": "/projects/proj-quadcopter-uav/media/02-02-system-block-diagram.png",
       "imageAlt": "Autonomous Quadcopter UAV — Flight Control, Telemetry & FPV — original project diagram",
-      "imageCaption": "Original project diagram"
+      "imageCaption": "Original project diagram",
+      "coverImage": "/images/project-covers/generated-v2/proj-quadcopter-uav.webp",
+      "coverAlt": "Illustrated cover: Autonomous UAV: a credible F450-style four-arm quadcopter with exactly four rotors, red and white arms, visible flight controller, GPS mast and FPV camera, with subtle waypoint arcs.",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-sdn",
@@ -616,7 +631,10 @@
       "accent": "blue",
       "image": "/projects/proj-sdn/media/06-topology.svg",
       "imageAlt": "Software-Defined Networking — Automation & Video Streaming — reproducible extension topology",
-      "imageCaption": "Reproducible extension topology"
+      "imageCaption": "Reproducible extension topology",
+      "coverImage": "/images/project-covers/generated-v2/proj-sdn.webp",
+      "coverAlt": "Illustrated cover: Software-defined networking: three compact network switches and an elevated central controller directing two colored network paths, with one small video-stream tile.",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-ims-voip-volte",
@@ -688,7 +706,10 @@
       "accent": "blue",
       "image": "/projects/proj-ims-voip-volte/media/10-03_gns3_voice_topology.webp",
       "imageAlt": "IMS Multimedia Services — VoIP, IPTV & VoLTE — original implementation screenshot",
-      "imageCaption": "Original implementation screenshot"
+      "imageCaption": "Original implementation screenshot",
+      "coverImage": "/images/project-covers/generated-v2/proj-ims-voip-volte.webp",
+      "coverAlt": "Illustrated cover: IMS multimedia telecom: a desk IP phone, modern mobile handset and video screen arranged around a compact telecom server core, linked by restrained cyan paths.",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-sddc-lab",
@@ -753,7 +774,10 @@
       "accent": "blue",
       "image": "/projects/proj-sddc-lab/media/10-10-vsphere-host-inventory.png",
       "imageAlt": "Software-Defined Data Center (SDDC) — Design & Implementation — original implementation screenshot",
-      "imageCaption": "Original implementation screenshot"
+      "imageCaption": "Original implementation screenshot",
+      "coverImage": "/images/project-covers/generated-v2/proj-sddc-lab.webp",
+      "coverAlt": "Illustrated cover: Software-defined data center: three premium server racks, shared storage appliance and transparent virtual workload cubes arranged as a clear architectural scene.",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-embedded-iot",
@@ -806,7 +830,10 @@
       "accent": "purple",
       "image": "/projects/proj-embedded-iot/media/source/01_system_overview.svg",
       "imageAlt": "PIC peripheral overview — explanatory source diagram",
-      "imageCaption": "Explanatory system diagram"
+      "imageCaption": "Explanatory system diagram",
+      "coverImage": "/images/project-covers/generated-v2/proj-embedded-iot.webp",
+      "coverAlt": "Illustrated cover: Embedded IoT peripheral integration: central microcontroller development PCB connected to small sensor modules, segmented display and compact communications module.",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-rfid-study",
@@ -863,7 +890,10 @@
       "accent": "purple",
       "image": "/projects/proj-rfid-study/media/05-05_system_architecture.svg",
       "imageAlt": "RFID Library Automation System (ISO 15693) — explanatory system diagram",
-      "imageCaption": "Explanatory system diagram"
+      "imageCaption": "Explanatory system diagram",
+      "coverImage": "/images/project-covers/generated-v2/proj-rfid-study.webp",
+      "coverAlt": "Illustrated cover: RFID library automation: neatly arranged books with discreet embedded tag motifs beside an elegant RFID reader pad and library security gate.",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-solar-study",
@@ -910,7 +940,10 @@
       "accent": "amber",
       "image": "/projects/proj-solar-study/media/installation-gallery.png",
       "imageAlt": "Solar Energy Systems — Design, Sizing & Deployment — source installation photographs",
-      "imageCaption": "Source installation photographs"
+      "imageCaption": "Source installation photographs",
+      "coverImage": "/images/project-covers/generated-v2/proj-solar-study.webp",
+      "coverAlt": "Illustrated cover: Solar energy sizing and supply: a neat array of photovoltaic panels beside battery storage, charge controller and inverter, connected with clear cable routes.",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-plc-control",
@@ -950,7 +983,10 @@
       "accent": "amber",
       "image": "/projects/proj-plc-control/media/source/gallery/01_hardware_integration.jpg",
       "imageAlt": "Industrial Automation & PLC-Based Control Systems — source project media",
-      "imageCaption": "Source project media"
+      "imageCaption": "Source project media",
+      "coverImage": "/images/project-covers/generated-v2/proj-plc-control.webp",
+      "coverAlt": "Illustrated cover: PLC industrial automation: a compact industrial control cabinet with modular PLC and input-output rails beside a short miniature conveyor with sensors and an HMI.",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-eeprom-storage",
@@ -989,7 +1025,10 @@
       "accent": "amber",
       "image": "/projects/proj-eeprom-storage/media/source/00_project_poster.jpg",
       "imageAlt": "Original project poster",
-      "imageCaption": "Source project media"
+      "imageCaption": "Source project media",
+      "coverImage": "/images/project-covers/generated-v2/proj-eeprom-storage.webp",
+      "coverAlt": "Illustrated cover: Embedded EEPROM persistence: precision PCB with a small eight-pin EEPROM chip prominently in foreground connected to a microcontroller and restrained floating memory-block motifs.",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-monitoring-console",
@@ -1028,7 +1067,10 @@
       "accent": "blue",
       "image": "/projects/proj-monitoring-console/media/monitoring-console.jpg",
       "imageAlt": "Monitoring console — original interface preview",
-      "imageCaption": "Source project media"
+      "imageCaption": "Source project media",
+      "coverImage": "/images/project-covers/generated-v2/proj-monitoring-console.webp",
+      "coverAlt": "Illustrated cover: Desktop monitoring application cover: an elegant desktop monitor showing a polished abstract diagnostic interface with status tiles, node-health visualization and small trend lines, without text or numeric readings.",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-service-operations",
@@ -1067,7 +1109,10 @@
       "accent": "blue",
       "image": "/projects/proj-service-operations/media/02-service-tool.jpg",
       "imageAlt": "Service application — device records and repair documentation",
-      "imageCaption": "Source project media"
+      "imageCaption": "Source project media",
+      "coverImage": "/images/project-covers/generated-v2/proj-service-operations.webp",
+      "coverAlt": "Illustrated cover: Service operations desktop application: an elegant desktop monitor displaying abstract repair job cards and document panels, beside a small repair tool and electronic device, no written text or numbers.",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-rf-link-budget",
@@ -1106,7 +1151,10 @@
       "accent": "blue",
       "image": "/projects/proj-rf-link-budget/media/01-rf-tool.jpg",
       "imageAlt": "RF calculator — original interface and calculation fields",
-      "imageCaption": "Source project media"
+      "imageCaption": "Source project media",
+      "coverImage": "/images/project-covers/generated-v2/proj-rf-link-budget.webp",
+      "coverAlt": "Illustrated cover: RF link-budget software cover: a sleek monitor with an abstract signal-power waterfall and parameter blocks, alongside transmitting and receiving antenna miniatures linked by a fading wave.",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-fresnel-planning",
@@ -1144,7 +1192,10 @@
       "accent": "blue",
       "image": "/projects/proj-fresnel-planning/media/03-fresnel-tool.jpg",
       "imageAlt": "Line-of-sight and Fresnel planning — source document view",
-      "imageCaption": "Source project media"
+      "imageCaption": "Source project media",
+      "coverImage": "/images/project-covers/generated-v2/proj-fresnel-planning.webp",
+      "coverAlt": "Illustrated cover: Fresnel line-of-sight planning: two antenna towers on opposite terrain ridges with a clean translucent ellipsoidal Fresnel zone and a single center line spanning the valley.",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-enterprise-network",
@@ -1183,7 +1234,10 @@
       "accent": "amber",
       "image": "/projects/proj-enterprise-network/media/01-network-architecture.jpg",
       "imageAlt": "Enterprise wireless and network architecture — source project media",
-      "imageCaption": "Source project media"
+      "imageCaption": "Source project media",
+      "coverImage": "/images/project-covers/generated-v2/proj-enterprise-network.webp",
+      "coverAlt": "Illustrated cover: Enterprise network infrastructure: an elegant miniature office campus with connected access points, a central network switch and secure segmented colored network zones.",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-wireless-coverage",
@@ -1221,7 +1275,10 @@
       "accent": "amber",
       "image": "/projects/proj-wireless-coverage/media/02-network-coverage.jpg",
       "imageAlt": "Wireless coverage and point-to-point planning — source project media",
-      "imageCaption": "Source project media"
+      "imageCaption": "Source project media",
+      "coverImage": "/images/project-covers/generated-v2/proj-wireless-coverage.webp",
+      "coverAlt": "Illustrated cover: Wireless coverage planning: a radio mast over a detailed miniature terrain map with tasteful translucent coverage contour bands and a distant point-to-point receiving antenna.",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-mpls-backbone",
@@ -1261,7 +1318,10 @@
       "accent": "amber",
       "image": "/projects/proj-mpls-backbone/media/mpls-backbone.jpg",
       "imageAlt": "Cisco MPLS backbone — GNS3 topology preview",
-      "imageCaption": "Source project media"
+      "imageCaption": "Source project media",
+      "coverImage": "/images/project-covers/generated-v2/proj-mpls-backbone.webp",
+      "coverAlt": "Illustrated cover: MPLS provider backbone: a coherent ring of premium network router appliances with distinct colored logical label-switched paths and two small edge-site nodes.",
+      "coverCaption": "AI-generated project cover illustration"
     }
   ],
   "articles": [
