@@ -42,6 +42,7 @@
 <span>Troubleshooting</span>
 </div>
 <nav class="section-nav">
+<a href="#technical-walkthrough">Technical walkthrough</a>
 <a href="#overview">Overview</a>
 <a href="#engineering">Engineering rationale</a>
 <a href="#evidence">Evidence</a>
@@ -121,6 +122,62 @@
 <a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project descriptions and media</a>
 </li>
 </ul>
+<section id="technical-walkthrough">
+<h2>Tracing an enforcement event across system boundaries</h2>
+<p>The documented responsibility spans roadside cameras, LiDAR, sensors and control units, transport connectivity, databases and software interfaces. The reported 800+ systems describes the support scope across the UAE. It does not represent a count of systems designed or installed by one engineer. This case study focuses on integration and diagnosis, with customer and enforcement records excluded from the public material.</p>
+<p>An event must remain traceable as it crosses the acquisition, edge-processing, transport and backend boundaries. A useful diagnostic record associates the device identity, event time, observed symptom and receiving service. These are an explanatory record model, not a disclosure of the deployed database schema or a claim that the system implements syslog. RFC 5424 supplies a reference for separating structured event content from its transport.</p>
+<p>Diagnosis starts at the first boundary where expected behaviour differs from observed behaviour. A powered device can still have a sensing or calibration fault; an available IP endpoint can still have an application-interface fault. Checking the next boundary only after establishing the previous one avoids mistaking connectivity for complete functional acceptance.</p>
+<p>For an anonymised review, capture a symptom, the boundary inspected, the evidence inspected, the corrective action and the follow-up observation. Calibration readings and acceptance thresholds must come from the applicable device procedure. The diagram below explains fault localisation without exposing customer addresses, enforcement images or installation-specific settings.</p>
+<figure>
+<a href="media/engineering-review.svg">
+<img loading="lazy" src="media/engineering-review.svg" alt="Tracing an enforcement event across system boundaries — explanatory engineering review">
+</a>
+<figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
+</figure>
+<h3>Review scenarios and expected evidence</h3>
+<p>These scenarios specify what evidence would support a review. They do not report additional completed tests.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Review area</th>
+<th scope="col">Method</th>
+<th scope="col">Evidence to inspect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No event at edge</td>
+<td>Inspect power, sensing state and local diagnostics</td>
+<td>A local event or a documented device fault</td>
+</tr>
+<tr>
+<td>Event at edge, absent at backend</td>
+<td>Trace link, queue and receiving interface</td>
+<td>Correlated event across the affected boundary</td>
+</tr>
+<tr>
+<td>Event received, incomplete record</td>
+<td>Review field mapping and processing errors</td>
+<td>Expected record fields and explicit rejected-event handling</td>
+</tr>
+<tr>
+<td>After corrective action</td>
+<td>Repeat the affected functional path</td>
+<td>Dated follow-up observation, not only a successful ping</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Technical references and provenance</h3>
+<p>Primary references support the engineering explanation, not claims about this project's undocumented configuration or results.</p>
+<ul>
+<li>
+<a href="https://www.rfc-editor.org/rfc/rfc5424">Syslog message model — RFC 5424</a>
+</li>
+</ul>
+<p class="source-note">No customer records, device configurations or new calibration results are published. The review scenarios below describe how to assess the documented responsibility; they are not additional completed test claims.</p>
+</section>
 <nav class="project-pagination" aria-label="More case studies">
 <a href="/projects/proj-vtid2/">Efficient Neural Network Architectures for Vehicle Type Classification →</a>
 </nav>

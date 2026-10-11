@@ -34,147 +34,175 @@
       "path": "public/projects/engineering-applications-analysis/media/collection.svg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/analysis/media/collection.svg",
-      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "0fc96e81e84f8cee5b2ac72797a7eb46716879658398ba696214cdafca510e01"
     },
     {
       "path": "public/projects/engineering-applications-analysis/media/common-layers.svg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/analysis/media/common-layers.svg",
-      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "b0ecd47eab54940d57187dc3987a2009d934908d2b5feae05bd4d1f177e6f71f"
     },
     {
       "path": "public/projects/engineering-applications-analysis/media/health-states.svg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/analysis/media/health-states.svg",
-      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "6dfeb5a42d57cd0e4e2cf91adcec60db9adcabcd30fa0f8bac6a311ede531cb8"
     },
     {
       "path": "public/projects/engineering-applications-analysis/media/service-data.svg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/analysis/media/service-data.svg",
-      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "5a048b3fa9adff71aa38272c3ad41f5e41f210ccbf330e8f0e13b1d6dfd27ed7"
+    },
+    {
+      "path": "public/projects/proj-eeprom-storage/media/engineering-review.svg",
+      "repository": "Mahyoub88/eeprom-data-storage-pic",
+      "source": "docs/technical-walkthroughs/proj-eeprom-storage-review.svg",
+      "commit": "396f3ad4e0ef4829f164705f5eede7a32aac3928",
+      "sha256": "fce4c74f720d6d8caed145dcb6d10ebfc73b73fef34be04124b8ef4a4c1ebb7b"
     },
     {
       "path": "public/projects/proj-eeprom-storage/media/source/00_project_poster.jpg",
       "repository": "Mahyoub88/eeprom-data-storage-pic",
       "source": "img/00_project_poster.jpg",
-      "commit": "97a2919ac9a6ba9dc3fefa6b52e746ee792448b3",
+      "commit": "396f3ad4e0ef4829f164705f5eede7a32aac3928",
       "sha256": "2f9ad8a8e7d7e466619cf681f160efa2ca8fe7da0364451011aeacbb53ca9aa2"
     },
     {
       "path": "public/projects/proj-eeprom-storage/media/source/01_eeprom_store_and_readback.svg",
       "repository": "Mahyoub88/eeprom-data-storage-pic",
       "source": "img/01_eeprom_store_and_readback.svg",
-      "commit": "97a2919ac9a6ba9dc3fefa6b52e746ee792448b3",
+      "commit": "396f3ad4e0ef4829f164705f5eede7a32aac3928",
       "sha256": "0d80b93e3760aa743de8ce0e9c91d9703a78094bc42aebaa8a3bd0174d9b3aff"
+    },
+    {
+      "path": "public/projects/proj-embedded-iot/media/engineering-review.svg",
+      "repository": "Mahyoub88/embedded-iot-automation",
+      "source": "docs/technical-walkthroughs/proj-embedded-iot-review.svg",
+      "commit": "6b187f50ff5aad080dc620b004f172fe35b156f4",
+      "sha256": "e7efd09e2a742da79507267d259c9167ce752ca31a92d8a94329902b5510c694"
     },
     {
       "path": "public/projects/proj-embedded-iot/media/source/01_system_overview.svg",
       "repository": "Mahyoub88/embedded-iot-automation",
       "source": "img/01_system_overview.svg",
-      "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
+      "commit": "6b187f50ff5aad080dc620b004f172fe35b156f4",
       "sha256": "e4b603d4bbde062fd903267a683452b96ef284c0b9821e78668820c9269a8b90"
     },
     {
       "path": "public/projects/proj-embedded-iot/media/source/02_development_workflow.svg",
       "repository": "Mahyoub88/embedded-iot-automation",
       "source": "img/02_development_workflow.svg",
-      "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
+      "commit": "6b187f50ff5aad080dc620b004f172fe35b156f4",
       "sha256": "2c74b6ea7bf211d1c89e0e1e8a9062725ff15adc47f05fcc734a6d9b5b5be3b4"
     },
     {
       "path": "public/projects/proj-embedded-iot/media/source/03_7segment_multiplexing.svg",
       "repository": "Mahyoub88/embedded-iot-automation",
       "source": "img/03_7segment_multiplexing.svg",
-      "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
+      "commit": "6b187f50ff5aad080dc620b004f172fe35b156f4",
       "sha256": "0888980f96539d80c6982ac1292974e2f4df9db8101159eedfee0d1314081d4e"
     },
     {
       "path": "public/projects/proj-embedded-iot/media/source/04_adc_timer0_scheduling.svg",
       "repository": "Mahyoub88/embedded-iot-automation",
       "source": "img/04_adc_timer0_scheduling.svg",
-      "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
+      "commit": "6b187f50ff5aad080dc620b004f172fe35b156f4",
       "sha256": "342f2c2f02e064edac0afb04e134a93e0dac1c276a05533b144c8adc58d2e3f9"
     },
     {
       "path": "public/projects/proj-embedded-iot/media/source/05_ds1307_i2c.svg",
       "repository": "Mahyoub88/embedded-iot-automation",
       "source": "img/05_ds1307_i2c.svg",
-      "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
+      "commit": "6b187f50ff5aad080dc620b004f172fe35b156f4",
       "sha256": "88f9d4c27f29cfdb14b30137f44121a0a321cfcc009f2502a649293f9b7ca37b"
     },
     {
       "path": "public/projects/proj-embedded-iot/media/source/06_74hc595_output_expansion.svg",
       "repository": "Mahyoub88/embedded-iot-automation",
       "source": "img/06_74hc595_output_expansion.svg",
-      "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
+      "commit": "6b187f50ff5aad080dc620b004f172fe35b156f4",
       "sha256": "d00f9db9ada9296e9cbc498e374c1ffc69af27367f6e82aa5f2c1770000f9cc6"
     },
     {
       "path": "public/projects/proj-embedded-iot/media/source/07_keypad_access_control.svg",
       "repository": "Mahyoub88/embedded-iot-automation",
       "source": "img/07_keypad_access_control.svg",
-      "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
+      "commit": "6b187f50ff5aad080dc620b004f172fe35b156f4",
       "sha256": "a21bb0462621e00c5db2bc36af48d5e06782f4a46dd66629a1c36f544fa86fec"
     },
     {
       "path": "public/projects/proj-embedded-iot/media/source/08_nokia5110_pcd8544.svg",
       "repository": "Mahyoub88/embedded-iot-automation",
       "source": "img/08_nokia5110_pcd8544.svg",
-      "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
+      "commit": "6b187f50ff5aad080dc620b004f172fe35b156f4",
       "sha256": "64dfa72b004e3e0608c4734313f7bc5e645adc459c9421f903b2ddeb14f9bef9"
     },
     {
       "path": "public/projects/proj-embedded-iot/media/source/09_memory_technologies.svg",
       "repository": "Mahyoub88/embedded-iot-automation",
       "source": "img/09_memory_technologies.svg",
-      "commit": "2aa73cffd3396fa5fb70642e186ca5ca34f042ce",
+      "commit": "6b187f50ff5aad080dc620b004f172fe35b156f4",
       "sha256": "3eb7514d5ad618842b71070ad4019631b716cdbf9c4f2c1b35393527b4b488f1"
     },
     {
       "path": "public/projects/proj-enterprise-network/media/01-network-architecture.jpg",
       "repository": "Mahyoub88/rf-mpls-network-design",
       "source": "docs/overview/network-architecture.jpg",
-      "commit": "c157feccfc86ff376333fc6b3fe3d21f90ef5237",
+      "commit": "de4a6829c00562e5f3f46ca059331ed96e159e18",
       "sha256": "a53cf6ec075a983930f178209e8507bcde28928fa2f3e7054b4458cbcde7e72f"
     },
     {
       "path": "public/projects/proj-enterprise-network/media/architecture.svg",
       "repository": "Mahyoub88/rf-mpls-network-design",
       "source": "docs/projects/proj-enterprise-network/architecture.svg",
-      "commit": "c157feccfc86ff376333fc6b3fe3d21f90ef5237",
+      "commit": "de4a6829c00562e5f3f46ca059331ed96e159e18",
       "sha256": "dec178186d13a859713d676a43b3b9c00e2b37d7d9b0426d9259ef8bb3f1ab8d"
+    },
+    {
+      "path": "public/projects/proj-enterprise-network/media/engineering-review.svg",
+      "repository": "Mahyoub88/rf-mpls-network-design",
+      "source": "docs/technical-walkthroughs/proj-enterprise-network-review.svg",
+      "commit": "de4a6829c00562e5f3f46ca059331ed96e159e18",
+      "sha256": "37613680c36773e4cf67daf9a42f2d18b758758711c4e2cd3c9dd77df6902e70"
     },
     {
       "path": "public/projects/proj-enterprise-network/media/workflow.svg",
       "repository": "Mahyoub88/rf-mpls-network-design",
       "source": "docs/projects/proj-enterprise-network/workflow.svg",
-      "commit": "c157feccfc86ff376333fc6b3fe3d21f90ef5237",
+      "commit": "de4a6829c00562e5f3f46ca059331ed96e159e18",
       "sha256": "8042fffb8bbf23392ddc8d30c3cfe5a072eddc00638ebe21397cf68be0d40c04"
     },
     {
       "path": "public/projects/proj-fresnel-planning/media/03-fresnel-tool.jpg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/overview/fresnel-tool.jpg",
-      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "18f650daf2f59e25172acb797ec1329e0d76f21983de5f2c33858120416656af"
     },
     {
       "path": "public/projects/proj-fresnel-planning/media/architecture.svg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/projects/proj-fresnel-planning/architecture.svg",
-      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "a8313d7d140c4a96296e268a7e7d5f18924750f9bfa7e86fe7a5e01748074412"
+    },
+    {
+      "path": "public/projects/proj-fresnel-planning/media/engineering-review.svg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/technical-walkthroughs/proj-fresnel-planning-review.svg",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
+      "sha256": "08dd16d1f803a0914c4efab783e1180c4810feeb4603ecc92d2884185f86df33"
     },
     {
       "path": "public/projects/proj-fresnel-planning/media/workflow.svg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/projects/proj-fresnel-planning/workflow.svg",
-      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "a769563aecafdaf8bf7935a68776efecd2363af2e290a51d9ae6d91c0eba07d4"
     },
     {
@@ -304,59 +332,80 @@
       "sha256": "5019025be51ce13735ba8c681d4af4d84ae460d7524fb35289d376ea4c9bbb02"
     },
     {
+      "path": "public/projects/proj-its-support/media/engineering-review.svg",
+      "repository": "Mahyoub88/its-systems-integration",
+      "source": "docs/technical-walkthroughs/proj-its-support-review.svg",
+      "commit": "4bffd84a34aa829caef2a8c794cf047f4cc0140c",
+      "sha256": "68b7e5266c7fd1b981662dd42676fc78fa26fc9f70d724234ba342de2df60696"
+    },
+    {
       "path": "public/projects/proj-its-support/media/its-diagnostic-workflow.svg",
       "repository": "Mahyoub88/its-systems-integration",
       "source": "docs/visuals/its-diagnostic-workflow.svg",
-      "commit": "26ae18f2a34bf7f547a68bf63cb34e8323f673b7",
+      "commit": "4bffd84a34aa829caef2a8c794cf047f4cc0140c",
       "sha256": "d6e16d07c96f1e6ea9fd2cd6a30ef14a57ab17bf89a5fb004b567ae882d0b97f"
     },
     {
       "path": "public/projects/proj-its-support/media/its-field-to-backend.svg",
       "repository": "Mahyoub88/its-systems-integration",
       "source": "docs/visuals/its-field-to-backend.svg",
-      "commit": "26ae18f2a34bf7f547a68bf63cb34e8323f673b7",
+      "commit": "4bffd84a34aa829caef2a8c794cf047f4cc0140c",
       "sha256": "c707dfc1d1c8c9c4fef7f5fc815149c5fe33382f05d753b4de6872e29b9317d7"
     },
     {
       "path": "public/projects/proj-monitoring-console/media/architecture.svg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/projects/proj-monitoring-console/architecture.svg",
-      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "96ed050f31e241b7ba071a68e5d830a38e7efcc81ebd4e4c257af5f4237a980a"
+    },
+    {
+      "path": "public/projects/proj-monitoring-console/media/engineering-review.svg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/technical-walkthroughs/proj-monitoring-console-review.svg",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
+      "sha256": "f417c62d3c6948551951539d4c8f0c85d2bcbac9757827ed67c45db16a221075"
     },
     {
       "path": "public/projects/proj-monitoring-console/media/monitoring-console.jpg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/overview/monitoring-console.jpg",
-      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "0676e16c4180f3ff9fa401786d5994c4827b1fe4228445db189abb00a91fe1d0"
     },
     {
       "path": "public/projects/proj-monitoring-console/media/workflow.svg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/projects/proj-monitoring-console/workflow.svg",
-      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "d563c63d1abc97cf9a60c1ca1889e0fe66d5175057d7582b95db52ae642385eb"
     },
     {
       "path": "public/projects/proj-mpls-backbone/media/architecture.svg",
       "repository": "Mahyoub88/rf-mpls-network-design",
       "source": "docs/projects/proj-mpls-backbone/architecture.svg",
-      "commit": "c157feccfc86ff376333fc6b3fe3d21f90ef5237",
+      "commit": "de4a6829c00562e5f3f46ca059331ed96e159e18",
       "sha256": "5862df192d1f97126f78c32596cd676c911fe9945ec512a8074613426dc97fa5"
+    },
+    {
+      "path": "public/projects/proj-mpls-backbone/media/engineering-review.svg",
+      "repository": "Mahyoub88/rf-mpls-network-design",
+      "source": "docs/technical-walkthroughs/proj-mpls-backbone-review.svg",
+      "commit": "de4a6829c00562e5f3f46ca059331ed96e159e18",
+      "sha256": "a07b99527e5281f2b1dd5e888e8b780e2c2dbe52b79ac16c61a48bbc1e3aae19"
     },
     {
       "path": "public/projects/proj-mpls-backbone/media/mpls-backbone.jpg",
       "repository": "Mahyoub88/rf-mpls-network-design",
       "source": "docs/overview/mpls-backbone.jpg",
-      "commit": "c157feccfc86ff376333fc6b3fe3d21f90ef5237",
+      "commit": "de4a6829c00562e5f3f46ca059331ed96e159e18",
       "sha256": "030d2dc00fec557e2aef8258da1c6facf334e97bb11192e61131461605b84176"
     },
     {
       "path": "public/projects/proj-mpls-backbone/media/workflow.svg",
       "repository": "Mahyoub88/rf-mpls-network-design",
       "source": "docs/projects/proj-mpls-backbone/workflow.svg",
-      "commit": "c157feccfc86ff376333fc6b3fe3d21f90ef5237",
+      "commit": "de4a6829c00562e5f3f46ca059331ed96e159e18",
       "sha256": "a7a7299f3fbe34f7ccfda4901351935712e32222950b215fc4ba4a7250e7cf2b"
     },
     {
@@ -724,38 +773,52 @@
       "sha256": "e942d7ef4699e60d3f4cf70f9322690bd9cbb48e0e866ec969dbe02a2e3c17bc"
     },
     {
+      "path": "public/projects/proj-reconnaissance-robot/media/engineering-review.svg",
+      "repository": "Mahyoub88/reconnaissance-robot-rgbd",
+      "source": "docs/technical-walkthroughs/proj-reconnaissance-robot-review.svg",
+      "commit": "c008f60c690f651af72ba1d8511fba2304bf9331",
+      "sha256": "59064dcfade064be0298f8f1e44be933c123dd778f218218934dbda105e68093"
+    },
+    {
       "path": "public/projects/proj-reconnaissance-robot/media/robot-data-paths.svg",
       "repository": "Mahyoub88/reconnaissance-robot-rgbd",
       "source": "docs/visuals/robot-data-paths.svg",
-      "commit": "cd85fb79ad83f547d262332dae1f670fd3b96d51",
+      "commit": "c008f60c690f651af72ba1d8511fba2304bf9331",
       "sha256": "ad3e61ec9d178d856db35b8a54c97b3a3579ced385ef6fa8fc6c40c24c4ab58b"
     },
     {
       "path": "public/projects/proj-reconnaissance-robot/media/robot-system-illustration.svg",
       "repository": "Mahyoub88/reconnaissance-robot-rgbd",
       "source": "docs/visuals/robot-system-illustration.svg",
-      "commit": "cd85fb79ad83f547d262332dae1f670fd3b96d51",
+      "commit": "c008f60c690f651af72ba1d8511fba2304bf9331",
       "sha256": "ab23f694349d98f84707e87aee77ed3f89d8c9c015c6a5e86f2f8aa95b21a0a8"
     },
     {
       "path": "public/projects/proj-rf-link-budget/media/01-rf-tool.jpg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/overview/rf-tool.jpg",
-      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "a4ac81b42527b146b3e173d6883b86b07d0bee3980f783caff074d8ceb04e3b9"
     },
     {
       "path": "public/projects/proj-rf-link-budget/media/architecture.svg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/projects/proj-rf-link-budget/architecture.svg",
-      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "fd458e6fa5196c1af01cf0d6fdc34ca1f2fa66fcae3f3c926828cb6b0fdd67fb"
+    },
+    {
+      "path": "public/projects/proj-rf-link-budget/media/engineering-review.svg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/technical-walkthroughs/proj-rf-link-budget-review.svg",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
+      "sha256": "7ebcd9683f44ae1b4a766da9ce001c934a85986cd9ff95ccf60d8b5743f9f331"
     },
     {
       "path": "public/projects/proj-rf-link-budget/media/workflow.svg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/projects/proj-rf-link-budget/workflow.svg",
-      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "85b62d7bbb13a3e26e385685c664e16432804517b51a8cd261af69b078847dc9"
     },
     {
@@ -958,63 +1021,84 @@
       "path": "public/projects/proj-service-operations/media/02-service-tool.jpg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/overview/service-tool.jpg",
-      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "11c7ce0360b5cd4cf4d3f102d4d68c10088379ccc69a4b21b8e85a289156e464"
     },
     {
       "path": "public/projects/proj-service-operations/media/architecture.svg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/projects/proj-service-operations/architecture.svg",
-      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "84e89bc75a2a57f1132458f0e2fe0d67c0ecd6893ae6ecd57166ecf1473817e7"
+    },
+    {
+      "path": "public/projects/proj-service-operations/media/engineering-review.svg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/technical-walkthroughs/proj-service-operations-review.svg",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
+      "sha256": "03a794eceab9a7197ed4a17e5891c58e44dc423b4120f93db17d8b1136f211fd"
     },
     {
       "path": "public/projects/proj-service-operations/media/workflow.svg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/projects/proj-service-operations/workflow.svg",
-      "commit": "48f753f7c924c60f1ceb9ecb69c8527a54606ec7",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "c9ee96016908a0b14445650edf32f674de43d89d7a6162007036350fd093ead7"
     },
     {
       "path": "public/projects/proj-solar-study/media/detailed-architecture.png",
       "repository": "Mahyoub88/solar-energy-systems",
       "source": "docs/overview/detailed-architecture.png",
-      "commit": "7933f2f806738f76ec895c36330534b76635b5e2",
+      "commit": "d904bcb4aec5cb7f7cf5ced95787237545a449ac",
       "sha256": "16189698c0a6157d2e74d0c1148ee81857e786f841075d10cc04bea17c31164e"
+    },
+    {
+      "path": "public/projects/proj-solar-study/media/engineering-review.svg",
+      "repository": "Mahyoub88/solar-energy-systems",
+      "source": "docs/technical-walkthroughs/proj-solar-study-review.svg",
+      "commit": "d904bcb4aec5cb7f7cf5ced95787237545a449ac",
+      "sha256": "898da7e9e0e8a1e4ecd2d302ff79095545cd53418846cef32f64984b957d96d8"
     },
     {
       "path": "public/projects/proj-solar-study/media/installation-gallery.png",
       "repository": "Mahyoub88/solar-energy-systems",
       "source": "docs/overview/installation-gallery.png",
-      "commit": "7933f2f806738f76ec895c36330534b76635b5e2",
+      "commit": "d904bcb4aec5cb7f7cf5ced95787237545a449ac",
       "sha256": "171bed175edda8c507c104361ff0d0ff8d1a234013f42d5bc6bb3a7df8a4b321"
     },
     {
       "path": "public/projects/proj-solar-study/media/solar-system.jpg",
       "repository": "Mahyoub88/solar-energy-systems",
       "source": "docs/overview/solar-system.jpg",
-      "commit": "7933f2f806738f76ec895c36330534b76635b5e2",
+      "commit": "d904bcb4aec5cb7f7cf5ced95787237545a449ac",
       "sha256": "70572ab3f6789720a14832c5fa84d99a1d8636c38c365bf56cb030bec64c3606"
     },
     {
       "path": "public/projects/proj-wireless-coverage/media/02-network-coverage.jpg",
       "repository": "Mahyoub88/rf-mpls-network-design",
       "source": "docs/overview/network-coverage.jpg",
-      "commit": "c157feccfc86ff376333fc6b3fe3d21f90ef5237",
+      "commit": "de4a6829c00562e5f3f46ca059331ed96e159e18",
       "sha256": "1363ee21655109dd40a826a4de207f48e37d7f7b8733e46804ae3f18114c5c08"
     },
     {
       "path": "public/projects/proj-wireless-coverage/media/architecture.svg",
       "repository": "Mahyoub88/rf-mpls-network-design",
       "source": "docs/projects/proj-wireless-coverage/architecture.svg",
-      "commit": "c157feccfc86ff376333fc6b3fe3d21f90ef5237",
+      "commit": "de4a6829c00562e5f3f46ca059331ed96e159e18",
       "sha256": "3fc96488f56fb4f131d1a5b9944fb1ed1216a6a6f1e773577b73bbe5b523ac95"
+    },
+    {
+      "path": "public/projects/proj-wireless-coverage/media/engineering-review.svg",
+      "repository": "Mahyoub88/rf-mpls-network-design",
+      "source": "docs/technical-walkthroughs/proj-wireless-coverage-review.svg",
+      "commit": "de4a6829c00562e5f3f46ca059331ed96e159e18",
+      "sha256": "fcd5c55463ed89619d8cc6a980942cfdebab28037f1868f1b92b03457547a241"
     },
     {
       "path": "public/projects/proj-wireless-coverage/media/workflow.svg",
       "repository": "Mahyoub88/rf-mpls-network-design",
       "source": "docs/projects/proj-wireless-coverage/workflow.svg",
-      "commit": "c157feccfc86ff376333fc6b3fe3d21f90ef5237",
+      "commit": "de4a6829c00562e5f3f46ca059331ed96e159e18",
       "sha256": "4b939fb757410feef635458f602591587593c40c5fce6a076b9c162e4c7e588f"
     }
   ]

@@ -41,6 +41,7 @@
 <span>Point-to-Point</span>
 </div>
 <nav class="section-nav">
+<a href="#technical-walkthrough">Technical walkthrough</a>
 <a href="#overview">Architecture</a>
 <a href="#engineering">Engineering approach</a>
 <a href="#gallery">Visual documentation</a>
@@ -79,6 +80,62 @@
 <p>
 <a href="https://github.com/Mahyoub88/rf-mpls-network-design/blob/main/docs/verification-context.md">Detailed verification boundaries and technical source context</a>
 </p>
+</section>
+<section id="technical-walkthrough">
+<h2>Coverage, backhaul and capacity answer different questions</h2>
+<p>The implementation covers wireless coverage modelling and point-to-point connectivity, including antenna alignment, capacity and site coverage. The original planning media are preserved. A colour coverage view communicates spatial planning but does not, by itself, provide measured signal strength or a complete capacity test.</p>
+<p>Coverage asks where a client can maintain the required radio service. Backhaul asks whether the path between fixed endpoints has adequate propagation and clearance. Capacity asks whether the radio and network can deliver the required traffic under the defined load. Treating these as separate review paths keeps a nominally covered area from being presented as guaranteed throughput.</p>
+<p>A planning record needs the radio settings, antenna pattern, installation geometry and environmental assumptions associated with its prediction. Field validation then associates locations and conditions with measurements. ITU-R P.530 supplies point-to-point propagation context, while a site-specific WLAN plan also needs the selected equipment and client conditions. No frequencies or sector counts are reconstructed from the low-resolution preview.</p>
+<p>Alignment should be reviewed against the intended endpoint and polarisation before optimising observed signal. Capacity validation should distinguish radio link quality, negotiated rate and application throughput, and state direction and offered load. The diagram below is an engineering review map, not a newly simulated or surveyed coverage result.</p>
+<figure>
+<a href="media/engineering-review.svg">
+<img loading="lazy" src="media/engineering-review.svg" alt="Coverage, backhaul and capacity answer different questions — explanatory engineering review">
+</a>
+<figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
+</figure>
+<h3>Review scenarios and expected evidence</h3>
+<p>These scenarios specify what evidence would support a review. They do not report additional completed tests.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Review area</th>
+<th scope="col">Method</th>
+<th scope="col">Evidence to inspect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coverage prediction</td>
+<td>State radio and geometry assumptions</td>
+<td>Model context attached to its coverage view</td>
+</tr>
+<tr>
+<td>Path alignment</td>
+<td>Check endpoint direction and polarisation</td>
+<td>Alignment record linked to link quality</td>
+</tr>
+<tr>
+<td>Capacity</td>
+<td>Separate negotiated rate from payload throughput</td>
+<td>Direction, load and test duration recorded</td>
+</tr>
+<tr>
+<td>Field review</td>
+<td>Associate observations with locations/conditions</td>
+<td>Measured points separated from predictions</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Technical references and provenance</h3>
+<p>Primary references support the engineering explanation, not claims about this project's undocumented configuration or results.</p>
+<ul>
+<li>
+<a href="https://www.itu.int/rec/R-REC-P.530/en">ITU-R P.530 — terrestrial line-of-sight link design</a>
+</li>
+</ul>
+<p class="source-note">No new coverage heatmap, site coordinates or throughput measurement is fabricated. The source planning view remains the available project evidence.</p>
 </section>
 <section id="sources">
 <h2>Source documentation</h2>

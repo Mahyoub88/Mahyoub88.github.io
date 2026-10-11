@@ -42,6 +42,7 @@
 <span>Reporting</span>
 </div>
 <nav class="section-nav">
+<a href="#technical-walkthrough">Technical walkthrough</a>
 <a href="#overview">Architecture</a>
 <a href="#engineering">Engineering approach</a>
 <a href="#analysis">Detailed analysis</a>
@@ -86,6 +87,65 @@
 <section id="gallery">
 <h2>Source context</h2>
 <p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p>
+</section>
+<section id="technical-walkthrough">
+<h2>Connecting a device to its complete service history</h2>
+<p>The source interface shows device records, repair information and warranty/calibration fields. Its purpose is service operations and technical documentation, which differs from monitoring live device health. The public evidence is an application preview; source code, storage schema and exported service reports have not been recovered.</p>
+<p>An explanatory data model separates a device from individual service jobs and their documents. A device may have several interventions, and a repair may have several observations and attachments. This prevents a proposed design from overwriting history whenever a new visit is recorded. The relationships explain the application’s purpose; they do not disclose its original database tables.</p>
+<p>A service workflow can progress through intake, diagnosis, repair, verification and closure, with responsibility and supporting records at each stage. A closed ticket and a calibrated device are different statements. Calibration needs its own procedure and result; a warranty date is administrative information and should not become evidence of technical acceptance.</p>
+<p>Microsoft’s validation and binding guidance supports form-field handling and display of records. Appropriate review scenarios include invalid dates, missing device identity, duplicate references, attachment handling and retrieval of past work. The example state sequence is proposed for documentation; specific controls, permissions and export formats remain unverified.</p>
+<figure>
+<a href="media/engineering-review.svg">
+<img loading="lazy" src="media/engineering-review.svg" alt="Connecting a device to its complete service history — explanatory engineering review">
+</a>
+<figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
+</figure>
+<h3>Review scenarios and expected evidence</h3>
+<p>These scenarios specify what evidence would support a review. They do not report additional completed tests.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Review area</th>
+<th scope="col">Method</th>
+<th scope="col">Evidence to inspect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New service visit</td>
+<td>Associate a second job with one device</td>
+<td>Prior job remains retrievable</td>
+</tr>
+<tr>
+<td>Invalid date</td>
+<td>End date precedes intake date</td>
+<td>Validation explains the conflicting field</td>
+</tr>
+<tr>
+<td>Attachment reference</td>
+<td>Review a missing or replaced document</td>
+<td>Record shows its document status</td>
+</tr>
+<tr>
+<td>Closure</td>
+<td>Attempt closure without verification context</td>
+<td>Review rule distinguishes repair from acceptance</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Technical references and provenance</h3>
+<p>Primary references support the engineering explanation, not claims about this project's undocumented configuration or results.</p>
+<ul>
+<li>
+<a href="https://learn.microsoft.com/en-us/dotnet/desktop/winforms/input-keyboard/validation">Microsoft — Windows Forms input validation</a>
+</li>
+<li>
+<a href="https://learn.microsoft.com/en-us/dotnet/desktop/winforms/data/overview">Microsoft — Windows Forms data binding</a>
+</li>
+</ul>
+<p class="source-note">The workflow and relationships are a proposed reconstruction from the interface. They are not a recovered schema or a claim that every validation rule is implemented.</p>
 </section>
 <section id="sources">
 <h2>Source documentation</h2>

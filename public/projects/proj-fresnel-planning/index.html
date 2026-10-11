@@ -41,6 +41,7 @@
 <span>Wireless Planning</span>
 </div>
 <nav class="section-nav">
+<a href="#technical-walkthrough">Technical walkthrough</a>
 <a href="#overview">Architecture</a>
 <a href="#engineering">Engineering approach</a>
 <a href="#analysis">Detailed analysis</a>
@@ -98,6 +99,62 @@
 <section id="gallery">
 <h2>Source context</h2>
 <p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p>
+</section>
+<section id="technical-walkthrough">
+<h2>Clearance is a path profile, not only a sight line</h2>
+<p>This independent planning application addresses line-of-sight and Fresnel-zone clearance. Its purpose complements the RF calculator: the link budget evaluates power, while the path profile evaluates geometry and obstruction. The available preview is an interface/document view rather than an installed radio-link photograph.</p>
+<p>The first Fresnel radius varies along the path. With wavelength λ and distances d1 and d2 from the inspected point to the endpoints, r1 = sqrt(λ d1 d2 / (d1 + d2)), using metres consistently. The maximum radius occurs at the midpoint for a level path, but the critical clearance point can lie elsewhere where terrain or an obstacle rises.</p>
+<p>For an illustrative 2 km path at 5 GHz, λ is approximately 0.060 m. At the midpoint, r1 is approximately 5.48 m. A 60% radius corresponds to about 3.29 m. That percentage is an illustrative planning screen, not a universal acceptance condition: ITU-R P.530 considers climate, effective Earth radius, diffraction and availability requirements when specifying clearance.</p>
+<p>A complete review therefore combines endpoint elevations and antenna heights with a terrain profile, obstacle heights and the selected refraction assumptions. Straight-line visibility alone can conceal Fresnel obstruction. Any recommended mast height must identify its survey inputs and assumptions; the available material does not support a site-specific height recommendation.</p>
+<figure>
+<a href="media/engineering-review.svg">
+<img loading="lazy" src="media/engineering-review.svg" alt="Clearance is a path profile, not only a sight line — explanatory engineering review">
+</a>
+<figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
+</figure>
+<h3>Review scenarios and expected evidence</h3>
+<p>These scenarios specify what evidence would support a review. They do not report additional completed tests.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Review area</th>
+<th scope="col">Method</th>
+<th scope="col">Evidence to inspect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Midpoint check</td>
+<td>Evaluate equal endpoint distances</td>
+<td>Maximum r1 for the same unobstructed path</td>
+</tr>
+<tr>
+<td>Frequency scaling</td>
+<td>Increase frequency by a factor of four</td>
+<td>Radius becomes half</td>
+</tr>
+<tr>
+<td>Off-centre obstacle</td>
+<td>Evaluate its actual d1 and d2</td>
+<td>Local radius used, not midpoint radius</td>
+</tr>
+<tr>
+<td>Site acceptance</td>
+<td>Review terrain and effective-radius assumptions</td>
+<td>Documented profile and applicable clearance criterion</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Technical references and provenance</h3>
+<p>Primary references support the engineering explanation, not claims about this project's undocumented configuration or results.</p>
+<ul>
+<li>
+<a href="https://www.itu.int/rec/R-REC-P.530/en">ITU-R P.530 — terrestrial line-of-sight link design</a>
+</li>
+</ul>
+<p class="source-note">The numerical example and diagram explain calculation geometry. They are not a site survey, recovered application output or measured acceptance record.</p>
 </section>
 <section id="sources">
 <h2>Source documentation</h2>

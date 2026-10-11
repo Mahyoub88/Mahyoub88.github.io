@@ -43,6 +43,7 @@
 <span>Data Quality</span>
 </div>
 <nav class="section-nav">
+<a href="#technical-walkthrough">Technical walkthrough</a>
 <a href="#overview">Overview</a>
 <a href="#engineering">Engineering rationale</a>
 <a href="#evidence">Evidence</a>
@@ -140,6 +141,62 @@
 <a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project descriptions and media</a>
 </li>
 </ul>
+<section id="technical-walkthrough">
+<h2>Reporting efficiency without hiding evaluation assumptions</h2>
+<p>The public research compares an MLP, a standard CNN, a depthwise-separable efficient CNN and an efficient CNN with Squeeze-and-Excitation. The reported efficient-CNN comparison gives 87.24% fewer parameters, 81.67% fewer MACs and a mean Macro-F1 difference of 0.0150. These are existing public summary values, not new training results.</p>
+<p>The data audit reports 4,356 valid images and 1,931 exact-unique images after 2,425 redundant copies are identified. An image-level split can place identical content on both sides of an evaluation boundary. A defensible explanation therefore puts duplicate grouping and split identity before architecture comparison. Protocol changes in data composition and training settings also mean a conventional-versus-controlled gap is not a causal estimate of leakage.</p>
+<p>Parameter count, MACs and measured latency describe different costs. Reduced arithmetic does not guarantee the same latency improvement on every device; batch size, input shape, precision, warm-up and the execution environment affect a timing measurement. The available public figures do not establish a deployment benchmark or an absolute latency number.</p>
+<p>Grad-CAM provides a class-related visual explanation, not proof that a prediction is causally correct. A useful figure would show input, predicted/true class and heatmap together, with attention to vehicle regions and letterbox padding. The assessment notebook, training curves, classwise confusion matrices and actual Grad-CAM panels remain private. No generated heatmap is substituted for an executed model output.</p>
+<figure>
+<a href="media/engineering-review.svg">
+<img loading="lazy" src="media/engineering-review.svg" alt="Reporting efficiency without hiding evaluation assumptions — explanatory engineering review">
+</a>
+<figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
+</figure>
+<h3>Review scenarios and expected evidence</h3>
+<p>These scenarios specify what evidence would support a review. They do not report additional completed tests.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Review area</th>
+<th scope="col">Method</th>
+<th scope="col">Evidence to inspect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data integrity</td>
+<td>Review duplicate groups and split identity</td>
+<td>No identical content crossing the stated boundary</td>
+</tr>
+<tr>
+<td>Classification</td>
+<td>Review classwise and Macro-F1 results</td>
+<td>Protocol, class support and uncertainty context</td>
+</tr>
+<tr>
+<td>Efficiency</td>
+<td>Separate parameters/MACs from measured latency</td>
+<td>Input shape and execution environment stated</td>
+</tr>
+<tr>
+<td>Explainability</td>
+<td>Inspect real model-generated attention</td>
+<td>Input, class and preprocessing shown together</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Technical references and provenance</h3>
+<p>Primary references support the engineering explanation, not claims about this project's undocumented configuration or results.</p>
+<ul>
+<li>
+<a href="https://arxiv.org/abs/1610.02391">Grad-CAM — original research paper</a>
+</li>
+</ul>
+<p class="source-note">Only already-public aggregate research claims are expanded here. Private assessment artifacts are not released.</p>
+</section>
 <nav class="project-pagination" aria-label="More case studies">
 <a href="/projects/proj-its-support/">← ITS Systems Integration &amp; Traffic Enforcement Support</a>
 <a href="/projects/proj-ngsim/">Vehicle Type Classification Using NGSIM US-101 →</a>
