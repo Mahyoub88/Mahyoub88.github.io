@@ -52,10 +52,6 @@
 </nav>
 <section id="overview">
 <h2>System overview</h2>
-<figure>
-<img src="media/architecture.svg" alt="Functional overview"/>
-<figcaption>Explanatory diagram of the documented system responsibilities.</figcaption>
-</figure>
 <div class="panel">
 <dl class="project-facts">
 <div>
@@ -81,55 +77,6 @@
 </dl>
 </div>
 </section>
-<section id="engineering">
-<h2>Engineering rationale</h2>
-<h3>Two mapping paths</h3>
-<p>Kinect supplies colour and depth to RTAB-Map on Linux for 3D mapping. Ultrasonic sensing supplies a separate 2D mapping path. These are complementary interfaces; Bluetooth mapping data is not described as carrying the Kinect depth stream.</p>
-<h3>Control and reporting interfaces</h3>
-<p>The four-motor rover and touchscreen controller are integrated with nRF control, XBee sensor telemetry, Bluetooth mapping data and GPS/GSM location reporting. Separate channels make it necessary to document which data uses which link.</p>
-<h3>The integration constraint</h3>
-<p>Software builds and Kinect drivers required compatibility work. The retained wired USB connection is a documented engineering decision for the depth-data path. The new diagram is a functional overview rather than a circuit schematic or a claim about undocumented motor-driver wiring.</p>
-<h3>Evidence and extension</h3>
-<p>The public description records design, programming, assembly, integration and testing. Source code, raw maps and physical-build photographs are not present in the inspected repository. The acceptance checklist below is a suggested way to document those artifacts when available.</p>
-<figure>
-<img src="media/workflow.svg" alt="Engineering workflow"/>
-<figcaption>Explanatory workflow; read left to right across each row.</figcaption>
-</figure>
-</section>
-<section id="evidence">
-<h2>Evidence and validation</h2>
-<p>Review the documented implementation against these validation topics; measured results are shown only where provided by the source.</p>
-<ul>
-<li>Driver compatibility and USB depth acquisition</li>
-<li>RTAB-Map output with scene context</li>
-<li>Command and telemetry channel mapping</li>
-<li>Motor/sensor response and location reporting</li>
-</ul>
-</section>
-<section id="gallery">
-<h2>Visual documentation</h2>
-<p>These repository diagrams explain the documented implementation and integration boundaries. They are explanatory documentation; physical-build photographs and raw operational results are not published here.</p>
-<div class="grid">
-<figure>
-<a href="media/robot-data-paths.svg">
-<img loading="lazy" src="media/robot-data-paths.svg" alt="Separate depth, control and telemetry paths — explanatory diagram.">
-</a>
-<figcaption>Separate depth, control and telemetry paths — explanatory diagram.</figcaption>
-</figure>
-</div>
-</section>
-<h2>Full documentation and sources</h2>
-<ul>
-<li>
-<a href="https://github.com/Mahyoub88/reconnaissance-robot-rgbd">View repository</a>
-</li>
-<li>
-<a href="https://github.com/Mahyoub88/reconnaissance-robot-rgbd/blob/main/docs/engineering-guide.md">Illustrated engineering guide and complete gallery</a>
-</li>
-<li>
-<a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project descriptions and media</a>
-</li>
-</ul>
 <section id="technical-walkthrough">
 <h2>Separating mapping, command and telemetry paths</h2>
 <p>The rover combines four-motor motion, Kinect RGB-D acquisition, RTAB-Map on Linux, ultrasonic sensing, a touchscreen controller and several communication channels. Its documented integration issue was software-build and Kinect-driver compatibility. The wired USB depth-data path was retained; it should not be redrawn as a wireless video feed.</p>
@@ -186,6 +133,51 @@
 </ul>
 <p class="source-note">No physical-build photograph or measured point-cloud result has been reconstructed from a generated illustration.</p>
 </section>
+<section id="engineering">
+<h2>Engineering rationale</h2>
+<h3>Two mapping paths</h3>
+<p>Kinect supplies colour and depth to RTAB-Map on Linux for 3D mapping. Ultrasonic sensing supplies a separate 2D mapping path. These are complementary interfaces; Bluetooth mapping data is not described as carrying the Kinect depth stream.</p>
+<h3>Control and reporting interfaces</h3>
+<p>The four-motor rover and touchscreen controller are integrated with nRF control, XBee sensor telemetry, Bluetooth mapping data and GPS/GSM location reporting. Separate channels make it necessary to document which data uses which link.</p>
+<h3>The integration constraint</h3>
+<p>Software builds and Kinect drivers required compatibility work. The retained wired USB connection is a documented engineering decision for the depth-data path. The new diagram is a functional overview rather than a circuit schematic or a claim about undocumented motor-driver wiring.</p>
+<h3>Evidence and extension</h3>
+<p>The public description records design, programming, assembly, integration and testing. Source code, raw maps and physical-build photographs are not present in the inspected repository. The acceptance checklist below is a suggested way to document those artifacts when available.</p>
+</section>
+<section id="evidence">
+<h2>Evidence and validation</h2>
+<p>Review the documented implementation against these validation topics; measured results are shown only where provided by the source.</p>
+<ul>
+<li>Driver compatibility and USB depth acquisition</li>
+<li>RTAB-Map output with scene context</li>
+<li>Command and telemetry channel mapping</li>
+<li>Motor/sensor response and location reporting</li>
+</ul>
+</section>
+<section id="gallery">
+<h2>Visual documentation</h2>
+<p>These repository diagrams explain the documented implementation and integration boundaries. They are explanatory documentation; physical-build photographs and raw operational results are not published here.</p>
+<div class="grid">
+<figure>
+<a href="media/robot-data-paths.svg">
+<img loading="lazy" src="media/robot-data-paths.svg" alt="Separate depth, control and telemetry paths — explanatory diagram.">
+</a>
+<figcaption>Separate depth, control and telemetry paths — explanatory diagram.</figcaption>
+</figure>
+</div>
+</section>
+<h2>Full documentation and sources</h2>
+<ul>
+<li>
+<a href="https://github.com/Mahyoub88/reconnaissance-robot-rgbd">View repository</a>
+</li>
+<li>
+<a href="https://github.com/Mahyoub88/reconnaissance-robot-rgbd/blob/main/docs/engineering-guide.md">Illustrated engineering guide and complete gallery</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project descriptions and media</a>
+</li>
+</ul>
 <nav class="project-pagination" aria-label="More case studies">
 <a href="/projects/proj-ngsim/">← Vehicle Type Classification Using NGSIM US-101</a>
 <a href="/projects/proj-quadcopter-uav/">Autonomous Quadcopter UAV — Flight Control, Telemetry &amp; FPV →</a>

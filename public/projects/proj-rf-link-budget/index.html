@@ -51,26 +51,70 @@
 </nav>
 <section id="overview">
 <h2>System architecture</h2>
-<figure>
-<a href="media/architecture.svg">
-<img loading="lazy" src="media/architecture.svg" alt="Proposed architecture — responsibilities inferred from documented scope">
-</a>
-<figcaption>Proposed architecture — responsibilities inferred from documented scope</figcaption>
-</figure>
 <div class="summary">
 <h3>Implementation scope</h3>
 <p>The tool relates transmit power, antenna gains and propagation loss to the receive level used in link assessment. Its screenshot belongs to a standalone calculator rather than the monitoring application.</p>
 </div>
 </section>
+<section id="technical-walkthrough">
+<h2>Keeping power, loss and margin in consistent units</h2>
+<p>The VB.NET application addresses path loss, receiver sensitivity, noise and RF link-budget calculations. The original interface supports its calculator purpose. A professional walkthrough must expose the input units and assumptions as well as the output, so a reviewer can recompute a result without access to the original source code.</p>
+<p>Received power combines transmit power in dBm, antenna gains in dBi and path/cable losses in dB. Free-space path loss is only one part of the propagation model. Obstacles, diffraction, atmospheric effects and interference can change a field link; a positive calculated margin is therefore not a recorded availability or throughput result.</p>
+<p>Illustrative calculation: at 5 GHz over 2 km, FSPL = 32.44 + 20 log10(5000 MHz) + 20 log10(2 km), approximately 112.44 dB. For 20 dBm transmit power, two 20 dBi antennas and 2 dB of total additional loss, received power is approximately −54.44 dBm. With an illustrative −75 dBm sensitivity, the nominal margin is 20.56 dB. These are independently computed example inputs, not recovered deployment parameters.</p>
+<p>The receiver threshold depends on bandwidth, modulation and required quality. Thermal-noise reasoning must state bandwidth and receiver noise figure before adding an SNR requirement. ITU-R P.530 supports terrestrial link-design context, but does not replace a selected radio data sheet or site survey. The calculator review checks arithmetic, dimensions and rejected inputs separately.</p>
+<figure>
+<a href="media/engineering-review.svg">
+<img loading="lazy" src="media/engineering-review.svg" alt="Keeping power, loss and margin in consistent units — explanatory engineering review">
+</a>
+<figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
+</figure>
+<h3>Review scenarios and expected evidence</h3>
+<p>These scenarios specify what evidence would support a review. They do not report additional completed tests.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Review area</th>
+<th scope="col">Method</th>
+<th scope="col">Evidence to inspect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit conversion</td>
+<td>Enter equivalent GHz/MHz representations</td>
+<td>Same FSPL after explicit conversion</td>
+</tr>
+<tr>
+<td>Distance scaling</td>
+<td>Double distance in free space</td>
+<td>FSPL increases by about 6.02 dB</td>
+</tr>
+<tr>
+<td>Additional loss</td>
+<td>Add 3 dB cable loss</td>
+<td>Received power and margin drop by 3 dB</td>
+</tr>
+<tr>
+<td>Invalid input</td>
+<td>Zero or negative frequency/distance</td>
+<td>Reject before logarithmic calculation</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Technical references and provenance</h3>
+<p>Primary references support the engineering explanation, not claims about this project's undocumented configuration or results.</p>
+<ul>
+<li>
+<a href="https://www.itu.int/rec/R-REC-P.530/en">ITU-R P.530 — terrestrial line-of-sight link design</a>
+</li>
+</ul>
+<p class="source-note">The worked values are illustrative. They are not a measured RF link, deployment-specific result or recovered program output.</p>
+</section>
 <section id="engineering">
 <h2>Engineering approach</h2>
 <p>A link budget must be read with its input units and propagation assumptions. It supports engineering decisions; the calculator screenshot alone is not a measured field link result.</p>
-<figure>
-<a href="media/workflow.svg">
-<img loading="lazy" src="media/workflow.svg" alt="Proposed workflow — sequence and verification responsibilities">
-</a>
-<figcaption>Proposed workflow — sequence and verification responsibilities</figcaption>
-</figure>
 </section>
 <section id="analysis">
 <h2>Reading the original calculation panel</h2>
@@ -139,62 +183,6 @@
 <section id="gallery">
 <h2>Source context</h2>
 <p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p>
-</section>
-<section id="technical-walkthrough">
-<h2>Keeping power, loss and margin in consistent units</h2>
-<p>The VB.NET application addresses path loss, receiver sensitivity, noise and RF link-budget calculations. The original interface supports its calculator purpose. A professional walkthrough must expose the input units and assumptions as well as the output, so a reviewer can recompute a result without access to the original source code.</p>
-<p>Received power combines transmit power in dBm, antenna gains in dBi and path/cable losses in dB. Free-space path loss is only one part of the propagation model. Obstacles, diffraction, atmospheric effects and interference can change a field link; a positive calculated margin is therefore not a recorded availability or throughput result.</p>
-<p>Illustrative calculation: at 5 GHz over 2 km, FSPL = 32.44 + 20 log10(5000 MHz) + 20 log10(2 km), approximately 112.44 dB. For 20 dBm transmit power, two 20 dBi antennas and 2 dB of total additional loss, received power is approximately −54.44 dBm. With an illustrative −75 dBm sensitivity, the nominal margin is 20.56 dB. These are independently computed example inputs, not recovered deployment parameters.</p>
-<p>The receiver threshold depends on bandwidth, modulation and required quality. Thermal-noise reasoning must state bandwidth and receiver noise figure before adding an SNR requirement. ITU-R P.530 supports terrestrial link-design context, but does not replace a selected radio data sheet or site survey. The calculator review checks arithmetic, dimensions and rejected inputs separately.</p>
-<figure>
-<a href="media/engineering-review.svg">
-<img loading="lazy" src="media/engineering-review.svg" alt="Keeping power, loss and margin in consistent units — explanatory engineering review">
-</a>
-<figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
-</figure>
-<h3>Review scenarios and expected evidence</h3>
-<p>These scenarios specify what evidence would support a review. They do not report additional completed tests.</p>
-<div class="table-scroll">
-<table>
-<thead>
-<tr>
-<th scope="col">Review area</th>
-<th scope="col">Method</th>
-<th scope="col">Evidence to inspect</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Unit conversion</td>
-<td>Enter equivalent GHz/MHz representations</td>
-<td>Same FSPL after explicit conversion</td>
-</tr>
-<tr>
-<td>Distance scaling</td>
-<td>Double distance in free space</td>
-<td>FSPL increases by about 6.02 dB</td>
-</tr>
-<tr>
-<td>Additional loss</td>
-<td>Add 3 dB cable loss</td>
-<td>Received power and margin drop by 3 dB</td>
-</tr>
-<tr>
-<td>Invalid input</td>
-<td>Zero or negative frequency/distance</td>
-<td>Reject before logarithmic calculation</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3>Technical references and provenance</h3>
-<p>Primary references support the engineering explanation, not claims about this project's undocumented configuration or results.</p>
-<ul>
-<li>
-<a href="https://www.itu.int/rec/R-REC-P.530/en">ITU-R P.530 — terrestrial line-of-sight link design</a>
-</li>
-</ul>
-<p class="source-note">The worked values are illustrative. They are not a measured RF link, deployment-specific result or recovered program output.</p>
 </section>
 <section id="sources">
 <h2>Source documentation</h2>

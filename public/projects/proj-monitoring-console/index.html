@@ -51,41 +51,10 @@
 </nav>
 <section id="overview">
 <h2>System architecture</h2>
-<figure>
-<a href="media/architecture.svg">
-<img loading="lazy" src="media/architecture.svg" alt="Proposed architecture — responsibilities inferred from documented scope">
-</a>
-<figcaption>Proposed architecture — responsibilities inferred from documented scope</figcaption>
-</figure>
 <div class="summary">
 <h3>Implementation scope</h3>
 <p>The console presents device and system condition in one operational view. Its role is to support fault recognition, diagnosis and follow-up across multiple sites.</p>
 </div>
-</section>
-<section id="engineering">
-<h2>Engineering approach</h2>
-<p>Status, health assessment and reporting are separate responsibilities. The available interface screenshot documents the console; application source code and deployment configuration are not published.</p>
-<figure>
-<a href="media/workflow.svg">
-<img loading="lazy" src="media/workflow.svg" alt="Proposed workflow — sequence and verification responsibilities">
-</a>
-<figcaption>Proposed workflow — sequence and verification responsibilities</figcaption>
-</figure>
-</section>
-<section id="analysis">
-<h2>Reading the original interface</h2>
-<p>The source poster groups a main monitoring dashboard, site detail and rules analysis, a connection or fault-test panel, and an event / failure-tracking view. These areas support recognition, diagnosis and follow-up. The preview is low resolution: small labels, exact values and device protocols cannot reliably be recovered from it.</p>
-<h3>Proposed functional design</h3>
-<p>Collect observations through device-specific adapters on a background scheduler. Each observation records the check type, timestamp, result and data quality. A separate rule engine evaluates condition; the interface displays both condition and the time of the last successful observation.</p>
-<p>Use healthy, warning, critical, unknown and stale states. A failed network check is evidence of an unsuccessful check, not sufficient proof of a hardware failure. Expired data must stop appearing as a fresh healthy reading.</p>
-<h3>Records and operational flow</h3>
-<p>Suggested entities are Site, Device, ProbeResult, HealthRule, Event, Incident and IncidentAction. A device has many observations; several repeated events may belong to one incident. Record state transitions and aggregate repeat failures to avoid creating an incident on every polling cycle.</p>
-<h3>Verification scenarios</h3>
-<p>Exercise unavailable devices, slow responses, stale observations, database failure, recovery and shutdown during an active check. The interface should remain responsive and display uncertainty explicitly. No measured uptime or response-time benchmark is inferred from the screenshot.</p>
-</section>
-<section id="gallery">
-<h2>Source context</h2>
-<p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p>
 </section>
 <section id="technical-walkthrough">
 <h2>Making health state traceable to an observation</h2>
@@ -148,6 +117,25 @@
 </li>
 </ul>
 <p class="source-note">This is an interface-informed proposed design. No extra application screenshot, running demo or implemented backend feature is represented as recovered source evidence.</p>
+</section>
+<section id="engineering">
+<h2>Engineering approach</h2>
+<p>Status, health assessment and reporting are separate responsibilities. The available interface screenshot documents the console; application source code and deployment configuration are not published.</p>
+</section>
+<section id="analysis">
+<h2>Reading the original interface</h2>
+<p>The source poster groups a main monitoring dashboard, site detail and rules analysis, a connection or fault-test panel, and an event / failure-tracking view. These areas support recognition, diagnosis and follow-up. The preview is low resolution: small labels, exact values and device protocols cannot reliably be recovered from it.</p>
+<h3>Proposed functional design</h3>
+<p>Collect observations through device-specific adapters on a background scheduler. Each observation records the check type, timestamp, result and data quality. A separate rule engine evaluates condition; the interface displays both condition and the time of the last successful observation.</p>
+<p>Use healthy, warning, critical, unknown and stale states. A failed network check is evidence of an unsuccessful check, not sufficient proof of a hardware failure. Expired data must stop appearing as a fresh healthy reading.</p>
+<h3>Records and operational flow</h3>
+<p>Suggested entities are Site, Device, ProbeResult, HealthRule, Event, Incident and IncidentAction. A device has many observations; several repeated events may belong to one incident. Record state transitions and aggregate repeat failures to avoid creating an incident on every polling cycle.</p>
+<h3>Verification scenarios</h3>
+<p>Exercise unavailable devices, slow responses, stale observations, database failure, recovery and shutdown during an active check. The interface should remain responsive and display uncertainty explicitly. No measured uptime or response-time benchmark is inferred from the screenshot.</p>
+</section>
+<section id="gallery">
+<h2>Source context</h2>
+<p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p>
 </section>
 <section id="sources">
 <h2>Source documentation</h2>

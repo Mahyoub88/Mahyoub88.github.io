@@ -73,6 +73,62 @@
 </dl>
 </div>
 </section>
+<section id="technical-walkthrough">
+<h2>From daily demand to a reviewable power design</h2>
+<p>The source photographs show installed photovoltaic and battery/power equipment for telecommunications supply and backup. They support the installation context, but labels in low-resolution images do not reliably establish capacities or battery chemistry. The worked example already on this page uses illustrative inputs and is retained as an explanation rather than an installed equipment schedule.</p>
+<p>Start with the load boundary: AC demand measured after an inverter and DC demand on a regulated bus require different loss paths. Compute daily energy from power, quantity and operating time, then review concurrent peak demand and starting loads separately. The load schedule, autonomy requirement and allowed interruptions determine what the system must deliver.</p>
+<p>PV sizing compares the required delivered energy with site resource and conversion losses. Annual energy is insufficient to establish continuous service through the least favourable period. PVWatts is a technical reference for photovoltaic production estimates; its grid-connected assumptions do not certify an off-grid battery system. Storage and charging must be assessed separately using the selected equipment data.</p>
+<p>Battery reserve is based on delivered energy, usable fraction, temperature and discharge conditions. Controller selection must check array voltage and current across operating extremes, while the inverter must meet the AC load and battery-bus constraints. Protection, isolation and earthing require installation-specific ratings and drawings; the functional visual below does not assign them.</p>
+<figure>
+<a href="media/engineering-review.svg">
+<img loading="lazy" src="media/engineering-review.svg" alt="From daily demand to a reviewable power design — explanatory engineering review">
+</a>
+<figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
+</figure>
+<h3>Review scenarios and expected evidence</h3>
+<p>These scenarios specify what evidence would support a review. They do not report additional completed tests.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Review area</th>
+<th scope="col">Method</th>
+<th scope="col">Evidence to inspect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Load model</td>
+<td>Sum quantity × power × hours</td>
+<td>Daily energy with an explicit supply boundary</td>
+</tr>
+<tr>
+<td>Array/controller</td>
+<td>Compare operating voltage/current to device limits</td>
+<td>Data sheets and array configuration</td>
+</tr>
+<tr>
+<td>Battery reserve</td>
+<td>Apply usable fraction and delivery losses once</td>
+<td>Nominal versus delivered energy</td>
+</tr>
+<tr>
+<td>Commissioning</td>
+<td>Compare measured conditions with design assumptions</td>
+<td>Equipment schedule and dated readings</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Technical references and provenance</h3>
+<p>Primary references support the engineering explanation, not claims about this project's undocumented configuration or results.</p>
+<ul>
+<li>
+<a href="https://docs.nrel.gov/docs/fy14osti/62641.pdf">PVWatts technical reference manual</a>
+</li>
+</ul>
+<p class="source-note">The existing numerical sizing example is educational. No installed capacity, measured yield or achieved autonomy is inferred from the photographs.</p>
+</section>
 <section id="engineering">
 <h2>Engineering rationale</h2>
 <h3>Start with energy demand</h3>
@@ -83,10 +139,6 @@
 <p>The recovered source overview shows the rooftop photovoltaic array and battery-storage installation. It documents visible system components; it does not establish battery capacity, autonomy or energy savings.</p>
 <h3>Deployment documentation</h3>
 <p>The published scope covers wiring, protection, performance estimation and remote telecommunications supply/backup. The suggested evidence checklist calls for load schedules, sizing assumptions, component data and commissioning records. It does not claim that those source documents are already publicly available.</p>
-<figure>
-<img src="media/workflow.svg" alt="Engineering workflow"/>
-<figcaption>Explanatory workflow; read left to right across each row.</figcaption>
-</figure>
 </section>
 <section id="sizing-example">
 <h2>Worked sizing example</h2>
@@ -172,62 +224,6 @@ At an illustrative 48 V: capacity ≈ 5,333 Wh ÷ 48 V ≈ 111 Ah</pre>
 <a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project descriptions and media</a>
 </li>
 </ul>
-<section id="technical-walkthrough">
-<h2>From daily demand to a reviewable power design</h2>
-<p>The source photographs show installed photovoltaic and battery/power equipment for telecommunications supply and backup. They support the installation context, but labels in low-resolution images do not reliably establish capacities or battery chemistry. The worked example already on this page uses illustrative inputs and is retained as an explanation rather than an installed equipment schedule.</p>
-<p>Start with the load boundary: AC demand measured after an inverter and DC demand on a regulated bus require different loss paths. Compute daily energy from power, quantity and operating time, then review concurrent peak demand and starting loads separately. The load schedule, autonomy requirement and allowed interruptions determine what the system must deliver.</p>
-<p>PV sizing compares the required delivered energy with site resource and conversion losses. Annual energy is insufficient to establish continuous service through the least favourable period. PVWatts is a technical reference for photovoltaic production estimates; its grid-connected assumptions do not certify an off-grid battery system. Storage and charging must be assessed separately using the selected equipment data.</p>
-<p>Battery reserve is based on delivered energy, usable fraction, temperature and discharge conditions. Controller selection must check array voltage and current across operating extremes, while the inverter must meet the AC load and battery-bus constraints. Protection, isolation and earthing require installation-specific ratings and drawings; the functional visual below does not assign them.</p>
-<figure>
-<a href="media/engineering-review.svg">
-<img loading="lazy" src="media/engineering-review.svg" alt="From daily demand to a reviewable power design — explanatory engineering review">
-</a>
-<figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
-</figure>
-<h3>Review scenarios and expected evidence</h3>
-<p>These scenarios specify what evidence would support a review. They do not report additional completed tests.</p>
-<div class="table-scroll">
-<table>
-<thead>
-<tr>
-<th scope="col">Review area</th>
-<th scope="col">Method</th>
-<th scope="col">Evidence to inspect</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Load model</td>
-<td>Sum quantity × power × hours</td>
-<td>Daily energy with an explicit supply boundary</td>
-</tr>
-<tr>
-<td>Array/controller</td>
-<td>Compare operating voltage/current to device limits</td>
-<td>Data sheets and array configuration</td>
-</tr>
-<tr>
-<td>Battery reserve</td>
-<td>Apply usable fraction and delivery losses once</td>
-<td>Nominal versus delivered energy</td>
-</tr>
-<tr>
-<td>Commissioning</td>
-<td>Compare measured conditions with design assumptions</td>
-<td>Equipment schedule and dated readings</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3>Technical references and provenance</h3>
-<p>Primary references support the engineering explanation, not claims about this project's undocumented configuration or results.</p>
-<ul>
-<li>
-<a href="https://docs.nrel.gov/docs/fy14osti/62641.pdf">PVWatts technical reference manual</a>
-</li>
-</ul>
-<p class="source-note">The existing numerical sizing example is educational. No installed capacity, measured yield or achieved autonomy is inferred from the photographs.</p>
-</section>
 <nav class="project-pagination" aria-label="More case studies">
 <a href="/projects/proj-rfid-study/">← RFID Library Automation System (ISO 15693)</a>
 <a href="/projects/proj-plc-control/">Industrial Automation &amp; PLC-Based Control Systems →</a>

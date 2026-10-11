@@ -51,37 +51,10 @@
 </nav>
 <section id="overview">
 <h2>System architecture</h2>
-<figure>
-<a href="media/architecture.svg">
-<img loading="lazy" src="media/architecture.svg" alt="Explanatory architecture — functional boundaries for this project">
-</a>
-<figcaption>Explanatory architecture — functional boundaries for this project</figcaption>
-</figure>
 <div class="summary">
 <h3>Implementation scope</h3>
 <p>OSPF provides the routing underlay. MPLS carries labelled traffic, while VRFs separate customer routing contexts and MP-BGP exchanges VPN routes.</p>
 </div>
-</section>
-<section id="engineering">
-<h2>Engineering approach</h2>
-<p>The GNS3 topology is the source visual for this implementation. The explanatory diagram shows functional boundaries rather than inventing router names, addresses or measured throughput.</p>
-<figure>
-<a href="media/workflow.svg">
-<img loading="lazy" src="media/workflow.svg" alt="Explanatory workflow — project-specific sequence">
-</a>
-<figcaption>Explanatory workflow — project-specific sequence</figcaption>
-</figure>
-</section>
-<section id="gallery">
-<h2>Source context</h2>
-<p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p>
-</section>
-<section id="verification-context">
-<h2>Verification context</h2>
-<p>The functional diagram explains this implementation’s engineering responsibilities. The original source preview appears above. As-built addressing, configuration exports and raw acceptance records are not included in the public release.</p>
-<p>
-<a href="https://github.com/Mahyoub88/rf-mpls-network-design/blob/main/docs/verification-context.md">Detailed verification boundaries and technical source context</a>
-</p>
 </section>
 <section id="technical-walkthrough">
 <h2>Understanding the underlay, VPN control plane and label path</h2>
@@ -141,6 +114,21 @@
 </li>
 </ul>
 <p class="source-note">Command names are a verification guide. No console outputs, configuration exports, router identifiers or acceptance results have been invented.</p>
+</section>
+<section id="engineering">
+<h2>Engineering approach</h2>
+<p>The GNS3 topology is the source visual for this implementation. The explanatory diagram shows functional boundaries rather than inventing router names, addresses or measured throughput.</p>
+</section>
+<section id="gallery">
+<h2>Source context</h2>
+<p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p>
+</section>
+<section id="verification-context">
+<h2>Verification context</h2>
+<p>The functional diagram explains this implementation’s engineering responsibilities. The original source preview appears above. As-built addressing, configuration exports and raw acceptance records are not included in the public release.</p>
+<p>
+<a href="https://github.com/Mahyoub88/rf-mpls-network-design/blob/main/docs/verification-context.md">Detailed verification boundaries and technical source context</a>
+</p>
 </section>
 <section id="sources">
 <h2>Source documentation</h2>
