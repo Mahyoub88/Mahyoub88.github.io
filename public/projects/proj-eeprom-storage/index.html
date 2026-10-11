@@ -42,6 +42,7 @@
 <span>LCD</span>
 </div>
 <nav class="section-nav">
+<a href="#technical-walkthrough">Technical walkthrough</a>
 <a href="#overview">Architecture</a>
 <a href="#engineering">Engineering approach</a>
 <a href="#gallery">Visual documentation</a>
@@ -135,6 +136,62 @@
 <figcaption>eeprom store and readback — source repository figure</figcaption>
 </figure>
 </div>
+</section>
+<section id="technical-walkthrough">
+<h2>Persistence is a write, restore and integrity problem</h2>
+<p>The implemented function is storage and retrieval in the PIC microcontroller’s internal data EEPROM, developed with mikroC and Proteus. This is not an external I2C EEPROM design. The source poster documents the project, while the complete original firmware and Proteus schematic remain outside the public release.</p>
+<p>Non-volatile memory retains bytes through power removal, but a multi-byte application record needs its own integrity convention. Writing a value, reading it back and restoring it on boot are distinct operations. A byte read-back confirms that operation at that instant; it does not prove a complete multi-byte update will survive interruption.</p>
+<p>An explanatory record design can include a version, payload and checksum, with a commit indicator written after the payload. A stronger design may alternate between two slots and choose the latest valid record. These are documentation options, not recovered features of the original firmware. Checksum detection also differs from error correction: an invalid record still needs a defined fallback.</p>
+<p>Write endurance makes repeated storage of an unchanged value undesirable. The selected PIC data sheet and library govern write completion, unlocking and interrupt treatment. A fixed delay in a short reference snippet is not a portable device specification. For verification, distinguish successful writes, rejected values, restart recovery and interruption during the update.</p>
+<figure>
+<a href="media/engineering-review.svg">
+<img loading="lazy" src="media/engineering-review.svg" alt="Persistence is a write, restore and integrity problem — explanatory engineering review">
+</a>
+<figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
+</figure>
+<h3>Review scenarios and expected evidence</h3>
+<p>These scenarios specify what evidence would support a review. They do not report additional completed tests.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Review area</th>
+<th scope="col">Method</th>
+<th scope="col">Evidence to inspect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unchanged input</td>
+<td>Repeat the same value</td>
+<td>Avoid unnecessary write in the reference design</td>
+</tr>
+<tr>
+<td>Boundary values</td>
+<td>Use valid minimum/maximum and out-of-range input</td>
+<td>Accept or reject without address overflow</td>
+</tr>
+<tr>
+<td>Power cycle</td>
+<td>Store, remove power, restart</td>
+<td>Restored value associated with its integrity status</td>
+</tr>
+<tr>
+<td>Interrupted update</td>
+<td>Interrupt a multi-byte reference update</td>
+<td>Invalid record detected; recovery behaviour specified</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Technical references and provenance</h3>
+<p>Primary references support the engineering explanation, not claims about this project's undocumented configuration or results.</p>
+<ul>
+<li>
+<a href="https://ww1.microchip.com/downloads/en/devicedoc/39582b.pdf">Microchip PIC16F87XA data sheet</a>
+</li>
+</ul>
+<p class="source-note">Integrity layouts and interruption scenarios are reference design guidance. They are not proof that a checksum or dual-slot scheme exists in the original code.</p>
 </section>
 <section id="sources">
 <h2>Source documentation</h2>

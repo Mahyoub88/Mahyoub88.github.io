@@ -43,6 +43,7 @@
 <span>MP-BGP</span>
 </div>
 <nav class="section-nav">
+<a href="#technical-walkthrough">Technical walkthrough</a>
 <a href="#overview">Architecture</a>
 <a href="#engineering">Engineering approach</a>
 <a href="#gallery">Visual documentation</a>
@@ -81,6 +82,65 @@
 <p>
 <a href="https://github.com/Mahyoub88/rf-mpls-network-design/blob/main/docs/verification-context.md">Detailed verification boundaries and technical source context</a>
 </p>
+</section>
+<section id="technical-walkthrough">
+<h2>Understanding the underlay, VPN control plane and label path</h2>
+<p>The source documents a Cisco 7200 backbone built and validated in GNS3 using OSPF, MPLS traffic engineering, VRFs and MP-BGP. The original topology preview is preserved as the implementation environment. This is distinct from the enterprise/wireless projects; the backbone explanation should not imply that their equipment participates in the same network.</p>
+<p>OSPF supplies reachability to backbone destinations. Label forwarding transports traffic through the provider core. PE routers maintain the customer VRFs and exchange VPN routes with MP-BGP; P routers provide core transport and need not carry the customer VPN routing tables. The diagram deliberately keeps the VPN control-plane responsibility at the PEs.</p>
+<p>RFC 4364 separates the route distinguisher, which makes VPN routes distinct, from route targets, which influence import/export policy. A reference example with two isolated customer contexts can explain overlapping prefixes without claiming those exact customers or addresses existed in the source topology. RFC 3031 supports the distinction between label distribution/control and actual packet forwarding.</p>
+<p>Verification should progress from underlay to transport labels, VPN route exchange and customer forwarding. Useful read-only IOS checks include show ip ospf neighbor, show mpls forwarding-table, show ip vrf and show ip bgp vpnv4 all; command support varies by image. LDP checks apply only when LDP is configured. A traffic-engineering path needs its own tunnel/signalling context and cannot be proved by an LDP neighbour table alone.</p>
+<figure>
+<a href="media/engineering-review.svg">
+<img loading="lazy" src="media/engineering-review.svg" alt="Understanding the underlay, VPN control plane and label path — explanatory engineering review">
+</a>
+<figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
+</figure>
+<h3>Review scenarios and expected evidence</h3>
+<p>These scenarios specify what evidence would support a review. They do not report additional completed tests.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Review area</th>
+<th scope="col">Method</th>
+<th scope="col">Evidence to inspect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Underlay</td>
+<td>Inspect OSPF adjacency and PE reachability</td>
+<td>Reachable VPN next hop</td>
+</tr>
+<tr>
+<td>Label transport</td>
+<td>Inspect forwarding entries and applicable signalling</td>
+<td>Label path to the remote PE</td>
+</tr>
+<tr>
+<td>VPN routes</td>
+<td>Inspect VPNv4 routes and RT policy</td>
+<td>Intended routes imported into the intended VRF</td>
+</tr>
+<tr>
+<td>Customer forwarding</td>
+<td>Test same-VPN and disallowed cross-VPN paths</td>
+<td>Reachability and isolation checked independently</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Technical references and provenance</h3>
+<p>Primary references support the engineering explanation, not claims about this project's undocumented configuration or results.</p>
+<ul>
+<li>
+<a href="https://www.rfc-editor.org/rfc/rfc4364">BGP/MPLS IP VPNs — RFC 4364</a>
+</li>
+<li>
+<a href="https://www.rfc-editor.org/rfc/rfc3031">MPLS architecture — RFC 3031</a>
+</li>
+</ul>
+<p class="source-note">Command names are a verification guide. No console outputs, configuration exports, router identifiers or acceptance results have been invented.</p>
 </section>
 <section id="sources">
 <h2>Source documentation</h2>
