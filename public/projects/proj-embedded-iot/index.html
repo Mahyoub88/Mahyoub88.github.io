@@ -57,64 +57,6 @@
 <p>PIC16 firmware implements timed acquisition and peripheral interfaces. Timer0 schedules display refresh and measurements, I²C connects the DS1307 clock, and serial interfaces drive shift registers and the graphic LCD.</p>
 </div>
 </section>
-<section id="engineering">
-<h2>Engineering approach</h2>
-<p>These are related firmware implementations and peripheral techniques. PLC batching and the dedicated EEPROM storage system have their own case studies and are not presented as parts of one PIC circuit.</p>
-<figure>
-<a href="media/source/02_development_workflow.svg">
-<img loading="lazy" src="media/source/02_development_workflow.svg" alt="Explanatory workflow — project-specific sequence">
-</a>
-<figcaption>Explanatory workflow — project-specific sequence</figcaption>
-</figure>
-</section>
-<section id="gallery">
-<h2>Visual documentation</h2>
-<p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p>
-<div class="grid">
-<figure>
-<a href="media/source/03_7segment_multiplexing.svg">
-<img loading="lazy" src="media/source/03_7segment_multiplexing.svg" alt="7segment multiplexing — source repository figure">
-</a>
-<figcaption>7segment multiplexing — source repository figure</figcaption>
-</figure>
-<figure>
-<a href="media/source/04_adc_timer0_scheduling.svg">
-<img loading="lazy" src="media/source/04_adc_timer0_scheduling.svg" alt="adc timer0 scheduling — source repository figure">
-</a>
-<figcaption>adc timer0 scheduling — source repository figure</figcaption>
-</figure>
-<figure>
-<a href="media/source/05_ds1307_i2c.svg">
-<img loading="lazy" src="media/source/05_ds1307_i2c.svg" alt="ds1307 i2c — source repository figure">
-</a>
-<figcaption>ds1307 i2c — source repository figure</figcaption>
-</figure>
-<figure>
-<a href="media/source/06_74hc595_output_expansion.svg">
-<img loading="lazy" src="media/source/06_74hc595_output_expansion.svg" alt="74hc595 output expansion — source repository figure">
-</a>
-<figcaption>74hc595 output expansion — source repository figure</figcaption>
-</figure>
-<figure>
-<a href="media/source/07_keypad_access_control.svg">
-<img loading="lazy" src="media/source/07_keypad_access_control.svg" alt="keypad access control — source repository figure">
-</a>
-<figcaption>keypad access control — source repository figure</figcaption>
-</figure>
-<figure>
-<a href="media/source/08_nokia5110_pcd8544.svg">
-<img loading="lazy" src="media/source/08_nokia5110_pcd8544.svg" alt="nokia5110 pcd8544 — source repository figure">
-</a>
-<figcaption>nokia5110 pcd8544 — source repository figure</figcaption>
-</figure>
-<figure>
-<a href="media/source/09_memory_technologies.svg">
-<img loading="lazy" src="media/source/09_memory_technologies.svg" alt="memory technologies — source repository figure">
-</a>
-<figcaption>memory technologies — source repository figure</figcaption>
-</figure>
-</div>
-</section>
 <section id="technical-walkthrough">
 <h2>Timing and peripheral integration responsibilities</h2>
 <p>This project groups PIC firmware and peripheral implementations: multiplexed displays, timed ADC sensing, the DS1307 RTC, 74HC595 output expansion, keypad access control and the Nokia 5110 display. It is an integration portfolio rather than a claim that every peripheral appears on one physical board. EEPROM persistence has its own independent case study and is linked rather than repeated as another complete implementation here.</p>
@@ -173,6 +115,64 @@
 </li>
 </ul>
 <p class="source-note">Timing values and pin assignments are device-specific. No new board photograph, Proteus capture or original firmware export is claimed.</p>
+</section>
+<section id="engineering">
+<h2>Engineering approach</h2>
+<p>These are related firmware implementations and peripheral techniques. PLC batching and the dedicated EEPROM storage system have their own case studies and are not presented as parts of one PIC circuit.</p>
+<figure>
+<a href="media/source/02_development_workflow.svg">
+<img loading="lazy" src="media/source/02_development_workflow.svg" alt="Explanatory workflow — project-specific sequence">
+</a>
+<figcaption>Explanatory workflow — project-specific sequence</figcaption>
+</figure>
+</section>
+<section id="gallery">
+<h2>Visual documentation</h2>
+<p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p>
+<div class="grid">
+<figure>
+<a href="media/source/03_7segment_multiplexing.svg">
+<img loading="lazy" src="media/source/03_7segment_multiplexing.svg" alt="7segment multiplexing — source repository figure">
+</a>
+<figcaption>7segment multiplexing — source repository figure</figcaption>
+</figure>
+<figure>
+<a href="media/source/04_adc_timer0_scheduling.svg">
+<img loading="lazy" src="media/source/04_adc_timer0_scheduling.svg" alt="adc timer0 scheduling — source repository figure">
+</a>
+<figcaption>adc timer0 scheduling — source repository figure</figcaption>
+</figure>
+<figure>
+<a href="media/source/05_ds1307_i2c.svg">
+<img loading="lazy" src="media/source/05_ds1307_i2c.svg" alt="ds1307 i2c — source repository figure">
+</a>
+<figcaption>ds1307 i2c — source repository figure</figcaption>
+</figure>
+<figure>
+<a href="media/source/06_74hc595_output_expansion.svg">
+<img loading="lazy" src="media/source/06_74hc595_output_expansion.svg" alt="74hc595 output expansion — source repository figure">
+</a>
+<figcaption>74hc595 output expansion — source repository figure</figcaption>
+</figure>
+<figure>
+<a href="media/source/07_keypad_access_control.svg">
+<img loading="lazy" src="media/source/07_keypad_access_control.svg" alt="keypad access control — source repository figure">
+</a>
+<figcaption>keypad access control — source repository figure</figcaption>
+</figure>
+<figure>
+<a href="media/source/08_nokia5110_pcd8544.svg">
+<img loading="lazy" src="media/source/08_nokia5110_pcd8544.svg" alt="nokia5110 pcd8544 — source repository figure">
+</a>
+<figcaption>nokia5110 pcd8544 — source repository figure</figcaption>
+</figure>
+<figure>
+<a href="media/source/09_memory_technologies.svg">
+<img loading="lazy" src="media/source/09_memory_technologies.svg" alt="memory technologies — source repository figure">
+</a>
+<figcaption>memory technologies — source repository figure</figcaption>
+</figure>
+</div>
 </section>
 <section id="sources">
 <h2>Source documentation</h2>

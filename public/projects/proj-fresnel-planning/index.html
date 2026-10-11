@@ -50,55 +50,10 @@
 </nav>
 <section id="overview">
 <h2>System architecture</h2>
-<figure>
-<a href="media/architecture.svg">
-<img loading="lazy" src="media/architecture.svg" alt="Proposed architecture — responsibilities inferred from documented scope">
-</a>
-<figcaption>Proposed architecture — responsibilities inferred from documented scope</figcaption>
-</figure>
 <div class="summary">
 <h3>Implementation scope</h3>
 <p>Line-of-sight establishes the direct path between antennas. Fresnel analysis examines clearance around that path, giving the planner a different view from a power-only link budget.</p>
 </div>
-</section>
-<section id="engineering">
-<h2>Engineering approach</h2>
-<p>The available planning image is retained with its source context. This tool is separated from both the RF budget calculator and the actual wireless network deployment.</p>
-<figure>
-<a href="media/workflow.svg">
-<img loading="lazy" src="media/workflow.svg" alt="Proposed workflow — sequence and verification responsibilities">
-</a>
-<figcaption>Proposed workflow — sequence and verification responsibilities</figcaption>
-</figure>
-</section>
-<section id="analysis">
-<h2>Reading the source planning image</h2>
-<p>The image shows two antennas, a dashed direct path, buildings and trees under a wave-propagation title. It has no scale, terrain elevations, input fields or calculated clearance results. The blue wave symbols are illustrative; they do not describe the geometric Fresnel envelope. Treat this image as a concept illustration.</p>
-<h3>Proposed geometry engine</h3>
-<p>Use endpoint elevations, a sampled terrain profile, obstacle heights, frequency and a documented effective-Earth factor. Put elevations on a common reference. Calculate the direct ray and the first Fresnel radius at every path sample, including any Earth-curvature adjustment that the imported profile has not already applied.</p>
-<div class="formula">
-<code>λ = c / f</code>
-<br>
-<code>r1 = sqrt(λ × d1 × d2 / (d1 + d2))</code>
-<br>
-<code>LOS(x) = Ht + (Hr − Ht) × x / D</code>
-<br>
-<code>Earth bulge(x) ≈ x × (D − x) / (2 × k × RE)</code>
-<br>
-<code>Clearance = LOS − terrain − obstacle − Earth bulge</code>
-</div>
-<p>All lengths in these equations use metres and frequency uses Hz. A 60% first-zone clearance is an initial planning target, subject to the path, refraction and availability assumptions; it is not a guarantee of link performance. Avoid applying the curvature correction twice.</p>
-<h3>Example and source limitation</h3>
-<p>Using the RF poster’s 5.02 km path at 5.8 GHz, the first-zone radius at the midpoint is approximately 8.05 m; 60% is 4.83 m. The RF poster’s 7.15 m radius and 6.43 m required clearance do not match this scenario and target. Its 8.30 m available clearance cannot be checked without terrain and obstacle elevations.</p>
-<h3>Proposed planning display</h3>
-<p>Plot distance against elevation and show terrain, obstacles, the direct ray, Fresnel bounds and the clearance target. A critical-point table should list distance from the transmitter, obstacle elevation, available clearance and deficit. Compare alternative antenna heights or routes by recalculating the complete profile.</p>
-<h3>Verification scenarios</h3>
-<p>Check an unobstructed path, an obstacle near the midpoint, an obstacle near an endpoint, unequal ground elevations and different k factors. Reversing the endpoints with equivalent data should preserve the engineering assessment.</p>
-<p>Reference: <a href="https://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.530-18-202109-I%21%21PDF-E.pdf">ITU-R P.530: terrestrial line-of-sight path-clearance considerations</a>.</p>
-</section>
-<section id="gallery">
-<h2>Source context</h2>
-<p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p>
 </section>
 <section id="technical-walkthrough">
 <h2>Clearance is a path profile, not only a sight line</h2>
@@ -155,6 +110,39 @@
 </li>
 </ul>
 <p class="source-note">The numerical example and diagram explain calculation geometry. They are not a site survey, recovered application output or measured acceptance record.</p>
+</section>
+<section id="engineering">
+<h2>Engineering approach</h2>
+<p>The available planning image is retained with its source context. This tool is separated from both the RF budget calculator and the actual wireless network deployment.</p>
+</section>
+<section id="analysis">
+<h2>Reading the source planning image</h2>
+<p>The image shows two antennas, a dashed direct path, buildings and trees under a wave-propagation title. It has no scale, terrain elevations, input fields or calculated clearance results. The blue wave symbols are illustrative; they do not describe the geometric Fresnel envelope. Treat this image as a concept illustration.</p>
+<h3>Proposed geometry engine</h3>
+<p>Use endpoint elevations, a sampled terrain profile, obstacle heights, frequency and a documented effective-Earth factor. Put elevations on a common reference. Calculate the direct ray and the first Fresnel radius at every path sample, including any Earth-curvature adjustment that the imported profile has not already applied.</p>
+<div class="formula">
+<code>λ = c / f</code>
+<br>
+<code>r1 = sqrt(λ × d1 × d2 / (d1 + d2))</code>
+<br>
+<code>LOS(x) = Ht + (Hr − Ht) × x / D</code>
+<br>
+<code>Earth bulge(x) ≈ x × (D − x) / (2 × k × RE)</code>
+<br>
+<code>Clearance = LOS − terrain − obstacle − Earth bulge</code>
+</div>
+<p>All lengths in these equations use metres and frequency uses Hz. A 60% first-zone clearance is an initial planning target, subject to the path, refraction and availability assumptions; it is not a guarantee of link performance. Avoid applying the curvature correction twice.</p>
+<h3>Example and source limitation</h3>
+<p>Using the RF poster’s 5.02 km path at 5.8 GHz, the first-zone radius at the midpoint is approximately 8.05 m; 60% is 4.83 m. The RF poster’s 7.15 m radius and 6.43 m required clearance do not match this scenario and target. Its 8.30 m available clearance cannot be checked without terrain and obstacle elevations.</p>
+<h3>Proposed planning display</h3>
+<p>Plot distance against elevation and show terrain, obstacles, the direct ray, Fresnel bounds and the clearance target. A critical-point table should list distance from the transmitter, obstacle elevation, available clearance and deficit. Compare alternative antenna heights or routes by recalculating the complete profile.</p>
+<h3>Verification scenarios</h3>
+<p>Check an unobstructed path, an obstacle near the midpoint, an obstacle near an endpoint, unequal ground elevations and different k factors. Reversing the endpoints with equivalent data should preserve the engineering assessment.</p>
+<p>Reference: <a href="https://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.530-18-202109-I%21%21PDF-E.pdf">ITU-R P.530: terrestrial line-of-sight path-clearance considerations</a>.</p>
+</section>
+<section id="gallery">
+<h2>Source context</h2>
+<p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p>
 </section>
 <section id="sources">
 <h2>Source documentation</h2>

@@ -50,10 +50,6 @@
 </nav>
 <section id="overview">
 <h2>System overview</h2>
-<figure>
-<img src="media/architecture.svg" alt="Functional overview"/>
-<figcaption>Explanatory diagram of the documented system responsibilities.</figcaption>
-</figure>
 <div class="panel">
 <dl class="project-facts">
 <div>
@@ -75,53 +71,6 @@
 </dl>
 </div>
 </section>
-<section id="engineering">
-<h2>Engineering rationale</h2>
-<h3>Integration boundaries</h3>
-<p>Cameras, LiDAR and control units form one part of the system; network transport, databases and software interfaces form the next. A fault should be traced across those boundaries rather than attributed to the first device showing a symptom.</p>
-<h3>Commissioning and diagnosis</h3>
-<p>The documented work covers installation support, commissioning, calibration, validation and operational troubleshooting. Evidence should distinguish device health, transport availability and application behaviour. This public case study omits customer identities, site configurations and enforcement data.</p>
-<h3>What the scale means</h3>
-<p>The published 800+ figure describes systems supported across the UAE. It is not a claim that every system was independently designed or deployed by one engineer.</p>
-<figure>
-<img src="media/workflow.svg" alt="Engineering workflow"/>
-<figcaption>Explanatory workflow; read left to right across each row.</figcaption>
-</figure>
-</section>
-<section id="evidence">
-<h2>Evidence and validation</h2>
-<p>Review the documented implementation against these validation topics; measured results are shown only where provided by the source.</p>
-<ul>
-<li>Device availability and sensor validity</li>
-<li>Field-to-backend interface trace</li>
-<li>Calibration/commissioning record</li>
-<li>Fault reproduction and post-fix verification</li>
-</ul>
-</section>
-<section id="gallery">
-<h2>Visual documentation</h2>
-<p>These repository diagrams explain the documented implementation and integration boundaries. They are explanatory documentation; physical-build photographs and raw operational results are not published here.</p>
-<div class="grid">
-<figure>
-<a href="media/its-diagnostic-workflow.svg">
-<img loading="lazy" src="media/its-diagnostic-workflow.svg" alt="Commissioning and fault isolation — explanatory workflow.">
-</a>
-<figcaption>Commissioning and fault isolation — explanatory workflow.</figcaption>
-</figure>
-</div>
-</section>
-<h2>Full documentation and sources</h2>
-<ul>
-<li>
-<a href="https://github.com/Mahyoub88/its-systems-integration">View repository</a>
-</li>
-<li>
-<a href="https://github.com/Mahyoub88/its-systems-integration/blob/main/docs/engineering-guide.md">Illustrated engineering guide and complete gallery</a>
-</li>
-<li>
-<a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project descriptions and media</a>
-</li>
-</ul>
 <section id="technical-walkthrough">
 <h2>Tracing an enforcement event across system boundaries</h2>
 <p>The documented responsibility spans roadside cameras, LiDAR, sensors and control units, transport connectivity, databases and software interfaces. The reported 800+ systems describes the support scope across the UAE. It does not represent a count of systems designed or installed by one engineer. This case study focuses on integration and diagnosis, with customer and enforcement records excluded from the public material.</p>
@@ -178,6 +127,49 @@
 </ul>
 <p class="source-note">No customer records, device configurations or new calibration results are published. The review scenarios below describe how to assess the documented responsibility; they are not additional completed test claims.</p>
 </section>
+<section id="engineering">
+<h2>Engineering rationale</h2>
+<h3>Integration boundaries</h3>
+<p>Cameras, LiDAR and control units form one part of the system; network transport, databases and software interfaces form the next. A fault should be traced across those boundaries rather than attributed to the first device showing a symptom.</p>
+<h3>Commissioning and diagnosis</h3>
+<p>The documented work covers installation support, commissioning, calibration, validation and operational troubleshooting. Evidence should distinguish device health, transport availability and application behaviour. This public case study omits customer identities, site configurations and enforcement data.</p>
+<h3>What the scale means</h3>
+<p>The published 800+ figure describes systems supported across the UAE. It is not a claim that every system was independently designed or deployed by one engineer.</p>
+</section>
+<section id="evidence">
+<h2>Evidence and validation</h2>
+<p>Review the documented implementation against these validation topics; measured results are shown only where provided by the source.</p>
+<ul>
+<li>Device availability and sensor validity</li>
+<li>Field-to-backend interface trace</li>
+<li>Calibration/commissioning record</li>
+<li>Fault reproduction and post-fix verification</li>
+</ul>
+</section>
+<section id="gallery">
+<h2>Visual documentation</h2>
+<p>These repository diagrams explain the documented implementation and integration boundaries. They are explanatory documentation; physical-build photographs and raw operational results are not published here.</p>
+<div class="grid">
+<figure>
+<a href="media/its-diagnostic-workflow.svg">
+<img loading="lazy" src="media/its-diagnostic-workflow.svg" alt="Commissioning and fault isolation — explanatory workflow.">
+</a>
+<figcaption>Commissioning and fault isolation — explanatory workflow.</figcaption>
+</figure>
+</div>
+</section>
+<h2>Full documentation and sources</h2>
+<ul>
+<li>
+<a href="https://github.com/Mahyoub88/its-systems-integration">View repository</a>
+</li>
+<li>
+<a href="https://github.com/Mahyoub88/its-systems-integration/blob/main/docs/engineering-guide.md">Illustrated engineering guide and complete gallery</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project descriptions and media</a>
+</li>
+</ul>
 <nav class="project-pagination" aria-label="More case studies">
 <a href="/projects/proj-vtid2/">Efficient Neural Network Architectures for Vehicle Type Classification →</a>
 </nav>

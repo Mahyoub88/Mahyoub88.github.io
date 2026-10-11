@@ -51,42 +51,10 @@
 </nav>
 <section id="overview">
 <h2>System architecture</h2>
-<figure>
-<a href="media/architecture.svg">
-<img loading="lazy" src="media/architecture.svg" alt="Proposed architecture — responsibilities inferred from documented scope">
-</a>
-<figcaption>Proposed architecture — responsibilities inferred from documented scope</figcaption>
-</figure>
 <div class="summary">
 <h3>Implementation scope</h3>
 <p>The source interface shows device records, repair details and warranty/calibration fields. These records connect the equipment identity with the work performed and the documents needed for follow-up.</p>
 </div>
-</section>
-<section id="engineering">
-<h2>Engineering approach</h2>
-<p>Search and reporting make service history usable by engineers. This project has its own interface and workflow, distinct from the live monitoring console and RF calculation tools.</p>
-<figure>
-<a href="media/workflow.svg">
-<img loading="lazy" src="media/workflow.svg" alt="Proposed workflow — sequence and verification responsibilities">
-</a>
-<figcaption>Proposed workflow — sequence and verification responsibilities</figcaption>
-</figure>
-</section>
-<section id="analysis">
-<h2>Reading the original interface</h2>
-<p>The screenshot shows device, article and serial identifiers; site and service-call details; receipt and repair dates; project, customer and region; warranty and calibration validity; return reasons; corrective-action summary; repair type and personnel; forwarding fields; status and a customer report. New, modify, save, delete and search controls sit above a record grid.</p>
-<p>The poster names VB.NET, WinForms, ADO.NET, Crystal Reports and SQL Server / Access. It does not establish which database engine the published application actually uses.</p>
-<h3>Proposed data design</h3>
-<p>Keep device identity separate from each service visit. Model Customer → Project → Site → Device; link each Device to many ServiceCase records. RepairAction, PartReplacement and Document belong to a case. Warranty and Calibration retain historical records rather than overwriting prior validity dates.</p>
-<h3>Integrity and workflow</h3>
-<p>Use unique case identifiers, controlled status transitions and date checks so a repair cannot precede receipt. Save a case and its related actions atomically. Use parameterized database operations, a change audit and conflict detection for concurrent edits. Archive records that have issued reports rather than silently removing their history.</p>
-<p>The workflow is receipt → fault documentation → diagnosis → repair → verification / calibration → reviewed report → delivery and closure. Failed verification returns to diagnosis. Internal engineering notes and the customer-facing report are separate records.</p>
-<h3>Interface and verification</h3>
-<p>A proposed layout uses search and the record list beside tabs for device identity, service visit, repairs / parts, warranty / calibration and documents. Verify multiple visits for one device, calibration renewal without loss of history, concurrent editing and failed attachment storage.</p>
-</section>
-<section id="gallery">
-<h2>Source context</h2>
-<p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p>
 </section>
 <section id="technical-walkthrough">
 <h2>Connecting a device to its complete service history</h2>
@@ -146,6 +114,26 @@
 </li>
 </ul>
 <p class="source-note">The workflow and relationships are a proposed reconstruction from the interface. They are not a recovered schema or a claim that every validation rule is implemented.</p>
+</section>
+<section id="engineering">
+<h2>Engineering approach</h2>
+<p>Search and reporting make service history usable by engineers. This project has its own interface and workflow, distinct from the live monitoring console and RF calculation tools.</p>
+</section>
+<section id="analysis">
+<h2>Reading the original interface</h2>
+<p>The screenshot shows device, article and serial identifiers; site and service-call details; receipt and repair dates; project, customer and region; warranty and calibration validity; return reasons; corrective-action summary; repair type and personnel; forwarding fields; status and a customer report. New, modify, save, delete and search controls sit above a record grid.</p>
+<p>The poster names VB.NET, WinForms, ADO.NET, Crystal Reports and SQL Server / Access. It does not establish which database engine the published application actually uses.</p>
+<h3>Proposed data design</h3>
+<p>Keep device identity separate from each service visit. Model Customer → Project → Site → Device; link each Device to many ServiceCase records. RepairAction, PartReplacement and Document belong to a case. Warranty and Calibration retain historical records rather than overwriting prior validity dates.</p>
+<h3>Integrity and workflow</h3>
+<p>Use unique case identifiers, controlled status transitions and date checks so a repair cannot precede receipt. Save a case and its related actions atomically. Use parameterized database operations, a change audit and conflict detection for concurrent edits. Archive records that have issued reports rather than silently removing their history.</p>
+<p>The workflow is receipt → fault documentation → diagnosis → repair → verification / calibration → reviewed report → delivery and closure. Failed verification returns to diagnosis. Internal engineering notes and the customer-facing report are separate records.</p>
+<h3>Interface and verification</h3>
+<p>A proposed layout uses search and the record list beside tabs for device identity, service visit, repairs / parts, warranty / calibration and documents. Verify multiple visits for one device, calibration renewal without loss of history, concurrent editing and failed attachment storage.</p>
+</section>
+<section id="gallery">
+<h2>Source context</h2>
+<p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p>
 </section>
 <section id="sources">
 <h2>Source documentation</h2>
