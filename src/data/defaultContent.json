@@ -1131,13 +1131,13 @@
         }
       ],
       "accent": "blue",
-      "image": "/images/project-covers/composed-v1/proj-wireless-link-planning.svg",
-      "imageAlt": "Wireless link planning: sector coverage, line of sight with Fresnel zone clearance, and link budget",
-      "imageCaption": "Composed engineering illustration",
-      "coverImage": "/images/project-covers/composed-v1/proj-wireless-link-planning.svg",
-      "coverAlt": "Engineering illustration of wireless link planning: sector coverage, line of sight, Fresnel zone clearance and the link-budget relation Pr = Pt + Gt + Gr − L",
-      "coverCaption": "Composed engineering illustration",
-      "coverLightImage": "/images/project-covers/composed-v1/proj-wireless-link-planning-light.svg"
+      "image": "/images/project-covers/collage-v1/proj-wireless-link-planning.webp",
+      "imageAlt": "Combined project illustration: wireless coverage planning, Fresnel and line of sight, and RF link budget",
+      "imageCaption": "AI-generated project cover illustration",
+      "coverImage": "/images/project-covers/collage-v1/proj-wireless-link-planning.webp",
+      "coverAlt": "Combined project illustration: wireless coverage planning, Fresnel and line of sight, and RF link budget",
+      "coverCaption": "AI-generated project cover illustration",
+      "coverLightImage": "/images/project-covers/collage-v1/proj-wireless-link-planning-light.webp"
     },
     {
       "id": "proj-enterprise-network",
