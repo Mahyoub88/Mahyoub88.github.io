@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Wireless Link Planning &amp; RF Engineering | Mohammed Mahyoub</title>
-<meta name="description" content="Planned wireless coverage and point-to-point links end to end on Ubiquiti equipment, with VB.NET calculators for Fresnel-zone clearance and RF link budget.">
+<meta name="description" content="Planned a two-hop wireless backhaul bringing internet from Atma to Al-Sharq in Dhamar through a mountain-top relay, with a seven-zone local distribution plan, VB.NET planning calculators and a terrain and link simulation.">
 <link rel="canonical" href="https://mahyoub88.github.io/projects/proj-wireless-link-planning/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Wireless Link Planning &amp; RF Engineering">
-<meta property="og:description" content="Planned wireless coverage and point-to-point links end to end on Ubiquiti equipment, with VB.NET calculators for Fresnel-zone clearance and RF link budget.">
+<meta property="og:description" content="Planned a two-hop wireless backhaul bringing internet from Atma to Al-Sharq in Dhamar through a mountain-top relay, with a seven-zone local distribution plan, VB.NET planning calculators and a terrain and link simulation.">
 <meta property="og:url" content="https://mahyoub88.github.io/projects/proj-wireless-link-planning/">
 <meta property="og:image" content="https://mahyoub88.github.io/images/project-covers/collage-v1/proj-wireless-link-planning.webp">
 <meta name="twitter:card" content="summary_large_image">
@@ -26,17 +26,17 @@
 <main id="main">
 <p class="eyebrow">Network Engineering · RF Planning</p>
 <h1>Wireless Link Planning &amp; RF Engineering</h1>
-<p class="lede">Planned wireless coverage and point-to-point links end to end on Ubiquiti equipment, with VB.NET calculators for Fresnel-zone clearance and RF link budget.</p>
+<p class="lede">Planned a two-hop wireless backhaul bringing internet from Atma to Al-Sharq in Dhamar through a mountain-top relay, with a seven-zone local distribution plan, VB.NET planning calculators and a terrain and link simulation.</p>
 <span class="badge">Implemented Project</span>
 <figure class="hero-media">
-<a href="/images/project-covers/collage-v1/proj-wireless-link-planning.webp">
-<img src="/images/project-covers/collage-v1/proj-wireless-link-planning.webp" alt="Combined project illustration: wireless coverage planning, Fresnel and line of sight, and RF link budget" fetchpriority="high">
+<a href="/projects/proj-wireless-link-planning/media/atma-al-sharq-osm.webp">
+<img src="/projects/proj-wireless-link-planning/media/atma-al-sharq-osm.webp" alt="OpenStreetMap map of the route from Atma to the MTN tower site and on to Al-Sharq city" fetchpriority="high">
 </a>
-<figcaption>AI-generated project cover illustration · Open image for full detail.</figcaption>
+<figcaption>Route map · © OpenStreetMap contributors · Open image for full detail.</figcaption>
 </figure>
 <div class="tags">
 <span>Ubiquiti</span>
-<span>RF Planning</span>
+<span>Backhaul</span>
 <span>Point-to-Point</span>
 <span>Fresnel Zone</span>
 <span>Link Budget</span>
@@ -57,7 +57,7 @@
 <h2>Overview</h2>
 <div class="summary">
 <h3>Implementation scope</h3>
-<p>A wireless link is only as good as its weakest planning assumption. This study treats coverage, path geometry and radio budget as one engineering workflow: where service is needed, whether the path between sites stays clear, and whether the receiver is left with usable margin. Wireless coverage and point-to-point planning were carried out on Ubiquiti equipment, supported by two VB.NET engineering calculators for Fresnel-zone clearance and RF link budget.</p>
+<p>A wireless link is only as good as its weakest planning assumption. This study treats coverage, path geometry and radio budget as one engineering workflow: where service is needed, whether the path between sites stays clear, and whether the receiver is left with usable margin. The worked case is bringing internet from Atma to Al-Sharq in Dhamar Governorate through a mountain-top relay, planned on Ubiquiti equipment and supported by two VB.NET engineering calculators for Fresnel-zone clearance and RF link budget.</p>
 </div>
 <p>The three parts were originally documented separately. They are presented together here because a real link decision needs all of them: a good link budget cannot rescue an obstructed path, and a clear path does not prove there is enough signal at the receiver. Each part below states its inputs, its method and the evidence a reviewer should expect to inspect.</p>
 </section>
@@ -409,12 +409,6 @@
 </div>
 <h3>The route on the ground</h3>
 <p>The images below show the real terrain along the route, rendered from public elevation data and OpenStreetMap. They are not photographs of the installation. The mountain-top relay is the highest point of the route and Al-Sharq lies far below it.</p>
-<figure>
-<a href="media/atma-al-sharq-osm.webp">
-<img loading="lazy" src="media/atma-al-sharq-osm.webp" alt="OpenStreetMap map showing the route from Atma to the MTN tower site and on to Al-Sharq city">
-</a>
-<figcaption>The two hops on an OpenStreetMap basemap. Map data © OpenStreetMap contributors, available under the Open Database Licence.</figcaption>
-</figure>
 <figure>
 <a href="media/atma-al-sharq-3d.webp">
 <img loading="lazy" src="media/atma-al-sharq-3d.webp" alt="Oblique three-dimensional terrain view from the south with Atma, the MTN tower site and Al-Sharq marked">
