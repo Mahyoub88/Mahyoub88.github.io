@@ -1,6 +1,6 @@
 {
   "source": "src/data/defaultContent.json",
-  "projectCount": 19,
+  "projectCount": 17,
   "projects": [
     {
       "id": "proj-its-support",
@@ -199,32 +199,18 @@
       "coverCaption": "AI-generated project cover illustration"
     },
     {
-      "id": "proj-rf-link-budget",
-      "title": "RF Link Budget & Propagation Analysis Engine",
-      "url": "https://mahyoub88.github.io/projects/proj-rf-link-budget/",
-      "repository": "https://github.com/Mahyoub88/dotnet-monitoring-apps",
+      "id": "proj-wireless-link-planning",
+      "title": "Wireless Link Planning & RF Engineering",
+      "url": "https://mahyoub88.github.io/projects/proj-wireless-link-planning/",
+      "repository": "https://github.com/Mahyoub88/rf-mpls-network-design",
       "status": "Implemented Project",
-      "role": "The tool relates transmit power, antenna gains and propagation loss to the receive level used in link assessment. Its screenshot belongs to a standalone calculator rather than the monitoring application.",
-      "image": "/projects/proj-rf-link-budget/media/01-rf-tool.jpg",
-      "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/themed-v4/proj-rf-link-budget.webp",
-      "coverLightImage": "/images/project-covers/engineering-v3/proj-rf-link-budget.webp",
-      "coverAlt": "Engineering illustration of rf link budget: transmit power, antenna gain, path loss, receive level",
-      "coverCaption": "AI-generated project cover illustration"
-    },
-    {
-      "id": "proj-fresnel-planning",
-      "title": "Line-of-Sight & Fresnel Zone Wireless Planning Tool",
-      "url": "https://mahyoub88.github.io/projects/proj-fresnel-planning/",
-      "repository": "https://github.com/Mahyoub88/dotnet-monitoring-apps",
-      "status": "Implemented Project",
-      "role": "Line-of-sight establishes the direct path between antennas. Fresnel analysis examines clearance around that path, giving the planner a different view from a power-only link budget.",
-      "image": "/projects/proj-fresnel-planning/media/03-fresnel-tool.jpg",
-      "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/themed-v4/proj-fresnel-planning.webp",
-      "coverLightImage": "/images/project-covers/engineering-v3/proj-fresnel-planning.webp",
-      "coverAlt": "Engineering illustration of fresnel & line of sight: antenna a, line of sight, fresnel zone, clearance",
-      "coverCaption": "AI-generated project cover illustration"
+      "role": "One planning workflow in three checks: coverage and antenna alignment, line-of-sight and Fresnel clearance, and link budget against receiver sensitivity. Each check states its inputs and assumptions; predictions are kept separate from field measurements.",
+      "image": "/images/project-covers/composed-v1/proj-wireless-link-planning.svg",
+      "imageCaption": "Composed engineering illustration",
+      "coverImage": "/images/project-covers/composed-v1/proj-wireless-link-planning.svg",
+      "coverLightImage": "/images/project-covers/composed-v1/proj-wireless-link-planning-light.svg",
+      "coverAlt": "Engineering illustration of wireless link planning: sector coverage, line of sight, Fresnel zone clearance and the link-budget relation Pr = Pt + Gt + Gr − L",
+      "coverCaption": "Composed engineering illustration"
     },
     {
       "id": "proj-enterprise-network",
@@ -238,20 +224,6 @@
       "coverImage": "/images/project-covers/themed-v4/proj-enterprise-network.webp",
       "coverLightImage": "/images/project-covers/engineering-v3/proj-enterprise-network.webp",
       "coverAlt": "Engineering illustration of enterprise network: vpn / edge, core switch, lan / wlan, cctv",
-      "coverCaption": "AI-generated project cover illustration"
-    },
-    {
-      "id": "proj-wireless-coverage",
-      "title": "Wireless Coverage & Point-to-Point Network Planning",
-      "url": "https://mahyoub88.github.io/projects/proj-wireless-coverage/",
-      "repository": "https://github.com/Mahyoub88/rf-mpls-network-design",
-      "status": "Implemented Project",
-      "role": "Coverage describes where access is available; point-to-point planning describes the transport between sites. Antenna placement and alignment influence both the proposed link and its installation.",
-      "image": "/projects/proj-wireless-coverage/media/02-network-coverage.jpg",
-      "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/themed-v4/proj-wireless-coverage.webp",
-      "coverLightImage": "/images/project-covers/engineering-v3/proj-wireless-coverage.webp",
-      "coverAlt": "Engineering illustration of wireless coverage planning: coverage, antenna alignment, point-to-point, site plan",
       "coverCaption": "AI-generated project cover illustration"
     },
     {
@@ -274,16 +246,14 @@
       "id": "proj-monitoring-apps",
       "projectIds": [
         "proj-monitoring-console",
-        "proj-service-operations",
-        "proj-rf-link-budget",
-        "proj-fresnel-planning"
+        "proj-service-operations"
       ]
     },
     {
       "id": "proj-rf-network",
       "projectIds": [
         "proj-enterprise-network",
-        "proj-wireless-coverage",
+        "proj-wireless-link-planning",
         "proj-mpls-backbone"
       ]
     }

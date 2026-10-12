@@ -16,11 +16,9 @@ Generated from `src/data/defaultContent.json` using `npm run sync:projects`. The
 12. [Industrial Automation & PLC-Based Control Systems](https://mahyoub88.github.io/projects/proj-plc-control/) — [View repository](https://github.com/Mahyoub88/industrial-automation-plc)
 13. [Monitoring & Diagnostics Console — VB.NET](https://mahyoub88.github.io/projects/proj-monitoring-console/) — [View repository](https://github.com/Mahyoub88/dotnet-monitoring-apps)
 14. [Service Operations & Technical Documentation Management System](https://mahyoub88.github.io/projects/proj-service-operations/) — [View repository](https://github.com/Mahyoub88/dotnet-monitoring-apps)
-15. [RF Link Budget & Propagation Analysis Engine](https://mahyoub88.github.io/projects/proj-rf-link-budget/) — [View repository](https://github.com/Mahyoub88/dotnet-monitoring-apps)
-16. [Line-of-Sight & Fresnel Zone Wireless Planning Tool](https://mahyoub88.github.io/projects/proj-fresnel-planning/) — [View repository](https://github.com/Mahyoub88/dotnet-monitoring-apps)
-17. [Enterprise Wireless & Network Infrastructure Architecture](https://mahyoub88.github.io/projects/proj-enterprise-network/) — [View repository](https://github.com/Mahyoub88/rf-mpls-network-design)
-18. [Wireless Coverage & Point-to-Point Network Planning](https://mahyoub88.github.io/projects/proj-wireless-coverage/) — [View repository](https://github.com/Mahyoub88/rf-mpls-network-design)
-19. [Network Infrastructure Design — MPLS Backbone](https://mahyoub88.github.io/projects/proj-mpls-backbone/) — [View repository](https://github.com/Mahyoub88/rf-mpls-network-design)
+15. [Wireless Link Planning & RF Engineering](https://mahyoub88.github.io/projects/proj-wireless-link-planning/) — [View repository](https://github.com/Mahyoub88/rf-mpls-network-design)
+16. [Enterprise Wireless & Network Infrastructure Architecture](https://mahyoub88.github.io/projects/proj-enterprise-network/) — [View repository](https://github.com/Mahyoub88/rf-mpls-network-design)
+17. [Network Infrastructure Design — MPLS Backbone](https://mahyoub88.github.io/projects/proj-mpls-backbone/) — [View repository](https://github.com/Mahyoub88/rf-mpls-network-design)
 
 ## Collections
 

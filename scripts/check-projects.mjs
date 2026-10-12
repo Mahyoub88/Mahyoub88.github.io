@@ -41,7 +41,7 @@ for(const p of content.projects){
  const title=decode(s.match(/<h1>([\s\S]*?)<\/h1>/)?.[1]??'');
  if(title!==p.title)errors.push(`${p.id}: title differs from canonical content`);
  if(!p.imageCaption)errors.push(`${p.id}: media provenance label missing`);
- if(!p.coverImage || !p.coverAlt || p.coverCaption!=='AI-generated project cover illustration')errors.push(`${p.id}: generated cover metadata missing`);
+ if(!p.coverImage || !p.coverAlt || !['AI-generated project cover illustration','Composed engineering illustration'].includes(p.coverCaption))errors.push(`${p.id}: generated cover metadata missing`);
  if(p.coverImage && !fs.existsSync(path.join(publicRoot,p.coverImage)))errors.push(`${p.id}: generated cover file missing`);
  if(!p.coverLightImage || !fs.existsSync(path.join(publicRoot,p.coverLightImage)))errors.push(`${p.id}: light-theme cover missing`);
  if(p.links.some(l=>l.href.includes('VTID2-Efficient-Vehicle-Type-Classification')))errors.push(`${p.id}: private assessment repository exposed`);

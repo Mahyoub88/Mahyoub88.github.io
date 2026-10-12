@@ -89,7 +89,7 @@ The poster names FSPL, Hata, Okumura and ITU-R P.1546. Naming models does not es
 
 Separate calculations from WinForms button events. Validate inputs, normalize units, select an applicable model, calculate path loss and received power, evaluate receiver requirements, then report results with the original assumptions and model version.
 
-![RF calculation architecture](../proj-rf-link-budget/media/architecture.svg)
+![RF calculation architecture](../proj-wireless-link-planning/media/link-budget-architecture.svg)
 
 Keep power in dBm, gains in dBi and losses and margins in dB. Use explicit variable names or unit-aware values. Convert units at clear boundaries and avoid mixing Hz with MHz or metres with kilometres.
 
@@ -161,7 +161,7 @@ Use endpoint antenna elevations on a common vertical reference, sampled terrain,
 
 Use metres for every length and Hz for frequency. Apply the curvature correction only when the imported profile has not already incorporated it. State the vertical reference and curvature method to prevent double correction. Review other k assumptions where the planning requirement calls for them.
 
-![Fresnel planning workflow](../proj-fresnel-planning/media/workflow.svg)
+![Fresnel planning workflow](../proj-wireless-link-planning/media/fresnel-workflow.svg)
 
 A 60% first-zone clearance is an initial planning criterion, subject to path, refraction and availability assumptions. It does not guarantee every link’s performance. Reference: [ITU-R P.530, line-of-sight path-clearance considerations](https://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.530-18-202109-I%21%21PDF-E.pdf).
 
@@ -206,5 +206,5 @@ The image analysis, proposed architecture and data models, workflow diagrams and
 - [Application collection](https://mahyoub88.github.io/projects/proj-monitoring-apps/)
 - [Monitoring console](https://mahyoub88.github.io/projects/proj-monitoring-console/)
 - [Service operations](https://mahyoub88.github.io/projects/proj-service-operations/)
-- [RF link budget](https://mahyoub88.github.io/projects/proj-rf-link-budget/)
-- [Fresnel planning](https://mahyoub88.github.io/projects/proj-fresnel-planning/)
+- [RF link budget](https://mahyoub88.github.io/projects/proj-wireless-link-planning/#link-budget)
+- [Fresnel planning](https://mahyoub88.github.io/projects/proj-wireless-link-planning/#fresnel-clearance)
