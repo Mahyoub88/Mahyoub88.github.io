@@ -49,6 +49,7 @@
 <a href="#fresnel-clearance">2 · Path clearance</a>
 <a href="#link-budget">3 · Link budget</a>
 <a href="#integrated-review">Integrated review</a>
+<a href="#atma-al-sharq-simulation">Atma → Al-Sharq case</a>
 <a href="#verification-context">Verification</a>
 <a href="#sources">Sources</a>
 </nav>
@@ -370,6 +371,172 @@
 </table>
 </div>
 <p>A passing link budget does not remove a clearance deficit, and a clear path does not prove margin. The decision record therefore lists all three results with their assumptions, then hands over to alignment and field validation, where measured values are recorded separately from these predictions.</p>
+</section>
+<section id="atma-al-sharq-simulation">
+<h2>Case: bringing internet from Atma to Al-Sharq, Dhamar</h2>
+<div class="summary">
+<h3>What is documented and what is simulated</h3>
+<p>The equipment, distances, distribution plan and costs below come from the author’s own planning document for this network. The terrain and link-budget figures are a <strong>planning simulation</strong> run on public elevation data with typical radio values for the named equipment. They are not as-built measurements: no RSSI, throughput or uptime records are included.</p>
+</div>
+<h3>Backhaul design: two hops through the MTN tower site</h3>
+<p>Atma and Al-Sharq are separated by mountains, so the plan does not try a single long link. It uses two hops through the elevated MTN tower area, with a different radio class on each hop. Link planning used the Ubiquiti airLink tool.</p>
+<div class="table-scroll">
+<table>
+<caption>Backhaul as documented in the planning document</caption>
+<thead>
+<tr>
+<th scope="col">Hop</th>
+<th scope="col">Estimated distance</th>
+<th scope="col">Equipment</th>
+<th scope="col">Quantity and cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Atma city centre → MTN tower area</td>
+<td>8.5 km</td>
+<td>PowerBeam M5 400</td>
+<td>One link, $180</td>
+</tr>
+<tr>
+<td>MTN tower area → Al-Sharq city</td>
+<td>16.5 km</td>
+<td>Rocket Dish M5, 34 dBi</td>
+<td>One link, $1,200</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Terrain check (simulated)</h3>
+<p>Elevations come from the public Copernicus 90 m model along each hop (61 samples), with effective-Earth factor k = 4/3, a 5 m allowance for trees and buildings, and the same 60% first-Fresnel screen used above. Site coordinates are approximate to about 1 km in the repository and are not survey positions.</p>
+<div class="table-scroll">
+<table>
+<caption>Terrain along the two hops</caption>
+<thead>
+<tr>
+<th scope="col">Item</th>
+<th scope="col">Hop 1: Atma → MTN site</th>
+<th scope="col">Hop 2: MTN site → Al-Sharq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Computed path length</td>
+<td>8.3 km</td>
+<td>15.6 km</td>
+</tr>
+<tr>
+<td>Ground elevation, start / end</td>
+<td>2066 m / 2680 m</td>
+<td>2680 m / 1283 m</td>
+</tr>
+<tr>
+<td>Vertical angle along the path</td>
+<td>about +4.2° (uphill)</td>
+<td>about −5.1° (downhill)</td>
+</tr>
+<tr>
+<td>Mast height for 60% / 100% Fresnel clearance</td>
+<td>0 m / 0 m</td>
+<td>1 m / 3 m</td>
+</tr>
+<tr>
+<td>Tightest clearance with 3 m masts</td>
+<td>18 m, 6.9× the first Fresnel radius</td>
+<td>4 m, 1.2× the first Fresnel radius</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The result explains the design. The tower site stands about 600 m above Atma and about 1,400 m above Al-Sharq, so both hops have a clear sight line over the intervening ridges, and the relay site works as a mountain-top hub. The steep vertical angles make alignment and tilt, not mast height, the practical installation concern. The DEM cannot resolve individual structures, so the small clearance margin on hop 2 should be checked on site.</p>
+<figure>
+<a href="media/atma-al-sharq-h1-profile.svg">
+<img loading="lazy" src="media/atma-al-sharq-h1-profile.svg" alt="Terrain profile from Atma city centre to the MTN tower site with line of sight and first Fresnel zone">
+</a>
+<figcaption>Hop 1, simulated from public elevation data. Not a survey or field measurement.</figcaption>
+</figure>
+<figure>
+<a href="media/atma-al-sharq-h2-profile.svg">
+<img loading="lazy" src="media/atma-al-sharq-h2-profile.svg" alt="Terrain profile from the MTN tower site down to Al-Sharq city with line of sight and first Fresnel zone">
+</a>
+<figcaption>Hop 2, simulated from public elevation data. Not a survey or field measurement.</figcaption>
+</figure>
+<h3>Link budget (simulated)</h3>
+<p>Assumed values at 5.8 GHz: 25 dBm and 25 dBi for the PowerBeam pair, 27 dBm and 34 dBi for the Rocket dish pair, 0.5 dB cable loss per end and 2 dB other losses. Sensitivity is taken as −96 dBm for the lowest rate and −77 dBm for a high rate. These are typical class figures, not recovered settings or datasheet quotations.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Quantity</th>
+<th scope="col">Hop 1 (8.3 km)</th>
+<th scope="col">Hop 2 (15.6 km)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Free-space path loss</td>
+<td>126.1 dB</td>
+<td>131.5 dB</td>
+</tr>
+<tr>
+<td>Received power</td>
+<td>−54.1 dBm</td>
+<td>−39.5 dBm</td>
+</tr>
+<tr>
+<td>Margin at lowest-rate sensitivity</td>
+<td>41.9 dB</td>
+<td>56.5 dB</td>
+</tr>
+<tr>
+<td>Margin at high-rate sensitivity</td>
+<td>22.9 dB</td>
+<td>37.5 dB</td>
+</tr>
+<tr>
+<td>High-rate margin after a 10 dB fade allowance</td>
+<td>12.9 dB</td>
+<td>27.5 dB</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>On paper, both hops carry comfortable margin. The 34 dBi dish on the longer hop leaves more reserve than the smaller dish on the shorter one, which fits the choice of equipment in the plan. Free-space loss is the only propagation term modelled: no rain, multipath or interference is included, and real throughput also depends on channel width, noise and traffic.</p>
+<h3>Distribution plan inside Al-Sharq</h3>
+<p>The distribution plan divides the city into numbered zones on an aerial map, with point-to-point distances of roughly 45 to 150 m between points. Seven zones are planned, each with an estimated broadcast range of 500 m. The equipment listed per zone is:</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Zone</th>
+<th scope="col">Equipment listed</th>
+<th scope="col">Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2 × NanoStation M2 11 dBi and 1 × 15 dBi 120° M5 sector</td>
+<td>$430</td>
+</tr>
+<tr>
+<td>4, 6, 12, 14</td>
+<td>1 × PowerBeam M5 400 and 2 × NanoStation M2 11 dBi, per zone</td>
+<td>$250 each</td>
+</tr>
+<tr>
+<td>10, 13</td>
+<td>1 × PowerBeam M5 400 and 3 × NanoStation M2 11 dBi, per zone</td>
+<td>$330 each</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The core and distribution list includes a MikroTik RB AH 1100 for distribution ($350), an RB 750 for combining lines ($70), Netgear modems per internet line ($45 each), network cables, access points, switches, mounts, waterproofing and RJ45 connectors. The remote site list also names solar panels, batteries, a charge regulator and panel mounts. Prices are in US dollars and local currency; the quantities for some power items are not stated.</p>
+<p>The listed radio equipment totals about $3,890: backhaul $1,380, zone equipment $2,090 and core routers $420. This is the planned budget, not a final as-built cost.</p>
+<h3>What field data would add</h3>
+<p>To turn the plan and simulation into a verified record, add measured signal level and noise on each hop, the negotiated rate and iperf3 throughput in both directions, antenna tilt and alignment records, uptime over a stated period, and photographs of the installed sites. Prediction and measurement stay in separate tables.</p>
+<p>The script, terrain profiles and numeric results are in the repository: <a href="https://github.com/Mahyoub88/Mahyoub88.github.io/tree/main/docs/simulations/atma-al-sharq">docs/simulations/atma-al-sharq</a>.</p>
 </section>
 <section id="engineering">
 <h2>Engineering approach</h2>

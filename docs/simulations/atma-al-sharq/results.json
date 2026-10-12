@@ -1,0 +1,114 @@
+{
+  "assumptions": {
+    "frequency_mhz": 5800,
+    "k_factor": 1.3333333333333333,
+    "clutter_allowance_m": 5,
+    "cable_loss_db_per_end": 0.5,
+    "other_loss_db": 2.0,
+    "sensitivity_low_rate_dbm": -96,
+    "sensitivity_high_rate_dbm": -77,
+    "required_fade_margin_db": 10,
+    "H1": {
+      "equipment": "PowerBeam M5 400 pair",
+      "gain_dbi": 25,
+      "tx_dbm": 25
+    },
+    "H2": {
+      "equipment": "Rocket M5 with 34 dBi dish pair",
+      "gain_dbi": 34,
+      "tx_dbm": 27
+    }
+  },
+  "hops": {
+    "H1": {
+      "from": "Atma centre",
+      "to": "MTN tower site",
+      "distance_km": 8.277307634730152,
+      "elev_from_m": 2066.0,
+      "elev_to_m": 2680.0,
+      "max_terrain_m": 2680.0,
+      "required_mast_m": {
+        "60%": 0,
+        "100%": 0
+      },
+      "by_mast": {
+        "3": {
+          "ratio": 6.860777230708554,
+          "at_km": 0.13795512724550252,
+          "clearance_m": 18.16724095708514,
+          "f1_m": 2.6479858398213727
+        },
+        "6": {
+          "ratio": 7.993713802681452,
+          "at_km": 0.13795512724550252,
+          "clearance_m": 21.16724095708514,
+          "f1_m": 2.6479858398213727
+        },
+        "10": {
+          "ratio": 9.504295898645315,
+          "at_km": 0.13795512724550252,
+          "clearance_m": 25.16724095708514,
+          "f1_m": 2.6479858398213727
+        },
+        "20": {
+          "ratio": 11.657395167127756,
+          "at_km": 3.035012799401056,
+          "clearance_m": 116.19683796819481,
+          "f1_m": 9.96765025997007
+        }
+      },
+      "budget": {
+        "fspl_db": 126.06634180133923,
+        "rx_dbm": -54.066341801339235,
+        "margin_low_rate_db": 41.933658198660765,
+        "margin_high_rate_db": 22.933658198660765,
+        "high_rate_after_fade_db": 12.933658198660765
+      }
+    },
+    "H2": {
+      "from": "MTN tower site",
+      "to": "Al-Sharq city",
+      "distance_km": 15.555797844959953,
+      "elev_from_m": 2680.0,
+      "elev_to_m": 1283.0,
+      "max_terrain_m": 2680.0,
+      "required_mast_m": {
+        "60%": 1,
+        "100%": 3
+      },
+      "by_mast": {
+        "3": {
+          "ratio": 1.23502103220522,
+          "at_km": 0.2592632974159992,
+          "clearance_m": 4.483236083604879,
+          "f1_m": 3.6300888541142777
+        },
+        "6": {
+          "ratio": 2.061447084173577,
+          "at_km": 0.2592632974159992,
+          "clearance_m": 7.483236083604879,
+          "f1_m": 3.6300888541142777
+        },
+        "10": {
+          "ratio": 3.163348486798053,
+          "at_km": 0.2592632974159992,
+          "clearance_m": 11.48323608360488,
+          "f1_m": 3.6300888541142777
+        },
+        "20": {
+          "ratio": 5.918101993359244,
+          "at_km": 0.2592632974159992,
+          "clearance_m": 21.48323608360488,
+          "f1_m": 3.6300888541142777
+        }
+      },
+      "budget": {
+        "fspl_db": 131.54640568420658,
+        "rx_dbm": -39.546405684206576,
+        "margin_low_rate_db": 56.453594315793424,
+        "margin_high_rate_db": 37.453594315793424,
+        "high_rate_after_fade_db": 27.453594315793424
+      }
+    }
+  }
+}
