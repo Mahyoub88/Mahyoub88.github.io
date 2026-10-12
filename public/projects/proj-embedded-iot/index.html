@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Embedded Systems &amp; IoT — PIC Firmware and Peripheral Integration | Mohammed Mahyoub</title>
-<meta name="description" content="Developed PIC16 firmware and hardware interfaces for timed sensing, displays, real-time clocks, output expansion and access control, using mikroC and Proteus during development.">
+<title>PIC Embedded Systems — Peripheral Integration &amp; Persistent Storage | Mohammed Mahyoub</title>
+<meta name="description" content="Implemented PIC16-based embedded applications using mikroC and Proteus, integrating sensor acquisition, LCD/keypad interfaces, real-time clocks and control outputs. Applied on-chip EEPROM read/write techniques to retain stored values across power cycles.">
 <link rel="canonical" href="https://mahyoub88.github.io/projects/proj-embedded-iot/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Embedded Systems &amp; IoT — PIC Firmware and Peripheral Integration">
-<meta property="og:description" content="Developed PIC16 firmware and hardware interfaces for timed sensing, displays, real-time clocks, output expansion and access control, using mikroC and Proteus during development.">
+<meta property="og:title" content="PIC Embedded Systems — Peripheral Integration &amp; Persistent Storage">
+<meta property="og:description" content="Implemented PIC16-based embedded applications using mikroC and Proteus, integrating sensor acquisition, LCD/keypad interfaces, real-time clocks and control outputs. Applied on-chip EEPROM read/write techniques to retain stored values across power cycles.">
 <meta property="og:url" content="https://mahyoub88.github.io/projects/proj-embedded-iot/">
 <meta property="og:image" content="https://mahyoub88.github.io/images/project-covers/themed-v4/proj-embedded-iot.webp">
 <meta name="twitter:card" content="summary_large_image">
@@ -24,9 +24,9 @@
 </nav>
 </header>
 <main id="main">
-<p class="eyebrow">Embedded Systems · Firmware · IoT</p>
-<h1>Embedded Systems &amp; IoT — PIC Firmware and Peripheral Integration</h1>
-<p class="lede">Developed PIC16 firmware and hardware interfaces for timed sensing, displays, real-time clocks, output expansion and access control, using mikroC and Proteus during development.</p>
+<p class="eyebrow">Embedded Systems · Firmware · Peripheral Integration</p>
+<h1>PIC Embedded Systems — Peripheral Integration &amp; Persistent Storage</h1>
+<p class="lede">Implemented PIC16-based embedded applications using mikroC and Proteus, integrating sensor acquisition, LCD/keypad interfaces, real-time clocks and control outputs. Applied on-chip EEPROM read/write techniques to retain stored values across power cycles.</p>
 <span class="badge">Implemented Project</span>
 <figure class="hero-media">
 <a href="/projects/proj-embedded-iot/media/source/01_system_overview.svg">
@@ -35,17 +35,19 @@
 <figcaption>Explanatory system diagram · Open image for full detail.</figcaption>
 </figure>
 <div class="tags">
-<span>PIC</span>
+<span>PIC16</span>
+<span>Embedded C</span>
 <span>mikroC</span>
 <span>Proteus</span>
-<span>AVR</span>
-<span>Arduino</span>
-<span>Sensors</span>
-<span>IoT</span>
+<span>ADC</span>
+<span>I²C</span>
+<span>EEPROM</span>
+<span>LCD/Keypad</span>
 </div>
 <nav class="section-nav">
 <a href="#technical-walkthrough">Technical walkthrough</a>
 <a href="#overview">Architecture</a>
+<a href="#persistent-storage">Persistent storage</a>
 <a href="#engineering">Engineering approach</a>
 <a href="#gallery">Visual documentation</a>
 <a href="#sources">Sources</a>
@@ -59,7 +61,7 @@
 </section>
 <section id="technical-walkthrough">
 <h2>Timing and peripheral integration responsibilities</h2>
-<p>This project groups PIC firmware and peripheral implementations: multiplexed displays, timed ADC sensing, the DS1307 RTC, 74HC595 output expansion, keypad access control and the Nokia 5110 display. It is an integration portfolio rather than a claim that every peripheral appears on one physical board. EEPROM persistence has its own independent case study and is linked rather than repeated as another complete implementation here.</p>
+<p>This project groups PIC firmware and peripheral implementations: multiplexed displays, timed ADC sensing, the DS1307 RTC, 74HC595 output expansion, keypad access control and the Nokia 5110 display. It is an integration portfolio rather than a claim that every peripheral appears on one physical board. On-chip EEPROM storage and retrieval are included as the persistent-storage workstream. These related implementations are presented together without implying that every peripheral was connected to one physical board.</p>
 <p>The central design distinction is between time-critical service and slower foreground work. A display-refresh interrupt advances the active digit; scheduled sampling, conversion, formatting and user-interface updates belong in the foreground where practical. A timing diagram should identify the selected oscillator, timer prescaler and reload before deriving a refresh rate. The public examples explain scheduling, but do not establish those settings for every original build.</p>
 <p>Analog conversion depends on the selected PIC, reference voltage, acquisition interval and channel configuration. A raw ADC count is not a calibrated physical measurement until the sensor transfer relationship and reference are known. Likewise, a responsive I2C clock requires both electrical compatibility and correct transaction handling; the NXP reference explains bus behaviour, while the device data sheet determines the actual limits.</p>
 <p>The engineering review connects each peripheral to its interface, timing needs and failure symptom. A stuck display, unstable analog value and missing RTC acknowledgement should lead to different checks. Reference snippets remain examples: port assignments, register names, drive currents and peripheral voltage compatibility must be checked against the actual board.</p>
@@ -118,12 +120,78 @@
 </section>
 <section id="engineering">
 <h2>Engineering approach</h2>
-<p>These are related firmware implementations and peripheral techniques. PLC batching and the dedicated EEPROM storage system have their own case studies and are not presented as parts of one PIC circuit.</p>
+<p>These are related firmware implementations and peripheral techniques. EEPROM storage and retrieval are covered below as part of this consolidated project. PLC batching remains a separate industrial-control implementation.</p>
 <figure>
 <a href="media/source/02_development_workflow.svg">
 <img loading="lazy" src="media/source/02_development_workflow.svg" alt="Explanatory workflow — project-specific sequence">
 </a>
 <figcaption>Explanatory workflow — project-specific sequence</figcaption>
+</figure>
+</section>
+<section id="persistent-storage">
+<h2>Write, verify and restore</h2>
+<p>The value is stored in on-chip EEPROM rather than ordinary RAM, so firmware can recover it after power loss. Write completion and read-back need to follow the selected PIC device and mikroC library.</p>
+<div class="table-scroll">
+<table>
+<caption>Illustrative verification sequence — expected behavior, not a published device-test log</caption>
+<thead>
+<tr>
+<th scope="col">Step</th>
+<th scope="col">Action</th>
+<th scope="col">Expected observation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Store the example byte 42 at a valid EEPROM address</td>
+<td>Write completes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Read the same address</td>
+<td>The returned byte is 42</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Restart after a power cycle</td>
+<td>Start-up reads the retained byte</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Request storage of the unchanged byte</td>
+<td>Write-on-change avoids a redundant write</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Reference snippet</h3>
+<p>This mikroC-style example comes from the repository explanation. It is not recovered project firmware or a complete device configuration.</p>
+<pre class="formula">
+<code>void store_byte(unsigned char addr, unsigned char value) {
+  if (EEPROM_Read(addr) == value) return;
+  EEPROM_Write(addr, value);
+  Delay_ms(20);
+  if (EEPROM_Read(addr) != value) {
+    /* report a write error */
+  }
+}</code>
+</pre>
+<p>Valid addresses, timing, power stability and interrupt handling depend on the device and library. The <a href="https://download.mikroe.com/documents/compilers/mikroc/pic/help/eeprom_library.htm">mikroC EEPROM library documentation</a> describes supported devices and write behavior. Multi-byte persistence needs a defined layout and integrity strategy; a successful single-byte read-back does not establish atomic multi-byte updates.</p>
+<p>
+<a href="https://github.com/Mahyoub88/embedded-iot-automation#persistent-storage">Source explanation, poster and storage-cycle diagram</a>
+</p>
+<figure>
+<a href="/projects/proj-eeprom-storage/media/source/00_project_poster.jpg">
+<img loading="lazy" src="/projects/proj-eeprom-storage/media/source/00_project_poster.jpg" alt="Original EEPROM implementation poster">
+</a>
+<figcaption>Original EEPROM project poster, retained as source media for the persistent-storage workstream.</figcaption>
+</figure>
+<figure>
+<a href="/projects/proj-eeprom-storage/media/source/01_eeprom_store_and_readback.svg">
+<img loading="lazy" src="/projects/proj-eeprom-storage/media/source/01_eeprom_store_and_readback.svg" alt="EEPROM write, read-back and start-up retrieval diagram">
+</a>
+<figcaption>Explanatory storage-cycle diagram; reference design guidance is distinguished from original firmware.</figcaption>
 </figure>
 </section>
 <section id="gallery">

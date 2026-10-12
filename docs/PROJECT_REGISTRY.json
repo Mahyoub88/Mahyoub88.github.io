@@ -1,6 +1,6 @@
 {
   "source": "src/data/defaultContent.json",
-  "projectCount": 20,
+  "projectCount": 19,
   "projects": [
     {
       "id": "proj-its-support",
@@ -116,7 +116,7 @@
     },
     {
       "id": "proj-embedded-iot",
-      "title": "Embedded Systems & IoT — PIC Firmware and Peripheral Integration",
+      "title": "PIC Embedded Systems — Peripheral Integration & Persistent Storage",
       "url": "https://mahyoub88.github.io/projects/proj-embedded-iot/",
       "repository": "https://github.com/Mahyoub88/embedded-iot-automation",
       "status": "Implemented Project",
@@ -168,20 +168,6 @@
       "coverImage": "/images/project-covers/themed-v4/proj-plc-control.webp",
       "coverLightImage": "/images/project-covers/engineering-v3/proj-plc-control.webp",
       "coverAlt": "Engineering illustration of plc batching control: field sensors, plc / i-o, hmi / scada, mixer",
-      "coverCaption": "AI-generated project cover illustration"
-    },
-    {
-      "id": "proj-eeprom-storage",
-      "title": "Embedded EEPROM Data Storage & Retrieval System",
-      "url": "https://mahyoub88.github.io/projects/proj-eeprom-storage/",
-      "repository": "https://github.com/Mahyoub88/eeprom-data-storage-pic",
-      "status": "Implemented Project",
-      "role": "The firmware separates the value being measured or entered from the stored byte. Read-back verifies persistence, while the display exposes the retrieved value to the operator.",
-      "image": "/projects/proj-eeprom-storage/media/source/00_project_poster.jpg",
-      "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/themed-v4/proj-eeprom-storage.webp",
-      "coverLightImage": "/images/project-covers/engineering-v3/proj-eeprom-storage.webp",
-      "coverAlt": "Engineering illustration of pic eeprom persistence: input, pic16, internal eeprom, read back",
       "coverCaption": "AI-generated project cover illustration"
     },
     {

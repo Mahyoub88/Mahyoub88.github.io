@@ -790,9 +790,9 @@
     {
       "id": "proj-embedded-iot",
       "group": "earlier",
-      "category": "Embedded Systems · Firmware · IoT",
-      "title": "Embedded Systems & IoT — PIC Firmware and Peripheral Integration",
-      "description": "Developed PIC16 firmware and hardware interfaces for timed sensing, displays, real-time clocks, output expansion and access control, using mikroC and Proteus during development.",
+      "category": "Embedded Systems · Firmware · Peripheral Integration",
+      "title": "PIC Embedded Systems — Peripheral Integration & Persistent Storage",
+      "description": "Implemented PIC16-based embedded applications using mikroC and Proteus, integrating sensor acquisition, LCD/keypad interfaces, real-time clocks and control outputs. Applied on-chip EEPROM read/write techniques to retain stored values across power cycles.",
       "meta": [
         {
           "label": "Author",
@@ -809,16 +809,21 @@
         {
           "label": "Devices",
           "value": "IC and memory programming: ROM/PROM/EPROM/EEPROM/Flash, SRAM/DRAM/NV-RAM organisation, and hardware device programmers."
+        },
+        {
+          "label": "Persistent Storage",
+          "value": "On-chip EEPROM writing, read-back verification and start-up retrieval of values retained across power cycles."
         }
       ],
       "tags": [
-        "PIC",
+        "PIC16",
+        "Embedded C",
         "mikroC",
         "Proteus",
-        "AVR",
-        "Arduino",
-        "Sensors",
-        "IoT"
+        "ADC",
+        "I²C",
+        "EEPROM",
+        "LCD/Keypad"
       ],
       "status": {
         "kind": "professional",
@@ -999,49 +1004,6 @@
       "coverAlt": "Engineering illustration of plc batching control: field sensors, plc / i-o, hmi / scada, mixer",
       "coverCaption": "AI-generated project cover illustration",
       "coverLightImage": "/images/project-covers/engineering-v3/proj-plc-control.webp"
-    },
-    {
-      "id": "proj-eeprom-storage",
-      "group": "earlier",
-      "category": "Embedded Systems · Non-volatile Storage",
-      "title": "Embedded EEPROM Data Storage & Retrieval System",
-      "description": "Implemented PIC-based data storage and retrieval using on-chip EEPROM, mikroC firmware and a display interface, preserving stored values across power loss.",
-      "meta": [
-        {
-          "label": "Scope",
-          "value": "The firmware separates the value being measured or entered from the stored byte. Read-back verifies persistence, while the display exposes the retrieved value to the operator."
-        }
-      ],
-      "tags": [
-        "PIC",
-        "EEPROM",
-        "mikroC",
-        "Proteus",
-        "LCD"
-      ],
-      "status": {
-        "kind": "professional",
-        "label": "Implemented Project"
-      },
-      "link": "",
-      "links": [
-        {
-          "label": "Read case study",
-          "href": "/projects/proj-eeprom-storage/"
-        },
-        {
-          "label": "View repository",
-          "href": "https://github.com/Mahyoub88/eeprom-data-storage-pic"
-        }
-      ],
-      "accent": "amber",
-      "image": "/projects/proj-eeprom-storage/media/source/00_project_poster.jpg",
-      "imageAlt": "Original project poster",
-      "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/themed-v4/proj-eeprom-storage.webp",
-      "coverAlt": "Engineering illustration of pic eeprom persistence: input, pic16, internal eeprom, read back",
-      "coverCaption": "AI-generated project cover illustration",
-      "coverLightImage": "/images/project-covers/engineering-v3/proj-eeprom-storage.webp"
     },
     {
       "id": "proj-monitoring-console",
