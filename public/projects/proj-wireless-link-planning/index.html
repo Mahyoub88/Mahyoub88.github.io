@@ -376,10 +376,10 @@
 <h2>Case: bringing internet from Atma to Al-Sharq, Dhamar</h2>
 <div class="summary">
 <h3>What is documented and what is simulated</h3>
-<p>The equipment, distances, distribution plan and costs below come from the author’s own planning document for this network. The terrain and link-budget figures are a <strong>planning simulation</strong> run on public elevation data with typical radio values for the named equipment. They are not as-built measurements: no RSSI, throughput or uptime records are included.</p>
+<p>The equipment, distances, distribution plan and costs come from the author’s own planning document for this network. Everything labelled <strong>simulated</strong> is a planning-level engineering analysis run on public elevation data, manufacturer-reported radio figures and stated assumptions. It is not as-built evidence: no measured signal level, throughput or uptime is included. The last subsection turns the predictions into field acceptance criteria.</p>
 </div>
 <h3>Backhaul design: two hops through the MTN tower site</h3>
-<p>Atma and Al-Sharq are separated by mountains, so the plan does not try a single long link. It uses two hops through the elevated MTN tower area, with a different radio class on each hop. Link planning used the Ubiquiti airLink tool.</p>
+<p>Atma and Al-Sharq are separated by mountains, so the plan does not attempt one long link. It uses two hops through the elevated MTN tower area, with a different radio class on each hop. Link planning used the Ubiquiti airLink tool.</p>
 <div class="table-scroll">
 <table>
 <caption>Backhaul as documented in the planning document</caption>
@@ -407,11 +407,23 @@
 </tbody>
 </table>
 </div>
-<h3>Terrain check (simulated)</h3>
-<p>Elevations come from the public Copernicus 90 m model along each hop (61 samples), with effective-Earth factor k = 4/3, a 5 m allowance for trees and buildings, and the same 60% first-Fresnel screen used above. Site coordinates are approximate to about 1 km in the repository and are not survey positions.</p>
+<h3>Method and inputs</h3>
+<ul>
+<li>
+<strong>Terrain:</strong> 61 elevation samples per hop from the public Copernicus 90 m model. Site coordinates are approximate to about 1 km in the repository and are not survey positions.</li>
+<li>
+<strong>Radio figures:</strong> manufacturer-reported values for the named equipment, from the Ubiquiti TechSpecs pages for the <a href="https://techspecs.ui.com/uisp/wireless/pbe-m5-400">PowerBeam M5 400</a>, the <a href="https://techspecs.ui.com/uisp/wireless/rd-5g">RocketDish</a> and the <a href="https://techspecs.ui.com/uisp/wireless/nsm2">NanoStation M2</a>, and the Rocket M datasheet: 25 dBi and up to 26 dBm for the PowerBeam, 34 dBi with a beamwidth near 3° for the dish, up to 27 dBm for the Rocket M5, and sensitivity from −96 dBm (MCS0) to −74 dBm (MCS7), each with a ±2 dB tolerance. Transmit power falls at the higher rates, and the model follows that.</li>
+<li>
+<strong>Assumptions, not recovered settings:</strong> 5.8 GHz, a 20 MHz channel, 2×2 operation with 50% protocol efficiency, 0.5 dB cable loss per end, 2 dB other losses, a 10 dB fade allowance, and a 5 m allowance for trees and buildings.</li>
+<li>
+<strong>Propagation:</strong> the ITU-R P.530 multipath model and the ITU-R P.838 and P.530 rain model, with an assumed refractivity gradient and a 40 mm/h rain rate exceeded 0.01% of the time. These climate inputs were not verified for the region.</li>
+<li>
+<strong>Uncertainty:</strong> 5,000 Monte Carlo runs per hop varying terrain-model error (a 6 m smooth component and 4 m noise), clutter up to 15 m, and the effective-Earth factor.</li>
+</ul>
+<h3>Terrain and clearance (simulated)</h3>
 <div class="table-scroll">
 <table>
-<caption>Terrain along the two hops</caption>
+<caption>Terrain along the two hops, with 6 m masts</caption>
 <thead>
 <tr>
 <th scope="col">Item</th>
@@ -441,14 +453,19 @@
 <td>1 m / 3 m</td>
 </tr>
 <tr>
-<td>Tightest clearance with 3 m masts</td>
-<td>18 m, 6.9× the first Fresnel radius</td>
-<td>4 m, 1.2× the first Fresnel radius</td>
+<td>Clearance at k = 4/3, as a multiple of the first Fresnel radius</td>
+<td>8.0</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>Clearance at k = 2/3 (sub-refractive atmosphere)</td>
+<td>8.0</td>
+<td>2.0</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>The result explains the design. The tower site stands about 600 m above Atma and about 1,400 m above Al-Sharq, so both hops have a clear sight line over the intervening ridges, and the relay site works as a mountain-top hub. The steep vertical angles make alignment and tilt, not mast height, the practical installation concern. The DEM cannot resolve individual structures, so the small clearance margin on hop 2 should be checked on site.</p>
+<p>The tower site stands about 600 m above Atma and about 1,400 m above Al-Sharq. Both hops therefore clear the intervening ridges on the nominal terrain, and the relay site works as a mountain-top hub.</p>
 <figure>
 <a href="media/atma-al-sharq-h1-profile.svg">
 <img loading="lazy" src="media/atma-al-sharq-h1-profile.svg" alt="Terrain profile from Atma city centre to the MTN tower site with line of sight and first Fresnel zone">
@@ -461,10 +478,64 @@
 </a>
 <figcaption>Hop 2, simulated from public elevation data. Not a survey or field measurement.</figcaption>
 </figure>
-<h3>Link budget (simulated)</h3>
-<p>Assumed values at 5.8 GHz: 25 dBm and 25 dBi for the PowerBeam pair, 27 dBm and 34 dBi for the Rocket dish pair, 0.5 dB cable loss per end and 2 dB other losses. Sensitivity is taken as −96 dBm for the lowest rate and −77 dBm for a high rate. These are typical class figures, not recovered settings or datasheet quotations.</p>
+<h3>Clearance under uncertainty (Monte Carlo)</h3>
+<p>A single profile hides how much the answer depends on terrain-model error and refraction. Repeating the clearance calculation 5,000 times per hop gives the probability that the link keeps at least 60% of the first Fresnel radius, and the probability that the sight line is simply free.</p>
 <div class="table-scroll">
 <table>
+<caption>Probability of adequate clearance by mast height (simulated)</caption>
+<thead>
+<tr>
+<th scope="col">Mast height</th>
+<th scope="col">Hop 1: ≥ 60% Fresnel</th>
+<th scope="col">Hop 2: ≥ 60% Fresnel</th>
+<th scope="col">Hop 2: sight line free</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3 m</td>
+<td>100%</td>
+<td>49%</td>
+<td>64%</td>
+</tr>
+<tr>
+<td>6 m</td>
+<td>100%</td>
+<td>69%</td>
+<td>83%</td>
+</tr>
+<tr>
+<td>10 m</td>
+<td>100%</td>
+<td>94%</td>
+<td>99%</td>
+</tr>
+<tr>
+<td>15 m</td>
+<td>100%</td>
+<td>100%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>20 m</td>
+<td>100%</td>
+<td>100%</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure>
+<a href="media/atma-al-sharq-clearance-montecarlo.svg">
+<img loading="lazy" src="media/atma-al-sharq-clearance-montecarlo.svg" alt="Histogram of minimum clearance over 5000 simulated runs for each hop, with thresholds at grazing, 60 percent and 100 percent of the first Fresnel radius">
+</a>
+<figcaption>Spread of minimum clearance for 6 m masts. Simulation, not a survey.</figcaption>
+</figure>
+<p>Hop 1 is robust at any mast height. Hop 2 is the critical hop: every failing run occurs within 1 km of one of its two sites, where the Fresnel radius is small and a few metres of terrain error, a tree or a building decide the result. That points to a practical action rather than a larger dish: raise the masts to 10–15 m on that hop and check the first kilometre at each end on site.</p>
+<h3>Link margin by modulation rate (simulated)</h3>
+<div class="table-scroll">
+<table>
+<caption>Received level and fade margin on each hop</caption>
 <thead>
 <tr>
 <th scope="col">Quantity</th>
@@ -479,29 +550,103 @@
 <td>131.5 dB</td>
 </tr>
 <tr>
-<td>Received power</td>
-<td>−54.1 dBm</td>
-<td>−39.5 dBm</td>
+<td>Received level at MCS0 / MCS5 / MCS7</td>
+<td>−53.1 / −56.1 / −59.1 dBm</td>
+<td>−39.5 / −42.5 / −45.5 dBm</td>
 </tr>
 <tr>
-<td>Margin at lowest-rate sensitivity</td>
-<td>41.9 dB</td>
-<td>56.5 dB</td>
+<td>Margin above sensitivity at MCS0 / MCS5 / MCS7</td>
+<td>42.9 / 26.9 / 14.9 dB</td>
+<td>56.5 / 40.5 / 28.5 dB</td>
 </tr>
 <tr>
-<td>Margin at high-rate sensitivity</td>
-<td>22.9 dB</td>
-<td>37.5 dB</td>
-</tr>
-<tr>
-<td>High-rate margin after a 10 dB fade allowance</td>
-<td>12.9 dB</td>
-<td>27.5 dB</td>
+<td>Highest rate with a 10 dB fade allowance</td>
+<td>MCS7</td>
+<td>MCS7</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>On paper, both hops carry comfortable margin. The 34 dBi dish on the longer hop leaves more reserve than the smaller dish on the shorter one, which fits the choice of equipment in the plan. Free-space loss is the only propagation term modelled: no rain, multipath or interference is included, and real throughput also depends on channel width, noise and traffic.</p>
+<figure>
+<a href="media/atma-al-sharq-margin-ladder.svg">
+<img loading="lazy" src="media/atma-al-sharq-margin-ladder.svg" alt="Received level on each hop against receiver sensitivity from MCS0 to MCS7">
+</a>
+<figcaption>Received level against sensitivity for each modulation rate. Simulation, not a measurement.</figcaption>
+</figure>
+<p>Both hops can hold the highest single-stream rate with margin to spare. Hop 1 has the tighter margin at the top rate, because it uses the smaller dish. Equipment tolerances of ±2 dB and unmodelled interference are not included.</p>
+<h3>Propagation reliability (simulated)</h3>
+<div class="table-scroll">
+<table>
+<caption>Propagation outage estimates with ITU-R P.530 and P.838 models</caption>
+<thead>
+<tr>
+<th scope="col">Event</th>
+<th scope="col">Hop 1</th>
+<th scope="col">Hop 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fade that drops the link below MCS7</td>
+<td>14.9 dB</td>
+<td>28.5 dB</td>
+</tr>
+<tr>
+<td>Multipath time at that fade depth</td>
+<td>about 0.012 minutes per year</td>
+<td>about 0.015 minutes per year</td>
+</tr>
+<tr>
+<td>Rain fade exceeding that depth</td>
+<td>not reached above 0.001% of the time</td>
+<td>not reached above 0.001% of the time</td>
+</tr>
+<tr>
+<td>Fade that loses the link entirely (MCS0)</td>
+<td>42.9 dB, negligible time</td>
+<td>56.5 dB, negligible time</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Steep, high-altitude paths with large margins produce very little multipath, and 5.8 GHz is only mildly affected by rain. Propagation is therefore not the main reliability risk. The risks that decide real availability are power at the relay site (the plan lists solar panels, batteries and a regulator), alignment drift in wind, lightning, interference in the 5 GHz band, and equipment faults.</p>
+<h3>Antenna alignment (simulated)</h3>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Item</th>
+<th scope="col">Hop 1 (PowerBeam)</th>
+<th scope="col">Hop 2 (34 dBi dish)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Beamwidth (estimated from gain)</td>
+<td>about 9°</td>
+<td>about 3°</td>
+</tr>
+<tr>
+<td>Required vertical tilt</td>
+<td>about +4.2°</td>
+<td>about −5.1°</td>
+</tr>
+<tr>
+<td>Pointing error giving 1 dB loss</td>
+<td>about ±2.7°</td>
+<td>about ±1.0°</td>
+</tr>
+<tr>
+<td>Pointing error giving 3 dB loss</td>
+<td>about ±4.6°</td>
+<td>about ±1.6°</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>On hop 2 the dish must be tilted down by more than one and a half beamwidths and aimed to within about one degree. Alignment should use received-level feedback during installation and be re-checked after the first strong winds.</p>
+<h3>Capacity (simulated)</h3>
+<p>At the top single-stream rate with two spatial streams on a 20 MHz channel, the radio rate is about 130 Mbps and the expected application throughput about 65 Mbps, assuming 50% protocol efficiency. This is an assumption-based estimate: it requires the two polarisations to carry independent streams and a clean channel, and a wider channel would roughly double it. The backhaul as a whole is limited to the slower hop, so both hops give about the same ceiling. The ceiling is shared by every user in Al-Sharq.</p>
 <h3>Distribution plan inside Al-Sharq</h3>
 <p>The distribution plan divides the city into numbered zones on an aerial map, with point-to-point distances of roughly 45 to 150 m between points. Seven zones are planned, each with an estimated broadcast range of 500 m. The equipment listed per zone is:</p>
 <div class="table-scroll">
@@ -532,10 +677,120 @@
 </tbody>
 </table>
 </div>
-<p>The core and distribution list includes a MikroTik RB AH 1100 for distribution ($350), an RB 750 for combining lines ($70), Netgear modems per internet line ($45 each), network cables, access points, switches, mounts, waterproofing and RJ45 connectors. The remote site list also names solar panels, batteries, a charge regulator and panel mounts. Prices are in US dollars and local currency; the quantities for some power items are not stated.</p>
-<p>The listed radio equipment totals about $3,890: backhaul $1,380, zone equipment $2,090 and core routers $420. This is the planned budget, not a final as-built cost.</p>
-<h3>What field data would add</h3>
-<p>To turn the plan and simulation into a verified record, add measured signal level and noise on each hop, the negotiated rate and iperf3 throughput in both directions, antenna tilt and alignment records, uptime over a stated period, and photographs of the installed sites. Prediction and measurement stay in separate tables.</p>
+<p>The core and distribution list includes a MikroTik RB AH 1100 for distribution ($350), an RB 750 for combining lines ($70), Netgear modems per internet line ($45 each), network cables, access points, switches, mounts, waterproofing and RJ45 connectors. The remote site list also names solar panels, batteries, a charge regulator and panel mounts. Prices are in US dollars and local currency; quantities for some power items are not stated. The listed radio equipment totals about $3,890: backhaul $1,380, zone equipment $2,090 and core routers $420. This is the planned budget, not a final as-built cost.</p>
+<h3>Coverage reliability of an access cell (simulated)</h3>
+<p>A 2.4 GHz NanoStation access point serving 11 dBi client antennas was modelled with a path-loss exponent of 3.2 for a dense town and 8 dB of log-normal shadowing. The curves give the probability that a client location keeps the stated rate with a 10 dB fade allowance. Co-channel interference between cells is not modelled.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Distance from the access point</th>
+<th scope="col">MCS0 (basic link)</th>
+<th scope="col">MCS3</th>
+<th scope="col">MCS7 (high rate)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100 m</td>
+<td>100%</td>
+<td>100%</td>
+<td>64%</td>
+</tr>
+<tr>
+<td>300 m</td>
+<td>97%</td>
+<td>88%</td>
+<td>6%</td>
+</tr>
+<tr>
+<td>500 m</td>
+<td>85%</td>
+<td>62%</td>
+<td>1%</td>
+</tr>
+<tr>
+<td>600 m</td>
+<td>77%</td>
+<td>50%</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure>
+<a href="media/atma-al-sharq-cell-coverage.svg">
+<img loading="lazy" src="media/atma-al-sharq-cell-coverage.svg" alt="Probability that a client is covered against distance from the access point at MCS0, MCS3 and MCS7">
+</a>
+<figcaption>Coverage probability against distance. Simulation, not a measurement.</figcaption>
+</figure>
+<p>The planned 500 m range is reasonable for basic connectivity, with 85% of locations covered, but high rates fall off quickly beyond about 100 m. That supports the plan’s division into several smaller zones with overlapping cells and directional client antennas, rather than a few large ones.</p>
+<h3>Conclusions from the analysis</h3>
+<ul>
+<li>The two-hop design through the elevated MTN site is sound: both hops have large margins and negligible propagation outage on paper.</li>
+<li>Hop 2 is the one to protect. Its clearance risk sits within 1 km of its two sites, so use 10–15 m masts and verify the first kilometre at each end.</li>
+<li>Alignment on the 34 dBi dish is demanding: tilt near −5° and aim to about one degree.</li>
+<li>Real availability will be set by relay-site power, lightning protection, wind and interference rather than by propagation.</li>
+<li>Distribution capacity and coverage, not the backhaul, are the likely limits for users in Al-Sharq.</li>
+</ul>
+<h3>Field acceptance criteria</h3>
+<p>These criteria turn each prediction into a check an installer can run. The measured column stays empty until real readings exist.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Check</th>
+<th scope="col">Predicted</th>
+<th scope="col">Pass criterion</th>
+<th scope="col">Measured</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hop 1 received level</td>
+<td>−53 to −59 dBm</td>
+<td>Within about 5 dB of prediction</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td>Hop 2 received level</td>
+<td>−40 to −46 dBm</td>
+<td>Within about 5 dB of prediction</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td>Hop 2 dish alignment</td>
+<td>Tilt about −5°, error within 1°</td>
+<td>Peak received level at the final position</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td>Throughput per hop, both directions</td>
+<td>About 65 Mbps at 20 MHz (assumption)</td>
+<td>Sustained iperf3 result recorded with channel width and load</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td>Channel quality</td>
+<td>No co-channel signal within 10 dB of the link</td>
+<td>Spectrum scan saved for each end</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td>Near-site obstructions on hop 2</td>
+<td>Clear within the first 1 km</td>
+<td>Site photographs and a mast height of at least 10 m</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td>Stability</td>
+<td>Planned rate held</td>
+<td>Seven-day log with the rate and received level recorded</td>
+<td>Pending</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>The script, terrain profiles and numeric results are in the repository: <a href="https://github.com/Mahyoub88/Mahyoub88.github.io/tree/main/docs/simulations/atma-al-sharq">docs/simulations/atma-al-sharq</a>.</p>
 </section>
 <section id="engineering">
