@@ -49,6 +49,7 @@
 <a href="#fresnel-clearance">2 · Path clearance</a>
 <a href="#link-budget">3 · Link budget</a>
 <a href="#integrated-review">Integrated review</a>
+<a href="#atma-al-sharq-simulation">Atma → Al-Sharq simulation</a>
 <a href="#verification-context">Verification</a>
 <a href="#sources">Sources</a>
 </nav>
@@ -370,6 +371,191 @@
 </table>
 </div>
 <p>A passing link budget does not remove a clearance deficit, and a clear path does not prove margin. The decision record therefore lists all three results with their assumptions, then hands over to alignment and field validation, where measured values are recorded separately from these predictions.</p>
+</section>
+<section id="atma-al-sharq-simulation">
+<h2>Simulation: Atma → Al-Sharq, Dhamar Governorate</h2>
+<div class="summary">
+<h3>Read this first</h3>
+<p>This section is a <strong>planning simulation</strong>. It uses public elevation data and assumed radio parameters. It is not a record of a deployed link and contains no field measurements. Its purpose is to test how the three checks behave on real mountain terrain between two towns in Dhamar, and to show what a site survey would need to confirm.</p>
+</div>
+<p>The scenario carries connectivity from Atma to Al-Sharq and then distributes it locally. OpenStreetMap lists two places named Al-Sharq in Atma District, so both are simulated: <strong>Scenario A</strong> (the village west of Atma, about 6.5 km away) and <strong>Scenario B</strong> (the village east of Atma, about 14.5 km away). Coordinates are approximate, at town or village level, and are not site survey positions.</p>
+<h3>Method</h3>
+<ul>
+<li>Terrain: 61 elevation samples along the straight corridor from the public Copernicus 90 m model, retrieved through the Open-Meteo elevation API.</li>
+<li>Clearance: first Fresnel radius at every sample, with effective-Earth factor k = 4/3 and a 5 m allowance for trees and buildings that a 90 m model cannot see. The target is 60% of the first Fresnel radius, the same screen used in the clearance section above.</li>
+<li>Siting: masts may move up to 6 samples (about 0.6 km in A, 1.4 km in B) from the nominal town position, because real installers choose a high local point. The search then looks for the smallest equal mast height that meets the target, first for a direct link and then with one relay site on the corridor.</li>
+<li>Budget: the same equations as the link-budget section, with the assumed radio parameters below.</li>
+</ul>
+<div class="table-scroll">
+<table>
+<caption>Assumed radio parameters (illustrative, not recovered equipment settings)</caption>
+<thead>
+<tr>
+<th scope="col">Parameter</th>
+<th scope="col">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frequency</td>
+<td>5500 MHz</td>
+</tr>
+<tr>
+<td>Transmit power</td>
+<td>23 dBm</td>
+</tr>
+<tr>
+<td>Dish gain at each end</td>
+<td>25 dBi</td>
+</tr>
+<tr>
+<td>Cable loss per end, other losses</td>
+<td>0.5 dB, 2 dB</td>
+</tr>
+<tr>
+<td>Receiver sensitivity</td>
+<td>−80 dBm (assumed mid-rate threshold)</td>
+</tr>
+<tr>
+<td>Required fade margin</td>
+<td>10 dB</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Results</h3>
+<div class="table-scroll">
+<table>
+<caption>Atma to Al-Sharq on real terrain: outcome of the clearance search</caption>
+<thead>
+<tr>
+<th scope="col">Item</th>
+<th scope="col">Scenario A (≈ 6.5 km)</th>
+<th scope="col">Scenario B (≈ 14.5 km)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ground elevation, Atma / Al-Sharq</td>
+<td>2171 m / 2561 m</td>
+<td>2171 m / 2575 m</td>
+</tr>
+<tr>
+<td>Highest terrain on the corridor</td>
+<td>2731 m</td>
+<td>2725 m</td>
+</tr>
+<tr>
+<td>Free-space path loss, direct</td>
+<td>123.5 dB</td>
+<td>130.5 dB</td>
+</tr>
+<tr>
+<td>Direct link, masts up to 40 m</td>
+<td>Obstructed</td>
+<td>Obstructed</td>
+</tr>
+<tr>
+<td>One relay on the corridor, masts up to 40 m</td>
+<td>No layout found</td>
+<td>Feasible: a ridge-top site at 2725 m, about 13 km from Atma</td>
+</tr>
+<tr>
+<td>Long hop (Atma side to ridge)</td>
+<td>Not applicable</td>
+<td>12.8 km, received power −59.4 dBm, margin 20.6 dB, 10.6 dB after the fade margin</td>
+</tr>
+<tr>
+<td>Short hop (ridge to Al-Sharq side)</td>
+<td>Not applicable</td>
+<td>0.7 km, margin far above the fade requirement</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure>
+<a href="media/atma-al-sharq-b-profile.svg">
+<img loading="lazy" src="media/atma-al-sharq-b-profile.svg" alt="Scenario B terrain profile from Atma to Al-Sharq with a ridge-top relay, line of sight and first Fresnel zone">
+</a>
+<figcaption>Scenario B: the long hop crosses a valley far below the line of sight and lands on the ridge. Simulation from public elevation data, not a survey.</figcaption>
+</figure>
+<figure>
+<a href="media/atma-al-sharq-a-profile.svg">
+<img loading="lazy" src="media/atma-al-sharq-a-profile.svg" alt="Scenario A terrain profile from Atma to Al-Sharq showing hills above the line of sight even in the most favourable layout">
+</a>
+<figcaption>Scenario A: even the most favourable layout found is obstructed by a hill about 1.5 km from Atma. Simulation from public elevation data, not a survey.</figcaption>
+</figure>
+<h3>Antenna gain sensitivity, Scenario B direct path</h3>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Dish gain</th>
+<th scope="col">Margin at −80 dBm sensitivity</th>
+<th scope="col">Reading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>19 dBi</td>
+<td>7.5 dB</td>
+<td>Below the 10 dB fade target</td>
+</tr>
+<tr>
+<td>23 dBi</td>
+<td>15.5 dB</td>
+<td>Meets the target</td>
+</tr>
+<tr>
+<td>25 dBi</td>
+<td>19.5 dB</td>
+<td>Meets the target</td>
+</tr>
+<tr>
+<td>30 dBi</td>
+<td>29.5 dB</td>
+<td>Comfortable margin</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="source-note">This table treats the 14.5 km path as if it were clear, to isolate the effect of antenna gain on power. Clearance in this scenario depends on the ridge-top site described above.</p>
+<h3>Distribution inside Al-Sharq (illustrative)</h3>
+<p>For a 16 dBi sector at 24 dBm, 16 dBi client antennas, a path-loss exponent of 3.2 and 6 dB of clutter loss, the client range shrinks quickly once a fade margin is reserved:</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Reserved fade margin</th>
+<th scope="col">Approximate client range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 dB</td>
+<td>about 390 m</td>
+</tr>
+<tr>
+<td>10 dB</td>
+<td>about 190 m</td>
+</tr>
+<tr>
+<td>15 dB</td>
+<td>about 130 m</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>What the simulation shows</h3>
+<ul>
+<li>A visible town is not a usable link: both towns sit behind terrain that rises well above them, so a direct link fails whatever the mast height.</li>
+<li>In Scenario B the answer is siting, not power. A ridge-top site lets the long hop clear the valley with ample margin; the budget is then limited by distance, and a 25 dBi dish leaves 10.6 dB after the fade margin.</li>
+<li>In Scenario A no layout on the straight corridor works. A real design would need an off-axis relay site, which requires a two-dimensional terrain survey rather than a single profile.</li>
+<li>Local distribution is the harder problem: hundreds of metres per sector in hilly terrain means several sectors or small relay nodes rather than one access point.</li>
+</ul>
+<h3>Limits of this model</h3>
+<p>The 90 m elevation model has vertical errors of several metres and cannot resolve masts, towers, tree height or building edges. In Scenario B the tightest clearance on the long hop is about 16 m close to the ridge, so a field check is essential. The radio parameters are assumptions, no rain or multipath fading is modelled, and the Al-Sharq positions are approximate. Measured RSSI, SNR, link rate and throughput should replace these values once a site survey is done.</p>
+<p>The script, input profiles and numeric results are in the repository: <a href="https://github.com/Mahyoub88/Mahyoub88.github.io/tree/main/docs/simulations/atma-al-sharq">docs/simulations/atma-al-sharq</a>.</p>
 </section>
 <section id="engineering">
 <h2>Engineering approach</h2>

@@ -1,0 +1,221 @@
+{
+  "assumptions": {
+    "frequency_mhz": 5500,
+    "tx_power_dbm": 23,
+    "dish_gain_dbi": 25,
+    "cable_loss_db_per_end": 0.5,
+    "other_loss_db": 2.0,
+    "rx_sensitivity_dbm": -80,
+    "required_fade_margin_db": 10,
+    "k_factor": 1.3333333333333333,
+    "clutter_allowance_m": 5,
+    "clearance_targets": [
+      0.6,
+      1.0
+    ],
+    "ap_sector_gain_dbi": 16,
+    "ap_tx_dbm": 24,
+    "cpe_gain_dbi": 16,
+    "cpe_sensitivity_dbm": -80,
+    "path_loss_exponent": 3.2,
+    "clutter_db": 6
+  },
+  "scenarios": {
+    "A": {
+      "name": "Al-Sharq (west, near Al-Maidan)",
+      "distance_km": 6.495789757538256,
+      "elev_a_m": 2171.0,
+      "elev_b_m": 2561.0,
+      "max_terrain_m": 2731.0,
+      "budget": {
+        "fspl_db": 123.49989299195302,
+        "rx_dbm": -53.49989299195302,
+        "margin_db": 26.50010700804698,
+        "after_fade_db": 16.50010700804698
+      },
+      "gain_sweep": [
+        {
+          "gain_dbi": 19,
+          "rx_dbm": -65.49989299195302,
+          "margin_db": 14.500107008046982
+        },
+        {
+          "gain_dbi": 23,
+          "rx_dbm": -57.49989299195302,
+          "margin_db": 22.50010700804698
+        },
+        {
+          "gain_dbi": 25,
+          "rx_dbm": -53.49989299195302,
+          "margin_db": 26.50010700804698
+        },
+        {
+          "gain_dbi": 30,
+          "rx_dbm": -43.49989299195302,
+          "margin_db": 36.50010700804698
+        }
+      ],
+      "direct_sited": null,
+      "relay_sited": null,
+      "direct_30m_nominal": {
+        "ratio": -29.99530964451075,
+        "at_km": 5.41315813128188,
+        "clearance_m": -210.3449491557949,
+        "hop_km": 6.495789757538256
+      },
+      "best_effort_40m": {
+        "mast_m": 40,
+        "points": [
+          0,
+          50,
+          55
+        ],
+        "hops": [
+          {
+            "ratio": -13.68513803775252,
+            "at_km": 1.5156842767589265,
+            "clearance_m": -105.54770874904125,
+            "hop_km": 5.41315813128188
+          },
+          {
+            "ratio": 23.378991040287055,
+            "at_km": 5.521421293907518,
+            "clearance_m": 50.797240406753644,
+            "hop_km": 0.541315813128188
+          }
+        ],
+        "site_elev_m": [
+          2171.0,
+          2731.0,
+          2455.0
+        ],
+        "site_km": [
+          0.0,
+          5.41315813128188,
+          5.9544739444100685
+        ],
+        "budgets": [
+          {
+            "distance_km": 5.41315813128188,
+            "fspl_db": 121.91626807100053,
+            "rx_dbm": -51.91626807100053,
+            "margin_db": 28.08373192899947,
+            "after_fade_db": 18.08373192899947
+          },
+          {
+            "distance_km": 0.541315813128188,
+            "fspl_db": 101.91626807100053,
+            "rx_dbm": -31.91626807100053,
+            "margin_db": 48.08373192899947,
+            "after_fade_db": 38.08373192899947
+          }
+        ]
+      }
+    },
+    "B": {
+      "name": "Al-Sharq (east)",
+      "distance_km": 14.485257005368409,
+      "elev_a_m": 2171.0,
+      "elev_b_m": 2575.0,
+      "max_terrain_m": 2725.0,
+      "budget": {
+        "fspl_db": 130.46577789186188,
+        "rx_dbm": -60.465777891861876,
+        "margin_db": 19.534222108138124,
+        "after_fade_db": 9.534222108138124
+      },
+      "gain_sweep": [
+        {
+          "gain_dbi": 19,
+          "rx_dbm": -72.46577789186188,
+          "margin_db": 7.534222108138124
+        },
+        {
+          "gain_dbi": 23,
+          "rx_dbm": -64.46577789186188,
+          "margin_db": 15.534222108138124
+        },
+        {
+          "gain_dbi": 25,
+          "rx_dbm": -60.465777891861876,
+          "margin_db": 19.534222108138124
+        },
+        {
+          "gain_dbi": 30,
+          "rx_dbm": -50.465777891861876,
+          "margin_db": 29.534222108138124
+        }
+      ],
+      "direct_sited": null,
+      "relay_sited": {
+        "mast_m": 2,
+        "points": [
+          1,
+          54,
+          57
+        ],
+        "hops": [
+          {
+            "ratio": 3.252310213177319,
+            "at_km": 12.553889404652622,
+            "clearance_m": 16.367057121059133,
+            "hop_km": 12.795310354742094
+          },
+          {
+            "ratio": 13.615054223195944,
+            "at_km": 13.278152254921043,
+            "clearance_m": 40.326472078215374,
+            "hop_km": 0.7242628502684204
+          }
+        ],
+        "site_elev_m": [
+          2267.0,
+          2725.0,
+          2690.0
+        ],
+        "site_km": [
+          0.24142095008947348,
+          13.036731304831568,
+          13.760994155099988
+        ],
+        "budgets": [
+          {
+            "distance_km": 12.795310354742094,
+            "fspl_db": 129.3882702762048,
+            "rx_dbm": -59.38827027620479,
+            "margin_db": 20.611729723795207,
+            "after_fade_db": 10.611729723795207
+          },
+          {
+            "distance_km": 0.7242628502684204,
+            "fspl_db": 104.44517797858227,
+            "rx_dbm": -34.445177978582265,
+            "margin_db": 45.554822021417735,
+            "after_fade_db": 35.554822021417735
+          }
+        ]
+      },
+      "direct_30m_nominal": {
+        "ratio": -19.79893354596638,
+        "at_km": 14.002415105189462,
+        "clearance_m": -99.86461946350892,
+        "hop_km": 14.485257005368409
+      },
+      "best_effort_40m": null
+    }
+  },
+  "distribution": [
+    {
+      "fade_margin_db": 0,
+      "range_m": 385.49905614804317
+    },
+    {
+      "fade_margin_db": 10,
+      "range_m": 187.72552132618867
+    },
+    {
+      "fade_margin_db": 15,
+      "range_m": 131.00061034017756
+    }
+  ]
+}
