@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wireless Link Planning &amp; RF Engineering | Mohammed Mahyoub</title>
+<meta name="description" content="Planned wireless coverage and point-to-point links end to end on Ubiquiti equipment, with VB.NET calculators for Fresnel-zone clearance and RF link budget.">
+<link rel="canonical" href="https://mahyoub88.github.io/projects/proj-wireless-link-planning/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wireless Link Planning &amp; RF Engineering">
+<meta property="og:description" content="Planned wireless coverage and point-to-point links end to end on Ubiquiti equipment, with VB.NET calculators for Fresnel-zone clearance and RF link budget.">
+<meta property="og:url" content="https://mahyoub88.github.io/projects/proj-wireless-link-planning/">
+<meta property="og:image" content="https://mahyoub88.github.io/images/project-covers/composed-v1/proj-wireless-link-planning.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg">
+<link rel="stylesheet" href="/projects/case-study.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<nav aria-label="Portfolio navigation">
+<a href="/">← Engineering portfolio</a>
+<a href="/projects/">All case studies</a>
+</nav>
+</header>
+<main id="main">
+<p class="eyebrow">Network Engineering · RF Planning</p>
+<h1>Wireless Link Planning &amp; RF Engineering</h1>
+<p class="lede">Planned wireless coverage and point-to-point links end to end on Ubiquiti equipment, with VB.NET calculators for Fresnel-zone clearance and RF link budget.</p>
+<span class="badge">Implemented Project</span>
+<figure class="hero-media">
+<a href="/images/project-covers/composed-v1/proj-wireless-link-planning.svg">
+<img src="/images/project-covers/composed-v1/proj-wireless-link-planning.svg" alt="Wireless link planning: sector coverage, line of sight with Fresnel zone clearance, and link budget" fetchpriority="high">
+</a>
+<figcaption>Composed engineering illustration · Open image for full detail.</figcaption>
+</figure>
+<div class="tags">
+<span>Ubiquiti</span>
+<span>RF Planning</span>
+<span>Point-to-Point</span>
+<span>Fresnel Zone</span>
+<span>Link Budget</span>
+<span>VB.NET</span>
+</div>
+<nav class="section-nav">
+<a href="#overview">Overview</a>
+<a href="#workflow">Planning workflow</a>
+<a href="#coverage-planning">1 · Coverage</a>
+<a href="#fresnel-clearance">2 · Path clearance</a>
+<a href="#link-budget">3 · Link budget</a>
+<a href="#integrated-review">Integrated review</a>
+<a href="#verification-context">Verification</a>
+<a href="#sources">Sources</a>
+</nav>
+<section id="overview">
+<h2>Overview</h2>
+<div class="summary">
+<h3>Implementation scope</h3>
+<p>A wireless link is only as good as its weakest planning assumption. This study treats coverage, path geometry and radio budget as one engineering workflow: where service is needed, whether the path between sites stays clear, and whether the receiver is left with usable margin. Wireless coverage and point-to-point planning were carried out on Ubiquiti equipment, supported by two VB.NET engineering calculators for Fresnel-zone clearance and RF link budget.</p>
+</div>
+<p>The three parts were originally documented separately. They are presented together here because a real link decision needs all of them: a good link budget cannot rescue an obstructed path, and a clear path does not prove there is enough signal at the receiver. Each part below states its inputs, its method and the evidence a reviewer should expect to inspect.</p>
+</section>
+<section id="workflow">
+<h2>Planning workflow</h2>
+<p>Each question is answered with its own method, then recorded in a single link decision record. Prediction and measurement are kept apart throughout: a model result is never presented as a field measurement.</p>
+<figure>
+<a href="media/planning-workflow.svg">
+<img loading="lazy" src="media/planning-workflow.svg" alt="Workflow from coverage need, path clearance, link budget and capacity into one link decision record, then alignment and field validation">
+</a>
+<figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
+</figure>
+<div class="table-scroll">
+<table>
+<caption>The four planning questions and the evidence each one needs</caption>
+<thead>
+<tr>
+<th scope="col">Stage</th>
+<th scope="col">Question</th>
+<th scope="col">Method and tool</th>
+<th scope="col">Evidence to inspect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 · Coverage</td>
+<td>Where can clients keep the required radio service?</td>
+<td>Coverage modelling and site planning on Ubiquiti equipment</td>
+<td>Radio and geometry assumptions attached to each coverage view</td>
+</tr>
+<tr>
+<td>2 · Path clearance</td>
+<td>Does the point-to-point path stay clear of obstructions?</td>
+<td>Line-of-sight and Fresnel-zone planning tool (VB.NET)</td>
+<td>Terrain profile, obstacle heights and the clearance criterion applied</td>
+</tr>
+<tr>
+<td>3 · Link budget</td>
+<td>Is there enough margin at the receiver?</td>
+<td>RF link-budget and propagation engine (VB.NET)</td>
+<td>Input units, propagation model, margin against sensitivity</td>
+</tr>
+<tr>
+<td>4 · Capacity</td>
+<td>Can the link carry the offered traffic?</td>
+<td>Separate review of radio rate and payload throughput</td>
+<td>Direction, offered load and test duration</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="coverage-planning">
+<h2>1 · Coverage and point-to-point site planning</h2>
+<p>Wireless coverage and point-to-point connectivity were modelled together, considering antenna alignment, capacity requirements and site coverage. Coverage describes where access is available; point-to-point planning describes the transport between sites. Antenna placement and alignment influence both the proposed link and its installation.</p>
+<figure>
+<a href="media/02-network-coverage.jpg">
+<img loading="lazy" src="media/02-network-coverage.jpg" alt="Wireless coverage and point-to-point planning — source project media">
+</a>
+<figcaption>Source project media · colour coverage view from the original planning work. It communicates spatial planning and is not a measured signal-strength survey.</figcaption>
+</figure>
+<p>Coverage asks where a client can maintain the required radio service. Backhaul asks whether the path between fixed endpoints has adequate propagation and clearance. Capacity asks whether the radio and network can deliver the required traffic under the defined load. Treating these as separate review paths keeps a nominally covered area from being presented as guaranteed throughput.</p>
+<p>A planning record needs the radio settings, antenna pattern, installation geometry and environmental assumptions associated with its prediction. Alignment should be reviewed against the intended endpoint and polarisation before optimising observed signal. No frequencies or sector counts are reconstructed from the low-resolution preview.</p>
+<figure>
+<a href="media/coverage-review.svg">
+<img loading="lazy" src="media/coverage-review.svg" alt="Coverage, backhaul and capacity answer different questions — explanatory engineering review">
+</a>
+<figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
+</figure>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Review area</th>
+<th scope="col">Method</th>
+<th scope="col">Evidence to inspect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coverage prediction</td>
+<td>State radio and geometry assumptions</td>
+<td>Model context attached to its coverage view</td>
+</tr>
+<tr>
+<td>Path alignment</td>
+<td>Check endpoint direction and polarisation</td>
+<td>Alignment record linked to link quality</td>
+</tr>
+<tr>
+<td>Capacity</td>
+<td>Separate negotiated rate from payload throughput</td>
+<td>Direction, load and test duration recorded</td>
+</tr>
+<tr>
+<td>Field review</td>
+<td>Associate observations with locations and conditions</td>
+<td>Measured points separated from predictions</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="fresnel-clearance">
+<h2>2 · Line of sight and Fresnel-zone clearance</h2>
+<p>A point-to-point link needs more than a visible sight line. The planning tool addresses line-of-sight and Fresnel-zone clearance: the link budget evaluates power, while the path profile evaluates geometry and obstruction.</p>
+<figure>
+<a href="media/03-fresnel-tool.jpg">
+<img loading="lazy" src="media/03-fresnel-tool.jpg" alt="Line-of-sight and Fresnel planning — source document view">
+</a>
+<figcaption>Source project media · interface and document view of the planning tool, not an installed radio-link photograph.</figcaption>
+</figure>
+<p>The first Fresnel radius varies along the path. With wavelength λ and distances d1 and d2 from the inspected point to the endpoints, r1 = sqrt(λ d1 d2 / (d1 + d2)), using metres consistently. The maximum radius occurs at the midpoint for a level path, but the critical clearance point can lie elsewhere where terrain or an obstacle rises.</p>
+<div class="formula">
+<code>λ = c / f</code>
+<br>
+<code>r1 = sqrt(λ × d1 × d2 / (d1 + d2))</code>
+<br>
+<code>LOS(x) = Ht + (Hr − Ht) × x / D</code>
+<br>
+<code>Earth bulge(x) ≈ x × (D − x) / (2 × k × RE)</code>
+<br>
+<code>Clearance = LOS − terrain − obstacle − Earth bulge</code>
+</div>
+<p>All lengths use metres and frequency uses Hz. A 60% first-zone clearance is an initial planning target, subject to the path, refraction and availability assumptions; it is not a guarantee of link performance. ITU-R P.530 considers climate, effective Earth radius, diffraction and availability requirements when specifying clearance. Avoid applying the curvature correction twice.</p>
+<p>A complete review combines endpoint elevations and antenna heights with a terrain profile, obstacle heights and the selected refraction assumptions. Straight-line visibility alone can conceal Fresnel obstruction. Any recommended mast height must identify its survey inputs; the available material does not support a site-specific height recommendation.</p>
+<figure>
+<a href="media/fresnel-review.svg">
+<img loading="lazy" src="media/fresnel-review.svg" alt="Clearance is a path profile, not only a sight line — explanatory engineering review">
+</a>
+<figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
+</figure>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Review area</th>
+<th scope="col">Method</th>
+<th scope="col">Evidence to inspect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Midpoint check</td>
+<td>Evaluate equal endpoint distances</td>
+<td>Maximum r1 for the same unobstructed path</td>
+</tr>
+<tr>
+<td>Frequency scaling</td>
+<td>Increase frequency by a factor of four</td>
+<td>Radius becomes half</td>
+</tr>
+<tr>
+<td>Off-centre obstacle</td>
+<td>Evaluate its actual d1 and d2</td>
+<td>Local radius used, not midpoint radius</td>
+</tr>
+<tr>
+<td>Site acceptance</td>
+<td>Review terrain and effective-radius assumptions</td>
+<td>Documented profile and applicable clearance criterion</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="link-budget">
+<h2>3 · RF link budget and propagation analysis</h2>
+<p>The VB.NET engineering calculator addresses path loss, receiver sensitivity, thermal noise and link-budget calculations. A walkthrough must expose input units and assumptions as well as the output, so a reviewer can recompute a result without access to the original source code.</p>
+<figure>
+<a href="media/01-rf-tool.jpg">
+<img loading="lazy" src="media/01-rf-tool.jpg" alt="RF calculator — original interface and calculation fields">
+</a>
+<figcaption>Source project media · original calculator interface and calculation fields.</figcaption>
+</figure>
+<p>The interface takes frequency, distance, antenna heights, transmit power, antenna gains, cable and polarisation losses, system margin, terrain and the effective-Earth factor, and groups results into path loss, Fresnel clearance, link budget, receiver sensitivity and a received-power chart.</p>
+<div class="formula">
+<code>FSPL (dB) = 32.44 + 20 log10(f in MHz) + 20 log10(d in km)</code>
+<br>
+<code>EIRP (dBm) = Pt + Gt − Lt</code>
+<br>
+<code>Pr (dBm) = Pt + Gt + Gr − Lt − Lr − Lpath − Lother</code>
+<br>
+<code>Available margin (dB) = Pr − receiver sensitivity</code>
+<br>
+<code>Noise at ~290 K (dBm) ≈ −174 + 10 log10(B in Hz) + NF</code>
+</div>
+<p>Gains are dBi; losses and margins are dB; absolute powers and sensitivity are dBm. Free-space path loss is only one part of the propagation model: obstacles, diffraction, atmospheric effects and interference can change a field link, so a positive calculated margin is not a recorded availability or throughput result. The receiver threshold depends on bandwidth, modulation and required quality, so datasheet sensitivity is kept distinct from a sensitivity calculated from noise and required SNR.</p>
+<h3>Recalculation of the displayed example</h3>
+<p>For 5800 MHz and 5.02 km, with 20 dBm transmit power, 15 dBi gain at each end and 1 dB cable loss at each end, assuming free-space propagation and no other losses:</p>
+<div class="table-scroll">
+<table>
+<caption>Source-poster values compared with an independently recalculated scenario</caption>
+<thead>
+<tr>
+<th scope="col">Quantity</th>
+<th scope="col">Poster</th>
+<th scope="col">Recalculated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EIRP</td>
+<td>34 dBm</td>
+<td>34 dBm</td>
+</tr>
+<tr>
+<td>FSPL</td>
+<td>120.535 dB</td>
+<td>121.72 dB</td>
+</tr>
+<tr>
+<td>Received power</td>
+<td>−72.535 dBm</td>
+<td>−73.72 dBm</td>
+</tr>
+<tr>
+<td>Margin above −85 dBm sensitivity</td>
+<td>About 12.46 dB</td>
+<td>11.28 dB</td>
+</tr>
+<tr>
+<td>Remainder after 10 dB target</td>
+<td>Not separately defined</td>
+<td>1.28 dB</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The displayed received power agrees with the displayed loss, but that loss does not agree with the visible frequency and distance. This is a discrepancy in the poster; without application source it does not identify the cause or prove a software defect. The original image is preserved as source evidence. At 20 MHz bandwidth and 5 dB noise figure, equivalent receiver noise is approximately −95.99 dBm; the poster’s roughly −101 dBm corresponds to thermal noise before adding noise figure, so the two quantities are labelled separately.</p>
+<figure>
+<a href="media/link-budget-review.svg">
+<img loading="lazy" src="media/link-budget-review.svg" alt="Keeping power, loss and margin in consistent units — explanatory engineering review">
+</a>
+<figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
+</figure>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Review area</th>
+<th scope="col">Method</th>
+<th scope="col">Evidence to inspect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit conversion</td>
+<td>Enter equivalent GHz and MHz representations</td>
+<td>Same FSPL after explicit conversion</td>
+</tr>
+<tr>
+<td>Distance scaling</td>
+<td>Double distance in free space</td>
+<td>FSPL increases by about 6.02 dB</td>
+</tr>
+<tr>
+<td>Additional loss</td>
+<td>Add 3 dB cable loss</td>
+<td>Received power and margin drop by 3 dB</td>
+</tr>
+<tr>
+<td>Invalid input</td>
+<td>Zero or negative frequency or distance</td>
+<td>Reject before logarithmic calculation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="integrated-review">
+<h2>Putting it together: one link, three checks</h2>
+<p>The same illustrative path is carried through all three stages to show how the checks combine into a decision. The values are independently computed example inputs, not recovered deployment parameters.</p>
+<div class="table-scroll">
+<table>
+<caption>Illustrative 2 km point-to-point path at 5 GHz</caption>
+<thead>
+<tr>
+<th scope="col">Stage</th>
+<th scope="col">Calculation</th>
+<th scope="col">Result</th>
+<th scope="col">Reading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Path clearance</td>
+<td>λ ≈ 0.060 m; r1 at midpoint</td>
+<td>≈ 5.48 m (60% ≈ 3.29 m)</td>
+<td>Terrain and obstacles must stay below the line of sight by at least the clearance target</td>
+</tr>
+<tr>
+<td>Path loss</td>
+<td>32.44 + 20 log10(5000) + 20 log10(2)</td>
+<td>≈ 112.44 dB</td>
+<td>Free-space loss only; other losses added separately</td>
+</tr>
+<tr>
+<td>Received power</td>
+<td>20 dBm + 20 dBi + 20 dBi − 2 dB − 112.44 dB</td>
+<td>≈ −54.44 dBm</td>
+<td>Nominal level at the receiver input</td>
+</tr>
+<tr>
+<td>Margin</td>
+<td>−54.44 dBm − (−75 dBm sensitivity)</td>
+<td>≈ 20.56 dB</td>
+<td>Compared with the required fade margin, not treated as availability</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>A passing link budget does not remove a clearance deficit, and a clear path does not prove margin. The decision record therefore lists all three results with their assumptions, then hands over to alignment and field validation, where measured values are recorded separately from these predictions.</p>
+</section>
+<section id="engineering">
+<h2>Engineering approach</h2>
+<ul>
+<li>Separate coverage, path clearance, link budget and capacity, then combine them in one decision record.</li>
+<li>Expose input units and assumptions with every calculated result so it can be recomputed independently.</li>
+<li>Treat standards such as ITU-R P.530 as design context that does not replace a radio data sheet or site survey.</li>
+<li>Keep predictions, calculator outputs and field measurements clearly distinguished.</li>
+</ul>
+<p class="source-note">The two VB.NET calculators support analysis and are distinct from the Ubiquiti wireless network work, which documents the planning deliverable.</p>
+</section>
+<section id="verification-context">
+<h2>Verification context</h2>
+<p>The functional diagrams explain the engineering responsibilities of each part. The original source previews appear above. As-built addressing, configuration exports and raw acceptance records are not included in the public release. No new coverage heatmap, site coordinates, survey data or throughput measurement is fabricated.</p>
+<p>
+<a href="https://github.com/Mahyoub88/rf-mpls-network-design/blob/main/docs/verification-context.md">Detailed verification boundaries and technical source context</a>
+</p>
+</section>
+<section id="sources">
+<h2>Source documentation</h2>
+<ul>
+<li>
+<a href="https://github.com/Mahyoub88/rf-mpls-network-design">Wireless coverage and network planning — rf-mpls-network-design</a>
+</li>
+<li>
+<a href="https://github.com/Mahyoub88/dotnet-monitoring-apps">Fresnel and link-budget calculators — dotnet-monitoring-apps</a>
+</li>
+<li>
+<a href="https://www.itu.int/rec/R-REC-P.530/en">ITU-R P.530 — terrestrial line-of-sight link design</a>
+</li>
+<li>
+<a href="https://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.525-5-202411-I%21%21PDF-E.pdf">ITU-R P.525 — free-space attenuation</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project record</a>
+</li>
+</ul>
+</section>
+<nav class="project-pagination" aria-label="More case studies">
+<a href="/projects/proj-service-operations/">← Service Operations &amp; Technical Documentation Management System</a>
+<a href="/projects/proj-enterprise-network/">Enterprise Wireless &amp; Network Infrastructure Architecture →</a>
+</nav>
+</main>
+<footer>Mohammed Mahyoub · Source media, explanatory diagrams and recorded results are identified in their captions.</footer>
+</body>
+</html>

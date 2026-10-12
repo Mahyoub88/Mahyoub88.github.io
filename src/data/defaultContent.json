@@ -1092,65 +1092,24 @@
       "coverLightImage": "/images/project-covers/engineering-v3/proj-service-operations.webp"
     },
     {
-      "id": "proj-rf-link-budget",
+      "id": "proj-wireless-link-planning",
       "group": "earlier",
-      "category": "Engineering Software · RF Analysis",
-      "title": "RF Link Budget & Propagation Analysis Engine",
-      "description": "Developed a VB.NET engineering calculator for path loss, link budget, receiver sensitivity, thermal noise and RF propagation analysis.",
+      "category": "Network Engineering · RF Planning",
+      "title": "Wireless Link Planning & RF Engineering",
+      "description": "Planned wireless coverage and point-to-point links end to end on Ubiquiti equipment, with VB.NET calculators for Fresnel-zone clearance and RF link budget.",
       "meta": [
         {
           "label": "Scope",
-          "value": "The tool relates transmit power, antenna gains and propagation loss to the receive level used in link assessment. Its screenshot belongs to a standalone calculator rather than the monitoring application."
+          "value": "One planning workflow in three checks: coverage and antenna alignment, line-of-sight and Fresnel clearance, and link budget against receiver sensitivity. Each check states its inputs and assumptions; predictions are kept separate from field measurements."
         }
       ],
       "tags": [
-        "VB.NET",
-        "RF",
-        "Link Budget",
-        "Path Loss",
-        "Receiver Sensitivity"
-      ],
-      "status": {
-        "kind": "professional",
-        "label": "Implemented Project"
-      },
-      "link": "",
-      "links": [
-        {
-          "label": "Read case study",
-          "href": "/projects/proj-rf-link-budget/"
-        },
-        {
-          "label": "View repository",
-          "href": "https://github.com/Mahyoub88/dotnet-monitoring-apps"
-        }
-      ],
-      "accent": "blue",
-      "image": "/projects/proj-rf-link-budget/media/01-rf-tool.jpg",
-      "imageAlt": "RF calculator — original interface and calculation fields",
-      "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/themed-v4/proj-rf-link-budget.webp",
-      "coverAlt": "Engineering illustration of rf link budget: transmit power, antenna gain, path loss, receive level",
-      "coverCaption": "AI-generated project cover illustration",
-      "coverLightImage": "/images/project-covers/engineering-v3/proj-rf-link-budget.webp"
-    },
-    {
-      "id": "proj-fresnel-planning",
-      "group": "earlier",
-      "category": "Engineering Software · Wireless Planning",
-      "title": "Line-of-Sight & Fresnel Zone Wireless Planning Tool",
-      "description": "Developed a planning tool for line-of-sight analysis and Fresnel-zone clearance in point-to-point wireless links.",
-      "meta": [
-        {
-          "label": "Scope",
-          "value": "Line-of-sight establishes the direct path between antennas. Fresnel analysis examines clearance around that path, giving the planner a different view from a power-only link budget."
-        }
-      ],
-      "tags": [
-        "VB.NET",
-        "Line of Sight",
+        "Ubiquiti",
+        "RF Planning",
+        "Point-to-Point",
         "Fresnel Zone",
-        "Wireless Planning"
+        "Link Budget",
+        "VB.NET"
       ],
       "status": {
         "kind": "professional",
@@ -1160,21 +1119,25 @@
       "links": [
         {
           "label": "Read case study",
-          "href": "/projects/proj-fresnel-planning/"
+          "href": "/projects/proj-wireless-link-planning/"
         },
         {
-          "label": "View repository",
+          "label": "Network planning repository",
+          "href": "https://github.com/Mahyoub88/rf-mpls-network-design"
+        },
+        {
+          "label": "Calculators repository",
           "href": "https://github.com/Mahyoub88/dotnet-monitoring-apps"
         }
       ],
       "accent": "blue",
-      "image": "/projects/proj-fresnel-planning/media/03-fresnel-tool.jpg",
-      "imageAlt": "Line-of-sight and Fresnel planning — source document view",
-      "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/themed-v4/proj-fresnel-planning.webp",
-      "coverAlt": "Engineering illustration of fresnel & line of sight: antenna a, line of sight, fresnel zone, clearance",
-      "coverCaption": "AI-generated project cover illustration",
-      "coverLightImage": "/images/project-covers/engineering-v3/proj-fresnel-planning.webp"
+      "image": "/images/project-covers/composed-v1/proj-wireless-link-planning.svg",
+      "imageAlt": "Wireless link planning: sector coverage, line of sight with Fresnel zone clearance, and link budget",
+      "imageCaption": "Composed engineering illustration",
+      "coverImage": "/images/project-covers/composed-v1/proj-wireless-link-planning.svg",
+      "coverAlt": "Engineering illustration of wireless link planning: sector coverage, line of sight, Fresnel zone clearance and the link-budget relation Pr = Pt + Gt + Gr − L",
+      "coverCaption": "Composed engineering illustration",
+      "coverLightImage": "/images/project-covers/composed-v1/proj-wireless-link-planning-light.svg"
     },
     {
       "id": "proj-enterprise-network",
@@ -1218,48 +1181,6 @@
       "coverAlt": "Engineering illustration of enterprise network: vpn / edge, core switch, lan / wlan, cctv",
       "coverCaption": "AI-generated project cover illustration",
       "coverLightImage": "/images/project-covers/engineering-v3/proj-enterprise-network.webp"
-    },
-    {
-      "id": "proj-wireless-coverage",
-      "group": "earlier",
-      "category": "Network Engineering · RF Planning",
-      "title": "Wireless Coverage & Point-to-Point Network Planning",
-      "description": "Modelled wireless coverage and point-to-point connectivity, considering antenna alignment, capacity requirements and site coverage.",
-      "meta": [
-        {
-          "label": "Scope",
-          "value": "Coverage describes where access is available; point-to-point planning describes the transport between sites. Antenna placement and alignment influence both the proposed link and its installation."
-        }
-      ],
-      "tags": [
-        "Ubiquiti",
-        "RF Planning",
-        "Wireless Coverage",
-        "Point-to-Point"
-      ],
-      "status": {
-        "kind": "professional",
-        "label": "Implemented Project"
-      },
-      "link": "",
-      "links": [
-        {
-          "label": "Read case study",
-          "href": "/projects/proj-wireless-coverage/"
-        },
-        {
-          "label": "View repository",
-          "href": "https://github.com/Mahyoub88/rf-mpls-network-design"
-        }
-      ],
-      "accent": "amber",
-      "image": "/projects/proj-wireless-coverage/media/02-network-coverage.jpg",
-      "imageAlt": "Wireless coverage and point-to-point planning — source project media",
-      "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/themed-v4/proj-wireless-coverage.webp",
-      "coverAlt": "Engineering illustration of wireless coverage planning: coverage, antenna alignment, point-to-point, site plan",
-      "coverCaption": "AI-generated project cover illustration",
-      "coverLightImage": "/images/project-covers/engineering-v3/proj-wireless-coverage.webp"
     },
     {
       "id": "proj-mpls-backbone",

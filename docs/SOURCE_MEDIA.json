@@ -178,32 +178,18 @@
       "sha256": "8042fffb8bbf23392ddc8d30c3cfe5a072eddc00638ebe21397cf68be0d40c04"
     },
     {
-      "path": "public/projects/proj-fresnel-planning/media/03-fresnel-tool.jpg",
+      "path": "public/projects/proj-wireless-link-planning/media/03-fresnel-tool.jpg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/overview/fresnel-tool.jpg",
       "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "18f650daf2f59e25172acb797ec1329e0d76f21983de5f2c33858120416656af"
     },
     {
-      "path": "public/projects/proj-fresnel-planning/media/architecture.svg",
-      "repository": "Mahyoub88/dotnet-monitoring-apps",
-      "source": "docs/projects/proj-fresnel-planning/architecture.svg",
-      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
-      "sha256": "a8313d7d140c4a96296e268a7e7d5f18924750f9bfa7e86fe7a5e01748074412"
-    },
-    {
-      "path": "public/projects/proj-fresnel-planning/media/engineering-review.svg",
+      "path": "public/projects/proj-wireless-link-planning/media/fresnel-review.svg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/technical-walkthroughs/proj-fresnel-planning-review.svg",
       "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "08dd16d1f803a0914c4efab783e1180c4810feeb4603ecc92d2884185f86df33"
-    },
-    {
-      "path": "public/projects/proj-fresnel-planning/media/workflow.svg",
-      "repository": "Mahyoub88/dotnet-monitoring-apps",
-      "source": "docs/projects/proj-fresnel-planning/workflow.svg",
-      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
-      "sha256": "a769563aecafdaf8bf7935a68776efecd2363af2e290a51d9ae6d91c0eba07d4"
     },
     {
       "path": "public/projects/proj-ims-voip-volte/media/08-01_cucm_cli_vmware.webp",
@@ -794,32 +780,18 @@
       "sha256": "ab23f694349d98f84707e87aee77ed3f89d8c9c015c6a5e86f2f8aa95b21a0a8"
     },
     {
-      "path": "public/projects/proj-rf-link-budget/media/01-rf-tool.jpg",
+      "path": "public/projects/proj-wireless-link-planning/media/01-rf-tool.jpg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/overview/rf-tool.jpg",
       "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "a4ac81b42527b146b3e173d6883b86b07d0bee3980f783caff074d8ceb04e3b9"
     },
     {
-      "path": "public/projects/proj-rf-link-budget/media/architecture.svg",
-      "repository": "Mahyoub88/dotnet-monitoring-apps",
-      "source": "docs/projects/proj-rf-link-budget/architecture.svg",
-      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
-      "sha256": "fd458e6fa5196c1af01cf0d6fdc34ca1f2fa66fcae3f3c926828cb6b0fdd67fb"
-    },
-    {
-      "path": "public/projects/proj-rf-link-budget/media/engineering-review.svg",
+      "path": "public/projects/proj-wireless-link-planning/media/link-budget-review.svg",
       "repository": "Mahyoub88/dotnet-monitoring-apps",
       "source": "docs/technical-walkthroughs/proj-rf-link-budget-review.svg",
       "commit": "1d66df24c019e7909995c45face553ef04577ce6",
       "sha256": "7ebcd9683f44ae1b4a766da9ce001c934a85986cd9ff95ccf60d8b5743f9f331"
-    },
-    {
-      "path": "public/projects/proj-rf-link-budget/media/workflow.svg",
-      "repository": "Mahyoub88/dotnet-monitoring-apps",
-      "source": "docs/projects/proj-rf-link-budget/workflow.svg",
-      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
-      "sha256": "85b62d7bbb13a3e26e385685c664e16432804517b51a8cd261af69b078847dc9"
     },
     {
       "path": "public/projects/proj-rfid-study/media/01-01_how_rfid_works.webp",
@@ -1074,32 +1046,32 @@
       "sha256": "70572ab3f6789720a14832c5fa84d99a1d8636c38c365bf56cb030bec64c3606"
     },
     {
-      "path": "public/projects/proj-wireless-coverage/media/02-network-coverage.jpg",
+      "path": "public/projects/proj-wireless-link-planning/media/02-network-coverage.jpg",
       "repository": "Mahyoub88/rf-mpls-network-design",
       "source": "docs/overview/network-coverage.jpg",
       "commit": "de4a6829c00562e5f3f46ca059331ed96e159e18",
       "sha256": "1363ee21655109dd40a826a4de207f48e37d7f7b8733e46804ae3f18114c5c08"
     },
     {
-      "path": "public/projects/proj-wireless-coverage/media/architecture.svg",
-      "repository": "Mahyoub88/rf-mpls-network-design",
-      "source": "docs/projects/proj-wireless-coverage/architecture.svg",
-      "commit": "de4a6829c00562e5f3f46ca059331ed96e159e18",
-      "sha256": "3fc96488f56fb4f131d1a5b9944fb1ed1216a6a6f1e773577b73bbe5b523ac95"
-    },
-    {
-      "path": "public/projects/proj-wireless-coverage/media/engineering-review.svg",
+      "path": "public/projects/proj-wireless-link-planning/media/coverage-review.svg",
       "repository": "Mahyoub88/rf-mpls-network-design",
       "source": "docs/technical-walkthroughs/proj-wireless-coverage-review.svg",
       "commit": "de4a6829c00562e5f3f46ca059331ed96e159e18",
       "sha256": "fcd5c55463ed89619d8cc6a980942cfdebab28037f1868f1b92b03457547a241"
     },
     {
-      "path": "public/projects/proj-wireless-coverage/media/workflow.svg",
-      "repository": "Mahyoub88/rf-mpls-network-design",
-      "source": "docs/projects/proj-wireless-coverage/workflow.svg",
-      "commit": "de4a6829c00562e5f3f46ca059331ed96e159e18",
-      "sha256": "4b939fb757410feef635458f602591587593c40c5fce6a076b9c162e4c7e588f"
+      "path": "public/projects/proj-wireless-link-planning/media/fresnel-workflow.svg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/projects/proj-fresnel-planning/workflow.svg",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
+      "sha256": "a769563aecafdaf8bf7935a68776efecd2363af2e290a51d9ae6d91c0eba07d4"
+    },
+    {
+      "path": "public/projects/proj-wireless-link-planning/media/link-budget-architecture.svg",
+      "repository": "Mahyoub88/dotnet-monitoring-apps",
+      "source": "docs/projects/proj-rf-link-budget/architecture.svg",
+      "commit": "1d66df24c019e7909995c45face553ef04577ce6",
+      "sha256": "fd458e6fa5196c1af01cf0d6fdc34ca1f2fa66fcae3f3c926828cb6b0fdd67fb"
     }
   ]
 }
