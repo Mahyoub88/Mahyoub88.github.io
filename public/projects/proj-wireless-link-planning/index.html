@@ -407,10 +407,36 @@
 </tbody>
 </table>
 </div>
+<h3>The route on the ground</h3>
+<p>The images below show the real terrain along the route, rendered from public elevation data and OpenStreetMap. They are not photographs of the installation. The mountain-top relay is the highest point of the route and Al-Sharq lies far below it.</p>
+<figure>
+<a href="media/atma-al-sharq-osm.webp">
+<img loading="lazy" src="media/atma-al-sharq-osm.webp" alt="OpenStreetMap map showing the route from Atma to the MTN tower site and on to Al-Sharq city">
+</a>
+<figcaption>The two hops on an OpenStreetMap basemap. Map data © OpenStreetMap contributors, available under the Open Database Licence.</figcaption>
+</figure>
+<figure>
+<a href="media/atma-al-sharq-3d.webp">
+<img loading="lazy" src="media/atma-al-sharq-3d.webp" alt="Oblique three-dimensional terrain view from the south with Atma, the MTN tower site and Al-Sharq marked">
+</a>
+<figcaption>Oblique view from the south with the vertical scale exaggerated 1.6 times, rendered from public 90 m elevation data. Mast markers are drawn tall for visibility.</figcaption>
+</figure>
+<figure>
+<a href="media/atma-al-sharq-relief.webp">
+<img loading="lazy" src="media/atma-al-sharq-relief.webp" alt="Shaded relief map of the area with the two hops marked">
+</a>
+<figcaption>Shaded relief with the two hops, rendered from public 90 m elevation data.</figcaption>
+</figure>
+<figure>
+<a href="media/atma-al-sharq-architecture.svg">
+<img loading="lazy" src="media/atma-al-sharq-architecture.svg" alt="Network architecture from Atma through the MTN tower site to the Al-Sharq core and seven distribution zones">
+</a>
+<figcaption>Network architecture. Design proposal, not an as-built drawing.</figcaption>
+</figure>
 <h3>Method and inputs</h3>
 <ul>
 <li>
-<strong>Terrain:</strong> 61 elevation samples per hop from the public Copernicus 90 m model. Site coordinates are approximate to about 1 km in the repository and are not survey positions.</li>
+<strong>Terrain:</strong> 61 elevation samples per hop from the public Copernicus 90 m model. Site coordinates are approximate to about 1 km in the repository and are not survey positions; the map images show positions only at map scale.</li>
 <li>
 <strong>Radio figures:</strong> manufacturer-reported values for the named equipment, from the Ubiquiti TechSpecs pages for the <a href="https://techspecs.ui.com/uisp/wireless/pbe-m5-400">PowerBeam M5 400</a>, the <a href="https://techspecs.ui.com/uisp/wireless/rd-5g">RocketDish</a> and the <a href="https://techspecs.ui.com/uisp/wireless/nsm2">NanoStation M2</a>, and the Rocket M datasheet: 25 dBi and up to 26 dBm for the PowerBeam, 34 dBi with a beamwidth near 3° for the dish, up to 27 dBm for the Rocket M5, and sensitivity from −96 dBm (MCS0) to −74 dBm (MCS7), each with a ±2 dB tolerance. Transmit power falls at the higher rates, and the model follows that.</li>
 <li>
@@ -732,6 +758,149 @@
 <li>Alignment on the 34 dBi dish is demanding: tilt near −5° and aim to about one degree.</li>
 <li>Real availability will be set by relay-site power, lightning protection, wind and interference rather than by propagation.</li>
 <li>Distribution capacity and coverage, not the backhaul, are the likely limits for users in Al-Sharq.</li>
+</ul>
+<h3>Recommended configuration (design proposal)</h3>
+<p>These settings follow from the simulation and from common practice for this class of equipment. They are proposals for commissioning, not the settings recorded in the deployment. Regulatory limits on channels and radiated power differ by country and must be checked before use.</p>
+<div class="table-scroll">
+<table>
+<caption>Backhaul radio settings</caption>
+<thead>
+<tr>
+<th scope="col">Setting</th>
+<th scope="col">Recommendation</th>
+<th scope="col">Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Channel plan</td>
+<td>Run a spectrum scan at each end and choose the quietest 5 GHz channels. Use channels at least 60 MHz apart for the two hops.</td>
+<td>Both hops end on the same mast at the relay site, so adjacent channels would interfere with each other.</td>
+</tr>
+<tr>
+<td>Channel width</td>
+<td>20 MHz at commissioning. Move to 40 MHz only if the scan is clean and the measured margin allows it.</td>
+<td>A wider channel roughly doubles capacity but costs about 3 dB of sensitivity and picks up more interference.</td>
+</tr>
+<tr>
+<td>Transmit power, hop 1</td>
+<td>Start at the maximum and trim to keep the planned rate with at least 10 dB of margin.</td>
+<td>The predicted margin at the top rate is 14.9 dB, so there is little room to reduce power.</td>
+</tr>
+<tr>
+<td>Transmit power, hop 2</td>
+<td>Reduce by about 10 dB from the maximum.</td>
+<td>The predicted received level is very high. A 10 dB cut still leaves about 18 dB of margin at the top rate and lowers interference and radiated power.</td>
+</tr>
+<tr>
+<td>Antenna placement at the relay</td>
+<td>Separate the two dishes vertically by at least 2 m and keep them cross-polarised.</td>
+<td>Reduces coupling between the two radios on one mast.</td>
+</tr>
+<tr>
+<td>Link mode</td>
+<td>Point-to-point bridge pair with the vendor’s TDMA scheduling enabled.</td>
+<td>Avoids contention on a fixed link and gives predictable latency.</td>
+</tr>
+<tr>
+<td>Management</td>
+<td>Change default credentials, allow only encrypted management on a separate VLAN, keep identical firmware at both ends.</td>
+<td>Basic security and easier fault finding.</td>
+</tr>
+<tr>
+<td>Monitoring</td>
+<td>Log received level, noise, rate and uptime for both hops with SNMP.</td>
+<td>Provides the evidence needed for the acceptance table.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-scroll">
+<table>
+<caption>Network and distribution settings</caption>
+<thead>
+<tr>
+<th scope="col">Area</th>
+<th scope="col">Recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VLANs</td>
+<td>Separate management, transport and subscriber traffic. Keep radio management off the subscriber network.</td>
+</tr>
+<tr>
+<td>Core router (RB AH 1100)</td>
+<td>Routing, DHCP, firewall and per-subscriber bandwidth queues. Block management services on the subscriber side.</td>
+</tr>
+<tr>
+<td>Combining internet lines (RB 750)</td>
+<td>Combine the lines with health checks, so that traffic shifts when one line fails.</td>
+</tr>
+<tr>
+<td>Access cells (NanoStation M2)</td>
+<td>Use non-overlapping 2.4 GHz channels (1, 6 and 11) across neighbouring zones, 20 MHz wide, with client isolation enabled.</td>
+</tr>
+<tr>
+<td>Cell power</td>
+<td>Trim each cell’s transmit power to just cover its zone, to limit co-channel interference between zones.</td>
+</tr>
+<tr>
+<td>Client antennas</td>
+<td>Use directional client units aimed at the nearest access point, as the coverage curves assume.</td>
+</tr>
+<tr>
+<td>Quality of service</td>
+<td>Give priority to name lookups and voice traffic on the shared backhaul.</td>
+</tr>
+<tr>
+<td>Backups</td>
+<td>Export the configuration of every device after commissioning and after each change.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Relay site power and installation (design proposal)</h3>
+<p>The MTN relay runs two radios, about 18 W including injector losses, which is about 420 Wh per day. For three days of autonomy and 4.5 peak sun hours, the calculation gives the sizing below. The result is a starting point and should be revised with the measured load and the real insolation at the site.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Component</th>
+<th scope="col">Sizing</th>
+<th scope="col">Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Solar array</td>
+<td>at least 134 W, recommended about 200 W (for example 2 × 100 W)</td>
+<td>422 Wh per day, 4.5 peak sun hours, 70% system efficiency, 1.5 margin</td>
+</tr>
+<tr>
+<td>Battery bank, 12 V</td>
+<td>about 155 Ah lithium iron phosphate, or about 250 Ah lead-acid</td>
+<td>3 days of autonomy, 80% and 50% usable depth of discharge</td>
+</tr>
+<tr>
+<td>Charge regulator</td>
+<td>MPPT, 25 to 30 A</td>
+<td>About 21 A from the array, with margin</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure>
+<a href="media/atma-al-sharq-relay-site.svg">
+<img loading="lazy" src="media/atma-al-sharq-relay-site.svg" alt="Sketch of the relay mast with two dishes and the solar power chain feeding two radios">
+</a>
+<figcaption>Relay site mast and solar power chain with the sizing results. Design proposal, not an as-built drawing.</figcaption>
+</figure>
+<ul>
+<li>Mast heights: 10 to 15 m at both ends of hop 2 and about 6 m on hop 1, with the first kilometre around each hop 2 site checked for trees and buildings.</li>
+<li>Alignment: coarse aiming with a compass and the airLink plan, fine aiming on received level, then lock the mounts. Re-check after the first strong winds.</li>
+<li>Weather and lightning: shielded outdoor cable, drip loops, sealed connectors, a surge protector at each end of every outdoor Ethernet run, and one earth electrode shared by the mast, the array and the cabinet.</li>
+<li>Safety: plan work at height and avoid climbing during storms.</li>
 </ul>
 <h3>Field acceptance criteria</h3>
 <p>These criteria turn each prediction into a check an installer can run. The measured column stays empty until real readings exist.</p>

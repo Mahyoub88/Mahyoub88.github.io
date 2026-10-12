@@ -1,0 +1,25 @@
+{
+  "assumptions": {
+    "radio_w": [
+      8,
+      8
+    ],
+    "overhead": 0.1,
+    "autonomy_days": 3,
+    "system_voltage_v": 12,
+    "peak_sun_hours_design": 4.5,
+    "pv_system_efficiency": 0.7,
+    "pv_margin": 1.5,
+    "battery_roundtrip": 0.85,
+    "dod_lead_acid": 0.5,
+    "dod_lifepo4": 0.8,
+    "controller_margin": 1.25
+  },
+  "load_w": 17.6,
+  "daily_wh": 422.40000000000003,
+  "pv_minimum_w": 134.0952380952381,
+  "pv_recommended_w": 201.14285714285717,
+  "battery_ah_lead_acid_12v": 248.47058823529414,
+  "battery_ah_lifepo4_12v": 155.29411764705884,
+  "controller_a": 20.952380952380953
+}
