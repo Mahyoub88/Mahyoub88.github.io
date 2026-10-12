@@ -10,7 +10,7 @@ Generated from `src/data/defaultContent.json` using `npm run sync:projects`. The
 6. [Software-Defined Networking — Automation & Video Streaming](https://mahyoub88.github.io/projects/proj-sdn/) — [View repository](https://github.com/Mahyoub88/sdn-openflow-lab)
 7. [IMS Multimedia Services — VoIP, IPTV & VoLTE](https://mahyoub88.github.io/projects/proj-ims-voip-volte/) — [View repository](https://github.com/Mahyoub88/ims-voip-iptv-volte-lab)
 8. [Software-Defined Data Center (SDDC) — Design & Implementation](https://mahyoub88.github.io/projects/proj-sddc-lab/) — [View repository](https://github.com/Mahyoub88/sddc-lab-implementation)
-9. [PIC Embedded Systems — Peripheral Integration & Persistent Storage](https://mahyoub88.github.io/projects/proj-embedded-iot/) — [View repository](https://github.com/Mahyoub88/embedded-iot-automation)
+9. [PIC-Based Equipment Room Monitoring & Control System](https://mahyoub88.github.io/projects/proj-embedded-iot/) — [View repository](https://github.com/Mahyoub88/embedded-iot-automation)
 10. [RFID Library Automation System (ISO 15693)](https://mahyoub88.github.io/projects/proj-rfid-study/) — [View repository](https://github.com/Mahyoub88/rfid-library-automation)
 11. [Solar Energy Systems — Design, Sizing & Deployment](https://mahyoub88.github.io/projects/proj-solar-study/) — [View repository](https://github.com/Mahyoub88/solar-energy-systems)
 12. [Industrial Automation & PLC-Based Control Systems](https://mahyoub88.github.io/projects/proj-plc-control/) — [View repository](https://github.com/Mahyoub88/industrial-automation-plc)

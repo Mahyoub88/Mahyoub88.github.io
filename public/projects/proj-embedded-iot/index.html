@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PIC Embedded Systems — Peripheral Integration &amp; Persistent Storage | Mohammed Mahyoub</title>
-<meta name="description" content="Implemented PIC16-based embedded applications using mikroC and Proteus, integrating sensor acquisition, LCD/keypad interfaces, real-time clocks and control outputs. Applied on-chip EEPROM read/write techniques to retain stored values across power cycles.">
+<title>PIC-Based Equipment Room Monitoring &amp; Control System | Mohammed Mahyoub</title>
+<meta name="description" content="Equipment-room monitoring and control design built around PIC16 firmware: temperature and humidity sensing, ventilation control, keypad access, local alarms, RTC timekeeping and persistent EEPROM settings. Includes preserved original implementation media, detailed wiring and a tested reference control model.">
 <link rel="canonical" href="https://mahyoub88.github.io/projects/proj-embedded-iot/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="PIC Embedded Systems — Peripheral Integration &amp; Persistent Storage">
-<meta property="og:description" content="Implemented PIC16-based embedded applications using mikroC and Proteus, integrating sensor acquisition, LCD/keypad interfaces, real-time clocks and control outputs. Applied on-chip EEPROM read/write techniques to retain stored values across power cycles.">
+<meta property="og:title" content="PIC-Based Equipment Room Monitoring &amp; Control System">
+<meta property="og:description" content="Equipment-room monitoring and control design built around PIC16 firmware: temperature and humidity sensing, ventilation control, keypad access, local alarms, RTC timekeeping and persistent EEPROM settings. Includes preserved original implementation media, detailed wiring and a tested reference control model.">
 <meta property="og:url" content="https://mahyoub88.github.io/projects/proj-embedded-iot/">
-<meta property="og:image" content="https://mahyoub88.github.io/images/project-covers/themed-v4/proj-embedded-iot.webp">
+<meta property="og:image" content="https://mahyoub88.github.io/projects/proj-embedded-iot/media/equipment-room/cover.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg">
 <link rel="stylesheet" href="/projects/case-study.css">
@@ -24,234 +24,655 @@
 </nav>
 </header>
 <main id="main">
-<p class="eyebrow">Embedded Systems · Firmware · Peripheral Integration</p>
-<h1>PIC Embedded Systems — Peripheral Integration &amp; Persistent Storage</h1>
-<p class="lede">Implemented PIC16-based embedded applications using mikroC and Proteus, integrating sensor acquisition, LCD/keypad interfaces, real-time clocks and control outputs. Applied on-chip EEPROM read/write techniques to retain stored values across power cycles.</p>
-<span class="badge">Implemented Project</span>
+<p class="eyebrow">Embedded Systems · Environmental Monitoring · Access Control</p>
+<h1>PIC-Based Equipment Room Monitoring &amp; Control System</h1>
+<p class="lede">Equipment-room monitoring and control design built around PIC16 firmware: temperature and humidity sensing, ventilation control, keypad access, local alarms, RTC timekeeping and persistent EEPROM settings. Includes preserved original implementation media, detailed wiring and a tested reference control model.</p>
+<span class="badge">PIC Implementation · Integrated Reference Design</span>
 <figure class="hero-media">
-<a href="/projects/proj-embedded-iot/media/source/01_system_overview.svg">
-<img src="/projects/proj-embedded-iot/media/source/01_system_overview.svg" alt="PIC peripheral overview — explanatory source diagram" fetchpriority="high">
+<a href="/projects/proj-embedded-iot/media/equipment-room/cover.png">
+<img src="/projects/proj-embedded-iot/media/equipment-room/cover.png" alt="Concept illustration of equipment-room monitoring and control with a PIC controller" fetchpriority="high">
 </a>
-<figcaption>Explanatory system diagram · Open image for full detail.</figcaption>
+<figcaption>AI-generated concept illustration; original implementation media is retained below · Open image for full detail.</figcaption>
 </figure>
 <div class="tags">
 <span>PIC16</span>
-<span>Embedded C</span>
-<span>mikroC</span>
-<span>Proteus</span>
+<span>Sensors</span>
 <span>ADC</span>
 <span>I²C</span>
-<span>EEPROM</span>
 <span>LCD/Keypad</span>
+<span>RTC</span>
+<span>EEPROM</span>
+<span>mikroC</span>
 </div>
 <nav class="section-nav">
-<a href="#technical-walkthrough">Technical walkthrough</a>
-<a href="#overview">Architecture</a>
+<a href="#technical-walkthrough">Complete design</a>
 <a href="#persistent-storage">Persistent storage</a>
-<a href="#engineering">Engineering approach</a>
-<a href="#gallery">Visual documentation</a>
-<a href="#sources">Sources</a>
+<a href="#original-media">Original implementation media</a>
+<a href="demo/">Interactive control demonstration</a>
 </nav>
 <section id="overview">
-<h2>System architecture</h2>
-<div class="summary">
-<h3>Implementation scope</h3>
-<p>PIC16 firmware implements timed acquisition and peripheral interfaces. Timer0 schedules display refresh and measurements, I²C connects the DS1307 clock, and serial interfaces drive shift registers and the graphic LCD.</p>
+<h2>Application overview</h2>
+<div class="panel">
+<dl class="project-facts">
+<div>
+<dt>Author</dt>
+<dd>Mohammed Mahyoub</dd>
+</div>
+<div>
+<dt>Application</dt>
+<dd>Local equipment-room monitoring, ventilation, access and alarms.</dd>
+</div>
+<div>
+<dt>Controller</dt>
+<dd>Reference baseline: PIC16F877A, 5 V, ADC, I²C, 16×2 LCD and 4×4 keypad.</dd>
+</div>
+<div>
+<dt>Original work</dt>
+<dd>Preserved PIC peripheral and EEPROM implementation documentation and original posters.</dd>
+</div>
+<div>
+<dt>Design status</dt>
+<dd>Integrated room design and reference-model verification; complete hardware commissioning is not asserted.</dd>
+</div>
+</dl>
 </div>
 </section>
 <section id="technical-walkthrough">
-<h2>Timing and peripheral integration responsibilities</h2>
-<p>This project groups PIC firmware and peripheral implementations: multiplexed displays, timed ADC sensing, the DS1307 RTC, 74HC595 output expansion, keypad access control and the Nokia 5110 display. It is an integration portfolio rather than a claim that every peripheral appears on one physical board. On-chip EEPROM storage and retrieval are included as the persistent-storage workstream. These related implementations are presented together without implying that every peripheral was connected to one physical board.</p>
-<p>The central design distinction is between time-critical service and slower foreground work. A display-refresh interrupt advances the active digit; scheduled sampling, conversion, formatting and user-interface updates belong in the foreground where practical. A timing diagram should identify the selected oscillator, timer prescaler and reload before deriving a refresh rate. The public examples explain scheduling, but do not establish those settings for every original build.</p>
-<p>Analog conversion depends on the selected PIC, reference voltage, acquisition interval and channel configuration. A raw ADC count is not a calibrated physical measurement until the sensor transfer relationship and reference are known. Likewise, a responsive I2C clock requires both electrical compatibility and correct transaction handling; the NXP reference explains bus behaviour, while the device data sheet determines the actual limits.</p>
-<p>The engineering review connects each peripheral to its interface, timing needs and failure symptom. A stuck display, unstable analog value and missing RTC acknowledgement should lead to different checks. Reference snippets remain examples: port assignments, register names, drive currents and peripheral voltage compatibility must be checked against the actual board.</p>
-<figure>
-<a href="media/engineering-review.svg">
-<img loading="lazy" src="media/engineering-review.svg" alt="Timing and peripheral integration responsibilities — explanatory engineering review">
-</a>
-<figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
-</figure>
-<h3>Review scenarios and expected evidence</h3>
-<p>These scenarios specify what evidence would support a review. They do not report additional completed tests.</p>
+<h2>Purpose and scope</h2>
+<p>A local controller for a small equipment room or electronics cabinet. It monitors temperature, humidity and door state, commands ventilation, supports keypad access and exit release, displays status and retains settings after power removal.</p>
+<p>This is the proposed integrated application of the preserved PIC peripheral and EEPROM implementations. The original media documents those earlier building blocks. The new room layout, wiring map, firmware model, default thresholds and validation plan are reference design artifacts, not evidence of a newly installed complete room system.</p>
+<h2>Requirements</h2>
 <div class="table-scroll">
 <table>
 <thead>
 <tr>
-<th scope="col">Review area</th>
-<th scope="col">Method</th>
-<th scope="col">Evidence to inspect</th>
+<th scope="col">ID</th>
+<th scope="col">Requirement</th>
+<th scope="col">Verification</th>
 </tr>
 </thead>
-<tbody>
 <tr>
-<td>Multiplexed display</td>
-<td>Blank before changing shared segment data</td>
-<td>Digit-selection and segment waveforms</td>
+<td>R01</td>
+<td>Sample temperature and humidity once per second</td>
+<td>Inject changing and invalid values</td>
 </tr>
 <tr>
-<td>ADC input</td>
-<td>Check reference, channel and acquisition context</td>
-<td>Raw count, conversion formula and known input</td>
+<td>R02</td>
+<td>Use fan ON/OFF hysteresis</td>
+<td>Sweep across both limits</td>
 </tr>
 <tr>
-<td>DS1307 RTC</td>
-<td>Inspect bus wiring, pull-ups and acknowledgement</td>
-<td>Transaction capture and returned time</td>
+<td>R03</td>
+<td>Flag stale temperature; command fan ON</td>
+<td>Stop valid samples for &gt;3 s</td>
 </tr>
 <tr>
-<td>74HC595 / outputs</td>
-<td>Separate shift clock, latch and output enable</td>
-<td>Known bit pattern at the intended outputs</td>
+<td>R04</td>
+<td>Unlock on valid PIN or exit request</td>
+<td>Valid/invalid code and exit tests</td>
 </tr>
-</tbody>
+<tr>
+<td>R05</td>
+<td>Relock after a timed pulse</td>
+<td>Check output deadline without blocking sensing</td>
+</tr>
+<tr>
+<td>R06</td>
+<td>Alarm on unauthorized or prolonged opening</td>
+<td>Door contact scenarios</td>
+</tr>
+<tr>
+<td>R07</td>
+<td>Acknowledge buzzer without clearing faults</td>
+<td>Active fault + acknowledge</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Retain confirmed settings after power cycle</td>
+<td>Save, restart and compare</td>
+</tr>
+<tr>
+<td>R09</td>
+<td>Reject corrupt/incomplete EEPROM records</td>
+<td>Byte-boundary interrupted-write tests</td>
+</tr>
+<tr>
+<td>R10</td>
+<td>Display RTC status; reject restricted access if time invalid</td>
+<td>Remove RTC response</td>
+</tr>
 </table>
 </div>
-<h3>Technical references and provenance</h3>
-<p>Primary references support the engineering explanation, not claims about this project's undocumented configuration or results.</p>
+<h2>Reference hardware and bill of materials</h2>
+<p>Quantities and selections define a prototype baseline; load ratings require actual parts selection.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Qty</th>
+<th scope="col">Component</th>
+<th scope="col">Function / selection criteria</th>
+</tr>
+</thead>
+<tr>
+<td>1</td>
+<td>PIC16F877A, DIP-40</td>
+<td>5 V controller, 10-bit ADC, I²C, internal EEPROM</td>
+</tr>
+<tr>
+<td>1</td>
+<td>8 MHz crystal + load capacitors</td>
+<td>Match crystal load specification; do not assume capacitor value</td>
+</tr>
+<tr>
+<td>1</td>
+<td>LM35 temperature sensor</td>
+<td>5 V supply, 10 mV/°C analog output to AN0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>SHT31-DIS compatible module</td>
+<td>Humidity via I²C; verify module supports the 5 V bus</td>
+</tr>
+<tr>
+<td>1</td>
+<td>DS1307 RTC assembly</td>
+<td>Crystal, backup cell, I²C; inspect charging circuit</td>
+</tr>
+<tr>
+<td>1</td>
+<td>16×2 HD44780-compatible LCD</td>
+<td>5 V, 4-bit mode, contrast potentiometer</td>
+</tr>
+<tr>
+<td>1</td>
+<td>4×4 matrix keypad</td>
+<td>8 GPIO; masked local PIN entry</td>
+</tr>
+<tr>
+<td>1</td>
+<td>NC magnetic door contact</td>
+<td>Closed contact to GND indicates closed door</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Momentary buttons</td>
+<td>Exit release and alarm acknowledge</td>
+</tr>
+<tr>
+<td>1 each</td>
+<td>12 V fan and 12 V lock prototype</td>
+<td>Actual current/inrush determines driver sizing</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Logic-level N-MOSFET channels</td>
+<td>Rated at 5 V gate drive, with protection and gate pull-down</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Buzzer driver + status LED</td>
+<td>Match buzzer current; LED series resistor</td>
+</tr>
+<tr>
+<td>1</td>
+<td>12 V DC supply + 5 V buck converter</td>
+<td>Size from load budget and simultaneous activation</td>
+</tr>
+<tr>
+<td>As needed</td>
+<td>Fuses, diode protection, bypass caps, connectors</td>
+<td>Local decoupling, common reference, separated load paths</td>
+</tr>
+</table>
+</div>
+<h2>System diagrams</h2>
+<h3>1. architecture</h3>
+<figure>
+<a href="media/equipment-room/01-architecture.svg">
+<img loading="lazy" src="media/equipment-room/01-architecture.svg" alt="01-architecture.svg">
+</a>
+<figcaption>Engineering reference diagram · open for full resolution</figcaption>
+</figure>
+<h3>2. pin and wiring map</h3>
+<figure>
+<a href="media/equipment-room/02-pin-and-wiring-map.svg">
+<img loading="lazy" src="media/equipment-room/02-pin-and-wiring-map.svg" alt="02-pin-and-wiring-map.svg">
+</a>
+<figcaption>Engineering reference diagram · open for full resolution</figcaption>
+</figure>
+<h3>3. output driver</h3>
+<figure>
+<a href="media/equipment-room/03-output-driver.svg">
+<img loading="lazy" src="media/equipment-room/03-output-driver.svg" alt="03-output-driver.svg">
+</a>
+<figcaption>Engineering reference diagram · open for full resolution</figcaption>
+</figure>
+<h3>4. control flow</h3>
+<figure>
+<a href="media/equipment-room/04-control-flow.svg">
+<img loading="lazy" src="media/equipment-room/04-control-flow.svg" alt="04-control-flow.svg">
+</a>
+<figcaption>Engineering reference diagram · open for full resolution</figcaption>
+</figure>
+<h3>5. access states</h3>
+<figure>
+<a href="media/equipment-room/05-access-states.svg">
+<img loading="lazy" src="media/equipment-room/05-access-states.svg" alt="05-access-states.svg">
+</a>
+<figcaption>Engineering reference diagram · open for full resolution</figcaption>
+</figure>
+<h3>6. eeprom layout</h3>
+<figure>
+<a href="media/equipment-room/06-eeprom-layout.svg">
+<img loading="lazy" src="media/equipment-room/06-eeprom-layout.svg" alt="06-eeprom-layout.svg">
+</a>
+<figcaption>Engineering reference diagram · open for full resolution</figcaption>
+</figure>
+<h3>7. power distribution</h3>
+<figure>
+<a href="media/equipment-room/07-power-distribution.svg">
+<img loading="lazy" src="media/equipment-room/07-power-distribution.svg" alt="07-power-distribution.svg">
+</a>
+<figcaption>Engineering reference diagram · open for full resolution</figcaption>
+</figure>
+<h2>Pin map</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Signal</th>
+<th scope="col">DIP-40 pin</th>
+<th scope="col">Connection</th>
+<th scope="col">Design note</th>
+</tr>
+</thead>
+<tr>
+<td>AN0 / RA0</td>
+<td>2</td>
+<td>LM35 analog output</td>
+<td>0–1 V for 0–100°C</td>
+</tr>
+<tr>
+<td>RA1</td>
+<td>3</td>
+<td>Exit request, active low</td>
+<td>10 kΩ pull-up; button to GND</td>
+</tr>
+<tr>
+<td>RA2</td>
+<td>4</td>
+<td>Alarm acknowledge, active low</td>
+<td>10 kΩ pull-up; button to GND</td>
+</tr>
+<tr>
+<td>RB0–RB3</td>
+<td>33–36</td>
+<td>Keypad rows R1–R4</td>
+<td>One row low; others high-Z</td>
+</tr>
+<tr>
+<td>RB4–RB7</td>
+<td>37–40</td>
+<td>Keypad columns C1–C4</td>
+<td>Pull-ups enabled; debounce</td>
+</tr>
+<tr>
+<td>RC3 / RC4</td>
+<td>18 / 23</td>
+<td>I²C SCL / SDA</td>
+<td>100 kHz; pull-ups to +5 V</td>
+</tr>
+<tr>
+<td>RD0–RD3</td>
+<td>19–22</td>
+<td>LCD D4–D7</td>
+<td>LCD RW → GND</td>
+</tr>
+<tr>
+<td>RD4 / RD5</td>
+<td>27 / 28</td>
+<td>LCD RS / EN</td>
+<td>4-bit interface</td>
+</tr>
+<tr>
+<td>RD6</td>
+<td>29</td>
+<td>Door contact</td>
+<td>NC closed to GND = door closed</td>
+</tr>
+<tr>
+<td>RC0 / RC1 / RC2</td>
+<td>15 / 16 / 17</td>
+<td>Fan / unlock / buzzer</td>
+<td>External drivers; active high</td>
+</tr>
+<tr>
+<td>RC5</td>
+<td>24</td>
+<td>Status LED</td>
+<td>Series resistor</td>
+</tr>
+<tr>
+<td>RC6 / RC7</td>
+<td>25 / 26</td>
+<td>Reserved serial debug</td>
+<td>Not required for baseline</td>
+</tr>
+</table>
+</div>
+<p>VDD: pins 11 and 32. VSS: pins 12 and 31. MCLR: pin 1 with 10 kΩ pull-up. OSC1/OSC2: pins 13/14. Disable low-voltage programming to use RB3 for keypad scanning. RB6/RB7 serve ICSP; isolate the keypad during programming.</p>
+<h2>Wiring details</h2>
+<ul>
+<li>LM35: connect supply and ground according to the selected package pinout; output → RA0/AN0. The simple baseline measures non-negative temperatures. Keep sensor wiring away from switched load current. Add an analog filter only after checking source impedance and ADC acquisition requirements.</li>
+<li>SHT31 and DS1307 share RC3/SCL and RC4/SDA at 100 kHz. SHT31 ADDR low gives 7-bit address 0x44; DS1307 is 0x68. Use one effective pull-up pair; 4.7 kΩ is an initial short-bus value to validate, not a universal requirement. Bare SHT3x supports a supply range that includes 5 V, but breakout boards may differ.</li>
+<li>LCD: RD0–3 → D4–7; RD4 → RS; RD5 → EN; RW → GND. Connect contrast wiper to VO. Follow module backlight-current requirements rather than assuming a resistor is fitted.</li>
+<li>Keypad: drive only the selected row low and leave other rows as inputs/high impedance; columns are inputs with pull-ups. Require a stable press/release and reject simultaneous ambiguous keys. Disable LVP; no pin may be driven simultaneously by keypad and ICSP programmer.</li>
+<li>Door: NC contact closed to ground; external 10 kΩ pull-up to 5 V; RD6 reads high when open or disconnected. This detects an open wire as open door, but does not detect every short-circuit fault.</li>
+<li>Exit and acknowledge: separate normally-open contacts to ground with pull-ups. Exit request remains usable during keypad lockout. Emergency egress must remain independent of firmware.</li>
+<li>Fan/lock: PIC output → 100 Ω gate resistor → selected logic-level MOSFET; 100 kΩ gate pull-down; source → ground; drain → load negative. Load positive → fused 12 V. Inductive coil flyback diode cathode → 12 V, anode → drain. Select current, inrush, voltage, diode and thermal ratings from the actual load.</li>
+</ul>
+<h2>Measurement and calibration</h2>
+<p>LM35 conversion with measured ADC reference: temperature °C = ADC_count × Vref_mV / (1023 × 10). With Vref = 5000 mV, one count is approximately 0.489°C; this is quantization, not total accuracy. Average several settled readings and compare against a reference thermometer. A short to ground can resemble 0°C, so range checks alone do not prove sensor health.</p>
+<p>For SHT31, issue the documented single-shot measurement command, wait for its specified conversion completion, read six bytes, verify both CRC bytes, then convert humidity: RH = 100 × raw_RH / 65535. Retain a timestamp only for a valid sample. A stale or CRC-failed value must not be displayed as a current measurement. Sensor CRC uses polynomial 0x31 with initial value 0xFF.</p>
+<h2>Example settings</h2>
+<p>These are demonstration values, not environmental operating limits for a particular room.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Setting</th>
+<th scope="col">Default</th>
+<th scope="col">Meaning</th>
+</tr>
+</thead>
+<tr>
+<td>Fan OFF</td>
+<td>28°C</td>
+<td>Stop fan at/below this value</td>
+</tr>
+<tr>
+<td>Fan ON</td>
+<td>32°C</td>
+<td>Start fan at/above this value</td>
+</tr>
+<tr>
+<td>High-temperature alarm</td>
+<td>40°C</td>
+<td>Local critical-temperature indication</td>
+</tr>
+<tr>
+<td>High humidity</td>
+<td>70% RH</td>
+<td>Alarm only; ventilation is not assumed to dehumidify</td>
+</tr>
+<tr>
+<td>Stale measurement</td>
+<td>3 seconds</td>
+<td>Temperature fault and fan command ON</td>
+</tr>
+<tr>
+<td>Unlock pulse</td>
+<td>5 seconds</td>
+<td>Timed release</td>
+</tr>
+<tr>
+<td>Door-open alarm</td>
+<td>30 seconds</td>
+<td>Prolonged opening</td>
+</tr>
+<tr>
+<td>Wrong PIN attempts</td>
+<td>3</td>
+<td>Enter keypad lockout</td>
+</tr>
+<tr>
+<td>Lockout duration</td>
+<td>30 seconds</td>
+<td>Inhibit keypad access; allow exit request</td>
+</tr>
+<tr>
+<td>Access time window</td>
+<td>Disabled</td>
+<td>Optional RTC-based restriction</td>
+</tr>
+</table>
+</div>
+<p>Validate OFF &lt; ON &lt; high-temperature threshold, humidity in 1–100%, timing bounds and credential format. Reject invalid changes without replacing known-good settings.</p>
+<h2>Firmware architecture</h2>
+<ol>
+<li>Initialize output latches LOW before enabling output pins; the hardware gate pull-downs keep loads de-energized during reset.</li>
+<li>Load newest valid EEPROM settings, or defaults with a visible configuration warning.</li>
+<li>Start a monotonic millisecond timebase. For an 8 MHz oscillator, Timer2 prescaler 1:16, PR2 = 249, postscaler 1:2 produces a nominal 4 ms tick. Timer ISR only increments the tick. Configure registers against the device data sheet and verify timing on hardware.</li>
+<li>Foreground tasks: keypad/door debounce at 20 ms; environment acquisition at 1000 ms; LCD refresh at 250 ms; RTC read at 1000 ms; output decisions every pass.</li>
+<li>Implement cooling, access and alarms as independent states. Never stop sensing while waiting for a code, alarm or unlock timeout.</li>
+<li>On EEPROM save, keep the old valid slot until the replacement record has been written, checked and committed. The PIC EEPROM library may briefly block or mask interrupts; characterize this and compensate the timebase or defer saves while a timed release is active.</li>
+</ol>
+<h3>Cooling</h3>
+<p>Start fan at ON threshold; hold its previous state within the hysteresis band; stop at OFF threshold. Missing/stale temperature commands fan ON and raises a fault. This is a command policy, not proof of airflow: add fan feedback if detecting a stalled or disconnected fan is required. High humidity raises an alarm; no humidity-driven fan action is assumed.</p>
+<h3>Access</h3>
+<p>Mask entered digits. Confirm using #; clear with *. Match a provisioned credential, then pulse unlock. Three wrong codes trigger timed keypad lockout and an alarm. Physical exit request releases independently of keypad lockout. Door opening without a current authorization window or exit request is flagged; monitor prolonged opening independently. Do not retrigger unlock indefinitely from a held button.</p>
+<p>The reference keypad lock is not a certified security system. PIN bytes in EEPROM are not encryption, and reference lockout resets on power cycle. Use stronger credential protection, persistent rate limiting, tamper detection and independent emergency egress for a real secured installation.</p>
+<h3>Alarms and display</h3>
+<p>Priority: temperature invalid → high temperature → unauthorized door → prolonged door opening → humidity invalid/high → RTC fault → configuration warning → normal. Acknowledge silences the buzzer for the current active set; visual fault indications remain and a new alarm condition reactivates the buzzer. Display measured temperature, RH, fan state, door state and RTC validity on alternating 16-character screens. Display values are examples, not measured results.</p>
+<h2>EEPROM record</h2>
+<p>Two 32-byte slots use 64 of the PIC's 256 EEPROM bytes. Bytes 0–1 identify magic/version; 2–3 hold a sequence counter; 4–23 hold thresholds, timings, optional schedule and a provisioned PIN; 24–25 store CRC16-CCITT (initial 0xFFFF); byte 31 is commit 0xA5. Unused bytes stay reserved.</p>
+<p>Save sequence: invalidate inactive slot → write header/payload/CRC → read back and verify → commit last → use newest valid slot. Modular sequence comparison handles wraparound. Validate field ranges after CRC; CRC alone does not establish semantic validity or malicious-tamper resistance. Save only confirmed changes; never write every sensor sample. No event-history database is included in the baseline.</p>
+<h2>Failure matrix</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Condition</th>
+<th scope="col">Reference response</th>
+<th scope="col">Remaining limitation</th>
+</tr>
+</thead>
+<tr>
+<td>Invalid/stale temperature</td>
+<td>Fan command ON; fault alarm</td>
+<td>Open/short detection needs hardware diagnostics</td>
+</tr>
+<tr>
+<td>Humidity CRC/NACK/stale</td>
+<td>Mark RH unavailable; fault alarm</td>
+<td>Cooling still follows temperature</td>
+</tr>
+<tr>
+<td>RTC NACK/CH bit invalid</td>
+<td>Flag clock; deny restricted keypad entry</td>
+<td>Unrestricted entry and exit still operate</td>
+</tr>
+<tr>
+<td>Both settings slots invalid</td>
+<td>Defaults + warning</td>
+<td>Provision credential before access</td>
+</tr>
+<tr>
+<td>Reset / brownout</td>
+<td>Outputs LOW, validate, reacquire</td>
+<td>Real lock choice determines power-loss state</td>
+</tr>
+<tr>
+<td>Door line open</td>
+<td>Treat as door open</td>
+<td>Short to ground is not detected</td>
+</tr>
+<tr>
+<td>Fan drive ON but fan stopped</td>
+<td>No airflow proof</td>
+<td>Add tachometer/current feedback</td>
+</tr>
+</table>
+</div>
+<h2>Verification and commissioning</h2>
+<p>The executable reference model is tested with Node's built-in test runner: run <code>node --test tests/room-controller.test.mjs</code>. This verifies logic, not a compiled PIC image or physical hardware.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Test</th>
+<th scope="col">Procedure</th>
+<th scope="col">Expected result</th>
+</tr>
+</thead>
+<tr>
+<td>Power rails</td>
+<td>Measure 12 V/5 V unloaded and switching loads</td>
+<td>Within selected component limits</td>
+</tr>
+<tr>
+<td>I²C</td>
+<td>Identify devices, disconnect each, corrupt a model CRC</td>
+<td>Correct device/fault status</td>
+</tr>
+<tr>
+<td>Temperature</td>
+<td>Compare reference instrument, sweep ADC input</td>
+<td>Correct scale; documented calibration</td>
+</tr>
+<tr>
+<td>Hysteresis</td>
+<td>27 → 33 → 30 → 28°C</td>
+<td>OFF → ON → ON → OFF</td>
+</tr>
+<tr>
+<td>Stale temperature</td>
+<td>Stop valid acquisition &gt;3 s</td>
+<td>Fan ON + fault</td>
+</tr>
+<tr>
+<td>Access</td>
+<td>Wrong codes, correct code, held buttons, exit</td>
+<td>Lockout/pulse/no indefinite release</td>
+</tr>
+<tr>
+<td>Door</td>
+<td>Authorized open, unauthorized open, long open</td>
+<td>Appropriate alarms without blocking</td>
+</tr>
+<tr>
+<td>EEPROM</td>
+<td>Interrupt every write boundary, restart</td>
+<td>Old or fully committed new settings</td>
+</tr>
+<tr>
+<td>Reset during release</td>
+<td>Reset while lock output ON</td>
+<td>Output returns to reset state</td>
+</tr>
+<tr>
+<td>Acknowledge</td>
+<td>Ack current fault, introduce different fault</td>
+<td>Visual state remains; new buzzer alarm</td>
+</tr>
+<tr>
+<td>Timing</td>
+<td>Scope tick/output pulse with EEPROM saves</td>
+<td>Actual deadlines documented</td>
+</tr>
+</table>
+</div>
+<p>Record real instrument values, firmware version, schematic revision and photographs before calling the integrated system built/tested. No such new measurements are invented here.</p>
+<h2>Original implementation media and provenance</h2>
+<ul>
+<li>
+<a href="/projects/proj-eeprom-storage/media/source/00_project_poster.jpg">Original EEPROM project poster</a>: preserved unchanged at its existing resolution. It contains implementation/simulation screenshots and is not a photograph of an installed equipment room.</li>
+<li>
+<a href="/projects/proj-embedded-iot/media/original-eeprom-summary.jpg">Existing EEPROM summary image</a>: preserved unchanged.</li>
+<li>
+<a href="https://github.com/Mahyoub88/embedded-iot-automation/blob/main/docs/pic-peripheral-implementations.md">Earlier PIC implementation documentation</a>: retained complete.</li>
+<li>Original peripheral SVGs remain unchanged; their explanatory captions distinguish them from physical implementation evidence.</li>
+<li>The PLC poster remains in the repository as historical related material; it is not presented as a component of this PIC room controller.</li>
+</ul>
+<h2>Primary technical references</h2>
 <ul>
 <li>
 <a href="https://ww1.microchip.com/downloads/en/devicedoc/39582b.pdf">Microchip PIC16F87XA data sheet</a>
 </li>
 <li>
-<a href="https://community.nxp.com/pwmxy87654/attachments/pwmxy87654/nxp-designs/931/1/UM10204.pdf">NXP — I2C specification UM10204</a>
+<a href="https://www.ti.com/lit/ds/symlink/lm35.pdf">TI LM35 data sheet</a>
+</li>
+<li>
+<a href="https://sensirion.com/media/documents/213E6A3B/63A5A569/Datasheet_SHT3x_DIS.pdf">Sensirion SHT3x-DIS data sheet</a>
+</li>
+<li>
+<a href="https://www.analog.com/media/en/technical-documentation/data-sheets/DS1307.pdf">Analog Devices DS1307 data sheet</a>
 </li>
 </ul>
-<p class="source-note">Timing values and pin assignments are device-specific. No new board photograph, Proteus capture or original firmware export is claimed.</p>
-</section>
-<section id="engineering">
-<h2>Engineering approach</h2>
-<p>These are related firmware implementations and peripheral techniques. EEPROM storage and retrieval are covered below as part of this consolidated project. PLC batching remains a separate industrial-control implementation.</p>
-<figure>
-<a href="media/source/02_development_workflow.svg">
-<img loading="lazy" src="media/source/02_development_workflow.svg" alt="Explanatory workflow — project-specific sequence">
-</a>
-<figcaption>Explanatory workflow — project-specific sequence</figcaption>
-</figure>
+<h2>Extensions</h2>
+<p>Fan feedback, tamper supervision, external event storage, an isolated communications link and a documented remote-monitoring protocol are optional extensions. They are not claimed as implemented baseline features.</p>
 </section>
 <section id="persistent-storage">
-<h2>Write, verify and restore</h2>
-<p>The value is stored in on-chip EEPROM rather than ordinary RAM, so firmware can recover it after power loss. Write completion and read-back need to follow the selected PIC device and mikroC library.</p>
-<div class="table-scroll">
-<table>
-<caption>Illustrative verification sequence — expected behavior, not a published device-test log</caption>
-<thead>
-<tr>
-<th scope="col">Step</th>
-<th scope="col">Action</th>
-<th scope="col">Expected observation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Store the example byte 42 at a valid EEPROM address</td>
-<td>Write completes</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Read the same address</td>
-<td>The returned byte is 42</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Restart after a power cycle</td>
-<td>Start-up reads the retained byte</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Request storage of the unchanged byte</td>
-<td>Write-on-change avoids a redundant write</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3>Reference snippet</h3>
-<p>This mikroC-style example comes from the repository explanation. It is not recovered project firmware or a complete device configuration.</p>
-<pre class="formula">
-<code>void store_byte(unsigned char addr, unsigned char value) {
-  if (EEPROM_Read(addr) == value) return;
-  EEPROM_Write(addr, value);
-  Delay_ms(20);
-  if (EEPROM_Read(addr) != value) {
-    /* report a write error */
-  }
-}</code>
-</pre>
-<p>Valid addresses, timing, power stability and interrupt handling depend on the device and library. The <a href="https://download.mikroe.com/documents/compilers/mikroc/pic/help/eeprom_library.htm">mikroC EEPROM library documentation</a> describes supported devices and write behavior. Multi-byte persistence needs a defined layout and integrity strategy; a successful single-byte read-back does not establish atomic multi-byte updates.</p>
-<p>
-<a href="https://github.com/Mahyoub88/embedded-iot-automation#persistent-storage">Source explanation, poster and storage-cycle diagram</a>
-</p>
+<h2>Persistent storage</h2>
+<p>On-chip EEPROM retains confirmed settings. The new reference design uses two validated slots and a last-written commit byte. Original EEPROM write/read-back work is preserved; the dual-slot scheme is new design documentation.</p>
+<a href="https://github.com/Mahyoub88/embedded-iot-automation/blob/main/docs/engineering-guide.md#eeprom-record">Record format and write procedure</a>
+</section>
+<section id="original-media">
+<h2>Original implementation media — preserved unchanged</h2>
+<p>These are the existing project posters and explanatory diagrams. They remain separate from the new conceptual room illustration and integrated design.</p>
 <figure>
 <a href="/projects/proj-eeprom-storage/media/source/00_project_poster.jpg">
-<img loading="lazy" src="/projects/proj-eeprom-storage/media/source/00_project_poster.jpg" alt="Original EEPROM implementation poster">
+<img loading="lazy" src="/projects/proj-eeprom-storage/media/source/00_project_poster.jpg" alt="Preserved original EEPROM implementation poster">
 </a>
-<figcaption>Original EEPROM project poster, retained as source media for the persistent-storage workstream.</figcaption>
+<figcaption>Original EEPROM implementation poster, at its original resolution. Includes existing development/simulation captures; not a room-installation photograph.</figcaption>
 </figure>
-<figure>
-<a href="/projects/proj-eeprom-storage/media/source/01_eeprom_store_and_readback.svg">
-<img loading="lazy" src="/projects/proj-eeprom-storage/media/source/01_eeprom_store_and_readback.svg" alt="EEPROM write, read-back and start-up retrieval diagram">
-</a>
-<figcaption>Explanatory storage-cycle diagram; reference design guidance is distinguished from original firmware.</figcaption>
-</figure>
-</section>
-<section id="gallery">
-<h2>Visual documentation</h2>
-<p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p>
 <div class="grid">
 <figure>
-<a href="media/source/03_7segment_multiplexing.svg">
-<img loading="lazy" src="media/source/03_7segment_multiplexing.svg" alt="7segment multiplexing — source repository figure">
+<a href="media/source/01_system_overview.svg">
+<img loading="lazy" src="media/source/01_system_overview.svg" alt="Preserved earlier PIC documentation: 01 system overview.svg">
 </a>
-<figcaption>7segment multiplexing — source repository figure</figcaption>
+<figcaption>Preserved earlier explanatory PIC diagram.</figcaption>
+</figure>
+<figure>
+<a href="media/source/03_7segment_multiplexing.svg">
+<img loading="lazy" src="media/source/03_7segment_multiplexing.svg" alt="Preserved earlier PIC documentation: 03 7segment multiplexing.svg">
+</a>
+<figcaption>Preserved earlier explanatory PIC diagram.</figcaption>
 </figure>
 <figure>
 <a href="media/source/04_adc_timer0_scheduling.svg">
-<img loading="lazy" src="media/source/04_adc_timer0_scheduling.svg" alt="adc timer0 scheduling — source repository figure">
+<img loading="lazy" src="media/source/04_adc_timer0_scheduling.svg" alt="Preserved earlier PIC documentation: 04 adc timer0 scheduling.svg">
 </a>
-<figcaption>adc timer0 scheduling — source repository figure</figcaption>
+<figcaption>Preserved earlier explanatory PIC diagram.</figcaption>
 </figure>
 <figure>
 <a href="media/source/05_ds1307_i2c.svg">
-<img loading="lazy" src="media/source/05_ds1307_i2c.svg" alt="ds1307 i2c — source repository figure">
+<img loading="lazy" src="media/source/05_ds1307_i2c.svg" alt="Preserved earlier PIC documentation: 05 ds1307 i2c.svg">
 </a>
-<figcaption>ds1307 i2c — source repository figure</figcaption>
+<figcaption>Preserved earlier explanatory PIC diagram.</figcaption>
 </figure>
 <figure>
 <a href="media/source/06_74hc595_output_expansion.svg">
-<img loading="lazy" src="media/source/06_74hc595_output_expansion.svg" alt="74hc595 output expansion — source repository figure">
+<img loading="lazy" src="media/source/06_74hc595_output_expansion.svg" alt="Preserved earlier PIC documentation: 06 74hc595 output expansion.svg">
 </a>
-<figcaption>74hc595 output expansion — source repository figure</figcaption>
+<figcaption>Preserved earlier explanatory PIC diagram.</figcaption>
 </figure>
 <figure>
 <a href="media/source/07_keypad_access_control.svg">
-<img loading="lazy" src="media/source/07_keypad_access_control.svg" alt="keypad access control — source repository figure">
+<img loading="lazy" src="media/source/07_keypad_access_control.svg" alt="Preserved earlier PIC documentation: 07 keypad access control.svg">
 </a>
-<figcaption>keypad access control — source repository figure</figcaption>
+<figcaption>Preserved earlier explanatory PIC diagram.</figcaption>
 </figure>
 <figure>
 <a href="media/source/08_nokia5110_pcd8544.svg">
-<img loading="lazy" src="media/source/08_nokia5110_pcd8544.svg" alt="nokia5110 pcd8544 — source repository figure">
+<img loading="lazy" src="media/source/08_nokia5110_pcd8544.svg" alt="Preserved earlier PIC documentation: 08 nokia5110 pcd8544.svg">
 </a>
-<figcaption>nokia5110 pcd8544 — source repository figure</figcaption>
+<figcaption>Preserved earlier explanatory PIC diagram.</figcaption>
 </figure>
 <figure>
 <a href="media/source/09_memory_technologies.svg">
-<img loading="lazy" src="media/source/09_memory_technologies.svg" alt="memory technologies — source repository figure">
+<img loading="lazy" src="media/source/09_memory_technologies.svg" alt="Preserved earlier PIC documentation: 09 memory technologies.svg">
 </a>
-<figcaption>memory technologies — source repository figure</figcaption>
+<figcaption>Preserved earlier explanatory PIC diagram.</figcaption>
 </figure>
 </div>
 </section>
 <section id="sources">
-<h2>Source documentation</h2>
-<ul>
-<li>
-<a href="https://github.com/Mahyoub88/embedded-iot-automation">Source repository — embedded-iot-automation</a>
-</li>
-<li>
-<a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project record</a>
-</li>
-</ul>
+<h2>Source and implementation archive</h2>
+<p>
+<a href="https://github.com/Mahyoub88/embedded-iot-automation">Updated repository</a> · <a href="https://github.com/Mahyoub88/embedded-iot-automation/blob/main/docs/pic-peripheral-implementations.md">Earlier complete documentation</a> · <a href="https://github.com/Mahyoub88/embedded-iot-automation/blob/main/docs/original-media-manifest.json">Original-media integrity manifest</a>
+</p>
 </section>
 <nav class="project-pagination" aria-label="More case studies">
 <a href="/projects/proj-sddc-lab/">← Software-Defined Data Center (SDDC) — Design &amp; Implementation</a>

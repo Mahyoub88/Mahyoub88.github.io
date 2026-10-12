@@ -790,44 +790,44 @@
     {
       "id": "proj-embedded-iot",
       "group": "earlier",
-      "category": "Embedded Systems · Firmware · Peripheral Integration",
-      "title": "PIC Embedded Systems — Peripheral Integration & Persistent Storage",
-      "description": "Implemented PIC16-based embedded applications using mikroC and Proteus, integrating sensor acquisition, LCD/keypad interfaces, real-time clocks and control outputs. Applied on-chip EEPROM read/write techniques to retain stored values across power cycles.",
+      "category": "Embedded Systems · Environmental Monitoring · Access Control",
+      "title": "PIC-Based Equipment Room Monitoring & Control System",
+      "description": "Equipment-room monitoring and control design built around PIC16 firmware: temperature and humidity sensing, ventilation control, keypad access, local alarms, RTC timekeeping and persistent EEPROM settings. Includes preserved original implementation media, detailed wiring and a tested reference control model.",
       "meta": [
         {
           "label": "Author",
           "value": "Mohammed Mahyoub"
         },
         {
-          "label": "Scope",
-          "value": "Real-time monitoring and control systems, sensor integration, telemetry, hardware configuration, functional testing, and technical validation."
+          "label": "Application",
+          "value": "Local equipment-room monitoring, ventilation, access and alarms."
         },
         {
-          "label": "Firmware",
-          "value": "PIC16 firmware in mikroC, simulated in Proteus and built on hardware: multiplexed 7-segment displays, ADC measurement with Timer0 interrupts, EEPROM storage, DS1307 RTC over I²C, 74HC595 shift registers, keypad/LCD access control with alarm, and Nokia 5110 graphic LCD."
+          "label": "Controller",
+          "value": "Reference baseline: PIC16F877A, 5 V, ADC, I²C, 16×2 LCD and 4×4 keypad."
         },
         {
-          "label": "Devices",
-          "value": "IC and memory programming: ROM/PROM/EPROM/EEPROM/Flash, SRAM/DRAM/NV-RAM organisation, and hardware device programmers."
+          "label": "Original work",
+          "value": "Preserved PIC peripheral and EEPROM implementation documentation and original posters."
         },
         {
-          "label": "Persistent Storage",
-          "value": "On-chip EEPROM writing, read-back verification and start-up retrieval of values retained across power cycles."
+          "label": "Design status",
+          "value": "Integrated room design and reference-model verification; complete hardware commissioning is not asserted."
         }
       ],
       "tags": [
         "PIC16",
-        "Embedded C",
-        "mikroC",
-        "Proteus",
+        "Sensors",
         "ADC",
         "I²C",
+        "LCD/Keypad",
+        "RTC",
         "EEPROM",
-        "LCD/Keypad"
+        "mikroC"
       ],
       "status": {
         "kind": "professional",
-        "label": "Implemented Project"
+        "label": "PIC Implementation · Integrated Reference Design"
       },
       "link": "",
       "links": [
@@ -841,13 +841,13 @@
         }
       ],
       "accent": "purple",
-      "image": "/projects/proj-embedded-iot/media/source/01_system_overview.svg",
-      "imageAlt": "PIC peripheral overview — explanatory source diagram",
-      "imageCaption": "Explanatory system diagram",
-      "coverImage": "/images/project-covers/themed-v4/proj-embedded-iot.webp",
-      "coverAlt": "Engineering illustration of pic firmware & peripherals: pic16, lcd / keypad, rtc / i2c, adc",
+      "image": "/projects/proj-embedded-iot/media/equipment-room/cover.png",
+      "imageAlt": "Concept illustration of equipment-room monitoring and control with a PIC controller",
+      "imageCaption": "AI-generated concept illustration; original implementation media is retained below",
+      "coverImage": "/projects/proj-embedded-iot/media/equipment-room/cover.png",
+      "coverAlt": "Equipment room with environmental sensors, PIC controller, fan, keypad access and persistent settings",
       "coverCaption": "AI-generated project cover illustration",
-      "coverLightImage": "/images/project-covers/engineering-v3/proj-embedded-iot.webp"
+      "coverLightImage": "/projects/proj-embedded-iot/media/equipment-room/cover.png"
     },
     {
       "id": "proj-rfid-study",
