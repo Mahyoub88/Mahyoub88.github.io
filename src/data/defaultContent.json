@@ -55,7 +55,7 @@
     "badge": "SENIOR ITS & SYSTEMS INTEGRATION ENGINEER",
     "greetingName": "Mohammed Mahyoub",
     "tagline": "Engineering Reliable Traffic Systems — and Applying AI to Smarter Mobility",
-    "description": "Senior Service Engineer with 10+ years of multidisciplinary engineering experience, including 6+ years supporting intelligent transportation, smart infrastructure, and traffic enforcement systems across the UAE.\n\nI integrate cameras, LiDAR, sensors, control units, networks, databases, and backend platforms into reliable end-to-end operational systems.",
+    "description": "Senior Service Engineer with 14 years of multidisciplinary engineering experience, including over 7 years at VITRONIC Machine Vision supporting intelligent transportation, smart infrastructure, and traffic enforcement systems across the UAE.\n\nI integrate cameras, LiDAR, sensors, control units, networks, databases, and backend platforms into reliable end-to-end operational systems.",
     "primaryCta": {
       "label": "View Selected Work",
       "href": "#work"
@@ -162,14 +162,14 @@
     {
       "id": "stat-1",
       "icon": "briefcase",
-      "value": "10+",
+      "value": "14",
       "label": "Years of Engineering Experience"
     },
     {
       "id": "stat-2",
       "icon": "network",
-      "value": "6+",
-      "label": "Years in ITS & Smart Infrastructure"
+      "value": "7+",
+      "label": "Years at VITRONIC Machine Vision"
     },
     {
       "id": "stat-3",
@@ -183,7 +183,7 @@
     "subheading": "",
     "paragraphs": [
       "I am a Senior Service Engineer specializing in intelligent transportation systems, smart infrastructure, and traffic enforcement.",
-      "My background spans electronics, embedded systems, network infrastructure, software automation, and the integration of complex operational systems. Over the past 6+ years, I have supported ITS deployments across the UAE, working across cameras, LiDAR, sensors, control units, networking, databases, and backend platforms.",
+      "My 14 years of engineering experience span electronics, embedded systems, network infrastructure, software automation, and the integration of complex operational systems. For over 7 years at VITRONIC Machine Vision, I have supported ITS deployments across the UAE, working across cameras, LiDAR, sensors, control units, networking, databases, and backend platforms.",
       "My work covers FAT and SAT, commissioning, calibration, interface validation, performance verification, technical documentation, incident support, and structured root-cause analysis across hardware, software, communication, and database layers.",
       "I work closely with customers, vendors, software teams, and field engineers to resolve complex integration issues and support reliable service delivery.",
       "Alongside my engineering role, I am pursuing an MSc in Artificial Intelligence at UWE Bristol. My current academic work applies machine learning and computer vision to transportation problems, with a particular focus on data quality, leakage-resistant evaluation, efficient neural networks, and model explainability.",
@@ -215,7 +215,7 @@
       "period": "October 2019 — Present",
       "location": "United Arab Emirates",
       "employmentType": "",
-      "description": "Deploy, integrate, commission, and support intelligent traffic enforcement and ITS solutions across mission-critical operational environments in the UAE.",
+      "description": "Over 7 years at VITRONIC Machine Vision, deploying, integrating, commissioning, and supporting intelligent traffic enforcement and ITS solutions across mission-critical operational environments in the UAE.",
       "bullets": [
         "Support an installed base of 800+ intelligent transportation and traffic enforcement systems across the UAE.",
         "Integrate cameras, LiDAR, sensors, control units, networks, databases, and backend platforms into reliable end-to-end systems.",
