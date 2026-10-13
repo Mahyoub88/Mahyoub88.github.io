@@ -1,0 +1,100 @@
+{
+  "no_installation_photos_supplied": true,
+  "assets": [
+    {
+      "file": "media/01-rf-tool.jpg",
+      "origin": "Existing project source media or terrain/map rendering; retain case-study caption",
+      "sha256": "a4ac81b42527b146b3e173d6883b86b07d0bee3980f783caff074d8ceb04e3b9"
+    },
+    {
+      "file": "media/02-network-coverage.jpg",
+      "origin": "Existing project source media or terrain/map rendering; retain case-study caption",
+      "sha256": "1363ee21655109dd40a826a4de207f48e37d7f7b8733e46804ae3f18114c5c08"
+    },
+    {
+      "file": "media/03-fresnel-tool.jpg",
+      "origin": "Existing project source media or terrain/map rendering; retain case-study caption",
+      "sha256": "18f650daf2f59e25172acb797ec1329e0d76f21983de5f2c33858120416656af"
+    },
+    {
+      "file": "media/al-sharq-distribution-map.webp",
+      "origin": "Original project document map; CNES / Astrium and Google attribution retained",
+      "sha256": "47a14b3eff2a8c1251f3fa32f975046302a07da87a8adda5f3fabfe0accdb873"
+    },
+    {
+      "file": "media/atma-al-sharq-3d.webp",
+      "origin": "Existing project source media or terrain/map rendering; retain case-study caption",
+      "sha256": "7e9c2f38cce060cd070855fd3b7ae959ef1e8c17b72b25c2806fe5101da2d489"
+    },
+    {
+      "file": "media/atma-al-sharq-osm.webp",
+      "origin": "Existing project source media or terrain/map rendering; retain case-study caption",
+      "sha256": "d49ce4691aa5dd20379709eeb4c71794cd80eecacb2eda0cea8590d029598483"
+    },
+    {
+      "file": "media/atma-al-sharq-relief.webp",
+      "origin": "Existing project source media or terrain/map rendering; retain case-study caption",
+      "sha256": "2aaafbc650502b7e6e831f0105d3599afa73f302e35442d0fa08e5464fa5639d"
+    },
+    {
+      "file": "media/original-requirements.webp",
+      "origin": "Original author-supplied requirements PDF page 1",
+      "sha256": "3a82217fc527eececed39d36d7df6503443e361ce8c8920ee558892a0296cdfc"
+    },
+    {
+      "file": "media/reviewed-cell-coverage.png",
+      "origin": "Computed output of reviewed_simulation.py",
+      "sha256": "d45c9e72bd63adf468139e2c3121142c9a001e42240e27c4e7c59fdd85828941"
+    },
+    {
+      "file": "media/reviewed-eirp-sensitivity.png",
+      "origin": "Computed output of reviewed_simulation.py",
+      "sha256": "a573757835cf1204f8382fbd6bedc65d4ae02910bf9938ab6173bf4ea486edcc"
+    },
+    {
+      "file": "media/reviewed-h1-profile.png",
+      "origin": "Computed output of reviewed_simulation.py",
+      "sha256": "02c829eac8ee811af03239cde9694748c0e6ab9d57e12609dfb712d717734301"
+    },
+    {
+      "file": "media/reviewed-h2-profile.png",
+      "origin": "Computed output of reviewed_simulation.py",
+      "sha256": "8102d42876b474097e3aea1813e9791ba846fd389bdfeb1e94a57b379aa85bf2"
+    },
+    {
+      "file": "media/reviewed-mast-sensitivity.png",
+      "origin": "Computed output of reviewed_simulation.py",
+      "sha256": "3a55f9a723028aa5c0653b0579588139417d92c7775fe256ea081a04c2f68c63"
+    },
+    {
+      "file": "media/reviewed-mcs-margin.png",
+      "origin": "Computed output of reviewed_simulation.py",
+      "sha256": "b76e21d5c79522590b35bd5112e2f74b3679cc6df34ed6b4d42a031dffdd85d5"
+    },
+    {
+      "file": "media/uisp-hop1-result.jpg",
+      "origin": "Actual UISP Design Center result crop, user-authorized coordinates excluded from public crop",
+      "sha256": "2a977fb052729823577810e4a93f688fd0f4548c06e300aa0a280a49091c8ca0"
+    },
+    {
+      "file": "media/uisp-hop2-result.jpg",
+      "origin": "Actual UISP Design Center result crop, user-authorized coordinates excluded from public crop",
+      "sha256": "c75dcf6f973da8b0075cd10325301be566c00123523d463a2fe33e70d6b10c72"
+    },
+    {
+      "file": "media/vendor-dish.webp",
+      "origin": "Official Ubiquiti datasheet cover, product family, not site photograph",
+      "sha256": "da7591464908f0b281f93fb9b1a0175a63d85a30e9d1a31cff8b46cfc0432ebd"
+    },
+    {
+      "file": "media/vendor-nanostation.webp",
+      "origin": "Official Ubiquiti datasheet cover, product family, not site photograph",
+      "sha256": "88c870e1068a9f3d8598563455cb5c57960e86de5948135e82303380d8f5b5a7"
+    },
+    {
+      "file": "media/vendor-powerbeam.webp",
+      "origin": "Official Ubiquiti datasheet cover, product family, not site photograph",
+      "sha256": "e47238e6709d9d4759b078dc487f092eba131ee828c02cb0b99773c9ad021dca"
+    }
+  ]
+}

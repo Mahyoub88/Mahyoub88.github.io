@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Wireless Link Planning &amp; RF Engineering | Mohammed Mahyoub</title>
-<meta name="description" content="Planned a two-hop wireless backhaul bringing internet from Atma to Al-Sharq in Dhamar through a mountain-top relay, with a seven-zone local distribution plan, VB.NET planning calculators and a terrain and link simulation.">
+<meta name="description" content="Two-hop wireless backhaul from Atma to Al-Sharq through a mountain relay, with seven-zone distribution, VB.NET engineering tools, authentic UISP simulation captures and a reviewed RF design.">
 <link rel="canonical" href="https://mahyoub88.github.io/projects/proj-wireless-link-planning/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Wireless Link Planning &amp; RF Engineering">
-<meta property="og:description" content="Planned a two-hop wireless backhaul bringing internet from Atma to Al-Sharq in Dhamar through a mountain-top relay, with a seven-zone local distribution plan, VB.NET planning calculators and a terrain and link simulation.">
+<meta property="og:description" content="Two-hop wireless backhaul from Atma to Al-Sharq through a mountain relay, with seven-zone distribution, VB.NET engineering tools, authentic UISP simulation captures and a reviewed RF design.">
 <meta property="og:url" content="https://mahyoub88.github.io/projects/proj-wireless-link-planning/">
-<meta property="og:image" content="https://mahyoub88.github.io/images/project-covers/collage-v1/proj-wireless-link-planning.webp">
+<meta property="og:image" content="https://mahyoub88.github.io/projects/proj-wireless-link-planning/media/atma-al-sharq-osm.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg">
 <link rel="stylesheet" href="/projects/case-study.css">
@@ -26,7 +26,7 @@
 <main id="main">
 <p class="eyebrow">Network Engineering · RF Planning</p>
 <h1>Wireless Link Planning &amp; RF Engineering</h1>
-<p class="lede">Planned a two-hop wireless backhaul bringing internet from Atma to Al-Sharq in Dhamar through a mountain-top relay, with a seven-zone local distribution plan, VB.NET planning calculators and a terrain and link simulation.</p>
+<p class="lede">Two-hop wireless backhaul from Atma to Al-Sharq through a mountain relay, with seven-zone distribution, VB.NET engineering tools, authentic UISP simulation captures and a reviewed RF design.</p>
 <span class="badge">Implemented Project</span>
 <figure class="hero-media">
 <a href="/projects/proj-wireless-link-planning/media/atma-al-sharq-osm.webp">
@@ -50,6 +50,9 @@
 <a href="#link-budget">3 · Link budget</a>
 <a href="#integrated-review">Integrated review</a>
 <a href="#atma-al-sharq-simulation">Atma → Al-Sharq case</a>
+<a href="#uisp-simulation">Actual UISP results</a>
+<a href="#engineering-audit">Engineering audit</a>
+<a href="#field-acceptance">Acceptance record</a>
 <a href="#verification-context">Verification</a>
 <a href="#sources">Sources</a>
 </nav>
@@ -57,7 +60,7 @@
 <h2>Overview</h2>
 <div class="summary">
 <h3>Implementation scope</h3>
-<p>A wireless link is only as good as its weakest planning assumption. This study treats coverage, path geometry and radio budget as one engineering workflow: where service is needed, whether the path between sites stays clear, and whether the receiver is left with usable margin. The worked case is bringing internet from Atma to Al-Sharq in Dhamar Governorate through a mountain-top relay, planned on Ubiquiti equipment and supported by two VB.NET engineering calculators for Fresnel-zone clearance and RF link budget.</p>
+<p>A wireless link is only as good as its weakest planning assumption. This engineering case treats coverage, path geometry and radio budget as one engineering workflow: where service is needed, whether the path between sites stays clear, and whether the receiver is left with usable margin. The implemented network brings internet from Atma to Al-Sharq in Dhamar Governorate through a mountain-top relay, planned on Ubiquiti equipment and supported by two VB.NET engineering calculators for Fresnel-zone clearance and RF link budget.</p>
 </div>
 <p>The three parts were originally documented separately. They are presented together here because a real link decision needs all of them: a good link budget cannot rescue an obstructed path, and a clear path does not prove there is enough signal at the receiver. Each part below states its inputs, its method and the evidence a reviewer should expect to inspect.</p>
 </section>
@@ -66,7 +69,7 @@
 <p>Each question is answered with its own method, then recorded in a single link decision record. Prediction and measurement are kept apart throughout: a model result is never presented as a field measurement.</p>
 <figure>
 <a href="media/planning-workflow.svg">
-<img loading="lazy" src="media/planning-workflow.svg" alt="Workflow from coverage need, path clearance, link budget and capacity into one link decision record, then alignment and field validation">
+<img loading="lazy" src="media/planning-workflow.svg" alt="Workflow from coverage need, path clearance, link budget and capacity into one link decision record, then alignment and field validation" width="1240" height="660">
 </a>
 <figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
 </figure>
@@ -115,7 +118,7 @@
 <p>Wireless coverage and point-to-point connectivity were modelled together, considering antenna alignment, capacity requirements and site coverage. Coverage describes where access is available; point-to-point planning describes the transport between sites. Antenna placement and alignment influence both the proposed link and its installation.</p>
 <figure>
 <a href="media/02-network-coverage.jpg">
-<img loading="lazy" src="media/02-network-coverage.jpg" alt="Wireless coverage and point-to-point planning — source project media">
+<img loading="lazy" src="media/02-network-coverage.jpg" alt="Wireless coverage and point-to-point planning — source project media" width="1280" height="853">
 </a>
 <figcaption>Source project media · colour coverage view from the original planning work. It communicates spatial planning and is not a measured signal-strength survey.</figcaption>
 </figure>
@@ -123,7 +126,7 @@
 <p>A planning record needs the radio settings, antenna pattern, installation geometry and environmental assumptions associated with its prediction. Alignment should be reviewed against the intended endpoint and polarisation before optimising observed signal. No frequencies or sector counts are reconstructed from the low-resolution preview.</p>
 <figure>
 <a href="media/coverage-review.svg">
-<img loading="lazy" src="media/coverage-review.svg" alt="Coverage, backhaul and capacity answer different questions — explanatory engineering review">
+<img loading="lazy" src="media/coverage-review.svg" alt="Coverage, backhaul and capacity answer different questions — explanatory engineering review" width="1240" height="660">
 </a>
 <figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
 </figure>
@@ -166,7 +169,7 @@
 <p>A point-to-point link needs more than a visible sight line. The planning tool addresses line-of-sight and Fresnel-zone clearance: the link budget evaluates power, while the path profile evaluates geometry and obstruction.</p>
 <figure>
 <a href="media/03-fresnel-tool.jpg">
-<img loading="lazy" src="media/03-fresnel-tool.jpg" alt="Line-of-sight and Fresnel planning — source document view">
+<img loading="lazy" src="media/03-fresnel-tool.jpg" alt="Line-of-sight and Fresnel planning — source document view" width="1293" height="727">
 </a>
 <figcaption>Source project media · interface and document view of the planning tool, not an installed radio-link photograph.</figcaption>
 </figure>
@@ -186,7 +189,7 @@
 <p>A complete review combines endpoint elevations and antenna heights with a terrain profile, obstacle heights and the selected refraction assumptions. Straight-line visibility alone can conceal Fresnel obstruction. Any recommended mast height must identify its survey inputs; the available material does not support a site-specific height recommendation.</p>
 <figure>
 <a href="media/fresnel-review.svg">
-<img loading="lazy" src="media/fresnel-review.svg" alt="Clearance is a path profile, not only a sight line — explanatory engineering review">
+<img loading="lazy" src="media/fresnel-review.svg" alt="Clearance is a path profile, not only a sight line — explanatory engineering review" width="1240" height="660">
 </a>
 <figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
 </figure>
@@ -229,7 +232,7 @@
 <p>The VB.NET engineering calculator addresses path loss, receiver sensitivity, thermal noise and link-budget calculations. A walkthrough must expose input units and assumptions as well as the output, so a reviewer can recompute a result without access to the original source code.</p>
 <figure>
 <a href="media/01-rf-tool.jpg">
-<img loading="lazy" src="media/01-rf-tool.jpg" alt="RF calculator — original interface and calculation fields">
+<img loading="lazy" src="media/01-rf-tool.jpg" alt="RF calculator — original interface and calculation fields" width="1280" height="853">
 </a>
 <figcaption>Source project media · original calculator interface and calculation fields.</figcaption>
 </figure>
@@ -290,7 +293,7 @@
 <p>The displayed received power agrees with the displayed loss, but that loss does not agree with the visible frequency and distance. This is a discrepancy in the poster; without application source it does not identify the cause or prove a software defect. The original image is preserved as source evidence. At 20 MHz bandwidth and 5 dB noise figure, equivalent receiver noise is approximately −95.99 dBm; the poster’s roughly −101 dBm corresponds to thermal noise before adding noise figure, so the two quantities are labelled separately.</p>
 <figure>
 <a href="media/link-budget-review.svg">
-<img loading="lazy" src="media/link-budget-review.svg" alt="Keeping power, loss and margin in consistent units — explanatory engineering review">
+<img loading="lazy" src="media/link-budget-review.svg" alt="Keeping power, loss and margin in consistent units — explanatory engineering review" width="1240" height="660">
 </a>
 <figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
 </figure>
@@ -373,325 +376,303 @@
 <p>A passing link budget does not remove a clearance deficit, and a clear path does not prove margin. The decision record therefore lists all three results with their assumptions, then hands over to alignment and field validation, where measured values are recorded separately from these predictions.</p>
 </section>
 <section id="atma-al-sharq-simulation">
-<h2>Case: bringing internet from Atma to Al-Sharq, Dhamar</h2>
+<h2>Atma to Al-Sharq engineering case</h2>
 <div class="summary">
-<h3>What is documented and what is simulated</h3>
-<p>The equipment, distances, distribution plan and costs come from the author’s own planning document for this network. Everything labelled <strong>simulated</strong> is a planning-level engineering analysis run on public elevation data, manufacturer-reported radio figures and stated assumptions. It is not as-built evidence: no measured signal level, throughput or uptime is included. The last subsection turns the predictions into field acceptance criteria.</p>
+<h3>Project evidence and current analysis</h3>
+<p>The implemented network links Atma to Al-Sharq through the MTN tower area. This engineering review joins source requirements, authentic simulation captures, reproducible RF calculations and a commissioning evidence plan.</p>
+<p>The reviewed 5.8 GHz capability case predicts 19.93 dB and 29.45 dB margin at MCS15. These margins support further validation; permitted EIRP, interference and near-site obstructions can change the result. No measured RSSI, payload throughput or availability has been supplied.</p>
 </div>
-<h3>Backhaul design: two hops through the MTN tower site</h3>
-<p>Atma and Al-Sharq are separated by mountains, so the plan does not attempt one long link. It uses two hops through the elevated MTN tower area, with a different radio class on each hop. Link planning used the Ubiquiti airLink tool.</p>
+<p>
+<a href="downloads/Wireless-Link-Engineering-Review.pdf">Download the engineering report (PDF)</a> · <a href="simulation/">Open the calculation explorer</a> · <a href="downloads/Engineering-Audit.md">Read the engineering audit</a>
+</p>
+<h3>Source requirements and engineering inputs</h3>
+<p>The original requirements specify 8.5 km and 16.5 km. The retained terrain profiles yield 8.277 km and 15.556 km, while UISP displays 8.31 km and 15.64 km. Keep all three distance bases labelled; confirm actual mounting points before adopting a final path length.</p>
+<p>The historical budget lists one link on each hop: PowerBeam M5 400 ($180) and a 34 dBi RocketDish link ($1,200). A link requires both endpoints; the second hop also requires compatible Rocket radios. Exact procurement quantities must be reconciled.</p>
 <div class="table-scroll">
 <table>
-<caption>Backhaul as documented in the planning document</caption>
+<caption>Source requirements and engineering inputs</caption>
 <thead>
 <tr>
-<th scope="col">Hop</th>
-<th scope="col">Estimated distance</th>
-<th scope="col">Equipment</th>
-<th scope="col">Quantity and cost</th>
+<th scope="col">Input</th>
+<th scope="col">Basis</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Atma city centre → MTN tower area</td>
-<td>8.5 km</td>
-<td>PowerBeam M5 400</td>
-<td>One link, $180</td>
+<td>7 distribution zones</td>
+<td>1, 4, 6, 10, 12, 13, 14; planned range 500 m</td>
 </tr>
 <tr>
-<td>MTN tower area → Al-Sharq city</td>
-<td>16.5 km</td>
-<td>Rocket Dish M5, 34 dBi</td>
-<td>One link, $1,200</td>
+<td>61 terrain samples per hop</td>
+<td>Existing Copernicus GLO-90 profile through Open-Meteo</td>
+</tr>
+<tr>
+<td>Profile sample spacing</td>
+<td>About 138 m on H1 and 259 m on H2</td>
+</tr>
+<tr>
+<td>Reviewed radio calculation</td>
+<td>5.8 GHz; 20 MHz; 800 ns guard interval</td>
+</tr>
+<tr>
+<td>Clearance scenario</td>
+<td>6 m antennas; k = 4/3; 5 m clutter</td>
+</tr>
+<tr>
+<td>Observed operating data</td>
+<td>Not supplied</td>
 </tr>
 </tbody>
 </table>
 </div>
-<h3>The route on the ground</h3>
-<p>The images below show the real terrain along the route, rendered from public elevation data and OpenStreetMap. They are not photographs of the installation. The mountain-top relay is the highest point of the route and Al-Sharq lies far below it.</p>
+<details>
+<summary>View the original requirements document</summary>
+<figure>
+<a href="media/original-requirements.webp">
+<img loading="lazy" src="media/original-requirements.webp" alt="Original project requirements, page 1. Historical source quantities and prices." width="893" height="1263">
+</a>
+<figcaption>Original project requirements, page 1. Historical source quantities and prices.</figcaption>
+</figure>
+</details>
+<h3 id="uisp-simulation">Actual UISP simulation results</h3>
+<p>The two result images below were captured from Ubiquiti UISP Design Center on 12 October 2026. Guest mode, manual product selection, Noise Free, 20 MHz and 6 m antenna heights were used. These are actual tool outputs, not recreated interface illustrations.</p>
+<p>UISP reports that LIDAR data is unavailable in this area. Its frequency and loss assumptions differ from the independent 5.8 GHz calculation. The displayed 84.5 Mbps is vendor-predicted capacity, not an iperf measurement or a guaranteed end-to-end service rate.</p>
+<div class="table-scroll">
+<table>
+<caption>Actual UISP simulation results</caption>
+<thead>
+<tr>
+<th scope="col">Vendor run input / prediction</th>
+<th scope="col">H1</th>
+<th scope="col">H2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product</td>
+<td>PowerBeam M5 400 pair</td>
+<td>Rocket M5 + RD-5G34 pair</td>
+</tr>
+<tr>
+<td>Distance</td>
+<td>8.31 km</td>
+<td>15.64 km</td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td>5,000 MHz</td>
+<td>5,500 MHz</td>
+</tr>
+<tr>
+<td>TX / gain</td>
+<td>26 dBm / 25 dBi</td>
+<td>27 dBm / 34 dBi</td>
+</tr>
+<tr>
+<td>Height / width</td>
+<td>6 m / 20 MHz</td>
+<td>6 m / 20 MHz</td>
+</tr>
+<tr>
+<td>Expected signal</td>
+<td>-49 dBm</td>
+<td>-36 dBm</td>
+</tr>
+<tr>
+<td>Displayed capacity</td>
+<td>84.5 Mbps</td>
+<td>84.5 Mbps</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="grid uisp-captures">
+<figure>
+<a href="media/uisp-hop1-result.jpg">
+<img loading="lazy" src="media/uisp-hop1-result.jpg" alt="H1: PowerBeam M5 400 · Actual UISP simulation output; precise-coordinate fields excluded." width="258" height="293">
+</a>
+<figcaption>H1: PowerBeam M5 400 · Actual UISP simulation output; precise-coordinate fields excluded.</figcaption>
+</figure>
+<figure>
+<a href="media/uisp-hop2-result.jpg">
+<img loading="lazy" src="media/uisp-hop2-result.jpg" alt="H2: Rocket M5 + 34 dBi dish · Actual UISP simulation output; precise-coordinate fields excluded." width="258" height="293">
+</a>
+<figcaption>H2: Rocket M5 + 34 dBi dish · Actual UISP simulation output; precise-coordinate fields excluded.</figcaption>
+</figure>
+</div>
+<h3 id="terrain-results">Terrain and Fresnel clearance</h3>
+<p>The nominal sampled paths clear 60% of the first Fresnel zone. The midpoint first-zone radii are about 10.34 m and 14.18 m at 5.8 GHz. Curvature is applied once, with k = 4/3. Ground elevations are in metres above mean sea level; antenna heights are above local ground.</p>
+<p>These profiles do not resolve every tree, rooftop or narrow ridge. A direct survey of the endpoint approaches remains necessary. A zero-height result from a sparse model is not an installation height recommendation.</p>
+<figure>
+<a href="media/reviewed-h1-profile.png">
+<img loading="lazy" src="media/reviewed-h1-profile.png" alt="H1 actual calculation output from the retained terrain dataset." width="1908" height="1044">
+</a>
+<figcaption>H1 actual calculation output from the retained terrain dataset.</figcaption>
+</figure>
+<figure>
+<a href="media/reviewed-h2-profile.png">
+<img loading="lazy" src="media/reviewed-h2-profile.png" alt="H2 actual calculation output from the retained terrain dataset." width="1908" height="1044">
+</a>
+<figcaption>H2 actual calculation output from the retained terrain dataset.</figcaption>
+</figure>
+<details>
+<summary>Explore the terrain views</summary>
 <figure>
 <a href="media/atma-al-sharq-3d.webp">
-<img loading="lazy" src="media/atma-al-sharq-3d.webp" alt="Oblique three-dimensional terrain view from the south with Atma, the MTN tower site and Al-Sharq marked">
+<img loading="lazy" src="media/atma-al-sharq-3d.webp" alt="Existing rendering of the public 90 m terrain dataset; vertical scale exaggerated 1.6 times. This is a terrain model, not a site photograph." width="1600" height="900">
 </a>
-<figcaption>Oblique view from the south with the vertical scale exaggerated 1.6 times, rendered from public 90 m elevation data. Mast markers are drawn tall for visibility.</figcaption>
+<figcaption>Existing rendering of the public 90 m terrain dataset; vertical scale exaggerated 1.6 times. This is a terrain model, not a site photograph.</figcaption>
 </figure>
 <figure>
 <a href="media/atma-al-sharq-relief.webp">
-<img loading="lazy" src="media/atma-al-sharq-relief.webp" alt="Shaded relief map of the area with the two hops marked">
+<img loading="lazy" src="media/atma-al-sharq-relief.webp" alt="Existing shaded-relief rendering of public elevation data." width="1065" height="1345">
 </a>
-<figcaption>Shaded relief with the two hops, rendered from public 90 m elevation data.</figcaption>
+<figcaption>Existing shaded-relief rendering of public elevation data.</figcaption>
 </figure>
-<figure>
-<a href="media/atma-al-sharq-architecture.svg">
-<img loading="lazy" src="media/atma-al-sharq-architecture.svg" alt="Network architecture from Atma through the MTN tower site to the Al-Sharq core and seven distribution zones">
-</a>
-<figcaption>Network architecture. Design proposal, not an as-built drawing.</figcaption>
-</figure>
-<h3>Method and inputs</h3>
-<ul>
-<li>
-<strong>Terrain:</strong> 61 elevation samples per hop from the public Copernicus 90 m model. Site coordinates are approximate to about 1 km in the repository and are not survey positions; the map images show positions only at map scale.</li>
-<li>
-<strong>Radio figures:</strong> manufacturer-reported values for the named equipment, from the Ubiquiti TechSpecs pages for the <a href="https://techspecs.ui.com/uisp/wireless/pbe-m5-400">PowerBeam M5 400</a>, the <a href="https://techspecs.ui.com/uisp/wireless/rd-5g">RocketDish</a> and the <a href="https://techspecs.ui.com/uisp/wireless/nsm2">NanoStation M2</a>, and the Rocket M datasheet: 25 dBi and up to 26 dBm for the PowerBeam, 34 dBi with a beamwidth near 3° for the dish, up to 27 dBm for the Rocket M5, and sensitivity from −96 dBm (MCS0) to −74 dBm (MCS7), each with a ±2 dB tolerance. Transmit power falls at the higher rates, and the model follows that.</li>
-<li>
-<strong>Assumptions, not recovered settings:</strong> 5.8 GHz, a 20 MHz channel, 2×2 operation with 50% protocol efficiency, 0.5 dB cable loss per end, 2 dB other losses, a 10 dB fade allowance, and a 5 m allowance for trees and buildings.</li>
-<li>
-<strong>Propagation:</strong> the ITU-R P.530 multipath model and the ITU-R P.838 and P.530 rain model, with an assumed refractivity gradient and a 40 mm/h rain rate exceeded 0.01% of the time. These climate inputs were not verified for the region.</li>
-<li>
-<strong>Uncertainty:</strong> 5,000 Monte Carlo runs per hop varying terrain-model error (a 6 m smooth component and 4 m noise), clutter up to 15 m, and the effective-Earth factor.</li>
-</ul>
-<h3>Terrain and clearance (simulated)</h3>
+</details>
+<h3>RF budget and MIMO capacity</h3>
+<p>Each device uses its own manufacturer TX table. MCS0-7 denotes one stream; MCS8-15 denotes two streams. The highest two-stream example is MCS15, 130 Mbps PHY at 20 MHz/800 ns GI. At an assumed 50% payload efficiency, 65 Mbps is an illustrative per-hop estimate, shared across subscribers and directions.</p>
+<p>The RF equations use dBm for absolute power, dBi for antenna gain and dB for losses. H1 has an integrated antenna and no separately added external RF-feed loss. H2 assumes 0.5 dB feed loss per end. Both include 2 dB other losses.</p>
 <div class="table-scroll">
 <table>
-<caption>Terrain along the two hops, with 6 m masts</caption>
+<caption>RF budget and MIMO capacity</caption>
 <thead>
 <tr>
 <th scope="col">Item</th>
-<th scope="col">Hop 1: Atma → MTN site</th>
-<th scope="col">Hop 2: MTN site → Al-Sharq</th>
+<th scope="col">H1 PowerBeam</th>
+<th scope="col">H2 Rocket + dish</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Computed path length</td>
-<td>8.3 km</td>
-<td>15.6 km</td>
+<td>Path length</td>
+<td>8.28 km</td>
+<td>15.56 km</td>
 </tr>
 <tr>
-<td>Ground elevation, start / end</td>
-<td>2066 m / 2680 m</td>
-<td>2680 m / 1283 m</td>
+<td>Frequency / channel</td>
+<td>5.8 GHz / 20 MHz</td>
+<td>5.8 GHz / 20 MHz</td>
 </tr>
 <tr>
-<td>Vertical angle along the path</td>
-<td>about +4.2° (uphill)</td>
-<td>about −5.1° (downhill)</td>
+<td>MCS15 TX / gain</td>
+<td>23 dBm / 25 dBi</td>
+<td>21 dBm / 34 dBi</td>
 </tr>
 <tr>
-<td>Mast height for 60% / 100% Fresnel clearance</td>
-<td>0 m / 0 m</td>
-<td>1 m / 3 m</td>
+<td>RF feed / other loss</td>
+<td>0 dB per end / 2 dB</td>
+<td>0.5 dB per end / 2 dB</td>
 </tr>
 <tr>
-<td>Clearance at k = 4/3, as a multiple of the first Fresnel radius</td>
-<td>8.0</td>
-<td>2.1</td>
+<td>FSPL</td>
+<td>126.07 dB</td>
+<td>131.55 dB</td>
 </tr>
 <tr>
-<td>Clearance at k = 2/3 (sub-refractive atmosphere)</td>
-<td>8.0</td>
-<td>2.0</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>The tower site stands about 600 m above Atma and about 1,400 m above Al-Sharq. Both hops therefore clear the intervening ridges on the nominal terrain, and the relay site works as a mountain-top hub.</p>
-<figure>
-<a href="media/atma-al-sharq-h1-profile.svg">
-<img loading="lazy" src="media/atma-al-sharq-h1-profile.svg" alt="Terrain profile from Atma city centre to the MTN tower site with line of sight and first Fresnel zone">
-</a>
-<figcaption>Hop 1, simulated from public elevation data. Not a survey or field measurement.</figcaption>
-</figure>
-<figure>
-<a href="media/atma-al-sharq-h2-profile.svg">
-<img loading="lazy" src="media/atma-al-sharq-h2-profile.svg" alt="Terrain profile from the MTN tower site down to Al-Sharq city with line of sight and first Fresnel zone">
-</a>
-<figcaption>Hop 2, simulated from public elevation data. Not a survey or field measurement.</figcaption>
-</figure>
-<h3>Clearance under uncertainty (Monte Carlo)</h3>
-<p>A single profile hides how much the answer depends on terrain-model error and refraction. Repeating the clearance calculation 5,000 times per hop gives the probability that the link keeps at least 60% of the first Fresnel radius, and the probability that the sight line is simply free.</p>
-<div class="table-scroll">
-<table>
-<caption>Probability of adequate clearance by mast height (simulated)</caption>
-<thead>
-<tr>
-<th scope="col">Mast height</th>
-<th scope="col">Hop 1: ≥ 60% Fresnel</th>
-<th scope="col">Hop 2: ≥ 60% Fresnel</th>
-<th scope="col">Hop 2: sight line free</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>3 m</td>
-<td>100%</td>
-<td>49%</td>
-<td>64%</td>
+<td>Predicted MCS15 RSSI</td>
+<td>-55.07 dBm</td>
+<td>-45.55 dBm</td>
 </tr>
 <tr>
-<td>6 m</td>
-<td>100%</td>
-<td>69%</td>
-<td>83%</td>
+<td>Sensitivity / margin</td>
+<td>-75 dBm / 19.93 dB</td>
+<td>-75 dBm / 29.45 dB</td>
 </tr>
 <tr>
-<td>10 m</td>
-<td>100%</td>
-<td>94%</td>
-<td>99%</td>
+<td>After TX/RX 4 dB tolerance</td>
+<td>15.93 dB</td>
+<td>25.45 dB</td>
 </tr>
 <tr>
-<td>15 m</td>
-<td>100%</td>
-<td>100%</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>20 m</td>
-<td>100%</td>
-<td>100%</td>
-<td>100%</td>
+<td>PHY / illustrative payload</td>
+<td>130 / 65 Mbps</td>
+<td>130 / 65 Mbps</td>
 </tr>
 </tbody>
 </table>
 </div>
 <figure>
-<a href="media/atma-al-sharq-clearance-montecarlo.svg">
-<img loading="lazy" src="media/atma-al-sharq-clearance-montecarlo.svg" alt="Histogram of minimum clearance over 5000 simulated runs for each hop, with thresholds at grazing, 60 percent and 100 percent of the first Fresnel radius">
+<a href="media/reviewed-mcs-margin.png">
+<img loading="lazy" src="media/reviewed-mcs-margin.png" alt="Actual model output: device-specific margin across all MCS indices." width="1908" height="1044">
 </a>
-<figcaption>Spread of minimum clearance for 6 m masts. Simulation, not a survey.</figcaption>
+<figcaption>Actual model output: device-specific margin across all MCS indices.</figcaption>
 </figure>
-<p>Hop 1 is robust at any mast height. Hop 2 is the critical hop: every failing run occurs within 1 km of one of its two sites, where the Fresnel radius is small and a few metres of terrain error, a tree or a building decide the result. That points to a practical action rather than a larger dish: raise the masts to 10–15 m on that hop and check the first kilometre at each end on site.</p>
-<h3>Link margin by modulation rate (simulated)</h3>
+<h3>EIRP and uncertainty change the decision</h3>
+<p>Hardware maximum TX power is a capability input, not a permitted operating setting. The illustrative EIRP sweep shows how lower radiated power changes top-rate margin. It does not assert any legal EIRP limit for Yemen. Confirm the applicable band, channel, country profile and radiated-power limit.</p>
+<p>For a 36 dBm illustrative EIRP cap, the MCS15 margins fall to 7.93 dB on H1 and 10.95 dB on H2. H1 then falls below the 10 dB screen at MCS15 and requires a lower modulation rate. Device TX and receiver sensitivity tolerances alone may consume another 4 dB.</p>
 <div class="table-scroll">
 <table>
-<caption>Received level and fade margin on each hop</caption>
+<caption>EIRP and uncertainty change the decision</caption>
 <thead>
 <tr>
-<th scope="col">Quantity</th>
-<th scope="col">Hop 1 (8.3 km)</th>
-<th scope="col">Hop 2 (15.6 km)</th>
+<th scope="col">Unmodelled factor</th>
+<th scope="col">Required evidence</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Free-space path loss</td>
-<td>126.1 dB</td>
-<td>131.5 dB</td>
+<td>Interference / co-site coupling</td>
+<td>Spectrum scan and simultaneous-link test</td>
 </tr>
 <tr>
-<td>Received level at MCS0 / MCS5 / MCS7</td>
-<td>−53.1 / −56.1 / −59.1 dBm</td>
-<td>−39.5 / −42.5 / −45.5 dBm</td>
+<td>Alignment and chain imbalance</td>
+<td>Per-chain readings and mounting inspection</td>
 </tr>
 <tr>
-<td>Margin above sensitivity at MCS0 / MCS5 / MCS7</td>
-<td>42.9 / 26.9 / 14.9 dB</td>
-<td>56.5 / 40.5 / 28.5 dB</td>
+<td>Actual legal setting</td>
+<td>Applicable limits and configuration export</td>
 </tr>
 <tr>
-<td>Highest rate with a 10 dB fade allowance</td>
-<td>MCS7</td>
-<td>MCS7</td>
+<td>Annual availability</td>
+<td>Valid model domain, local climate and operational outage records</td>
 </tr>
 </tbody>
 </table>
 </div>
 <figure>
-<a href="media/atma-al-sharq-margin-ladder.svg">
-<img loading="lazy" src="media/atma-al-sharq-margin-ladder.svg" alt="Received level on each hop against receiver sensitivity from MCS0 to MCS7">
+<a href="media/reviewed-eirp-sensitivity.png">
+<img loading="lazy" src="media/reviewed-eirp-sensitivity.png" alt="Sensitivity to EIRP cap at MCS15. Caps are examples, not regulatory advice." width="1908" height="1044">
 </a>
-<figcaption>Received level against sensitivity for each modulation rate. Simulation, not a measurement.</figcaption>
+<figcaption>Sensitivity to EIRP cap at MCS15. Caps are examples, not regulatory advice.</figcaption>
 </figure>
-<p>Both hops can hold the highest single-stream rate with margin to spare. Hop 1 has the tighter margin at the top rate, because it uses the smaller dish. Equipment tolerances of ±2 dB and unmodelled interference are not included.</p>
-<h3>Propagation reliability (simulated)</h3>
+<h3>Mast-height sensitivity and design boundaries</h3>
+<p>The Monte Carlo screen varies assumed DEM error, clutter up to 15 m and effective Earth factor in 5,000 scenarios per height. A scenario pass fraction is not uptime, a measured obstruction probability or a confidence level. Endpoint elevation error is fixed and terrain between samples is unresolved.</p>
+<p>Increasing H2 mast height improves this sampled-point screen, but neither 10 m nor 15 m is a certified height. Surveyed clearance, safe access, foundation/mast structure, wind loading and permissions determine the final installation.</p>
+<p>The legacy annual rain/multipath outage figures are withdrawn from current conclusions: local climate, propagation-model applicability and annual versus worst-month time basis were not established.</p>
+<figure>
+<a href="media/reviewed-mast-sensitivity.png">
+<img loading="lazy" src="media/reviewed-mast-sensitivity.png" alt="Actual output of the scenario sensitivity calculation." width="1908" height="1044">
+</a>
+<figcaption>Actual output of the scenario sensitivity calculation.</figcaption>
+</figure>
+<h3>Seven-zone distribution and client coverage</h3>
+<p>The original map identifies seven retained zones. The equipment totals are 16 NanoStation M2 units, six local PowerBeam units and one sector line. A NanoStation has a directional antenna; a nominal 500 m reach is not omnidirectional coverage or a guaranteed high-rate boundary.</p>
+<p>The 5 GHz sector and 2.4 GHz NanoStation operate in different bands and cannot directly associate over RF. Confirm the sector radio, its exact SKU and any Ethernet interconnection. Coverage below assumes on-axis 11 dBi antennas at both ends, an n = 3.2 path-loss exponent and 8 dB shadowing; none is fitted to local measured coverage.</p>
 <div class="table-scroll">
 <table>
-<caption>Propagation outage estimates with ITU-R P.530 and P.838 models</caption>
-<thead>
-<tr>
-<th scope="col">Event</th>
-<th scope="col">Hop 1</th>
-<th scope="col">Hop 2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Fade that drops the link below MCS7</td>
-<td>14.9 dB</td>
-<td>28.5 dB</td>
-</tr>
-<tr>
-<td>Multipath time at that fade depth</td>
-<td>about 0.012 minutes per year</td>
-<td>about 0.015 minutes per year</td>
-</tr>
-<tr>
-<td>Rain fade exceeding that depth</td>
-<td>not reached above 0.001% of the time</td>
-<td>not reached above 0.001% of the time</td>
-</tr>
-<tr>
-<td>Fade that loses the link entirely (MCS0)</td>
-<td>42.9 dB, negligible time</td>
-<td>56.5 dB, negligible time</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Steep, high-altitude paths with large margins produce very little multipath, and 5.8 GHz is only mildly affected by rain. Propagation is therefore not the main reliability risk. The risks that decide real availability are power at the relay site (the plan lists solar panels, batteries and a regulator), alignment drift in wind, lightning, interference in the 5 GHz band, and equipment faults.</p>
-<h3>Antenna alignment (simulated)</h3>
-<div class="table-scroll">
-<table>
-<thead>
-<tr>
-<th scope="col">Item</th>
-<th scope="col">Hop 1 (PowerBeam)</th>
-<th scope="col">Hop 2 (34 dBi dish)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Beamwidth (estimated from gain)</td>
-<td>about 9°</td>
-<td>about 3°</td>
-</tr>
-<tr>
-<td>Required vertical tilt</td>
-<td>about +4.2°</td>
-<td>about −5.1°</td>
-</tr>
-<tr>
-<td>Pointing error giving 1 dB loss</td>
-<td>about ±2.7°</td>
-<td>about ±1.0°</td>
-</tr>
-<tr>
-<td>Pointing error giving 3 dB loss</td>
-<td>about ±4.6°</td>
-<td>about ±1.6°</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>On hop 2 the dish must be tilted down by more than one and a half beamwidths and aimed to within about one degree. Alignment should use received-level feedback during installation and be re-checked after the first strong winds.</p>
-<h3>Capacity (simulated)</h3>
-<p>At the top single-stream rate with two spatial streams on a 20 MHz channel, the radio rate is about 130 Mbps and the expected application throughput about 65 Mbps, assuming 50% protocol efficiency. This is an assumption-based estimate: it requires the two polarisations to carry independent streams and a clean channel, and a wider channel would roughly double it. The backhaul as a whole is limited to the slower hop, so both hops give about the same ceiling. The ceiling is shared by every user in Al-Sharq.</p>
-<h3>Distribution plan inside Al-Sharq</h3>
-<p>The distribution plan divides the city into numbered zones on an aerial map, with point-to-point distances of roughly 45 to 150 m between points. Seven zones are planned, each with an estimated broadcast range of 500 m. The equipment listed per zone is:</p>
-<div class="table-scroll">
-<table>
+<caption>Seven-zone distribution and client coverage</caption>
 <thead>
 <tr>
 <th scope="col">Zone</th>
-<th scope="col">Equipment listed</th>
-<th scope="col">Cost</th>
+<th scope="col">Source equipment</th>
+<th scope="col">Source line total</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>2 × NanoStation M2 11 dBi and 1 × 15 dBi 120° M5 sector</td>
+<td>2 NSM2 + one M5 sector (15 dBi / 120 deg as written)</td>
 <td>$430</td>
 </tr>
 <tr>
-<td>4, 6, 12, 14</td>
-<td>1 × PowerBeam M5 400 and 2 × NanoStation M2 11 dBi, per zone</td>
+<td>4 / 6 / 12 / 14</td>
+<td>Each: one PowerBeam + 2 NSM2</td>
 <td>$250 each</td>
 </tr>
 <tr>
-<td>10, 13</td>
-<td>1 × PowerBeam M5 400 and 3 × NanoStation M2 11 dBi, per zone</td>
+<td>10 / 13</td>
+<td>Each: one PowerBeam + 3 NSM2</td>
 <td>$330 each</td>
 </tr>
 </tbody>
@@ -699,268 +680,222 @@
 </div>
 <figure>
 <a href="media/al-sharq-distribution-map.webp">
-<img loading="lazy" src="media/al-sharq-distribution-map.webp" alt="Satellite view of Al-Sharq city with numbered candidate points joined by red lines labelled with distances in metres, and several points crossed out">
+<img loading="lazy" src="media/al-sharq-distribution-map.webp" alt="Original zone map from the project document. CNES / Astrium and Google attribution retained; coordinate bar excluded." width="1304" height="762">
 </a>
-<figcaption>Distribution map from the author’s planning document: numbered points joined by lines labelled with distances in metres (45 to 150 m). Points 3, 5, 7, 8, 9 and 11 are crossed out in the original. Source screenshot, with its imagery credit (CNES / Astrium, Google) as shown; the coordinate bar was removed.</figcaption>
+<figcaption>Original zone map from the project document. CNES / Astrium and Google attribution retained; coordinate bar excluded.</figcaption>
 </figure>
-<p>The core and distribution list includes a MikroTik RB AH 1100 for distribution ($350), an RB 750 for combining lines ($70), Netgear modems per internet line ($45 each), network cables, access points, switches, mounts, waterproofing and RJ45 connectors. The remote site list also names solar panels, batteries, a charge regulator and panel mounts. Prices are in US dollars and local currency; quantities for some power items are not stated. The listed radio equipment totals about $3,890: backhaul $1,380, zone equipment $2,090 and core routers $420. This is the planned budget, not a final as-built cost.</p>
-<h3>Coverage reliability of an access cell (simulated)</h3>
-<p>A 2.4 GHz NanoStation access point serving 11 dBi client antennas was modelled with a path-loss exponent of 3.2 for a dense town and 8 dB of log-normal shadowing. The curves give the probability that a client location keeps the stated rate with a 10 dB fade allowance. Co-channel interference between cells is not modelled.</p>
-<div class="table-scroll">
-<table>
-<thead>
-<tr>
-<th scope="col">Distance from the access point</th>
-<th scope="col">MCS0 (basic link)</th>
-<th scope="col">MCS3</th>
-<th scope="col">MCS7 (high rate)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>100 m</td>
-<td>100%</td>
-<td>100%</td>
-<td>64%</td>
-</tr>
-<tr>
-<td>300 m</td>
-<td>97%</td>
-<td>88%</td>
-<td>6%</td>
-</tr>
-<tr>
-<td>500 m</td>
-<td>85%</td>
-<td>62%</td>
-<td>1%</td>
-</tr>
-<tr>
-<td>600 m</td>
-<td>77%</td>
-<td>50%</td>
-<td>0%</td>
-</tr>
-</tbody>
-</table>
-</div>
 <figure>
-<a href="media/atma-al-sharq-cell-coverage.svg">
-<img loading="lazy" src="media/atma-al-sharq-cell-coverage.svg" alt="Probability that a client is covered against distance from the access point at MCS0, MCS3 and MCS7">
+<a href="media/reviewed-cell-coverage.png">
+<img loading="lazy" src="media/reviewed-cell-coverage.png" alt="Calculated directional-cell sensitivity, not a geospatial measured heatmap." width="1908" height="1044">
 </a>
-<figcaption>Coverage probability against distance. Simulation, not a measurement.</figcaption>
+<figcaption>Calculated directional-cell sensitivity, not a geospatial measured heatmap.</figcaption>
 </figure>
-<p>The planned 500 m range is reasonable for basic connectivity, with 85% of locations covered, but high rates fall off quickly beyond about 100 m. That supports the plan’s division into several smaller zones with overlapping cells and directional client antennas, rather than a few large ones.</p>
-<h3>Conclusions from the analysis</h3>
-<ul>
-<li>The two-hop design through the elevated MTN site is sound: both hops have large margins and negligible propagation outage on paper.</li>
-<li>Hop 2 is the one to protect. Its clearance risk sits within 1 km of its two sites, so use 10–15 m masts and verify the first kilometre at each end.</li>
-<li>Alignment on the 34 dBi dish is demanding: tilt near −5° and aim to about one degree.</li>
-<li>Real availability will be set by relay-site power, lightning protection, wind and interference rather than by propagation.</li>
-<li>Distribution capacity and coverage, not the backhaul, are the likely limits for users in Al-Sharq.</li>
-</ul>
-<h3>Recommended configuration (design proposal)</h3>
-<p>These settings follow from the simulation and from common practice for this class of equipment. They are proposals for commissioning, not the settings recorded in the deployment. Regulatory limits on channels and radiated power differ by country and must be checked before use.</p>
-<div class="table-scroll">
-<table>
-<caption>Backhaul radio settings</caption>
-<thead>
-<tr>
-<th scope="col">Setting</th>
-<th scope="col">Recommendation</th>
-<th scope="col">Reason</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Channel plan</td>
-<td>Run a spectrum scan at each end and choose the quietest 5 GHz channels. Use channels at least 60 MHz apart for the two hops.</td>
-<td>Both hops end on the same mast at the relay site, so adjacent channels would interfere with each other.</td>
-</tr>
-<tr>
-<td>Channel width</td>
-<td>20 MHz at commissioning. Move to 40 MHz only if the scan is clean and the measured margin allows it.</td>
-<td>A wider channel roughly doubles capacity but costs about 3 dB of sensitivity and picks up more interference.</td>
-</tr>
-<tr>
-<td>Transmit power, hop 1</td>
-<td>Start at the maximum and trim to keep the planned rate with at least 10 dB of margin.</td>
-<td>The predicted margin at the top rate is 14.9 dB, so there is little room to reduce power.</td>
-</tr>
-<tr>
-<td>Transmit power, hop 2</td>
-<td>Reduce by about 10 dB from the maximum.</td>
-<td>The predicted received level is very high. A 10 dB cut still leaves about 18 dB of margin at the top rate and lowers interference and radiated power.</td>
-</tr>
-<tr>
-<td>Antenna placement at the relay</td>
-<td>Separate the two dishes vertically by at least 2 m and keep them cross-polarised.</td>
-<td>Reduces coupling between the two radios on one mast.</td>
-</tr>
-<tr>
-<td>Link mode</td>
-<td>Point-to-point bridge pair with the vendor’s TDMA scheduling enabled.</td>
-<td>Avoids contention on a fixed link and gives predictable latency.</td>
-</tr>
-<tr>
-<td>Management</td>
-<td>Change default credentials, allow only encrypted management on a separate VLAN, keep identical firmware at both ends.</td>
-<td>Basic security and easier fault finding.</td>
-</tr>
-<tr>
-<td>Monitoring</td>
-<td>Log received level, noise, rate and uptime for both hops with SNMP.</td>
-<td>Provides the evidence needed for the acceptance table.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="table-scroll">
-<table>
-<caption>Network and distribution settings</caption>
-<thead>
-<tr>
-<th scope="col">Area</th>
-<th scope="col">Recommendation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>VLANs</td>
-<td>Separate management, transport and subscriber traffic. Keep radio management off the subscriber network.</td>
-</tr>
-<tr>
-<td>Core router (RB AH 1100)</td>
-<td>Routing, DHCP, firewall and per-subscriber bandwidth queues. Block management services on the subscriber side.</td>
-</tr>
-<tr>
-<td>Combining internet lines (RB 750)</td>
-<td>Combine the lines with health checks, so that traffic shifts when one line fails.</td>
-</tr>
-<tr>
-<td>Access cells (NanoStation M2)</td>
-<td>Use non-overlapping 2.4 GHz channels (1, 6 and 11) across neighbouring zones, 20 MHz wide, with client isolation enabled.</td>
-</tr>
-<tr>
-<td>Cell power</td>
-<td>Trim each cell’s transmit power to just cover its zone, to limit co-channel interference between zones.</td>
-</tr>
-<tr>
-<td>Client antennas</td>
-<td>Use directional client units aimed at the nearest access point, as the coverage curves assume.</td>
-</tr>
-<tr>
-<td>Quality of service</td>
-<td>Give priority to name lookups and voice traffic on the shared backhaul.</td>
-</tr>
-<tr>
-<td>Backups</td>
-<td>Export the configuration of every device after commissioning and after each change.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3>Relay site power and installation (design proposal)</h3>
-<p>The MTN relay runs two radios, about 18 W including injector losses, which is about 420 Wh per day. For three days of autonomy and 4.5 peak sun hours, the calculation gives the sizing below. The result is a starting point and should be revised with the measured load and the real insolation at the site.</p>
-<div class="table-scroll">
-<table>
-<thead>
-<tr>
-<th scope="col">Component</th>
-<th scope="col">Sizing</th>
-<th scope="col">Basis</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Solar array</td>
-<td>at least 134 W, recommended about 200 W (for example 2 × 100 W)</td>
-<td>422 Wh per day, 4.5 peak sun hours, 70% system efficiency, 1.5 margin</td>
-</tr>
-<tr>
-<td>Battery bank, 12 V</td>
-<td>about 155 Ah lithium iron phosphate, or about 250 Ah lead-acid</td>
-<td>3 days of autonomy, 80% and 50% usable depth of discharge</td>
-</tr>
-<tr>
-<td>Charge regulator</td>
-<td>MPPT, 25 to 30 A</td>
-<td>About 21 A from the array, with margin</td>
-</tr>
-</tbody>
-</table>
-</div>
+<h3 id="device-gallery">Equipment reference imagery</h3>
+<p>These are authentic manufacturer product-family illustrations reproduced from official Ubiquiti datasheets. They identify the hardware families and are not photographs of the installed sites. Exact SKU identification still requires an inventory or device label.</p>
+<p>PowerBeam PBE-M5-400: 25 dBi integrated antenna. RocketDish RD-5G34: 34 dBi antenna with approximately 3 degree beamwidth, requiring a compatible radio. NanoStation M2: directional 2.4 GHz MIMO device.</p>
+<div class="grid device-gallery">
 <figure>
-<a href="media/atma-al-sharq-relay-site.svg">
-<img loading="lazy" src="media/atma-al-sharq-relay-site.svg" alt="Sketch of the relay mast with two dishes and the solar power chain feeding two radios">
+<a href="media/vendor-powerbeam.webp">
+<img loading="lazy" src="media/vendor-powerbeam.webp" alt="PowerBeam family · Official Ubiquiti datasheet imagery; product family, not installation photograph." width="918" height="1188">
 </a>
-<figcaption>Relay site mast and solar power chain with the sizing results. Design proposal, not an as-built drawing.</figcaption>
+<figcaption>PowerBeam family · Official Ubiquiti datasheet imagery; product family, not installation photograph.</figcaption>
 </figure>
-<ul>
-<li>Mast heights: 10 to 15 m at both ends of hop 2 and about 6 m on hop 1, with the first kilometre around each hop 2 site checked for trees and buildings.</li>
-<li>Alignment: coarse aiming with a compass and the airLink plan, fine aiming on received level, then lock the mounts. Re-check after the first strong winds.</li>
-<li>Weather and lightning: shielded outdoor cable, drip loops, sealed connectors, a surge protector at each end of every outdoor Ethernet run, and one earth electrode shared by the mast, the array and the cabinet.</li>
-<li>Safety: plan work at height and avoid climbing during storms.</li>
-</ul>
-<h3>Field acceptance criteria</h3>
-<p>These criteria turn each prediction into a check an installer can run. The measured column stays empty until real readings exist.</p>
+<figure>
+<a href="media/vendor-dish.webp">
+<img loading="lazy" src="media/vendor-dish.webp" alt="RocketDish family · Official Ubiquiti datasheet imagery; product family, not installation photograph." width="918" height="1188">
+</a>
+<figcaption>RocketDish family · Official Ubiquiti datasheet imagery; product family, not installation photograph.</figcaption>
+</figure>
+<figure>
+<a href="media/vendor-nanostation.webp">
+<img loading="lazy" src="media/vendor-nanostation.webp" alt="NanoStation family · Official Ubiquiti datasheet imagery; product family, not installation photograph." width="918" height="1188">
+</a>
+<figcaption>NanoStation family · Official Ubiquiti datasheet imagery; product family, not installation photograph.</figcaption>
+</figure>
+</div>
+<p>The existing VB.NET RF and Fresnel project posters remain available on the website. They are source document previews; the new calculation plots and UISP captures are separately labelled. No new VB.NET execution or field configuration screenshot is claimed.</p>
+<h3>Network operation and relay-site power</h3>
+<p>Separate management, backhaul and subscriber traffic. Record the actual router configuration and Internet-line health checks. For co-located MIMO radios, keep both polarisation chains matched; determine channel and physical separation through spectrum and desensitisation measurements rather than a fixed universal spacing.</p>
+<p>The remote relay load is assumed as two 8 W radio allowances plus 10% conversion/cable overhead: 17.6 W, or 422.4 Wh/day. Actual injector/DC conversion and auxiliary consumption must be measured.</p>
 <div class="table-scroll">
 <table>
+<caption>Network operation and relay-site power</caption>
+<thead>
+<tr>
+<th scope="col">Component / input</th>
+<th scope="col">Scenario sizing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Solar resource / system efficiency</td>
+<td>4.5 peak sun hours / 70% (assumptions)</td>
+</tr>
+<tr>
+<td>PV with 1.5 design multiplier</td>
+<td>201 W, rounded scenario about 200 W</td>
+</tr>
+<tr>
+<td>3-day LiFePO4 bank at 12 V</td>
+<td>155 Ah; 80% usable depth; 85% efficiency</td>
+</tr>
+<tr>
+<td>3-day lead-acid bank at 12 V</td>
+<td>248 Ah; 50% usable depth; 85% efficiency</td>
+</tr>
+<tr>
+<td>Controller calculation</td>
+<td>About 21 A at recommended PV; select by voltage/current ratings</td>
+</tr>
+<tr>
+<td>PoE feed</td>
+<td>Regulated compatible 24 V passive PoE from 12 V bank</td>
+</tr>
+<tr>
+<td>Excluded loads</td>
+<td>Routers, switches, monitoring and future expansion</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>A system near 200 W is the mathematical scenario, not a verified winter design. Check minimum-month insolation, recharge after prolonged low sun, temperature derating, battery condition and all loads. Grounding, surge protection, weatherproofing and structural work require site inspection.</p>
+<p>Historical source subtotal: backhaul $1,380 + zone equipment $2,090 + two core routers $420 = $3,890. Cable, modems, accessories, uncertain currency lines, missing radio quantities and solar items prevent a complete present-day project total.</p>
+<figure>
+<a href="media/atma-al-sharq-architecture.svg">
+<img loading="lazy" src="media/atma-al-sharq-architecture.svg" alt="Network architecture from source requirements. Design proposal, not an as-built network drawing." width="1260" height="500">
+</a>
+<figcaption>Network architecture from source requirements. Design proposal, not an as-built network drawing.</figcaption>
+</figure>
+<h3 id="engineering-audit">Engineering audit and remaining evidence</h3>
+<p>The review corrects the following issues while preserving the project implemented status and the original documentation. The full audit in the repository records completion evidence for each remaining item.</p>
+<div class="table-scroll">
+<table>
+<caption>Engineering audit and remaining evidence</caption>
+<thead>
+<tr>
+<th scope="col">Review area</th>
+<th scope="col">Previous issue</th>
+<th scope="col">Current treatment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radio table</td>
+<td>PowerBeam previously approximated from Rocket TX power</td>
+<td>Use actual device-specific MCS0-15 tables</td>
+</tr>
+<tr>
+<td>MIMO rate</td>
+<td>MCS0-7 rate doubled without two-stream sensitivity</td>
+<td>Explicit MCS8-15; MCS15 is 130 Mbps PHY</td>
+</tr>
+<tr>
+<td>Annual outage</td>
+<td>Unverified climate and probability time basis</td>
+<td>Withdraw annual-minute claims pending valid inputs</td>
+</tr>
+<tr>
+<td>Co-site isolation</td>
+<td>Fixed spacing and blanket cross-polarisation</td>
+<td>Preserve both MIMO chains; measure desensitisation</td>
+</tr>
+<tr>
+<td>Power/EIRP</td>
+<td>Maximum TX treated as initial operating setting</td>
+<td>Verify permitted EIRP; use sensitivity scenarios</td>
+</tr>
+<tr>
+<td>Mast height</td>
+<td>Coarse DEM used for firm height advice</td>
+<td>Treat 6/10/15 m as scenarios; survey and structural review</td>
+</tr>
+<tr>
+<td>Distribution</td>
+<td>2.4 GHz and 5 GHz roles insufficiently defined</td>
+<td>Confirm radio pairs, Ethernet interconnect and sector SKU</td>
+</tr>
+<tr>
+<td>Solar feed</td>
+<td>12 V bank did not show the 24 V PoE conversion</td>
+<td>Include regulated compatible 24 V passive PoE</td>
+</tr>
+<tr>
+<td>Budget</td>
+<td>Subtotal presented close to a complete project cost</td>
+<td>Label historical subtotal; identify unpriced/uncertain items</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The main remaining evidence is site photographs, surveyed antenna positions/heights, device inventory, actual settings, per-chain signal/noise, channel scans, traffic tests and power/uptime logs. Product-family images and planning screenshots cannot substitute for those records.</p>
+<h3 id="field-acceptance">Field acceptance record and references</h3>
+<p>Use this evidence register during verification of the installed system. Agree service throughput, latency, packet loss and availability targets with the operator before applying pass/fail decisions. A seven-day log is an initial stability screen, not annual availability proof.</p>
+<div class="table-scroll">
+<table>
+<caption>Field acceptance record and references</caption>
 <thead>
 <tr>
 <th scope="col">Check</th>
-<th scope="col">Predicted</th>
-<th scope="col">Pass criterion</th>
-<th scope="col">Measured</th>
+<th scope="col">Record required</th>
+<th scope="col">Evidence</th>
+<th scope="col">Public status</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Hop 1 received level</td>
-<td>−53 to −59 dBm</td>
-<td>Within about 5 dB of prediction</td>
-<td>Pending</td>
+<td>Survey</td>
+<td>Mounting point, AMSL/AGL heights, obstacles and endpoint approaches</td>
+<td>Survey drawing / photos</td>
+<td>Not supplied</td>
 </tr>
 <tr>
-<td>Hop 2 received level</td>
-<td>−40 to −46 dBm</td>
-<td>Within about 5 dB of prediction</td>
-<td>Pending</td>
+<td>RF settings</td>
+<td>Actual SKU, firmware, frequency, width, TX and country setting</td>
+<td>Configuration exports</td>
+<td>Not supplied</td>
 </tr>
 <tr>
-<td>Hop 2 dish alignment</td>
-<td>Tilt about −5°, error within 1°</td>
-<td>Peak received level at the final position</td>
-<td>Pending</td>
+<td>Signal</td>
+<td>RSSI each chain, noise, SNR, MCS, CCQ/airMAX quality under load</td>
+<td>Timestamped airOS captures</td>
+<td>Not supplied</td>
 </tr>
 <tr>
-<td>Throughput per hop, both directions</td>
-<td>About 65 Mbps at 20 MHz (assumption)</td>
-<td>Sustained iperf3 result recorded with channel width and load</td>
-<td>Pending</td>
+<td>Payload</td>
+<td>Each hop and end to end, both directions; record load and duration</td>
+<td>iperf3 + ping/loss records</td>
+<td>Not supplied</td>
 </tr>
 <tr>
-<td>Channel quality</td>
-<td>No co-channel signal within 10 dB of the link</td>
-<td>Spectrum scan saved for each end</td>
-<td>Pending</td>
+<td>Co-site</td>
+<td>Operate both links together and compare noise/RSSI/rate</td>
+<td>Isolation/desensitisation test</td>
+<td>Not supplied</td>
 </tr>
 <tr>
-<td>Near-site obstructions on hop 2</td>
-<td>Clear within the first 1 km</td>
-<td>Site photographs and a mast height of at least 10 m</td>
-<td>Pending</td>
+<td>Coverage</td>
+<td>Record AP/client bearings, heights and zone boundary readings</td>
+<td>Zone validation map</td>
+<td>Not supplied</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>Measure all loads and test battery autonomy/failover</td>
+<td>Power and recovery record</td>
+<td>Not supplied</td>
 </tr>
 <tr>
 <td>Stability</td>
-<td>Planned rate held</td>
-<td>Seven-day log with the rate and received level recorded</td>
-<td>Pending</td>
+<td>Log rates, signal, resets and interruptions for at least seven days</td>
+<td>Monitoring export</td>
+<td>Not supplied</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>The script, terrain profiles and numeric results are in the repository: <a href="https://github.com/Mahyoub88/Mahyoub88.github.io/tree/main/docs/simulations/atma-al-sharq">docs/simulations/atma-al-sharq</a>.</p>
+<p>
+<a href="https://github.com/Mahyoub88/Mahyoub88.github.io/tree/main/docs/simulations/atma-al-sharq">Reproducible calculation, input tables, results and engineering audit</a>
+</p>
 </section>
 <section id="engineering">
 <h2>Engineering approach</h2>
@@ -970,17 +905,46 @@
 <li>Treat standards such as ITU-R P.530 as design context that does not replace a radio data sheet or site survey.</li>
 <li>Keep predictions, calculator outputs and field measurements clearly distinguished.</li>
 </ul>
-<p class="source-note">The two VB.NET calculators support analysis and are distinct from the Ubiquiti wireless network work, which documents the planning deliverable.</p>
+<p class="source-note">The two VB.NET calculators support analysis and are distinct from the Ubiquiti wireless network work, which is documented through the source requirements and planning deliverables.</p>
 </section>
 <section id="verification-context">
 <h2>Verification context</h2>
-<p>The functional diagrams explain the engineering responsibilities of each part. The original source previews appear above. As-built addressing, configuration exports and raw acceptance records are not included in the public release. No new coverage heatmap, site coordinates, survey data or throughput measurement is fabricated.</p>
+<p>The functional diagrams explain the engineering responsibilities of each part. The original source previews appear above. As-built addressing, configuration exports and raw acceptance records are not included in the public release. The current report adds actual UISP planning captures and computed plots. Surveyed heights, installation photographs and measured traffic records remain to be supplied.</p>
 <p>
 <a href="https://github.com/Mahyoub88/rf-mpls-network-design/blob/main/docs/verification-context.md">Detailed verification boundaries and technical source context</a>
 </p>
 </section>
 <section id="sources">
 <h2>Source documentation</h2>
+<ul id="rf-review-sources">
+<li>
+<a href="https://dl.ui.com/datasheets/powerbeam/PowerBeam_DS.pdf">PowerBeam M5 400</a>
+</li>
+<li>
+<a href="https://dl.ui.com/datasheets/rocketm/RocketM_DS.pdf">Rocket M5</a>
+</li>
+<li>
+<a href="https://dl.ui.com/datasheets/nanostationm/nsm_ds_web.pdf">NanoStation M2</a>
+</li>
+<li>
+<a href="https://techspecs.ui.com/uisp/wireless/rd-5g">RocketDish</a>
+</li>
+<li>
+<a href="https://ispdesign.ui.com/">UISP Design Center</a>
+</li>
+<li>
+<a href="https://open-meteo.com/en/docs/elevation-api">Elevation dataset</a>
+</li>
+<li>
+<a href="https://www.itu.int/rec/R-REC-P.525/en">Free-space propagation</a>
+</li>
+<li>
+<a href="https://www.itu.int/rec/R-REC-P.530/en">Terrestrial LOS design</a>
+</li>
+<li>
+<a href="https://www.openstreetmap.org/copyright">Map attribution</a>
+</li>
+</ul>
 <ul>
 <li>
 <a href="https://github.com/Mahyoub88/rf-mpls-network-design">Wireless coverage and network planning — rf-mpls-network-design</a>

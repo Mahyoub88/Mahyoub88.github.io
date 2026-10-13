@@ -8,4 +8,5 @@
 /* Generated card covers keep source evidence inside the case studies. */
 .card img.project-cover{height:auto;aspect-ratio:16/9;object-fit:cover;width:100%;}
 .cards .card{background:#0a0e18;border-color:#1b2436}
+.device-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}.device-gallery img{max-height:350px}.uisp-captures img{width:auto;max-width:100%;max-height:293px;margin:auto}.uisp-captures figure{display:flex;flex-direction:column;align-items:center}.uisp-captures figcaption{align-self:stretch}#atma-al-sharq-simulation h3[id]{scroll-margin-top:24px}#atma-al-sharq-simulation details{padding:18px;border:1px solid #324760;border-radius:12px;margin:24px 0}#atma-al-sharq-simulation summary{cursor:pointer;color:#67e8d0}@media(max-width:700px){.device-gallery{grid-template-columns:1fr}.device-gallery img{max-height:420px}}@media(prefers-color-scheme:light){#atma-al-sharq-simulation details{border-color:#c4d0df}#atma-al-sharq-simulation summary{color:#076b61}}
 @media(prefers-color-scheme:light){.cards .card{background:#fff;border-color:#c4d0df}}

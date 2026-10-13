@@ -1,0 +1,2267 @@
+{
+  "inputs": {
+    "frequency_mhz": 5800,
+    "channel_mhz": 20,
+    "guard_interval": "800 ns",
+    "extra_loss_db": 2,
+    "target_margin_db": 10,
+    "payload_efficiency_assumption": 0.5,
+    "reference_mast_m": 6,
+    "clutter_m": 5,
+    "k": 1.3333333333333333,
+    "mc_runs": 5000,
+    "mc_seed": 1234,
+    "radio_tolerance_db": 2,
+    "eirp_caps_for_sensitivity_only_dbm": [
+      36,
+      40,
+      44
+    ],
+    "terrain_source": "Existing public Copernicus GLO-90 profile via Open-Meteo; 61 samples per hop",
+    "status": "Planning model; no measured RSSI, spectrum, throughput or availability",
+    "sources": {
+      "powerbeam": "https://dl.ui.com/datasheets/powerbeam/PowerBeam_DS.pdf",
+      "rocket": "https://dl.ui.com/datasheets/rocketm/RocketM_DS.pdf",
+      "nanostation": "https://dl.ui.com/datasheets/nanostationm/nsm_ds_web.pdf"
+    }
+  },
+  "radios": {
+    "H1": {
+      "name": "PowerBeam M5 400",
+      "gain": 25,
+      "tx": [
+        26,
+        25,
+        25,
+        25,
+        24,
+        23,
+        23,
+        23,
+        26,
+        25,
+        25,
+        25,
+        24,
+        23,
+        23,
+        23
+      ],
+      "feed_loss": 0
+    },
+    "H2": {
+      "name": "Rocket M5 + RD-5G34",
+      "gain": 34,
+      "tx": [
+        27,
+        27,
+        27,
+        27,
+        26,
+        24,
+        22,
+        21,
+        27,
+        27,
+        27,
+        27,
+        26,
+        24,
+        22,
+        21
+      ],
+      "feed_loss": 0.5
+    }
+  },
+  "hops": {
+    "H1": {
+      "from": "Atma centre",
+      "to": "MTN tower site",
+      "distance_km": 8.277307634730152,
+      "source_estimated_km": 8.5,
+      "sample_spacing_m": 137.95512724550252,
+      "fspl_db": 126.06634180133923,
+      "midpoint_fresnel_m": 10.342151783369605,
+      "nominal_clearance_ratio": 7.993713802681452,
+      "critical_km": 0.13795512724550252,
+      "endpoint_ground_elevations_m": [
+        2066.0,
+        2680.0
+      ],
+      "budget": {
+        "rows": [
+          {
+            "mcs": 0,
+            "streams": 1,
+            "tx_dbm": 26,
+            "eirp_dbm": 51,
+            "sensitivity_dbm": -96,
+            "rx_dbm": -52.066341801339235,
+            "margin_db": 43.933658198660765,
+            "margin_after_4db_tolerance": 39.933658198660765,
+            "phy_mbps": 6.5,
+            "payload_estimate_mbps": 3.25
+          },
+          {
+            "mcs": 1,
+            "streams": 1,
+            "tx_dbm": 25,
+            "eirp_dbm": 50,
+            "sensitivity_dbm": -95,
+            "rx_dbm": -53.066341801339235,
+            "margin_db": 41.933658198660765,
+            "margin_after_4db_tolerance": 37.933658198660765,
+            "phy_mbps": 13,
+            "payload_estimate_mbps": 6.5
+          },
+          {
+            "mcs": 2,
+            "streams": 1,
+            "tx_dbm": 25,
+            "eirp_dbm": 50,
+            "sensitivity_dbm": -92,
+            "rx_dbm": -53.066341801339235,
+            "margin_db": 38.933658198660765,
+            "margin_after_4db_tolerance": 34.933658198660765,
+            "phy_mbps": 19.5,
+            "payload_estimate_mbps": 9.75
+          },
+          {
+            "mcs": 3,
+            "streams": 1,
+            "tx_dbm": 25,
+            "eirp_dbm": 50,
+            "sensitivity_dbm": -90,
+            "rx_dbm": -53.066341801339235,
+            "margin_db": 36.933658198660765,
+            "margin_after_4db_tolerance": 32.933658198660765,
+            "phy_mbps": 26,
+            "payload_estimate_mbps": 13.0
+          },
+          {
+            "mcs": 4,
+            "streams": 1,
+            "tx_dbm": 24,
+            "eirp_dbm": 49,
+            "sensitivity_dbm": -86,
+            "rx_dbm": -54.066341801339235,
+            "margin_db": 31.933658198660765,
+            "margin_after_4db_tolerance": 27.933658198660765,
+            "phy_mbps": 39,
+            "payload_estimate_mbps": 19.5
+          },
+          {
+            "mcs": 5,
+            "streams": 1,
+            "tx_dbm": 23,
+            "eirp_dbm": 48,
+            "sensitivity_dbm": -83,
+            "rx_dbm": -55.066341801339235,
+            "margin_db": 27.933658198660765,
+            "margin_after_4db_tolerance": 23.933658198660765,
+            "phy_mbps": 52,
+            "payload_estimate_mbps": 26.0
+          },
+          {
+            "mcs": 6,
+            "streams": 1,
+            "tx_dbm": 23,
+            "eirp_dbm": 48,
+            "sensitivity_dbm": -77,
+            "rx_dbm": -55.066341801339235,
+            "margin_db": 21.933658198660765,
+            "margin_after_4db_tolerance": 17.933658198660765,
+            "phy_mbps": 58.5,
+            "payload_estimate_mbps": 29.25
+          },
+          {
+            "mcs": 7,
+            "streams": 1,
+            "tx_dbm": 23,
+            "eirp_dbm": 48,
+            "sensitivity_dbm": -74,
+            "rx_dbm": -55.066341801339235,
+            "margin_db": 18.933658198660765,
+            "margin_after_4db_tolerance": 14.933658198660765,
+            "phy_mbps": 65,
+            "payload_estimate_mbps": 32.5
+          },
+          {
+            "mcs": 8,
+            "streams": 2,
+            "tx_dbm": 26,
+            "eirp_dbm": 51,
+            "sensitivity_dbm": -95,
+            "rx_dbm": -52.066341801339235,
+            "margin_db": 42.933658198660765,
+            "margin_after_4db_tolerance": 38.933658198660765,
+            "phy_mbps": 13,
+            "payload_estimate_mbps": 6.5
+          },
+          {
+            "mcs": 9,
+            "streams": 2,
+            "tx_dbm": 25,
+            "eirp_dbm": 50,
+            "sensitivity_dbm": -93,
+            "rx_dbm": -53.066341801339235,
+            "margin_db": 39.933658198660765,
+            "margin_after_4db_tolerance": 35.933658198660765,
+            "phy_mbps": 26,
+            "payload_estimate_mbps": 13.0
+          },
+          {
+            "mcs": 10,
+            "streams": 2,
+            "tx_dbm": 25,
+            "eirp_dbm": 50,
+            "sensitivity_dbm": -90,
+            "rx_dbm": -53.066341801339235,
+            "margin_db": 36.933658198660765,
+            "margin_after_4db_tolerance": 32.933658198660765,
+            "phy_mbps": 39,
+            "payload_estimate_mbps": 19.5
+          },
+          {
+            "mcs": 11,
+            "streams": 2,
+            "tx_dbm": 25,
+            "eirp_dbm": 50,
+            "sensitivity_dbm": -87,
+            "rx_dbm": -53.066341801339235,
+            "margin_db": 33.933658198660765,
+            "margin_after_4db_tolerance": 29.933658198660765,
+            "phy_mbps": 52,
+            "payload_estimate_mbps": 26.0
+          },
+          {
+            "mcs": 12,
+            "streams": 2,
+            "tx_dbm": 24,
+            "eirp_dbm": 49,
+            "sensitivity_dbm": -84,
+            "rx_dbm": -54.066341801339235,
+            "margin_db": 29.933658198660765,
+            "margin_after_4db_tolerance": 25.933658198660765,
+            "phy_mbps": 78,
+            "payload_estimate_mbps": 39.0
+          },
+          {
+            "mcs": 13,
+            "streams": 2,
+            "tx_dbm": 23,
+            "eirp_dbm": 48,
+            "sensitivity_dbm": -79,
+            "rx_dbm": -55.066341801339235,
+            "margin_db": 23.933658198660765,
+            "margin_after_4db_tolerance": 19.933658198660765,
+            "phy_mbps": 104,
+            "payload_estimate_mbps": 52.0
+          },
+          {
+            "mcs": 14,
+            "streams": 2,
+            "tx_dbm": 23,
+            "eirp_dbm": 48,
+            "sensitivity_dbm": -78,
+            "rx_dbm": -55.066341801339235,
+            "margin_db": 22.933658198660765,
+            "margin_after_4db_tolerance": 18.933658198660765,
+            "phy_mbps": 117,
+            "payload_estimate_mbps": 58.5
+          },
+          {
+            "mcs": 15,
+            "streams": 2,
+            "tx_dbm": 23,
+            "eirp_dbm": 48,
+            "sensitivity_dbm": -75,
+            "rx_dbm": -55.066341801339235,
+            "margin_db": 19.933658198660765,
+            "margin_after_4db_tolerance": 15.933658198660765,
+            "phy_mbps": 130,
+            "payload_estimate_mbps": 65.0
+          }
+        ],
+        "eirp_cap_dbm": null,
+        "highest_phy_with_10db_margin": {
+          "mcs": 15,
+          "streams": 2,
+          "tx_dbm": 23,
+          "eirp_dbm": 48,
+          "sensitivity_dbm": -75,
+          "rx_dbm": -55.066341801339235,
+          "margin_db": 19.933658198660765,
+          "margin_after_4db_tolerance": 15.933658198660765,
+          "phy_mbps": 130,
+          "payload_estimate_mbps": 65.0
+        }
+      },
+      "eirp_sensitivity": {
+        "36": {
+          "rows": [
+            {
+              "mcs": 0,
+              "streams": 1,
+              "tx_dbm": 11,
+              "eirp_dbm": 36,
+              "sensitivity_dbm": -96,
+              "rx_dbm": -67.06634180133923,
+              "margin_db": 28.933658198660765,
+              "margin_after_4db_tolerance": 24.933658198660765,
+              "phy_mbps": 6.5,
+              "payload_estimate_mbps": 3.25
+            },
+            {
+              "mcs": 1,
+              "streams": 1,
+              "tx_dbm": 11,
+              "eirp_dbm": 36,
+              "sensitivity_dbm": -95,
+              "rx_dbm": -67.06634180133923,
+              "margin_db": 27.933658198660765,
+              "margin_after_4db_tolerance": 23.933658198660765,
+              "phy_mbps": 13,
+              "payload_estimate_mbps": 6.5
+            },
+            {
+              "mcs": 2,
+              "streams": 1,
+              "tx_dbm": 11,
+              "eirp_dbm": 36,
+              "sensitivity_dbm": -92,
+              "rx_dbm": -67.06634180133923,
+              "margin_db": 24.933658198660765,
+              "margin_after_4db_tolerance": 20.933658198660765,
+              "phy_mbps": 19.5,
+              "payload_estimate_mbps": 9.75
+            },
+            {
+              "mcs": 3,
+              "streams": 1,
+              "tx_dbm": 11,
+              "eirp_dbm": 36,
+              "sensitivity_dbm": -90,
+              "rx_dbm": -67.06634180133923,
+              "margin_db": 22.933658198660765,
+              "margin_after_4db_tolerance": 18.933658198660765,
+              "phy_mbps": 26,
+              "payload_estimate_mbps": 13.0
+            },
+            {
+              "mcs": 4,
+              "streams": 1,
+              "tx_dbm": 11,
+              "eirp_dbm": 36,
+              "sensitivity_dbm": -86,
+              "rx_dbm": -67.06634180133923,
+              "margin_db": 18.933658198660765,
+              "margin_after_4db_tolerance": 14.933658198660765,
+              "phy_mbps": 39,
+              "payload_estimate_mbps": 19.5
+            },
+            {
+              "mcs": 5,
+              "streams": 1,
+              "tx_dbm": 11,
+              "eirp_dbm": 36,
+              "sensitivity_dbm": -83,
+              "rx_dbm": -67.06634180133923,
+              "margin_db": 15.933658198660765,
+              "margin_after_4db_tolerance": 11.933658198660765,
+              "phy_mbps": 52,
+              "payload_estimate_mbps": 26.0
+            },
+            {
+              "mcs": 6,
+              "streams": 1,
+              "tx_dbm": 11,
+              "eirp_dbm": 36,
+              "sensitivity_dbm": -77,
+              "rx_dbm": -67.06634180133923,
+              "margin_db": 9.933658198660765,
+              "margin_after_4db_tolerance": 5.9336581986607655,
+              "phy_mbps": 58.5,
+              "payload_estimate_mbps": 29.25
+            },
+            {
+              "mcs": 7,
+              "streams": 1,
+              "tx_dbm": 11,
+              "eirp_dbm": 36,
+              "sensitivity_dbm": -74,
+              "rx_dbm": -67.06634180133923,
+              "margin_db": 6.9336581986607655,
+              "margin_after_4db_tolerance": 2.9336581986607655,
+              "phy_mbps": 65,
+              "payload_estimate_mbps": 32.5
+            },
+            {
+              "mcs": 8,
+              "streams": 2,
+              "tx_dbm": 11,
+              "eirp_dbm": 36,
+              "sensitivity_dbm": -95,
+              "rx_dbm": -67.06634180133923,
+              "margin_db": 27.933658198660765,
+              "margin_after_4db_tolerance": 23.933658198660765,
+              "phy_mbps": 13,
+              "payload_estimate_mbps": 6.5
+            },
+            {
+              "mcs": 9,
+              "streams": 2,
+              "tx_dbm": 11,
+              "eirp_dbm": 36,
+              "sensitivity_dbm": -93,
+              "rx_dbm": -67.06634180133923,
+              "margin_db": 25.933658198660765,
+              "margin_after_4db_tolerance": 21.933658198660765,
+              "phy_mbps": 26,
+              "payload_estimate_mbps": 13.0
+            },
+            {
+              "mcs": 10,
+              "streams": 2,
+              "tx_dbm": 11,
+              "eirp_dbm": 36,
+              "sensitivity_dbm": -90,
+              "rx_dbm": -67.06634180133923,
+              "margin_db": 22.933658198660765,
+              "margin_after_4db_tolerance": 18.933658198660765,
+              "phy_mbps": 39,
+              "payload_estimate_mbps": 19.5
+            },
+            {
+              "mcs": 11,
+              "streams": 2,
+              "tx_dbm": 11,
+              "eirp_dbm": 36,
+              "sensitivity_dbm": -87,
+              "rx_dbm": -67.06634180133923,
+              "margin_db": 19.933658198660765,
+              "margin_after_4db_tolerance": 15.933658198660765,
+              "phy_mbps": 52,
+              "payload_estimate_mbps": 26.0
+            },
+            {
+              "mcs": 12,
+              "streams": 2,
+              "tx_dbm": 11,
+              "eirp_dbm": 36,
+              "sensitivity_dbm": -84,
+              "rx_dbm": -67.06634180133923,
+              "margin_db": 16.933658198660765,
+              "margin_after_4db_tolerance": 12.933658198660765,
+              "phy_mbps": 78,
+              "payload_estimate_mbps": 39.0
+            },
+            {
+              "mcs": 13,
+              "streams": 2,
+              "tx_dbm": 11,
+              "eirp_dbm": 36,
+              "sensitivity_dbm": -79,
+              "rx_dbm": -67.06634180133923,
+              "margin_db": 11.933658198660765,
+              "margin_after_4db_tolerance": 7.9336581986607655,
+              "phy_mbps": 104,
+              "payload_estimate_mbps": 52.0
+            },
+            {
+              "mcs": 14,
+              "streams": 2,
+              "tx_dbm": 11,
+              "eirp_dbm": 36,
+              "sensitivity_dbm": -78,
+              "rx_dbm": -67.06634180133923,
+              "margin_db": 10.933658198660765,
+              "margin_after_4db_tolerance": 6.9336581986607655,
+              "phy_mbps": 117,
+              "payload_estimate_mbps": 58.5
+            },
+            {
+              "mcs": 15,
+              "streams": 2,
+              "tx_dbm": 11,
+              "eirp_dbm": 36,
+              "sensitivity_dbm": -75,
+              "rx_dbm": -67.06634180133923,
+              "margin_db": 7.9336581986607655,
+              "margin_after_4db_tolerance": 3.9336581986607655,
+              "phy_mbps": 130,
+              "payload_estimate_mbps": 65.0
+            }
+          ],
+          "eirp_cap_dbm": 36,
+          "highest_phy_with_10db_margin": {
+            "mcs": 14,
+            "streams": 2,
+            "tx_dbm": 11,
+            "eirp_dbm": 36,
+            "sensitivity_dbm": -78,
+            "rx_dbm": -67.06634180133923,
+            "margin_db": 10.933658198660765,
+            "margin_after_4db_tolerance": 6.9336581986607655,
+            "phy_mbps": 117,
+            "payload_estimate_mbps": 58.5
+          }
+        },
+        "40": {
+          "rows": [
+            {
+              "mcs": 0,
+              "streams": 1,
+              "tx_dbm": 15,
+              "eirp_dbm": 40,
+              "sensitivity_dbm": -96,
+              "rx_dbm": -63.066341801339235,
+              "margin_db": 32.933658198660765,
+              "margin_after_4db_tolerance": 28.933658198660765,
+              "phy_mbps": 6.5,
+              "payload_estimate_mbps": 3.25
+            },
+            {
+              "mcs": 1,
+              "streams": 1,
+              "tx_dbm": 15,
+              "eirp_dbm": 40,
+              "sensitivity_dbm": -95,
+              "rx_dbm": -63.066341801339235,
+              "margin_db": 31.933658198660765,
+              "margin_after_4db_tolerance": 27.933658198660765,
+              "phy_mbps": 13,
+              "payload_estimate_mbps": 6.5
+            },
+            {
+              "mcs": 2,
+              "streams": 1,
+              "tx_dbm": 15,
+              "eirp_dbm": 40,
+              "sensitivity_dbm": -92,
+              "rx_dbm": -63.066341801339235,
+              "margin_db": 28.933658198660765,
+              "margin_after_4db_tolerance": 24.933658198660765,
+              "phy_mbps": 19.5,
+              "payload_estimate_mbps": 9.75
+            },
+            {
+              "mcs": 3,
+              "streams": 1,
+              "tx_dbm": 15,
+              "eirp_dbm": 40,
+              "sensitivity_dbm": -90,
+              "rx_dbm": -63.066341801339235,
+              "margin_db": 26.933658198660765,
+              "margin_after_4db_tolerance": 22.933658198660765,
+              "phy_mbps": 26,
+              "payload_estimate_mbps": 13.0
+            },
+            {
+              "mcs": 4,
+              "streams": 1,
+              "tx_dbm": 15,
+              "eirp_dbm": 40,
+              "sensitivity_dbm": -86,
+              "rx_dbm": -63.066341801339235,
+              "margin_db": 22.933658198660765,
+              "margin_after_4db_tolerance": 18.933658198660765,
+              "phy_mbps": 39,
+              "payload_estimate_mbps": 19.5
+            },
+            {
+              "mcs": 5,
+              "streams": 1,
+              "tx_dbm": 15,
+              "eirp_dbm": 40,
+              "sensitivity_dbm": -83,
+              "rx_dbm": -63.066341801339235,
+              "margin_db": 19.933658198660765,
+              "margin_after_4db_tolerance": 15.933658198660765,
+              "phy_mbps": 52,
+              "payload_estimate_mbps": 26.0
+            },
+            {
+              "mcs": 6,
+              "streams": 1,
+              "tx_dbm": 15,
+              "eirp_dbm": 40,
+              "sensitivity_dbm": -77,
+              "rx_dbm": -63.066341801339235,
+              "margin_db": 13.933658198660765,
+              "margin_after_4db_tolerance": 9.933658198660765,
+              "phy_mbps": 58.5,
+              "payload_estimate_mbps": 29.25
+            },
+            {
+              "mcs": 7,
+              "streams": 1,
+              "tx_dbm": 15,
+              "eirp_dbm": 40,
+              "sensitivity_dbm": -74,
+              "rx_dbm": -63.066341801339235,
+              "margin_db": 10.933658198660765,
+              "margin_after_4db_tolerance": 6.9336581986607655,
+              "phy_mbps": 65,
+              "payload_estimate_mbps": 32.5
+            },
+            {
+              "mcs": 8,
+              "streams": 2,
+              "tx_dbm": 15,
+              "eirp_dbm": 40,
+              "sensitivity_dbm": -95,
+              "rx_dbm": -63.066341801339235,
+              "margin_db": 31.933658198660765,
+              "margin_after_4db_tolerance": 27.933658198660765,
+              "phy_mbps": 13,
+              "payload_estimate_mbps": 6.5
+            },
+            {
+              "mcs": 9,
+              "streams": 2,
+              "tx_dbm": 15,
+              "eirp_dbm": 40,
+              "sensitivity_dbm": -93,
+              "rx_dbm": -63.066341801339235,
+              "margin_db": 29.933658198660765,
+              "margin_after_4db_tolerance": 25.933658198660765,
+              "phy_mbps": 26,
+              "payload_estimate_mbps": 13.0
+            },
+            {
+              "mcs": 10,
+              "streams": 2,
+              "tx_dbm": 15,
+              "eirp_dbm": 40,
+              "sensitivity_dbm": -90,
+              "rx_dbm": -63.066341801339235,
+              "margin_db": 26.933658198660765,
+              "margin_after_4db_tolerance": 22.933658198660765,
+              "phy_mbps": 39,
+              "payload_estimate_mbps": 19.5
+            },
+            {
+              "mcs": 11,
+              "streams": 2,
+              "tx_dbm": 15,
+              "eirp_dbm": 40,
+              "sensitivity_dbm": -87,
+              "rx_dbm": -63.066341801339235,
+              "margin_db": 23.933658198660765,
+              "margin_after_4db_tolerance": 19.933658198660765,
+              "phy_mbps": 52,
+              "payload_estimate_mbps": 26.0
+            },
+            {
+              "mcs": 12,
+              "streams": 2,
+              "tx_dbm": 15,
+              "eirp_dbm": 40,
+              "sensitivity_dbm": -84,
+              "rx_dbm": -63.066341801339235,
+              "margin_db": 20.933658198660765,
+              "margin_after_4db_tolerance": 16.933658198660765,
+              "phy_mbps": 78,
+              "payload_estimate_mbps": 39.0
+            },
+            {
+              "mcs": 13,
+              "streams": 2,
+              "tx_dbm": 15,
+              "eirp_dbm": 40,
+              "sensitivity_dbm": -79,
+              "rx_dbm": -63.066341801339235,
+              "margin_db": 15.933658198660765,
+              "margin_after_4db_tolerance": 11.933658198660765,
+              "phy_mbps": 104,
+              "payload_estimate_mbps": 52.0
+            },
+            {
+              "mcs": 14,
+              "streams": 2,
+              "tx_dbm": 15,
+              "eirp_dbm": 40,
+              "sensitivity_dbm": -78,
+              "rx_dbm": -63.066341801339235,
+              "margin_db": 14.933658198660765,
+              "margin_after_4db_tolerance": 10.933658198660765,
+              "phy_mbps": 117,
+              "payload_estimate_mbps": 58.5
+            },
+            {
+              "mcs": 15,
+              "streams": 2,
+              "tx_dbm": 15,
+              "eirp_dbm": 40,
+              "sensitivity_dbm": -75,
+              "rx_dbm": -63.066341801339235,
+              "margin_db": 11.933658198660765,
+              "margin_after_4db_tolerance": 7.9336581986607655,
+              "phy_mbps": 130,
+              "payload_estimate_mbps": 65.0
+            }
+          ],
+          "eirp_cap_dbm": 40,
+          "highest_phy_with_10db_margin": {
+            "mcs": 15,
+            "streams": 2,
+            "tx_dbm": 15,
+            "eirp_dbm": 40,
+            "sensitivity_dbm": -75,
+            "rx_dbm": -63.066341801339235,
+            "margin_db": 11.933658198660765,
+            "margin_after_4db_tolerance": 7.9336581986607655,
+            "phy_mbps": 130,
+            "payload_estimate_mbps": 65.0
+          }
+        },
+        "44": {
+          "rows": [
+            {
+              "mcs": 0,
+              "streams": 1,
+              "tx_dbm": 19,
+              "eirp_dbm": 44,
+              "sensitivity_dbm": -96,
+              "rx_dbm": -59.066341801339235,
+              "margin_db": 36.933658198660765,
+              "margin_after_4db_tolerance": 32.933658198660765,
+              "phy_mbps": 6.5,
+              "payload_estimate_mbps": 3.25
+            },
+            {
+              "mcs": 1,
+              "streams": 1,
+              "tx_dbm": 19,
+              "eirp_dbm": 44,
+              "sensitivity_dbm": -95,
+              "rx_dbm": -59.066341801339235,
+              "margin_db": 35.933658198660765,
+              "margin_after_4db_tolerance": 31.933658198660765,
+              "phy_mbps": 13,
+              "payload_estimate_mbps": 6.5
+            },
+            {
+              "mcs": 2,
+              "streams": 1,
+              "tx_dbm": 19,
+              "eirp_dbm": 44,
+              "sensitivity_dbm": -92,
+              "rx_dbm": -59.066341801339235,
+              "margin_db": 32.933658198660765,
+              "margin_after_4db_tolerance": 28.933658198660765,
+              "phy_mbps": 19.5,
+              "payload_estimate_mbps": 9.75
+            },
+            {
+              "mcs": 3,
+              "streams": 1,
+              "tx_dbm": 19,
+              "eirp_dbm": 44,
+              "sensitivity_dbm": -90,
+              "rx_dbm": -59.066341801339235,
+              "margin_db": 30.933658198660765,
+              "margin_after_4db_tolerance": 26.933658198660765,
+              "phy_mbps": 26,
+              "payload_estimate_mbps": 13.0
+            },
+            {
+              "mcs": 4,
+              "streams": 1,
+              "tx_dbm": 19,
+              "eirp_dbm": 44,
+              "sensitivity_dbm": -86,
+              "rx_dbm": -59.066341801339235,
+              "margin_db": 26.933658198660765,
+              "margin_after_4db_tolerance": 22.933658198660765,
+              "phy_mbps": 39,
+              "payload_estimate_mbps": 19.5
+            },
+            {
+              "mcs": 5,
+              "streams": 1,
+              "tx_dbm": 19,
+              "eirp_dbm": 44,
+              "sensitivity_dbm": -83,
+              "rx_dbm": -59.066341801339235,
+              "margin_db": 23.933658198660765,
+              "margin_after_4db_tolerance": 19.933658198660765,
+              "phy_mbps": 52,
+              "payload_estimate_mbps": 26.0
+            },
+            {
+              "mcs": 6,
+              "streams": 1,
+              "tx_dbm": 19,
+              "eirp_dbm": 44,
+              "sensitivity_dbm": -77,
+              "rx_dbm": -59.066341801339235,
+              "margin_db": 17.933658198660765,
+              "margin_after_4db_tolerance": 13.933658198660765,
+              "phy_mbps": 58.5,
+              "payload_estimate_mbps": 29.25
+            },
+            {
+              "mcs": 7,
+              "streams": 1,
+              "tx_dbm": 19,
+              "eirp_dbm": 44,
+              "sensitivity_dbm": -74,
+              "rx_dbm": -59.066341801339235,
+              "margin_db": 14.933658198660765,
+              "margin_after_4db_tolerance": 10.933658198660765,
+              "phy_mbps": 65,
+              "payload_estimate_mbps": 32.5
+            },
+            {
+              "mcs": 8,
+              "streams": 2,
+              "tx_dbm": 19,
+              "eirp_dbm": 44,
+              "sensitivity_dbm": -95,
+              "rx_dbm": -59.066341801339235,
+              "margin_db": 35.933658198660765,
+              "margin_after_4db_tolerance": 31.933658198660765,
+              "phy_mbps": 13,
+              "payload_estimate_mbps": 6.5
+            },
+            {
+              "mcs": 9,
+              "streams": 2,
+              "tx_dbm": 19,
+              "eirp_dbm": 44,
+              "sensitivity_dbm": -93,
+              "rx_dbm": -59.066341801339235,
+              "margin_db": 33.933658198660765,
+              "margin_after_4db_tolerance": 29.933658198660765,
+              "phy_mbps": 26,
+              "payload_estimate_mbps": 13.0
+            },
+            {
+              "mcs": 10,
+              "streams": 2,
+              "tx_dbm": 19,
+              "eirp_dbm": 44,
+              "sensitivity_dbm": -90,
+              "rx_dbm": -59.066341801339235,
+              "margin_db": 30.933658198660765,
+              "margin_after_4db_tolerance": 26.933658198660765,
+              "phy_mbps": 39,
+              "payload_estimate_mbps": 19.5
+            },
+            {
+              "mcs": 11,
+              "streams": 2,
+              "tx_dbm": 19,
+              "eirp_dbm": 44,
+              "sensitivity_dbm": -87,
+              "rx_dbm": -59.066341801339235,
+              "margin_db": 27.933658198660765,
+              "margin_after_4db_tolerance": 23.933658198660765,
+              "phy_mbps": 52,
+              "payload_estimate_mbps": 26.0
+            },
+            {
+              "mcs": 12,
+              "streams": 2,
+              "tx_dbm": 19,
+              "eirp_dbm": 44,
+              "sensitivity_dbm": -84,
+              "rx_dbm": -59.066341801339235,
+              "margin_db": 24.933658198660765,
+              "margin_after_4db_tolerance": 20.933658198660765,
+              "phy_mbps": 78,
+              "payload_estimate_mbps": 39.0
+            },
+            {
+              "mcs": 13,
+              "streams": 2,
+              "tx_dbm": 19,
+              "eirp_dbm": 44,
+              "sensitivity_dbm": -79,
+              "rx_dbm": -59.066341801339235,
+              "margin_db": 19.933658198660765,
+              "margin_after_4db_tolerance": 15.933658198660765,
+              "phy_mbps": 104,
+              "payload_estimate_mbps": 52.0
+            },
+            {
+              "mcs": 14,
+              "streams": 2,
+              "tx_dbm": 19,
+              "eirp_dbm": 44,
+              "sensitivity_dbm": -78,
+              "rx_dbm": -59.066341801339235,
+              "margin_db": 18.933658198660765,
+              "margin_after_4db_tolerance": 14.933658198660765,
+              "phy_mbps": 117,
+              "payload_estimate_mbps": 58.5
+            },
+            {
+              "mcs": 15,
+              "streams": 2,
+              "tx_dbm": 19,
+              "eirp_dbm": 44,
+              "sensitivity_dbm": -75,
+              "rx_dbm": -59.066341801339235,
+              "margin_db": 15.933658198660765,
+              "margin_after_4db_tolerance": 11.933658198660765,
+              "phy_mbps": 130,
+              "payload_estimate_mbps": 65.0
+            }
+          ],
+          "eirp_cap_dbm": 44,
+          "highest_phy_with_10db_margin": {
+            "mcs": 15,
+            "streams": 2,
+            "tx_dbm": 19,
+            "eirp_dbm": 44,
+            "sensitivity_dbm": -75,
+            "rx_dbm": -59.066341801339235,
+            "margin_db": 15.933658198660765,
+            "margin_after_4db_tolerance": 11.933658198660765,
+            "phy_mbps": 130,
+            "payload_estimate_mbps": 65.0
+          }
+        }
+      },
+      "mast_sensitivity": {
+        "3": {
+          "scenario_fraction_ge_60pct": 1.0,
+          "scenario_fraction_los_clear": 1.0,
+          "p5_ratio": 3.2282932238304105,
+          "median_ratio": 5.920445563432639
+        },
+        "6": {
+          "scenario_fraction_ge_60pct": 1.0,
+          "scenario_fraction_los_clear": 1.0,
+          "p5_ratio": 4.3612297958033075,
+          "median_ratio": 7.053382135405537
+        },
+        "10": {
+          "scenario_fraction_ge_60pct": 1.0,
+          "scenario_fraction_los_clear": 1.0,
+          "p5_ratio": 5.871811891767171,
+          "median_ratio": 8.563333118766105
+        },
+        "15": {
+          "scenario_fraction_ge_60pct": 1.0,
+          "scenario_fraction_los_clear": 1.0,
+          "p5_ratio": 7.760039511722001,
+          "median_ratio": 10.268146252731281
+        },
+        "20": {
+          "scenario_fraction_ge_60pct": 1.0,
+          "scenario_fraction_los_clear": 1.0,
+          "p5_ratio": 9.597864455868848,
+          "median_ratio": 11.249697593450104
+        }
+      },
+      "annual_availability": "Not calculated: local climate inputs and model applicability unverified"
+    },
+    "H2": {
+      "from": "MTN tower site",
+      "to": "Al-Sharq city",
+      "distance_km": 15.555797844959953,
+      "source_estimated_km": 16.5,
+      "sample_spacing_m": 259.2632974159992,
+      "fspl_db": 131.54640568420658,
+      "midpoint_fresnel_m": 14.17791944042294,
+      "nominal_clearance_ratio": 2.061447084173577,
+      "critical_km": 0.2592632974159992,
+      "endpoint_ground_elevations_m": [
+        2680.0,
+        1283.0
+      ],
+      "budget": {
+        "rows": [
+          {
+            "mcs": 0,
+            "streams": 1,
+            "tx_dbm": 27,
+            "eirp_dbm": 60.5,
+            "sensitivity_dbm": -96,
+            "rx_dbm": -39.546405684206576,
+            "margin_db": 56.453594315793424,
+            "margin_after_4db_tolerance": 52.453594315793424,
+            "phy_mbps": 6.5,
+            "payload_estimate_mbps": 3.25
+          },
+          {
+            "mcs": 1,
+            "streams": 1,
+            "tx_dbm": 27,
+            "eirp_dbm": 60.5,
+            "sensitivity_dbm": -95,
+            "rx_dbm": -39.546405684206576,
+            "margin_db": 55.453594315793424,
+            "margin_after_4db_tolerance": 51.453594315793424,
+            "phy_mbps": 13,
+            "payload_estimate_mbps": 6.5
+          },
+          {
+            "mcs": 2,
+            "streams": 1,
+            "tx_dbm": 27,
+            "eirp_dbm": 60.5,
+            "sensitivity_dbm": -92,
+            "rx_dbm": -39.546405684206576,
+            "margin_db": 52.453594315793424,
+            "margin_after_4db_tolerance": 48.453594315793424,
+            "phy_mbps": 19.5,
+            "payload_estimate_mbps": 9.75
+          },
+          {
+            "mcs": 3,
+            "streams": 1,
+            "tx_dbm": 27,
+            "eirp_dbm": 60.5,
+            "sensitivity_dbm": -90,
+            "rx_dbm": -39.546405684206576,
+            "margin_db": 50.453594315793424,
+            "margin_after_4db_tolerance": 46.453594315793424,
+            "phy_mbps": 26,
+            "payload_estimate_mbps": 13.0
+          },
+          {
+            "mcs": 4,
+            "streams": 1,
+            "tx_dbm": 26,
+            "eirp_dbm": 59.5,
+            "sensitivity_dbm": -86,
+            "rx_dbm": -40.546405684206576,
+            "margin_db": 45.453594315793424,
+            "margin_after_4db_tolerance": 41.453594315793424,
+            "phy_mbps": 39,
+            "payload_estimate_mbps": 19.5
+          },
+          {
+            "mcs": 5,
+            "streams": 1,
+            "tx_dbm": 24,
+            "eirp_dbm": 57.5,
+            "sensitivity_dbm": -83,
+            "rx_dbm": -42.546405684206576,
+            "margin_db": 40.453594315793424,
+            "margin_after_4db_tolerance": 36.453594315793424,
+            "phy_mbps": 52,
+            "payload_estimate_mbps": 26.0
+          },
+          {
+            "mcs": 6,
+            "streams": 1,
+            "tx_dbm": 22,
+            "eirp_dbm": 55.5,
+            "sensitivity_dbm": -77,
+            "rx_dbm": -44.546405684206576,
+            "margin_db": 32.453594315793424,
+            "margin_after_4db_tolerance": 28.453594315793424,
+            "phy_mbps": 58.5,
+            "payload_estimate_mbps": 29.25
+          },
+          {
+            "mcs": 7,
+            "streams": 1,
+            "tx_dbm": 21,
+            "eirp_dbm": 54.5,
+            "sensitivity_dbm": -74,
+            "rx_dbm": -45.546405684206576,
+            "margin_db": 28.453594315793424,
+            "margin_after_4db_tolerance": 24.453594315793424,
+            "phy_mbps": 65,
+            "payload_estimate_mbps": 32.5
+          },
+          {
+            "mcs": 8,
+            "streams": 2,
+            "tx_dbm": 27,
+            "eirp_dbm": 60.5,
+            "sensitivity_dbm": -95,
+            "rx_dbm": -39.546405684206576,
+            "margin_db": 55.453594315793424,
+            "margin_after_4db_tolerance": 51.453594315793424,
+            "phy_mbps": 13,
+            "payload_estimate_mbps": 6.5
+          },
+          {
+            "mcs": 9,
+            "streams": 2,
+            "tx_dbm": 27,
+            "eirp_dbm": 60.5,
+            "sensitivity_dbm": -93,
+            "rx_dbm": -39.546405684206576,
+            "margin_db": 53.453594315793424,
+            "margin_after_4db_tolerance": 49.453594315793424,
+            "phy_mbps": 26,
+            "payload_estimate_mbps": 13.0
+          },
+          {
+            "mcs": 10,
+            "streams": 2,
+            "tx_dbm": 27,
+            "eirp_dbm": 60.5,
+            "sensitivity_dbm": -90,
+            "rx_dbm": -39.546405684206576,
+            "margin_db": 50.453594315793424,
+            "margin_after_4db_tolerance": 46.453594315793424,
+            "phy_mbps": 39,
+            "payload_estimate_mbps": 19.5
+          },
+          {
+            "mcs": 11,
+            "streams": 2,
+            "tx_dbm": 27,
+            "eirp_dbm": 60.5,
+            "sensitivity_dbm": -87,
+            "rx_dbm": -39.546405684206576,
+            "margin_db": 47.453594315793424,
+            "margin_after_4db_tolerance": 43.453594315793424,
+            "phy_mbps": 52,
+            "payload_estimate_mbps": 26.0
+          },
+          {
+            "mcs": 12,
+            "streams": 2,
+            "tx_dbm": 26,
+            "eirp_dbm": 59.5,
+            "sensitivity_dbm": -84,
+            "rx_dbm": -40.546405684206576,
+            "margin_db": 43.453594315793424,
+            "margin_after_4db_tolerance": 39.453594315793424,
+            "phy_mbps": 78,
+            "payload_estimate_mbps": 39.0
+          },
+          {
+            "mcs": 13,
+            "streams": 2,
+            "tx_dbm": 24,
+            "eirp_dbm": 57.5,
+            "sensitivity_dbm": -79,
+            "rx_dbm": -42.546405684206576,
+            "margin_db": 36.453594315793424,
+            "margin_after_4db_tolerance": 32.453594315793424,
+            "phy_mbps": 104,
+            "payload_estimate_mbps": 52.0
+          },
+          {
+            "mcs": 14,
+            "streams": 2,
+            "tx_dbm": 22,
+            "eirp_dbm": 55.5,
+            "sensitivity_dbm": -78,
+            "rx_dbm": -44.546405684206576,
+            "margin_db": 33.453594315793424,
+            "margin_after_4db_tolerance": 29.453594315793424,
+            "phy_mbps": 117,
+            "payload_estimate_mbps": 58.5
+          },
+          {
+            "mcs": 15,
+            "streams": 2,
+            "tx_dbm": 21,
+            "eirp_dbm": 54.5,
+            "sensitivity_dbm": -75,
+            "rx_dbm": -45.546405684206576,
+            "margin_db": 29.453594315793424,
+            "margin_after_4db_tolerance": 25.453594315793424,
+            "phy_mbps": 130,
+            "payload_estimate_mbps": 65.0
+          }
+        ],
+        "eirp_cap_dbm": null,
+        "highest_phy_with_10db_margin": {
+          "mcs": 15,
+          "streams": 2,
+          "tx_dbm": 21,
+          "eirp_dbm": 54.5,
+          "sensitivity_dbm": -75,
+          "rx_dbm": -45.546405684206576,
+          "margin_db": 29.453594315793424,
+          "margin_after_4db_tolerance": 25.453594315793424,
+          "phy_mbps": 130,
+          "payload_estimate_mbps": 65.0
+        }
+      },
+      "eirp_sensitivity": {
+        "36": {
+          "rows": [
+            {
+              "mcs": 0,
+              "streams": 1,
+              "tx_dbm": 2.5,
+              "eirp_dbm": 36.0,
+              "sensitivity_dbm": -96,
+              "rx_dbm": -64.04640568420658,
+              "margin_db": 31.953594315793424,
+              "margin_after_4db_tolerance": 27.953594315793424,
+              "phy_mbps": 6.5,
+              "payload_estimate_mbps": 3.25
+            },
+            {
+              "mcs": 1,
+              "streams": 1,
+              "tx_dbm": 2.5,
+              "eirp_dbm": 36.0,
+              "sensitivity_dbm": -95,
+              "rx_dbm": -64.04640568420658,
+              "margin_db": 30.953594315793424,
+              "margin_after_4db_tolerance": 26.953594315793424,
+              "phy_mbps": 13,
+              "payload_estimate_mbps": 6.5
+            },
+            {
+              "mcs": 2,
+              "streams": 1,
+              "tx_dbm": 2.5,
+              "eirp_dbm": 36.0,
+              "sensitivity_dbm": -92,
+              "rx_dbm": -64.04640568420658,
+              "margin_db": 27.953594315793424,
+              "margin_after_4db_tolerance": 23.953594315793424,
+              "phy_mbps": 19.5,
+              "payload_estimate_mbps": 9.75
+            },
+            {
+              "mcs": 3,
+              "streams": 1,
+              "tx_dbm": 2.5,
+              "eirp_dbm": 36.0,
+              "sensitivity_dbm": -90,
+              "rx_dbm": -64.04640568420658,
+              "margin_db": 25.953594315793424,
+              "margin_after_4db_tolerance": 21.953594315793424,
+              "phy_mbps": 26,
+              "payload_estimate_mbps": 13.0
+            },
+            {
+              "mcs": 4,
+              "streams": 1,
+              "tx_dbm": 2.5,
+              "eirp_dbm": 36.0,
+              "sensitivity_dbm": -86,
+              "rx_dbm": -64.04640568420658,
+              "margin_db": 21.953594315793424,
+              "margin_after_4db_tolerance": 17.953594315793424,
+              "phy_mbps": 39,
+              "payload_estimate_mbps": 19.5
+            },
+            {
+              "mcs": 5,
+              "streams": 1,
+              "tx_dbm": 2.5,
+              "eirp_dbm": 36.0,
+              "sensitivity_dbm": -83,
+              "rx_dbm": -64.04640568420658,
+              "margin_db": 18.953594315793424,
+              "margin_after_4db_tolerance": 14.953594315793424,
+              "phy_mbps": 52,
+              "payload_estimate_mbps": 26.0
+            },
+            {
+              "mcs": 6,
+              "streams": 1,
+              "tx_dbm": 2.5,
+              "eirp_dbm": 36.0,
+              "sensitivity_dbm": -77,
+              "rx_dbm": -64.04640568420658,
+              "margin_db": 12.953594315793424,
+              "margin_after_4db_tolerance": 8.953594315793424,
+              "phy_mbps": 58.5,
+              "payload_estimate_mbps": 29.25
+            },
+            {
+              "mcs": 7,
+              "streams": 1,
+              "tx_dbm": 2.5,
+              "eirp_dbm": 36.0,
+              "sensitivity_dbm": -74,
+              "rx_dbm": -64.04640568420658,
+              "margin_db": 9.953594315793424,
+              "margin_after_4db_tolerance": 5.953594315793424,
+              "phy_mbps": 65,
+              "payload_estimate_mbps": 32.5
+            },
+            {
+              "mcs": 8,
+              "streams": 2,
+              "tx_dbm": 2.5,
+              "eirp_dbm": 36.0,
+              "sensitivity_dbm": -95,
+              "rx_dbm": -64.04640568420658,
+              "margin_db": 30.953594315793424,
+              "margin_after_4db_tolerance": 26.953594315793424,
+              "phy_mbps": 13,
+              "payload_estimate_mbps": 6.5
+            },
+            {
+              "mcs": 9,
+              "streams": 2,
+              "tx_dbm": 2.5,
+              "eirp_dbm": 36.0,
+              "sensitivity_dbm": -93,
+              "rx_dbm": -64.04640568420658,
+              "margin_db": 28.953594315793424,
+              "margin_after_4db_tolerance": 24.953594315793424,
+              "phy_mbps": 26,
+              "payload_estimate_mbps": 13.0
+            },
+            {
+              "mcs": 10,
+              "streams": 2,
+              "tx_dbm": 2.5,
+              "eirp_dbm": 36.0,
+              "sensitivity_dbm": -90,
+              "rx_dbm": -64.04640568420658,
+              "margin_db": 25.953594315793424,
+              "margin_after_4db_tolerance": 21.953594315793424,
+              "phy_mbps": 39,
+              "payload_estimate_mbps": 19.5
+            },
+            {
+              "mcs": 11,
+              "streams": 2,
+              "tx_dbm": 2.5,
+              "eirp_dbm": 36.0,
+              "sensitivity_dbm": -87,
+              "rx_dbm": -64.04640568420658,
+              "margin_db": 22.953594315793424,
+              "margin_after_4db_tolerance": 18.953594315793424,
+              "phy_mbps": 52,
+              "payload_estimate_mbps": 26.0
+            },
+            {
+              "mcs": 12,
+              "streams": 2,
+              "tx_dbm": 2.5,
+              "eirp_dbm": 36.0,
+              "sensitivity_dbm": -84,
+              "rx_dbm": -64.04640568420658,
+              "margin_db": 19.953594315793424,
+              "margin_after_4db_tolerance": 15.953594315793424,
+              "phy_mbps": 78,
+              "payload_estimate_mbps": 39.0
+            },
+            {
+              "mcs": 13,
+              "streams": 2,
+              "tx_dbm": 2.5,
+              "eirp_dbm": 36.0,
+              "sensitivity_dbm": -79,
+              "rx_dbm": -64.04640568420658,
+              "margin_db": 14.953594315793424,
+              "margin_after_4db_tolerance": 10.953594315793424,
+              "phy_mbps": 104,
+              "payload_estimate_mbps": 52.0
+            },
+            {
+              "mcs": 14,
+              "streams": 2,
+              "tx_dbm": 2.5,
+              "eirp_dbm": 36.0,
+              "sensitivity_dbm": -78,
+              "rx_dbm": -64.04640568420658,
+              "margin_db": 13.953594315793424,
+              "margin_after_4db_tolerance": 9.953594315793424,
+              "phy_mbps": 117,
+              "payload_estimate_mbps": 58.5
+            },
+            {
+              "mcs": 15,
+              "streams": 2,
+              "tx_dbm": 2.5,
+              "eirp_dbm": 36.0,
+              "sensitivity_dbm": -75,
+              "rx_dbm": -64.04640568420658,
+              "margin_db": 10.953594315793424,
+              "margin_after_4db_tolerance": 6.953594315793424,
+              "phy_mbps": 130,
+              "payload_estimate_mbps": 65.0
+            }
+          ],
+          "eirp_cap_dbm": 36,
+          "highest_phy_with_10db_margin": {
+            "mcs": 15,
+            "streams": 2,
+            "tx_dbm": 2.5,
+            "eirp_dbm": 36.0,
+            "sensitivity_dbm": -75,
+            "rx_dbm": -64.04640568420658,
+            "margin_db": 10.953594315793424,
+            "margin_after_4db_tolerance": 6.953594315793424,
+            "phy_mbps": 130,
+            "payload_estimate_mbps": 65.0
+          }
+        },
+        "40": {
+          "rows": [
+            {
+              "mcs": 0,
+              "streams": 1,
+              "tx_dbm": 6.5,
+              "eirp_dbm": 40.0,
+              "sensitivity_dbm": -96,
+              "rx_dbm": -60.046405684206576,
+              "margin_db": 35.953594315793424,
+              "margin_after_4db_tolerance": 31.953594315793424,
+              "phy_mbps": 6.5,
+              "payload_estimate_mbps": 3.25
+            },
+            {
+              "mcs": 1,
+              "streams": 1,
+              "tx_dbm": 6.5,
+              "eirp_dbm": 40.0,
+              "sensitivity_dbm": -95,
+              "rx_dbm": -60.046405684206576,
+              "margin_db": 34.953594315793424,
+              "margin_after_4db_tolerance": 30.953594315793424,
+              "phy_mbps": 13,
+              "payload_estimate_mbps": 6.5
+            },
+            {
+              "mcs": 2,
+              "streams": 1,
+              "tx_dbm": 6.5,
+              "eirp_dbm": 40.0,
+              "sensitivity_dbm": -92,
+              "rx_dbm": -60.046405684206576,
+              "margin_db": 31.953594315793424,
+              "margin_after_4db_tolerance": 27.953594315793424,
+              "phy_mbps": 19.5,
+              "payload_estimate_mbps": 9.75
+            },
+            {
+              "mcs": 3,
+              "streams": 1,
+              "tx_dbm": 6.5,
+              "eirp_dbm": 40.0,
+              "sensitivity_dbm": -90,
+              "rx_dbm": -60.046405684206576,
+              "margin_db": 29.953594315793424,
+              "margin_after_4db_tolerance": 25.953594315793424,
+              "phy_mbps": 26,
+              "payload_estimate_mbps": 13.0
+            },
+            {
+              "mcs": 4,
+              "streams": 1,
+              "tx_dbm": 6.5,
+              "eirp_dbm": 40.0,
+              "sensitivity_dbm": -86,
+              "rx_dbm": -60.046405684206576,
+              "margin_db": 25.953594315793424,
+              "margin_after_4db_tolerance": 21.953594315793424,
+              "phy_mbps": 39,
+              "payload_estimate_mbps": 19.5
+            },
+            {
+              "mcs": 5,
+              "streams": 1,
+              "tx_dbm": 6.5,
+              "eirp_dbm": 40.0,
+              "sensitivity_dbm": -83,
+              "rx_dbm": -60.046405684206576,
+              "margin_db": 22.953594315793424,
+              "margin_after_4db_tolerance": 18.953594315793424,
+              "phy_mbps": 52,
+              "payload_estimate_mbps": 26.0
+            },
+            {
+              "mcs": 6,
+              "streams": 1,
+              "tx_dbm": 6.5,
+              "eirp_dbm": 40.0,
+              "sensitivity_dbm": -77,
+              "rx_dbm": -60.046405684206576,
+              "margin_db": 16.953594315793424,
+              "margin_after_4db_tolerance": 12.953594315793424,
+              "phy_mbps": 58.5,
+              "payload_estimate_mbps": 29.25
+            },
+            {
+              "mcs": 7,
+              "streams": 1,
+              "tx_dbm": 6.5,
+              "eirp_dbm": 40.0,
+              "sensitivity_dbm": -74,
+              "rx_dbm": -60.046405684206576,
+              "margin_db": 13.953594315793424,
+              "margin_after_4db_tolerance": 9.953594315793424,
+              "phy_mbps": 65,
+              "payload_estimate_mbps": 32.5
+            },
+            {
+              "mcs": 8,
+              "streams": 2,
+              "tx_dbm": 6.5,
+              "eirp_dbm": 40.0,
+              "sensitivity_dbm": -95,
+              "rx_dbm": -60.046405684206576,
+              "margin_db": 34.953594315793424,
+              "margin_after_4db_tolerance": 30.953594315793424,
+              "phy_mbps": 13,
+              "payload_estimate_mbps": 6.5
+            },
+            {
+              "mcs": 9,
+              "streams": 2,
+              "tx_dbm": 6.5,
+              "eirp_dbm": 40.0,
+              "sensitivity_dbm": -93,
+              "rx_dbm": -60.046405684206576,
+              "margin_db": 32.953594315793424,
+              "margin_after_4db_tolerance": 28.953594315793424,
+              "phy_mbps": 26,
+              "payload_estimate_mbps": 13.0
+            },
+            {
+              "mcs": 10,
+              "streams": 2,
+              "tx_dbm": 6.5,
+              "eirp_dbm": 40.0,
+              "sensitivity_dbm": -90,
+              "rx_dbm": -60.046405684206576,
+              "margin_db": 29.953594315793424,
+              "margin_after_4db_tolerance": 25.953594315793424,
+              "phy_mbps": 39,
+              "payload_estimate_mbps": 19.5
+            },
+            {
+              "mcs": 11,
+              "streams": 2,
+              "tx_dbm": 6.5,
+              "eirp_dbm": 40.0,
+              "sensitivity_dbm": -87,
+              "rx_dbm": -60.046405684206576,
+              "margin_db": 26.953594315793424,
+              "margin_after_4db_tolerance": 22.953594315793424,
+              "phy_mbps": 52,
+              "payload_estimate_mbps": 26.0
+            },
+            {
+              "mcs": 12,
+              "streams": 2,
+              "tx_dbm": 6.5,
+              "eirp_dbm": 40.0,
+              "sensitivity_dbm": -84,
+              "rx_dbm": -60.046405684206576,
+              "margin_db": 23.953594315793424,
+              "margin_after_4db_tolerance": 19.953594315793424,
+              "phy_mbps": 78,
+              "payload_estimate_mbps": 39.0
+            },
+            {
+              "mcs": 13,
+              "streams": 2,
+              "tx_dbm": 6.5,
+              "eirp_dbm": 40.0,
+              "sensitivity_dbm": -79,
+              "rx_dbm": -60.046405684206576,
+              "margin_db": 18.953594315793424,
+              "margin_after_4db_tolerance": 14.953594315793424,
+              "phy_mbps": 104,
+              "payload_estimate_mbps": 52.0
+            },
+            {
+              "mcs": 14,
+              "streams": 2,
+              "tx_dbm": 6.5,
+              "eirp_dbm": 40.0,
+              "sensitivity_dbm": -78,
+              "rx_dbm": -60.046405684206576,
+              "margin_db": 17.953594315793424,
+              "margin_after_4db_tolerance": 13.953594315793424,
+              "phy_mbps": 117,
+              "payload_estimate_mbps": 58.5
+            },
+            {
+              "mcs": 15,
+              "streams": 2,
+              "tx_dbm": 6.5,
+              "eirp_dbm": 40.0,
+              "sensitivity_dbm": -75,
+              "rx_dbm": -60.046405684206576,
+              "margin_db": 14.953594315793424,
+              "margin_after_4db_tolerance": 10.953594315793424,
+              "phy_mbps": 130,
+              "payload_estimate_mbps": 65.0
+            }
+          ],
+          "eirp_cap_dbm": 40,
+          "highest_phy_with_10db_margin": {
+            "mcs": 15,
+            "streams": 2,
+            "tx_dbm": 6.5,
+            "eirp_dbm": 40.0,
+            "sensitivity_dbm": -75,
+            "rx_dbm": -60.046405684206576,
+            "margin_db": 14.953594315793424,
+            "margin_after_4db_tolerance": 10.953594315793424,
+            "phy_mbps": 130,
+            "payload_estimate_mbps": 65.0
+          }
+        },
+        "44": {
+          "rows": [
+            {
+              "mcs": 0,
+              "streams": 1,
+              "tx_dbm": 10.5,
+              "eirp_dbm": 44.0,
+              "sensitivity_dbm": -96,
+              "rx_dbm": -56.046405684206576,
+              "margin_db": 39.953594315793424,
+              "margin_after_4db_tolerance": 35.953594315793424,
+              "phy_mbps": 6.5,
+              "payload_estimate_mbps": 3.25
+            },
+            {
+              "mcs": 1,
+              "streams": 1,
+              "tx_dbm": 10.5,
+              "eirp_dbm": 44.0,
+              "sensitivity_dbm": -95,
+              "rx_dbm": -56.046405684206576,
+              "margin_db": 38.953594315793424,
+              "margin_after_4db_tolerance": 34.953594315793424,
+              "phy_mbps": 13,
+              "payload_estimate_mbps": 6.5
+            },
+            {
+              "mcs": 2,
+              "streams": 1,
+              "tx_dbm": 10.5,
+              "eirp_dbm": 44.0,
+              "sensitivity_dbm": -92,
+              "rx_dbm": -56.046405684206576,
+              "margin_db": 35.953594315793424,
+              "margin_after_4db_tolerance": 31.953594315793424,
+              "phy_mbps": 19.5,
+              "payload_estimate_mbps": 9.75
+            },
+            {
+              "mcs": 3,
+              "streams": 1,
+              "tx_dbm": 10.5,
+              "eirp_dbm": 44.0,
+              "sensitivity_dbm": -90,
+              "rx_dbm": -56.046405684206576,
+              "margin_db": 33.953594315793424,
+              "margin_after_4db_tolerance": 29.953594315793424,
+              "phy_mbps": 26,
+              "payload_estimate_mbps": 13.0
+            },
+            {
+              "mcs": 4,
+              "streams": 1,
+              "tx_dbm": 10.5,
+              "eirp_dbm": 44.0,
+              "sensitivity_dbm": -86,
+              "rx_dbm": -56.046405684206576,
+              "margin_db": 29.953594315793424,
+              "margin_after_4db_tolerance": 25.953594315793424,
+              "phy_mbps": 39,
+              "payload_estimate_mbps": 19.5
+            },
+            {
+              "mcs": 5,
+              "streams": 1,
+              "tx_dbm": 10.5,
+              "eirp_dbm": 44.0,
+              "sensitivity_dbm": -83,
+              "rx_dbm": -56.046405684206576,
+              "margin_db": 26.953594315793424,
+              "margin_after_4db_tolerance": 22.953594315793424,
+              "phy_mbps": 52,
+              "payload_estimate_mbps": 26.0
+            },
+            {
+              "mcs": 6,
+              "streams": 1,
+              "tx_dbm": 10.5,
+              "eirp_dbm": 44.0,
+              "sensitivity_dbm": -77,
+              "rx_dbm": -56.046405684206576,
+              "margin_db": 20.953594315793424,
+              "margin_after_4db_tolerance": 16.953594315793424,
+              "phy_mbps": 58.5,
+              "payload_estimate_mbps": 29.25
+            },
+            {
+              "mcs": 7,
+              "streams": 1,
+              "tx_dbm": 10.5,
+              "eirp_dbm": 44.0,
+              "sensitivity_dbm": -74,
+              "rx_dbm": -56.046405684206576,
+              "margin_db": 17.953594315793424,
+              "margin_after_4db_tolerance": 13.953594315793424,
+              "phy_mbps": 65,
+              "payload_estimate_mbps": 32.5
+            },
+            {
+              "mcs": 8,
+              "streams": 2,
+              "tx_dbm": 10.5,
+              "eirp_dbm": 44.0,
+              "sensitivity_dbm": -95,
+              "rx_dbm": -56.046405684206576,
+              "margin_db": 38.953594315793424,
+              "margin_after_4db_tolerance": 34.953594315793424,
+              "phy_mbps": 13,
+              "payload_estimate_mbps": 6.5
+            },
+            {
+              "mcs": 9,
+              "streams": 2,
+              "tx_dbm": 10.5,
+              "eirp_dbm": 44.0,
+              "sensitivity_dbm": -93,
+              "rx_dbm": -56.046405684206576,
+              "margin_db": 36.953594315793424,
+              "margin_after_4db_tolerance": 32.953594315793424,
+              "phy_mbps": 26,
+              "payload_estimate_mbps": 13.0
+            },
+            {
+              "mcs": 10,
+              "streams": 2,
+              "tx_dbm": 10.5,
+              "eirp_dbm": 44.0,
+              "sensitivity_dbm": -90,
+              "rx_dbm": -56.046405684206576,
+              "margin_db": 33.953594315793424,
+              "margin_after_4db_tolerance": 29.953594315793424,
+              "phy_mbps": 39,
+              "payload_estimate_mbps": 19.5
+            },
+            {
+              "mcs": 11,
+              "streams": 2,
+              "tx_dbm": 10.5,
+              "eirp_dbm": 44.0,
+              "sensitivity_dbm": -87,
+              "rx_dbm": -56.046405684206576,
+              "margin_db": 30.953594315793424,
+              "margin_after_4db_tolerance": 26.953594315793424,
+              "phy_mbps": 52,
+              "payload_estimate_mbps": 26.0
+            },
+            {
+              "mcs": 12,
+              "streams": 2,
+              "tx_dbm": 10.5,
+              "eirp_dbm": 44.0,
+              "sensitivity_dbm": -84,
+              "rx_dbm": -56.046405684206576,
+              "margin_db": 27.953594315793424,
+              "margin_after_4db_tolerance": 23.953594315793424,
+              "phy_mbps": 78,
+              "payload_estimate_mbps": 39.0
+            },
+            {
+              "mcs": 13,
+              "streams": 2,
+              "tx_dbm": 10.5,
+              "eirp_dbm": 44.0,
+              "sensitivity_dbm": -79,
+              "rx_dbm": -56.046405684206576,
+              "margin_db": 22.953594315793424,
+              "margin_after_4db_tolerance": 18.953594315793424,
+              "phy_mbps": 104,
+              "payload_estimate_mbps": 52.0
+            },
+            {
+              "mcs": 14,
+              "streams": 2,
+              "tx_dbm": 10.5,
+              "eirp_dbm": 44.0,
+              "sensitivity_dbm": -78,
+              "rx_dbm": -56.046405684206576,
+              "margin_db": 21.953594315793424,
+              "margin_after_4db_tolerance": 17.953594315793424,
+              "phy_mbps": 117,
+              "payload_estimate_mbps": 58.5
+            },
+            {
+              "mcs": 15,
+              "streams": 2,
+              "tx_dbm": 10.5,
+              "eirp_dbm": 44.0,
+              "sensitivity_dbm": -75,
+              "rx_dbm": -56.046405684206576,
+              "margin_db": 18.953594315793424,
+              "margin_after_4db_tolerance": 14.953594315793424,
+              "phy_mbps": 130,
+              "payload_estimate_mbps": 65.0
+            }
+          ],
+          "eirp_cap_dbm": 44,
+          "highest_phy_with_10db_margin": {
+            "mcs": 15,
+            "streams": 2,
+            "tx_dbm": 10.5,
+            "eirp_dbm": 44.0,
+            "sensitivity_dbm": -75,
+            "rx_dbm": -56.046405684206576,
+            "margin_db": 18.953594315793424,
+            "margin_after_4db_tolerance": 14.953594315793424,
+            "phy_mbps": 130,
+            "payload_estimate_mbps": 65.0
+          }
+        }
+      },
+      "mast_sensitivity": {
+        "3": {
+          "scenario_fraction_ge_60pct": 0.4942,
+          "scenario_fraction_los_clear": 0.6448,
+          "p5_ratio": -1.3891246295711022,
+          "median_ratio": 0.5778673285011268
+        },
+        "6": {
+          "scenario_fraction_ge_60pct": 0.6992,
+          "scenario_fraction_los_clear": 0.8422,
+          "p5_ratio": -0.5626985776027451,
+          "median_ratio": 1.404293380469484
+        },
+        "10": {
+          "scenario_fraction_ge_60pct": 0.9408,
+          "scenario_fraction_los_clear": 0.992,
+          "p5_ratio": 0.539202825021731,
+          "median_ratio": 2.50619478309396
+        },
+        "15": {
+          "scenario_fraction_ge_60pct": 1.0,
+          "scenario_fraction_los_clear": 1.0,
+          "p5_ratio": 1.9165795783023263,
+          "median_ratio": 3.8835715363745553
+        },
+        "20": {
+          "scenario_fraction_ge_60pct": 1.0,
+          "scenario_fraction_los_clear": 1.0,
+          "p5_ratio": 3.2939563315829212,
+          "median_ratio": 5.2609482896551505
+        }
+      },
+      "annual_availability": "Not calculated: local climate inputs and model applicability unverified"
+    }
+  },
+  "cell": {
+    "mcs0": [
+      {
+        "distance_m": 50,
+        "probability": 0.9999997870273498,
+        "median_rx_dbm": -45.544150722447085
+      },
+      {
+        "distance_m": 75,
+        "probability": 0.9999932738711304,
+        "median_rx_dbm": -51.17907101222889
+      },
+      {
+        "distance_m": 100,
+        "probability": 0.9999416272065564,
+        "median_rx_dbm": -55.177110583694486
+      },
+      {
+        "distance_m": 125,
+        "probability": 0.9997351021631803,
+        "median_rx_dbm": -58.278230999952285
+      },
+      {
+        "distance_m": 150,
+        "probability": 0.9991794355486735,
+        "median_rx_dbm": -60.81203087347629
+      },
+      {
+        "distance_m": 175,
+        "probability": 0.9980160909402159,
+        "median_rx_dbm": -62.95432814165591
+      },
+      {
+        "distance_m": 200,
+        "probability": 0.9959603912234507,
+        "median_rx_dbm": -64.81007044494189
+      },
+      {
+        "distance_m": 225,
+        "probability": 0.9927399255423,
+        "median_rx_dbm": -66.44695116325809
+      },
+      {
+        "distance_m": 250,
+        "probability": 0.9881235026664402,
+        "median_rx_dbm": -67.91119086119969
+      },
+      {
+        "distance_m": 275,
+        "probability": 0.9819380655903523,
+        "median_rx_dbm": -69.2357567862629
+      },
+      {
+        "distance_m": 300,
+        "probability": 0.9740749466055176,
+        "median_rx_dbm": -70.44499073472369
+      },
+      {
+        "distance_m": 325,
+        "probability": 0.9644882938349275,
+        "median_rx_dbm": -71.55737813501847
+      },
+      {
+        "distance_m": 350,
+        "probability": 0.9531885603355152,
+        "median_rx_dbm": -72.5872880029033
+      },
+      {
+        "distance_m": 375,
+        "probability": 0.940233423743286,
+        "median_rx_dbm": -73.54611115098149
+      },
+      {
+        "distance_m": 400,
+        "probability": 0.9257178443246206,
+        "median_rx_dbm": -74.44303030618929
+      },
+      {
+        "distance_m": 425,
+        "probability": 0.9097643734880735,
+        "median_rx_dbm": -75.28555634530446
+      },
+      {
+        "distance_m": 450,
+        "probability": 0.8925143597719836,
+        "median_rx_dbm": -76.07991102450548
+      },
+      {
+        "distance_m": 475,
+        "probability": 0.8741203679029952,
+        "median_rx_dbm": -76.83130609169021
+      },
+      {
+        "distance_m": 500,
+        "probability": 0.8547399070127726,
+        "median_rx_dbm": -77.54415072244709
+      },
+      {
+        "distance_m": 525,
+        "probability": 0.834530429239555,
+        "median_rx_dbm": -78.22220829268511
+      },
+      {
+        "distance_m": 550,
+        "probability": 0.8136454849174399,
+        "median_rx_dbm": -78.86871664751028
+      },
+      {
+        "distance_m": 575,
+        "probability": 0.7922318855747337,
+        "median_rx_dbm": -79.48648161376266
+      },
+      {
+        "distance_m": 600,
+        "probability": 0.7704277163706126,
+        "median_rx_dbm": -80.07795059597106
+      },
+      {
+        "distance_m": 625,
+        "probability": 0.748361045098608,
+        "median_rx_dbm": -80.64527113870491
+      },
+      {
+        "distance_m": 650,
+        "probability": 0.7261491885384974,
+        "median_rx_dbm": -81.19033799626587
+      }
+    ],
+    "mcs3": [
+      {
+        "distance_m": 50,
+        "probability": 0.9999917251149981,
+        "median_rx_dbm": -45.544150722447085
+      },
+      {
+        "distance_m": 75,
+        "probability": 0.9998424847043859,
+        "median_rx_dbm": -51.17907101222889
+      },
+      {
+        "distance_m": 100,
+        "probability": 0.999041702391997,
+        "median_rx_dbm": -55.177110583694486
+      },
+      {
+        "distance_m": 125,
+        "probability": 0.9966884234325244,
+        "median_rx_dbm": -58.278230999952285
+      },
+      {
+        "distance_m": 150,
+        "probability": 0.991768725018119,
+        "median_rx_dbm": -60.81203087347629
+      },
+      {
+        "distance_m": 175,
+        "probability": 0.9834434376830914,
+        "median_rx_dbm": -62.95432814165591
+      },
+      {
+        "distance_m": 200,
+        "probability": 0.9712007437952508,
+        "median_rx_dbm": -64.81007044494189
+      },
+      {
+        "distance_m": 225,
+        "probability": 0.954879813548236,
+        "median_rx_dbm": -66.44695116325809
+      },
+      {
+        "distance_m": 250,
+        "probability": 0.9346186581418408,
+        "median_rx_dbm": -67.91119086119969
+      },
+      {
+        "distance_m": 275,
+        "probability": 0.9107729948408306,
+        "median_rx_dbm": -69.2357567862629
+      },
+      {
+        "distance_m": 300,
+        "probability": 0.883834570616743,
+        "median_rx_dbm": -70.44499073472369
+      },
+      {
+        "distance_m": 325,
+        "probability": 0.8543622692275433,
+        "median_rx_dbm": -71.55737813501847
+      },
+      {
+        "distance_m": 350,
+        "probability": 0.8229300157443928,
+        "median_rx_dbm": -72.5872880029033
+      },
+      {
+        "distance_m": 375,
+        "probability": 0.7900907312781594,
+        "median_rx_dbm": -73.54611115098149
+      },
+      {
+        "distance_m": 400,
+        "probability": 0.7563536422549514,
+        "median_rx_dbm": -74.44303030618929
+      },
+      {
+        "distance_m": 425,
+        "probability": 0.722171807520321,
+        "median_rx_dbm": -75.28555634530446
+      },
+      {
+        "distance_m": 450,
+        "probability": 0.6879369856507159,
+        "median_rx_dbm": -76.07991102450548
+      },
+      {
+        "distance_m": 475,
+        "probability": 0.6539794794472331,
+        "median_rx_dbm": -76.83130609169021
+      },
+      {
+        "distance_m": 500,
+        "probability": 0.6205711436552154,
+        "median_rx_dbm": -77.54415072244709
+      },
+      {
+        "distance_m": 525,
+        "probability": 0.587930229822618,
+        "median_rx_dbm": -78.22220829268511
+      },
+      {
+        "distance_m": 550,
+        "probability": 0.5562271381194093,
+        "median_rx_dbm": -78.86871664751028
+      },
+      {
+        "distance_m": 575,
+        "probability": 0.5255904497814977,
+        "median_rx_dbm": -79.48648161376266
+      },
+      {
+        "distance_m": 600,
+        "probability": 0.4961128379449108,
+        "median_rx_dbm": -80.07795059597106
+      },
+      {
+        "distance_m": 625,
+        "probability": 0.4678566147062966,
+        "median_rx_dbm": -80.64527113870491
+      },
+      {
+        "distance_m": 650,
+        "probability": 0.44085878326843286,
+        "median_rx_dbm": -81.19033799626587
+      }
+    ],
+    "mcs15": [
+      {
+        "distance_m": 50,
+        "probability": 0.9537137533378854,
+        "median_rx_dbm": -51.544150722447085
+      },
+      {
+        "distance_m": 75,
+        "probability": 0.835867890076502,
+        "median_rx_dbm": -57.17907101222889
+      },
+      {
+        "distance_m": 100,
+        "probability": 0.6836254924572533,
+        "median_rx_dbm": -61.177110583694486
+      },
+      {
+        "distance_m": 125,
+        "probability": 0.535944251271582,
+        "median_rx_dbm": -64.27823099995229
+      },
+      {
+        "distance_m": 150,
+        "probability": 0.410404779013944,
+        "median_rx_dbm": -66.81203087347629
+      },
+      {
+        "distance_m": 175,
+        "probability": 0.3105503339029015,
+        "median_rx_dbm": -68.9543281416559
+      },
+      {
+        "distance_m": 200,
+        "probability": 0.23384006396955576,
+        "median_rx_dbm": -70.81007044494189
+      },
+      {
+        "distance_m": 225,
+        "probability": 0.17596069301497308,
+        "median_rx_dbm": -72.44695116325809
+      },
+      {
+        "distance_m": 250,
+        "probability": 0.13266128977795927,
+        "median_rx_dbm": -73.91119086119969
+      },
+      {
+        "distance_m": 275,
+        "probability": 0.10036586939730571,
+        "median_rx_dbm": -75.2357567862629
+      },
+      {
+        "distance_m": 300,
+        "probability": 0.07626902531971474,
+        "median_rx_dbm": -76.44499073472369
+      },
+      {
+        "distance_m": 325,
+        "probability": 0.05824568819271619,
+        "median_rx_dbm": -77.55737813501847
+      },
+      {
+        "distance_m": 350,
+        "probability": 0.04471510867364346,
+        "median_rx_dbm": -78.5872880029033
+      },
+      {
+        "distance_m": 375,
+        "probability": 0.03451190424915264,
+        "median_rx_dbm": -79.54611115098149
+      },
+      {
+        "distance_m": 400,
+        "probability": 0.02677996060140638,
+        "median_rx_dbm": -80.44303030618929
+      },
+      {
+        "distance_m": 425,
+        "probability": 0.02089051869530496,
+        "median_rx_dbm": -81.28555634530446
+      },
+      {
+        "distance_m": 450,
+        "probability": 0.016380959305279462,
+        "median_rx_dbm": -82.07991102450548
+      },
+      {
+        "distance_m": 475,
+        "probability": 0.012909838289902723,
+        "median_rx_dbm": -82.83130609169021
+      },
+      {
+        "distance_m": 500,
+        "probability": 0.010224148576863845,
+        "median_rx_dbm": -83.54415072244709
+      },
+      {
+        "distance_m": 525,
+        "probability": 0.008135574606356983,
+        "median_rx_dbm": -84.22220829268511
+      },
+      {
+        "distance_m": 550,
+        "probability": 0.006503280799047771,
+        "median_rx_dbm": -84.86871664751028
+      },
+      {
+        "distance_m": 575,
+        "probability": 0.005221419482575168,
+        "median_rx_dbm": -85.48648161376266
+      },
+      {
+        "distance_m": 600,
+        "probability": 0.004210040242539902,
+        "median_rx_dbm": -86.07795059597106
+      },
+      {
+        "distance_m": 625,
+        "probability": 0.003408451389143329,
+        "median_rx_dbm": -86.64527113870491
+      },
+      {
+        "distance_m": 650,
+        "probability": 0.0027703524412307787,
+        "median_rx_dbm": -87.19033799626587
+      }
+    ]
+  },
+  "solar": {
+    "load_w_assumed": 17.6,
+    "daily_wh": 422.40000000000003,
+    "psh_assumed": 4.5,
+    "pv_w_with_margin": 201.14285714285717,
+    "autonomy_days": 3,
+    "battery_lifepo4_ah_12v": 155.29411764705884,
+    "battery_lead_ah_12v": 248.47058823529414,
+    "controller_a_at_recommended_pv": 20.952380952380953,
+    "poe_constraint": "12 V bank requires regulated 24 V compatible passive PoE; router and auxiliaries excluded"
+  },
+  "uisp_runs": {
+    "captured": "2026-10-12",
+    "mode": "Guest, manual product selection, Noise Free, 6 m antennas, 20 MHz",
+    "H1": {
+      "distance_km": 8.31,
+      "frequency_mhz": 5000,
+      "tx_dbm": 26,
+      "gain_dbi": 25,
+      "expected_rx_dbm": -49,
+      "capacity_mbps": 84.5,
+      "device": "PowerBeam M5 400 pair"
+    },
+    "H2": {
+      "distance_km": 15.64,
+      "frequency_mhz": 5500,
+      "tx_dbm": 27,
+      "gain_dbi": 34,
+      "expected_rx_dbm": -36,
+      "capacity_mbps": 84.5,
+      "device": "Rocket M5 + RD-5G34 pair"
+    },
+    "note": "Vendor predictions use different frequency, terrain and loss assumptions; not acceptance measurements."
+  }
+}
