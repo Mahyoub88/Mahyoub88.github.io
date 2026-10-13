@@ -1134,10 +1134,10 @@
       "image": "/projects/proj-wireless-link-planning/media/atma-al-sharq-osm.webp",
       "imageAlt": "OpenStreetMap map of the route from Atma to the MTN tower site and on to Al-Sharq city",
       "imageCaption": "Route map · © OpenStreetMap contributors",
-      "coverImage": "/projects/proj-wireless-link-planning/media/atma-al-sharq-osm.webp",
-      "coverAlt": "OpenStreetMap map of the route from Atma to the MTN tower site and on to Al-Sharq city",
-      "coverCaption": "Project route map · © OpenStreetMap contributors",
-      "coverLightImage": "/projects/proj-wireless-link-planning/media/atma-al-sharq-osm.webp"
+      "coverImage": "/projects/proj-wireless-link-planning/media/wireless-cover-dark.webp",
+      "coverAlt": "Official PowerBeam product image with a schematic of the Atma–MTN–Al-Sharq wireless backhaul",
+      "coverCaption": "Engineering cover · Official Ubiquiti product imagery",
+      "coverLightImage": "/projects/proj-wireless-link-planning/media/wireless-cover-light.webp"
     },
     {
       "id": "proj-enterprise-network",
