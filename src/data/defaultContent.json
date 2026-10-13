@@ -1096,7 +1096,7 @@
       "group": "earlier",
       "category": "Network Engineering · RF Planning",
       "title": "Wireless Link Planning & RF Engineering",
-      "description": "Planned a two-hop wireless backhaul bringing internet from Atma to Al-Sharq in Dhamar through a mountain-top relay, with a seven-zone local distribution plan, VB.NET planning calculators and a terrain and link simulation.",
+      "description": "Two-hop wireless backhaul from Atma to Al-Sharq through a mountain relay, with seven-zone distribution, VB.NET engineering tools, authentic UISP simulation captures and a reviewed RF design.",
       "meta": [
         {
           "label": "Scope",
@@ -1134,10 +1134,10 @@
       "image": "/projects/proj-wireless-link-planning/media/atma-al-sharq-osm.webp",
       "imageAlt": "OpenStreetMap map of the route from Atma to the MTN tower site and on to Al-Sharq city",
       "imageCaption": "Route map · © OpenStreetMap contributors",
-      "coverImage": "/images/project-covers/collage-v1/proj-wireless-link-planning.webp",
-      "coverAlt": "Combined project illustration: wireless coverage planning, Fresnel and line of sight, and RF link budget",
-      "coverCaption": "AI-generated project cover illustration",
-      "coverLightImage": "/images/project-covers/collage-v1/proj-wireless-link-planning-light.webp"
+      "coverImage": "/projects/proj-wireless-link-planning/media/atma-al-sharq-osm.webp",
+      "coverAlt": "OpenStreetMap map of the route from Atma to the MTN tower site and on to Al-Sharq city",
+      "coverCaption": "Project route map · © OpenStreetMap contributors",
+      "coverLightImage": "/projects/proj-wireless-link-planning/media/atma-al-sharq-osm.webp"
     },
     {
       "id": "proj-enterprise-network",
