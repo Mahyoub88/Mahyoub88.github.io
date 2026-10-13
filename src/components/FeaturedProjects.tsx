@@ -44,7 +44,7 @@ export function FeaturedProjects() {
           </div>
         )}
         <nav aria-label="Related project collections" className="mt-10 flex flex-wrap gap-4 text-sm text-[var(--text-3)]">
-          <a id="proj-monitoring-apps" className="scroll-mt-24" href="/projects/proj-monitoring-apps/">Engineering software collection</a>
+          <a id="proj-monitoring-apps" className="scroll-mt-24" href="/projects/proj-engineering-operations/">Engineering operations suite</a>
           <a id="proj-rf-network" className="scroll-mt-24" href="/projects/proj-rf-network/">Network engineering collection</a>
         </nav>
       </Container>

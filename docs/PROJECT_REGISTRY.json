@@ -1,6 +1,6 @@
 {
   "source": "src/data/defaultContent.json",
-  "projectCount": 17,
+  "projectCount": 16,
   "projects": [
     {
       "id": "proj-its-support",
@@ -171,32 +171,18 @@
       "coverCaption": "AI-generated project cover illustration"
     },
     {
-      "id": "proj-monitoring-console",
-      "title": "Monitoring & Diagnostics Console — VB.NET",
-      "url": "https://mahyoub88.github.io/projects/proj-monitoring-console/",
+      "id": "proj-engineering-operations",
+      "title": "Engineering Operations Suite — Monitoring, Diagnostics & Service Management",
+      "url": "https://mahyoub88.github.io/projects/proj-engineering-operations/",
       "repository": "https://github.com/Mahyoub88/dotnet-monitoring-apps",
       "status": "Implemented Project",
-      "role": "The console presents device and system condition in one operational view. Its role is to support fault recognition, diagnosis and follow-up across multiple sites.",
+      "role": "Multi-site device monitoring, condition assessment and incident follow-up, alongside equipment records, repair history, warranty/calibration documentation and reports.",
       "image": "/projects/proj-monitoring-console/media/monitoring-console.jpg",
       "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/themed-v4/proj-monitoring-console.webp",
-      "coverLightImage": "/images/project-covers/engineering-v3/proj-monitoring-console.webp",
-      "coverAlt": "Engineering illustration of monitoring & diagnostics: sites, device health, alarms, event log",
-      "coverCaption": "AI-generated project cover illustration"
-    },
-    {
-      "id": "proj-service-operations",
-      "title": "Service Operations & Technical Documentation Management System",
-      "url": "https://mahyoub88.github.io/projects/proj-service-operations/",
-      "repository": "https://github.com/Mahyoub88/dotnet-monitoring-apps",
-      "status": "Implemented Project",
-      "role": "The source interface shows device records, repair details and warranty/calibration fields. These records connect the equipment identity with the work performed and the documents needed for follow-up.",
-      "image": "/projects/proj-service-operations/media/02-service-tool.jpg",
-      "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/themed-v4/proj-service-operations.webp",
-      "coverLightImage": "/images/project-covers/engineering-v3/proj-service-operations.webp",
-      "coverAlt": "Engineering illustration of service records & repairs: device records, repair workflow, documents, reports",
-      "coverCaption": "AI-generated project cover illustration"
+      "coverImage": "/projects/proj-engineering-operations/media/operations-cover-dark.webp",
+      "coverLightImage": "/projects/proj-engineering-operations/media/operations-cover-light.webp",
+      "coverAlt": "Engineering operations diagram connecting monitoring, diagnostics, service records and reports",
+      "coverCaption": "Illustrative engineering workflow"
     },
     {
       "id": "proj-wireless-link-planning",
@@ -242,13 +228,6 @@
     }
   ],
   "collections": [
-    {
-      "id": "proj-monitoring-apps",
-      "projectIds": [
-        "proj-monitoring-console",
-        "proj-service-operations"
-      ]
-    },
     {
       "id": "proj-rf-network",
       "projectIds": [
