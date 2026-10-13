@@ -207,10 +207,10 @@
       "role": "Atma to MTN tower site (8.5 km) and on to Al-Sharq city (16.5 km) on Ubiquiti equipment, then distribution in seven zones. Coverage and alignment, line-of-sight and Fresnel clearance, and link budget are checked together; simulated results are kept separate from field measurements.",
       "image": "/projects/proj-wireless-link-planning/media/atma-al-sharq-osm.webp",
       "imageCaption": "Route map · © OpenStreetMap contributors",
-      "coverImage": "/projects/proj-wireless-link-planning/media/atma-al-sharq-osm.webp",
-      "coverLightImage": "/projects/proj-wireless-link-planning/media/atma-al-sharq-osm.webp",
-      "coverAlt": "OpenStreetMap map of the route from Atma to the MTN tower site and on to Al-Sharq city",
-      "coverCaption": "Project route map · © OpenStreetMap contributors"
+      "coverImage": "/projects/proj-wireless-link-planning/media/wireless-cover-dark.webp",
+      "coverLightImage": "/projects/proj-wireless-link-planning/media/wireless-cover-light.webp",
+      "coverAlt": "Official PowerBeam product image with a schematic of the Atma–MTN–Al-Sharq wireless backhaul",
+      "coverCaption": "Engineering cover · Official Ubiquiti product imagery"
     },
     {
       "id": "proj-enterprise-network",

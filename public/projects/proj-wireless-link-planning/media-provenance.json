@@ -95,6 +95,30 @@
       "file": "media/vendor-powerbeam.webp",
       "origin": "Official Ubiquiti datasheet cover, product family, not site photograph",
       "sha256": "e47238e6709d9d4759b078dc487f092eba131ee828c02cb0b99773c9ad021dca"
+    },
+    {
+      "file": "media/wireless-cover-dark.svg",
+      "origin": "Designed engineering cover with official Ubiquiti PowerBeam M5 400 product imagery; route and Fresnel shapes are schematic",
+      "source": "https://techspecs.ui.com/uisp/wireless/pbe-m5-400",
+      "sha256": "1bdf3703dfb273c2c022534a06bd99b04cde8e8da2ced9cafa7942f33997d097"
+    },
+    {
+      "file": "media/wireless-cover-dark.webp",
+      "origin": "Designed engineering cover with official Ubiquiti PowerBeam M5 400 product imagery; route and Fresnel shapes are schematic",
+      "source": "https://techspecs.ui.com/uisp/wireless/pbe-m5-400",
+      "sha256": "796617d8fc4d6beb2cf29151885db66da252ff75c60a684d5b2b5df00353b0d3"
+    },
+    {
+      "file": "media/wireless-cover-light.svg",
+      "origin": "Designed engineering cover with official Ubiquiti PowerBeam M5 400 product imagery; route and Fresnel shapes are schematic",
+      "source": "https://techspecs.ui.com/uisp/wireless/pbe-m5-400",
+      "sha256": "7dc6fd08488da626774edf7f88648d4f102847b585ca63d686b0c79e7950a6ac"
+    },
+    {
+      "file": "media/wireless-cover-light.webp",
+      "origin": "Designed engineering cover with official Ubiquiti PowerBeam M5 400 product imagery; route and Fresnel shapes are schematic",
+      "source": "https://techspecs.ui.com/uisp/wireless/pbe-m5-400",
+      "sha256": "f5442dc2c06e54a9ccfd8e86960eaccd67cb81ee7320b764ca1d97ed00666088"
     }
   ]
 }
