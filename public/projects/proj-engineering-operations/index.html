@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Engineering Operations Suite — Monitoring, Diagnostics &amp; Service Management | Mohammed Mahyoub</title>
+<meta name="description" content="Developed VB.NET desktop applications for multi-site monitoring, fault diagnosis, device service records, repair tracking and technical reporting, presented in one engineering operations case study.">
+<link rel="canonical" href="https://mahyoub88.github.io/projects/proj-engineering-operations/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Engineering Operations Suite — Monitoring, Diagnostics &amp; Service Management">
+<meta property="og:description" content="Developed VB.NET desktop applications for multi-site monitoring, fault diagnosis, device service records, repair tracking and technical reporting, presented in one engineering operations case study.">
+<meta property="og:url" content="https://mahyoub88.github.io/projects/proj-engineering-operations/">
+<meta property="og:image" content="https://mahyoub88.github.io/projects/proj-engineering-operations/media/operations-cover-dark.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg">
+<link rel="stylesheet" href="/projects/case-study.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<nav aria-label="Portfolio navigation">
+<a href="/">← Engineering portfolio</a>
+<a href="/projects/">All case studies</a>
+</nav>
+</header>
+<main id="main">
+<p class="eyebrow">Desktop Software · Engineering Operations</p>
+<h1>Engineering Operations Suite — Monitoring, Diagnostics &amp; Service Management</h1>
+<p class="lede">Developed VB.NET desktop applications for multi-site monitoring, fault diagnosis, device service records, repair tracking and technical reporting, presented in one engineering operations case study.</p>
+<span class="badge">Implemented Project</span>
+<figure class="hero-media">
+<a href="/projects/proj-monitoring-console/media/monitoring-console.jpg">
+<img src="/projects/proj-monitoring-console/media/monitoring-console.jpg" alt="Original VB.NET monitoring and diagnostics interface" fetchpriority="high">
+</a>
+<figcaption>Source project media · Open image for full detail.</figcaption>
+</figure>
+<div class="tags">
+<span>VB.NET</span>
+<span>WinForms</span>
+<span>Monitoring</span>
+<span>Diagnostics</span>
+<span>Repair Tracking</span>
+<span>Technical Reporting</span>
+</div>
+<nav class="section-nav">
+<a href="#overview">Overview</a>
+<a href="#monitoring">Monitoring & diagnostics</a>
+<a href="#service">Service management</a>
+<a href="#workflow">Operational workflow</a>
+<a href="#gallery">Original interfaces</a>
+<a href="#sources">Sources</a>
+</nav>
+<section id="overview">
+<h2>One engineering story: device condition to service history</h2>
+<p>This project brings monitoring, diagnostics and service documentation together in one portfolio presentation. The monitoring application helps engineers identify and investigate device issues across sites; the service application records the equipment, intervention, repair and supporting documentation.</p>
+<div class="summary">
+<h3>My contribution</h3>
+<p>Developed VB.NET desktop applications and their operational interfaces for monitoring, issue follow-up, device records, repair tracking and reporting. The combined case study presents both areas as complementary modules of engineering operations.</p>
+</div>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Engineering purpose</th>
+<th>Documented functions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monitoring & diagnostics</td>
+<td>Understand equipment condition</td>
+<td>Site views, health evaluation, fault-test panels, events and issue tracking</td>
+</tr>
+<tr>
+<td>Service management</td>
+<td>Retain equipment and intervention history</td>
+<td>Device records, service calls, repair dates, corrective actions, warranty/calibration fields</td>
+</tr>
+<tr>
+<td>Documentation & reporting</td>
+<td>Make operational evidence retrievable</td>
+<td>Record search, technical documentation and customer-report fields</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="monitoring">
+<p class="eyebrow">01 · Monitoring & diagnostics</p>
+<h2>Making health state traceable to an observation</h2>
+<p>The original interface documents a VB.NET WinForms application for multi-site monitoring, diagnostics, issue tracking and reporting. The public release contains the interface preview and analysis, not recovered source code or a database export. Therefore the design discussion separates visible responsibilities from proposed internals.</p>
+<p>A health display needs device identity, observation time and observation meaning. The explanatory model distinguishes healthy, faulted, stale and unknown states. A missing observation should not silently become a healthy device, and a reachable endpoint does not establish application-level correctness. These state rules are proposed review criteria rather than a claim about the unrecovered implementation.</p>
+<p>Data acquisition, health evaluation, issue management and presentation are different responsibilities. Windows Forms binding explains how controls can present records, while input validation supports operator-entered fields. Neither reference establishes the original application’s polling mechanism, storage engine or threading model. RFC 5424 is used only for event-record concepts; syslog support is not asserted.</p>
+<p>An operator workflow should make the affected site/device, symptom and latest evidence visible before an issue is acknowledged or closed. Reports need to retain time range and filters so the same record can be understood later. Demonstrating this professionally would use a synthetic dataset clearly labelled as a UI demonstration, rather than invented production uptime.</p>
+<figure>
+<a href="/projects/proj-monitoring-console/media/engineering-review.svg">
+<img loading="lazy" src="/projects/proj-monitoring-console/media/engineering-review.svg" alt="Making health state traceable to an observation — explanatory engineering review">
+</a>
+<figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
+</figure>
+<h3>Review scenarios and expected evidence</h3>
+<p>These scenarios specify what evidence would support a review. They do not report additional completed tests.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Review area</th>
+<th scope="col">Method</th>
+<th scope="col">Evidence to inspect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Missing observation</td>
+<td>Stop an illustrative update stream</td>
+<td>Stale/unknown distinguished from healthy</td>
+</tr>
+<tr>
+<td>Device fault</td>
+<td>Supply a fault state in reference data</td>
+<td>Affected identity and symptom preserved</td>
+</tr>
+<tr>
+<td>Operator action</td>
+<td>Acknowledge then review an issue</td>
+<td>Action does not erase source observation</td>
+</tr>
+<tr>
+<td>Report filter</td>
+<td>Change site and time range</td>
+<td>Report states the applied context</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Technical references and provenance</h3>
+<p>Primary references support the engineering explanation, not claims about this project's undocumented configuration or results.</p>
+<ul>
+<li>
+<a href="https://learn.microsoft.com/en-us/dotnet/desktop/winforms/input-keyboard/validation">Microsoft — Windows Forms input validation</a>
+</li>
+<li>
+<a href="https://learn.microsoft.com/en-us/dotnet/desktop/winforms/data/overview">Microsoft — Windows Forms data binding</a>
+</li>
+<li>
+<a href="https://www.rfc-editor.org/rfc/rfc5424">Syslog message model — RFC 5424</a>
+</li>
+</ul>
+<p class="source-note">This is an interface-informed proposed design. No extra application screenshot, running demo or implemented backend feature is represented as recovered source evidence.</p>
+<h2>Reading the original interface</h2>
+<p>The source poster groups a main monitoring dashboard, site detail and rules analysis, a connection or fault-test panel, and an event / failure-tracking view. These areas support recognition, diagnosis and follow-up. The preview is low resolution: small labels, exact values and device protocols cannot reliably be recovered from it.</p>
+<h3>Proposed functional design</h3>
+<p>Collect observations through device-specific adapters on a background scheduler. Each observation records the check type, timestamp, result and data quality. A separate rule engine evaluates condition; the interface displays both condition and the time of the last successful observation.</p>
+<p>Use healthy, warning, critical, unknown and stale states. A failed network check is evidence of an unsuccessful check, not sufficient proof of a hardware failure. Expired data must stop appearing as a fresh healthy reading.</p>
+<h3>Records and operational flow</h3>
+<p>Suggested entities are Site, Device, ProbeResult, HealthRule, Event, Incident and IncidentAction. A device has many observations; several repeated events may belong to one incident. Record state transitions and aggregate repeat failures to avoid creating an incident on every polling cycle.</p>
+<h3>Verification scenarios</h3>
+<p>Exercise unavailable devices, slow responses, stale observations, database failure, recovery and shutdown during an active check. The interface should remain responsive and display uncertainty explicitly. No measured uptime or response-time benchmark is inferred from the screenshot.</p>
+</section>
+<section id="service">
+<p class="eyebrow">02 · Service management</p>
+<h2>Connecting a device to its complete service history</h2>
+<p>The source interface shows device records, repair information and warranty/calibration fields. Its purpose is service operations and technical documentation, which differs from monitoring live device health. The public evidence is an application preview; source code, storage schema and exported service reports have not been recovered.</p>
+<p>An explanatory data model separates a device from individual service jobs and their documents. A device may have several interventions, and a repair may have several observations and attachments. This prevents a proposed design from overwriting history whenever a new visit is recorded. The relationships explain the application’s purpose; they do not disclose its original database tables.</p>
+<p>A service workflow can progress through intake, diagnosis, repair, verification and closure, with responsibility and supporting records at each stage. A closed ticket and a calibrated device are different statements. Calibration needs its own procedure and result; a warranty date is administrative information and should not become evidence of technical acceptance.</p>
+<p>Microsoft’s validation and binding guidance supports form-field handling and display of records. Appropriate review scenarios include invalid dates, missing device identity, duplicate references, attachment handling and retrieval of past work. The example state sequence is proposed for documentation; specific controls, permissions and export formats remain unverified.</p>
+<figure>
+<a href="/projects/proj-service-operations/media/engineering-review.svg">
+<img loading="lazy" src="/projects/proj-service-operations/media/engineering-review.svg" alt="Connecting a device to its complete service history — explanatory engineering review">
+</a>
+<figcaption>New explanatory engineering review. Relationships and criteria explain the documented scope; this is not an as-built drawing or a test result.</figcaption>
+</figure>
+<h3>Review scenarios and expected evidence</h3>
+<p>These scenarios specify what evidence would support a review. They do not report additional completed tests.</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th scope="col">Review area</th>
+<th scope="col">Method</th>
+<th scope="col">Evidence to inspect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New service visit</td>
+<td>Associate a second job with one device</td>
+<td>Prior job remains retrievable</td>
+</tr>
+<tr>
+<td>Invalid date</td>
+<td>End date precedes intake date</td>
+<td>Validation explains the conflicting field</td>
+</tr>
+<tr>
+<td>Attachment reference</td>
+<td>Review a missing or replaced document</td>
+<td>Record shows its document status</td>
+</tr>
+<tr>
+<td>Closure</td>
+<td>Attempt closure without verification context</td>
+<td>Review rule distinguishes repair from acceptance</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Technical references and provenance</h3>
+<p>Primary references support the engineering explanation, not claims about this project's undocumented configuration or results.</p>
+<ul>
+<li>
+<a href="https://learn.microsoft.com/en-us/dotnet/desktop/winforms/input-keyboard/validation">Microsoft — Windows Forms input validation</a>
+</li>
+<li>
+<a href="https://learn.microsoft.com/en-us/dotnet/desktop/winforms/data/overview">Microsoft — Windows Forms data binding</a>
+</li>
+</ul>
+<p class="source-note">The workflow and relationships are a proposed reconstruction from the interface. They are not a recovered schema or a claim that every validation rule is implemented.</p>
+<h2>Reading the original interface</h2>
+<p>The screenshot shows device, article and serial identifiers; site and service-call details; receipt and repair dates; project, customer and region; warranty and calibration validity; return reasons; corrective-action summary; repair type and personnel; forwarding fields; status and a customer report. New, modify, save, delete and search controls sit above a record grid.</p>
+<p>The poster names VB.NET, WinForms, ADO.NET, Crystal Reports and SQL Server / Access. It does not establish which database engine the published application actually uses.</p>
+<h3>Proposed data design</h3>
+<p>Keep device identity separate from each service visit. Model Customer → Project → Site → Device; link each Device to many ServiceCase records. RepairAction, PartReplacement and Document belong to a case. Warranty and Calibration retain historical records rather than overwriting prior validity dates.</p>
+<h3>Integrity and workflow</h3>
+<p>Use unique case identifiers, controlled status transitions and date checks so a repair cannot precede receipt. Save a case and its related actions atomically. Use parameterized database operations, a change audit and conflict detection for concurrent edits. Archive records that have issued reports rather than silently removing their history.</p>
+<p>The workflow is receipt → fault documentation → diagnosis → repair → verification / calibration → reviewed report → delivery and closure. Failed verification returns to diagnosis. Internal engineering notes and the customer-facing report are separate records.</p>
+<h3>Interface and verification</h3>
+<p>A proposed layout uses search and the record list beside tabs for device identity, service visit, repairs / parts, warranty / calibration and documents. Verify multiple visits for one device, calibration renewal without loss of history, concurrent editing and failed attachment storage.</p>
+</section>
+<section id="workflow">
+<h2>From an observed issue to a documented repair</h2>
+<figure>
+<img src="media/operations-flow.svg" alt="Explanatory workflow from monitoring through diagnosis and repair to verification and reporting" loading="lazy" width="1280" height="720">
+<figcaption>Explanatory workflow for the unified case study; shared databases and automatic communication between the original applications are not established by the available evidence.</figcaption>
+</figure>
+<p>The proposed operational hand-off is observe → investigate → record a service case → diagnose and repair → verify → report and close. Preserve device identity, timestamps and source observations when connecting an incident to a service visit. Repair closure does not by itself prove calibration or restored live health.</p>
+<p>The two original interface previews document implemented applications. The public repository currently provides documentation and images; the shared data model, automated hand-off and review scenarios describe an integration design, rather than a recovered software integration or measured production result.</p>
+</section>
+<section id="gallery">
+<h2>Original application interfaces</h2>
+<p>Original source media remains available in full resolution. The combined cover is an illustrative workflow, separate from these application previews.</p>
+<div class="grid">
+<figure>
+<a href="/projects/proj-service-operations/media/02-service-tool.jpg">
+<img src="/projects/proj-service-operations/media/02-service-tool.jpg" alt="Original service application with device records and repair documentation" loading="lazy">
+</a>
+<figcaption>Service management · Original interface preview.</figcaption>
+</figure>
+</div>
+</section>
+<section id="sources">
+<h2>Source documentation</h2>
+<p>
+<a href="https://github.com/Mahyoub88/dotnet-monitoring-apps">Project repository — documentation and original media</a>
+</p>
+<p>
+<a href="/projects/engineering-applications-analysis/">Detailed interface analysis and proposed designs</a>
+</p>
+</section>
+<nav class="project-pagination" aria-label="More case studies">
+<a href="/projects/proj-plc-control/">← Industrial Automation &amp; PLC-Based Control Systems</a>
+<a href="/projects/proj-wireless-link-planning/">Wireless Link Planning &amp; RF Engineering →</a>
+</nav>
+</main>
+<footer>Mohammed Mahyoub · Source media, explanatory diagrams and recorded results are identified in their captions.</footer>
+</body>
+</html>

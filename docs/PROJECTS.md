@@ -14,17 +14,15 @@ Generated from `src/data/defaultContent.json` using `npm run sync:projects`. The
 10. [RFID Library Automation System (ISO 15693)](https://mahyoub88.github.io/projects/proj-rfid-study/) — [View repository](https://github.com/Mahyoub88/rfid-library-automation)
 11. [Solar Energy Systems — Design, Sizing & Deployment](https://mahyoub88.github.io/projects/proj-solar-study/) — [View repository](https://github.com/Mahyoub88/solar-energy-systems)
 12. [Industrial Automation & PLC-Based Control Systems](https://mahyoub88.github.io/projects/proj-plc-control/) — [View repository](https://github.com/Mahyoub88/industrial-automation-plc)
-13. [Monitoring & Diagnostics Console — VB.NET](https://mahyoub88.github.io/projects/proj-monitoring-console/) — [View repository](https://github.com/Mahyoub88/dotnet-monitoring-apps)
-14. [Service Operations & Technical Documentation Management System](https://mahyoub88.github.io/projects/proj-service-operations/) — [View repository](https://github.com/Mahyoub88/dotnet-monitoring-apps)
-15. [Wireless Link Planning & RF Engineering](https://mahyoub88.github.io/projects/proj-wireless-link-planning/) — [View repository](https://github.com/Mahyoub88/rf-mpls-network-design)
-16. [Enterprise Wireless & Network Infrastructure Architecture](https://mahyoub88.github.io/projects/proj-enterprise-network/) — [View repository](https://github.com/Mahyoub88/rf-mpls-network-design)
-17. [Network Infrastructure Design — MPLS Backbone](https://mahyoub88.github.io/projects/proj-mpls-backbone/) — [View repository](https://github.com/Mahyoub88/rf-mpls-network-design)
+13. [Engineering Operations Suite — Monitoring, Diagnostics & Service Management](https://mahyoub88.github.io/projects/proj-engineering-operations/) — [View repository](https://github.com/Mahyoub88/dotnet-monitoring-apps)
+14. [Wireless Link Planning & RF Engineering](https://mahyoub88.github.io/projects/proj-wireless-link-planning/) — [View repository](https://github.com/Mahyoub88/rf-mpls-network-design)
+15. [Enterprise Wireless & Network Infrastructure Architecture](https://mahyoub88.github.io/projects/proj-enterprise-network/) — [View repository](https://github.com/Mahyoub88/rf-mpls-network-design)
+16. [Network Infrastructure Design — MPLS Backbone](https://mahyoub88.github.io/projects/proj-mpls-backbone/) — [View repository](https://github.com/Mahyoub88/rf-mpls-network-design)
 
 ## Collections
 
 Collections group existing projects and are not counted as additional implementations.
 
-- [Engineering Software — Independent Applications](https://mahyoub88.github.io/projects/proj-monitoring-apps/)
 - [Network Engineering — Independent Implementations](https://mahyoub88.github.io/projects/proj-rf-network/)
 
 ## Technical study notes

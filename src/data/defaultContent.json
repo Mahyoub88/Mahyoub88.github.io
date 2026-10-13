@@ -1006,23 +1006,32 @@
       "coverLightImage": "/images/project-covers/engineering-v3/proj-plc-control.webp"
     },
     {
-      "id": "proj-monitoring-console",
+      "id": "proj-engineering-operations",
       "group": "earlier",
-      "category": "Desktop Software · Operational Diagnostics",
-      "title": "Monitoring & Diagnostics Console — VB.NET",
-      "description": "Built a WinForms dashboard for multi-site system monitoring, real-time diagnostics, automated health evaluation, issue tracking and technical reporting.",
+      "category": "Desktop Software · Engineering Operations",
+      "title": "Engineering Operations Suite — Monitoring, Diagnostics & Service Management",
+      "description": "Developed VB.NET desktop applications for multi-site monitoring, fault diagnosis, device service records, repair tracking and technical reporting, presented in one engineering operations case study.",
       "meta": [
         {
           "label": "Scope",
-          "value": "The console presents device and system condition in one operational view. Its role is to support fault recognition, diagnosis and follow-up across multiple sites."
+          "value": "Multi-site device monitoring, condition assessment and incident follow-up, alongside equipment records, repair history, warranty/calibration documentation and reports."
+        },
+        {
+          "label": "Modules",
+          "value": "Monitoring & Diagnostics · Service Records & Repairs · Technical Documentation & Reporting"
+        },
+        {
+          "label": "Engineering",
+          "value": "Developed the desktop interfaces and operational workflows; unified case study preserves the source evidence for both applications."
         }
       ],
       "tags": [
         "VB.NET",
         "WinForms",
-        "Diagnostics",
         "Monitoring",
-        "Reporting"
+        "Diagnostics",
+        "Repair Tracking",
+        "Technical Reporting"
       ],
       "status": {
         "kind": "professional",
@@ -1032,7 +1041,7 @@
       "links": [
         {
           "label": "Read case study",
-          "href": "/projects/proj-monitoring-console/"
+          "href": "/projects/proj-engineering-operations/"
         },
         {
           "label": "View repository",
@@ -1041,55 +1050,12 @@
       ],
       "accent": "blue",
       "image": "/projects/proj-monitoring-console/media/monitoring-console.jpg",
-      "imageAlt": "Monitoring console — original interface preview",
+      "imageAlt": "Original VB.NET monitoring and diagnostics interface",
       "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/themed-v4/proj-monitoring-console.webp",
-      "coverAlt": "Engineering illustration of monitoring & diagnostics: sites, device health, alarms, event log",
-      "coverCaption": "AI-generated project cover illustration",
-      "coverLightImage": "/images/project-covers/engineering-v3/proj-monitoring-console.webp"
-    },
-    {
-      "id": "proj-service-operations",
-      "group": "earlier",
-      "category": "Desktop Software · Service Operations",
-      "title": "Service Operations & Technical Documentation Management System",
-      "description": "Developed a desktop application for device records, repair tracking, service documentation and operational reporting.",
-      "meta": [
-        {
-          "label": "Scope",
-          "value": "The source interface shows device records, repair details and warranty/calibration fields. These records connect the equipment identity with the work performed and the documents needed for follow-up."
-        }
-      ],
-      "tags": [
-        "VB.NET",
-        "WinForms",
-        "Service Records",
-        "Repair Tracking",
-        "Reporting"
-      ],
-      "status": {
-        "kind": "professional",
-        "label": "Implemented Project"
-      },
-      "link": "",
-      "links": [
-        {
-          "label": "Read case study",
-          "href": "/projects/proj-service-operations/"
-        },
-        {
-          "label": "View repository",
-          "href": "https://github.com/Mahyoub88/dotnet-monitoring-apps"
-        }
-      ],
-      "accent": "blue",
-      "image": "/projects/proj-service-operations/media/02-service-tool.jpg",
-      "imageAlt": "Service application — device records and repair documentation",
-      "imageCaption": "Source project media",
-      "coverImage": "/images/project-covers/themed-v4/proj-service-operations.webp",
-      "coverAlt": "Engineering illustration of service records & repairs: device records, repair workflow, documents, reports",
-      "coverCaption": "AI-generated project cover illustration",
-      "coverLightImage": "/images/project-covers/engineering-v3/proj-service-operations.webp"
+      "coverImage": "/projects/proj-engineering-operations/media/operations-cover-dark.webp",
+      "coverAlt": "Engineering operations diagram connecting monitoring, diagnostics, service records and reports",
+      "coverCaption": "Illustrative engineering workflow",
+      "coverLightImage": "/projects/proj-engineering-operations/media/operations-cover-light.webp"
     },
     {
       "id": "proj-wireless-link-planning",

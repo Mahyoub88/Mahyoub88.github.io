@@ -189,7 +189,7 @@ The RF calculator does not need a database to calculate a single scenario. Persi
 
 ## 6. Documentation and presentation improvements
 
-1. Keep the collection as an entry point and maintain a distinct detailed page for each application.
+1. Present monitoring and service management in the unified Engineering Operations Suite case study, with distinct module sections and original evidence.
 2. Present readable interface captures beside dense source posters. Identify low-resolution limitations.
 3. Caption every image with its purpose and evidentiary scope.
 4. Provide responsibilities, data relationships, workflows and verification scenarios instead of generic three-box diagrams alone.
@@ -203,7 +203,7 @@ The image analysis, proposed architecture and data models, workflow diagrams and
 
 ## Source pages
 
-- [Application collection](https://mahyoub88.github.io/projects/proj-monitoring-apps/)
+- [Engineering Operations Suite](https://mahyoub88.github.io/projects/proj-engineering-operations/)
 - [Monitoring console](https://mahyoub88.github.io/projects/proj-monitoring-console/)
 - [Service operations](https://mahyoub88.github.io/projects/proj-service-operations/)
 - [RF link budget](https://mahyoub88.github.io/projects/proj-wireless-link-planning/#link-budget)
