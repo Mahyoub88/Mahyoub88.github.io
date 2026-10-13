@@ -179,10 +179,10 @@
       "role": "Multi-site device monitoring, condition assessment and incident follow-up, alongside equipment records, repair history, warranty/calibration documentation and reports.",
       "image": "/projects/proj-monitoring-console/media/monitoring-console.jpg",
       "imageCaption": "Source project media",
-      "coverImage": "/projects/proj-engineering-operations/media/operations-cover-dark.webp",
-      "coverLightImage": "/projects/proj-engineering-operations/media/operations-cover-light.webp",
-      "coverAlt": "Engineering operations diagram connecting monitoring, diagnostics, service records and reports",
-      "coverCaption": "Illustrative engineering workflow"
+      "coverImage": "/projects/proj-engineering-operations/media/operations-unified-v2.webp",
+      "coverLightImage": "/projects/proj-engineering-operations/media/operations-unified-v2.webp",
+      "coverAlt": "Unified engineering illustration of industrial monitoring, device health, electronic repair workflow and technical reports",
+      "coverCaption": "AI-generated project cover illustration"
     },
     {
       "id": "proj-wireless-link-planning",
