@@ -1,7 +1,7 @@
 {
   "brand": {
     "name": "Mohammed Mahyoub",
-    "title": "ITS & Systems Integration Engineer",
+    "title": "Senior ITS & Systems Integration Engineer",
     "logoInitial": "M"
   },
   "nav": [
@@ -1010,7 +1010,7 @@
       "group": "earlier",
       "category": "Desktop Software · Engineering Operations",
       "title": "Engineering Operations Suite — Monitoring, Diagnostics & Service Management",
-      "description": "Developed VB.NET desktop applications for multi-site monitoring, fault diagnosis, device service records, repair tracking and technical reporting, presented in one engineering operations case study.",
+      "description": "Two independently implemented VB.NET applications for monitoring, diagnostics and service management, presented together. Shared-data integration and automated hand-off are proposed designs.",
       "meta": [
         {
           "label": "Scope",
@@ -1035,7 +1035,7 @@
       ],
       "status": {
         "kind": "professional",
-        "label": "Implemented Project"
+        "label": "Implemented applications · Proposed integration"
       },
       "link": "",
       "links": [
@@ -1062,7 +1062,7 @@
       "group": "earlier",
       "category": "Network Engineering · RF Planning",
       "title": "Wireless Link Planning & RF Engineering",
-      "description": "Two-hop wireless backhaul from Atma to Al-Sharq through a mountain relay, with seven-zone distribution, VB.NET engineering tools, authentic UISP simulation captures and a reviewed RF design.",
+      "description": "Historical Atma–Al-Sharq two-hop wireless backhaul with seven-zone distribution and VB.NET engineering tools. The RF calculations shown are a subsequent review, not commissioning measurements.",
       "meta": [
         {
           "label": "Scope",
@@ -1079,7 +1079,7 @@
       ],
       "status": {
         "kind": "professional",
-        "label": "Implemented Project"
+        "label": "Historical implementation · Subsequent RF review"
       },
       "link": "",
       "links": [
