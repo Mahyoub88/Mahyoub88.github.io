@@ -210,14 +210,14 @@
   "experience": [
     {
       "id": "exp-1",
-      "role": "Senior Service Engineer — Smart Infrastructure & ITS Systems",
-      "company": "VITRONIC Machine Vision",
+      "role": "Service Engineer / Senior Service Engineer — Smart Infrastructure & ITS Systems",
+      "company": "VITRONIC Machine Vision Middle East LLC",
       "period": "October 2019 — Present",
       "location": "United Arab Emirates",
       "employmentType": "",
-      "description": "Over 7 years at VITRONIC Machine Vision, deploying, integrating, commissioning, and supporting intelligent traffic enforcement and ITS solutions across mission-critical operational environments in the UAE.",
+      "description": "Joined VITRONIC in October 2019; promoted to Senior Service Engineer in December 2024. Over 7 years deploying, integrating, commissioning, and supporting intelligent traffic enforcement and ITS solutions across operational environments in the UAE.",
       "bullets": [
-        "Support an installed base of 800+ intelligent transportation and traffic enforcement systems across the UAE.",
+        "Support intelligent transportation and traffic enforcement systems across the UAE.",
         "Integrate cameras, LiDAR, sensors, control units, networks, databases, and backend platforms into reliable end-to-end systems.",
         "Perform FAT, SAT, commissioning, calibration, interface validation, acceptance testing, and performance verification.",
         "Diagnose complex faults across hardware, software, communication, database, and system-interface layers using structured root-cause analysis.",
@@ -295,7 +295,7 @@
         },
         {
           "label": "Scale",
-          "value": "800+ intelligent transportation and traffic enforcement systems supported across the UAE."
+          "value": "Intelligent transportation and traffic enforcement systems supported across the UAE."
         },
         {
           "label": "Role",
@@ -1342,7 +1342,7 @@
       "id": "edu-msc",
       "degree": "MSc Artificial Intelligence — In Progress",
       "institution": "University of the West of England, UWE Bristol",
-      "period": "2026 – Expected 2028",
+      "period": "June 2026 – Expected May 2028",
       "status": "In Progress",
       "description": "Focused on machine learning, neural networks, computer vision, data quality, model evaluation, computational efficiency, and the application of AI to intelligent transportation and smart mobility.",
       "highlights": [
@@ -1355,9 +1355,9 @@
     },
     {
       "id": "edu-beng",
-      "degree": "BEng Electrical Engineering — Communications & Electronics",
+      "degree": "Bachelor’s Degree in Electrical Engineering — Communications & Electronics",
       "institution": "Sana'a University, Yemen",
-      "period": "2012 – 2017",
+      "period": "Graduated 2017",
       "status": "Completed",
       "description": "Engineering foundation in electronics, communications, networking, control systems, signal processing, and embedded technologies.",
       "highlights": [],
