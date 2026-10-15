@@ -80,6 +80,18 @@ export function ExperienceSection({
             <Field label="Tags">
               <TagsInput value={item.tags} onChange={(tags) => update({ tags })} />
             </Field>
+            <fieldset className="space-y-2">
+              <legend className="text-sm font-medium">Related projects</legend>
+              {content.projects.map((project) => (
+                <label key={project.id} className="flex items-center gap-2 text-sm">
+                  <input type="checkbox" checked={(item.projectIds ?? []).includes(project.id)}
+                    onChange={(event) => update({ projectIds: event.target.checked
+                      ? [...(item.projectIds ?? []), project.id]
+                      : (item.projectIds ?? []).filter((id) => id !== project.id) })} />
+                  {project.title}
+                </label>
+              ))}
+            </fieldset>
           </div>
         )}
       />

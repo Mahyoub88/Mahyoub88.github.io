@@ -124,6 +124,7 @@ export interface ExperienceItem {
   /** Shown as a chip beside the period, e.g. "Part-time / Project-based". */
   employmentType?: string
   bullets?: string[]
+  projectIds?: string[]
 }
 
 export interface ArticleItem {
