@@ -76,6 +76,24 @@ export function Experience() {
                     ))}
                   </div>
                 )}
+                {(item.projectIds ?? []).some((id) => content.projects.some((project) => project.id === id)) && (
+                  <div className="mt-5">
+                    <p className="text-xs font-semibold text-[var(--text-3)]">RELATED PROJECTS</p>
+                    <ul className="mt-2 space-y-2">
+                      {(item.projectIds ?? []).map((id) => {
+                        const project = content.projects.find((entry) => entry.id === id)
+                        if (!project) return null
+                        return (
+                          <li key={id}>
+                            <a className="text-sm text-brand-blue-400 underline underline-offset-4 hover:text-[var(--text-1)]" href={`/projects/${project.id}/`}>
+                              {project.title}
+                            </a>
+                          </li>
+                        )
+                      })}
+                    </ul>
+                  </div>
+                )}
               </li>
             ))}
           </ol>
