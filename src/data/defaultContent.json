@@ -215,10 +215,10 @@
       "period": "October 2019 — Present",
       "location": "United Arab Emirates",
       "employmentType": "",
-      "description": "Joined as Service Engineer in October 2019; promoted to Senior Service Engineer in December 2024. Integrate, commission and support intelligent transportation and traffic-enforcement systems across the UAE.",
+      "description": "Joined as Service Engineer in October 2019; promoted to Senior Service Engineer in December 2024. Integrate, commission and support intelligent transportation and traffic-enforcement systems, with service assignments in the UAE (including Abu Dhabi and Dubai), Saudi Arabia, Oman, Rwanda, Erbil in Iraq, and Kenya.",
       "projectIds": ["proj-its-support"],
       "bullets": [
-        "Support intelligent transportation and traffic enforcement systems across the UAE.",
+        "Supported 800+ intelligent transportation and traffic enforcement systems across the UAE.",
         "Integrate cameras, LiDAR, sensors, control units, networks, databases, and backend platforms into reliable end-to-end systems.",
         "Perform FAT, SAT, commissioning, calibration, interface validation, acceptance testing, and performance verification.",
         "Diagnose complex faults across hardware, software, communication, database, and system-interface layers using structured root-cause analysis.",
@@ -298,7 +298,11 @@
         },
         {
           "label": "Scale",
-          "value": "Intelligent transportation and traffic enforcement systems supported across the UAE."
+          "value": "800+ intelligent transportation and traffic enforcement systems supported across the UAE."
+        },
+        {
+          "label": "International service",
+          "value": "VITRONIC service assignments in the UAE (including Abu Dhabi and Dubai), Saudi Arabia, Oman, Rwanda, Erbil in Iraq, and Kenya."
         },
         {
           "label": "Role",
