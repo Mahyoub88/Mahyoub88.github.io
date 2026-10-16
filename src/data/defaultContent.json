@@ -167,10 +167,11 @@
       "detail": "Including 7+ years at VITRONIC Machine Vision"
     },
     {
-      "id": "stat-3",
-      "icon": "brain",
-      "value": "MSc AI",
-      "label": "Currently in Progress"
+      "id": "stat-systems-supported",
+      "icon": "network",
+      "value": "800+",
+      "label": "ITS & Traffic Enforcement Systems Supported",
+      "detail": "Across the UAE"
     },
     {
       "id": "stat-international-service",
