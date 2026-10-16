@@ -213,9 +213,21 @@
       "role": "Service Engineer / Senior Service Engineer — Smart Infrastructure & ITS Systems",
       "company": "VITRONIC Machine Vision Middle East LLC",
       "period": "October 2019 — Present",
+      "roles": [
+        {
+          "title": "Senior Service Engineer — Smart Infrastructure & ITS Systems",
+          "period": "December 2024 — Present",
+          "description": "Promoted in December 2024. Systems integration, commissioning, complex fault diagnosis and operational support for ITS and traffic-enforcement systems."
+        },
+        {
+          "title": "Service Engineer — Smart Infrastructure & ITS Systems",
+          "period": "October 2019 — November 2024",
+          "description": "Installation, integration, calibration, testing, preventive maintenance and technical support across field equipment, networks and backend interfaces."
+        }
+      ],
       "location": "United Arab Emirates",
       "employmentType": "",
-      "description": "Joined as Service Engineer in October 2019; promoted to Senior Service Engineer in December 2024. Integrate, commission and support intelligent transportation and traffic-enforcement systems, with service assignments in the UAE (including Abu Dhabi and Dubai), Saudi Arabia, Oman, Rwanda, Erbil in Iraq, and Kenya.",
+      "description": "Across my service with VITRONIC, service assignments have covered the UAE (including Abu Dhabi and Dubai), Saudi Arabia, Oman, Rwanda, Erbil in Iraq, and Kenya. The responsibilities and system support scale below summarise the full period with the company.",
       "projectIds": ["proj-its-support"],
       "bullets": [
         "Supported 800+ intelligent transportation and traffic enforcement systems across the UAE.",
