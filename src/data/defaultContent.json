@@ -226,7 +226,7 @@
         {
           "title": "Senior Service Engineer — Smart Infrastructure & ITS Systems",
           "period": "December 2024 — Present",
-          "description": "Promoted in December 2024. Systems integration, commissioning, complex fault diagnosis and operational support for ITS and traffic-enforcement systems."
+          "description": "Systems integration, commissioning, complex fault diagnosis and operational support for ITS and traffic-enforcement systems."
         },
         {
           "title": "Service Engineer — Smart Infrastructure & ITS Systems",
@@ -241,7 +241,7 @@
         "proj-its-support"
       ],
       "bullets": [
-        "Supported 800+ intelligent transportation and traffic enforcement systems across the UAE.",
+        "Support 800+ intelligent transportation and traffic enforcement systems across the UAE.",
         "Integrate cameras, LiDAR, sensors, control units, networks, databases, and backend platforms into reliable end-to-end systems.",
         "Perform FAT, SAT, commissioning, calibration, interface validation, acceptance testing, and performance verification.",
         "Diagnose complex faults across hardware, software, communication, database, and system-interface layers using structured root-cause analysis.",
