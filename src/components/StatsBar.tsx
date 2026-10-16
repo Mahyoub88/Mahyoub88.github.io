@@ -15,7 +15,7 @@ export function StatsBar() {
   return (
     <section className="relative -mt-6 pb-4 lg:-mt-10">
       <Container>
-        <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-[var(--border-1)] bg-[var(--border-1)] shadow-[var(--shadow-card)] sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-[var(--border-1)] bg-[var(--border-1)] shadow-[var(--shadow-card)] sm:grid-cols-2 lg:grid-cols-4">
           {content.stats.map((stat, i) => {
             const Icon = getIcon(stat.icon)
             return (
@@ -41,6 +41,9 @@ export function StatsBar() {
                   >
                     {stat.label}
                   </p>
+                  {stat.detail && (
+                    <p className="mt-1 text-xs leading-relaxed text-[var(--text-3)]">{stat.detail}</p>
+                  )}
                 </div>
               </div>
             )

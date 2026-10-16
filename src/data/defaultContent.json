@@ -176,6 +176,13 @@
       "icon": "brain",
       "value": "MSc AI",
       "label": "Currently in Progress"
+    },
+    {
+      "id": "stat-international-service",
+      "icon": "globe",
+      "value": "6 Countries",
+      "label": "International Service Assignments",
+      "detail": "UAE · Saudi Arabia · Oman · Rwanda · Iraq (Erbil) · Kenya"
     }
   ],
   "about": {

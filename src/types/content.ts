@@ -28,6 +28,7 @@ export interface Stat {
   icon: string
   value: string
   label: string
+  detail?: string
 }
 
 export type ProjectAccent = 'blue' | 'purple' | 'amber'

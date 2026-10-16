@@ -17,7 +17,7 @@ export function StatsSection({
         items={content.stats}
         itemLabel="Highlight"
         onChange={(stats) => onChange({ stats })}
-        makeItem={() => ({ id: `stat-${Date.now()}`, icon: 'trophy', value: '', label: 'New Highlight' })}
+        makeItem={() => ({ id: `stat-${Date.now()}`, icon: 'trophy', value: '', label: 'New Highlight', detail: '' })}
         renderItem={(item, update) => (
           <div className="grid grid-cols-4 gap-3">
             <Field label="Icon">
@@ -35,6 +35,11 @@ export function StatsSection({
             <div className="col-span-2">
               <Field label="Label">
                 <TextInput value={item.label} onChange={(e) => update({ label: e.target.value })} />
+              </Field>
+            </div>
+            <div className="col-span-4">
+              <Field label="Detail" hint="Optional">
+                <TextInput value={item.detail ?? ''} onChange={(e) => update({ detail: e.target.value })} />
               </Field>
             </div>
           </div>
