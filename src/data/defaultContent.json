@@ -235,7 +235,9 @@
       "location": "United Arab Emirates",
       "employmentType": "",
       "description": "Across my service with VITRONIC, service assignments have covered the UAE (including Abu Dhabi and Dubai), Saudi Arabia, Oman, Rwanda, Erbil in Iraq, and Kenya. The responsibilities and system support scale below summarise the full period with the company.",
-      "projectIds": ["proj-its-support"],
+      "projectIds": [
+        "proj-its-support"
+      ],
       "bullets": [
         "Supported 800+ intelligent transportation and traffic enforcement systems across the UAE.",
         "Integrate cameras, LiDAR, sensors, control units, networks, databases, and backend platforms into reliable end-to-end systems.",
@@ -259,7 +261,10 @@
       "period": "June 2015 — August 2019",
       "location": "Yemen",
       "employmentType": "Full-time",
-      "projectIds": ["proj-engineering-operations", "proj-embedded-iot"],
+      "projectIds": [
+        "proj-engineering-operations",
+        "proj-embedded-iot"
+      ],
       "description": "Designed, assembled, tested, and supported electronics, embedded control, automation, and desktop software solutions.",
       "bullets": [
         "Developed monitoring and automation applications using PIC, AVR, and Arduino microcontrollers.",
@@ -282,7 +287,12 @@
       "period": "March 2012 — May 2015",
       "location": "",
       "employmentType": "Self-employed / Project-based",
-      "projectIds": ["proj-wireless-link-planning", "proj-enterprise-network", "proj-mpls-backbone", "proj-solar-study"],
+      "projectIds": [
+        "proj-wireless-link-planning",
+        "proj-enterprise-network",
+        "proj-mpls-backbone",
+        "proj-solar-study"
+      ],
       "description": "Delivered independent engineering projects in network infrastructure, wireless connectivity and photovoltaic power systems before joining Electronic Science Company in June 2015.",
       "bullets": [
         "Designed and supported wired and wireless network infrastructure using Cisco, MikroTik, and Ubiquiti technologies.",
@@ -1444,5 +1454,82 @@
   "footerLinks": {
     "resumeUrl": "/Mohammed_Mahyoub_CV_1.pdf",
     "orcidUrl": "https://orcid.org/0009-0003-5640-352X"
+  },
+  "siteSettings": {
+    "seo": {
+      "title": "Mohammed Mahyoub | Senior ITS & Systems Integration Engineer",
+      "description": "Senior ITS and Systems Integration Engineer with 14 years of engineering experience, including over 7 years at VITRONIC Machine Vision, specializing in traffic enforcement, smart infrastructure, LiDAR and applied AI.",
+      "socialTitle": "Mohammed Mahyoub — Senior ITS & Systems Integration Engineer",
+      "socialDescription": "14 years of engineering experience, including over 7 years at VITRONIC Machine Vision. Engineering reliable traffic systems and applying computer vision to smarter mobility.",
+      "socialImage": "/social-preview.jpg",
+      "canonicalUrl": "https://mahyoub88.github.io/",
+      "language": "en",
+      "locale": "en_US",
+      "favicon": "/favicon.svg",
+      "indexing": true
+    },
+    "appearance": {
+      "defaultTheme": "dark",
+      "fontFamily": "'Inter', ui-sans-serif, system-ui, sans-serif",
+      "accentBlue": "#5b9dff",
+      "accentPurple": "#c084fc",
+      "lightBackground": "#f5f7fb",
+      "darkBackground": "#05070d",
+      "lightSurface": "#ffffff",
+      "darkSurface": "#0a0e18",
+      "statsColumns": 4
+    },
+    "sections": [
+      {
+        "id": "hero",
+        "visible": true
+      },
+      {
+        "id": "stats",
+        "visible": true
+      },
+      {
+        "id": "about",
+        "visible": true
+      },
+      {
+        "id": "experience",
+        "visible": true
+      },
+      {
+        "id": "projects",
+        "visible": true
+      },
+      {
+        "id": "articles",
+        "visible": true
+      },
+      {
+        "id": "skills",
+        "visible": true
+      },
+      {
+        "id": "education",
+        "visible": true
+      },
+      {
+        "id": "certifications",
+        "visible": true
+      },
+      {
+        "id": "contact",
+        "visible": true
+      }
+    ],
+    "labels": {
+      "articlesTitle": "",
+      "articlesSubtitle": "",
+      "skillsTitle": "",
+      "skillsSubtitle": "",
+      "educationTitle": "",
+      "certificationsTitle": "",
+      "experienceTitle": "",
+      "footerText": ""
+    }
   }
 }

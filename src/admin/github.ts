@@ -5,6 +5,8 @@
 // finishes, so it exists in plaintext only for the life of the call.
 
 import type { GitHubTarget } from './vault'
+import { validateContent } from './validateContent'
+import { decodeText } from './repository'
 
 function utf8ToBase64(str: string): string {
   const bytes = new TextEncoder().encode(str)
@@ -34,17 +36,17 @@ export async function publishContentToGitHub(
   target: GitHubTarget,
   token: string,
   json: string,
-): Promise<{ commit?: { html_url?: string } }> {
+  expectedJson?: string,
+): Promise<{ commit?: { html_url?: string; sha?: string } }> {
+  const problems = validateContent(JSON.parse(json))
+  if (problems.length) throw new Error(problems.join('\n'))
   const { owner, repo, branch, path } = target
   const base = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`
 
   let sha: string | undefined
-  try {
-    const existing = await githubRequest(`${base}?ref=${encodeURIComponent(branch)}`, token)
-    sha = existing.sha
-  } catch {
-    sha = undefined
-  }
+  const existing = await githubRequest(`${base}?ref=${encodeURIComponent(branch)}`, token)
+  sha = existing.sha
+  if (expectedJson && JSON.stringify(JSON.parse(decodeText(existing.content))) !== JSON.stringify(JSON.parse(expectedJson))) throw new Error('Published content has changed since this page loaded. Export your draft, reload, and reconcile the latest content before publishing.')
 
   return (await githubRequest(base, token, {
     method: 'PUT',
@@ -54,5 +56,5 @@ export async function publishContentToGitHub(
       branch,
       ...(sha ? { sha } : {}),
     }),
-  })) as { commit?: { html_url?: string } }
+  })) as { commit?: { html_url?: string; sha?: string } }
 }

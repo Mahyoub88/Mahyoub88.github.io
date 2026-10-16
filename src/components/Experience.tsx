@@ -13,9 +13,9 @@ export function Experience() {
         <div className="grid gap-8 lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] lg:gap-20">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <p className="text-xs font-semibold tracking-wider text-brand-blue-400">EXPERIENCE</p>
-            <h2 className="mt-2 text-3xl font-extrabold leading-tight text-[var(--text-1)]">
+            <h2 className="mt-2 text-3xl font-extrabold leading-tight text-[var(--text-1)]">{content.siteSettings?.labels.experienceTitle || <>
               Professional Experience
-            </h2>
+            </>}</h2>
           </div>
 
           <ol className="space-y-12 border-l border-[var(--border-1)] pl-8">

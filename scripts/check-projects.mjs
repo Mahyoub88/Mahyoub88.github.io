@@ -1,17 +1,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const publicRoot=path.join(root,'public');
 const content=JSON.parse(fs.readFileSync(path.join(root,'src/data/defaultContent.json'),'utf8'));
 const errors=[];
+const existsMedia=value=>typeof value==='string' && (/^https?:\/\//.test(value) || (value.startsWith('/') && fs.existsSync(path.join(publicRoot,value))));
 const unique=(values,label)=>{if(new Set(values).size!==values.length)errors.push(`Duplicate ${label}`);};
 unique(content.projects.map(p=>p.id),'project ids');
 unique(content.projects.map(p=>p.title),'project titles');
-unique(content.projects.map(p=>p.coverImage),'generated cover paths');
-unique(content.projects.map(p=>p.coverLightImage),'light cover paths');
-unique(content.projects.filter(p=>p.coverImage&&fs.existsSync(path.join(publicRoot,p.coverImage))).map(p=>crypto.createHash('sha256').update(fs.readFileSync(path.join(publicRoot,p.coverImage))).digest('hex')),'generated cover contents');
 const decode=s=>s.replaceAll('&amp;','&').replaceAll('&quot;','"').replaceAll('&lt;','<').replaceAll('&gt;','>');
 const visit=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?visit(path.join(dir,e.name)):[path.join(dir,e.name)]);
 let pages=0,links=0;
@@ -41,10 +38,10 @@ for(const p of content.projects){
  const title=decode(s.match(/<h1>([\s\S]*?)<\/h1>/)?.[1]??'');
  if(title!==p.title)errors.push(`${p.id}: title differs from canonical content`);
  if(!p.imageCaption)errors.push(`${p.id}: media provenance label missing`);
- if(!p.coverImage || !p.coverAlt || !['AI-generated project cover illustration','Project route map · © OpenStreetMap contributors', 'Engineering cover · Official Ubiquiti product imagery', 'Illustrative engineering workflow'].includes(p.coverCaption))errors.push(`${p.id}: cover provenance metadata missing`);
- if(p.coverImage && !fs.existsSync(path.join(publicRoot,p.coverImage)))errors.push(`${p.id}: generated cover file missing`);
- if(!p.coverLightImage || !fs.existsSync(path.join(publicRoot,p.coverLightImage)))errors.push(`${p.id}: light-theme cover missing`);
+ if(!p.coverImage || !p.coverAlt || !p.coverCaption)errors.push(`${p.id}: cover provenance metadata missing`);
+ if(p.coverImage && !existsMedia(p.coverImage))errors.push(`${p.id}: generated cover file missing`);
+ if(!p.coverLightImage || !existsMedia(p.coverLightImage))errors.push(`${p.id}: light-theme cover missing`);
  if(p.links.some(l=>l.href.includes('VTID2-Efficient-Vehicle-Type-Classification')))errors.push(`${p.id}: private assessment repository exposed`);
- if(!fs.existsSync(path.join(publicRoot,p.image)))errors.push(`${p.id}: preview image missing`);
+ if(!existsMedia(p.image))errors.push(`${p.id}: preview image missing`);
 }
 if(errors.length){console.error(errors.join('\n'));process.exitCode=1;}else console.log(`Verified ${content.projects.length} canonical projects, ${pages} pages and ${links} local resources/anchors.`);

@@ -1,3 +1,4 @@
+import { MediaField } from '../ui/MediaField'
 import type { SiteContent } from '../../types/content'
 import { Field, TextInput, TextArea } from '../ui/Field'
 
@@ -39,13 +40,8 @@ export function HeroSection({
         />
       </Field>
 
-      <Field label="Photo URL" hint="Paste a hosted image URL. Leave empty to show placeholder.">
-        <TextInput
-          value={hero.photoUrl}
-          onChange={(e) => update({ photoUrl: e.target.value })}
-          placeholder="https://..."
-        />
-      </Field>
+      <MediaField label="Photo URL" value={hero.photoUrl} onChange={photoUrl => update({ photoUrl })} />
+      <MediaField label="Background image" value={hero.backgroundUrl} onChange={backgroundUrl => update({ backgroundUrl })} />
 
       <Field label="Current Focus" hint="Short phrases shown in the Hero card, one per line">
         <TextArea

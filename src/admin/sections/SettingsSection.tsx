@@ -15,16 +15,21 @@ import { Field, TextInput } from '../ui/Field'
 import { useAuth } from '../../context/AuthContext'
 import { publishContentToGitHub } from '../github'
 import { MIN_PASSWORD_LENGTH } from '../crypto'
+import { validateContent } from '../validateContent'
 import { readToken, writeTarget, writeToken, type GitHubTarget } from '../vault'
 
 export function SettingsSection({
   content,
   onImport,
   onReset,
+  expectedContent,
+  onCommitted,
 }: {
   content: SiteContent
   onImport: (next: SiteContent) => void
   onReset: () => void
+  expectedContent: SiteContent
+  onCommitted: (commit?: string) => void
 }) {
   const { changePassword, vault, setVault, cryptoKey } = useAuth()
   const fileInputRef = useRef<HTMLInputElement>(null)
@@ -84,9 +89,11 @@ export function SettingsSection({
     reader.onload = () => {
       try {
         const parsed = JSON.parse(String(reader.result))
+        const errors = validateContent(parsed)
+        if (errors.length) throw new Error(errors.join('\n'))
         onImport(parsed)
       } catch {
-        alert('Invalid JSON file.')
+        alert('Invalid or incomplete site content JSON file.')
       }
     }
     reader.readAsText(file)
@@ -117,8 +124,9 @@ export function SettingsSection({
       return
     }
     try {
-      await publishContentToGitHub(target, token, JSON.stringify(content, null, 2))
-      setPublishStatus({ type: 'ok', text: 'Published. The redeploy picks this up automatically.' })
+      const result = await publishContentToGitHub(target, token, JSON.stringify(content, null, 2), JSON.stringify(expectedContent))
+      onCommitted(result.commit?.sha)
+      setPublishStatus({ type: 'ok', text: 'Committed to GitHub. Open Deployment Status and refresh to confirm the site deployment succeeds.' })
     } catch (err) {
       setPublishStatus({
         type: 'error',

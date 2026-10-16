@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-
+Disallow: /admin
 Sitemap: https://mahyoub88.github.io/sitemap.xml

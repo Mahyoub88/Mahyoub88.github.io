@@ -8,8 +8,9 @@ export function Skills() {
     <section id="skills" className="pb-14 pt-20">
       <Container>
         <p className="text-xs font-semibold tracking-wider text-brand-blue-400">SKILLS</p>
-        <h2 className="mt-2 text-3xl font-extrabold text-[var(--text-1)]">Technical Expertise</h2>
+        <h2 className="mt-2 text-3xl font-extrabold text-[var(--text-1)]">{content.siteSettings?.labels.skillsTitle || <>Technical Expertise</>}</h2>
 
+        {content.siteSettings?.labels.skillsSubtitle && <p className="mt-3 text-sm">{content.siteSettings.labels.skillsSubtitle}</p>}
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
           {content.technicalExpertise.map((group) => (
             <div

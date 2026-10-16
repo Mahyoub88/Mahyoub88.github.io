@@ -183,6 +183,7 @@ export interface FooterLinks {
 }
 
 export interface SiteContent {
+  siteSettings?: SiteSettings
   brand: BrandContent
   nav: NavLink[]
   hero: HeroContent
@@ -203,4 +204,12 @@ export interface SiteContent {
   contact: ContactContent
   social: SocialLink[]
   footerLinks: FooterLinks
+}
+
+export type HomeSection = 'hero' | 'stats' | 'about' | 'experience' | 'projects' | 'articles' | 'skills' | 'education' | 'certifications' | 'contact'
+export interface SiteSettings {
+  seo: { title: string; description: string; socialTitle: string; socialDescription: string; socialImage: string; canonicalUrl: string; language: string; locale: string; favicon: string; indexing: boolean }
+  appearance: { defaultTheme: 'dark' | 'light' | 'system'; fontFamily: string; accentBlue: string; accentPurple: string; lightBackground: string; darkBackground: string; lightSurface: string; darkSurface: string; statsColumns: number }
+  sections: { id: HomeSection; visible: boolean }[]
+  labels: { articlesTitle: string; articlesSubtitle: string; skillsTitle: string; skillsSubtitle: string; educationTitle: string; certificationsTitle: string; experienceTitle: string; footerText: string }
 }

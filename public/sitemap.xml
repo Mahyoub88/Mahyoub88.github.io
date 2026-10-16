@@ -2,23 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://mahyoub88.github.io/</loc></url>
   <url><loc>https://mahyoub88.github.io/notes/usv/</loc></url>
-  <url><loc>https://mahyoub88.github.io/projects/engineering-applications-analysis/</loc></url>
   <url><loc>https://mahyoub88.github.io/projects/</loc></url>
+  <url><loc>https://mahyoub88.github.io/projects/engineering-applications-analysis/</loc></url>
+  <url><loc>https://mahyoub88.github.io/projects/proj-eeprom-storage/</loc></url>
   <url><loc>https://mahyoub88.github.io/projects/proj-embedded-iot/</loc></url>
+  <url><loc>https://mahyoub88.github.io/projects/proj-embedded-iot/demo/</loc></url>
   <url><loc>https://mahyoub88.github.io/projects/proj-engineering-operations/</loc></url>
   <url><loc>https://mahyoub88.github.io/projects/proj-enterprise-network/</loc></url>
+  <url><loc>https://mahyoub88.github.io/projects/proj-fresnel-planning/</loc></url>
   <url><loc>https://mahyoub88.github.io/projects/proj-ims-voip-volte/</loc></url>
   <url><loc>https://mahyoub88.github.io/projects/proj-its-support/</loc></url>
+  <url><loc>https://mahyoub88.github.io/projects/proj-monitoring-apps/</loc></url>
+  <url><loc>https://mahyoub88.github.io/projects/proj-monitoring-console/</loc></url>
   <url><loc>https://mahyoub88.github.io/projects/proj-mpls-backbone/</loc></url>
   <url><loc>https://mahyoub88.github.io/projects/proj-ngsim/</loc></url>
   <url><loc>https://mahyoub88.github.io/projects/proj-plc-control/</loc></url>
   <url><loc>https://mahyoub88.github.io/projects/proj-quadcopter-uav/</loc></url>
   <url><loc>https://mahyoub88.github.io/projects/proj-reconnaissance-robot/</loc></url>
+  <url><loc>https://mahyoub88.github.io/projects/proj-rf-link-budget/</loc></url>
   <url><loc>https://mahyoub88.github.io/projects/proj-rf-network/</loc></url>
   <url><loc>https://mahyoub88.github.io/projects/proj-rfid-study/</loc></url>
   <url><loc>https://mahyoub88.github.io/projects/proj-sddc-lab/</loc></url>
   <url><loc>https://mahyoub88.github.io/projects/proj-sdn/</loc></url>
+  <url><loc>https://mahyoub88.github.io/projects/proj-service-operations/</loc></url>
   <url><loc>https://mahyoub88.github.io/projects/proj-solar-study/</loc></url>
   <url><loc>https://mahyoub88.github.io/projects/proj-vtid2/</loc></url>
+  <url><loc>https://mahyoub88.github.io/projects/proj-wireless-coverage/</loc></url>
   <url><loc>https://mahyoub88.github.io/projects/proj-wireless-link-planning/</loc></url>
+  <url><loc>https://mahyoub88.github.io/projects/proj-wireless-link-planning/simulation/</loc></url>
 </urlset>

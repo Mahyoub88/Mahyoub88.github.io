@@ -1,3 +1,4 @@
+import { MediaField } from '../ui/MediaField'
 import type {
   SiteContent,
   Project,
@@ -54,6 +55,10 @@ export function ProjectsSection({
         </Field>
       </div>
 
+      <div className="grid gap-3 sm:grid-cols-2">
+        <Field label="Section button label"><TextInput value={content.projectsCtaLabel} onChange={event => onChange({ projectsCtaLabel: event.target.value })} /></Field>
+        <Field label="Section button link"><TextInput value={content.projectsCtaHref} onChange={event => onChange({ projectsCtaHref: event.target.value })} /></Field>
+      </div>
       <div>
         <h2 className="mb-4 text-lg font-bold text-[var(--text-1)]">Projects</h2>
         <ArrayEditor
@@ -71,6 +76,9 @@ export function ProjectsSection({
             tags: [],
             link: '',
             links: [],
+            status: { kind: 'public', label: 'Project' },
+            image: '', imageAlt: '', imageCaption: '',
+            coverImage: '', coverLightImage: '', coverAlt: '', coverCaption: '',
             accent: 'blue',
           })}
           renderItem={(item, update) => (
@@ -188,6 +196,18 @@ export function ProjectsSection({
                 />
               </Field>
 
+              <Field label="Project ID / page folder" hint="Use a unique proj-name. Changing an existing ID creates a different page.">
+                <TextInput value={item.id} onChange={event => update({ id: event.target.value })} />
+              </Field>
+              <Field label="Primary link"><TextInput value={item.link} onChange={event => update({ link: event.target.value })} /></Field>
+              <MediaField label="Dark cover image" value={item.coverImage ?? ''} onChange={coverImage => update({ coverImage })} />
+              <MediaField label="Light cover image" value={item.coverLightImage ?? ''} onChange={coverLightImage => update({ coverLightImage })} />
+              <Field label="Cover alternative text"><TextInput value={item.coverAlt ?? ''} onChange={event => update({ coverAlt: event.target.value })} /></Field>
+              <Field label="Cover provenance / caption"><TextInput value={item.coverCaption ?? ''} onChange={event => update({ coverCaption: event.target.value })} /></Field>
+              <MediaField label="Case study hero / source image" value={item.image ?? ''} onChange={image => update({ image })} />
+              <Field label="Source image alternative text"><TextInput value={item.imageAlt ?? ''} onChange={event => update({ imageAlt: event.target.value })} /></Field>
+              <Field label="Source image caption"><TextInput value={item.imageCaption ?? ''} onChange={event => update({ imageCaption: event.target.value })} /></Field>
+              <p className="text-xs">Edit the detailed case study in Pages & Files: public/projects/{item.id}/index.html. New pages are created during the next build.</p>
               <Field label="Tags">
                 <TagsInput value={item.tags} onChange={(tags) => update({ tags })} />
               </Field>

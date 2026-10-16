@@ -20,7 +20,7 @@ export function Footer() {
     <footer className="border-t border-[var(--border-1)] py-10">
       <Container className="flex flex-col items-center justify-between gap-5 text-sm text-[var(--text-3)] sm:flex-row">
         <p>
-          © {new Date().getFullYear()} {content.brand.name}. All rights reserved.
+          {content.siteSettings?.labels.footerText || <>© {new Date().getFullYear()} {content.brand.name}. All rights reserved.</>}
         </p>
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
           {links.map((link) => {
