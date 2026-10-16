@@ -35,12 +35,25 @@ export function Experience() {
                 </div>
 
                 <h3 className="mt-1.5 text-lg font-bold leading-snug text-[var(--text-1)]">
-                  {item.role}
+                  {item.roles?.length ? item.company : item.role}
                 </h3>
                 <p className="text-sm font-medium text-brand-blue-400">
-                  {item.company}
+                  {item.roles?.length ? 'Career progression' : item.company}
                   {item.location && <span className="text-[var(--text-3)]"> · {item.location}</span>}
                 </p>
+
+                {!!item.roles?.length && (
+                  <ol className="mt-5 space-y-6 border-l border-[var(--border-1)] pl-5">
+                    {item.roles.map((role) => (
+                      <li key={`${role.title}-${role.period}`} className="relative">
+                        <span aria-hidden className="absolute -left-[25px] top-2 h-2 w-2 rounded-full bg-brand-blue-400" />
+                        <h4 className="font-bold text-[var(--text-1)]">{role.title}</h4>
+                        <p className="mt-1 text-xs font-semibold text-[var(--text-3)]">{role.period}</p>
+                        <p className="mt-2 text-sm leading-relaxed text-[var(--text-2)]">{role.description}</p>
+                      </li>
+                    ))}
+                  </ol>
+                )}
 
                 {item.description && (
                   <p className="mt-3 max-w-[75ch] leading-relaxed text-[var(--text-2)]">

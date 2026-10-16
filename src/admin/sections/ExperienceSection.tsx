@@ -68,6 +68,25 @@ export function ExperienceSection({
                 onChange={(e) => update({ description: e.target.value })}
               />
             </Field>
+            <ArrayEditor
+              items={item.roles ?? []}
+              itemLabel="Position within company"
+              onChange={(roles) => update({ roles })}
+              makeItem={() => ({ title: '', period: '', description: '' })}
+              renderItem={(role, updateRole) => (
+                <div className="space-y-3">
+                  <Field label="Position title">
+                    <TextInput value={role.title} onChange={(event) => updateRole({ title: event.target.value })} />
+                  </Field>
+                  <Field label="Position period">
+                    <TextInput value={role.period} onChange={(event) => updateRole({ period: event.target.value })} />
+                  </Field>
+                  <Field label="Position summary">
+                    <TextArea value={role.description} onChange={(event) => updateRole({ description: event.target.value })} />
+                  </Field>
+                </div>
+              )}
+            />
             <Field label="Bullets" hint="One bullet per line">
               <TextArea
                 rows={6}
