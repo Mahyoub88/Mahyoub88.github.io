@@ -163,13 +163,8 @@
       "id": "stat-1",
       "icon": "briefcase",
       "value": "14",
-      "label": "Years of Engineering Experience"
-    },
-    {
-      "id": "stat-2",
-      "icon": "network",
-      "value": "7+",
-      "label": "Years at VITRONIC Machine Vision"
+      "label": "Years of Engineering Experience",
+      "detail": "Including 7+ years at VITRONIC Machine Vision"
     },
     {
       "id": "stat-3",
@@ -1477,7 +1472,7 @@
       "darkBackground": "#05070d",
       "lightSurface": "#ffffff",
       "darkSurface": "#0a0e18",
-      "statsColumns": 4
+      "statsColumns": 3
     },
     "sections": [
       {
