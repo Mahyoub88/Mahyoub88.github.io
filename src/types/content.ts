@@ -126,7 +126,7 @@ export interface ExperienceItem {
   employmentType?: string
   bullets?: string[]
   projectIds?: string[]
-  roles?: { title: string; period: string; description: string }[]
+  roles?: { title: string; period: string; description: string; bullets?: string[] }[]
 }
 
 export interface ArticleItem {

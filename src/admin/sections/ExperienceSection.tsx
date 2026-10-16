@@ -72,7 +72,7 @@ export function ExperienceSection({
               items={item.roles ?? []}
               itemLabel="Position within company"
               onChange={(roles) => update({ roles })}
-              makeItem={() => ({ title: '', period: '', description: '' })}
+              makeItem={() => ({ title: '', period: '', description: '', bullets: [] as string[] })}
               renderItem={(role, updateRole) => (
                 <div className="space-y-3">
                   <Field label="Position title">
@@ -83,6 +83,13 @@ export function ExperienceSection({
                   </Field>
                   <Field label="Position summary">
                     <TextArea value={role.description} onChange={(event) => updateRole({ description: event.target.value })} />
+                  </Field>
+                  <Field label="Position bullets" hint="One bullet per line">
+                    <TextArea
+                      rows={5}
+                      value={(role.bullets ?? []).join('\n')}
+                      onChange={(event) => updateRole({ bullets: event.target.value.split('\n').filter((line) => line.trim()) })}
+                    />
                   </Field>
                 </div>
               )}
