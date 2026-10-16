@@ -179,6 +179,12 @@
       "value": "6 Countries",
       "label": "International Service Assignments",
       "detail": "UAE · Saudi Arabia · Oman · Rwanda · Iraq (Erbil) · Kenya"
+    },
+    {
+      "id": "stat-end-to-end-engineering",
+      "icon": "workflow",
+      "value": "End-to-End Engineering",
+      "label": "Systems Integration · Commissioning · Technical Support"
     }
   ],
   "about": {
@@ -1473,7 +1479,7 @@
       "darkBackground": "#05070d",
       "lightSurface": "#ffffff",
       "darkSurface": "#0a0e18",
-      "statsColumns": 3
+      "statsColumns": 4
     },
     "sections": [
       {
