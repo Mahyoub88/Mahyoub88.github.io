@@ -32,6 +32,9 @@ export function ProjectCard({ project }: { project: Project }) {
   const accent = accentStyles[project.accent]
   const { theme } = useTheme()
   const previewImage = (theme === 'light' ? project.coverLightImage : project.coverImage) ?? project.coverImage ?? project.image
+  // A cover that has no separate dark variant is a light illustration; in dark mode
+  // invert it so the same image sits in the dark theme like the themed covers do.
+  const adaptCoverToDark = theme !== 'light' && Boolean(project.coverImage) && project.coverImage === project.coverLightImage
   const previewAlt = project.coverAlt ?? project.imageAlt ?? project.title
   const previewCaption = project.coverCaption ?? project.imageCaption
   const buttons = project.links?.filter((l) => l.label && l.href) ?? []
@@ -66,7 +69,7 @@ export function ProjectCard({ project }: { project: Project }) {
           className="absolute inset-0 opacity-40 [background-image:radial-gradient(circle_at_1px_1px,var(--border-2)_1px,transparent_0)] [background-size:16px_16px]"
         />
         {previewImage ? (
-          <img src={previewImage} alt={previewAlt} loading="lazy" width="1280" height="720" className={`relative h-full w-full ${!project.coverImage && previewImage.startsWith('/projects/') ? 'object-contain' : 'object-cover'}`} />
+          <img src={previewImage} alt={previewAlt} loading="lazy" width="1280" height="720" className={`relative h-full w-full ${adaptCoverToDark ? '[filter:invert(.9)_hue-rotate(180deg)_saturate(1.15)]' : ''} ${!project.coverImage && previewImage.startsWith('/projects/') ? 'object-contain' : 'object-cover'}`} />
         ) : <span className={`relative text-4xl font-black tracking-tight opacity-20 ${accent.text}`}>
           {project.category.slice(0, 2).toUpperCase()}
         </span>}
