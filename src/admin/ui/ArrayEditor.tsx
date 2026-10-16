@@ -8,6 +8,8 @@ export function ArrayEditor<T>({
   renderItem,
   itemLabel = 'item',
   addLabel,
+  hideAdd = false,
+  hideRemove = false,
 }: {
   items: T[]
   onChange: (next: T[]) => void
@@ -15,6 +17,8 @@ export function ArrayEditor<T>({
   renderItem: (item: T, update: (patch: Partial<T>) => void, index: number) => ReactNode
   itemLabel?: string
   addLabel?: string
+  hideAdd?: boolean
+  hideRemove?: boolean
 }) {
   const update = (index: number, patch: Partial<T>) => {
     const next = items.slice()
@@ -62,27 +66,27 @@ export function ArrayEditor<T>({
               >
                 <ChevronDown size={14} />
               </button>
-              <button
+              {!hideRemove && <button
                 type="button"
                 onClick={() => remove(i)}
                 className="rounded-md p-1.5 text-red-400 hover:bg-red-500/10"
                 aria-label="Remove"
               >
                 <Trash2 size={14} />
-              </button>
+              </button>}
             </div>
           </div>
           {renderItem(item, (patch) => update(i, patch), i)}
         </div>
       ))}
-      <button
+      {!hideAdd && <button
         type="button"
         onClick={() => onChange([...items, makeItem()])}
         className="flex w-full items-center justify-center gap-2 rounded-xl border border-dashed border-[var(--border-2)] py-3 text-sm font-medium text-[var(--text-2)] transition hover:border-brand-blue-500/60 hover:text-brand-blue-400"
       >
         <Plus size={16} />
         {addLabel ?? `Add ${itemLabel}`}
-      </button>
+      </button>}
     </div>
   )
 }

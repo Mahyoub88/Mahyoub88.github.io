@@ -38,6 +38,11 @@ import { ProjectsSection } from '../admin/sections/ProjectsSection'
 import { ArticlesSection } from '../admin/sections/ArticlesSection'
 import { ContactSocialSection } from '../admin/sections/ContactSocialSection'
 import { SettingsSection } from '../admin/sections/SettingsSection'
+import { FilesSection } from '../admin/sections/FilesSection'
+import { SiteSection } from '../admin/sections/SiteSection'
+import { AdvancedSection } from '../admin/sections/AdvancedSection'
+import { DeploymentSection } from '../admin/sections/DeploymentSection'
+import { validateContent } from '../admin/validateContent'
 import type { SiteContent } from '../types/content'
 import { defaultContent } from '../data/defaultContent'
 import { publishContentToGitHub } from '../admin/github'
@@ -58,6 +63,10 @@ const tabs = [
   { id: 'articles', label: 'Research & Technical Work', icon: Newspaper },
   { id: 'contact', label: 'Contact & Social', icon: MessageSquare },
   { id: 'settings', label: 'Settings', icon: Settings },
+  { id: 'site', label: 'Appearance & SEO', icon: Sparkles },
+  { id: 'files', label: 'Pages & Files', icon: FolderKanban },
+  { id: 'deployment', label: 'Deployment Status', icon: CloudUpload },
+  { id: 'advanced', label: 'Complete Content', icon: FileText },
 ] as const
 
 type TabId = (typeof tabs)[number]['id']
@@ -71,22 +80,32 @@ function AdminDashboard() {
     'idle',
   )
   const [publishError, setPublishError] = useState<string | null>(null)
+  const [lastCommit, setLastCommit] = useState<string>()
+  const [publishedBase, setPublishedBase] = useState(defaultContent)
+  const [fileDirty, setFileDirty] = useState(false)
+  const chooseTab = (tab: TabId) => {
+    if (fileDirty && tab !== activeTab && !confirm('Discard unsaved file changes?')) return
+    setActiveTab(tab)
+  }
 
-  const isDirty = JSON.stringify(draft) !== JSON.stringify(content)
+  const isDirty = JSON.stringify(draft) !== JSON.stringify(publishedBase)
+  const hasUnsavedDraft = JSON.stringify(draft) !== JSON.stringify(content)
 
   useEffect(() => {
-    if (!isDirty) return
+    if (!hasUnsavedDraft) return
     const handler = (e: BeforeUnloadEvent) => {
       e.preventDefault()
       e.returnValue = ''
     }
     window.addEventListener('beforeunload', handler)
     return () => window.removeEventListener('beforeunload', handler)
-  }, [isDirty])
+  }, [hasUnsavedDraft])
 
   const patch = (p: Partial<SiteContent>) => setDraft((prev) => ({ ...prev, ...p }))
 
   const handleSave = async () => {
+    const errors = validateContent(draft)
+    if (errors.length) { setPublishError(errors.join(' ')); setSaveState('publish-failed'); return }
     setContent(draft)
     setSaveState('saving')
     setPublishError(null)
@@ -96,7 +115,9 @@ function AdminDashboard() {
       try {
         const token = await readToken(cryptoKey, vault)
         if (!token) throw new Error('the stored token could not be decrypted')
-        await publishContentToGitHub(vault.github, token, JSON.stringify(draft, null, 2))
+        const result = await publishContentToGitHub(vault.github, token, JSON.stringify(draft, null, 2), JSON.stringify(publishedBase))
+        setLastCommit(result.commit?.sha)
+        setPublishedBase(draft)
         setSaveState('published')
       } catch (err) {
         failed = true
@@ -127,8 +148,8 @@ function AdminDashboard() {
   const saveButtonLabel = {
     idle: 'Save Changes',
     saving: 'Saving…',
-    saved: 'Saved',
-    published: 'Saved & Published',
+    saved: 'Saved locally',
+    published: 'Committed to GitHub',
     'publish-failed': 'Saved (publish failed)',
   }[saveState]
 
@@ -148,7 +169,7 @@ function AdminDashboard() {
             return (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
+                onClick={() => chooseTab(tab.id)}
                 className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition ${
                   active
                     ? 'bg-brand-blue-500/10 text-brand-blue-400'
@@ -167,7 +188,7 @@ function AdminDashboard() {
         <div className="border-b border-[var(--border-1)] bg-[var(--surface-1)] p-3 lg:hidden">
           <select
             value={activeTab}
-            onChange={(e) => setActiveTab(e.target.value as TabId)}
+            onChange={(e) => chooseTab(e.target.value as TabId)}
             className="w-full rounded-lg border border-[var(--border-1)] bg-[var(--surface-0)] px-3 py-2 text-sm text-[var(--text-1)]"
           >
             {tabs.map((tab) => (
@@ -182,7 +203,7 @@ function AdminDashboard() {
             <h1 className="text-lg font-bold text-[var(--text-1)]">
               {tabs.find((t) => t.id === activeTab)?.label}
             </h1>
-            {isDirty && <p className="text-xs text-brand-amber-400">Unsaved changes</p>}
+            {isDirty && <p className="text-xs text-brand-amber-400">{hasUnsavedDraft ? 'Unsaved draft changes' : 'Local draft — not yet committed'}</p>}
             {saveState === 'publish-failed' && (
               <p className="text-xs text-red-400">
                 Saved locally, but publish to GitHub failed{publishError ? `: ${publishError}` : '.'}
@@ -193,6 +214,7 @@ function AdminDashboard() {
             <Link
               to="/"
               target="_blank"
+              onClick={() => setContent(draft)}
               className="flex items-center gap-2 rounded-lg border border-[var(--border-1)] px-3 py-2 text-sm font-medium text-[var(--text-2)] hover:border-brand-blue-500/60"
             >
               <ExternalLink size={16} />
@@ -200,7 +222,7 @@ function AdminDashboard() {
             </Link>
             <button
               onClick={handleSave}
-              disabled={!isDirty || saveState === 'saving'}
+              disabled={(!isDirty && saveState !== 'publish-failed') || saveState === 'saving'}
               className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-brand-blue-500 to-brand-purple-500 px-4 py-2 text-sm font-semibold text-white transition hover:brightness-110 disabled:opacity-40"
             >
               {saveState === 'idle' || saveState === 'saving' ? (
@@ -224,6 +246,7 @@ function AdminDashboard() {
 
         <main className="flex-1 overflow-y-auto p-6 lg:p-8">
           <div className="mx-auto max-w-4xl">
+            {lastCommit && <p role="status" className="mb-4 rounded-lg border border-[var(--border-1)] p-3 text-sm">Changes committed to GitHub. <button className="underline" onClick={() => setActiveTab('deployment')}>Check deployment status</button> to confirm when visitors can see them.</p>}
             {activeTab === 'brand' && <BrandNavSection {...sectionProps} />}
             {activeTab === 'hero' && <HeroSection {...sectionProps} />}
             {activeTab === 'specializations' && <SpecializationsSection {...sectionProps} />}
@@ -237,8 +260,12 @@ function AdminDashboard() {
             {activeTab === 'projects' && <ProjectsSection {...sectionProps} />}
             {activeTab === 'articles' && <ArticlesSection {...sectionProps} />}
             {activeTab === 'contact' && <ContactSocialSection {...sectionProps} />}
+            {activeTab === 'site' && <SiteSection {...sectionProps} />}
+            {activeTab === 'files' && <FilesSection onDirtyChange={setFileDirty} />}
+            {activeTab === 'deployment' && <DeploymentSection commit={lastCommit} />}
+            {activeTab === 'advanced' && <AdvancedSection {...sectionProps} />}
             {activeTab === 'settings' && (
-              <SettingsSection content={draft} onImport={handleImport} onReset={handleReset} />
+              <SettingsSection content={draft} onImport={handleImport} onReset={handleReset} expectedContent={publishedBase} onCommitted={commit => { setLastCommit(commit); setPublishedBase(draft); setContent(draft) }} />
             )}
           </div>
         </main>

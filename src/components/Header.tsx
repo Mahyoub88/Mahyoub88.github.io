@@ -6,6 +6,7 @@ import { useTheme } from '../context/ThemeContext'
 import { useAuth } from '../context/AuthContext'
 import { useActiveSection } from '../hooks/useActiveSection'
 import { Container } from './Container'
+import { siteSettings } from '../data/siteSettings'
 
 // Mirrors the hero: the icon follows the destination, so the shared CTA never
 // shows a Download glyph on a link that only scrolls to a section.
@@ -20,6 +21,12 @@ export function Header() {
   const { theme, toggleTheme } = useTheme()
   const { isAuthenticated } = useAuth()
   const [open, setOpen] = useState(false)
+  const navigation = useMemo(() => {
+    const sections = siteSettings(content.siteSettings).sections
+    const anchor = (id: string) => id === 'hero' ? '#home' : id === 'projects' ? '#work' : `#${id}`
+    const hidden = new Set(sections.filter(section => !section.visible).map(section => anchor(section.id)))
+    return content.nav.filter(link => !hidden.has(link.href))
+  }, [content.nav, content.siteSettings])
 
   // Same rule as the hero CTA: a file link (not an in-page #anchor) opens in a
   // new tab and downloads, so the header CV button behaves like a real download.
@@ -67,10 +74,10 @@ export function Header() {
 
   const sectionIds = useMemo(
     () =>
-      content.nav
+      navigation
         .filter((link) => link.href.startsWith('#'))
         .map((link) => link.href.slice(1)),
-    [content.nav],
+    [navigation],
   )
   const activeSection = useActiveSection(sectionIds)
 
@@ -92,7 +99,7 @@ export function Header() {
         {/* The credentials link adds a ninth nav item; the full navigation fits beside the brand
             at 1536px â€” below that the menu button takes over. */}
         <nav className="hidden items-center gap-1 rounded-full border border-[var(--border-1)] bg-[var(--surface-1)] p-1 2xl:flex">
-          {content.nav.map((link) => {
+          {navigation.map((link) => {
             const isActive = link.href === `#${activeSection}`
             return (
               <a
@@ -156,7 +163,7 @@ export function Header() {
       {open && (
         <div className="border-t border-[var(--border-1)] bg-[var(--surface-0)] 2xl:hidden">
           <Container className="flex flex-col gap-1 py-4">
-            {content.nav.map((link) => {
+            {navigation.map((link) => {
               const isActive = link.href === `#${activeSection}`
               return (
                 <a

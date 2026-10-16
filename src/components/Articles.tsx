@@ -10,12 +10,11 @@ export function Articles() {
     <section id="articles" className="border-y border-[var(--border-1)] bg-[var(--surface-1)] py-20">
       <Container>
         <p className="text-xs font-semibold tracking-wider text-brand-blue-400">RESEARCH</p>
-        <h2 className="mt-2 text-3xl font-extrabold text-[var(--text-1)]">
+        <h2 className="mt-2 text-3xl font-extrabold text-[var(--text-1)]">{content.siteSettings?.labels.articlesTitle || <>
           Research &amp; Technical Work
-        </h2>
+        </>}</h2>
         <p className="mt-3 max-w-[68ch] text-[var(--text-2)]">
-          Selected academic research and technical studies at the intersection of artificial
-          intelligence, computer vision, and intelligent transportation.
+          {content.siteSettings?.labels.articlesSubtitle || 'Selected academic research and technical studies at the intersection of artificial intelligence, computer vision, and intelligent transportation.'}
         </p>
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">

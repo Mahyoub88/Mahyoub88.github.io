@@ -13,7 +13,7 @@ export function Education() {
     >
       <Container>
         <p className="text-xs font-semibold tracking-wider text-brand-blue-400">EDUCATION</p>
-        <h2 className="mt-2 text-3xl font-extrabold text-[var(--text-1)]">Education</h2>
+        <h2 className="mt-2 text-3xl font-extrabold text-[var(--text-1)]">{content.siteSettings?.labels.educationTitle || <>Education</>}</h2>
 
         <div className="mt-10 grid grid-cols-1 items-stretch gap-6 lg:grid-cols-2">
           {content.education.map((item) => (

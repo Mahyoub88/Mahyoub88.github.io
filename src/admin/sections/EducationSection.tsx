@@ -1,4 +1,5 @@
-import type { SiteContent } from '../../types/content'
+import { MediaField } from '../ui/MediaField'
+import type { EducationItem, SiteContent } from '../../types/content'
 import { Field, TextInput, TextArea } from '../ui/Field'
 import { ArrayEditor } from '../ui/ArrayEditor'
 
@@ -16,7 +17,7 @@ export function EducationSection({
         items={content.education}
         itemLabel="Degree"
         onChange={(education) => onChange({ education })}
-        makeItem={() => ({
+        makeItem={(): EducationItem => ({
           id: `edu-${Date.now()}`,
           degree: 'New Degree',
           institution: '',
@@ -54,6 +55,10 @@ export function EducationSection({
                 />
               </Field>
             </div>
+            <fieldset className="space-y-3 rounded-lg border border-[var(--border-1)] p-3"><legend>Degree document</legend>
+              <MediaField label="Document image" value={item.document?.image ?? ''} onChange={image => update({ document: image ? { title: item.document?.title ?? item.degree, issuer: item.document?.issuer ?? item.institution, ...item.document, image } : undefined })} />
+              {item.document && (['title', 'issuer', 'date'] as const).map(key => <Field key={key} label={key}><TextInput value={item.document?.[key] ?? ''} onChange={event => update({ document: { ...item.document!, [key]: event.target.value } })} /></Field>)}
+            </fieldset>
             <Field label="Description">
               <TextArea
                 rows={3}

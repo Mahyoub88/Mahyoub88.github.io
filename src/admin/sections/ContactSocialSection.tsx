@@ -1,3 +1,4 @@
+import { MediaField } from '../ui/MediaField'
 import type { SiteContent, SocialLink } from '../../types/content'
 import { Field, TextInput, TextArea, SelectInput } from '../ui/Field'
 import { ArrayEditor } from '../ui/ArrayEditor'
@@ -83,13 +84,7 @@ export function ContactSocialSection({
       <div>
         <h2 className="mb-4 text-lg font-bold text-[var(--text-1)]">Footer Links</h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <Field label="Resume URL" hint="Leave empty to hide">
-            <TextInput
-              value={footerLinks.resumeUrl}
-              onChange={(e) => updateFooterLinks({ resumeUrl: e.target.value })}
-              placeholder="https://..."
-            />
-          </Field>
+          <MediaField label="Resume file / URL" value={footerLinks.resumeUrl} onChange={resumeUrl => updateFooterLinks({ resumeUrl })} />
           <Field label="ORCID URL" hint="Leave empty to hide">
             <TextInput
               value={footerLinks.orcidUrl}

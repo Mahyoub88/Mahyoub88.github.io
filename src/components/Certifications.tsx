@@ -10,9 +10,9 @@ export function Certifications() {
     <section id="certifications" className="scroll-mt-24 border-y border-[var(--border-1)] bg-[var(--surface-1)] py-20">
       <Container>
         <p className="text-xs font-semibold tracking-wider text-brand-blue-400">CREDENTIALS</p>
-        <h2 className="mt-2 text-3xl font-extrabold text-[var(--text-1)]">
+        <h2 className="mt-2 text-3xl font-extrabold text-[var(--text-1)]">{content.siteSettings?.labels.certificationsTitle || <>
           Certifications, Training &amp; Recognition
-        </h2>
+        </>}</h2>
         <p className="mt-4 max-w-3xl text-sm leading-relaxed text-[var(--text-2)]">Professional certifications, technical training and recognition, with original certificate images and source links where available.</p>
 
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">

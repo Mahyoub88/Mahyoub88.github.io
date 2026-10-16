@@ -4,10 +4,12 @@ import { ThemeProvider } from './context/ThemeContext'
 import { AuthProvider } from './context/AuthContext'
 import { Home } from './pages/Home'
 import { Admin } from './pages/Admin'
+import { SiteAppearance } from './components/SiteAppearance'
 
 function App() {
   return (
     <ContentProvider>
+      <SiteAppearance />
       <ThemeProvider>
         <AuthProvider>
           <BrowserRouter basename={import.meta.env.BASE_URL}>
