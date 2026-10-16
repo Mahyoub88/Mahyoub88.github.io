@@ -81,11 +81,10 @@ every push to `main`. Enable it once under the repo's **Settings → Pages → S
 Actions**. Because this repo is named `<username>.github.io`, it serves directly from
 `https://mahyoub88.github.io` with no subpath.
 
-### Netlify / Vercel
+### Netlify
 
-Build command `npm run build`, publish directory `dist`. SPA fallback configs
-(`public/_redirects` for Netlify, `vercel.json` for Vercel) are already included so `/admin`
-works on direct load and refresh.
+Build command `npm run build`, publish directory `dist`. The SPA fallback
+(`public/_redirects`) is already included so `/admin` works on direct load and refresh.
 
 ### Any static host
 
