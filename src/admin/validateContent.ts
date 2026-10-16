@@ -27,7 +27,10 @@ export function validateContent(value: unknown): string[] {
     for (const key of ['bullets', 'projectIds']) if (item[key] !== undefined && !strings(item[key])) errors.push(`Experience ${key} must be a list of text.`)
     if (item.roles !== undefined) {
       if (!Array.isArray(item.roles)) errors.push('Experience roles must be a list.')
-      else item.roles.forEach(role => fields(role, ['title', 'period', 'description'], 'experience.roles'))
+      else item.roles.forEach(role => {
+        fields(role, ['title', 'period', 'description'], 'experience.roles')
+        if (record(role) && role.bullets !== undefined && !strings(role.bullets)) errors.push('Experience role bullets must be a list of text.')
+      })
     }
   }
   if (Array.isArray(content.education)) for (const item of content.education) {

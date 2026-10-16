@@ -220,34 +220,38 @@
     {
       "id": "exp-1",
       "role": "Service Engineer / Senior Service Engineer — Smart Infrastructure & ITS Systems",
-      "company": "VITRONIC Machine Vision Middle East LLC",
+      "company": "VITRONIC Machine Vision",
       "period": "October 2019 — Present",
       "roles": [
         {
           "title": "Senior Service Engineer — Smart Infrastructure & ITS Systems",
           "period": "December 2024 — Present",
-          "description": "Systems integration, commissioning, complex fault diagnosis and operational support for ITS and traffic-enforcement systems."
+          "description": "Systems integration, commissioning, complex fault diagnosis and operational support for ITS and traffic-enforcement systems.",
+          "bullets": [
+            "Integrate cameras, LiDAR, sensors, controllers, networks, databases and backend platforms into reliable ITS and traffic-enforcement systems.",
+            "Perform FAT/SAT, commissioning, calibration, interface validation and performance verification.",
+            "Diagnose complex hardware, software, communication and database faults using structured root-cause analysis.",
+            "Coordinate incident resolution, preventive maintenance, upgrades and configuration changes with customers, vendors and software teams.",
+            "Prepare test records, technical reports, incident analyses and handover documentation."
+          ]
         },
         {
           "title": "Service Engineer — Smart Infrastructure & ITS Systems",
           "period": "October 2019 — November 2024",
-          "description": "Installation, integration, calibration, testing, preventive maintenance and technical support across field equipment, networks and backend interfaces."
+          "description": "Installation, integration, calibration, testing, preventive maintenance and technical support across field equipment, networks and backend interfaces.",
+          "bullets": [
+            "Installed, integrated, commissioned and supported intelligent transportation and traffic-enforcement systems.",
+            "Worked across cameras, LiDAR, sensors, controllers, networks and backend interfaces.",
+            "Performed calibration, functional testing, acceptance activities, preventive maintenance and fault diagnosis.",
+            "Prepared service reports, test records and technical documentation; coordinated technical support with customers and engineering teams."
+          ]
         }
       ],
       "location": "United Arab Emirates",
       "employmentType": "",
-      "description": "Across my service with VITRONIC, service assignments have covered the UAE (including Abu Dhabi and Dubai), Saudi Arabia, Oman, Rwanda, Erbil in Iraq, and Kenya. The responsibilities and system support scale below summarise the full period with the company.",
+      "description": "Across my service with VITRONIC, I have supported 800+ intelligent transportation and traffic enforcement systems across the UAE, with service assignments in the UAE (including Abu Dhabi and Dubai), Saudi Arabia, Oman, Rwanda, Erbil in Iraq, and Kenya.",
       "projectIds": [
         "proj-its-support"
-      ],
-      "bullets": [
-        "Support 800+ intelligent transportation and traffic enforcement systems across the UAE.",
-        "Integrate cameras, LiDAR, sensors, control units, networks, databases, and backend platforms into reliable end-to-end systems.",
-        "Perform FAT, SAT, commissioning, calibration, interface validation, acceptance testing, and performance verification.",
-        "Diagnose complex faults across hardware, software, communication, database, and system-interface layers using structured root-cause analysis.",
-        "Support incident response, preventive maintenance, system upgrades, configuration changes, and field operations.",
-        "Coordinate technical resolution across customers, vendors, software teams, and multidisciplinary engineering teams.",
-        "Prepare technical reports, test records, incident analyses, and system handover documentation."
       ],
       "tags": [
         "Systems Integration",

@@ -38,27 +38,37 @@ export function Experience() {
                   {item.roles?.length ? item.company : item.role}
                 </h3>
                 <p className="text-sm font-medium text-brand-blue-400">
-                  {item.roles?.length ? 'Career progression' : item.company}
-                  {item.location && <span className="text-[var(--text-3)]"> · {item.location}</span>}
+                  {item.roles?.length ? item.location : item.company}
+                  {!item.roles?.length && item.location && <span className="text-[var(--text-3)]"> · {item.location}</span>}
                 </p>
 
+                {item.description && (
+                  <p className="mt-4 max-w-[75ch] text-sm leading-relaxed text-[var(--text-2)]">
+                    {item.description}
+                  </p>
+                )}
+
                 {!!item.roles?.length && (
-                  <ol className="mt-5 space-y-6 border-l border-[var(--border-1)] pl-5">
+                  <ol className="mt-5 space-y-7 border-l border-[var(--border-1)] pl-5">
                     {item.roles.map((role) => (
                       <li key={`${role.title}-${role.period}`} className="relative">
                         <span aria-hidden className="absolute -left-[25px] top-2 h-2 w-2 rounded-full bg-brand-blue-400" />
                         <h4 className="font-bold text-[var(--text-1)]">{role.title}</h4>
                         <p className="mt-1 text-xs font-semibold text-[var(--text-3)]">{role.period}</p>
                         <p className="mt-2 text-sm leading-relaxed text-[var(--text-2)]">{role.description}</p>
+                        {!!role.bullets?.length && (
+                          <ul className="mt-3 space-y-2">
+                            {role.bullets.map((bullet, i) => (
+                              <li key={i} className="flex gap-3 text-sm leading-relaxed text-[var(--text-2)]">
+                                <span aria-hidden className="mt-[0.5rem] h-1.5 w-1.5 shrink-0 rounded-full bg-brand-blue-500/70" />
+                                <span>{bullet}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </li>
                     ))}
                   </ol>
-                )}
-
-                {item.description && (
-                  <p className="mt-4 max-w-[75ch] text-sm leading-relaxed text-[var(--text-2)]">
-                    {item.description}
-                  </p>
                 )}
 
                 {/* Two bullet columns on very wide screens: one long column
