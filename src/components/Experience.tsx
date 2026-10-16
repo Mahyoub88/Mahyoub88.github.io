@@ -56,7 +56,7 @@ export function Experience() {
                 )}
 
                 {item.description && (
-                  <p className="mt-3 max-w-[75ch] leading-relaxed text-[var(--text-2)]">
+                  <p className="mt-4 max-w-[75ch] text-sm leading-relaxed text-[var(--text-2)]">
                     {item.description}
                   </p>
                 )}
