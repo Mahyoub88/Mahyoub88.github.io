@@ -863,7 +863,7 @@
       "image": "/projects/proj-embedded-iot/media/equipment-room/cover.png",
       "imageAlt": "Concept illustration of equipment-room monitoring and control with a PIC controller",
       "imageCaption": "AI-generated concept illustration; original implementation media is retained below",
-      "coverImage": "/projects/proj-embedded-iot/media/equipment-room/cover.png",
+      "coverImage": "/projects/proj-embedded-iot/media/equipment-room/cover-dark.webp",
       "coverAlt": "Equipment room with environmental sensors, PIC controller, fan, keypad access and persistent settings",
       "coverCaption": "AI-generated project cover illustration",
       "coverLightImage": "/projects/proj-embedded-iot/media/equipment-room/cover.png"
@@ -1071,7 +1071,7 @@
       "image": "/projects/proj-monitoring-console/media/monitoring-console.jpg",
       "imageAlt": "Original VB.NET monitoring and diagnostics interface",
       "imageCaption": "Source project media",
-      "coverImage": "/projects/proj-engineering-operations/media/operations-unified-v2.webp",
+      "coverImage": "/projects/proj-engineering-operations/media/operations-unified-dark-v1.webp",
       "coverAlt": "Unified engineering illustration of industrial monitoring, device health, electronic repair workflow and technical reports",
       "coverCaption": "AI-generated project cover illustration",
       "coverLightImage": "/projects/proj-engineering-operations/media/operations-unified-v2.webp"
