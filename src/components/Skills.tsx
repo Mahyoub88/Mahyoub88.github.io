@@ -3,6 +3,7 @@ import { Container } from './Container'
 
 export function Skills() {
   const { content } = useContent()
+  const toolGroups = [...content.tools.reduce((map, tool) => map.set(tool.group ?? '', [...(map.get(tool.group ?? '') ?? []), tool]), new Map<string, typeof content.tools>())]
 
   return (
     <section id="skills" className="pb-14 pt-20">
@@ -35,23 +36,27 @@ export function Skills() {
         </div>
 
         {content.tools.length > 0 && (
-          <div className="mt-6 rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] p-6 shadow-[var(--shadow-card)]">
-            <h3 className="mb-4 text-sm font-semibold tracking-wide text-[var(--text-3)]">
-              WHERE &amp; HOW I WORK
-            </h3>
-            <div className="grid grid-cols-4 gap-6 sm:grid-cols-6 lg:grid-cols-8">
-              {content.tools.map((tool) => (
-                <div key={tool.id} className="flex flex-col items-center gap-2" title={tool.label}>
-                  <span
-                    className="flex h-12 w-12 items-center justify-center rounded-xl text-base font-bold"
-                    style={{ backgroundColor: `${tool.color}26`, color: tool.color }}
-                  >
-                    {tool.abbr}
-                  </span>
-                  <span className="text-center text-xs text-[var(--text-3)]">{tool.label}</span>
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            {toolGroups.map(([heading, tools]) => (
+              <div key={heading} className="rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] p-6 shadow-[var(--shadow-card)]">
+                {heading && (
+                  <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-[var(--text-3)]">{heading}</h3>
+                )}
+                <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
+                  {tools.map((tool) => (
+                    <div key={tool.id} className="flex flex-col items-center gap-2" title={tool.label}>
+                      <span
+                        className="flex h-12 w-12 items-center justify-center rounded-xl text-base font-bold"
+                        style={{ backgroundColor: `${tool.color}26`, color: tool.color }}
+                      >
+                        {tool.abbr}
+                      </span>
+                      <span className="text-center text-xs text-[var(--text-3)]">{tool.label}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         )}
       </Container>

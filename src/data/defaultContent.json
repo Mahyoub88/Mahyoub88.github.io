@@ -113,49 +113,57 @@
       "id": "tool-1",
       "label": "UAE",
       "abbr": "📍",
-      "color": "#3B82F6"
+      "color": "#3B82F6",
+      "group": "Where I've worked"
     },
     {
       "id": "tool-2",
       "label": "Saudi Arabia",
       "abbr": "📍",
-      "color": "#22C55E"
+      "color": "#22C55E",
+      "group": "Where I've worked"
     },
     {
       "id": "tool-3",
       "label": "Oman",
       "abbr": "📍",
-      "color": "#06B6D4"
+      "color": "#06B6D4",
+      "group": "Where I've worked"
     },
     {
       "id": "tool-4",
       "label": "Rwanda · Iraq · Kenya",
       "abbr": "🌍",
-      "color": "#F59E0B"
+      "color": "#F59E0B",
+      "group": "Where I've worked"
     },
     {
       "id": "tool-5",
       "label": "Install & Integrate",
       "abbr": "🔗",
-      "color": "#6366F1"
+      "color": "#6366F1",
+      "group": "How I work"
     },
     {
       "id": "tool-6",
       "label": "FAT / SAT",
       "abbr": "✅",
-      "color": "#EF4444"
+      "color": "#EF4444",
+      "group": "How I work"
     },
     {
       "id": "tool-7",
       "label": "Commission & Calibrate",
       "abbr": "🎯",
-      "color": "#0EA5E9"
+      "color": "#0EA5E9",
+      "group": "How I work"
     },
     {
       "id": "tool-8",
       "label": "Support & Root-Cause",
       "abbr": "🛠️",
-      "color": "#10B981"
+      "color": "#10B981",
+      "group": "How I work"
     }
   ],
   "stats": [
