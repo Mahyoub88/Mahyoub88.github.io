@@ -108,56 +108,7 @@
       "label": "Applied AI & Computer Vision"
     }
   ],
-  "tools": [
-    {
-      "id": "tool-1",
-      "label": "ITS",
-      "abbr": "🚦",
-      "color": "#3B82F6"
-    },
-    {
-      "id": "tool-2",
-      "label": "Machine Vision",
-      "abbr": "📷",
-      "color": "#22C55E"
-    },
-    {
-      "id": "tool-3",
-      "label": "LiDAR",
-      "abbr": "📡",
-      "color": "#06B6D4"
-    },
-    {
-      "id": "tool-4",
-      "label": "Integration",
-      "abbr": "🔗",
-      "color": "#F59E0B"
-    },
-    {
-      "id": "tool-5",
-      "label": "Python",
-      "abbr": "🐍",
-      "color": "#6366F1"
-    },
-    {
-      "id": "tool-6",
-      "label": "PyTorch",
-      "abbr": "🔥",
-      "color": "#EF4444"
-    },
-    {
-      "id": "tool-7",
-      "label": "Networking",
-      "abbr": "🌐",
-      "color": "#0EA5E9"
-    },
-    {
-      "id": "tool-8",
-      "label": "Embedded",
-      "abbr": "⚙️",
-      "color": "#10B981"
-    }
-  ],
+  "tools": [],
   "stats": [
     {
       "id": "stat-1",
@@ -1286,7 +1237,7 @@
         "Systems Integration",
         "Camera Systems",
         "LiDAR & Sensor Integration",
-        "Smart City Infrastructure"
+        "Systems Engineering"
       ]
     },
     {
@@ -1294,11 +1245,10 @@
       "category": "TESTING, COMMISSIONING & OPERATIONS",
       "items": [
         "FAT / SAT",
-        "Testing & Commissioning",
+        "Commissioning",
         "Calibration",
         "Interface Validation",
         "Performance Verification",
-        "Troubleshooting",
         "Root-Cause Analysis",
         "Technical Documentation"
       ]
@@ -1355,7 +1305,7 @@
     },
     {
       "id": "exp-cat-7",
-      "category": "MARINE AUTONOMY & USV INTEGRATION — IN-DEPTH STUDY",
+      "category": "SELF-STUDY — MARINE AUTONOMY & USV INTEGRATION",
       "items": [
         "USV / MASS Concepts",
         "Marine Navigation (Heading, COG/SOG, XTE)",

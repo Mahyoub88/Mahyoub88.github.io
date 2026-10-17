@@ -34,24 +34,26 @@ export function Skills() {
           ))}
         </div>
 
-        <div className="mt-6 rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] p-6 shadow-[var(--shadow-card)]">
-          <h3 className="mb-4 text-sm font-semibold tracking-wide text-[var(--text-3)]">
-            TOOLS &amp; TECHNOLOGIES
-          </h3>
-          <div className="grid grid-cols-4 gap-6 sm:grid-cols-6 lg:grid-cols-8">
-            {content.tools.map((tool) => (
-              <div key={tool.id} className="flex flex-col items-center gap-2" title={tool.label}>
-                <span
-                  className="flex h-12 w-12 items-center justify-center rounded-xl text-base font-bold"
-                  style={{ backgroundColor: `${tool.color}26`, color: tool.color }}
-                >
-                  {tool.abbr}
-                </span>
-                <span className="text-center text-xs text-[var(--text-3)]">{tool.label}</span>
-              </div>
-            ))}
+        {content.tools.length > 0 && (
+          <div className="mt-6 rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] p-6 shadow-[var(--shadow-card)]">
+            <h3 className="mb-4 text-sm font-semibold tracking-wide text-[var(--text-3)]">
+              TOOLS &amp; TECHNOLOGIES
+            </h3>
+            <div className="grid grid-cols-4 gap-6 sm:grid-cols-6 lg:grid-cols-8">
+              {content.tools.map((tool) => (
+                <div key={tool.id} className="flex flex-col items-center gap-2" title={tool.label}>
+                  <span
+                    className="flex h-12 w-12 items-center justify-center rounded-xl text-base font-bold"
+                    style={{ backgroundColor: `${tool.color}26`, color: tool.color }}
+                  >
+                    {tool.abbr}
+                  </span>
+                  <span className="text-center text-xs text-[var(--text-3)]">{tool.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </Container>
     </section>
   )
