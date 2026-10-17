@@ -21,11 +21,15 @@ export function ToolsSection({
           label: 'New Tool',
           abbr: '?',
           color: '#3b82f6',
+          group: '',
         })}
         renderItem={(item, update) => (
-          <div className="grid grid-cols-4 gap-3">
+          <div className="grid grid-cols-5 gap-3">
             <Field label="Label">
               <TextInput value={item.label} onChange={(e) => update({ label: e.target.value })} />
+            </Field>
+            <Field label="Group" hint="Card heading">
+              <TextInput value={item.group ?? ''} onChange={(e) => update({ group: e.target.value })} />
             </Field>
             <Field label="Badge text" hint="1-2 chars/emoji">
               <TextInput

@@ -21,6 +21,8 @@ export interface ToolBadge {
   label: string
   abbr: string
   color: string
+  /** Heading of the card this badge is shown in; badges with no group share one card. */
+  group?: string
 }
 
 export interface Stat {
