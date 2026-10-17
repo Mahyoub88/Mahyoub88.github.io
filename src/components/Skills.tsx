@@ -37,7 +37,7 @@ export function Skills() {
         {content.tools.length > 0 && (
           <div className="mt-6 rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] p-6 shadow-[var(--shadow-card)]">
             <h3 className="mb-4 text-sm font-semibold tracking-wide text-[var(--text-3)]">
-              TOOLS &amp; TECHNOLOGIES
+              WHERE &amp; HOW I WORK
             </h3>
             <div className="grid grid-cols-4 gap-6 sm:grid-cols-6 lg:grid-cols-8">
               {content.tools.map((tool) => (
