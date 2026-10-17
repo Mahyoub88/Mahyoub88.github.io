@@ -72,6 +72,23 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Actual borders stay visible when fractional grid widths round at browser zoom. */
+.career-highlights > * {
+  border: 0 solid var(--border-1);
+  border-block-start-width: 1px;
+}
+.career-highlights > :first-child {
+  border-block-start-width: 0;
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  .career-highlights > :nth-child(-n + 2) {
+    border-block-start-width: 0;
+  }
+  .career-highlights > :nth-child(2n) {
+    border-inline-start-width: 1px;
+  }
+}
+
 body {
   margin: 0;
   font-family: var(--font-sans);
