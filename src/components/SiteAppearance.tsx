@@ -12,6 +12,12 @@ export function SiteAppearance() {
     const color = (value: string, fallback: string) => /^#[\da-f]{6}$/i.test(value) ? value : fallback
     style.textContent = `:root { --color-brand-blue-400:${color(a.accentBlue, '#5b9dff')}; --color-brand-blue-500:${color(a.accentBlue, '#3b82f6')}; --color-brand-purple-400:${color(a.accentPurple, '#c084fc')}; --color-brand-purple-500:${color(a.accentPurple, '#a855f7')}; --surface-0:${color(a.lightBackground, '#f5f7fb')}; --surface-1:${color(a.lightSurface, '#ffffff')}; } .dark { --surface-0:${color(a.darkBackground, '#05070d')}; --surface-1:${color(a.darkSurface, '#0a0e18')}; } @media(min-width:1024px){.career-highlights{grid-template-columns:repeat(${Math.max(1, Math.min(6, Number(a.statsColumns) || 4))},minmax(0,1fr));}}`
     document.head.appendChild(style)
+    const columns = Math.max(1, Math.min(6, Number(a.statsColumns) || 4))
+    style.textContent += `@media(min-width:1024px){
+      .career-highlights > :nth-child(n){border-block-start-width:1px;border-inline-start-width:1px;}
+      .career-highlights > :nth-child(-n+${columns}){border-block-start-width:0;}
+      .career-highlights > :nth-child(${columns}n+1){border-inline-start-width:0;}
+    }`
     document.documentElement.style.setProperty('--font-sans', a.fontFamily)
     document.documentElement.lang = settings.seo.language
     return () => { style.remove(); document.documentElement.style.removeProperty('--font-sans') }
