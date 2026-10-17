@@ -192,27 +192,26 @@
     "subheading": "",
     "paragraphs": [
       "I am a Senior Service Engineer specializing in intelligent transportation systems, smart infrastructure, and traffic enforcement.",
-      "My 14 years of engineering experience span electronics, embedded systems, network infrastructure, software automation, and the integration of complex operational systems. For over 7 years at VITRONIC Machine Vision, I have supported ITS deployments across the UAE, working across cameras, LiDAR, sensors, control units, networking, databases, and backend platforms.",
-      "My work covers FAT and SAT, commissioning, calibration, interface validation, performance verification, technical documentation, incident support, and structured root-cause analysis across hardware, software, communication, and database layers.",
-      "I work closely with customers, vendors, software teams, and field engineers to resolve complex integration issues and support reliable service delivery.",
+      "My 14 years of engineering experience span electronics, embedded systems, network infrastructure, software automation, and the integration of complex operational systems. For over 7 years at VITRONIC Machine Vision, I have supported more than 800 ITS and traffic-enforcement systems across the UAE, with service assignments in six countries, working across cameras, LiDAR, sensors, control units, networking, databases, and backend platforms.",
+      "My work covers FAT and SAT, commissioning, calibration, interface validation, performance verification, technical documentation, and structured root-cause analysis across hardware, software, communication, and database layers. I work closely with customers, vendors, software teams, and field engineers to resolve complex integration issues and keep service reliable.",
       "Alongside my engineering role, I am pursuing an MSc in Artificial Intelligence at UWE Bristol. My current academic work applies machine learning and computer vision to transportation problems, with a particular focus on data quality, leakage-resistant evaluation, efficient neural networks, and model explainability.",
-      "My long-term direction is to combine real-world ITS engineering with applied computer vision to build safer, more reliable, and more intelligent mobility infrastructure."
+      "My long-term direction is to bring field-proven ITS engineering together with rigorous computer vision evaluation, so that models for traffic and mobility systems are tested on the kind of data they will meet in operation."
     ],
     "cards": [
       {
         "id": "about-card-1",
         "title": "Systems Integration",
-        "description": "Connecting field hardware, networks, databases, and backend platforms into dependable operational systems."
+        "description": "Integrating cameras, LiDAR, sensors, controllers, and backend platforms into traffic-enforcement systems; 800+ systems supported across the UAE."
       },
       {
         "id": "about-card-2",
         "title": "Field Engineering",
-        "description": "Commissioning, calibration, validation, troubleshooting, acceptance testing, and operational support."
+        "description": "FAT/SAT, commissioning, calibration, and structured root-cause analysis on live ITS sites, with assignments in six countries."
       },
       {
         "id": "about-card-3",
         "title": "Applied AI",
-        "description": "Applying machine learning and computer vision to transportation data and intelligent mobility problems."
+        "description": "MSc research on vehicle classification: leakage-controlled evaluation and efficient CNNs that cut trainable parameters by 87.24%."
       }
     ]
   },
