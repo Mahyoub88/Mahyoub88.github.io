@@ -34,7 +34,7 @@ export function Home() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[var(--surface-0)]">
+    <div className="portfolio-site min-h-screen bg-[var(--surface-0)]">
       <Header />
       <main>
         {/* Order mirrors the nav: Home, About, Experience, Selected Work,
