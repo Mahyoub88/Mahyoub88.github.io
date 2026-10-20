@@ -25,8 +25,8 @@ export function FeaturedProjects() {
         </a>
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {selected.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+          {selected.map((project, i) => (
+            <ProjectCard key={project.id} project={project} featured={i === 0} />
           ))}
         </div>
 

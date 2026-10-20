@@ -28,7 +28,7 @@ const statusStyles: Record<ProjectStatusKind, string> = {
   professional: 'border-brand-amber-400/40 bg-brand-amber-400/10 text-brand-amber-400',
 }
 
-export function ProjectCard({ project }: { project: Project }) {
+export function ProjectCard({ project, featured = false }: { project: Project; featured?: boolean }) {
   const accent = accentStyles[project.accent]
   const { theme } = useTheme()
   const previewImage = (theme === 'light' ? project.coverLightImage : project.coverImage) ?? project.coverImage ?? project.image
@@ -47,10 +47,10 @@ export function ProjectCard({ project }: { project: Project }) {
       {...(wholeCardLink
         ? { href: project.link, target: '_blank', rel: 'noreferrer' }
         : {})}
-      className={`${wholeCardLink ? 'group ' : ''}scroll-mt-24 flex flex-col overflow-hidden rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] shadow-[var(--shadow-card)] transition ${accent.ring}`}
+      className={`${wholeCardLink ? 'group ' : ''}project-card ${featured ? 'project-spotlight' : ''} scroll-mt-24 flex flex-col overflow-hidden rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] shadow-[var(--shadow-card)] transition ${accent.ring}`}
     >
       {project.status && (
-        <div className="flex min-h-14 items-center border-b border-[var(--border-1)] bg-[var(--surface-1)] px-4 py-3">
+        <div className="project-status flex min-h-14 items-center border-b border-[var(--border-1)] bg-[var(--surface-1)] px-4 py-3">
           <span
             className={`max-w-full rounded-md border px-2 py-1 text-[10px] font-semibold leading-relaxed break-words ${statusStyles[project.status.kind]}`}
           >
@@ -59,7 +59,7 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
       )}
       <div
-        className={`relative flex aspect-video items-center justify-center bg-gradient-to-br ${accent.gradient}`}
+        className={`project-cover relative flex aspect-video items-center justify-center bg-gradient-to-br ${accent.gradient}`}
       >
         <div
           aria-hidden
@@ -73,12 +73,12 @@ export function ProjectCard({ project }: { project: Project }) {
       </div>
 
       {previewCaption && (
-        <p className="border-t border-[var(--border-1)] px-4 py-2 text-xs text-[var(--text-3)]">
+        <p className="project-caption border-t border-[var(--border-1)] px-4 py-2 text-xs text-[var(--text-3)]">
           {previewCaption}
         </p>
       )}
 
-      <div className="flex flex-1 flex-col p-6">
+      <div className="project-body flex flex-1 flex-col p-6">
         <div className="mb-2 flex items-start justify-between gap-3">
           <span className={`text-xs font-semibold tracking-wide ${accent.text}`}>
             {project.category}
@@ -145,4 +145,3 @@ export function ProjectCard({ project }: { project: Project }) {
     </Wrapper>
   )
 }
-
