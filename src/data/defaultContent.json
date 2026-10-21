@@ -68,7 +68,7 @@
       "label": "Contact Me",
       "href": "#contact"
     },
-    "photoUrl": "/mahyoub.jpg",
+    "photoUrl": "/mahyoub.webp",
     "backgroundUrl": "",
     "currentFocus": [
       "Reliable ITS integration and operational performance",
@@ -199,7 +199,7 @@
     "heading": "Engineering at the Intersection of ITS, Systems Integration, and Applied AI",
     "subheading": "",
     "paragraphs": [
-      "I am a Senior Service Engineer specializing in intelligent transportation systems, smart infrastructure, and traffic enforcement. My 14 years of engineering span electronics, embedded systems, networking, and complex operational systems, including over 7 years at VITRONIC Machine Vision supporting 800+ ITS and traffic-enforcement systems across the UAE, with assignments in six countries.",
+      "I am a Senior Service Engineer specializing in intelligent transportation systems, smart infrastructure, and traffic enforcement. My engineering background spans electronics, embedded systems, networking, and complex operational systems, and at VITRONIC Machine Vision I support traffic-enforcement systems in the UAE and on international assignments.",
       "My work covers FAT and SAT, commissioning, calibration, interface validation, performance verification, and structured root-cause analysis across hardware, software, communication, and database layers, in close collaboration with customers, vendors, software teams, and field engineers.",
       "Alongside my engineering role, I am pursuing an MSc in Artificial Intelligence at UWE Bristol, applying machine learning and computer vision to transportation problems, with a focus on data quality, leakage-resistant evaluation, efficient neural networks, and explainability. My direction is to bring field-proven ITS engineering together with rigorous computer vision evaluation, so that mobility models are tested on the data they will meet in operation."
     ],
@@ -207,12 +207,12 @@
       {
         "id": "about-card-1",
         "title": "Systems Integration",
-        "description": "Integrating cameras, LiDAR, sensors, controllers, and backend platforms into traffic-enforcement systems; 800+ systems supported across the UAE."
+        "description": "Integrating cameras, LiDAR, sensors, controllers, and backend platforms into reliable traffic-enforcement systems."
       },
       {
         "id": "about-card-2",
         "title": "Field Engineering",
-        "description": "FAT/SAT, commissioning, calibration, and structured root-cause analysis on live ITS sites, with assignments in six countries."
+        "description": "FAT/SAT, commissioning, calibration, and structured root-cause analysis on live ITS sites."
       },
       {
         "id": "about-card-3",
@@ -1293,7 +1293,7 @@
         "Systems Integration",
         "Camera Systems",
         "LiDAR & Sensor Integration",
-        "Systems Engineering"
+        "Database & Backend Integration"
       ]
     },
     {
@@ -1305,8 +1305,7 @@
         "Calibration",
         "Interface Validation",
         "Performance Verification",
-        "Root-Cause Analysis",
-        "Technical Documentation"
+        "Root-Cause Analysis"
       ]
     },
     {
@@ -1314,35 +1313,23 @@
       "category": "AI & COMPUTER VISION",
       "items": [
         "Python",
-        "Machine Learning",
-        "Deep Learning",
         "PyTorch",
-        "Convolutional Neural Networks",
+        "Scikit-learn",
         "Computer Vision",
-        "Grad-CAM",
-        "Model Evaluation",
-        "Data Preprocessing",
-        "Feature Engineering",
-        "Scikit-learn"
+        "Convolutional Neural Networks",
+        "Grad-CAM"
       ]
     },
     {
       "id": "exp-cat-4",
       "category": "NETWORKS & PLATFORMS",
       "items": [
-        "Network Infrastructure",
         "Routing & Switching",
-        "MPLS",
-        "OSPF",
-        "BGP",
+        "MPLS / OSPF / BGP",
         "VPN & Firewalls",
-        "MikroTik",
-        "Ubiquiti",
+        "MikroTik & Ubiquiti",
         "VMware ESXi",
-        "Database & Backend Integration",
-        "VoIP & Cisco Unified Communications",
-        "IMS / SIP / VoLTE",
-        "GNS3 & OPNET Simulation"
+        "VoIP & IMS / SIP / VoLTE"
       ]
     },
     {
@@ -1351,9 +1338,7 @@
       "items": [
         "Embedded Systems",
         "PIC / AVR / Arduino",
-        "Microcontrollers",
         "Sensor-Based Automation",
-        "IoT",
         "RFID Systems",
         "VB.NET",
         "Hardware Debugging"
@@ -1364,15 +1349,11 @@
       "category": "SELF-STUDY — MARINE AUTONOMY & USV INTEGRATION",
       "items": [
         "USV / MASS Concepts",
-        "Marine Navigation (Heading, COG/SOG, XTE)",
         "Sensor Fusion (GNSS, IMU, Radar, AIS)",
         "Autopilot & PID Heading Control",
-        "NMEA 2000 / NMEA 0183 & PGNs",
-        "Radar / ARPA (CPA, TCPA)",
+        "NMEA 2000 / 0183 & PGNs",
         "COLREGs",
-        "Vessel Networks & Link Failover",
-        "SocketCAN & Linux Diagnostics",
-        "Safety, FMEA & ICD"
+        "Vessel Networks & Link Failover"
       ]
     },
     {

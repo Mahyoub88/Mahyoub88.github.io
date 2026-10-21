@@ -112,6 +112,10 @@ export function Hero() {
                 <img
                   src={hero.photoUrl}
                   alt={hero.greetingName}
+                  width="640"
+                  height="960"
+                  fetchPriority="high"
+                  decoding="async"
                   className="absolute inset-0 h-full w-full object-cover object-top"
                 />
               ) : (
