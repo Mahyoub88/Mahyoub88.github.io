@@ -2,7 +2,13 @@ import { MapPin, Send } from 'lucide-react'
 import { useContent } from '../context/ContentContext'
 import { Container } from './Container'
 import { openMail } from './openMail'
+import { WhatsAppIcon } from './BrandIcons'
 import { SocialIcons } from './SocialIcons'
+
+const WHATSAPP_GREETING = 'Hello Mohammed, I came across your portfolio and would like to get in touch.'
+
+const primaryButton =
+  'inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue-500 to-brand-purple-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-blue-500/25 transition hover:brightness-110'
 
 export function Contact() {
   const { content } = useContent()
@@ -36,14 +42,22 @@ export function Contact() {
             </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-6">
-              <button
-                type="button"
-                onClick={() => openMail(contact.email)}
-                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue-500 to-brand-purple-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-blue-500/25 transition hover:brightness-110"
-              >
-                <Send size={16} />
-                Send a Message
-              </button>
+              {contact.whatsapp ? (
+                <a
+                  href={`https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(WHATSAPP_GREETING)}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={primaryButton}
+                >
+                  <WhatsAppIcon size={18} aria-hidden="true" />
+                  WhatsApp
+                </a>
+              ) : (
+                <button type="button" onClick={() => openMail(contact.email)} className={primaryButton}>
+                  <Send size={16} />
+                  Send a Message
+                </button>
+              )}
               <SocialIcons links={content.social} />
             </div>
           </div>

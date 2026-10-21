@@ -29,13 +29,18 @@ export function ContactSocialSection({
           <Field label="Email">
             <TextInput value={contact.email} onChange={(e) => update({ email: e.target.value })} />
           </Field>
+          <Field label="WhatsApp number" hint="Digits only with country code, e.g. 9715XXXXXXXX. Leave empty to use email for the contact button.">
+            <TextInput
+              value={contact.whatsapp ?? ''}
+              onChange={(e) => update({ whatsapp: e.target.value.replace(/\D/g, '') })}
+            />
+          </Field>
           <Field label="Location">
             <TextInput
               value={contact.location}
               onChange={(e) => update({ location: e.target.value })}
             />
           </Field>
-          <div />
           <div className="sm:col-span-2">
             <Field label="Subheading">
               <TextArea
