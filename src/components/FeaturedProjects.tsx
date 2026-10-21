@@ -1,3 +1,4 @@
+import { ChevronDown } from 'lucide-react'
 import { useContent } from '../context/ContentContext'
 import { Container } from './Container'
 import { ProjectCard } from './ProjectCard'
@@ -31,17 +32,28 @@ export function FeaturedProjects() {
         </div>
 
         {earlier.length > 0 && (
-          <div className="mt-16">
-            <h3 className="text-lg font-bold text-[var(--text-1)]">Engineering Implementations</h3>
-            <p className="mt-2 max-w-2xl text-sm text-[var(--text-3)]">
-              Completed work across communications, infrastructure, software, embedded systems and automation.
-            </p>
+          <details className="group mt-16 rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] p-6 shadow-[var(--shadow-card)]">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+              <span>
+                <span className="block text-lg font-bold text-[var(--text-1)]">
+                  More work ({earlier.length})
+                </span>
+                <span className="mt-1 block max-w-2xl text-sm text-[var(--text-3)]">
+                  Completed work across communications, infrastructure, software, embedded systems and automation.
+                </span>
+              </span>
+              <ChevronDown
+                size={20}
+                aria-hidden="true"
+                className="shrink-0 text-brand-blue-400 transition group-open:rotate-180"
+              />
+            </summary>
             <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {earlier.map((project) => (
                 <ProjectCard key={project.id} project={project} />
               ))}
             </div>
-          </div>
+          </details>
         )}
         <nav aria-label="Related project collections" className="mt-10 flex flex-wrap gap-4 text-sm text-[var(--text-3)]">
           <a id="proj-monitoring-apps" className="scroll-mt-24" href="/projects/proj-engineering-operations/">Engineering operations suite</a>

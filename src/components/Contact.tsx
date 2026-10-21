@@ -1,6 +1,7 @@
-import { Mail, MapPin, Send } from 'lucide-react'
+import { MapPin, Send } from 'lucide-react'
 import { useContent } from '../context/ContentContext'
 import { Container } from './Container'
+import { openMail } from './openMail'
 import { SocialIcons } from './SocialIcons'
 
 export function Contact() {
@@ -26,13 +27,6 @@ export function Contact() {
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 rounded-2xl border border-[var(--border-1)] bg-[var(--surface-1)] px-6 py-5 shadow-[var(--shadow-card)]">
-              <a
-                href={`mailto:${contact.email}`}
-                className="flex items-center gap-2 text-sm text-[var(--text-2)] transition hover:text-brand-blue-400"
-              >
-                <Mail size={16} className="text-brand-blue-400" />
-                {contact.email}
-              </a>
               {contact.location && (
                 <span className="flex items-center gap-2 text-sm text-[var(--text-2)]">
                   <MapPin size={16} className="text-brand-purple-400" />
@@ -42,13 +36,14 @@ export function Contact() {
             </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-6">
-              <a
-                href={`mailto:${contact.email}`}
+              <button
+                type="button"
+                onClick={() => openMail(contact.email)}
                 className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue-500 to-brand-purple-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-blue-500/25 transition hover:brightness-110"
               >
                 <Send size={16} />
                 Send a Message
-              </a>
+              </button>
               <SocialIcons links={content.social} />
             </div>
           </div>
