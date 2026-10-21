@@ -1,5 +1,11 @@
 import { useContent } from '../context/ContentContext'
 import { Container } from './Container'
+import { getIcon, iconRegistry } from '../data/icons'
+
+function ToolGlyph({ name }: { name: string }) {
+  const Icon = getIcon(name)
+  return <Icon size={22} aria-hidden="true" />
+}
 
 export function Skills() {
   const { content } = useContent()
@@ -49,7 +55,11 @@ export function Skills() {
                         className="flex h-12 w-12 items-center justify-center rounded-xl text-base font-bold"
                         style={{ backgroundColor: `${tool.color}26`, color: tool.color }}
                       >
-                        {tool.abbr}
+                        {iconRegistry[tool.abbr] ? (
+                          <ToolGlyph name={tool.abbr} />
+                        ) : (
+                          tool.abbr
+                        )}
                       </span>
                       <span className="text-center text-xs text-[var(--text-3)]">{tool.label}</span>
                     </div>

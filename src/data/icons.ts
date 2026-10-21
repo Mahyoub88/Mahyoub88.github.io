@@ -29,6 +29,9 @@ import {
   ShieldCheck,
   Camera,
   Wrench,
+  MapPin,
+  CheckCircle2,
+  Target,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -63,6 +66,9 @@ export const iconRegistry: Record<string, LucideIcon> = {
   shield: ShieldCheck,
   camera: Camera,
   wrench: Wrench,
+  mapPin: MapPin,
+  check: CheckCircle2,
+  target: Target,
 }
 
 export type IconKey = keyof typeof iconRegistry

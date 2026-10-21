@@ -132,8 +132,8 @@ export function ProjectsSection({
                     value={item.group ?? 'selected'}
                     onChange={(e) => update({ group: e.target.value as Project['group'] })}
                   >
-                    <option value="selected">Selected Work</option>
-                    <option value="earlier">Earlier Engineering Work</option>
+                    <option value="selected">Selected Work (featured)</option>
+                    <option value="earlier">More work (collapsed)</option>
                   </SelectInput>
                 </Field>
                 <Field label="Status badge type">

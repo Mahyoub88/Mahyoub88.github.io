@@ -112,56 +112,56 @@
     {
       "id": "tool-1",
       "label": "UAE",
-      "abbr": "📍",
+      "abbr": "mapPin",
       "color": "#3B82F6",
       "group": "Where I've worked"
     },
     {
       "id": "tool-2",
       "label": "Saudi Arabia",
-      "abbr": "📍",
+      "abbr": "mapPin",
       "color": "#22C55E",
       "group": "Where I've worked"
     },
     {
       "id": "tool-3",
       "label": "Oman",
-      "abbr": "📍",
+      "abbr": "mapPin",
       "color": "#06B6D4",
       "group": "Where I've worked"
     },
     {
       "id": "tool-4",
       "label": "Rwanda · Iraq · Kenya",
-      "abbr": "🌍",
+      "abbr": "globe",
       "color": "#F59E0B",
       "group": "Where I've worked"
     },
     {
       "id": "tool-5",
       "label": "Install & Integrate",
-      "abbr": "🔗",
+      "abbr": "link",
       "color": "#6366F1",
       "group": "How I work"
     },
     {
       "id": "tool-6",
       "label": "FAT / SAT",
-      "abbr": "✅",
+      "abbr": "check",
       "color": "#EF4444",
       "group": "How I work"
     },
     {
       "id": "tool-7",
       "label": "Commission & Calibrate",
-      "abbr": "🎯",
+      "abbr": "target",
       "color": "#0EA5E9",
       "group": "How I work"
     },
     {
       "id": "tool-8",
       "label": "Support & Root-Cause",
-      "abbr": "🛠️",
+      "abbr": "wrench",
       "color": "#10B981",
       "group": "How I work"
     }
@@ -199,11 +199,9 @@
     "heading": "Engineering at the Intersection of ITS, Systems Integration, and Applied AI",
     "subheading": "",
     "paragraphs": [
-      "I am a Senior Service Engineer specializing in intelligent transportation systems, smart infrastructure, and traffic enforcement.",
-      "My 14 years of engineering experience span electronics, embedded systems, network infrastructure, software automation, and the integration of complex operational systems. For over 7 years at VITRONIC Machine Vision, I have supported more than 800 ITS and traffic-enforcement systems across the UAE, with service assignments in six countries, working across cameras, LiDAR, sensors, control units, networking, databases, and backend platforms.",
-      "My work covers FAT and SAT, commissioning, calibration, interface validation, performance verification, technical documentation, and structured root-cause analysis across hardware, software, communication, and database layers. I work closely with customers, vendors, software teams, and field engineers to resolve complex integration issues and keep service reliable.",
-      "Alongside my engineering role, I am pursuing an MSc in Artificial Intelligence at UWE Bristol. My current academic work applies machine learning and computer vision to transportation problems, with a particular focus on data quality, leakage-resistant evaluation, efficient neural networks, and model explainability.",
-      "My long-term direction is to bring field-proven ITS engineering together with rigorous computer vision evaluation, so that models for traffic and mobility systems are tested on the kind of data they will meet in operation."
+      "I am a Senior Service Engineer specializing in intelligent transportation systems, smart infrastructure, and traffic enforcement. My 14 years of engineering span electronics, embedded systems, networking, and complex operational systems, including over 7 years at VITRONIC Machine Vision supporting 800+ ITS and traffic-enforcement systems across the UAE, with assignments in six countries.",
+      "My work covers FAT and SAT, commissioning, calibration, interface validation, performance verification, and structured root-cause analysis across hardware, software, communication, and database layers, in close collaboration with customers, vendors, software teams, and field engineers.",
+      "Alongside my engineering role, I am pursuing an MSc in Artificial Intelligence at UWE Bristol, applying machine learning and computer vision to transportation problems, with a focus on data quality, leakage-resistant evaluation, efficient neural networks, and explainability. My direction is to bring field-proven ITS engineering together with rigorous computer vision evaluation, so that mobility models are tested on the data they will meet in operation."
     ],
     "cards": [
       {
@@ -237,9 +235,7 @@
           "bullets": [
             "Integrate cameras, LiDAR, sensors, controllers, networks, databases and backend platforms into reliable ITS and traffic-enforcement systems.",
             "Perform FAT/SAT, commissioning, calibration, interface validation and performance verification.",
-            "Diagnose complex hardware, software, communication and database faults using structured root-cause analysis.",
-            "Coordinate incident resolution, preventive maintenance, upgrades and configuration changes with customers, vendors and software teams.",
-            "Prepare test records, technical reports, incident analyses and handover documentation."
+            "Diagnose complex hardware, software, communication and database faults using structured root-cause analysis."
           ]
         },
         {
@@ -248,7 +244,6 @@
           "description": "Installation, integration, calibration, testing, preventive maintenance and technical support across field equipment, networks and backend interfaces.",
           "bullets": [
             "Installed, integrated, commissioned and supported intelligent transportation and traffic-enforcement systems.",
-            "Worked across cameras, LiDAR, sensors, controllers, networks and backend interfaces.",
             "Performed calibration, functional testing, acceptance activities, preventive maintenance and fault diagnosis.",
             "Prepared service reports, test records and technical documentation; coordinated technical support with customers and engineering teams."
           ]
@@ -282,9 +277,7 @@
       "bullets": [
         "Developed monitoring and automation applications using PIC, AVR, and Arduino microcontrollers.",
         "Integrated sensors, controllers, displays, communication modules, and peripheral devices.",
-        "Performed PCB prototyping, hardware debugging, functional testing, and technical validation.",
-        "Built VB.NET desktop applications for monitoring, diagnostics, reporting, and operational workflow support.",
-        "Prepared technical documentation and provided continuous troubleshooting and customer support."
+        "Built VB.NET desktop applications for monitoring, diagnostics, reporting, and operational workflow support."
       ],
       "tags": [
         "Embedded Systems",
@@ -310,9 +303,7 @@
       "bullets": [
         "Designed and supported wired and wireless network infrastructure using Cisco, MikroTik, and Ubiquiti technologies.",
         "Configured and operated routing, switching, firewall, VPN, MPLS, OSPF, BGP, and VRF.",
-        "Performed wireless coverage planning, point-to-point link design, network troubleshooting, and performance analysis.",
-        "Developed engineering tools for RF calculations, reporting, and technical workflows.",
-        "Prepared network diagrams, simulations, configurations, engineering calculations, and technical reports."
+        "Performed wireless coverage planning, point-to-point link design, network troubleshooting, and performance analysis."
       ],
       "tags": [
         "Networking",
@@ -635,7 +626,7 @@
     },
     {
       "id": "proj-sdn",
-      "group": "selected",
+      "group": "earlier",
       "category": "Software-Defined Networking · Network Automation",
       "title": "Software-Defined Networking — Automation & Video Streaming",
       "description": "Implemented an OpenDaylight/OpenFlow network with Mininet and real IP network integration, using controller APIs to automate forwarding and evaluate video streaming. A separate Ryu/Open vSwitch extension provides reproducible measurements.",
