@@ -26,7 +26,7 @@ The public LinkedIn summary reports 87.24% fewer parameters and 81.67% fewer MAC
 
 ## Explainability and access
 
-Grad-CAM investigates attention to vehicle regions and preprocessing padding. These public summaries do not release the assessment notebook, source code or private dataset artifacts. Code remains private during assessment.
+Grad-CAM investigates attention to vehicle regions and preprocessing padding. Padding attention stayed below the geometric null; however, padding geometry itself encodes aspect ratio, so it is not a fully neutral artefact. The notebook and source code are public in the [project repository](https://github.com/Mahyoub88/VTID2-Efficient-Vehicle-Type-Classification); the VTID2 dataset itself is not redistributed.
 
 ## Evidence to review or collect
 
@@ -40,6 +40,8 @@ The following are suggested review checks. A checklist entry is not a claimed pa
 ## Sources and provenance
 
 - [Published portfolio description](https://mahyoub88.github.io/#proj-vtid2).
+- [Public repository and executed notebook](https://github.com/Mahyoub88/VTID2-Efficient-Vehicle-Type-Classification).
+- [Author ORCID](https://orcid.org/0009-0003-5640-352X).
 - [LinkedIn projects](https://www.linkedin.com/in/mohammed-mahyoub/details/projects/): supplementary descriptions and project media.
 - New SVG figures and explanatory text were authored for this documentation update; they are not original photographs or new measured results.
-- Original implementation photos and raw results were not available in the inspected public repository; the new diagrams provide explanation without substituting for that evidence.
+- Executed-notebook figures are published in the repository engineering guide; the new diagrams provide explanation without substituting for that evidence.

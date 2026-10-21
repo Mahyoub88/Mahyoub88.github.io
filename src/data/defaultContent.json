@@ -420,14 +420,18 @@
         "Data Quality"
       ],
       "status": {
-        "kind": "academic",
-        "label": "Academic Research — Code Private During Assessment"
+        "kind": "public",
+        "label": "Public Repository · MSc Artificial Intelligence Research"
       },
       "link": "",
       "links": [
         {
           "label": "Read case study",
           "href": "/projects/proj-vtid2/"
+        },
+        {
+          "label": "View repository",
+          "href": "https://github.com/Mahyoub88/VTID2-Efficient-Vehicle-Type-Classification"
         }
       ],
       "accent": "purple",

@@ -41,7 +41,6 @@ for(const p of content.projects){
  if(!p.coverImage || !p.coverAlt || !p.coverCaption)errors.push(`${p.id}: cover provenance metadata missing`);
  if(p.coverImage && !existsMedia(p.coverImage))errors.push(`${p.id}: generated cover file missing`);
  if(!p.coverLightImage || !existsMedia(p.coverLightImage))errors.push(`${p.id}: light-theme cover missing`);
- if(p.links.some(l=>l.href.includes('VTID2-Efficient-Vehicle-Type-Classification')))errors.push(`${p.id}: private assessment repository exposed`);
  if(!existsMedia(p.image))errors.push(`${p.id}: preview image missing`);
 }
 if(errors.length){console.error(errors.join('\n'));process.exitCode=1;}else console.log(`Verified ${content.projects.length} canonical projects, ${pages} pages and ${links} local resources/anchors.`);

@@ -3,7 +3,7 @@
 Generated from `src/data/defaultContent.json` using `npm run sync:projects`. The same titles, links, status labels and preview media drive the homepage and case-study index.
 
 1. [ITS Systems Integration & Traffic Enforcement Support](https://mahyoub88.github.io/projects/proj-its-support/) — [View repository](https://github.com/Mahyoub88/its-systems-integration)
-2. [Efficient Neural Network Architectures for Vehicle Type Classification](https://mahyoub88.github.io/projects/proj-vtid2/) — Public summary; code private during assessment.
+2. [Efficient Neural Network Architectures for Vehicle Type Classification](https://mahyoub88.github.io/projects/proj-vtid2/) — [View repository](https://github.com/Mahyoub88/VTID2-Efficient-Vehicle-Type-Classification)
 3. [Vehicle Type Classification Using NGSIM US-101](https://mahyoub88.github.io/projects/proj-ngsim/) — [View repository](https://github.com/Mahyoub88/Predicting-Vehicle-Type-Using-NGSIM-US101)
 4. [Reconnaissance Robot — RGB-D Mapping & Remote Control](https://mahyoub88.github.io/projects/proj-reconnaissance-robot/) — [View repository](https://github.com/Mahyoub88/reconnaissance-robot-rgbd)
 5. [Autonomous Quadcopter UAV — Flight Control, Telemetry & FPV](https://mahyoub88.github.io/projects/proj-quadcopter-uav/) — [View repository](https://github.com/Mahyoub88/autonomous-quadcopter-uav)

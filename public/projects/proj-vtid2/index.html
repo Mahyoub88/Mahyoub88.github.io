@@ -28,7 +28,7 @@
 <p class="eyebrow">MSc Artificial Intelligence Research · Computer Vision · PyTorch</p>
 <h1>Efficient Neural Network Architectures for Vehicle Type Classification</h1>
 <p class="lede">Developed and evaluated neural network architectures for vehicle type classification using the VTID2 image dataset. The evaluated architectures included an MLP, a standard CNN, an efficient depthwise-separable CNN, and an efficient CNN with Squeeze-and-Excitation.</p>
-<span class="badge">Academic Research — Code Private During Assessment</span>
+<span class="badge">Public Repository · MSc Artificial Intelligence Research</span>
 <figure class="hero-media">
 <a href="/projects/proj-vtid2/media/published-efficiency.svg">
 <img src="/projects/proj-vtid2/media/published-efficiency.svg" alt="Efficient Neural Network Architectures for Vehicle Type Classification — published result summary" fetchpriority="high">
@@ -108,7 +108,7 @@
 <p>The public research compares an MLP, a standard CNN, a depthwise-separable efficient CNN and an efficient CNN with Squeeze-and-Excitation. The reported efficient-CNN comparison gives 87.24% fewer parameters, 81.67% fewer MACs and a mean Macro-F1 difference of 0.0150. These are existing public summary values, not new training results.</p>
 <p>The data audit reports 4,356 valid images and 1,931 exact-unique images after 2,425 redundant copies are identified. An image-level split can place identical content on both sides of an evaluation boundary. A defensible explanation therefore puts duplicate grouping and split identity before architecture comparison. Protocol changes in data composition and training settings also mean a conventional-versus-controlled gap is not a causal estimate of leakage.</p>
 <p>Parameter count, MACs and measured latency describe different costs. Reduced arithmetic does not guarantee the same latency improvement on every device; batch size, input shape, precision, warm-up and the execution environment affect a timing measurement. The available public figures do not establish a deployment benchmark or an absolute latency number.</p>
-<p>Grad-CAM provides a class-related visual explanation, not proof that a prediction is causally correct. A useful figure would show input, predicted/true class and heatmap together, with attention to vehicle regions and letterbox padding. The assessment notebook, training curves, classwise confusion matrices and actual Grad-CAM panels remain private. No generated heatmap is substituted for an executed model output.</p>
+<p>Grad-CAM provides a class-related visual explanation, not proof that a prediction is causally correct. A useful figure would show input, predicted/true class and heatmap together, with attention to vehicle regions and letterbox padding. The executed notebook is now public; its training curves, classwise confusion matrices and actual Grad-CAM panels appear in the source gallery below. No generated heatmap is substituted for an executed model output.</p>
 <figure>
 <a href="media/engineering-review.svg">
 <img loading="lazy" src="media/engineering-review.svg" alt="Reporting efficiency without hiding evaluation assumptions — explanatory engineering review">
@@ -157,7 +157,7 @@
 <a href="https://arxiv.org/abs/1610.02391">Grad-CAM — original research paper</a>
 </li>
 </ul>
-<p class="source-note">Only already-public aggregate research claims are expanded here. Private assessment artifacts are not released.</p>
+<p class="source-note">Reported figures come from the executed notebook in the public repository. Explanatory diagrams are labeled as such.</p>
 </section>
 <section id="engineering">
 <h2>Engineering rationale</h2>
@@ -168,7 +168,7 @@
 <h3>Interpretation of published results</h3>
 <p>The public LinkedIn summary reports 87.24% fewer parameters and 81.67% fewer MACs for the efficient CNN, with a mean Macro-F1 difference of 0.0150. Conventional and controlled protocols also differ in data composition and training settings; their performance gap is a diagnostic comparison, not a causal estimate of leakage.</p>
 <h3>Explainability and access</h3>
-<p>Grad-CAM investigates attention to vehicle regions and preprocessing padding. These public summaries do not release the assessment notebook, source code or private dataset artifacts. Code remains private during assessment.</p>
+<p>Grad-CAM investigates attention to vehicle regions and preprocessing padding. Padding attention stayed below the geometric null; however, padding geometry itself encodes aspect ratio, so it is not a fully neutral artefact. The notebook and source code are available in the public repository; the VTID2 dataset itself is not redistributed.</p>
 </section>
 <section id="evidence">
 <h2>Evidence and validation</h2>
@@ -181,11 +181,94 @@
 </ul>
 </section>
 <section id="gallery">
-<h2>Source context</h2>
-<p>The chart visualizes the efficiency reductions already reported in the public project summary. It does not expose private assessment materials. Grad-CAM examples, training curves and confusion matrices remain outside this public release.</p>
+<h2>Source gallery</h2>
+<p>Figures exported from the executed notebook in the public repository. Each caption states what the output shows.</p>
+<div class="grid">
+<figure>
+<a href="media/01-aspect-ratio-by-class.png">
+<img loading="lazy" src="media/01-aspect-ratio-by-class.png" alt="Aspect-ratio (width/height) distribution by vehicle class. The “Other” class is the only one taller than it is wide, which later matters for letterbox padding."/>
+</a>
+<figcaption>Aspect-ratio (width/height) distribution by vehicle class. The “Other” class is the only one taller than it is wide, which later matters for letterbox padding. Source: executed VTID2 notebook output 1.</figcaption>
+</figure>
+<figure>
+<a href="media/02-ssim-candidate-distribution.png">
+<img loading="lazy" src="media/02-ssim-candidate-distribution.png" alt="SSIM distribution across perceptual-hash candidate pairs; a large mass near 1.0 signals visually near-identical images."/>
+</a>
+<figcaption>SSIM distribution across perceptual-hash candidate pairs; a large mass near 1.0 signals visually near-identical images. Source: executed VTID2 notebook output 2.</figcaption>
+</figure>
+<figure>
+<a href="media/03-near-duplicate-threshold-sensitivity.png">
+<img loading="lazy" src="media/03-near-duplicate-threshold-sensitivity.png" alt="Retained near-duplicate candidate pairs as the SSIM threshold rises from 0.80 to 0.94. Same-class pairs dominate; cross-class pairs stay at zero."/>
+</a>
+<figcaption>Retained near-duplicate candidate pairs as the SSIM threshold rises from 0.80 to 0.94. Same-class pairs dominate; cross-class pairs stay at zero. Source: executed VTID2 notebook output 3.</figcaption>
+</figure>
+<figure>
+<a href="media/04-verified-near-duplicate-pairs.jpg">
+<img loading="lazy" src="media/04-verified-near-duplicate-pairs.jpg" alt="Verified near-duplicate pairs around the selected SSIM threshold — the same vehicle captured in near-identical frames."/>
+</a>
+<figcaption>Verified near-duplicate pairs around the selected SSIM threshold — the same vehicle captured in near-identical frames. Source: executed VTID2 notebook output 4.</figcaption>
+</figure>
+<figure>
+<a href="media/05-naive-split-contamination.png">
+<img loading="lazy" src="media/05-naive-split-contamination.png" alt="Under random image-level splits, roughly 70–80% of test images are contaminated by exact leakage or group contamination."/>
+</a>
+<figcaption>Under random image-level splits, roughly 70–80% of test images are contaminated by exact leakage or group contamination. Source: executed VTID2 notebook output 5.</figcaption>
+</figure>
+<figure>
+<a href="media/06-letterbox-padding-by-class.jpg">
+<img loading="lazy" src="media/06-letterbox-padding-by-class.jpg" alt="Neutral letterbox preprocessing applied to one example per class, with the mean padding share of each class."/>
+</a>
+<figcaption>Neutral letterbox preprocessing applied to one example per class, with the mean padding share of each class. Source: executed VTID2 notebook output 6.</figcaption>
+</figure>
+<figure>
+<a href="media/07-training-augmentation.jpg">
+<img loading="lazy" src="media/07-training-augmentation.jpg" alt="Training-only augmentation examples generated from a single source image."/>
+</a>
+<figcaption>Training-only augmentation examples generated from a single source image. Source: executed VTID2 notebook output 7.</figcaption>
+</figure>
+<figure>
+<a href="media/08-training-dynamics-macro-f1.png">
+<img loading="lazy" src="media/08-training-dynamics-macro-f1.png" alt="Training and validation Macro-F1 across three random seeds for the four architectures."/>
+</a>
+<figcaption>Training and validation Macro-F1 across three random seeds for the four architectures. Source: executed VTID2 notebook output 8.</figcaption>
+</figure>
+<figure>
+<a href="media/09-confusion-matrices.png">
+<img loading="lazy" src="media/09-confusion-matrices.png" alt="Row-normalised held-out test confusion matrices for the MLP, Standard CNN, Efficient CNN and Efficient CNN + SE."/>
+</a>
+<figcaption>Row-normalised held-out test confusion matrices for the MLP, Standard CNN, Efficient CNN and Efficient CNN + SE. Source: executed VTID2 notebook output 9.</figcaption>
+</figure>
+<figure>
+<a href="media/10-paired-bootstrap-contrasts.png">
+<img loading="lazy" src="media/10-paired-bootstrap-contrasts.png" alt="Paired group-bootstrap distributions of Macro-F1 differences for the three architectural contrasts."/>
+</a>
+<figcaption>Paired group-bootstrap distributions of Macro-F1 differences for the three architectural contrasts. Source: executed VTID2 notebook output 10.</figcaption>
+</figure>
+<figure>
+<a href="media/11-padding-attention-distribution.png">
+<img loading="lazy" src="media/11-padding-attention-distribution.png" alt="Full-test distribution of the padding attention-to-area ratio; the dashed line marks the geometric null (1.0)."/>
+</a>
+<figcaption>Full-test distribution of the padding attention-to-area ratio; the dashed line marks the geometric null (1.0). Source: executed VTID2 notebook output 11.</figcaption>
+</figure>
+<figure>
+<a href="media/12-grad-cam-examples.jpg">
+<img loading="lazy" src="media/12-grad-cam-examples.jpg" alt="Illustrative Grad-CAM examples for the three convolutional models, with predicted class, confidence and padding ratio."/>
+</a>
+<figcaption>Illustrative Grad-CAM examples for the three convolutional models, with predicted class, confidence and padding ratio. Source: executed VTID2 notebook output 12.</figcaption>
+</figure>
+</div>
 </section>
 <h2>Full documentation and sources</h2>
 <ul>
+<li>
+<a href="https://github.com/Mahyoub88/VTID2-Efficient-Vehicle-Type-Classification">View repository</a>
+</li>
+<li>
+<a href="https://github.com/Mahyoub88/VTID2-Efficient-Vehicle-Type-Classification/blob/main/docs/engineering-guide.md">Illustrated engineering guide and complete gallery</a>
+</li>
+<li>
+<a href="https://orcid.org/0009-0003-5640-352X">Author ORCID: 0009-0003-5640-352X</a>
+</li>
 <li>
 <a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project descriptions and media</a>
 </li>
