@@ -23,7 +23,7 @@ PyTorch, CNN, Efficient AI, Grad-CAM, Model Evaluation, Data Quality
 ## Links
 
 - [Portfolio project](https://mahyoub88.github.io/#proj-vtid2)
-- [DOI: 10.5281/zenodo.23524700](https://doi.org/10.5281/zenodo.23524700)
+- [DOI: 10.5281/zenodo.23524699](https://doi.org/10.5281/zenodo.23524699)
 - [Public repository](https://github.com/Mahyoub88/VTID2-Efficient-Vehicle-Type-Classification)
 - [Author ORCID](https://orcid.org/0009-0003-5640-352X)
 

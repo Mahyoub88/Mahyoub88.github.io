@@ -425,8 +425,8 @@
           "href": "https://github.com/Mahyoub88/VTID2-Efficient-Vehicle-Type-Classification"
         },
         {
-          "label": "DOI: 10.5281/zenodo.23524700",
-          "href": "https://doi.org/10.5281/zenodo.23524700"
+          "label": "DOI: 10.5281/zenodo.23524699 (all versions)",
+          "href": "https://doi.org/10.5281/zenodo.23524699"
         }
       ],
       "accent": "purple",
@@ -1282,6 +1282,11 @@
       "id": "social-3",
       "type": "email",
       "url": "mailto:almlike5@gmail.com"
+    },
+    {
+      "id": "social-bluesky",
+      "type": "bluesky",
+      "url": "https://bsky.app/profile/mahyoub88.bsky.social"
     }
   ],
   "technicalExpertise": [
