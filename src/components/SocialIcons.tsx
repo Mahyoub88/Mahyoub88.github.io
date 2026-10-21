@@ -10,6 +10,7 @@ const iconFor = {
   email: Mail,
   twitter: XIcon,
   facebook: FacebookIcon,
+  bluesky: Link2,
   other: Link2,
 }
 

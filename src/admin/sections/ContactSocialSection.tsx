@@ -73,6 +73,7 @@ export function ContactSocialSection({
                   <option value="email">Email</option>
                   <option value="twitter">Twitter / X</option>
                   <option value="facebook">Facebook</option>
+                  <option value="bluesky">Bluesky</option>
                   <option value="other">Other</option>
                 </SelectInput>
               </Field>
