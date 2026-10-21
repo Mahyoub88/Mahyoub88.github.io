@@ -421,7 +421,7 @@
       ],
       "status": {
         "kind": "public",
-        "label": "Public Repository · MSc Artificial Intelligence Research"
+        "label": "Public Repository · Archived on Zenodo (DOI)"
       },
       "link": "",
       "links": [
@@ -432,6 +432,10 @@
         {
           "label": "View repository",
           "href": "https://github.com/Mahyoub88/VTID2-Efficient-Vehicle-Type-Classification"
+        },
+        {
+          "label": "DOI: 10.5281/zenodo.23524700",
+          "href": "https://doi.org/10.5281/zenodo.23524700"
         }
       ],
       "accent": "purple",
