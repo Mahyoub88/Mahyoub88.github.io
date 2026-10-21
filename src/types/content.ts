@@ -143,6 +143,8 @@ export interface ContactContent {
   heading: string
   subheading: string
   email: string
+  /** Digits only, with country code (e.g. 9715XXXXXXXX); when set, the contact button opens WhatsApp. */
+  whatsapp?: string
   location: string
 }
 

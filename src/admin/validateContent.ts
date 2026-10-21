@@ -16,6 +16,7 @@ export function validateContent(value: unknown): string[] {
   fields(content.about, ['heading', 'subheading'], 'about')
   if (record(content.about) && (!Array.isArray(content.about.paragraphs) || !content.about.paragraphs.every(item => typeof item === 'string'))) errors.push('about.paragraphs must be a list of text.')
   fields(content.contact, ['heading', 'subheading', 'email', 'location'], 'contact')
+  if (record(content.contact) && content.contact.whatsapp !== undefined && !/^\d{8,15}$/.test(String(content.contact.whatsapp))) errors.push('contact.whatsapp must be digits only, with country code (no + or spaces).')
   fields(content.footerLinks, ['resumeUrl', 'orcidUrl'], 'footerLinks')
   const itemFields: Record<string, string[]> = { nav: ['label', 'href'], social: ['type', 'url'], specializations: ['icon', 'label'], tools: ['label', 'abbr', 'color'], stats: ['icon', 'value', 'label'], experience: ['role', 'company', 'period', 'description'], technicalExpertise: ['category'], education: ['degree', 'institution', 'period', 'status'], certifications: ['name', 'issuer', 'date', 'type'], articles: ['title', 'excerpt', 'date', 'url'] }
   for (const [key, keys] of Object.entries(itemFields)) if (Array.isArray(content[key])) (content[key] as unknown[]).forEach((item, index) => fields(item, keys, `${key}[${index}]`))
