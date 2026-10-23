@@ -19,6 +19,7 @@ test('new projects generate pages; custom detail survives; SEO and theme updates
     fs.copyFileSync('public/projects/case-study.css', path.join(root, 'public/projects/case-study.css'))
     fs.writeFileSync(path.join(root, 'public/uploads/example.webp'), 'fixture-image')
     fs.writeFileSync(path.join(root, 'public/favicon.svg'), '<svg></svg>')
+    fs.copyFileSync('public/analytics.js', path.join(root, 'public/analytics.js'))
     const content = JSON.parse(fs.readFileSync('src/data/defaultContent.json', 'utf8'))
     content.projects = [{ ...content.projects[0], id: 'proj-new-qa', title: 'A new project', image: '/uploads/example.webp', coverImage: '/uploads/example.webp', coverLightImage: '/uploads/example.webp', coverCaption: 'Original implementation photograph', links: [] }]
     content.siteSettings.seo.title = 'QA title & metadata'

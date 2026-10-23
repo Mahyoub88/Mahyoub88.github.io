@@ -19,9 +19,14 @@ export function Footer() {
   return (
     <footer className="border-t border-[var(--border-1)] py-10">
       <Container className="flex flex-col items-center justify-between gap-5 text-sm text-[var(--text-3)] sm:flex-row">
-        <p>
-          {content.siteSettings?.labels.footerText || <>© {new Date().getFullYear()} {content.brand.name}. All rights reserved.</>}
-        </p>
+        <div className="space-y-1 text-center sm:text-left">
+          <p>
+            {content.siteSettings?.labels.footerText || <>© {new Date().getFullYear()} {content.brand.name}. All rights reserved.</>}
+          </p>
+          <p className="text-xs">
+            Privacy: cookie-free visitor statistics; no IP address is stored, and Do Not Track is honored.
+          </p>
+        </div>
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
           {links.map((link) => {
             // The CV is a file, not a page — open it in a new tab and download.
