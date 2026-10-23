@@ -12,7 +12,7 @@
   'use strict'
 
   // Set to the deployed Worker, e.g. 'https://visitor-analytics.<account>.workers.dev/collect'
-  var ENDPOINT = ''
+  var ENDPOINT = 'https://visitor-analytics.almlike5.workers.dev/collect'
 
   if (!ENDPOINT) return
   var loc = window.location

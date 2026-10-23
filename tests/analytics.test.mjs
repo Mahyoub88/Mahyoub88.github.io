@@ -156,7 +156,7 @@ function runTracker({ endpoint = 'https://analytics.example/collect', hostname =
     title: 'SDN', referrer: '', visibilityState: 'visible',
     addEventListener: (type, fn) => { listeners[type] = fn },
   }
-  const source = fs.readFileSync('public/analytics.js', 'utf8').replace("var ENDPOINT = ''", `var ENDPOINT = '${endpoint}'`)
+  const source = fs.readFileSync('public/analytics.js', 'utf8').replace(/var ENDPOINT = '[^']*'/, `var ENDPOINT = '${endpoint}'`)
   vm.runInNewContext(source, { window, document, navigator: window.navigator, URLSearchParams, URL, Blob, Uint8Array, Date, Math, fetch: () => Promise.resolve() })
   return { sent, listeners, window, localStorage }
 }
