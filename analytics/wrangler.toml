@@ -1,0 +1,21 @@
+name = "visitor-analytics"
+main = "src/worker.js"
+compatibility_date = "2026-09-01"
+
+[vars]
+ALLOWED_ORIGIN = "https://mahyoub88.github.io"
+RETENTION_DAYS = "395"
+
+# Create the database first (see README.md) and paste the id it prints here.
+[[d1_databases]]
+binding = "DB"
+database_name = "visitor-analytics"
+database_id = "REPLACE_WITH_DATABASE_ID"
+
+# Daily purge of events older than RETENTION_DAYS.
+[triggers]
+crons = ["17 3 * * *"]
+
+# Secrets (never commit them):
+#   wrangler secret put DASHBOARD_TOKEN     required: protects /api/stats and the dashboard data
+#   wrangler secret put ALERT_WEBHOOK_URL   optional: ntfy.sh-style URL, notified on CV downloads
