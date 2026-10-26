@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Industrial Automation &amp; PLC-Based Control Systems | Mohammed Mahyoub</title>
-<meta name="description" content="Central concrete batching plant with a PC-based SANY operator HMI, PLC control over Modbus RTU, serial weighing interfaces and SQL Server production management.">
+<meta name="description" content="Concrete batching control integrating a PC-based SANY operator interface, Modbus RTU PLC communication, serial weighing and SQL Server production management.">
 <link rel="canonical" href="https://mahyoub88.github.io/projects/proj-plc-control/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Industrial Automation &amp; PLC-Based Control Systems">
-<meta property="og:description" content="Central concrete batching plant with a PC-based SANY operator HMI, PLC control over Modbus RTU, serial weighing interfaces and SQL Server production management.">
+<meta property="og:description" content="Concrete batching control integrating a PC-based SANY operator interface, Modbus RTU PLC communication, serial weighing and SQL Server production management.">
 <meta property="og:url" content="https://mahyoub88.github.io/projects/proj-plc-control/">
 <meta property="og:image" content="https://mahyoub88.github.io/images/project-covers/themed-v4/proj-plc-control.webp">
 <meta name="twitter:card" content="summary_large_image">
@@ -29,13 +29,13 @@
 <main id="main">
 <p class="eyebrow">Industrial Automation · Concrete Batching · PLC</p>
 <h1>Industrial Automation &amp; PLC-Based Control Systems</h1>
-<p class="lede">Central concrete batching plant with a PC-based SANY operator HMI, PLC control over Modbus RTU, serial weighing interfaces and SQL Server production management.</p>
+<p class="lede">Concrete batching control integrating a PC-based SANY operator interface, Modbus RTU PLC communication, serial weighing and SQL Server production management.</p>
 <span class="badge">Implemented Project</span>
 <figure class="hero-media">
 <a href="/projects/proj-plc-control/media/recorded-control-architecture.svg">
 <img src="/projects/proj-plc-control/media/recorded-control-architecture.svg" alt="Recorded PC, PLC and serial weighing architecture of the concrete batching control system" fetchpriority="high">
 </a>
-<figcaption>Technical reconstruction from retained software settings and archive logs; physical I/O mapping remains unconfirmed · Open image for full detail.</figcaption>
+<figcaption>Control architecture based on application configuration and device logs; see the engineering record for hardware-identification details · Open image for full detail.</figcaption>
 </figure>
 <div class="tags">
 <span>PLC</span>
@@ -46,236 +46,203 @@
 <span>SANY</span>
 </div>
 <nav class="section-nav">
-<a href="#overview">Recorded architecture</a>
-<a href="#software">Software &amp; data</a>
-<a href="#software-interfaces">Program screenshots &amp; guide</a>
-<a href="#operation">Plant operation</a>
-<a href="#evidence">Technical record</a>
-<a href="#gallery">Visual documentation</a>
-<a href="#sources">Resources</a>
+<a href="#overview">Project overview</a>
+<a href="#architecture">System architecture</a>
+<a href="#software-interfaces">Software interface guide</a>
+<a href="#workflow">Operating workflow</a>
+<a href="#engineering">Engineering record</a>
+<a href="#resources">Resources</a>
 </nav>
 <section id="overview">
-<h2>One workstation, two applications and the PLC</h2>
-<p>The retained system uses one computer for the SANY operational HMI, the production-management application and the SQL Server database. The operational application has a saved Modbus RTU connection to the PLC and separate serial interfaces for weighing devices.</p>
+<h2>Project Overview</h2>
+<p>This industrial automation project covers the control and information layers of a central concrete batching plant: material handling, recipe-based dosing, weighing, mixing, discharge and production reporting. A single operator workstation connects the operational HMI, production-management application and shared SQL Server database.</p>
+<p>The case study explains the relationship between operator commands, PLC status, weighing interfaces and production records. Original software screenshots support a detailed interface guide, while technical diagrams explain the control and data architecture.</p>
 <div class="panel">
 <dl class="project-facts">
 <div>
 <dt>Scope</dt>
-<dd>Integrated batching, weighing, mixing and discharge, with a PC-based operator interface and production records.</dd>
+<dd>Material handling, recipe-based batching, weighing, mixing, discharge and production reporting.</dd>
 </div>
 <div>
-<dt>Software</dt>
-<dd>SANY operational HMI and cncrt.exe production management share the jxc SQL Server database on one computer.</dd>
+<dt>Applications</dt>
+<dd>SANY process monitoring and operator control; CNCRT production administration; shared jxc SQL Server database.</dd>
 </div>
 <div>
-<dt>Communications</dt>
-<dd>Saved Modbus RTU link to the PLC and separate serial weighing interfaces. Archive logs identify S7-200 and T600 device families; exact CPU and field I/O mapping remain unconfirmed.</dd>
+<dt>Integration</dt>
+<dd>Modbus RTU PLC communication and dedicated serial weighing interfaces, supported by original software screenshots and a documented engineering record.</dd>
 </div>
 </dl>
 </div>
 </section>
-<section id="software">
-<h2>Operator control and production management</h2>
+<section id="architecture">
+<h2>System Architecture and Communication</h2>
+<p>SANY provides the process interface, CNCRT manages production context and reports, and the jxc database stores shared application records. PLC communication and serial weighing form separate operational paths from database access.</p>
 <div class="table-scroll">
 <table>
-<caption>Applications and interfaces recorded in the retained system</caption>
 <thead>
 <tr>
-<th scope="col">Component</th>
-<th scope="col">Function</th>
+<th scope="col">Layer</th>
+<th scope="col">Implementation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th scope="row">
-<code>sany.exe / sany9.exe</code>
-</th>
-<td>PC-based operational HMI: batch settings, automatic/manual selection, weighing adjustments, mixing and discharge controls.</td>
+<th scope="row">Operational HMI</th>
+<td>sany.exe / sany9.exe — process visualization, batch parameters, automatic/manual operation and process commands.</td>
 </tr>
 <tr>
-<th scope="row">
-<code>cncrt.exe</code>
-</th>
-<td>Recipes, production tasks, orders, deliveries, material consumption, stock and daily/monthly reports.</td>
+<th scope="row">Production management</th>
+<td>cncrt.exe — recipes, tasks, orders, deliveries, material consumption, inventory and reports.</td>
 </tr>
 <tr>
-<th scope="row">SQL Server 2000 · <code>jxc</code>
-</th>
-<td>Shared production database accessed through ADO/SQLOLEDB. The exported schema contains 35 application tables.</td>
-</tr>
-<tr>
-<th scope="row">PC-to-PLC link</th>
-<td>Saved Modbus RTU configuration: COM1, 38400 baud, 8E1, unit address 2. The application polls coils, discrete inputs and registers.</td>
+<th scope="row">PLC interface</th>
+<td>Modbus RTU on COM1; 38400 baud, 8E1, unit address 2, as recorded in the application configuration.</td>
 </tr>
 <tr>
 <th scope="row">Weighing interfaces</th>
-<td>Eight configured serial ports, COM3–COM10, at 19200 baud, 8N1. Physical material/channel assignments remain unresolved.</td>
+<td>Eight serial ports, COM3–COM10, configured for 19200 baud, 8N1.</td>
+</tr>
+<tr>
+<th scope="row">Shared database</th>
+<td>SQL Server 2000, database jxc, accessed through ADO/SQLOLEDB; 35 application tables in the exported schema.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>The retained interface is a desktop application rather than a verified separate modern HMI panel. An archived Controx2000 runtime log names one Siemens S7-200 device and eight Mettler Toledo T600 devices. The exact PLC CPU, recovered plant program and the relationship between that Controx installation and the SANY production front end remain unconfirmed.</p>
+<p>The archive runtime log identifies Siemens S7-200 and Mettler Toledo T600 device families. Exact CPU identification, physical channel assignments and the association between logged T600 devices and the configured ports are addressed in the engineering record.</p>
 </section>
 <section id="software-interfaces">
-<h2>Inside the software: SANY, CNCRT and jxc</h2>
-<p>Original supplied application screenshots, detailed control explanations and a shared-data diagram. Customer, site and operator identifiers are masked in these published copies. Open any image for full-size inspection.</p>
+<h2>Software Interface Guide</h2>
 <nav aria-label="Software guide">
-<a href="#sany-screen">SANY controls</a>
-<a href="#cncrt-screen">CNCRT reports</a>
-<a href="#jxc-data">Shared database</a>
-<a href="#software-glossary">Arabic / English glossary</a>
+<a href="#sany-screen">SANY operator interface</a>
+<a href="#cncrt-screen">CNCRT production reports</a>
+<a href="#jxc-data">Shared production data</a>
+<a href="#software-glossary">Technical glossary</a>
 </nav>
-<article id="sany-screen">
-<h3>SANY: operational HMI</h3>
-<p>This original supplied screenshot shows the SANY CONCRETE CONTROL SYSTEM operational interface. It is an archived application display, not current plant telemetry. Names and site-identifying fields have been masked; the controls and process readings are preserved.</p>
+<p>This guide explains the operational and production-management applications used in the concrete batching control environment. It combines original application screenshots, focused interface views, field-by-field explanations, worked reporting examples and a functional database diagram. Customer, site and operator identifiers are masked in the published screenshots.</p>
+<h3 id="sany-screen">1. SANY — Process Monitoring and Operator Control</h3>
+<p>The SANY CONCRETE CONTROL SYSTEM screen brings production context, material weighing, plant status and operator commands into one process display. Aggregate handling appears on the left; cement, ash, water and additive paths lead toward the mixer; operating controls and production counters occupy the lower area. The screenshot represents a historical interface state.</p>
 <figure class="software-shot">
 <a href="media/software/sany-operator-interface.webp">
 <img loading="lazy" src="media/software/sany-operator-interface.webp" alt="Archived SANY concrete control screen with identity fields masked">
 </a>
-<figcaption>Archived SANY concrete control screen with identity fields masked · Original screenshot or source crop; identifying fields masked.</figcaption>
+<figcaption>Original application screenshot or close-up; identifying fields masked.</figcaption>
 </figure>
 <div class="table-scroll">
 <table>
-<caption>SANY: operational HMI — field guide</caption>
 <thead>
 <tr>
 <th scope="col">Screen element</th>
 <th scope="col">What it shows or controls</th>
-<th scope="col">المعنى بالعربية</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <th scope="row">MANAGE / TEST / ABOUT / EXIT</th>
 <td>Visible application menu entries; their complete actions are not shown in this screenshot.</td>
-<td>الإدارة، الاختبار، معلومات البرنامج والخروج</td>
 </tr>
 <tr>
 <th scope="row">Task Name / Recipe Number / Intensity Level</th>
 <td>Production-task and recipe/strength-grade context. Recipe identifiers and strength-grade fields are distinct.</td>
-<td>المهمة، رقم الوصفة ودرجة المقاومة</td>
 </tr>
 <tr>
 <th scope="row">Project Name / Work Position / Delivery Number</th>
 <td>Project/work location and delivery context; identifying project text is masked.</td>
-<td>بيانات المشروع ومكان الصب والتسليم</td>
 </tr>
 <tr>
 <th scope="row">Completed Quantity / Completed Trucks</th>
 <td>Stored production progress counters, not a measurement of present plant throughput.</td>
-<td>الكمية المنجزة وعدد الشاحنات</td>
 </tr>
 <tr>
 <th scope="row">Produce Quantity / Circle Count / Quantity Of One Circle</th>
 <td>Job quantity and batching-cycle settings/status displayed by this application. Confirm units and scaling from its configuration.</td>
-<td>كمية الإنتاج وعدد الدورات وكمية الدفعة</td>
 </tr>
 <tr>
 <th scope="row">G1–G4, belt and inclined conveyor</th>
 <td>Four drawn aggregate bins and the conveying path in this software mimic. These are not a verified installed-bin schedule.</td>
-<td>تمثيل حاويات الركام ومسار النقل</td>
 </tr>
 <tr>
 <th scope="row">CEMENT / ASH / WATER / ADDITIVE</th>
 <td>Powder, water and admixture paths and numeric displays. Their exact physical channel assignments remain unresolved.</td>
-<td>مسارات الأسمنت والرماد والماء والإضافات</td>
 </tr>
 <tr>
 <th scope="row">Paired numeric readouts</th>
 <td>Separate displays appear at material stations. Exact tags/scaling require the original communication and weighing configuration.</td>
-<td>شاشات رقمية تحتاج ربطًا موثّقًا بالمتغيرات</td>
 </tr>
 <tr>
 <th scope="row">AUTO / MANUAL</th>
 <td>Visible mode controls. The screenshot does not establish every permitted manual action or safety interlock.</td>
-<td>التشغيل الآلي واليدوي</td>
 </tr>
 <tr>
 <th scope="row">PAUSE CHARGE / PAUSE DISCHARGE</th>
 <td>Visible controls for pausing charging and discharge.</td>
-<td>إيقاف التغذية أو التفريغ مؤقتًا</td>
 </tr>
 <tr>
 <th scope="row">RUN / STOP</th>
 <td>Operator run/stop commands shown in the HMI. A software STOP is not evidence of a safety-rated emergency stop.</td>
-<td>أوامر التشغيل والإيقاف</td>
 </tr>
 <tr>
 <th scope="row">PRESSURE alarm</th>
 <td>Pressure-related alarm/indicator area. Alarm state and zero readings in the screenshot do not prove a running, connected plant.</td>
-<td>تنبيه الضغط كما ظهر وقت التقاط الصورة</td>
 </tr>
 <tr>
 <th scope="row">COUNTER</th>
 <td>Displayed batch/cycle counter area; its exact relation to other cycle fields requires the application configuration.</td>
-<td>عداد الدورات الظاهر</td>
 </tr>
 <tr>
 <th scope="row">Operator / Truck Number / Driver</th>
 <td>Production/operator context fields; personal names have been masked.</td>
-<td>المشغّل والشاحنة والسائق</td>
 </tr>
 </tbody>
 </table>
 </div>
-</article>
-<article id="software-part-2">
-<h3>SANY: batch settings and timers</h3>
-<p>This is a crop of the original screenshot, not a reconstructed interface. Timer values are captured display values; the screenshot alone does not establish their configured units or timing logic.</p>
+<h3 id="software-part-2">2. SANY — Batch Parameters and Timing</h3>
+<p>The parameter area combines opening timers, mixing duration, discharge inhibition and production settings. The close-up below comes directly from the original interface. Timer units and the associated actuator sequence must be checked against the application configuration and PLC program.</p>
 <figure class="software-shot">
 <a href="media/software/sany-batch-settings.webp">
 <img loading="lazy" src="media/software/sany-batch-settings.webp" alt="Close-up of original SANY batch settings and mixing timers">
 </a>
-<figcaption>Close-up of original SANY batch settings and mixing timers · Original screenshot or source crop; identifying fields masked.</figcaption>
+<figcaption>Original application screenshot or close-up; identifying fields masked.</figcaption>
 </figure>
 <div class="table-scroll">
 <table>
-<caption>SANY: batch settings and timers — field guide</caption>
 <thead>
 <tr>
 <th scope="col">Setting</th>
 <th scope="col">Engineering interpretation</th>
-<th scope="col">المعنى بالعربية</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <th scope="row">Half Open Time / Full Open Time</th>
 <td>Visible staged-opening timer labels. The driven mechanism and transition logic require PLC code and drawings.</td>
-<td>مؤقتا الفتح الجزئي والكامل</td>
 </tr>
 <tr>
 <th scope="row">Mixing Time</th>
 <td>Mixing-duration parameter shown in the interface.</td>
-<td>زمن الخلط</td>
 </tr>
 <tr>
 <th scope="row">Forbid Discharge</th>
 <td>Discharge-inhibit setting/state. It is an operational function, not proof of a safety circuit.</td>
-<td>منع التفريغ</td>
 </tr>
 <tr>
 <th scope="row">Auto Print / Manual Print</th>
 <td>Automatic-print selection and manual-print function for production output.</td>
-<td>الطباعة التلقائية واليدوية</td>
 </tr>
 <tr>
 <th scope="row">Task / recipe selection buttons</th>
 <td>Selection controls beside the task and recipe fields.</td>
-<td>اختيار المهمة والوصفة</td>
 </tr>
 </tbody>
 </table>
 </div>
-</article>
-<article id="software-part-3">
-<h3>SANY: modes, charging, mixing and discharge</h3>
-<p>The process graphic places manual/automatic controls near the mixer, with charge/discharge pause buttons and a separate run/stop area. Interpret these controls together with the PLC status and field feedback; the retained screenshot is not a recovered Ladder state machine.</p>
+<h3 id="software-part-3">3. SANY — Operating Modes and Process Commands</h3>
+<p>Automatic/manual selection, charge and discharge pause functions, and run/stop commands provide the principal operator controls. Their relationship to the process depends on PLC status, equipment feedback and configured interlocks. The interface documents the available commands; the original plant program is needed to establish every state transition.</p>
 <figure class="software-shot">
 <a href="media/software/sany-operation-controls.webp">
 <img loading="lazy" src="media/software/sany-operation-controls.webp" alt="Close-up of SANY automatic/manual controls, pause controls and run/stop buttons">
 </a>
-<figcaption>Close-up of SANY automatic/manual controls, pause controls and run/stop buttons · Original screenshot or source crop; identifying fields masked.</figcaption>
+<figcaption>Original application screenshot or close-up; identifying fields masked.</figcaption>
 </figure>
 <ul>
 <li>The PLC communication path is saved as Modbus RTU on COM1, 38400 baud, 8E1, unit address 2.</li>
@@ -283,141 +250,114 @@
 <li>An archive runtime log separately names S7-200 and T600 device families. It does not prove a one-to-one mapping of logged T600 devices to these ports.</li>
 <li>Motor, gate, valve, pump and conveyor assignments need an as-built I/O list and wiring drawings. The mimic is a functional presentation, not that list.</li>
 </ul>
-</article>
-<article id="cncrt-screen">
-<h3>CNCRT: production and delivery management</h3>
-<p>The supplied screen is titled Manage system of Concrete. It combines order context, product/recipe information, truck context, per-pot weighing figures and delivery totals. Its footer contains a Controx2000 website reference; that reference alone does not establish which SCADA runtime controlled the plant.</p>
+<h3 id="cncrt-screen">4. CNCRT — Production Administration and Delivery Records</h3>
+<p>CNCRT complements the operational HMI with production administration. The illustrated delivery view combines order information, recipe and product parameters, truck details, individual batch results and cumulative delivery quantities. Search, navigation, preview and print functions support review of historical production documents.</p>
 <figure class="software-shot">
 <a href="media/software/cncrt-production-interface.webp">
 <img loading="lazy" src="media/software/cncrt-production-interface.webp" alt="Original CNCRT production and delivery management screen with identifying fields masked">
 </a>
-<figcaption>Original CNCRT production and delivery management screen with identifying fields masked · Original screenshot or source crop; identifying fields masked.</figcaption>
+<figcaption>Original application screenshot or close-up; identifying fields masked.</figcaption>
 </figure>
 <div class="table-scroll">
 <table>
-<caption>CNCRT: production and delivery management — field guide</caption>
 <thead>
 <tr>
 <th scope="col">Visible group</th>
 <th scope="col">Purpose</th>
-<th scope="col">المعنى بالعربية</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <th scope="row">System Manage / Scan Report / Help</th>
 <td>Top-level administration, reporting and help menus.</td>
-<td>إدارة النظام والتقارير والمساعدة</td>
 </tr>
 <tr>
 <th scope="row">Delivery Item / date / search / navigation</th>
 <td>Find and move between historical delivery records.</td>
-<td>البحث والتنقل في سجلات التسليم</td>
 </tr>
 <tr>
 <th scope="row">Order Information</th>
 <td>Order, station, project, customer, company, construction part and delivery-address fields. Identifying text is masked.</td>
-<td>معلومات الطلب والمشروع والعميل وموقع التسليم</td>
 </tr>
 <tr>
 <th scope="row">Product Information</th>
 <td>Cement kind, recipe number, planned quantity, slump-related field, strength grade, batch settings and production progress.</td>
-<td>معلومات الوصفة والمنتج والكميات</td>
 </tr>
 <tr>
 <th scope="row">Truck</th>
 <td>Truck identifier, transport-related fields, driver, casting method and memo.</td>
-<td>بيانات الشاحنة والنقل والصب</td>
 </tr>
 <tr>
 <th scope="row">Preview / Print</th>
 <td>Preview and print the selected production/delivery document.</td>
-<td>معاينة المستند وطباعته</td>
 </tr>
 <tr>
 <th scope="row">Current Delivery Item / No. … Pot</th>
 <td>Context for the current delivery and the displayed pot/batch record.</td>
-<td>رقم التسليم والدفعة المعروضة</td>
 </tr>
 <tr>
 <th scope="row">Total of the delivering</th>
 <td>Cumulative planned/actual figures for the selected delivery.</td>
-<td>الإجمالي التراكمي للتسليم</td>
 </tr>
 <tr>
 <th scope="row">Auto Refresh / Prior / Next</th>
 <td>Refresh and navigate the displayed production records.</td>
-<td>تحديث البيانات والتنقل بين السجلات</td>
 </tr>
 </tbody>
 </table>
 </div>
-</article>
-<article id="software-part-5">
-<h3>Reading target, actual and error</h3>
-<p>The upper matrix describes the selected pot; the lower matrix describes delivery totals. A selected pot is not the same thing as the complete delivery. Column captions in this retained build include repeated G1 labels, so a header alone cannot establish the physical material mapping.</p>
+<h3 id="software-part-5">5. Production Reporting — Targets, Actuals and Deviation</h3>
+<p>The report distinguishes the selected batch from the complete delivery. The upper matrix displays individual batch quantities; the lower matrix aggregates the delivery. Scheme, Fact and Error identify the target, actual quantity and percentage deviation. Repeated G1 captions in this application build require the material mapping to be checked against configuration rather than inferred from the heading alone.</p>
 <figure class="software-shot">
 <a href="media/software/cncrt-batch-comparison.webp">
 <img loading="lazy" src="media/software/cncrt-batch-comparison.webp" alt="Original report crop showing Scheme, Fact, Error and cumulative delivery totals">
 </a>
-<figcaption>Original report crop showing Scheme, Fact, Error and cumulative delivery totals · Original screenshot or source crop; identifying fields masked.</figcaption>
+<figcaption>Original application screenshot or close-up; identifying fields masked.</figcaption>
 </figure>
 <div class="table-scroll">
 <table>
-<caption>Reading target, actual and error — field guide</caption>
 <thead>
 <tr>
 <th scope="col">Row or example</th>
 <th scope="col">Meaning</th>
-<th scope="col">المعنى بالعربية</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <th scope="row">Scheme</th>
 <td>The recipe/planned quantity shown for a material.</td>
-<td>الوزن المطلوب</td>
 </tr>
 <tr>
 <th scope="row">Fact</th>
 <td>The recorded actual quantity.</td>
-<td>الوزن الفعلي المسجّل</td>
 </tr>
 <tr>
 <th scope="row">Error</th>
 <td>Displayed percentage deviation from the planned quantity.</td>
-<td>نسبة الانحراف</td>
 </tr>
 <tr>
 <th scope="row">400.0 → 378.0</th>
 <td>(378 − 400) / 400 × 100 = −5.50%, matching the displayed example.</td>
-<td>أقل من المطلوب بنسبة 5.50%</td>
 </tr>
 <tr>
 <th scope="row">1000.0 → 1026.0</th>
 <td>(1026 − 1000) / 1000 × 100 = +2.60%, matching the displayed example.</td>
-<td>أعلى من المطلوب بنسبة 2.60%</td>
 </tr>
 <tr>
 <th scope="row">Zero planned quantity</th>
-<td>A relative percentage is mathematically undefined when the target is zero. The application's displayed 0.00% is not an independently meaningful accuracy result.</td>
-<td>لا تُحسب نسبة صحيحة بالقسمة على صفر</td>
+<td>A relative percentage is mathematically undefined when the target is zero. The application&#x27;s displayed 0.00% is not an independently meaningful accuracy result.</td>
 </tr>
 <tr>
 <th scope="row">Historical values</th>
 <td>These are retained record values, not newly measured calibration results, current output or evidence of guaranteed accuracy.</td>
-<td>قيم تاريخية وليست نتائج معايرة جديدة</td>
 </tr>
 </tbody>
 </table>
 </div>
-</article>
-<article id="software-part-6">
-<h3>Other documented application functions</h3>
-<p>The retained application-form and schema analysis documents the functions below. Only the two original full-screen images above were supplied for this publication; additional forms are listed as documented functions, not represented by invented screenshots.</p>
+<h3 id="software-part-6">6. Application Function Inventory</h3>
+<p>Application-form analysis and the database schema identify additional production, configuration and administration functions. The inventory below distinguishes these documented functions from the two full-screen views available in this guide.</p>
 <div class="table-scroll">
 <table>
-<caption>Other documented application functions — field guide</caption>
 <thead>
 <tr>
 <th scope="col">Function group</th>
@@ -469,66 +409,54 @@
 </tbody>
 </table>
 </div>
-</article>
-<article id="jxc-data">
-<h3>jxc: the shared application data layer</h3>
-<p>This is an explanatory diagram drawn from the recorded application architecture and exported schema. It is not a screenshot from SQL Server. Both applications use the jxc database on the same computer through ADO/SQLOLEDB; the database is separate from the real-time PLC and weighing communication paths.</p>
+<h3 id="jxc-data">7. jxc — Shared Production Data Architecture</h3>
+<p>The operational and management applications share the jxc SQL Server database through ADO/SQLOLEDB on a single workstation. The following diagram groups the principal application tables by business function. PLC communication and serial weighing remain separate from persistent production-data storage.</p>
 <figure class="software-shot">
 <a href="media/software/jxc-shared-data.svg">
 <img loading="lazy" src="media/software/jxc-shared-data.svg" alt="Explanatory diagram of SANY and CNCRT using the shared jxc SQL Server database">
 </a>
-<figcaption>Explanatory diagram of SANY and CNCRT using the shared jxc SQL Server database · Explanatory diagram, not an application screenshot.</figcaption>
+<figcaption>Explanatory data diagram.</figcaption>
 </figure>
 <div class="table-scroll">
 <table>
-<caption>jxc: the shared application data layer — field guide</caption>
 <thead>
 <tr>
 <th scope="col">Table/group</th>
 <th scope="col">Role</th>
-<th scope="col">المعنى بالعربية</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <th scope="row">recipe</th>
 <td>Recipe/material targets and recipe parameters.</td>
-<td>الوصفات والأوزان المطلوبة</td>
 </tr>
 <tr>
 <th scope="row">manufacture</th>
 <td>Planned and actual material quantities for batch records.</td>
-<td>الأوزان المطلوبة والفعلية للدفعات</td>
 </tr>
 <tr>
 <th scope="row">Task / Orders / OrderDetail</th>
 <td>Production tasks and order records.</td>
-<td>المهام وأوامر الإنتاج</td>
 </tr>
 <tr>
 <th scope="row">OutMaster</th>
 <td>Delivery records.</td>
-<td>سجلات التسليم</td>
 </tr>
 <tr>
 <th scope="row">exactitude / fall / adjcfg</th>
 <td>Tolerance, in-flight compensation and mix-ratio adjustments.</td>
-<td>السماحيات وتعويض السقوط وتعديل الخلطة</td>
 </tr>
 <tr>
 <th scope="row">products / stock</th>
 <td>Material/product and stock-related records.</td>
-<td>المواد والمخزون</td>
 </tr>
 <tr>
 <th scope="row">Station</th>
 <td>Station information.</td>
-<td>معلومات المحطة</td>
 </tr>
 <tr>
 <th scope="row">Alarm / LogInfo</th>
 <td>Alarm and activity records.</td>
-<td>الإنذارات وسجل النشاط</td>
 </tr>
 </tbody>
 </table>
@@ -539,232 +467,131 @@
 <li>The diagram groups records by purpose. It does not claim recovered SQL foreign-key links or a verified query/transaction sequence.</li>
 <li>Different retained jxc files represent different database states; file size alone is not proof that two copies have identical data.</li>
 </ul>
-</article>
-<article id="software-part-8">
-<h3>How the complete software workflow fits together</h3>
+<h3 id="software-part-8">8. End-to-End Application Workflow</h3>
 <ul>
 <li>Maintain the recipe and production task in the management application; keep recipe identity, delivery identity and material targets distinct.</li>
 <li>Select the task/recipe and configure the batch in the operational HMI.</li>
 <li>Exchange operational commands/status with the PLC, while the configured serial weighing interfaces provide the weighing communication path.</li>
-<li>Use the HMI's mixing, charging and discharge functions together with PLC/field status. The exact sequence and interlocks require the missing plant program.</li>
+<li>Use the HMI&#x27;s mixing, charging and discharge functions together with PLC/field status. The exact sequence and interlocks require the missing plant program.</li>
 <li>Record batch quantities and production context in the shared data layer; review per-pot values and cumulative delivery records in the management application.</li>
 <li>Use tolerance and in-flight settings as configured engineering parameters. A displayed parameter does not establish a completed calibration or a measured performance improvement.</li>
 </ul>
-</article>
-<article id="software-glossary">
-<h3>Arabic/English glossary</h3>
+<h3 id="software-glossary">9. Technical Glossary</h3>
 <div class="table-scroll">
 <table>
-<caption>Arabic/English glossary — field guide</caption>
 <thead>
 <tr>
 <th scope="col">Term</th>
-<th scope="col">المصطلح</th>
 <th scope="col">Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <th scope="row">HMI</th>
-<td>واجهة المشغّل</td>
 <td>The software display through which an operator views status and issues commands.</td>
 </tr>
 <tr>
 <th scope="row">PLC</th>
-<td>المتحكم المنطقي المبرمج</td>
 <td>The industrial controller exchanging process commands and status.</td>
 </tr>
 <tr>
 <th scope="row">Recipe</th>
-<td>وصفة الخلطة</td>
 <td>The selected material quantities and mix parameters.</td>
 </tr>
 <tr>
 <th scope="row">Batch / Pot</th>
-<td>دفعة خلط</td>
 <td>One production portion/cycle represented in the application.</td>
 </tr>
 <tr>
 <th scope="row">Delivery</th>
-<td>تسليم</td>
 <td>A delivery context which can contain more than one batch.</td>
 </tr>
 <tr>
 <th scope="row">Setpoint / Scheme</th>
-<td>القيمة المطلوبة</td>
 <td>The planned target against which an actual value is compared.</td>
 </tr>
 <tr>
 <th scope="row">Actual / Fact</th>
-<td>القيمة الفعلية</td>
 <td>A measured or recorded quantity.</td>
 </tr>
 <tr>
 <th scope="row">Tare</th>
-<td>التصفير / طرح وزن الوعاء</td>
 <td>Accounting for the empty container so the material quantity can be determined.</td>
 </tr>
 <tr>
 <th scope="row">Coarse feed</th>
-<td>التغذية الخشنة / السريعة</td>
 <td>Initial faster feeding toward the target; the exact mechanism is configuration-dependent.</td>
 </tr>
 <tr>
 <th scope="row">Fine feed</th>
-<td>التغذية الدقيقة / البطيئة</td>
 <td>A general weighing-control principle; it is not proved by a separate fine-feed button in these screenshots.</td>
 </tr>
 <tr>
 <th scope="row">Fall / in-flight compensation</th>
-<td>تعويض المادة الساقطة</td>
 <td>Allowing for material still travelling after feed is stopped.</td>
 </tr>
 <tr>
 <th scope="row">Tolerance</th>
-<td>سماحية الوزن</td>
 <td>The configured permitted deviation around a target.</td>
 </tr>
 <tr>
 <th scope="row">Interlock</th>
-<td>شرط السماح / التشابك</td>
 <td>A condition that must hold before an action is permitted.</td>
 </tr>
 <tr>
 <th scope="row">Modbus RTU</th>
-<td>اتصال مودباص التسلسلي</td>
 <td>The saved protocol for the PC-to-PLC link in this archive.</td>
 </tr>
 <tr>
 <th scope="row">SQL database</th>
-<td>قاعدة البيانات</td>
 <td>Persistent application records, distinct from real-time field wiring.</td>
 </tr>
 </tbody>
 </table>
 </div>
-</article>
-<p class="source-note">The images show historical interface states. The data diagram is explanatory. Additional recorded functions are described without invented screenshots. Exact CPU, physical I/O, scale assignments and interlock behavior still require original configuration and drawings.</p>
+<h3 id="software-documentation-scope">Documentation Scope</h3>
+<p>The screenshots are original historical application views; the close-ups are crops of those views. The database diagram is a technical illustration based on the exported schema, rather than a SQL Server screenshot or a foreign-key model. Exact CPU identification, field I/O, weighing-channel assignments, timer units and interlock behavior require the original plant configuration, program and drawings. Additional application windows are described only where supported by the existing analysis.</p>
 </section>
-<section id="operation">
-<h2>From recipe to production record</h2>
+<section id="workflow">
+<h2>Operating Workflow</h2>
 <ol>
 <li>
-<strong>Select production requirements.</strong> Recipes and tasks define material targets, batch quantity and delivery requirements.</li>
+<strong>Plan production.</strong> Define the recipe, task and delivery requirements in the management application.</li>
 <li>
-<strong>Prepare dosing and weighing.</strong> Operator controls expose tare, target quantity, cycle count, coarse-feed and in-flight compensation settings.</li>
+<strong>Configure the batch.</strong> Select the task and establish production quantities and process parameters in the HMI.</li>
 <li>
-<strong>Coordinate plant equipment.</strong> The operational HMI exchanges commands and status with the PLC while separate serial interfaces provide weighing-device communication.</li>
+<strong>Coordinate material handling.</strong> Exchange commands and status with the PLC while using the dedicated weighing communication interfaces.</li>
 <li>
-<strong>Mix and discharge.</strong> The available controls include mixing timers, automatic/manual selection, charge/discharge pause and discharge inhibition.</li>
+<strong>Mix and discharge.</strong> Use the available charge, mixing and discharge functions in conjunction with process conditions.</li>
 <li>
-<strong>Record and review.</strong> The database stores planned and actual material quantities, batches, deliveries, weighing settings, alarms and activity records.</li>
+<strong>Review production.</strong> Compare target and actual batch quantities and inspect cumulative delivery records, consumption and reports.</li>
 </ol>
-<p class="source-note">This is a functional reconstruction from operator controls and data records. A complete Ladder state machine, verified interlock matrix and safety circuit have not been recovered.</p>
-<h3>Weighing and material records</h3>
-<p>The application distinguishes cement, fly ash, mineral powder, powder additive, liquid additives, aggregate fractions, sand and water. Its records connect recipe targets to actual batch quantities; tolerance and fall settings support weighing adjustment and compensation for material still in transit after feeding stops.</p>
-<div class="table-scroll">
-<table>
-<caption>Selected tables and their engineering purpose</caption>
-<thead>
-<tr>
-<th scope="col">Tables</th>
-<th scope="col">Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope="row">
-<code>recipe</code>, <code>manufacture</code>
-</th>
-<td>Recipe targets and planned-versus-actual batch quantities.</td>
-</tr>
-<tr>
-<th scope="row">
-<code>Task</code>, <code>Orders</code>, <code>OrderDetail</code>, <code>OutMaster</code>
-</th>
-<td>Production tasks, orders and deliveries.</td>
-</tr>
-<tr>
-<th scope="row">
-<code>exactitude</code>, <code>fall</code>, <code>adjcfg</code>
-</th>
-<td>Weighing tolerances, in-flight compensation and mix-ratio adjustments.</td>
-</tr>
-<tr>
-<th scope="row">
-<code>Alarm</code>, <code>LogInfo</code>
-</th>
-<td>Alarm and activity records.</td>
-</tr>
-</tbody>
-</table>
-</div>
 </section>
-<section id="evidence">
-<h2>Plant records and remaining engineering details</h2>
-<p>The physical control-panel photographs carry <strong>EUROMECC</strong> branding, while the retained PC applications are <strong>SANY</strong>. Bin and silo counts also differ between the photographed panel and the software mimic. The archive contains HZS60-family material and a station entry with HZS120 text; these are retained as separate observations rather than a verified model or capacity for the installed plant.</p>
-<p>STEP 7-MicroWIN was present in the archived workstation environment. The plant Ladder project, exact CPU/order number, I/O list, terminal schedule, electrical drawings, load-cell count, drive models and original plant Controx project have not been recovered.</p>
+<section id="engineering">
+<h2>Engineering Record and Documentation Scope</h2>
+<p>The technical record combines application configuration, interface analysis, a database schema export and plant/control-panel photographs. Euromecc branding on the photographed panels and SANY branding in the PC applications are documented separately. Differences in equipment counts and model references prevent assigning a single verified installed model or rated capacity.</p>
+<p>The original plant Ladder program, exact CPU/order number, as-built I/O schedule, electrical drawings and weighing-channel assignments are not available in the reviewed archive. The case study preserves these limits while presenting the implemented project and its documented technical architecture.</p>
+<p>Original screenshots are distinguished from explanatory diagrams and general engineering references. Published screenshots mask identifying fields; proprietary executables, complete databases and account data are excluded.</p>
 <p>
-<a href="https://github.com/Mahyoub88/industrial-automation-plc/blob/main/docs/ENGINEERING_RECORD.md">Read the engineering record and source boundaries →</a>
+<a href="https://github.com/Mahyoub88/industrial-automation-plc/blob/main/docs/ENGINEERING_RECORD.md">Read the engineering record →</a>
 </p>
-<p class="source-note">The project remains implemented industrial work. Later archive analysis and generic teaching diagrams are identified separately from original source code and verified as-built records.</p>
 </section>
-<section id="gallery">
-<h2>Visual documentation</h2>
-<p class="source-note">The original poster and cropped source images remain available. The new architecture above follows the retained software records. Older I/O, Ladder and Ethernet diagrams are general engineering examples, with no claim that their exact brands, addresses or wiring were installed.</p>
-<div class="grid">
-<figure>
-<a href="media/source/00_project_poster.jpg">
-<img loading="lazy" src="media/source/00_project_poster.jpg" alt="Original industrial automation project poster">
-</a>
-<figcaption>Original project poster; source visual context.</figcaption>
-</figure>
-<figure>
-<a href="media/source/gallery/02_hmi_operator_interface.jpg">
-<img loading="lazy" src="media/source/gallery/02_hmi_operator_interface.jpg" alt="Operator-interface image cropped from the original poster">
-</a>
-<figcaption>Operator-interface image from the original poster; retained separately from the software-settings analysis.</figcaption>
-</figure>
-<figure>
-<a href="media/source/gallery/03_concrete_batching_plant.jpg">
-<img loading="lazy" src="media/source/gallery/03_concrete_batching_plant.jpg" alt="Plant image from the original project poster">
-</a>
-<figcaption>Plant image from the original poster; presentation context.</figcaption>
-</figure>
-<figure>
-<a href="media/source/gallery/05_control_panel.jpg">
-<img loading="lazy" src="media/source/gallery/05_control_panel.jpg" alt="Control-panel source image from the original project poster">
-</a>
-<figcaption>Control-panel source image.</figcaption>
-</figure>
-</div>
-<h3>General engineering illustrations</h3>
+<section id="resources">
+<h2>Project Resources</h2>
 <ul>
 <li>
-<a href="media/source/02_batching_sequence.svg">Conceptual batching sequence</a> and <a href="media/source/05_weighing_control.svg">weighing principles</a>.</li>
-<li>
-<a href="media/source/04_io_and_field_wiring.svg">Example I/O and field wiring</a> and <a href="media/source/06_ladder_logic_mixer.svg">teaching example of mixer Ladder logic</a>.</li>
-<li>
-<a href="media/source/07_communication_network.svg">Generic Ethernet/RS485 network example</a>, <a href="media/source/08_alarm_management.svg">example alarm lifecycle</a> and <a href="media/source/09_testing_commissioning.svg">commissioning reference workflow</a>.</li>
-</ul>
-</section>
-<section id="sources">
-<h2>Project resources</h2>
-<ul>
-<li>
-<a href="https://github.com/Mahyoub88/industrial-automation-plc">Technical repository and project overview</a>
+<a href="https://github.com/Mahyoub88/industrial-automation-plc">Project repository and technical overview</a>
 </li>
 <li>
-<a href="https://github.com/Mahyoub88/industrial-automation-plc/blob/main/docs/ENGINEERING_RECORD.md">Engineering record: recorded findings and unresolved details</a>
+<a href="https://github.com/Mahyoub88/industrial-automation-plc/blob/main/docs/SOFTWARE_WALKTHROUGH.md">Complete software interface guide</a>
 </li>
 <li>
-<a href="https://github.com/Mahyoub88/industrial-automation-plc/blob/main/docs/PROFILE_DESCRIPTION.md">Project description for professional profiles</a>
+<a href="https://github.com/Mahyoub88/industrial-automation-plc/blob/main/docs/PROFILE_DESCRIPTION.md">Professional profile summary</a>
 </li>
 <li>
-<a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project record</a>
+<a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project collection</a>
 </li>
 </ul>
-<p class="source-note">This public case study uses sanitized technical summaries. Industrial binaries, full databases, customer/order rows and account data are not distributed.</p>
 </section>
 <nav class="project-pagination" aria-label="More case studies">
 <a href="/projects/proj-solar-study/">← Solar Energy Systems — Design, Sizing &amp; Deployment</a>

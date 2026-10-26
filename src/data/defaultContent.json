@@ -1014,19 +1014,19 @@
       "group": "earlier",
       "category": "Industrial Automation · Concrete Batching · PLC",
       "title": "Industrial Automation & PLC-Based Control Systems",
-      "description": "Central concrete batching plant with a PC-based SANY operator HMI, PLC control over Modbus RTU, serial weighing interfaces and SQL Server production management.",
+      "description": "Concrete batching control integrating a PC-based SANY operator interface, Modbus RTU PLC communication, serial weighing and SQL Server production management.",
       "meta": [
         {
           "label": "Scope",
-          "value": "Integrated batching, weighing, mixing and discharge, with a PC-based operator interface and production records."
+          "value": "Material handling, recipe-based batching, weighing, mixing, discharge and production reporting."
         },
         {
-          "label": "Software",
-          "value": "SANY operational HMI and cncrt.exe production management share the jxc SQL Server database on one computer."
+          "label": "Applications",
+          "value": "SANY process monitoring and operator control; CNCRT production administration; shared jxc SQL Server database."
         },
         {
-          "label": "Communications",
-          "value": "Saved Modbus RTU link to the PLC and separate serial weighing interfaces. Archive logs identify S7-200 and T600 device families; exact CPU and field I/O mapping remain unconfirmed."
+          "label": "Integration",
+          "value": "Modbus RTU PLC communication and dedicated serial weighing interfaces, supported by original software screenshots and a documented engineering record."
         }
       ],
       "tags": [
@@ -1055,7 +1055,7 @@
       "accent": "amber",
       "image": "/projects/proj-plc-control/media/recorded-control-architecture.svg",
       "imageAlt": "Recorded PC, PLC and serial weighing architecture of the concrete batching control system",
-      "imageCaption": "Technical reconstruction from retained software settings and archive logs; physical I/O mapping remains unconfirmed",
+      "imageCaption": "Control architecture based on application configuration and device logs; see the engineering record for hardware-identification details",
       "coverImage": "/images/project-covers/themed-v4/proj-plc-control.webp",
       "coverAlt": "Illustration of concrete batching machinery and control layers; conceptual cover, not an as-built drawing",
       "coverCaption": "AI-generated project cover illustration",
