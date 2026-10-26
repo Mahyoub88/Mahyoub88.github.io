@@ -1,1 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 420" role="img"><title>Industrial Automation &amp; PLC-Based Control Systems — Architecture</title><desc>Explanatory architecture based on documented scope.</desc><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#5eead4"/></marker></defs><rect width="1120" height="420" rx="24" fill="#0b1220"/><text x="36" y="55" font-family="Arial" font-size="18" fill="#5eead4">ARCHITECTURE</text><rect x="36" y="140" width="328" height="140" rx="18" fill="#172c43" stroke="#52718a"/><text x="56" y="176" font-family="Arial" font-size="16" fill="#5eead4">01</text><text x="56" y="211" font-family="Arial" font-size="21" fill="#f8fafc">Recipe and operator input</text><path d="M366 210H392" stroke="#5eead4" stroke-width="2" marker-end="url(#a)"/><rect x="396" y="140" width="328" height="140" rx="18" fill="#172c43" stroke="#52718a"/><text x="416" y="176" font-family="Arial" font-size="16" fill="#5eead4">02</text><text x="416" y="211" font-family="Arial" font-size="21" fill="#f8fafc">PLC sequence and</text><text x="416" y="240" font-family="Arial" font-size="21" fill="#f8fafc">interlocks</text><path d="M726 210H752" stroke="#5eead4" stroke-width="2" marker-end="url(#a)"/><rect x="756" y="140" width="328" height="140" rx="18" fill="#172c43" stroke="#52718a"/><text x="776" y="176" font-family="Arial" font-size="16" fill="#5eead4">03</text><text x="776" y="211" font-family="Arial" font-size="21" fill="#f8fafc">Field I/O and actuators</text><text x="36" y="360" font-family="Arial" font-size="16" fill="#bdcbe0">Functional boundaries of this project</text><text x="36" y="394" font-family="Arial" font-size="13" fill="#94a3b8">Mohammed Mahyoub · Explanatory illustration</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 880" role="img" aria-labelledby="title desc">
+<title id="title">Concrete batching: recorded PC, PLC and weighing architecture</title>
+<desc id="desc">A single computer hosts the SANY operational HMI, production-management software and SQL Server database. Modbus RTU connects the computer to the PLC; separate serial paths are configured for weighing devices. Device families come from an archived runtime log, and the physical I/O mapping is unconfirmed.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#137b76"/></marker></defs>
+<rect width="1180" height="880" rx="20" fill="#f7fafc"/>
+<g font-family="Arial, sans-serif" fill="#17314b">
+<text x="50" y="48" font-size="27" font-weight="700">CONCRETE BATCHING · CONTROL &amp; DATA</text>
+<text x="50" y="77" font-size="17">Retained software settings and archive logs; physical topology remains to be verified.</text>
+<rect x="50" y="108" width="1080" height="230" rx="18" fill="#e8f4f2" stroke="#137b76" stroke-width="2"/>
+<text x="78" y="143" font-size="23" font-weight="700">ONE OPERATOR COMPUTER</text>
+<rect x="78" y="164" width="320" height="140" rx="12" fill="white" stroke="#b3cfcc"/>
+<text x="96" y="194" font-size="22" font-weight="700">sany.exe / sany9.exe</text>
+<text x="96" y="223" font-size="18">Operational HMI</text>
+<text x="96" y="249" font-size="16">Batching · weighing · mix/discharge</text>
+<text x="96" y="275" font-size="16">PLC and serial-device communication</text>
+<rect x="430" y="164" width="300" height="140" rx="12" fill="white" stroke="#b3cfcc"/>
+<text x="450" y="194" font-size="22" font-weight="700">cncrt.exe</text>
+<text x="450" y="223" font-size="18">Production management</text>
+<text x="450" y="249" font-size="16">Recipes · tasks · deliveries</text>
+<text x="450" y="275" font-size="16">Stock · consumption · reports</text>
+<rect x="762" y="164" width="340" height="140" rx="12" fill="white" stroke="#b3cfcc"/>
+<text x="782" y="194" font-size="22" font-weight="700">SQL Server 2000 · jxc</text>
+<text x="782" y="223" font-size="18">Shared production database</text>
+<text x="782" y="249" font-size="16">35 application tables in exported DDL</text>
+<text x="782" y="275" font-size="16">Applications use ADO / SQLOLEDB</text>
+<path d="M275 338V440" stroke="#137b76" stroke-width="3" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<path d="M860 338V440" stroke="#137b76" stroke-width="3" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<rect x="50" y="354" width="185" height="70" rx="8" fill="#f7fafc"/>
+<text x="62" y="377" font-size="17" font-weight="700">Modbus RTU</text>
+<text x="62" y="399" font-size="16">COM1 · 38400 · 8E1</text>
+<text x="62" y="421" font-size="16">Unit address 2</text>
+<rect x="890" y="354" width="255" height="70" rx="8" fill="#f7fafc"/>
+<text x="900" y="377" font-size="17" font-weight="700">Separate weighing interfaces</text>
+<text x="900" y="399" font-size="16">COM3-COM10</text>
+<text x="900" y="421" font-size="16">19200 baud · 8N1</text>
+<rect x="50" y="448" width="500" height="155" rx="15" fill="white" stroke="#9cb2c5" stroke-width="2"/>
+<text x="76" y="485" font-size="23" font-weight="700">PLC · sequence control</text>
+<text x="76" y="517" font-size="18">S7-200 family named in archive runtime log</text>
+<text x="76" y="546" font-size="17">Saved PC polling: coils, inputs and registers</text>
+<text x="76" y="575" font-size="16" fill="#6e4e1a">Exact CPU and plant Ladder source not recovered</text>
+<rect x="630" y="448" width="500" height="155" rx="15" fill="white" stroke="#9cb2c5" stroke-width="2"/>
+<text x="656" y="485" font-size="23" font-weight="700">Weighing controllers</text>
+<text x="656" y="517" font-size="18">Eight T600 devices named in archive runtime log</text>
+<text x="656" y="546" font-size="17">Mettler Toledo device-family entries</text>
+<text x="656" y="575" font-size="16" fill="#6e4e1a">Port-to-material mapping remains unconfirmed</text>
+<path d="M275 607V664" stroke="#718496" stroke-width="3" stroke-dasharray="7 7" marker-end="url(#arrow)"/>
+<path d="M860 664V607" stroke="#718496" stroke-width="3" stroke-dasharray="7 7" marker-end="url(#arrow)"/>
+<rect x="50" y="672" width="500" height="115" rx="15" fill="#eef3f8" stroke="#b9c7d4"/>
+<text x="76" y="709" font-size="21" font-weight="700">Plant machinery &amp; field I/O</text>
+<text x="76" y="738" font-size="17">Feeding · conveying · mixer · discharge controls</text>
+<text x="76" y="765" font-size="16">As-built I/O addresses and wiring not available</text>
+<rect x="630" y="672" width="500" height="115" rx="15" fill="#eef3f8" stroke="#b9c7d4"/>
+<text x="656" y="709" font-size="21" font-weight="700">Material weighing</text>
+<text x="656" y="738" font-size="17">Target / actual quantities · tare · compensation</text>
+<text x="656" y="765" font-size="16">Load-cell wiring and installed scale count unresolved</text>
+<text x="50" y="826" font-size="16">Solid arrows: saved communication paths. Dashed arrows: functional interpretation, not verified wiring.</text>
+<text x="50" y="854" font-size="16">Euromecc panel photographs and SANY software are documented separately; no single plant model is asserted.</text>
+</g></svg>

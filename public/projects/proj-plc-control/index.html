@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Industrial Automation &amp; PLC-Based Control Systems | Mohammed Mahyoub</title>
-<meta name="description" content="Integrated PLC-based control for concrete batching and industrial processes, with field I/O, HMI operation, SCADA monitoring and industrial communications.">
+<meta name="description" content="Central concrete batching plant with a PC-based SANY operator HMI, PLC control over Modbus RTU, serial weighing interfaces and SQL Server production management.">
 <link rel="canonical" href="https://mahyoub88.github.io/projects/proj-plc-control/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Industrial Automation &amp; PLC-Based Control Systems">
-<meta property="og:description" content="Integrated PLC-based control for concrete batching and industrial processes, with field I/O, HMI operation, SCADA monitoring and industrial communications.">
+<meta property="og:description" content="Central concrete batching plant with a PC-based SANY operator HMI, PLC control over Modbus RTU, serial weighing interfaces and SQL Server production management.">
 <meta property="og:url" content="https://mahyoub88.github.io/projects/proj-plc-control/">
 <meta property="og:image" content="https://mahyoub88.github.io/images/project-covers/themed-v4/proj-plc-control.webp">
 <meta name="twitter:card" content="summary_large_image">
@@ -27,171 +27,220 @@
 </nav>
 </header>
 <main id="main">
-<p class="eyebrow">Industrial Automation · PLC · HMI</p>
+<p class="eyebrow">Industrial Automation · Concrete Batching · PLC</p>
 <h1>Industrial Automation &amp; PLC-Based Control Systems</h1>
-<p class="lede">Integrated PLC-based control for concrete batching and industrial processes, with field I/O, HMI operation, SCADA monitoring and industrial communications.</p>
+<p class="lede">Central concrete batching plant with a PC-based SANY operator HMI, PLC control over Modbus RTU, serial weighing interfaces and SQL Server production management.</p>
 <span class="badge">Implemented Project</span>
 <figure class="hero-media">
 <a href="/projects/proj-plc-control/media/source/gallery/01_hardware_integration.jpg">
-<img src="/projects/proj-plc-control/media/source/gallery/01_hardware_integration.jpg" alt="Industrial Automation &amp; PLC-Based Control Systems — source project media" fetchpriority="high">
+<img src="/projects/proj-plc-control/media/source/gallery/01_hardware_integration.jpg" alt="Control hardware from the original concrete batching project poster" fetchpriority="high">
 </a>
-<figcaption>Source project media · Open image for full detail.</figcaption>
+<figcaption>Source project poster crop; see the case study for recorded system architecture · Open image for full detail.</figcaption>
 </figure>
 <div class="tags">
 <span>PLC</span>
-<span>HMI</span>
-<span>SCADA</span>
-<span>Modbus</span>
-<span>Industrial Ethernet</span>
-<span>WinCC</span>
+<span>PC-Based HMI</span>
+<span>Modbus RTU</span>
+<span>Serial Weighing</span>
+<span>SQL Server</span>
+<span>SANY</span>
 </div>
 <nav class="section-nav">
-<a href="#overview">Architecture</a>
-<a href="#engineering">Engineering approach</a>
+<a href="#overview">Recorded architecture</a>
+<a href="#software">Software &amp; data</a>
+<a href="#operation">Plant operation</a>
+<a href="#evidence">Technical record</a>
 <a href="#gallery">Visual documentation</a>
-<a href="#sources">Sources</a>
+<a href="#sources">Resources</a>
 </nav>
 <section id="overview">
-<h2>System architecture</h2>
+<h2>One workstation, two applications and the PLC</h2>
+<p>The retained system uses one computer for the SANY operational HMI, the production-management application and the SQL Server database. The operational application has a saved Modbus RTU connection to the PLC and separate serial interfaces for weighing devices.</p>
 <figure>
-<a href="media/architecture.svg">
-<img loading="lazy" src="media/architecture.svg" alt="Explanatory architecture — functional boundaries for this project">
+<a href="media/recorded-control-architecture.svg">
+<img loading="lazy" src="media/recorded-control-architecture.svg" alt="Recorded single-PC architecture with SANY HMI, production management, SQL Server, Modbus PLC link and separate serial weighing paths">
 </a>
-<figcaption>Explanatory architecture — functional boundaries for this project</figcaption>
+<figcaption>Architecture reconstructed from retained application settings and archive logs. Dashed field connections are functional interpretations; physical I/O and scale assignments have not been verified.</figcaption>
 </figure>
-<div class="summary">
-<h3>Implementation scope</h3>
-<p>The field layer measures level, pressure, flow and weight. PLC logic coordinates motors, valves and pumps, while HMI panels provide operator commands and SCADA provides alarms, trends and historical records.</p>
+<div class="panel">
+<dl class="project-facts">
+<div>
+<dt>Scope</dt>
+<dd>Integrated batching, weighing, mixing and discharge, with a PC-based operator interface and production records.</dd>
+</div>
+<div>
+<dt>Software</dt>
+<dd>SANY operational HMI and cncrt.exe production management share the jxc SQL Server database on one computer.</dd>
+</div>
+<div>
+<dt>Communications</dt>
+<dd>Saved Modbus RTU link to the PLC and separate serial weighing interfaces. Archive logs identify S7-200 and T600 device families; exact CPU and field I/O mapping remain unconfirmed.</dd>
+</div>
+</dl>
 </div>
 </section>
-<section id="engineering">
-<h2>Engineering approach</h2>
-<p>Weighing and batching depend on the relationship between dosing, settled weight, mixing and discharge. The repository explains coarse/fine feed, interlocks and alarm handling; its example addresses and tags illustrate engineering patterns rather than an as-built I/O schedule.</p>
-<figure>
-<a href="media/workflow.svg">
-<img loading="lazy" src="media/workflow.svg" alt="Explanatory workflow — project-specific sequence">
-</a>
-<figcaption>Explanatory workflow — project-specific sequence</figcaption>
-</figure>
+<section id="software">
+<h2>Operator control and production management</h2>
+<div class="table-scroll">
+<table>
+<caption>Applications and interfaces recorded in the retained system</caption>
+<thead>
+<tr>
+<th scope="col">Component</th>
+<th scope="col">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">
+<code>sany.exe / sany9.exe</code>
+</th>
+<td>PC-based operational HMI: batch settings, automatic/manual selection, weighing adjustments, mixing and discharge controls.</td>
+</tr>
+<tr>
+<th scope="row">
+<code>cncrt.exe</code>
+</th>
+<td>Recipes, production tasks, orders, deliveries, material consumption, stock and daily/monthly reports.</td>
+</tr>
+<tr>
+<th scope="row">SQL Server 2000 · <code>jxc</code>
+</th>
+<td>Shared production database accessed through ADO/SQLOLEDB. The exported schema contains 35 application tables.</td>
+</tr>
+<tr>
+<th scope="row">PC-to-PLC link</th>
+<td>Saved Modbus RTU configuration: COM1, 38400 baud, 8E1, unit address 2. The application polls coils, discrete inputs and registers.</td>
+</tr>
+<tr>
+<th scope="row">Weighing interfaces</th>
+<td>Eight configured serial ports, COM3–COM10, at 19200 baud, 8N1. Physical material/channel assignments remain unresolved.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The retained interface is a desktop application rather than a verified separate modern HMI panel. An archived Controx2000 runtime log names one Siemens S7-200 device and eight Mettler Toledo T600 devices. The exact PLC CPU, recovered plant program and the relationship between that Controx installation and the SANY production front end remain unconfirmed.</p>
+</section>
+<section id="operation">
+<h2>From recipe to production record</h2>
+<ol>
+<li>
+<strong>Select production requirements.</strong> Recipes and tasks define material targets, batch quantity and delivery requirements.</li>
+<li>
+<strong>Prepare dosing and weighing.</strong> Operator controls expose tare, target quantity, cycle count, coarse-feed and in-flight compensation settings.</li>
+<li>
+<strong>Coordinate plant equipment.</strong> The operational HMI exchanges commands and status with the PLC while separate serial interfaces provide weighing-device communication.</li>
+<li>
+<strong>Mix and discharge.</strong> The available controls include mixing timers, automatic/manual selection, charge/discharge pause and discharge inhibition.</li>
+<li>
+<strong>Record and review.</strong> The database stores planned and actual material quantities, batches, deliveries, weighing settings, alarms and activity records.</li>
+</ol>
+<p class="source-note">This is a functional reconstruction from operator controls and data records. A complete Ladder state machine, verified interlock matrix and safety circuit have not been recovered.</p>
+<h3>Weighing and material records</h3>
+<p>The application distinguishes cement, fly ash, mineral powder, powder additive, liquid additives, aggregate fractions, sand and water. Its records connect recipe targets to actual batch quantities; tolerance and fall settings support weighing adjustment and compensation for material still in transit after feeding stops.</p>
+<div class="table-scroll">
+<table>
+<caption>Selected tables and their engineering purpose</caption>
+<thead>
+<tr>
+<th scope="col">Tables</th>
+<th scope="col">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">
+<code>recipe</code>, <code>manufacture</code>
+</th>
+<td>Recipe targets and planned-versus-actual batch quantities.</td>
+</tr>
+<tr>
+<th scope="row">
+<code>Task</code>, <code>Orders</code>, <code>OrderDetail</code>, <code>OutMaster</code>
+</th>
+<td>Production tasks, orders and deliveries.</td>
+</tr>
+<tr>
+<th scope="row">
+<code>exactitude</code>, <code>fall</code>, <code>adjcfg</code>
+</th>
+<td>Weighing tolerances, in-flight compensation and mix-ratio adjustments.</td>
+</tr>
+<tr>
+<th scope="row">
+<code>Alarm</code>, <code>LogInfo</code>
+</th>
+<td>Alarm and activity records.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="evidence">
+<h2>Plant records and remaining engineering details</h2>
+<p>The physical control-panel photographs carry <strong>EUROMECC</strong> branding, while the retained PC applications are <strong>SANY</strong>. Bin and silo counts also differ between the photographed panel and the software mimic. The archive contains HZS60-family material and a station entry with HZS120 text; these are retained as separate observations rather than a verified model or capacity for the installed plant.</p>
+<p>STEP 7-MicroWIN was present in the archived workstation environment. The plant Ladder project, exact CPU/order number, I/O list, terminal schedule, electrical drawings, load-cell count, drive models and original plant Controx project have not been recovered.</p>
+<p>
+<a href="https://github.com/Mahyoub88/industrial-automation-plc/blob/main/docs/ENGINEERING_RECORD.md">Read the engineering record and source boundaries →</a>
+</p>
+<p class="source-note">The project remains implemented industrial work. Later archive analysis and generic teaching diagrams are identified separately from original source code and verified as-built records.</p>
 </section>
 <section id="gallery">
 <h2>Visual documentation</h2>
-<p class="source-note">Original project posters and interface screenshots are identified separately from explanatory source diagrams. The gallery documents this project only. Open any figure to inspect it at full available resolution.</p>
+<p class="source-note">The original poster and cropped source images remain available. The new architecture above follows the retained software records. Older I/O, Ladder and Ethernet diagrams are general engineering examples, with no claim that their exact brands, addresses or wiring were installed.</p>
 <div class="grid">
 <figure>
 <a href="media/source/00_project_poster.jpg">
-<img loading="lazy" src="media/source/00_project_poster.jpg" alt="project poster — source repository figure">
+<img loading="lazy" src="media/source/00_project_poster.jpg" alt="Original industrial automation project poster">
 </a>
-<figcaption>project poster — source repository figure</figcaption>
-</figure>
-<figure>
-<a href="media/source/01_control_architecture.svg">
-<img loading="lazy" src="media/source/01_control_architecture.svg" alt="control architecture — source repository figure">
-</a>
-<figcaption>control architecture — source repository figure</figcaption>
-</figure>
-<figure>
-<a href="media/source/02_batching_sequence.svg">
-<img loading="lazy" src="media/source/02_batching_sequence.svg" alt="batching sequence — source repository figure">
-</a>
-<figcaption>batching sequence — source repository figure</figcaption>
-</figure>
-<figure>
-<a href="media/source/03_project_workflow.svg">
-<img loading="lazy" src="media/source/03_project_workflow.svg" alt="project workflow — source repository figure">
-</a>
-<figcaption>project workflow — source repository figure</figcaption>
-</figure>
-<figure>
-<a href="media/source/04_io_and_field_wiring.svg">
-<img loading="lazy" src="media/source/04_io_and_field_wiring.svg" alt="io and field wiring — source repository figure">
-</a>
-<figcaption>io and field wiring — source repository figure</figcaption>
-</figure>
-<figure>
-<a href="media/source/05_weighing_control.svg">
-<img loading="lazy" src="media/source/05_weighing_control.svg" alt="weighing control — source repository figure">
-</a>
-<figcaption>weighing control — source repository figure</figcaption>
-</figure>
-<figure>
-<a href="media/source/06_ladder_logic_mixer.svg">
-<img loading="lazy" src="media/source/06_ladder_logic_mixer.svg" alt="ladder logic mixer — source repository figure">
-</a>
-<figcaption>ladder logic mixer — source repository figure</figcaption>
-</figure>
-<figure>
-<a href="media/source/07_communication_network.svg">
-<img loading="lazy" src="media/source/07_communication_network.svg" alt="communication network — source repository figure">
-</a>
-<figcaption>communication network — source repository figure</figcaption>
-</figure>
-<figure>
-<a href="media/source/08_alarm_management.svg">
-<img loading="lazy" src="media/source/08_alarm_management.svg" alt="alarm management — source repository figure">
-</a>
-<figcaption>alarm management — source repository figure</figcaption>
-</figure>
-<figure>
-<a href="media/source/09_testing_commissioning.svg">
-<img loading="lazy" src="media/source/09_testing_commissioning.svg" alt="testing commissioning — source repository figure">
-</a>
-<figcaption>testing commissioning — source repository figure</figcaption>
+<figcaption>Original project poster; source visual context.</figcaption>
 </figure>
 <figure>
 <a href="media/source/gallery/02_hmi_operator_interface.jpg">
-<img loading="lazy" src="media/source/gallery/02_hmi_operator_interface.jpg" alt="hmi operator interface — source repository figure">
+<img loading="lazy" src="media/source/gallery/02_hmi_operator_interface.jpg" alt="Operator-interface image cropped from the original poster">
 </a>
-<figcaption>hmi operator interface — source repository figure</figcaption>
+<figcaption>Operator-interface image from the original poster; retained separately from the software-settings analysis.</figcaption>
 </figure>
 <figure>
 <a href="media/source/gallery/03_concrete_batching_plant.jpg">
-<img loading="lazy" src="media/source/gallery/03_concrete_batching_plant.jpg" alt="concrete batching plant — source repository figure">
+<img loading="lazy" src="media/source/gallery/03_concrete_batching_plant.jpg" alt="Concrete batching plant photograph from the original project poster">
 </a>
-<figcaption>concrete batching plant — source repository figure</figcaption>
-</figure>
-<figure>
-<a href="media/source/gallery/04_process_control_diagram.jpg">
-<img loading="lazy" src="media/source/gallery/04_process_control_diagram.jpg" alt="process control diagram — source repository figure">
-</a>
-<figcaption>process control diagram — source repository figure</figcaption>
+<figcaption>Concrete batching plant source photograph.</figcaption>
 </figure>
 <figure>
 <a href="media/source/gallery/05_control_panel.jpg">
-<img loading="lazy" src="media/source/gallery/05_control_panel.jpg" alt="control panel — source repository figure">
+<img loading="lazy" src="media/source/gallery/05_control_panel.jpg" alt="Control-panel source image from the original project poster">
 </a>
-<figcaption>control panel — source repository figure</figcaption>
-</figure>
-<figure>
-<a href="media/source/gallery/06_plc_io_modules.jpg">
-<img loading="lazy" src="media/source/gallery/06_plc_io_modules.jpg" alt="plc io modules — source repository figure">
-</a>
-<figcaption>plc io modules — source repository figure</figcaption>
-</figure>
-<figure>
-<a href="media/source/gallery/07_monitoring_alarm_system.jpg">
-<img loading="lazy" src="media/source/gallery/07_monitoring_alarm_system.jpg" alt="monitoring alarm system — source repository figure">
-</a>
-<figcaption>monitoring alarm system — source repository figure</figcaption>
-</figure>
-<figure>
-<a href="media/source/gallery/08_scada_interface.jpg">
-<img loading="lazy" src="media/source/gallery/08_scada_interface.jpg" alt="scada interface — source repository figure">
-</a>
-<figcaption>scada interface — source repository figure</figcaption>
+<figcaption>Control-panel source image.</figcaption>
 </figure>
 </div>
-</section>
-<section id="sources">
-<h2>Source documentation</h2>
+<h3>General engineering illustrations</h3>
 <ul>
 <li>
-<a href="https://github.com/Mahyoub88/industrial-automation-plc">Source repository — industrial-automation-plc</a>
+<a href="media/source/02_batching_sequence.svg">Conceptual batching sequence</a> and <a href="media/source/05_weighing_control.svg">weighing principles</a>.</li>
+<li>
+<a href="media/source/04_io_and_field_wiring.svg">Example I/O and field wiring</a> and <a href="media/source/06_ladder_logic_mixer.svg">teaching example of mixer Ladder logic</a>.</li>
+<li>
+<a href="media/source/07_communication_network.svg">Generic Ethernet/RS485 network example</a>, <a href="media/source/08_alarm_management.svg">example alarm lifecycle</a> and <a href="media/source/09_testing_commissioning.svg">commissioning reference workflow</a>.</li>
+</ul>
+</section>
+<section id="sources">
+<h2>Project resources</h2>
+<ul>
+<li>
+<a href="https://github.com/Mahyoub88/industrial-automation-plc">Technical repository and project overview</a>
+</li>
+<li>
+<a href="https://github.com/Mahyoub88/industrial-automation-plc/blob/main/docs/ENGINEERING_RECORD.md">Engineering record: recorded findings and unresolved details</a>
+</li>
+<li>
+<a href="https://github.com/Mahyoub88/industrial-automation-plc/blob/main/docs/PROFILE_DESCRIPTION.md">Project description for professional profiles</a>
 </li>
 <li>
 <a href="https://www.linkedin.com/in/mohammed-mahyoub/details/projects/">LinkedIn project record</a>
 </li>
 </ul>
+<p class="source-note">This public case study uses sanitized technical summaries. Industrial binaries, full databases, customer/order rows and account data are not distributed.</p>
 </section>
 <nav class="project-pagination" aria-label="More case studies">
 <a href="/projects/proj-solar-study/">← Solar Energy Systems — Design, Sizing &amp; Deployment</a>

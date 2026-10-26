@@ -162,12 +162,12 @@
       "url": "https://mahyoub88.github.io/projects/proj-plc-control/",
       "repository": "https://github.com/Mahyoub88/industrial-automation-plc",
       "status": "Implemented Project",
-      "role": "The field layer measures level, pressure, flow and weight. PLC logic coordinates motors, valves and pumps, while HMI panels provide operator commands and SCADA provides alarms, trends and historical records.",
+      "role": "Integrated batching, weighing, mixing and discharge, with a PC-based operator interface and production records.",
       "image": "/projects/proj-plc-control/media/source/gallery/01_hardware_integration.jpg",
-      "imageCaption": "Source project media",
+      "imageCaption": "Source project poster crop; see the case study for recorded system architecture",
       "coverImage": "/images/project-covers/themed-v4/proj-plc-control.webp",
       "coverLightImage": "/images/project-covers/engineering-v3/proj-plc-control.webp",
-      "coverAlt": "Engineering illustration of plc batching control: field sensors, plc / i-o, hmi / scada, mixer",
+      "coverAlt": "Illustration of concrete batching machinery and control layers; conceptual cover, not an as-built drawing",
       "coverCaption": "AI-generated project cover illustration"
     },
     {

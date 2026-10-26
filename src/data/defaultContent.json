@@ -1012,22 +1012,30 @@
     {
       "id": "proj-plc-control",
       "group": "earlier",
-      "category": "Industrial Automation · PLC · HMI",
+      "category": "Industrial Automation · Concrete Batching · PLC",
       "title": "Industrial Automation & PLC-Based Control Systems",
-      "description": "Integrated PLC-based control for concrete batching and industrial processes, with field I/O, HMI operation, SCADA monitoring and industrial communications.",
+      "description": "Central concrete batching plant with a PC-based SANY operator HMI, PLC control over Modbus RTU, serial weighing interfaces and SQL Server production management.",
       "meta": [
         {
           "label": "Scope",
-          "value": "The field layer measures level, pressure, flow and weight. PLC logic coordinates motors, valves and pumps, while HMI panels provide operator commands and SCADA provides alarms, trends and historical records."
+          "value": "Integrated batching, weighing, mixing and discharge, with a PC-based operator interface and production records."
+        },
+        {
+          "label": "Software",
+          "value": "SANY operational HMI and cncrt.exe production management share the jxc SQL Server database on one computer."
+        },
+        {
+          "label": "Communications",
+          "value": "Saved Modbus RTU link to the PLC and separate serial weighing interfaces. Archive logs identify S7-200 and T600 device families; exact CPU and field I/O mapping remain unconfirmed."
         }
       ],
       "tags": [
         "PLC",
-        "HMI",
-        "SCADA",
-        "Modbus",
-        "Industrial Ethernet",
-        "WinCC"
+        "PC-Based HMI",
+        "Modbus RTU",
+        "Serial Weighing",
+        "SQL Server",
+        "SANY"
       ],
       "status": {
         "kind": "professional",
@@ -1046,10 +1054,10 @@
       ],
       "accent": "amber",
       "image": "/projects/proj-plc-control/media/source/gallery/01_hardware_integration.jpg",
-      "imageAlt": "Industrial Automation & PLC-Based Control Systems — source project media",
-      "imageCaption": "Source project media",
+      "imageAlt": "Control hardware from the original concrete batching project poster",
+      "imageCaption": "Source project poster crop; see the case study for recorded system architecture",
       "coverImage": "/images/project-covers/themed-v4/proj-plc-control.webp",
-      "coverAlt": "Engineering illustration of plc batching control: field sensors, plc / i-o, hmi / scada, mixer",
+      "coverAlt": "Illustration of concrete batching machinery and control layers; conceptual cover, not an as-built drawing",
       "coverCaption": "AI-generated project cover illustration",
       "coverLightImage": "/images/project-covers/engineering-v3/proj-plc-control.webp"
     },
