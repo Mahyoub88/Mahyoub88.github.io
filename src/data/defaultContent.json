@@ -1053,9 +1053,9 @@
         }
       ],
       "accent": "amber",
-      "image": "/projects/proj-plc-control/media/source/gallery/01_hardware_integration.jpg",
-      "imageAlt": "Control hardware from the original concrete batching project poster",
-      "imageCaption": "Source project poster crop; see the case study for recorded system architecture",
+      "image": "/projects/proj-plc-control/media/recorded-control-architecture.svg",
+      "imageAlt": "Recorded PC, PLC and serial weighing architecture of the concrete batching control system",
+      "imageCaption": "Technical reconstruction from retained software settings and archive logs; physical I/O mapping remains unconfirmed",
       "coverImage": "/images/project-covers/themed-v4/proj-plc-control.webp",
       "coverAlt": "Illustration of concrete batching machinery and control layers; conceptual cover, not an as-built drawing",
       "coverCaption": "AI-generated project cover illustration",
