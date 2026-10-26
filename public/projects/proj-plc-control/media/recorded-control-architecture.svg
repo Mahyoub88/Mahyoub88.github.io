@@ -39,10 +39,10 @@
 <text x="76" y="546" font-size="17">Saved PC polling: coils, inputs and registers</text>
 <text x="76" y="575" font-size="16" fill="#6e4e1a">Exact CPU and plant Ladder source not recovered</text>
 <rect x="630" y="448" width="500" height="155" rx="15" fill="white" stroke="#9cb2c5" stroke-width="2"/>
-<text x="656" y="485" font-size="23" font-weight="700">Weighing controllers</text>
-<text x="656" y="517" font-size="18">Eight T600 devices named in archive runtime log</text>
-<text x="656" y="546" font-size="17">Mettler Toledo device-family entries</text>
-<text x="656" y="575" font-size="16" fill="#6e4e1a">Port-to-material mapping remains unconfirmed</text>
+<text x="656" y="485" font-size="23" font-weight="700">Configured weighing interfaces</text>
+<text x="656" y="517" font-size="18">Eight serial ports saved in application settings</text>
+<text x="656" y="546" font-size="17">Archive log: eight Mettler Toledo T600 devices</text>
+<text x="656" y="575" font-size="16" fill="#6e4e1a">T600-to-port association remains unconfirmed</text>
 <path d="M275 607V664" stroke="#718496" stroke-width="3" stroke-dasharray="7 7" marker-end="url(#arrow)"/>
 <path d="M860 664V607" stroke="#718496" stroke-width="3" stroke-dasharray="7 7" marker-end="url(#arrow)"/>
 <rect x="50" y="672" width="500" height="115" rx="15" fill="#eef3f8" stroke="#b9c7d4"/>
