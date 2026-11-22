@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Road Safety Investigation Priorities in Great Britain | Mohammed Mahyoub</title>
+<meta name="description" content="Analysed 513,801 police-recorded injury collisions in Great Britain to identify when estimated fatal or serious collisions concentrate and how severity composition varies by posted speed limit.">
+<link rel="canonical" href="https://mahyoub88.github.io/projects/proj-stats19-road-safety/">
+<link rel="stylesheet" href="/projects/case-study.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><nav aria-label="Portfolio navigation"><a href="/">Engineering portfolio</a><a href="/projects/">All case studies</a></nav></header>
+<main id="main">
+<p class="eyebrow">Mohammed Mahyoub · UWE Bristol MSc Artificial Intelligence</p>
+<h1>Road Safety Investigation Priorities in Great Britain</h1>
+<p class="lede">Analysed 513,801 police-recorded injury collisions in Great Britain to identify when estimated fatal or serious collisions concentrate and how severity composition varies by posted speed limit.</p>
+<span class="badge">Public Case Study · Academic Project</span>
+<figure class="hero-media"><a href="/projects/proj-stats19-road-safety/media/severity.svg"><img src="/projects/proj-stats19-road-safety/media/severity.svg" alt="Two bar charts compare the estimated fatal or serious count and severity share on Great Britain’s 30 and 60 mph roads"></a><figcaption>Chart recreated from the project's reported Tableau results</figcaption></figure>
+<div class="tags"><span>Tableau</span><span>Business Intelligence</span><span>STATS19</span><span>Road Safety</span><span>Data Visualisation</span><span>ITS</span></div>
+<nav class="section-nav" aria-label="On this page"><a href="#findings">Findings</a><a href="#method">Method</a><a href="#decision">Planning implications</a><a href="#sources">Sources</a><a href="#arabic" lang="ar">ملخص بالعربية</a></nav>
+<section id="findings">
+<h2>When and where should teams investigate?</h2>
+<p>Road-safety teams can use this national analysis to select topics for local assessment. Collision counts describe the recorded burden, while within-category shares describe the severity composition of those collisions.</p>
+<div class="metric-grid"><div class="metric"><strong>513,801</strong><span>Police-recorded injury collisions</span></div><div class="metric"><strong>5 of 5</strong><span>Annual peaks on weekdays from 15:00 to 17:59</span></div><div class="metric"><strong>36.88%</strong><span>Estimated fatal-or-serious share on rural 60 mph roads</span></div></div>
+<h3>Across years, weekday afternoons were the consistent signal</h3>
+<p>Friday 15:00–15:59 led the five-year total at approximately 1,787 estimated fatal or serious collisions. Friday 16:00–16:59 followed at approximately 1,767. The gap was about 20 over five years. Annual rankings placed Friday at 15:00 first in three years, with a Thursday and a Wednesday leading the other two.</p>
+<figure><a href="/projects/proj-stats19-road-safety/media/timing.svg"><img src="/projects/proj-stats19-road-safety/media/timing.svg" alt="The annual peaks occurred Friday at 15:00 in 2021, 2024 and 2025, Thursday at 17:00 in 2022, and Wednesday at 17:00 in 2023"></a><figcaption>Recreated from the project’s annual Tableau rank check. Counts cited in the chart combine all five years.</figcaption></figure>
+<h3>30 mph and 60 mph categories answer different planning questions</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Collision burden and shares"><table><caption>Selected categories, 2021–2025 pooled totals. Great Britain unless rural is specified.</caption><thead><tr><th scope="col">Posted limit and area</th><th scope="col">Estimated fatal or serious collisions</th><th scope="col">Estimated share within category</th></tr></thead><tbody><tr><th scope="row">30 mph · all areas</th><td>≈63,104</td><td>23.61%</td></tr><tr><th scope="row">60 mph · all areas</th><td>≈22,918</td><td>36.55%</td></tr><tr><th scope="row">60 mph · rural</th><td>≈22,383</td><td>36.88%</td></tr></tbody></table></div>
+<p>Rural 60 mph roads accounted for 60,693 recorded collisions, about 11.8% of the project dataset, and about 17.2% of estimated fatal or serious collisions. The 60 mph category ranked highest for severity share among the displayed limits in each year, both nationally and in rural areas.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Annual validation results"><table><caption>Annual checks for two separately analysed patterns</caption><thead><tr><th scope="col">Year</th><th scope="col">National peak day</th><th scope="col">Hour starts at</th><th scope="col">Rural 60 mph severity share</th></tr></thead><tbody><tr><th scope="row">2021</th><td>Friday</td><td>15:00</td><td>36.01%</td></tr><tr><th scope="row">2022</th><td>Thursday</td><td>17:00</td><td>36.83%</td></tr><tr><th scope="row">2023</th><td>Wednesday</td><td>17:00</td><td>36.70%</td></tr><tr><th scope="row">2024</th><td>Friday</td><td>15:00</td><td>36.84%</td></tr><tr><th scope="row">2025</th><td>Friday</td><td>15:00</td><td>37.95%</td></tr></tbody></table></div>
+</section>
+<section id="method"><h2>From STATS19 records to Tableau measures</h2>
+<div class="panel"></div>
+<p>Each row represents one collision. The 513,801 rows reconciled to 513,801 distinct collision IDs. The records cover personal-injury collisions on public roads reported to police in Great Britain. The reporting system changed during the study period. The share of records using injury-based reporting rose from about 49.6% in 2021 to 86.5% in 2025.</p>
+<figure><a href="/projects/proj-stats19-road-safety/media/flow.svg"><img src="/projects/proj-stats19-road-safety/media/flow.svg" alt="Four stages cover collision IDs, decimal severity measures, Tableau validation and local assessment"></a><figcaption>Explanatory diagram of the project workflow.</figcaption></figure>
+<h3>Measure definitions</h3>
+<ol><li>Give each fatal collision a contribution of one. For every other collision, use the DfT-supplied adjusted-serious value.</li><li>Sum the contributions at the desired level, preserving fractional values until display.</li><li>For a severity share, divide that sum by the distinct number of recorded collisions within the same category and selected area.</li></ol>
+<p>Changing the Tableau adjustment fields from integer to decimal increased the 2025 adjusted-serious total from approximately 24,657 to 25,743. This check concerns the adjusted-serious measure specifically. The correction preserved fractional contributions that integer conversion truncated.</p>
+<h3>Visual design and checks</h3>
+<p>The Tableau dashboard pairs a weekday–hour heatmap with zero-based bars for severity share by posted limit. A shared area filter controls both dashboard views. A fixed scale of 0–1,800 estimated collisions supports comparisons between national and rural heatmaps. A separate ranking supports precise comparisons by hour. Ranking within each year tests whether the pooled result persists. The three records with missing speed limits remain in the source and are excluded from the posted-limit bar chart.</p>
+</section>
+<section id="decision"><h2>Use the findings to scope local assessments</h2>
+<ul><li><strong>Recorded burden.</strong> Review 30 mph settings when the objective is to understand where the largest volume of severe collisions was recorded.</li><li><strong>Severity composition.</strong> Investigate rural 60 mph settings to understand which local road and traffic conditions accompany their comparatively high severity share.</li><li><strong>Timing.</strong> Check whether the national weekday-afternoon pattern also appears in local records, with traffic volumes and journey exposure as context.</li></ul>
+<p>The analysis is descriptive. Estimation, under-reporting and differences in road conditions limit interpretation. Traffic volume and distance travelled would be needed to estimate risk per journey. Posted limits describe the road category. Vehicle speeds, junction design and lighting require local evidence. The combination of rural 60 mph roads and weekday afternoons remains untested.</p>
+</section>
+<section id="arabic" lang="ar" dir="rtl"><h2>ملخص المشروع بالعربية</h2>
+<p>حللتُ <bdi>513,801</bdi> حادث إصابة مسجلاً لدى الشرطة في بريطانيا العظمى بين 2021 و2025 باستخدام Tableau وبيانات STATS19. صممتُ لوحة تعرض توزيع الحوادث المقدّرة المميتة أو الخطيرة حسب اليوم والساعة، وتقارن نسبتها بين فئات حدود السرعة.</p>
+<ul><li>ظهرت أعلى فترة سنوية في أيام العمل بين <bdi>15:00</bdi> و<bdi>17:59</bdi> في السنوات الخمس. وتصدّر يوم الجمعة عند الثالثة عصراً في ثلاث سنوات.</li><li>سجلت طرق <bdi>30 mph</bdi> نحو <bdi>63,104</bdi> حادثاً مميتاً أو خطيراً بحسب التقدير. بلغت حصة الحوادث المقدّرة المميتة أو الخطيرة على طرق <bdi>60 mph</bdi> نحو <bdi>36.55%</bdi> على المستوى الوطني و<bdi>36.88%</bdi> في المناطق الريفية.</li><li>تعطي النسبة صورة عن شدة الحوادث المسجلة داخل كل فئة. ويتطلب تقدير خطر الرحلة بيانات إضافية عن حجم المرور والمسافة المقطوعة.</li></ul>
+</section>
+<section id="sources"><h2>Sources and credits</h2><p>Mohammed Mahyoub · Business Intelligence and Data Visualisation (UFCE9B-15-M), MSc Artificial Intelligence, UWE Bristol. Tableau provided the original analysis. Figures on this page were recreated from the project's reported results. ChatGPT assisted with editorial preparation and chart presentation.</p><ul><li><a href="https://www.gov.uk/government/statistical-data-sets/road-safety-open-data">Department for Transport · Road safety open data and codebook</a></li><li><a href="https://www.gov.uk/government/publications/guide-to-severity-adjustments-for-reported-road-casualty-statistics/guide-to-severity-adjustments-for-reported-road-casualties-great-britain">Department for Transport · Guide to severity adjustments</a></li><li><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a></li></ul></section>
+</main>
+<footer>Mohammed Mahyoub</footer>
+</body>
+</html>
