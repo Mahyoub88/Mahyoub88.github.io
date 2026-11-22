@@ -495,6 +495,63 @@
       "coverLightImage": "/images/project-covers/engineering-v3/proj-ngsim.webp"
     },
     {
+      "id": "proj-stats19-road-safety",
+      "group": "selected",
+      "category": "MSc Artificial Intelligence · Business Intelligence · Road Safety",
+      "title": "Road Safety Investigation Priorities in Great Britain",
+      "subtitle": "STATS19 collision analysis in Tableau | 2021–2025",
+      "description": "Analysed 513,801 police-recorded injury collisions in Great Britain to identify when estimated fatal or serious collisions concentrate and how severity composition varies by posted speed limit.",
+      "meta": [
+        {
+          "label": "Author",
+          "value": "Mohammed Mahyoub"
+        },
+        {
+          "label": "Scope",
+          "value": "Great Britain, 2021–2025 · UWE Bristol MSc Artificial Intelligence, Business Intelligence and Data Visualisation (UFCE9B-15-M)."
+        },
+        {
+          "label": "Method",
+          "value": "Tableau dashboard, weekday–hour heatmap, within-category severity shares, annual rank checks and reconciliation of collision IDs."
+        },
+        {
+          "label": "Finding",
+          "value": "All five annual peaks fell on weekdays between 15:00 and 17:59. Nationally, 30 mph roads had the greater estimated severe burden and 60 mph roads the highest displayed severity share."
+        }
+      ],
+      "tags": [
+        "Tableau",
+        "Business Intelligence",
+        "STATS19",
+        "Road Safety",
+        "Data Visualisation",
+        "ITS"
+      ],
+      "status": {
+        "kind": "public",
+        "label": "Public Case Study · Academic Project"
+      },
+      "link": "",
+      "links": [
+        {
+          "label": "Read case study",
+          "href": "/projects/proj-stats19-road-safety/"
+        },
+        {
+          "label": "DfT road safety open data",
+          "href": "https://www.gov.uk/government/statistical-data-sets/road-safety-open-data"
+        }
+      ],
+      "accent": "amber",
+      "image": "/projects/proj-stats19-road-safety/media/severity.svg",
+      "imageAlt": "Two bar charts compare the estimated fatal or serious count and severity share on Great Britain’s 30 and 60 mph roads",
+      "imageCaption": "Chart recreated from the project's reported Tableau results",
+      "coverImage": "/projects/proj-stats19-road-safety/media/cover.svg",
+      "coverLightImage": "/projects/proj-stats19-road-safety/media/cover.svg",
+      "coverAlt": "Illustration of a road junction with a stylised Tableau-style analysis panel",
+      "coverCaption": "Explanatory project illustration"
+    },
+    {
       "id": "proj-reconnaissance-robot",
       "group": "selected",
       "category": "Robotics · RGB-D Mapping · Embedded Integration",
